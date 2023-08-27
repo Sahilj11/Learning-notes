@@ -1,0 +1,11 @@
+- ![[Pasted image 20230610075609.png]]
+- ![[Pasted image 20230610075803.png]]
+- `nslookup` command tells to lookup name of dns server and IP address of server of given website
+- under non authoritative answer contains the reply from youtube.com , containing the IP of youtube.com
+- ![[Pasted image 20230610080052.png]]
+- often there is no need to do DNS configuration on router they simply perform there job of routing traffic. but some router like CISCO can act as DNS server and client
+- ![[Pasted image 20230610080347.png]]
+- ![[Pasted image 20230610080413.png]]
+- ![[Pasted image 20230610080817.png]]
+- ![[Pasted image 20230610080832.png]]
+- 

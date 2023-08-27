@@ -1,0 +1,3 @@
+- ![[Pasted image 20230609125610.png]]
+- ![[Pasted image 20230609125748.png]]
+- so VMware runs in kernel but the VM itself in user mode

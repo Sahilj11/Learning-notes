@@ -1,0 +1,7 @@
+- ![[Pasted image 20230610074349.png]]
+- ![[Pasted image 20230610074658.png]]
+- here the link is of NTP server . Android has no option for NTP syncing – time synchronization takes place by other means via your mobile carrier
+- ![[Pasted image 20230610074944.png]]
+- ![[Pasted image 20230610075029.png]]
+- ![[Pasted image 20230610075324.png]]
+- 

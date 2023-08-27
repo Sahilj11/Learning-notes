@@ -1,0 +1,18 @@
+- ![[Pasted image 20230610111138.png]]
+- ![[Pasted image 20230610111304.png]]
+- ![[Pasted image 20230610111514.png]]
+- SYN-ACK arrows not reaching the attacker , as it may be spoofing the IP
+- ![[Pasted image 20230610111624.png]]
+- ![[Pasted image 20230610112016.png]]
+- ![[Pasted image 20230610112409.png]]
+- reflector means DNS server
+- ![[Pasted image 20230610112619.png]]
+- ![[Pasted image 20230610112647.png]]
+- ![[Pasted image 20230610112746.png]]
+- ![[Pasted image 20230610112903.png]]
+- ![[Pasted image 20230610113004.png]]
+- ![[Pasted image 20230610113143.png]]
+- ![[Pasted image 20230610113257.png]]
+- ![[Pasted image 20230610113338.png]]
+- ![[Pasted image 20230610113444.png]]
+- 

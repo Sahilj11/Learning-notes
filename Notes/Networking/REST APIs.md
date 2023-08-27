@@ -1,0 +1,18 @@
+- ![[Pasted image 20230614154252.png]]
+- REST APIs typically use HTTP
+- ![[Pasted image 20230614154405.png]]
+- ![[Pasted image 20230614154449.png]]
+- ![[Pasted image 20230614154704.png]]
+- [HTTP headers - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+- [List of HTTP header fields - Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+- 
+- REST is framework for making API
+- ![[Pasted image 20230614154923.png]]
+- ![[Pasted image 20230614155012.png]]
+- ![[Pasted image 20230614155052.png]]
+- ![[Pasted image 20230614155114.png]]
+- ![[Pasted image 20230614155210.png]]
+- [REST Architectural Constraints (restfulapi.net)](https://restfulapi.net/rest-architectural-constraints/)
+- ![[Pasted image 20230614155501.png]]
+- ![[Pasted image 20230614155531.png]]
+- 

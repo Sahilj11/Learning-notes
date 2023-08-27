@@ -1,0 +1,5 @@
+- ![[Pasted image 20230609161303.png]]
+- ![[Pasted image 20230609161626.png]]
+- ![[Pasted image 20230609161651.png]]
+- ![[Pasted image 20230609162141.png]]
+- An area is a set of routers and links that share the same LSDB

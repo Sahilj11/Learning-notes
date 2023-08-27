@@ -1,0 +1,35 @@
+## Connecting your device(laptop) to networking device
+- Through console port :- ![[Screenshot 2023-06-07 070653.png]]
+- once connected to device to use CLI you need to use terminal emulator , one of which is PuTTy
+- ![[Screenshot 2023-06-07 070904.png]]
+- by clicking serial in category
+- data bits :- 8 and stop bits :- 1 . this means 1 bit is sent to mark the ending of 8 bits
+
+## CLI
+- ![[Screenshot 2023-06-07 071306.png]]
+- ![[Screenshot 2023-06-07 071338.png]]
+- ![[Screenshot 2023-06-07 071416.png]]
+- ![[Screenshot 2023-06-07 071629.png]]
+- ![[Screenshot 2023-06-07 071654.png]]
+- ![[Screenshot 2023-06-07 072054.png]]
+- ![[Screenshot 2023-06-07 072311.png]]
+-  ? with space after a command shows the properties of that command , where as ? just after command shows any command with that word
+- Configuration file on devices
+	- there are two separate config files kept on device at once . 
+	- Running-config = current , active config file on device , as you enter commands in CLI , you edit the active config
+	- startup-config = config file that will be loaded upon restart of device
+	- ![[Screenshot 2023-06-07 073921.png]]
+	- you can see startup-config not present 
+	- use write command in privilege exec mode
+	- you can see password is in plain text
+- ![[Screenshot 2023-06-07 074121.png]]
+- here number 7 represent the type of encryption used for encryption
+- this is easier to decrypt , a simple google search 
+- but you can use below technique for more secure
+- ![[Screenshot 2023-06-07 074313.png]]
+- use do in front of a previlige exc command to apply it during global mode
+- number 5 = MD5 encryption
+- ![[Screenshot 2023-06-07 074635.png]]
+- typing no in front of a command , effect of that command stops for future operation . but it does not decrypt the previously encrypted password![[Screenshot 2023-06-07 074818.png]]
+- ![[Screenshot 2023-06-07 074911.png]]
+- 

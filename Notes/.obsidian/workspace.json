@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "c5c6d8e86f26ba68",
+    "type": "split",
+    "children": [
+      {
+        "id": "2fc1ac5ba997de39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9738d65f0b2bae42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GIT Commands/Commands.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a78f0c318e78f2fc",
+    "type": "split",
+    "children": [
+      {
+        "id": "17b61360689abfc2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6d9001c6d4aef86",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse"
+              }
+            }
+          },
+          {
+            "id": "368b9789e4cdafa2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "64a41656c6693fc5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 290.5110321044922,
+    "collapsed": true
+  },
+  "right": {
+    "id": "51d87145d5c0628d",
+    "type": "split",
+    "children": [
+      {
+        "id": "1d784943142019be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a15c0c0b1e42689",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "GIT Commands/Commands.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "517e40d7a921bba0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "GIT Commands/Commands.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dc4022c48fc871de",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "34075582aabc86d9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "GIT Commands/Commands.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9738d65f0b2bae42",
+  "lastOpenFiles": [
+    "Odin project/javascript advance/API.md",
+    "Odin project/javascript advance/Promises.md",
+    "Odin project/javascript advance/Namaste javascript.md",
+    "statics/Pasted image 20230825074857.png",
+    "statics/Pasted image 20230825074207.png",
+    "statics/Pasted image 20230825073826.png",
+    "Networking/VLAN.md",
+    "Networking/Subnetting.md",
+    "Networking/Life of a packet.md",
+    "Networking/Routers.md",
+    "Networking/IPv4.md",
+    "Networking/Ethernet LAN Switching.md",
+    "Networking/Networking model.md",
+    "Networking/Commands for network configuration.md",
+    "Networking/Network component and Terminology.md",
+    "Odin project/Javascript basics/Arrays in JS.md",
+    "java/ArrayList.md",
+    "Odin project/javascript advance/Asynchronus code.md",
+    "Odin project/Javascript basics/Errors.md",
+    "Odin project/Javascript basics/Problem solving.md",
+    "Odin project/Javascript basics/Fundamentals 3.md",
+    "Odin project/Javascript basics/Debugging JS.md",
+    "Odin project/Javascript basics/Fundamental 2.md",
+    "Odin project/Javascript basics/Fundamentals 1.md",
+    "Odin project/javascript advance/NPM and Webpack.md",
+    "GIT Commands/Commands.md",
+    "statics/Pasted image 20230819130928.png",
+    "statics/Pasted image 20230819130419.png",
+    "statics/Pasted image 20230819130232.png",
+    "java/Wrapper class.md",
+    "Web developement/Securing the web/Security.md",
+    "java/Intro.md",
+    "GIT Commands",
+    "statics/Pasted image 20230807074409.png",
+    "statics/Pasted image 20230805160602.png",
+    "DBMS",
+    "java",
+    "statics/Pasted image 20230720130443.png",
+    "DSA/img/Pasted image 20230720130337.png",
+    "DSA/img",
+    "DSA/Data Structures",
+    "DSA",
+    "Odin project/HTML and CSS",
+    "Odin project/javascript advance",
+    "Web security/Vulnerabilities",
+    "Odin project/Javascript basics",
+    "Untitled.canvas"
+  ]
+}

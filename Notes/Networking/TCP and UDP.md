@@ -1,0 +1,38 @@
+## Function of Layer 4
+- ![[Pasted image 20230609163950.png]]
+- Provide transparent transfer of data b/w end hosts
+- layer 4 encapsulate data with layer 4 header and use service of lower level layer to deliver the data unchanged to host . host are unaware of underlying layers so transfer of data seems transparent to them
+- ![[Pasted image 20230609164307.png]]
+- A session is an exchange of data b.w two or more communicating devices
+- ![[Pasted image 20230609164503.png]]
+- Notice how ports are exchanged. this tells the PC1 that response is part of same session
+- ![[Pasted image 20230609164540.png]]
+- for different session port of Pc is also different
+- ![[Pasted image 20230609164709.png]]
+- ![[Pasted image 20230609164838.png]]
+- host use ephemeral range for selecting random source port
+
+## TCP
+- ![[Pasted image 20230609165100.png]]
+- ![[Pasted image 20230609165219.png]]
+- Above it is mention TCP is connection oriented , connection is established thru 3 way handshake
+- ![[Pasted image 20230609165408.png]]
+- first to establish it use flags showed in above pic , ACK (acknowledgement) and SYN(synchronize)
+- ![[Pasted image 20230609165600.png]]
+- first PC send SYN with bit set to 1 . Server return with SYN and ACK set to 1 bit each , PC reply with ACK 1 bit . and connection established
+- Termination of connection
+- ![[Pasted image 20230609165735.png]]
+- using flags ACK, FIN
+- ![[Pasted image 20230609165830.png]]
+- ![[Pasted image 20230609170145.png]]
+- TCP sequencing refers to the process by which TCP (Transmission Control Protocol) ensures the ordered and reliable delivery of data packets between two communicating devices over a network.
+- When data is transmitted over a TCP connection, the data is divided into smaller units called packets. Each packet contains a sequence number assigned by TCP to identify its position within the stream of data being transmitted. The sequence number serves as a mechanism for TCP to keep track of the order in which packets should be reassembled at the receiving end.![[Pasted image 20230609170238.png]]
+- showing how TCP retransmit any segment that arent acknowledge
+- ![[Pasted image 20230610051224.png]]
+- ![[Pasted image 20230610051421.png]]
+- check sum so that it can check for error
+- ![[Pasted image 20230610052037.png]]
+- note that some application use UDP and write reailibity feautre in the app itself. one example is TFTP
+- ![[Pasted image 20230610052159.png]]
+- ![[Pasted image 20230610052413.png]]
+- 
