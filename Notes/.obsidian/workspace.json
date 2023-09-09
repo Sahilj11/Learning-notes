@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9738d65f0b2bae42",
+            "id": "d874e07f4adbd401",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GIT Commands/Commands.md",
-                "mode": "preview",
+                "file": "Algo mit Book/1. Data abstraction.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5110321044922,
-    "collapsed": true
+    "width": 290.5110321044922
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT Commands/Commands.md",
+                "file": "Algo mit Book/1. Data abstraction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT Commands/Commands.md",
+                "file": "Algo mit Book/1. Data abstraction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT Commands/Commands.md"
+                "file": "Algo mit Book/1. Data abstraction.md"
               }
             }
           }
@@ -147,54 +146,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9738d65f0b2bae42",
+  "active": "d874e07f4adbd401",
   "lastOpenFiles": [
-    "Odin project/javascript advance/API.md",
-    "Odin project/javascript advance/Promises.md",
-    "Odin project/javascript advance/Namaste javascript.md",
+    "Algo mit Book/2. Strings.md",
+    "Networking/REST APIs.md",
+    "Algo mit Book/1. Data abstraction.md",
+    "statics/Pasted image 20230908143808.png",
+    "DSA/Data Structures/Heap and Heap Sort.md",
+    "Integer multiplication.md",
+    "Stanford course",
+    "Algo mit Book",
+    "Networking/OSPF.md",
+    "Networking/Network redundancy.md",
+    "Networking/Networking model.md",
+    "Networking/Network component and Terminology.md",
+    "Networking/Network Time Protocol.md",
+    "Networking/NAT.md",
+    "Networking/Life of a packet.md",
+    "Networking/IPv6.md",
+    "Networking/IPv4.md",
+    "Networking/FTP and TFTP.md",
+    "Networking/Etherchannel.md",
+    "Networking/Dynamic Routing.md",
+    "Networking/Data Serialization.md",
+    "Networking/DNS.md",
+    "Networking/CDP and LLDP.md",
+    "Networking/Commands for network configuration.md",
+    "Networking/DHCP (Dynamic Host Configuration Protocol).md",
+    "Networking/Access Control lists.md",
+    "DSA/Data Structures/Basics of Asymptotic analysis.md",
+    "DSA/Data Structures/Intro to DSA.md",
+    "DSA/Data Structures/Types of DS.md",
+    "statics/Pasted image 20230906132713.png",
+    "statics/Pasted image 20230906130913.png",
     "statics/Pasted image 20230825074857.png",
     "statics/Pasted image 20230825074207.png",
     "statics/Pasted image 20230825073826.png",
-    "Networking/VLAN.md",
-    "Networking/Subnetting.md",
-    "Networking/Life of a packet.md",
-    "Networking/Routers.md",
-    "Networking/IPv4.md",
-    "Networking/Ethernet LAN Switching.md",
-    "Networking/Networking model.md",
-    "Networking/Commands for network configuration.md",
-    "Networking/Network component and Terminology.md",
-    "Odin project/Javascript basics/Arrays in JS.md",
-    "java/ArrayList.md",
-    "Odin project/javascript advance/Asynchronus code.md",
-    "Odin project/Javascript basics/Errors.md",
-    "Odin project/Javascript basics/Problem solving.md",
-    "Odin project/Javascript basics/Fundamentals 3.md",
-    "Odin project/Javascript basics/Debugging JS.md",
-    "Odin project/Javascript basics/Fundamental 2.md",
-    "Odin project/Javascript basics/Fundamentals 1.md",
-    "Odin project/javascript advance/NPM and Webpack.md",
-    "GIT Commands/Commands.md",
     "statics/Pasted image 20230819130928.png",
     "statics/Pasted image 20230819130419.png",
     "statics/Pasted image 20230819130232.png",
-    "java/Wrapper class.md",
-    "Web developement/Securing the web/Security.md",
-    "java/Intro.md",
     "GIT Commands",
     "statics/Pasted image 20230807074409.png",
-    "statics/Pasted image 20230805160602.png",
     "DBMS",
     "java",
-    "statics/Pasted image 20230720130443.png",
-    "DSA/img/Pasted image 20230720130337.png",
     "DSA/img",
     "DSA/Data Structures",
     "DSA",
     "Odin project/HTML and CSS",
     "Odin project/javascript advance",
-    "Web security/Vulnerabilities",
-    "Odin project/Javascript basics",
     "Untitled.canvas"
   ]
 }
