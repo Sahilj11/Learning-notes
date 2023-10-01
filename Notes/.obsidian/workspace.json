@@ -21,7 +21,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction.md",
+                "file": "Shell Scripting/Introduction.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction.md",
+                "file": "Shell Scripting/Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Introduction.md",
+                "file": "Shell Scripting/Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction.md"
+                "file": "Shell Scripting/Introduction.md"
               }
             }
           },
@@ -165,9 +165,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c0bd687f590a5a1f",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "Introduction.md",
+    "Shell Scripting/Introduction.md",
     "Shell Scripting",
     "Udemy Networking/1. IP address.md",
     "GIT Commands/Commands.md",
