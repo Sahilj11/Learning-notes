@@ -4,31 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d91173fd9ce70386",
+        "id": "9b3c7e03416f7196",
         "type": "tabs",
         "children": [
           {
-            "id": "410a9a9154c55ffe",
+            "id": "ab6514a2bee58589",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
-          },
-          {
-            "id": "c0bd687f590a5a1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shell Scripting/Introduction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
