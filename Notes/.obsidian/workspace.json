@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "GIT Commands/Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "GIT Commands/Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "GIT Commands/Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md"
+                "file": "GIT Commands/Commands.md"
               }
             }
           },
@@ -171,8 +171,19 @@
   },
   "active": "e4a02cff1be2fe57",
   "lastOpenFiles": [
-    "Udemy Networking/1. IP address.md",
+    "Pasted image 20231001124918.png",
+    "Pasted image 20231001124833.png",
+    "Pasted image 20231001124035.png",
+    "Pasted image 20231001123923.png",
+    "Pasted image 20231001123712.png",
+    "Pasted image 20231001123441.png",
+    "Pasted image 20231001122910.png",
+    "Pasted image 20231001122714.png",
+    "Pasted image 20231001122648.png",
+    "Pasted image 20231001122527.png",
+    "Pasted image 20231001122304.png",
     "Udemy Networking/2. Cabeling and data flow.md",
+    "Udemy Networking/1. IP address.md",
     "JAVA methods/Strings.md",
     "Odin project/React/Data Passing.md",
     "Odin project/React",
@@ -187,16 +198,6 @@
     "Simple html page using css.md",
     "Frames to include video and image.md",
     "Registration form.md",
-    "statics/Pasted image 20230927203236.png",
-    "statics/Pasted image 20230927201940.png",
-    "statics/Pasted image 20230927203256.png",
-    "statics/Pasted image 20230927203207.png",
-    "statics/Pasted image 20230927202337.png",
-    "statics/Pasted image 20230927202318.png",
-    "statics/Pasted image 20230927201626.png",
-    "statics/Pasted image 20230927200559.png",
-    "statics/Pasted image 20230927200625.png",
-    "statics/Pasted image 20230927095721.png",
     "JAVA methods/java Collection/Intro.md",
     "MCA 1st sem/CN Minor 1st.md",
     "JAVA methods/java Collection",
@@ -211,7 +212,6 @@
     "Cloud computing/4. google cloud SDK.md",
     "MCA 1st sem/Relational model.md",
     "MCA 1st sem/JAVA/UNIT 1 and 2.md",
-    "Integer multiplication.md",
     "MCA 1st sem/JAVA",
     "MCA 1st sem",
     "Cloud computing",

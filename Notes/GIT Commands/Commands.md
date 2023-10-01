@@ -771,3 +771,349 @@ Now, suppose you forgot to tag the project at v1.2, which was at the “Update r
 ```
 $ git tag -a v1.2 9fceb02
 ```
+
+### Alias in git
+```
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+```
+
+This means that, for example, instead of typing git commit, you just need
+to type git ci. As you go on using Git, you’ll probably use other commands
+frequently as well; don’t hesitate to create new aliases.
+This technique can also be very useful in creating commands that you think
+should exist. For example, to correct the usability problem you encountered
+with unstaging a file, you can add your own unstage alias to Git:
+```
+$ git config --global alias.unstage 'reset HEAD --'
+```
+
+This makes the following two commands equivalent:
+```
+$ git unstage fileA
+$ git reset HEAD -- fileA
+```
+This seems a bit clearer. It’s also common to add a last command, like this:
+```
+$ git config --global alias.last 'log -1 HEAD'
+```
+This way, you can see the last commit easily:
+```
+$ git last
+commit 66938dae3329c7aebe598c2246a8e6af90d04646
+Author: Josh Goebel <dreamer3@example.com>
+Date:
+Tue Aug 26 19:48:51 2008 +0800
+test for current head
+```
+
+# Git Branching
+
+Branching means you diverge from the main line of development and continue to do work without messing with that main line.
+
+## Intro
+Git doesn’t store data as a series of
+changesets or differences, but instead as a series of snapshots.
+When you make a commit, Git stores a commit object that contains a pointer
+to the snapshot of the content you staged. This object also contains the au-
+thor’s name and email, the message that you typed, and pointers to the commit
+or commits that directly came before this commit (its parent or parents): zero
+parents for the initial commit, one parent for a normal commit, and multiple
+parents for a commit that results from a merge of two or more branches.
+
+The process you described outlines how Git stores data in a repository and the relationships between different types of objects in Git, such as blobs, trees, and commits. Let's break down each step and explain it in more detail:
+
+1. **Staging Files**: When you run `git add` for each file (e.g., README, test.rb, LICENSE), Git stages these files for commit. Staging essentially means that you're telling Git to include the changes in these files in the next commit. When you stage a file, Git calculates the SHA-1 hash (checksum) of the file's contents. This hash serves as a unique identifier for the file's content.
+
+2. **Creating Blobs**: After you've staged the files, Git creates a blob object for each file. A blob is simply a data object that stores the content of a file. These blobs are stored in the Git repository, and their filenames are represented by the SHA-1 hashes of their contents. Git uses these blobs to efficiently store and manage file content. So in your case, you have three blob objects, each containing the content of one of your files.
+
+3. **Creating a Tree Object**: Git doesn't store files directly in a commit; instead, it uses tree objects to represent directory structures. When you commit, Git calculates a tree object that represents the state of your entire project directory at that point in time. This tree object contains pointers to the blob objects that correspond to the files in your project. It also stores the file names and permissions.
+
+4. **Creating a Commit Object**: Once the tree object is created, Git creates a commit object. A commit object contains metadata such as the commit message, author information, timestamp, and a pointer to the root tree object that represents your project's directory structure. In your case, this commit object represents the initial state of your project, and it includes a reference to the tree object that describes the state of your files and directories at that moment.
+
+So, after running `git commit`, your Git repository contains the following five objects:
+
+1. Three blob objects, each storing the content of one of your files.
+2. One tree object representing the root directory and pointing to the blobs for your files.
+3. One commit object that contains metadata (like your commit message) and a reference to the root tree object.
+
+These objects collectively form a snapshot of your project's state at the time of the commit. Git's history is built by linking these commit objects together in a chain, with each commit pointing to its parent commit, forming a version history of your project. This allows Git to efficiently track changes over time and recreate any previous snapshot of your project if needed.
+![[Pasted image 20231001121804.png]]
+
+If you make some changes and commit again, the next commit stores a
+pointer to the commit that came immediately before it.
+
+![[Pasted image 20231001121853.png]]
+
+A branch in Git is simply a lightweight movable pointer to one of these com-
+mits. The default branch name in Git is master. As you start making commits,
+you’re given a master branch that points to the last commit you made. Every
+time you commit, it moves forward automatically.
+
+![[Pasted image 20231001122020.png]]
+
+### Creating a branch
+What happens if you create a new branch? Well, doing so creates a new pointer
+for you to move around. Let’s say you create a new branch called testing. You
+do this with the git branch command:
+```
+$ git branch testing
+```
+This creates a new pointer to the same commit you’re currently on.
+
+![[Pasted image 20231001122150.png]]
+How does Git know what branch you’re currently on? It keeps a special
+pointer called HEAD.
+In Git, this is a pointer to the local branch you’re currently on. In this case, you’re still on master.
+The git branch command only created a new branch – it didn’t switch to that
+branch.
+
+![[Pasted image 20231001122304.png]]
+
+You can easily see this by running a simple git log command that shows
+you where the branch pointers are pointing. This option is called --decorate.
+```
+$ git log --oneline --decorate
+f30ab (HEAD -> master, testing) add feature #32 - ability to add new formats to the central
+34ac2 Fixed bug #1328 - stack overflow under certain conditions
+98ca9 The initial commit of my project
+```
+You can see the “master” and “testing” branches that are right there next to
+the f30ab commit.
+
+### Switching branch 
+To switch to an existing branch, you run the git checkout command. Let’s
+switch to the new testing branch:
+```
+$ git checkout testing
+```
+This moves HEAD to point to the testing branch.
+
+![[Pasted image 20231001122527.png]]
+
+What is the significance of that? Well, let’s do another commit:
+```
+$ vim test.rb
+$ git commit -a -m 'made a change'
+```
+![[Pasted image 20231001122648.png]]
+This is interesting, because now your testing branch has moved forward,
+but your master branch still points to the commit you were on when you ran
+git checkout to switch branches. Let’s switch back to the master branch:
+
+![[Pasted image 20231001122714.png]]
+
+That command did two things. It moved the HEAD pointer back to point to
+the master branch, and it reverted the files in your working directory back to
+the snapshot that master points to. This also means the changes you make
+from this point forward will diverge from an older version of the project. It es-
+sentially rewinds the work you’ve done in your testing branch so you can go
+in a different direction.
+
+*It’s important to note that when you switch branches in Git, files in your
+working directory will change. If you switch to an older branch, your
+working directory will be reverted to look like it did the last time you
+committed on that branch. If Git cannot do it cleanly, it will not let you
+switch at all*
+
+![[Pasted image 20231001122910.png]]
+
+You can also see this easily with the git log command. If you run git log
+--oneline --decorate --graph --all it will print out the history of your
+commits, showing where your branch pointers are and how your history has di-
+verged
+
+```
+$ git log --oneline --decorate --graph --all
+* c2b9e (HEAD, master) made other changes
+| * 87ab2 (testing) made a change
+|/
+* f30ab add feature #32 - ability to add new formats to the
+* 34ac2 fixed bug #1328 - stack overflow under certain conditions
+* 98ca9 initial commit of my project
+```
+a branch in Git is in actuality a simple file that contains the 40 char-
+acter SHA-1 checksum of the commit it points to, branches are cheap to create
+and destroy. Creating a new branch is as quick and simple as writing 41 bytes to
+a file (40 characters and a newline).
+
+### Basic Branching
+To create a branch and switch to it at the
+same time, you can run the git checkout command with the -b switch:
+```
+$ git checkout -b iss53
+```
+Switched to a new branch "iss53"
+This is shorthand for:
+```
+$ git branch iss53
+$ git checkout iss53
+```
+You work on your web site and do some commits. Doing so moves the iss53
+branch forward, because you have it checked out (that is, your HEAD is pointing
+to it):
+![[Pasted image 20231001123441.png]]
+
+However, before you do that, note that if your working directory or staging
+area has uncommitted changes that conflict with the branch you’re checking
+out, Git won’t let you switch branches. It’s best to have a clean working state
+when you switch branches
+
+This
+is an important point to remember: when you switch branches, Git resets your
+working directory to look like it did the last time you committed on that branch.
+It adds, removes, and modifies files automatically to make sure your working
+copy is what the branch looked like on your last commit to it.
+
+Next, you have a hotfix to make. Let’s create a hotfix branch on which to
+work until it’s completed:
+```
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+$ vim index.html
+$ git commit -a -m 'fixed the broken email address'
+```
+![[Pasted image 20231001123712.png]]
+
+You can run your tests, make sure the hotfix is what you want, and merge it
+back into your master branch to deploy to production. You do this with the git
+merge command:
+```
+$ git checkout master
+$ git merge hotfix
+Updating f42c576..3a0874c
+Fast-forward
+index.html | 2 ++
+1 file changed, 2 insertions(+)
+```
+
+You’ll notice the phrase “fast-forward” in that merge. Because the commit C4
+pointed to by the branch hotfix you merged in was directly ahead of the com-
+mit C2 you’re on, Git simply moves the pointer forward. To phrase that another
+way, when you try to merge one commit with a commit that can be reached by
+following the first commit’s history, Git simplifies things by moving the pointer
+forward because there is no divergent work to merge together – this is called a
+“fast-forward.”
+
+![[Pasted image 20231001123923.png]]
+
+After your super-important fix is deployed, you’re ready to switch back to the
+work you were doing before you were interrupted. However, first you’ll delete
+the hotfix branch, because you no longer need it – the master branch points
+at the same place. You can delete it with the -d option to git branch:
+```
+$ git branch -d hotfix
+Deleted branch hotfix (3a0874c).
+```
+![[Pasted image 20231001124035.png]]
+
+### Basic Merging 
+you’ll merge your iss53 branch into master, much like you merged your hotfix branch earlier. All you have to do is check out the branch you wish to merge into and then run the git
+merge command:
+```
+$ git checkout master
+Switched to branch 'master'
+$ git merge iss53
+Merge made by the 'recursive' strategy.
+index.html |
+1 +
+1 file changed, 1 insertion(+)
+```
+This looks a bit different than the hotfix merge you did earlier. In this case,
+your development history has diverged from some older point. Because the
+commit on the branch you’re on isn’t a direct ancestor of the branch you’re
+merging in, Git has to do some work. In this case, Git does a simple three-way
+merge, using the two snapshots pointed to by the branch tips and the common
+ancestor of the two
+![[Pasted image 20231001124833.png]]
+Instead of just moving the branch pointer forward, Git creates a new snap-
+shot that results from this three-way merge and automatically creates a new
+commit that points to it. This is referred to as a merge commit, and is special in
+that it has more than one parent.
+
+![[Pasted image 20231001124918.png]]
+It’s worth pointing out that Git determines the best common ancestor to use
+for its merge base;
+
+### Basic merge conflicts
+If you changed the same part of
+the same file differently in the two branches you’re merging together, Git won’t
+be able to merge them cleanly. If your fix for issue #53 modified the same part
+of a file as the hotfix, you’ll get a merge conflict that looks something like this:
+```
+$ git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Git hasn’t automatically created a new merge commit. It has paused the pro-
+cess while you resolve the conflict. If you want to see which files are unmerged
+at any point after a merge conflict, you can run git status:
+```
+$ git status
+On branch master
+You have unmerged paths.
+(fix conflicts and run "git commit")
+Unmerged paths:
+(use "git add <file>..." to mark resolution)
+both modified:
+index.html
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+Anything that has merge conflicts and hasn’t been resolved is listed as un-
+merged. Git adds standard conflict-resolution markers to the files that have
+conflicts, so you can open them manually and resolve those conflicts. Your file
+contains a section that looks something like this:
+```
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+```
+This means the version in HEAD (your master branch, because that was what
+you had checked out when you ran your merge command) is the top part of
+that block (everything above the `=======`), while the version in your iss53
+branch looks like everything in the bottom part. In order to resolve the conflict,
+you have to either choose one side or the other or merge the contents yourself.
+For instance, you might resolve this conflict by replacing the entire block with
+this:
+After you’ve resolved each of
+these sections in each conflicted file, run git add on each file to mark it as re-
+solved. Staging the file marks it as resolved in Git
+
+If you want to use a graphical tool to resolve these issues, you can run git
+mergetool, which fires up an appropriate visual merge tool and walks you
+through the conflicts:
+```
+$ git mergetool
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge
+Merging:
+index.html
+Normal merge conflict for 'index.html':
+{local}: modified file
+{remote}: modified file
+Hit return to start merge resolution tool (opendiff):
+```
+After you exit the merge tool, Git asks you if the merge was successful. If you
+tell the script that it was, it stages the file to mark it as resolved for you. You can
+run git status again to verify that all conflicts have been resolved:
+```
+$ git status
+On branch master
+All conflicts fixed but you are still merging.
+(use "git commit" to conclude merge)
+Changes to be committed:
+modified:
+index.html
+```
+If you’re happy with that, and you verify that everything that had conflicts
+has been staged, you can type git commit to finalize the merge commit. The
+commit message by default looks something like this:
