@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2fc1ac5ba997de39",
+        "id": "ba1138e438a77578",
         "type": "tabs",
         "children": [
           {
-            "id": "d874e07f4adbd401",
+            "id": "a3bda058c8e51a1c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algo mit Book/1. Data abstraction.md",
+                "file": "Udemy Networking/1. IP address.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4a02cff1be2fe57",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Udemy Networking/2. Cabeling and data flow.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algo mit Book/1. Data abstraction.md",
+                "file": "Udemy Networking/2. Cabeling and data flow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algo mit Book/1. Data abstraction.md",
+                "file": "Udemy Networking/2. Cabeling and data flow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algo mit Book/1. Data abstraction.md"
+                "file": "Udemy Networking/2. Cabeling and data flow.md"
+              }
+            }
+          },
+          {
+            "id": "ecbdc372f97dd579",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -146,54 +169,54 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d874e07f4adbd401",
+  "active": "e4a02cff1be2fe57",
   "lastOpenFiles": [
-    "Algo mit Book/2. Strings.md",
-    "Networking/REST APIs.md",
-    "Algo mit Book/1. Data abstraction.md",
-    "statics/Pasted image 20230908143808.png",
-    "DSA/Data Structures/Heap and Heap Sort.md",
+    "Udemy Networking/1. IP address.md",
+    "Udemy Networking/2. Cabeling and data flow.md",
+    "JAVA methods/Strings.md",
+    "Odin project/React/Data Passing.md",
+    "Odin project/React",
+    "java/Wrapper class.md",
+    "Algo mit Book/3. Bags , queue and stacks.md",
+    "DSA problem/Problems.md",
+    "JAVA methods/java Collection/Sets.md",
+    "java/Intro.md",
+    "java/ArrayList.md",
+    "SortingCode.md",
+    "Simple web page.md",
+    "Simple html page using css.md",
+    "Frames to include video and image.md",
+    "Registration form.md",
+    "statics/Pasted image 20230927203236.png",
+    "statics/Pasted image 20230927201940.png",
+    "statics/Pasted image 20230927203256.png",
+    "statics/Pasted image 20230927203207.png",
+    "statics/Pasted image 20230927202337.png",
+    "statics/Pasted image 20230927202318.png",
+    "statics/Pasted image 20230927201626.png",
+    "statics/Pasted image 20230927200559.png",
+    "statics/Pasted image 20230927200625.png",
+    "statics/Pasted image 20230927095721.png",
+    "JAVA methods/java Collection/Intro.md",
+    "MCA 1st sem/CN Minor 1st.md",
+    "JAVA methods/java Collection",
+    "DSA problem",
+    "JAVA methods/Arrays.md",
+    "JAVA methods",
+    "Cloud computing/5. Cloud shell.md",
+    "Udemy Networking",
+    "Algo mit Book/2. JAVA.md",
+    "Virtualmachine.md",
+    "Cloud computing/3. Understanding projects.md",
+    "Cloud computing/4. google cloud SDK.md",
+    "MCA 1st sem/Relational model.md",
+    "MCA 1st sem/JAVA/UNIT 1 and 2.md",
     "Integer multiplication.md",
+    "MCA 1st sem/JAVA",
+    "MCA 1st sem",
+    "Cloud computing",
     "Stanford course",
     "Algo mit Book",
-    "Networking/OSPF.md",
-    "Networking/Network redundancy.md",
-    "Networking/Networking model.md",
-    "Networking/Network component and Terminology.md",
-    "Networking/Network Time Protocol.md",
-    "Networking/NAT.md",
-    "Networking/Life of a packet.md",
-    "Networking/IPv6.md",
-    "Networking/IPv4.md",
-    "Networking/FTP and TFTP.md",
-    "Networking/Etherchannel.md",
-    "Networking/Dynamic Routing.md",
-    "Networking/Data Serialization.md",
-    "Networking/DNS.md",
-    "Networking/CDP and LLDP.md",
-    "Networking/Commands for network configuration.md",
-    "Networking/DHCP (Dynamic Host Configuration Protocol).md",
-    "Networking/Access Control lists.md",
-    "DSA/Data Structures/Basics of Asymptotic analysis.md",
-    "DSA/Data Structures/Intro to DSA.md",
-    "DSA/Data Structures/Types of DS.md",
-    "statics/Pasted image 20230906132713.png",
-    "statics/Pasted image 20230906130913.png",
-    "statics/Pasted image 20230825074857.png",
-    "statics/Pasted image 20230825074207.png",
-    "statics/Pasted image 20230825073826.png",
-    "statics/Pasted image 20230819130928.png",
-    "statics/Pasted image 20230819130419.png",
-    "statics/Pasted image 20230819130232.png",
-    "GIT Commands",
-    "statics/Pasted image 20230807074409.png",
-    "DBMS",
-    "java",
-    "DSA/img",
-    "DSA/Data Structures",
-    "DSA",
-    "Odin project/HTML and CSS",
-    "Odin project/javascript advance",
     "Untitled.canvas"
   ]
 }

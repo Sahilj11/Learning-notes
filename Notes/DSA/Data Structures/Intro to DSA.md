@@ -3,6 +3,10 @@
 ### Diff b/w data and info
 - Info means , data is arranged in systematic way then its gets a structure and become meaningful
 
+## interface and data structure
+- Interface :- collection of operation( eg . sets , sequence)
+- DS:- way to store data that support a set of operation ( hashset is ds for set)
+
 ### What is DSA
 - To provide an appropriate way to structure the data we need to know about DSA
 - systematic way to organise data so that it can be used efficiently (both in terms of time and space)
