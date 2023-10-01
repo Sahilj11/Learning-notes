@@ -4,28 +4,26 @@
     "type": "split",
     "children": [
       {
-        "id": "ba1138e438a77578",
+        "id": "d91173fd9ce70386",
         "type": "tabs",
         "children": [
           {
-            "id": "a3bda058c8e51a1c",
+            "id": "410a9a9154c55ffe",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "c0bd687f590a5a1f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Udemy Networking/1. IP address.md",
+                "file": "Introduction.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "e4a02cff1be2fe57",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "GIT Commands/img/Pasted image 20231001121804.png"
               }
             }
           }
@@ -96,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT Commands/img/Pasted image 20231001121804.png",
+                "file": "Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT Commands/img/Pasted image 20231001121804.png",
+                "file": "Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT Commands/img/Pasted image 20231001121804.png"
+                "file": "Introduction.md"
               }
             }
           },
@@ -167,8 +165,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "c0bd687f590a5a1f",
   "lastOpenFiles": [
+    "Introduction.md",
+    "Shell Scripting",
+    "Udemy Networking/1. IP address.md",
     "GIT Commands/Commands.md",
     "GIT Commands/img",
     "GIT Commands/img/Pasted image 20231001124918.png",
@@ -182,7 +183,6 @@
     "GIT Commands/img/Pasted image 20231001122648.png",
     "GIT Commands/img/Pasted image 20231001122527.png",
     "Udemy Networking/2. Cabeling and data flow.md",
-    "Udemy Networking/1. IP address.md",
     "JAVA methods/Strings.md",
     "Odin project/React/Data Passing.md",
     "Odin project/React",
@@ -210,11 +210,9 @@
     "Cloud computing/3. Understanding projects.md",
     "Cloud computing/4. google cloud SDK.md",
     "MCA 1st sem/Relational model.md",
-    "MCA 1st sem/JAVA/UNIT 1 and 2.md",
     "MCA 1st sem/JAVA",
     "MCA 1st sem",
     "Cloud computing",
-    "Stanford course",
     "Untitled.canvas"
   ]
 }
