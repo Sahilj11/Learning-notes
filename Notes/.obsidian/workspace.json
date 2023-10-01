@@ -23,11 +23,9 @@
             "id": "e4a02cff1be2fe57",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "GIT Commands/Commands.md",
-                "mode": "source",
-                "source": false
+                "file": "GIT Commands/img/Pasted image 20231001121804.png"
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GIT Commands/Commands.md",
+                "file": "GIT Commands/img/Pasted image 20231001121804.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GIT Commands/Commands.md",
+                "file": "GIT Commands/img/Pasted image 20231001121804.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GIT Commands/Commands.md"
+                "file": "GIT Commands/img/Pasted image 20231001121804.png"
               }
             }
           },
@@ -169,19 +167,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e4a02cff1be2fe57",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "Pasted image 20231001124918.png",
-    "Pasted image 20231001124833.png",
-    "Pasted image 20231001124035.png",
-    "Pasted image 20231001123923.png",
-    "Pasted image 20231001123712.png",
-    "Pasted image 20231001123441.png",
-    "Pasted image 20231001122910.png",
-    "Pasted image 20231001122714.png",
-    "Pasted image 20231001122648.png",
-    "Pasted image 20231001122527.png",
-    "Pasted image 20231001122304.png",
+    "GIT Commands/Commands.md",
+    "GIT Commands/img",
+    "GIT Commands/img/Pasted image 20231001124918.png",
+    "GIT Commands/img/Pasted image 20231001124833.png",
+    "GIT Commands/img/Pasted image 20231001124035.png",
+    "GIT Commands/img/Pasted image 20231001123923.png",
+    "GIT Commands/img/Pasted image 20231001123712.png",
+    "GIT Commands/img/Pasted image 20231001123441.png",
+    "GIT Commands/img/Pasted image 20231001122910.png",
+    "GIT Commands/img/Pasted image 20231001122714.png",
+    "GIT Commands/img/Pasted image 20231001122648.png",
+    "GIT Commands/img/Pasted image 20231001122527.png",
     "Udemy Networking/2. Cabeling and data flow.md",
     "Udemy Networking/1. IP address.md",
     "JAVA methods/Strings.md",
@@ -216,7 +215,6 @@
     "MCA 1st sem",
     "Cloud computing",
     "Stanford course",
-    "Algo mit Book",
     "Untitled.canvas"
   ]
 }
