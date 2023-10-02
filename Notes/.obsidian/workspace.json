@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ab6514a2bee58589",
+            "id": "ccc2d0b9c4da094f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Odin project/React/1. Data Passing.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shell Scripting/Introduction.md",
+                "file": "Odin project/React/1. Data Passing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Shell Scripting/Introduction.md",
+                "file": "Odin project/React/1. Data Passing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shell Scripting/Introduction.md"
+                "file": "Odin project/React/1. Data Passing.md"
               }
             }
           },
@@ -152,8 +156,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "ccc2d0b9c4da094f",
   "lastOpenFiles": [
+    "Odin project/React/2 . States in react.md",
+    "Odin project/React/1. Data Passing.md",
+    "statics/Pasted image 20231002080537.png",
     "Shell Scripting/Introduction.md",
     "Shell Scripting",
     "Udemy Networking/1. IP address.md",
@@ -168,10 +175,8 @@
     "GIT Commands/img/Pasted image 20231001122910.png",
     "GIT Commands/img/Pasted image 20231001122714.png",
     "GIT Commands/img/Pasted image 20231001122648.png",
-    "GIT Commands/img/Pasted image 20231001122527.png",
     "Udemy Networking/2. Cabeling and data flow.md",
     "JAVA methods/Strings.md",
-    "Odin project/React/Data Passing.md",
     "Odin project/React",
     "java/Wrapper class.md",
     "Algo mit Book/3. Bags , queue and stacks.md",
@@ -195,8 +200,6 @@
     "Algo mit Book/2. JAVA.md",
     "Virtualmachine.md",
     "Cloud computing/3. Understanding projects.md",
-    "Cloud computing/4. google cloud SDK.md",
-    "MCA 1st sem/Relational model.md",
     "MCA 1st sem/JAVA",
     "MCA 1st sem",
     "Cloud computing",
