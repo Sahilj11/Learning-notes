@@ -1,1 +1,11 @@
-{}
+{
+  "obsidian-table-generator:create-table-genertator": [
+    {
+      "modifiers": [
+        "Mod",
+        "Meta"
+      ],
+      "key": "T"
+    }
+  ]
+}
