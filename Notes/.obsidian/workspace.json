@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a89531d1904b1676",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Odin project/React/References.md",
+                "file": "Algo mit Book/3. Bags , queue and stacks.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
+                "file": "Algo mit Book/3. Bags , queue and stacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
+                "file": "Algo mit Book/3. Bags , queue and stacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/React/2 . States in react.md"
+                "file": "Algo mit Book/3. Bags , queue and stacks.md"
               }
             }
           },
@@ -170,8 +158,12 @@
   },
   "active": "ccc2d0b9c4da094f",
   "lastOpenFiles": [
-    "Odin project/React/References.md",
+    "Simple web page.md",
+    "statics/Pasted image 20231002123709.png",
+    "statics/Pasted image 20231002124214.png",
+    "Algo mit Book/3. Bags , queue and stacks.md",
     "Odin project/React/2 . States in react.md",
+    "Odin project/React/References.md",
     "Odin project/React/1. Data Passing.md",
     "statics/Pasted image 20231002080537.png",
     "Shell Scripting/Introduction.md",
@@ -186,19 +178,15 @@
     "GIT Commands/img/Pasted image 20231001123712.png",
     "GIT Commands/img/Pasted image 20231001123441.png",
     "GIT Commands/img/Pasted image 20231001122910.png",
-    "GIT Commands/img/Pasted image 20231001122714.png",
-    "GIT Commands/img/Pasted image 20231001122648.png",
     "Udemy Networking/2. Cabeling and data flow.md",
     "JAVA methods/Strings.md",
     "Odin project/React",
     "java/Wrapper class.md",
-    "Algo mit Book/3. Bags , queue and stacks.md",
     "DSA problem/Problems.md",
     "JAVA methods/java Collection/Sets.md",
     "java/Intro.md",
     "java/ArrayList.md",
     "SortingCode.md",
-    "Simple web page.md",
     "Simple html page using css.md",
     "Frames to include video and image.md",
     "Registration form.md",
@@ -212,7 +200,6 @@
     "Udemy Networking",
     "Algo mit Book/2. JAVA.md",
     "Virtualmachine.md",
-    "Cloud computing/3. Understanding projects.md",
     "MCA 1st sem/JAVA",
     "MCA 1st sem",
     "Cloud computing",
