@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/React/References.md",
+                "file": "Odin project/React/2 . States in react.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/React/References.md",
+                "file": "Odin project/React/2 . States in react.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/React/References.md"
+                "file": "Odin project/React/2 . States in react.md"
               }
             }
           },
@@ -169,10 +168,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "ccc2d0b9c4da094f",
   "lastOpenFiles": [
-    "Odin project/React/2 . States in react.md",
     "Odin project/React/References.md",
+    "Odin project/React/2 . States in react.md",
     "Odin project/React/1. Data Passing.md",
     "statics/Pasted image 20231002080537.png",
     "Shell Scripting/Introduction.md",
