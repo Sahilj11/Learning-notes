@@ -79,4 +79,3 @@ happens to be running compute-intensive part of the application at the time.
 - concurrency 
 - Race condition
 ### Using sychronised keyword 
-
