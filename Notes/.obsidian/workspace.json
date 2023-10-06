@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "Algo Princeton Book/1.3. Bags , queue and stacks.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5110321044922,
-    "collapsed": true
+    "width": 290.5110321044922
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "Algo Princeton Book/1.3. Bags , queue and stacks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md",
+                "file": "Algo Princeton Book/1.3. Bags , queue and stacks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Udemy Networking/2. Cabeling and data flow.md"
+                "file": "Algo Princeton Book/1.3. Bags , queue and stacks.md"
               }
             }
           },
@@ -159,45 +158,45 @@
   },
   "active": "2fae26ee91b2184e",
   "lastOpenFiles": [
-    "statics/Pasted image 20231004132900.png",
+    "Algo Princeton Book/1.4. Analysis of algo.md",
+    "Pasted image 20231006141108.png",
+    "Pasted image 20231006140807.png",
+    "JAVA methods/Arrays.md",
+    "Pasted image 20231006134411.png",
+    "Pasted image 20231006134252.png",
     "Udemy Networking/2. Cabeling and data flow.md",
-    "statics/Pasted image 20231005104655.png",
+    "Networking/Data Serialization.md",
+    "Networking/Commands for network configuration.md",
     "Odin project/React/2 . States in react.md",
+    "Pasted image 20231005163557.png",
+    "Algorithms Princeton video/1. Analysis of Algo.md",
+    "Algo Princeton Book/2.1 Searching.md",
+    "Algorithms Princeton video",
+    "statics/Pasted image 20231004132900.png",
+    "statics/Pasted image 20231005104655.png",
     "statics/Pasted image 20231005093240.png",
-    "Algo mit Book/1.3. Bags , queue and stacks.md",
-    "Algo mit Book/1.4. Analysis of algo.md",
+    "Algo Princeton Book/1.3. Bags , queue and stacks.md",
     "JAVA methods/java Collection/Intro.md",
-    "Algo mit Book/1.2. JAVA.md",
-    "Algo mit Book/1. Data abstraction.md",
-    "Algo mit Book/2.1 Searching.md",
+    "Algo Princeton Book/1.2. JAVA.md",
+    "Algo Princeton Book/1. Data abstraction.md",
     "statics/Pasted image 20231002125541.png",
     "Odin project/javascript advance/Promises.md",
     "statics/Pasted image 20231003072000.png",
     "Odin project/React/3. Render and commit.md",
-    "Untitled",
     "Simple web page.md",
-    "statics/Pasted image 20231002123709.png",
-    "statics/Pasted image 20231002124214.png",
     "Odin project/React/References.md",
     "Odin project/React/1. Data Passing.md",
-    "statics/Pasted image 20231002080537.png",
     "Shell Scripting/Introduction.md",
     "Shell Scripting",
     "Udemy Networking/1. IP address.md",
     "GIT Commands/Commands.md",
     "GIT Commands/img",
-    "GIT Commands/img/Pasted image 20231001124918.png",
-    "GIT Commands/img/Pasted image 20231001124833.png",
     "JAVA methods/Strings.md",
     "Odin project/React",
     "java/Wrapper class.md",
     "DSA problem/Problems.md",
     "JAVA methods/java Collection/Sets.md",
     "java/Intro.md",
-    "java/ArrayList.md",
-    "SortingCode.md",
-    "Simple html page using css.md",
-    "Frames to include video and image.md",
     "JAVA methods/java Collection",
     "DSA problem",
     "JAVA methods",
