@@ -8,39 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c3a1c2d23f8414ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Routers.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e45816cdbaad9900",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "statics/Pasted image 20231008160848.png"
-              }
-            }
-          },
-          {
-            "id": "774912bf87400fc6",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "statics/Pasted image 20231008121859.png"
+                "file": "statics/Pasted image 20231008162330.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5110321044922
+    "width": 290.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -106,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231008160848.png",
+                "file": "statics/Pasted image 20231008162330.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +101,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231008160848.png",
+                "file": "statics/Pasted image 20231008162330.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231008160848.png"
+                "file": "statics/Pasted image 20231008162330.png"
               }
             }
           },
@@ -177,19 +155,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "e45816cdbaad9900",
   "lastOpenFiles": [
     "MCA/1st Sem/SE/2. Software Engineering.md",
+    "statics/Pasted image 20231008163022.png",
+    "statics/Pasted image 20231008162946.png",
+    "statics/Pasted image 20231008162912.png",
+    "statics/Pasted image 20231008162815.png",
+    "statics/Pasted image 20231008162541.png",
+    "statics/Pasted image 20231008162330.png",
+    "statics/Pasted image 20231008160848.png",
     "statics/Pasted image 20231008161524.png",
     "statics/Pasted image 20231008161306.png",
     "statics/Pasted image 20231008161249.png",
-    "statics/Pasted image 20231008161225.png",
-    "statics/Pasted image 20231008161205.png",
-    "statics/Pasted image 20231008160906.png",
-    "statics/Pasted image 20231008160848.png",
-    "statics/Pasted image 20231008153505.png",
-    "statics/Pasted image 20231008160749.png",
-    "statics/Pasted image 20231008153607.png",
     "Networking/Routers.md",
     "Udemy Networking/2. Cabeling and data flow.md",
     "Networking/Ethernet LAN Switching.md",
