@@ -1,4 +1,4 @@
-## What is routing
+o## What is routing
 - process used by routers to determine the path IP packets should take over a network to reach their destination
 - router store routes to all their known destination in routing table
 - when routers receive packets , they look into routing table to find the best route to forward that packet
