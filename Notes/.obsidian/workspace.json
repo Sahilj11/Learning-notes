@@ -13,9 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
+                "file": "Networking/Routers.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "774912bf87400fc6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231008121859.png"
               }
             }
           }
@@ -48,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "controlled",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +75,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
+                "file": "Networking/Routers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/React/2 . States in react.md",
+                "file": "Networking/Routers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/React/2 . States in react.md"
+                "file": "Networking/Routers.md"
               }
             }
           },
@@ -159,6 +168,14 @@
   },
   "active": "c3a1c2d23f8414ed",
   "lastOpenFiles": [
+    "statics/Pasted image 20231008121859.png",
+    "statics/Pasted image 20231008112956.png",
+    "Networking/Routers.md",
+    "Udemy Networking/2. Cabeling and data flow.md",
+    "Networking/Ethernet LAN Switching.md",
+    "statics/Pasted image 20231008120920.png",
+    "Web developement/Frontend/Inspect function.md",
+    "Odin project/React/2 . States in react.md",
     "Odin project/React/5. Side-Effects.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
@@ -173,7 +190,6 @@
     "statics/Pasted image 20231005163557.png",
     "Odin project/React/1. Data Passing.md",
     "Odin project/React/3. Render and commit.md",
-    "Odin project/React/2 . States in react.md",
     "Algo Princeton Book/1.3. Bags , queue and stacks.md",
     "statics/Pasted image 20231006203713.png",
     "Algo Princeton Book/1.4. Analysis of algo.md",
@@ -184,24 +200,16 @@
     "JAVA methods/Arrays.md",
     "statics/Pasted image 20231006134411.png",
     "statics/Pasted image 20231006134252.png",
-    "Udemy Networking/2. Cabeling and data flow.md",
     "Networking/Data Serialization.md",
     "Networking/Commands for network configuration.md",
     "Algorithms Princeton video/1. Analysis of Algo.md",
     "Algorithms Princeton video",
     "statics/Pasted image 20231004132900.png",
-    "statics/Pasted image 20231005104655.png",
-    "statics/Pasted image 20231005093240.png",
     "JAVA methods/java Collection/Intro.md",
     "Algo Princeton Book/1.2. JAVA.md",
     "Algo Princeton Book/1. Data abstraction.md",
-    "statics/Pasted image 20231002125541.png",
     "Odin project/javascript advance/Promises.md",
-    "Simple web page.md",
-    "Odin project/React/References.md",
-    "Shell Scripting/Introduction.md",
     "Shell Scripting",
-    "Udemy Networking/1. IP address.md",
     "GIT Commands/img",
     "Odin project/React",
     "JAVA methods/java Collection",
