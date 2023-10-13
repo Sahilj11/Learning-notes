@@ -12,8 +12,7 @@ with the foreach statement.
 	tends this, adding methods to find the closest matches to a target element.
 - Queue:- Queue is a collection designed to accept elements at its tail for processing, yielding them up at its head in the order in which they are to be processed. Its subinterface. Deque extends this by allowing elements to be added or removed at both head and tail. Queue and Deque have subinterfaces, BlockingQueue and BlockingDeque respec-tively, that support concurrent access and allow threads to be blocked, indefinitely
 	or for a maximum time, until the requested operation can be carried out
-- List is a collection in which order is significant, accommodating duplicate ele-
-	ments.
+- List is a collection in which order is significant, accommodating duplicate elements.
 - Map is a collection which uses key-value associations to store and retrieve elements.
 It is extended by ConcurrentMap, which provides support for concurrent access, by
 SortedMap, which guarantees to return its values in ascending key order, by Navi
