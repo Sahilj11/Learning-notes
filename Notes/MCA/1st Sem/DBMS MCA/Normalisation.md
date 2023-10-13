@@ -184,3 +184,41 @@ In 2NF, the key requirement is that non-key attributes (attributes that are not 
 2. **Composite Primary Key (Multiple Attributes):** When the primary key is composed of multiple attributes (a composite key), it's crucial to ensure that non-key attributes are fully functionally dependent on the entire combination of attributes in the composite key. The 2NF requirement here is primarily aimed at eliminating partial dependencies, where non-key attributes depend on only part of the composite key.
 
 In summary, 2NF is relevant for tables with both single-attribute and composite primary keys. In the case of a single-attribute primary key, all non-key attributes must depend on that attribute entirely. In the case of a composite primary key, non-key attributes must be fully dependent on the entire set of attributes that make up the primary key. The key idea is to eliminate partial dependencies and maintain data integrity.
+
+#### Third normal form 
+- Every non-key attribute in a table should depend on the key , the whole key , and nothing but key.
+	- if from above definition we remove "non-key" then we get a more strong version of 3rd normal form called Boyce-codd Normal form
+The Third Normal Form (3NF) is a level of normalization in relational database design that helps eliminate data redundancy and improve data integrity by organizing data into separate, related tables. It builds upon the concepts of the First Normal Form (1NF) and Second Normal Form (2NF). To achieve 3NF, a table must meet the following two criteria:
+
+1. It must be in 2NF: This means that the table should first satisfy the requirements of the Second Normal Form, which include having a composite primary key (a primary key composed of more than one attribute) and ensuring that all non-key attributes are functionally dependent on the entire primary key.
+
+2. It must not have transitive dependencies: A transitive dependency occurs when an attribute depends on another attribute, which in turn depends on the primary key. In a 3NF table, all non-key attributes should be directly dependent on the primary key and should not have indirect dependencies through other non-key attributes.
+![[Pasted image 20231013120948.png]]
+3NF formids this type of dependencies
+Normalised table 
+![[Pasted image 20231013121046.png]]
+
+To illustrate 3NF with an example, let's consider a simplified database for a library:
+
+**Table: Books**
+- ISBN (Primary Key)
+- Title
+- Author
+- Author Birthdate
+- Author Nationality
+
+In this case, we have a transitive dependency because the attributes "Author Birthdate" and "Author Nationality" depend on the non-key attribute "Author," which itself depends on the primary key "ISBN." To bring this table into 3NF, we can create two separate tables:
+
+**Table: Books**
+- ISBN (Primary Key)
+- Title
+- Author (Foreign Key)
+
+**Table: Authors**
+- Author (Primary Key)
+- Author Birthdate
+- Author Nationality
+
+Now, the Authors table has a primary key of "Author," and the Books table has a foreign key relationship with the Authors table. This structure satisfies 3NF because it eliminates the transitive dependency by creating a separate table for author-related information.
+
+In summary, the Third Normal Form (3NF) is a critical step in database normalization, ensuring that data is efficiently organized and minimizing data redundancy while preserving data integrity by removing transitive dependencies. This normalization process helps maintain data consistency and simplifies data retrieval and manipulation in relational databases.
