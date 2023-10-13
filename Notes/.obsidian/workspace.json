@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
+                "file": "MCA/1st Sem/DBMS MCA/Relational model.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03254e53d2276e4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md"
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md"
               }
             }
           },
@@ -156,8 +170,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "03254e53d2276e4a",
   "lastOpenFiles": [
+    "MCA/1st Sem/DBMS MCA/Relational model.md",
+    "MCA/1st Sem/DBMS MCA/Normalisation.md",
+    "Udemy Networking/2. Cabeling and data flow.md",
+    "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
     "statics/Pasted image 20231009161453.png",
     "MCA/1st Sem/Lab_expirements/java_lab",
     "MCA/1st Sem/Lab_expirements/WD_Lab",
@@ -166,7 +184,6 @@
     "Odin project/React/2 . States in react.md",
     "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/1. Data Passing.md",
-    "Udemy Networking/2. Cabeling and data flow.md",
     "JAVA methods/Strings.md",
     "JAVA methods/java Collection/Intro.md",
     "JAVA methods/java Collection/Sets.md",
@@ -191,7 +208,6 @@
     "Networking/Routers.md",
     "Networking/Ethernet LAN Switching.md",
     "Web developement/Frontend/Inspect function.md",
-    "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "MCA/1st Sem/SE",
     "MCA/1st Sem/WD",
@@ -201,7 +217,6 @@
     "MCA/1st Sem",
     "Odin project/React/4. CV application project.md",
     "Odin project/React/3. Render and commit.md",
-    "JAVA methods/Arrays.md",
     "Algorithms Princeton video",
     "Untitled.canvas"
   ]
