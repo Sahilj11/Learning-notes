@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -167,8 +166,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "606660f302b20d13",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
+    "statics/Pasted image 20231013130001.png",
     "statics/Pasted image 20231013124935.png",
     "statics/Pasted image 20231013121046.png",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",

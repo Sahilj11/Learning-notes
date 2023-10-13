@@ -61,6 +61,15 @@ x(determinant) -> y(dependent) if t<sub>1</sub>.x  = t<sub>2</sub>.x then t<sub>
 -  In this determinants (on the left) and non-key attributes are interchangeable
 	- product_id --> description
 	- description --> product_id 
+### Transitive functional dependencies
+- the primary key is determinant for another attribute which is a determinat for a third attribute
+	- A --> B --> C
+	- B is functionally dependent on A
+	- C is functionally dependent on B
+	- C is transitively dependent on A through B
+	- A is not functionally dependent on B or C
+- ![[Pasted image 20231013130001.png]]
+- 
 ## How to determine whether a table is normalised or not
 - there are certain set of criteria which can be used to assess the danger which a non-normalised data can create
 - normal forms:- these are like safety assessment and each level representing certain level of safety from redundant date. types are 1NF , 2NF , to 5NF
