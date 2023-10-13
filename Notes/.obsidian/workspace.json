@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/javascript advance/Array and Object Destructring.md",
+                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/javascript advance/Array and Object Destructring.md",
+                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/javascript advance/Array and Object Destructring.md",
+                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/javascript advance/Array and Object Destructring.md"
+                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md"
               }
             }
           },
@@ -156,9 +156,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "606660f302b20d13",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
+    "statics/Pasted image 20231009161453.png",
+    "MCA/1st Sem/Lab_expirements/java_lab",
+    "MCA/1st Sem/Lab_expirements/WD_Lab",
+    "MCA/1st Sem/Lab_expirements/DBMS_lab",
+    "MCA/1st Sem/Lab_expirements",
     "Odin project/React/2 . States in react.md",
+    "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/1. Data Passing.md",
     "Udemy Networking/2. Cabeling and data flow.md",
     "JAVA methods/Strings.md",
@@ -171,7 +177,6 @@
     "Algo Princeton Book/1. Data abstraction.md",
     "Odin project/Javascript basics/Arrays in JS.md",
     "Odin project/javascript advance/Promises.md",
-    "Pasted image 20231009161453.png",
     "statics/Pasted image 20231009160029.png",
     "statics/Pasted image 20231009161128.png",
     "statics/Pasted image 20231009161045.png",
@@ -197,13 +202,7 @@
     "Odin project/React/4. CV application project.md",
     "Odin project/React/3. Render and commit.md",
     "JAVA methods/Arrays.md",
-    "Networking/Data Serialization.md",
-    "Networking/Commands for network configuration.md",
     "Algorithms Princeton video",
-    "Shell Scripting",
-    "GIT Commands/img",
-    "Odin project/React",
-    "JAVA methods/java Collection",
     "Untitled.canvas"
   ]
 }
