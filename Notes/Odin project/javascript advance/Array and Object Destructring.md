@@ -304,3 +304,50 @@ Object destructuring is a powerful feature in JavaScript that simplifies working
    In this example, the properties `firstName` and `lastName` of the `person` object are assigned to variables `fName` and `lName`, respectively.
 
 Destructuring in JavaScript simplifies the process of extracting values from arrays and objects, providing a more concise and readable syntax. It is widely used to work with data returned from APIs, function parameters, or complex data structures, making the code more expressive and reducing the need for manual value extraction.
+
+## Shallow copy vs Deep copy 
+In JavaScript, the terms "shallow copy" and "deep copy" refer to different ways of duplicating objects or arrays. The distinction lies in how nested objects and arrays within the original object are handled.
+
+1. Shallow Copy:
+   - A shallow copy duplicates the top-level structure of an object or array, but it does not create completely independent copies of nested objects or arrays.
+   - Changes made to the nested objects or arrays within the copied object will affect the original object, and vice versa.
+   - Shallow copy methods often include `Object.assign()`, the spread operator (`...`), and `Array.prototype.slice()`.
+
+Example of a shallow copy using `Object.assign()`:
+
+```javascript
+const original = { a: 1, b: { c: 2 } };
+const shallowCopy = Object.assign({}, original);
+
+shallowCopy.b.c = 3; // This also changes original.b.c to 3
+```
+
+2. Deep Copy:
+   - A deep copy duplicates both the top-level and all nested objects or arrays, creating completely independent copies.
+   - Changes made to the copied object or its nested structures do not affect the original object, and vice versa.
+   - Deep copy methods often involve recursive functions or libraries like lodash's `_.cloneDeep()`.
+
+Example of a deep copy using a recursive function:
+
+```javascript
+function deepCopy(obj) {
+  if (typeof obj !== 'object' || obj === null) {
+    return obj;
+  }
+
+  const copy = Array.isArray(obj) ? [] : {};
+  for (const key in obj) {
+    if (Object.hasOwnProperty.call(obj, key)) {
+      copy[key] = deepCopy(obj[key]);
+    }
+  }
+  return copy;
+}
+
+const original = { a: 1, b: { c: 2 } };
+const deepCopied = deepCopy(original);
+
+deepCopied.b.c = 3; // This does not affect original.b.c
+```
+
+Keep in mind that creating deep copies can be more memory and time-intensive, especially for complex and deeply nested structures. Depending on your use case, you may choose between shallow or deep copying to achieve the desired behavior.

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "db04ff11aa2dbf10",
+        "id": "1e0cf26a7b623417",
         "type": "tabs",
         "children": [
           {
-            "id": "85cf9ebfac22d6f8",
+            "id": "606660f302b20d13",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/React/5. Side-Effects.md",
+                "file": "Odin project/javascript advance/Array and Object Destructring.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5110321044922
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/React/5. Side-Effects.md",
+                "file": "Odin project/javascript advance/Array and Object Destructring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/React/5. Side-Effects.md",
+                "file": "Odin project/javascript advance/Array and Object Destructring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/React/5. Side-Effects.md"
+                "file": "Odin project/javascript advance/Array and Object Destructring.md"
               }
             }
           },
@@ -156,29 +156,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "85cf9ebfac22d6f8",
+  "active": "606660f302b20d13",
   "lastOpenFiles": [
-    "Pasted image 20231009074942.png",
-    "Pasted image 20231009074816.png",
+    "Odin project/React/2 . States in react.md",
+    "Odin project/React/1. Data Passing.md",
+    "Udemy Networking/2. Cabeling and data flow.md",
+    "JAVA methods/Strings.md",
+    "JAVA methods/java Collection/Intro.md",
+    "JAVA methods/java Collection/Sets.md",
+    "Algo Princeton Book/2.1 Searching.md",
+    "Algo Princeton Book/1.4. Analysis of algo.md",
+    "Algo Princeton Book/1.3. Bags , queue and stacks.md",
+    "Algo Princeton Book/1.2. JAVA.md",
+    "Algo Princeton Book/1. Data abstraction.md",
+    "Odin project/Javascript basics/Arrays in JS.md",
+    "Odin project/javascript advance/Promises.md",
+    "Pasted image 20231009161453.png",
+    "statics/Pasted image 20231009160029.png",
+    "statics/Pasted image 20231009161128.png",
+    "statics/Pasted image 20231009161045.png",
+    "statics/Pasted image 20231009155831.png",
+    "statics/Pasted image 20231009074816.png",
+    "Odin project/React/5. Side-Effects.md",
+    "statics/Pasted image 20231009074942.png",
     "statics/Pasted image 20231009065505.png",
     "statics/Pasted image 20231009071805.png",
-    "Algo Princeton Book/1.3. Bags , queue and stacks.md",
     "statics/Pasted image 20231009072005.png",
-    "statics/Pasted image 20231009071230.png",
-    "statics/Pasted image 20231009071208.png",
-    "statics/Pasted image 20231009070346.png",
-    "Algo Princeton Book/1.4. Analysis of algo.md",
-    "Algo Princeton Book/2.1 Searching.md",
-    "statics/Pasted image 20231008162330.png",
     "MCA/1st Sem/SE/2. Software Engineering.md",
-    "statics/Pasted image 20231008163022.png",
-    "statics/Pasted image 20231008162946.png",
     "Networking/Routers.md",
-    "Udemy Networking/2. Cabeling and data flow.md",
     "Networking/Ethernet LAN Switching.md",
     "Web developement/Frontend/Inspect function.md",
-    "Odin project/React/2 . States in react.md",
-    "Odin project/React/5. Side-Effects.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "MCA/1st Sem/SE",
@@ -188,18 +195,11 @@
     "Odin project/React/6 . Strict Mode.md",
     "MCA/1st Sem",
     "Odin project/React/4. CV application project.md",
-    "Odin project/React/1. Data Passing.md",
     "Odin project/React/3. Render and commit.md",
-    "JAVA methods/Strings.md",
     "JAVA methods/Arrays.md",
     "Networking/Data Serialization.md",
     "Networking/Commands for network configuration.md",
-    "Algorithms Princeton video/1. Analysis of Algo.md",
     "Algorithms Princeton video",
-    "JAVA methods/java Collection/Intro.md",
-    "Algo Princeton Book/1.2. JAVA.md",
-    "Algo Princeton Book/1. Data abstraction.md",
-    "Odin project/javascript advance/Promises.md",
     "Shell Scripting",
     "GIT Commands/img",
     "Odin project/React",
