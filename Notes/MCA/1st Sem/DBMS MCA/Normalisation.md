@@ -3,12 +3,17 @@
 	- very broadly table can express one version of truth
 	- these tables are protect from contradictory data 
 	- easier to understand
+	- satisfy certain referential integrity constraints (ie particular row in one table can be related to at most one row in a related table)
 	- easier to enhance and extend
 	- protected from 
 		- insertion anomalies
 		- update anomalies
 		- deletion anomalies
-
+## Identifying Primary key using functional dependencies
+- Steps 
+	- Identify all candidate key by looking at determinants 
+	- Determine which candidate key is not functionally dependent on any other candidate key
+	- ![[Pasted image 20231013124935.png]]
 ## Types of anomalies
 In a relational database management system (DBMS), anomalies are inconsistencies or problems that can occur when the data is not organized or structured correctly. The three main types of anomalies that can occur in a relational database are insertion anomalies, update anomalies, and deletion anomalies. Here are examples of each type:
 
@@ -29,6 +34,33 @@ In a relational database management system (DBMS), anomalies are inconsistencies
 
 Normalization, specifically the higher normal forms like Second Normal Form (2NF) and Third Normal Form (3NF), aims to address these anomalies by organizing the data in a way that minimizes redundancy and ensures data integrity. In the above example, you could achieve 2NF or 3NF by splitting the data into separate tables, one for employees and another for projects, with appropriate relationships to avoid anomalies.
 
+## Dependencies types
+### Functional dependencies
+a functional dependency is a fundamental concept that helps define the relationships between attributes (columns) in database tables. It describes how the values of one attribute (or a set of attributes) determine or are determined by the values of another attribute within the same table. Functional dependency is critical for designing and understanding the structure of a relational database.
+
+Functional dependency is typically denoted as X -> Y, where X represents a set of attributes and Y represents a single attribute. This notation indicates that the values of attributes in set X uniquely determine the value of attribute Y.
+
+*condition need to be satisfied if determinant value is same to see if it is functional dependecy*
+x(determinant) -> y(dependent) if t<sub>1</sub>.x  = t<sub>2</sub>.x then t<sub>1</sub>.y = t<sub>2</sub>.y
+#### Full vs partial functional dependencies
+- Full : - determinants have minimal number of attributes (ie primary key attributes) to maintain the functional dependency with all non-key attributes (ie B is functionally dependent on A but not on a subset of A)
+	- order_id , product_id --> quantity
+	- here only product_id or only order_id cannot be used to determine quantity but we need both the determinants
+- Partial:- Non-key attributes are functionally dependent on a subset of primary key
+	- order_id --> order_date,custome_id,name,address
+	- product_id --> description , finish , price
+#### Trivial functional dependencies
+##### Augmented functional dependency
+- Non key attributes are functionally dependent on a subset of its determinant
+- meaning that there could be multiple attribute on the left but only one of those is necessary to find the value of non key attribute
+- for example 
+	- order_id,order_date --> customer_id
+	- order_id --> customer_id
+	- here we can get value of customer id from order id alone
+##### Equivalent functional dependency 
+-  In this determinants (on the left) and non-key attributes are interchangeable
+	- product_id --> description
+	- description --> product_id 
 ## How to determine whether a table is normalised or not
 - there are certain set of criteria which can be used to assess the danger which a non-normalised data can create
 - normal forms:- these are like safety assessment and each level representing certain level of safety from redundant date. types are 1NF , 2NF , to 5NF
@@ -222,3 +254,5 @@ In this case, we have a transitive dependency because the attributes "Author Bir
 Now, the Authors table has a primary key of "Author," and the Books table has a foreign key relationship with the Authors table. This structure satisfies 3NF because it eliminates the transitive dependency by creating a separate table for author-related information.
 
 In summary, the Third Normal Form (3NF) is a critical step in database normalization, ensuring that data is efficiently organized and minimizing data redundancy while preserving data integrity by removing transitive dependencies. This normalization process helps maintain data consistency and simplifies data retrieval and manipulation in relational databases.
+
+#### Fourth normal form

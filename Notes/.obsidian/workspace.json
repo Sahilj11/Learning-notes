@@ -18,6 +18,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9a8d42c00c8c9547",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231013124935.png"
+              }
+            }
           }
         ]
       }
@@ -157,12 +167,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "606660f302b20d13",
   "lastOpenFiles": [
-    "MCA/1st Sem/DBMS MCA/Relational model.md",
+    "statics/Pasted image 20231013124935.png",
     "statics/Pasted image 20231013121046.png",
-    "statics/Pasted image 20231013114901.png",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
+    "MCA/1st Sem/DBMS MCA/Relational model.md",
+    "statics/Pasted image 20231013114901.png",
     "statics/Pasted image 20231013120948.png",
     "statics/Pasted image 20231013115425.png",
     "Udemy Networking/2. Cabeling and data flow.md",
@@ -189,7 +200,6 @@
     "statics/Pasted image 20231009161128.png",
     "statics/Pasted image 20231009161045.png",
     "statics/Pasted image 20231009155831.png",
-    "statics/Pasted image 20231009074816.png",
     "Odin project/React/5. Side-Effects.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "Networking/Routers.md",
