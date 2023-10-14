@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ee71bf51b7f5a5fb",
+        "id": "bebac791f00a3a2e",
         "type": "tabs",
         "children": [
           {
-            "id": "fe8badf2d751ddc8",
+            "id": "3aa0fe17f1be9e8d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f986cda8c548d1cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "javaCollection/2. Preliminaries.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -81,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md"
-              }
+              "state": {}
             }
           },
           {
@@ -169,12 +148,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fe8badf2d751ddc8",
+  "active": "3aa0fe17f1be9e8d",
   "lastOpenFiles": [
-    "javaCollection/4. Set.md",
-    "statics/Pasted image 20231014111810.png",
-    "statics/Pasted image 20231014115127.png",
+    "statics/Pasted image 20231014163720.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "statics/Pasted image 20231014164001.png",
+    "statics/Pasted image 20231014163944.png",
+    "statics/Pasted image 20231014163926.png",
+    "statics/Pasted image 20231014163855.png",
+    "statics/Pasted image 20231014163825.png",
+    "statics/Pasted image 20231014163802.png",
+    "statics/Pasted image 20231014163744.png",
+    "statics/Pasted image 20231014163325.png",
+    "statics/Pasted image 20231014162738.png",
     "javaCollection/2. Preliminaries.md",
+    "MCA/1st Sem/DBMS MCA/Normalisation.md",
+    "javaCollection/4. Set.md",
     "javaCollection/3. Collection interface.md",
     "Odin project/React/React internals/Rendering process.md",
     "Odin project/React/6 . Strict Mode.md",
@@ -182,19 +171,10 @@
     "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/3. Render and commit.md",
     "Odin project/React/2 . States in react.md",
-    "statics/Pasted image 20231013160319.png",
-    "statics/Pasted image 20231013162410.png",
     "JAVA methods/java Collection/Intro.md",
     "javaCollection/1. The main interfaces of java collection.md",
     "javaCollection",
-    "MCA/1st Sem/DBMS MCA/Normalisation.md",
-    "statics/Pasted image 20231013130001.png",
-    "statics/Pasted image 20231013124935.png",
-    "statics/Pasted image 20231013121046.png",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
-    "statics/Pasted image 20231013114901.png",
-    "statics/Pasted image 20231013120948.png",
-    "statics/Pasted image 20231013115425.png",
     "Udemy Networking/2. Cabeling and data flow.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
     "MCA/1st Sem/Lab_expirements/java_lab",
@@ -211,7 +191,6 @@
     "Algo Princeton Book/1. Data abstraction.md",
     "Odin project/Javascript basics/Arrays in JS.md",
     "Odin project/javascript advance/Promises.md",
-    "Odin project/React/5. Side-Effects.md",
     "MCA/1st Sem/SE",
     "MCA/1st Sem/WD",
     "MCA/1st Sem/CN",
