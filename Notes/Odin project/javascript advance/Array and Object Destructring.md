@@ -309,18 +309,25 @@ Destructuring in JavaScript simplifies the process of extracting values from arr
 In JavaScript, the terms "shallow copy" and "deep copy" refer to different ways of duplicating objects or arrays. The distinction lies in how nested objects and arrays within the original object are handled.
 
 1. Shallow Copy:
-   - A shallow copy duplicates the top-level structure of an object or array, but it does not create completely independent copies of nested objects or arrays.
-   - Changes made to the nested objects or arrays within the copied object will affect the original object, and vice versa.
-   - Shallow copy methods often include `Object.assign()`, the spread operator (`...`), and `Array.prototype.slice()`.
+In JavaScript, the `slice()` method is used to create a shallow copy of an array. A shallow copy means that a new array is created, and the elements of the original array are copied into the new array. However, if the elements of the original array are objects or arrays themselves, those nested objects and arrays are not deeply copied; instead, references to them are copied into the new array. This means that changes made to nested objects or arrays in the copied array will affect the original array and vice versa.
 
-Example of a shallow copy using `Object.assign()`:
+Here's how you can use the `slice()` method to create a shallow copy of an array:
 
 ```javascript
-const original = { a: 1, b: { c: 2 } };
-const shallowCopy = Object.assign({}, original);
+const originalArray = [1, 2, [3, 4]];
 
-shallowCopy.b.c = 3; // This also changes original.b.c to 3
+// Create a shallow copy of the original array
+const shallowCopy = originalArray.slice();
+
+// Now, if you modify the nested array in the shallow copy,
+// it will also affect the original array
+shallowCopy[2][0] = 99;
+
+console.log(originalArray);  // [1, 2, [99, 4]]
+console.log(shallowCopy);    // [1, 2, [99, 4]]
 ```
+
+As you can see, changes made to the nested array in the `shallowCopy` also affect the `originalArray`. If you want a deep copy (i.e., a completely independent copy of the original array, including nested objects or arrays), you would need to perform a recursive copy operation, or use external libraries like Lodash's `_.cloneDeep` method.
 
 2. Deep Copy:
    - A deep copy duplicates both the top-level and all nested objects or arrays, creating completely independent copies.

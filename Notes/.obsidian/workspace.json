@@ -11,11 +11,28 @@
             "id": "e2a4200cfb0dd922",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Odin project/React/6 . Strict Mode.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "04bc28213dff56cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "javaCollection/3. Collection interface.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "javaCollection/3. Collection interface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "javaCollection/3. Collection interface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "javaCollection/3. Collection interface.md"
+              }
             }
           },
           {
@@ -148,8 +169,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e2a4200cfb0dd922",
+  "active": "04bc28213dff56cc",
   "lastOpenFiles": [
+    "Odin project/React/React internals/Rendering process.md",
+    "Odin project/React/6 . Strict Mode.md",
+    "Odin project/React/React internals",
+    "Odin project/javascript advance/Array and Object Destructring.md",
+    "Odin project/React/3. Render and commit.md",
+    "Odin project/React/2 . States in react.md",
     "statics/Pasted image 20231013160319.png",
     "javaCollection/3. Collection interface.md",
     "statics/Pasted image 20231013162410.png",
@@ -172,8 +199,6 @@
     "MCA/1st Sem/Lab_expirements/WD_Lab",
     "MCA/1st Sem/Lab_expirements/DBMS_lab",
     "MCA/1st Sem/Lab_expirements",
-    "Odin project/React/2 . States in react.md",
-    "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/1. Data Passing.md",
     "JAVA methods/Strings.md",
     "JAVA methods/java Collection/Sets.md",
@@ -188,13 +213,10 @@
     "Odin project/React/5. Side-Effects.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "Networking/Routers.md",
-    "Networking/Ethernet LAN Switching.md",
-    "Web developement/Frontend/Inspect function.md",
     "MCA/1st Sem/SE",
     "MCA/1st Sem/WD",
     "MCA/1st Sem/CN",
     "MCA/1st Sem/DBMS MCA",
-    "MCA/1st Sem",
     "Untitled.canvas"
   ]
 }
