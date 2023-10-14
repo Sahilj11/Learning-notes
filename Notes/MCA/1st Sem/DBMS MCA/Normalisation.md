@@ -35,6 +35,14 @@ In a relational database management system (DBMS), anomalies are inconsistencies
 Normalization, specifically the higher normal forms like Second Normal Form (2NF) and Third Normal Form (3NF), aims to address these anomalies by organizing the data in a way that minimizes redundancy and ensures data integrity. In the above example, you could achieve 2NF or 3NF by splitting the data into separate tables, one for employees and another for projects, with appropriate relationships to avoid anomalies.
 
 ## Dependencies types
+### Join dependencies
+In the context of a relational database management system (DBMS), join dependencies refer to constraints or relationships between tables that involve performing a join operation to retrieve meaningful data from multiple tables. These join dependencies are used to define how data is related or connected across different tables in a database. Join dependencies are a fundamental concept in the field of database design and normalization. There are two primary types of join dependencies:
+
+1. Inclusion Dependencies: An inclusion dependency specifies that the values in one table must be a subset of the values in another table. In other words, it enforces that the data in one table is "included" in another. Inclusion dependencies are often used to represent one-to-one and one-to-many relationships between tables. For example, consider a database where you have a Customers table and an Orders table. An inclusion dependency would specify that the set of customer IDs in the Orders table must be a subset of the customer IDs in the Customers table.
+
+2. Equijoin Dependencies: An equijoin dependency specifies that two or more tables should be joined using an equijoin condition (equality condition) on one or more attributes to retrieve meaningful data. Equijoin dependencies are used to represent relationships that require a join operation based on equality conditions. For example, in a university database, you might have a Students table and a Courses table, and an equijoin dependency would specify that you can join these tables using the student ID to find the courses a particular student is enrolled in.
+
+Join dependencies play a critical role in database normalization and schema design, as they help define the relationships between tables. Ensuring that the join dependencies are correctly represented in the database schema is important for maintaining data integrity and optimizing query performance. In practice, these dependencies are often used to guide the design of foreign keys, indexes, and queries to efficiently retrieve and manipulate data from the database.
 ### Functional dependencies
 a functional dependency is a fundamental concept that helps define the relationships between attributes (columns) in database tables. It describes how the values of one attribute (or a set of attributes) determine or are determined by the values of another attribute within the same table. Functional dependency is critical for designing and understanding the structure of a relational database.
 
@@ -401,3 +409,80 @@ To bring this database into 5NF, we can create the following relations:
 By introducing the **SalesProducts** and **SalesCustomers** relations, we have removed the non-trivial join dependency between Products, Customers, and Sales. Each sale is now represented by its own unique SaleID, and we can efficiently retrieve product and customer information by joining the appropriate relations. This decomposition eliminates redundancy and allows for more efficient queries while maintaining data integrity.
 
 In 5NF, the goal is to ensure that you can derive all information without any non-trivial join dependencies, making it useful for complex data warehousing scenarios where large volumes of data need to be stored and efficiently retrieved.
+
+## Denormalisation
+Denormalization is a database design technique that involves intentionally introducing redundancy into a relational database. This goes against the principles of normalization, which aims to reduce redundancy and improve data integrity. Denormalization is used when there is a specific need to optimize database performance for read-heavy operations, often at the cost of increased storage space and potential data update complexities.
+
+Here are some scenarios in which denormalization is needed and when normalization might not be required:
+
+1. Performance Optimization: Denormalization is primarily used to improve query performance. When a database is normalized to the extreme, it can lead to complex joins and slower query execution times, especially for read-heavy workloads. Denormalizing the data can reduce the number of joins, resulting in faster query performance.
+
+2. Reporting and Analytics: In data warehousing and reporting systems, where complex queries and aggregations are common, denormalization is often employed to simplify and speed up these operations.
+
+3. Frequently Accessed Data: When certain pieces of data are frequently accessed together, denormalization can be used to store them together in a single table or document. This reduces the need for joining multiple tables and improves query performance.
+
+4. Reduced Complexity: In some cases, normalization can lead to an overly complex schema that is difficult to work with. Denormalizing the data can simplify the schema and make it more intuitive for developers.
+
+Benefits of Denormalization:
+
+1. Improved Query Performance: Denormalization can significantly improve the speed of read operations, as it reduces the need for complex joins and related overhead.
+
+2. Reduced Join Complexity: Fewer joins mean simpler SQL queries, which are easier to write and maintain.
+
+3. Enhanced Data Retrieval: Denormalization is particularly useful for data retrieval-heavy applications, such as reporting and analytics, where quick access to aggregated or summarized data is crucial.
+
+4. Minimized Locking and Concurrency Issues: In some cases, denormalization can reduce contention for locks during database updates, as it may involve fewer tables that need to be modified.
+-ves 
+Certainly, here are the top 5 disadvantages of denormalization:
+
+1. **Data Redundancy:** Denormalization introduces redundancy into the database, leading to increased storage requirements and the potential for data inconsistencies.
+
+2. **Update Anomalies:** Redundant data can result in update anomalies, making it challenging to maintain data consistency and integrity.
+
+3. **Increased Complexity:** Denormalized databases are more complex to manage and maintain, both in terms of schema design and data updates.
+
+4. **Query Performance Trade-offs:** While read query performance may improve, write query performance can suffer due to the need to update multiple tables.
+
+5. **Constraints and Validation:** Enforcing data constraints and validation can be more challenging in denormalized databases, increasing the risk of data errors.
+However, denormalization comes with trade-offs, including increased storage requirements, data update anomalies, and the need for careful management to ensure data consistency. It is not suitable for all database systems and should be used judiciously, with a clear understanding of the specific use cases where it offers benefits. Normalization, on the other hand, is essential for maintaining data integrity, reducing redundancy, and ensuring consistency, especially in transactional databases. The decision to denormalize should be made with a thorough understanding of the application's requirements and performance considerations.
+
+## Decomposition
+Decomposition in database management systems (DBMS) is a process of breaking down a single relation (table) into multiple smaller relations, often referred to as "child" relations. This process is a key step in the normalization of a database schema. Decomposition is primarily aimed at improving data integrity, reducing data redundancy, and simplifying database maintenance.
+
+Here are detailed notes on decomposition in DBMS:
+
+**1. Purpose of Decomposition:**
+   - Decomposition is used to achieve a higher level of normalization in a relational database schema.
+   - It helps in organizing data in a way that minimizes data redundancy and ensures data consistency.
+
+**2. Normalization:**
+   - Decomposition is closely related to the concept of normalization. Normalization is a series of rules and guidelines used to organize data in a relational database to reduce data redundancy and ensure data integrity.
+   - There are several normal forms (e.g., 1NF, 2NF, 3NF, BCNF, 4NF, 5NF) that indicate the level of normalization, and decomposition is the process of achieving these normal forms.
+
+**3. Functional Dependencies:**
+   - Decomposition is guided by the functional dependencies that exist in the data. Functional dependencies describe the relationships between attributes in a relation.
+   - For example, if you have a relation R with attributes A, B, and C, a functional dependency A -> B indicates that for each unique value of A, there is a unique value of B.
+
+**4. Types of Decomposition:**
+   - Lossless Decomposition: A decomposition is considered lossless if it preserves all the information from the original relation without losing any data. This means that you can reconstruct the original relation from its decomposed parts.
+   - Dependency-Preserving Decomposition: In a dependency-preserving decomposition, all functional dependencies in the original relation should be preserved in the decomposed relations.
+
+**5. Decomposition Steps:**
+   - Identify the functional dependencies in the original relation.
+   - Determine the normal form you want to achieve (e.g., 3NF or BCNF).
+   - Break down the original relation into smaller relations such that the functional dependencies are preserved.
+   - Check if the decomposition is lossless and dependency-preserving. Adjust the decomposition as needed to meet these criteria.
+
+**6. Advantages of Decomposition:**
+   - Reduced data redundancy: Decomposition ensures that data is stored efficiently without unnecessary duplication.
+   - Improved data integrity: By reducing redundancy and adhering to normalization rules, data consistency and accuracy are improved.
+   - Easier maintenance: Smaller, well-structured relations are easier to manage and maintain.
+
+**7. Considerations:**
+   - Decomposition is not always suitable for every database. In some cases, a certain level of denormalization may be needed to optimize query performance, although this comes with its own trade-offs.
+   - The decomposition process can lead to a larger number of tables in the database, which may increase the complexity of queries that require joining multiple tables.
+
+**8. Examples:**
+   - Consider an employee database with a single "Employee" table. This table can be decomposed into "EmployeeInfo" and "EmployeeSalary" tables to reduce data redundancy and maintain data integrity.
+
+In summary, decomposition in DBMS is a crucial process in achieving higher levels of normalization, reducing data redundancy, and maintaining data integrity in a relational database. It is guided by functional dependencies and can result in a more organized and efficient database schema.
