@@ -61,6 +61,42 @@ x(determinant) -> y(dependent) if t<sub>1</sub>.x  = t<sub>2</sub>.x then t<sub>
 -  In this determinants (on the left) and non-key attributes are interchangeable
 	- product_id --> description
 	- description --> product_id 
+### Multi-valued functional dependencies
+Multi-valued functional dependencies are a concept in database theory that extends the idea of functional dependencies. Functional dependencies describe a relationship between attributes in a relation, where one attribute's value uniquely determines another attribute's value. Multi-valued functional dependencies, on the other hand, describe situations where one attribute's value can determine a set of values for another attribute.
+
+Let's explain multi-valued functional dependencies with an example:
+
+Suppose you have a relation called "EmployeeSkills," which contains information about employees and their skills. This relation has the following attributes:
+
+- EmployeeID (unique identifier for each employee)
+- EmployeeName
+- EmployeeSkills (a multi-valued attribute that lists the skills an employee possesses)
+
+Now, let's consider some data in this relation:
+
+| EmployeeID | EmployeeName | EmployeeSkills     |
+|------------|--------------|--------------------|
+| 1          | Alice        | {Java, Python}     |
+| 2          | Bob          | {C++, SQL}         |
+| 3          | Carol        | {Java, Python, SQL} |
+| 4          | David        | {C++, Java}        |
+
+In this example, the EmployeeSkills attribute is a multi-valued attribute because it can contain a set of values (skills) for each employee.
+
+Now, let's define a multi-valued functional dependency. We say that EmployeeID determines EmployeeSkills (denoted as EmployeeID ->> EmployeeSkills) if, for each employee, their EmployeeSkills are determined by their EmployeeID. This means that for each employee, their set of skills is independent of other employees' skills.
+
+In our example, we can observe the following multi-valued functional dependencies:
+
+1. EmployeeID ->> EmployeeSkills
+   - For each employee, their skills are determined by their unique EmployeeID. For example, EmployeeID 1 (Alice) has the skills {Java, Python}, and this set of skills is determined by her EmployeeID.
+
+However, multi-valued functional dependencies also have certain implications:
+
+1. If A ->> B and B ->> C, then A ->> C. This is known as the transitive rule. In the context of our example, if EmployeeID determines EmployeeSkills and EmployeeSkills determine specific skills, then EmployeeID determines specific skills.
+
+2. If A ->> B and B ->> A, then A and B are said to have a mutual multi-valued dependency. In our example, if EmployeeID determines EmployeeSkills and EmployeeSkills determine EmployeeID, we have a mutual multi-valued dependency.
+
+Understanding multi-valued functional dependencies is important for database design and normalization to avoid redundancy and data anomalies when dealing with complex data structures like the one in our example.
 ### Transitive functional dependencies
 - the primary key is determinant for another attribute which is a determinat for a third attribute
 	- A --> B --> C
@@ -265,3 +301,103 @@ Now, the Authors table has a primary key of "Author," and the Books table has a 
 In summary, the Third Normal Form (3NF) is a critical step in database normalization, ensuring that data is efficiently organized and minimizing data redundancy while preserving data integrity by removing transitive dependencies. This normalization process helps maintain data consistency and simplifies data retrieval and manipulation in relational databases.
 
 #### Fourth normal form
+Fourth Normal Form (4NF) is a level of database normalization that deals with multi-valued dependencies in a relational database. It extends the concepts of the previous normalization forms (1NF, 2NF, and 3NF) by addressing situations where a single row in a table can be associated with multiple, independent values for certain attributes. 4NF aims to eliminate redundancy and maintain data integrity in such cases.
+
+Multivalued dependencies in a table must be multivalued dependencies on the key
+
+To understand 4NF, let's use an example:
+
+Suppose you have a relation named "BookAuthors," which tracks information about books and their authors. This relation has the following attributes:
+
+- ISBN (unique identifier for books)
+- Title (title of the book)
+- Author (name of the author)
+
+Now, let's consider some data in this relation:
+
+| ISBN       | Title            | Author     |
+|------------|------------------|------------|
+| 978-12345  | "Book1"          | "Author1"  |
+| 978-12345  | "Book1"          | "Author2"  |
+| 978-67890  | "Book2"          | "Author2"  |
+| 978-67890  | "Book2"          | "Author3"  |
+
+In this example, the ISBN attribute uniquely identifies each book, but you can see that for some books, there are multiple authors associated with the same ISBN. This creates a multi-valued dependency because the ISBN determines a set of authors, and multiple authors can be associated with a single book.
+
+To bring this relation into 4NF, we need to split it into two relations:
+
+1. The "Books" relation:
+   - ISBN (unique identifier for books)
+   - Title (title of the book)
+
+2. The "Authors" relation:
+   - ISBN (foreign key referencing the Books relation)
+   - Author (name of the author)
+
+After splitting the relation, you achieve 4NF because there are no multi-valued dependencies anymore. The Books relation contains unique ISBNs and their corresponding titles, while the Authors relation links ISBNs to individual authors.
+
+Here's how the data would look in the normalized form:
+
+**Books Relation:**
+
+| ISBN       | Title            |
+|------------|------------------|
+| 978-12345  | "Book1"          |
+| 978-67890  | "Book2"          |
+
+**Authors Relation:**
+
+| ISBN       | Author     |
+|------------|------------|
+| 978-12345  | "Author1"  |
+| 978-12345  | "Author2"  |
+| 978-67890  | "Author2"  |
+| 978-67890  | "Author3"  |
+
+This 4NF decomposition reduces redundancy, as book information is stored only once in the "Books" relation, and the "Authors" relation maintains the relationships between ISBNs and authors. It ensures that the data is more organized and prevents anomalies that can occur in the presence of multi-valued dependencies.
+
+
+#### Fifth normal form 
+Fifth Normal Form (5NF), also known as Project-Join Normal Form (PJ/NF), is a level of database normalization that focuses on eliminating redundancy and addressing issues related to the projection and joining of relations. It is a highly specialized form of normalization typically used in data warehousing and complex database systems. To illustrate 5NF, let's consider a simple example:
+
+Suppose we have a database for tracking product sales in a retail store. We have three relations: Products, Customers, and Sales.
+
+1. **Products (ProductID, ProductName, Manufacturer)**
+   - ProductID (Primary Key)
+   - ProductName
+   - Manufacturer
+
+2. **Customers (CustomerID, CustomerName)**
+   - CustomerID (Primary Key)
+   - CustomerName
+
+3. **Sales (SaleID, CustomerID, ProductID, Date, Quantity)**
+   - SaleID (Primary Key)
+   - CustomerID (Foreign Key referencing Customers)
+   - ProductID (Foreign Key referencing Products)
+   - Date
+   - Quantity
+
+In the Sales relation, we store information about each sale, including the customer, product, date, and quantity.
+
+Now, let's say we want to achieve 5NF by removing redundancy and ensuring that there are no non-trivial join dependencies. In this example, there is a non-trivial join dependency between Products, Customers, and Sales because, to obtain the names of the customers and products associated with each sale, we need to join these three relations.
+
+To bring this database into 5NF, we can create the following relations:
+
+1. **Products (ProductID, ProductName, Manufacturer)**
+
+2. **Customers (CustomerID, CustomerName)**
+
+3. **Sales (SaleID, CustomerID, ProductID, Date, Quantity)**
+
+4. **SalesProducts (SaleID, ProductID)**
+   - SaleID (Foreign Key referencing Sales)
+   - ProductID (Foreign Key referencing Products)
+
+5. **SalesCustomers (SaleID, CustomerID)**
+   - SaleID (Foreign Key referencing Sales)
+   - CustomerID (Foreign Key referencing Customers)
+
+By introducing the **SalesProducts** and **SalesCustomers** relations, we have removed the non-trivial join dependency between Products, Customers, and Sales. Each sale is now represented by its own unique SaleID, and we can efficiently retrieve product and customer information by joining the appropriate relations. This decomposition eliminates redundancy and allows for more efficient queries while maintaining data integrity.
+
+In 5NF, the goal is to ensure that you can derive all information without any non-trivial join dependencies, making it useful for complex data warehousing scenarios where large volumes of data need to be stored and efficiently retrieved.

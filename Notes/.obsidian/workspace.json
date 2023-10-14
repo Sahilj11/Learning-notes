@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javaCollection/4. Set.md",
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javaCollection/4. Set.md",
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "javaCollection/4. Set.md",
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "javaCollection/4. Set.md"
+                "file": "MCA/1st Sem/DBMS MCA/Normalisation.md"
               }
             }
           },
@@ -170,8 +170,8 @@
   },
   "active": "fe8badf2d751ddc8",
   "lastOpenFiles": [
-    "statics/Pasted image 20231014111810.png",
     "javaCollection/4. Set.md",
+    "statics/Pasted image 20231014111810.png",
     "statics/Pasted image 20231014115127.png",
     "javaCollection/2. Preliminaries.md",
     "javaCollection/3. Collection interface.md",
