@@ -11,8 +11,12 @@
             "id": "3aa0fe17f1be9e8d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "javaCollection/4. Set.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "javaCollection/4. Set.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "javaCollection/4. Set.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "javaCollection/4. Set.md"
+              }
             }
           },
           {
@@ -150,6 +158,8 @@
   },
   "active": "3aa0fe17f1be9e8d",
   "lastOpenFiles": [
+    "Pasted image 20231015102717.png",
+    "Pasted image 20231015093639.png",
     "statics/Pasted image 20231014163720.png",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231014164001.png",
@@ -160,7 +170,6 @@
     "statics/Pasted image 20231014163802.png",
     "statics/Pasted image 20231014163744.png",
     "statics/Pasted image 20231014163325.png",
-    "statics/Pasted image 20231014162738.png",
     "javaCollection/2. Preliminaries.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "javaCollection/4. Set.md",
