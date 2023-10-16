@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b68b8bde741800d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "javaCollection/3. Collection interface.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "javaCollection/4. Set.md",
+                "file": "javaCollection/3. Collection interface.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "javaCollection/4. Set.md",
+                "file": "javaCollection/3. Collection interface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "javaCollection/4. Set.md"
+                "file": "javaCollection/3. Collection interface.md"
               }
             }
           },
@@ -156,10 +169,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3aa0fe17f1be9e8d",
+  "active": "b68b8bde741800d5",
   "lastOpenFiles": [
-    "Pasted image 20231015102717.png",
-    "Pasted image 20231015093639.png",
+    "javaCollection/5. Queues.md",
+    "Pasted image 20231016111015.png",
+    "Pasted image 20231016111001.png",
+    "javaCollection/4. Set.md",
+    "Odin project/javascript advance/Promises.md",
+    "Odin project/React/2 . States in react.md",
+    "javaCollection/3. Collection interface.md",
+    "statics/Pasted image 20231015093639.png",
+    "statics/Pasted image 20231015102717.png",
     "statics/Pasted image 20231014163720.png",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231014164001.png",
@@ -167,19 +187,13 @@
     "statics/Pasted image 20231014163926.png",
     "statics/Pasted image 20231014163855.png",
     "statics/Pasted image 20231014163825.png",
-    "statics/Pasted image 20231014163802.png",
-    "statics/Pasted image 20231014163744.png",
-    "statics/Pasted image 20231014163325.png",
     "javaCollection/2. Preliminaries.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
-    "javaCollection/4. Set.md",
-    "javaCollection/3. Collection interface.md",
     "Odin project/React/React internals/Rendering process.md",
     "Odin project/React/6 . Strict Mode.md",
     "Odin project/React/React internals",
     "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/3. Render and commit.md",
-    "Odin project/React/2 . States in react.md",
     "JAVA methods/java Collection/Intro.md",
     "javaCollection/1. The main interfaces of java collection.md",
     "javaCollection",
@@ -198,8 +212,6 @@
     "Algo Princeton Book/1.3. Bags , queue and stacks.md",
     "Algo Princeton Book/1.2. JAVA.md",
     "Algo Princeton Book/1. Data abstraction.md",
-    "Odin project/Javascript basics/Arrays in JS.md",
-    "Odin project/javascript advance/Promises.md",
     "MCA/1st Sem/SE",
     "MCA/1st Sem/WD",
     "MCA/1st Sem/CN",
