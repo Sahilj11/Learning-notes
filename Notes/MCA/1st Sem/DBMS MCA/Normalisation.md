@@ -21,15 +21,11 @@ In a relational database management system (DBMS), anomalies are inconsistencies
    Insertion anomalies occur when you experience issues while adding new data to the database. These issues can result in incomplete or incorrect data entries.
 
    - **Example:** Suppose you have a table to store information about employees and their projects. The table has columns for Employee ID, Employee Name, and Project Name. An insertion anomaly can occur if you try to add a new employee who is not currently assigned to any project. In this case, the entry for the new employee would be incomplete because there's no project associated with them. This is an insertion anomaly because it's difficult to add an employee without a project.
-
 2. **Update Anomalies:**
    Update anomalies happen when you modify data in a way that results in inconsistencies or unexpected changes in the database.
-
    - **Example:** Let's continue with the employee and project database. Suppose an employee changes their project assignment. If you update only the employee's project in one place but forget to update it in another, the database will contain inconsistent information. For example, if you change Employee A's project from "Project X" to "Project Y" in one record but forget to update the other record, it can lead to a mismatch between the employee's project assignment. This is an update anomaly because the data is no longer consistent.
-
 3. **Deletion Anomalies:**
    Deletion anomalies occur when removing data leads to unintended or incomplete data loss.
-
    - **Example:** In the same employee and project database, suppose an employee leaves the company. If you delete the record of the employee entirely, you'll lose information about the projects they were involved in. This is a deletion anomaly because removing data about the employee causes unintended data loss, especially if you still need to track the projects.
 
 Normalization, specifically the higher normal forms like Second Normal Form (2NF) and Third Normal Form (3NF), aims to address these anomalies by organizing the data in a way that minimizes redundancy and ensures data integrity. In the above example, you could achieve 2NF or 3NF by splitting the data into separate tables, one for employees and another for projects, with appropriate relationships to avoid anomalies.
