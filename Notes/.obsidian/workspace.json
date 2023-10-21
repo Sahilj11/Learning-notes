@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/WD/Minor 2nd.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/WD/Minor 2nd.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/WD/Minor 2nd.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/WD/Minor 2nd.md"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
               }
             }
           },
@@ -158,9 +158,11 @@
   },
   "active": "0d717971854217cc",
   "lastOpenFiles": [
+    "Pasted image 20231021111836.png",
+    "Pasted image 20231021111805.png",
+    "MCA/1st Sem/WD/Minor 2nd.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "javaCollection/6. List.md",
-    "MCA/1st Sem/WD/Minor 2nd.md",
     "statics/Pasted image 20231017185229.png",
     "statics/Pasted image 20231017191155.png",
     "statics/Pasted image 20231017190348.png",
@@ -188,13 +190,11 @@
     "statics/Pasted image 20231016111015.png",
     "Odin project/React/2 . States in react.md",
     "statics/Pasted image 20231015093639.png",
-    "statics/Pasted image 20231015102717.png",
     "javaCollection/2. Preliminaries.md",
     "Odin project/React/6 . Strict Mode.md",
     "Odin project/React/React internals",
     "Odin project/javascript advance/Array and Object Destructring.md",
     "Odin project/React/3. Render and commit.md",
-    "JAVA methods/java Collection/Intro.md",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
     "MCA/1st Sem/Lab_expirements/WD_Lab",
