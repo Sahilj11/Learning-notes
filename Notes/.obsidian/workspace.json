@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bebac791f00a3a2e",
+        "id": "47e6e8f0f40ccfc5",
         "type": "tabs",
         "children": [
           {
-            "id": "0bf482aa47b1a8e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "javaCollection/6. List.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7f957177c71905e5",
+            "id": "0d717971854217cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,15 +156,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "0d717971854217cc",
   "lastOpenFiles": [
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "javaCollection/6. List.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "statics/Pasted image 20231017185229.png",
     "statics/Pasted image 20231017191155.png",
     "statics/Pasted image 20231017190348.png",
     "statics/Pasted image 20231017185329.png",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "Odin project/React/React internals/Rendering process.md",

@@ -714,3 +714,18 @@ In this example, we have an HTML button element, and when it is clicked, the `sh
 2. The function checks if the user clicked "OK" and provided input. If the user provided input, an alert displays a greeting with the entered name. If the user clicked "Cancel" or didn't provide input, a different alert message is shown.
 
 You can customize the prompt dialog by changing the message and default value to suit your needs.
+
+## COOKIES
+**Importance of Cookies:**
+1. **User Authentication**: Cookies enable seamless and secure user authentication, allowing users to stay logged in without repeated logins.
+2. **Personalization**: They enhance user experience by storing preferences and customizing content based on user choices.
+3. **Shopping Carts**: Cookies simplify e-commerce by maintaining shopping cart items across sessions.
+4. **Tracking User Behavior**: Web analytics and behavior tracking through cookies provide insights for website improvement and marketing strategies.
+5. **Ad Targeting**: Cookies support targeted advertising, which benefits users with more relevant ads and websites with increased revenue.
+**Drawbacks of Cookies:**
+1. **Privacy Concerns**: Some users feel that cookies invade their privacy by tracking and collecting data without clear consent.
+2. **Security Risks**: Cookies can be exploited for malicious purposes, including session hijacking and data breaches.
+3. **Data Overload**: Accumulated cookies can affect website performance and increase storage requirements, potentially slowing down the site.
+4. **Cross-Site Tracking**: Third-party cookies have raised concerns about cross-site tracking and user profiling without consent.
+5. **Legal Compliance**: Evolving data privacy regulations require websites to comply with strict cookie usage requirements, adding complexity and potential legal risks for site owners.
+6. 
