@@ -11,11 +11,9 @@
             "id": "0d717971854217cc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
-                "mode": "source",
-                "source": false
+                "file": "statics/Pasted image 20231021111836.png"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "statics/Pasted image 20231021111836.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "statics/Pasted image 20231021111836.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
+                "file": "statics/Pasted image 20231021111836.png"
               }
             }
           },
@@ -156,12 +154,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0d717971854217cc",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "Pasted image 20231021111836.png",
-    "Pasted image 20231021111805.png",
-    "MCA/1st Sem/WD/Minor 2nd.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
+    "statics/Pasted image 20231021111836.png",
+    "statics/Pasted image 20231021111805.png",
+    "MCA/1st Sem/WD/Minor 2nd.md",
     "javaCollection/6. List.md",
     "statics/Pasted image 20231017185229.png",
     "statics/Pasted image 20231017191155.png",
@@ -189,7 +187,6 @@
     "javaCollection/3. Collection interface.md",
     "statics/Pasted image 20231016111015.png",
     "Odin project/React/2 . States in react.md",
-    "statics/Pasted image 20231015093639.png",
     "javaCollection/2. Preliminaries.md",
     "Odin project/React/6 . Strict Mode.md",
     "Odin project/React/React internals",
