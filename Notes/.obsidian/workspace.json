@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "MCA/1st Sem/CN/2nd Minor.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "fa5ee685fc3e6382",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "statics/Pasted image 20231022160813.png"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231022160813.png",
+                "file": "MCA/1st Sem/CN/2nd Minor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231022160813.png",
+                "file": "MCA/1st Sem/CN/2nd Minor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231022160813.png"
+                "file": "MCA/1st Sem/CN/2nd Minor.md"
               }
             }
           },
@@ -167,22 +156,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "0d717971854217cc",
   "lastOpenFiles": [
+    "Pasted image 20231022190029.png",
+    "statics/Pasted image 20231022182812.png",
     "MCA/1st Sem/CN/2nd Minor.md",
+    "statics/Pasted image 20231022185356.png",
+    "Udemy Networking/1. IP address.md",
+    "statics/Pasted image 20231022183941.png",
+    "statics/Pasted image 20231022183651.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231022163805.png",
     "statics/Pasted image 20231022163723.png",
     "statics/Pasted image 20231022161242.png",
     "statics/Pasted image 20231022160813.png",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231021112959.png",
     "statics/Pasted image 20231021113950.png",
-    "statics/Pasted image 20231021113500.png",
-    "statics/Pasted image 20231021111836.png",
-    "statics/Pasted image 20231021111805.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "javaCollection/6. List.md",
-    "statics/Pasted image 20231017185229.png",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "Odin project/React/React internals/Rendering process.md",
@@ -204,7 +195,6 @@
     "javaCollection/2. Preliminaries.md",
     "Odin project/React/6 . Strict Mode.md",
     "Odin project/React/React internals",
-    "Odin project/javascript advance/Array and Object Destructring.md",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
     "MCA/1st Sem/Lab_expirements/WD_Lab",

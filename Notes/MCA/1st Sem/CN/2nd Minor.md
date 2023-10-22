@@ -215,3 +215,141 @@ transmission.
 	-  Knowledge about the whole network: Each router shares its knowledge through the entire network. The Router sends its collected knowledge about the network to its neighbors.
 	- Routing only to neighbors: The router sends its knowledge about the network to only those routers which have direct links. The router sends whatever it has about the network through the ports. The information is received by the router and uses the information to update its own routing table.
 	- Information sharing at regular intervals: Within 30 seconds, the router sends the information to the neighboring routers.
+## Link state routing algo
+Link state is a dynamic routing algorithm in which each router shares knowledge of its neighbors with every other router in the network.
+
+A router sends its information about its neighbors only to all the routers through flooding.
+Information sharing takes place only whenever there is a change.
+It makes use of Dijkistra’s Algorithm for making routing tables.
+Keys to understand Link state routing:
+- Knowledge about the neighborhood: Instead of sending its routing table, a router sends the information about its neighborhood only. A router broadcast its identities and cost of the directly attached links to other routers.
+- Flooding: Each router sends the information to every other router on the internetwork except its neighbors. This process is known as Flooding. Every router that receives the packet sends the copies to all its neighbors. Finally, each and every router receives a copy of the same information.
+- Information sharing: A router sends the information to every other router only when the change occurs in the information.
+
+Link State Routing Phases:
+- Reliable Flooding
+	- Initial state: Each node knows the cost of its neighbors.
+	- Final state: Each node knows the entire graph.
+- Route Calculation
+	- Each node uses Dijkstra's algorithm on the graph to calculate the optimal routes to all nodes.
+	- The Link state routing algorithm is also known as Dijkstra's algorithm which is used to find the shortest path from one node to every other node in the network.
+	- The Dijkstra's algorithm is an iterative, and it has the property that after kth iteration of the algorithm, the least cost paths are well known for k destination nodes.
+![[Pasted image 20231022182812.png]]
+
+## count to infinity
+- Problem with distance vector routing is whenever a link is broken, other routers unknowingly gives information that they know how to reach a disconnected node. This false information will propagate to all routers. This problem is known as count to infinity.
+- One of the important issue in Distance Vector Routing is Count to Infinity Problem.
+- Counting to infinity is just another name for a routing loop.
+- In distance vector routing, routing loops usually occur when an interface goes down.
+- It can also occur when two routers send updates to each other at the same time.
+
+## Congestion control
+A state occurring in network layer when the message traffic is so heavy that it slows down
+network response time is called as congestion.
+#### Principles of congestion control
+Congestion control in networking is a critical aspect of managing data traffic to ensure that the network operates efficiently and fairly. The primary goal of congestion control is to prevent network congestion, which can lead to packet loss, delays, and reduced quality of service. Here are some of the key principles of congestion control in networking:
+
+1. **Load Monitoring**: Networks should continuously monitor the level of congestion. This can be done by measuring factors such as packet loss, delay, or the utilization of network links.
+    
+2. **Feedback Mechanisms**: Feedback mechanisms are essential for congestion control. They provide information about network conditions to endpoints. Common feedback mechanisms include Explicit Congestion Notification (ECN) and packet loss signals.
+    
+3. **Resource Allocation**: Effective congestion control involves allocating network resources fairly and efficiently. This can include prioritizing certain types of traffic or ensuring that no single flow consumes an unfair share of resources.
+    
+4. **Traffic Policing and Shaping**: Network traffic can be shaped and policed to conform to certain traffic profiles and to prevent bursty traffic from overloading network resources.
+    
+5. **Congestion Avoidance**: Rather than waiting for congestion to occur, congestion avoidance techniques aim to predict and preemptively prevent congestion. One well-known algorithm for this is the Transmission Control Protocol (TCP) congestion control.
+    
+6. **Flow Control**: Flow control mechanisms ensure that a sender does not overwhelm a receiver with data. TCP, for example, uses a sliding window approach to control the rate at which data is sent based on feedback from the receiver.
+    
+7. **Quality of Service (QoS)**: QoS mechanisms can be used to prioritize different types of traffic, giving more resources to critical applications like VoIP or video streaming while limiting resources for less critical traffic.
+
+Effects of Congestion:
+- As delay increases, performance decreases.
+- If delay increases, retransmission occurs, making situation worse
+
+Congestion control algorithms:
+- Leaky Bucket Algorithm
+- Token bucket Algorithm
+#### Leaky bucket algo
+- each network interface contains a leaky bucket and the following steps are involved in leaky bucket algorithm:
+	- When host wants to send packet, packet is thrown into the bucket.
+	- The bucket leaks at a constant rate, meaning the network interface transmits packets at a constant rate.
+	- Bursty traffic is converted to a uniform traffic by the leaky bucket.
+	- In practice the bucket is a finite queue that outputs at a finite rate.
+![[Pasted image 20231022183651.png]]
+#### Token bucket algo
+The leaky bucket algorithm enforces output pattern at the average rate, no matter how bursty the traffic is.
+
+In order to deal with the bursty traffic we need a flexible
+algorithm so that the data is not lost.
+- One such algorithm is token bucket algorithm.
+- Steps of this algorithm can be described as follows:
+	- In regular intervals tokens are thrown into the bucket. 
+	- The bucket has a maximum capacity.
+	- If there is a ready packet, a token is removed from the bucket, and the packet is sent.
+	- If there is no token in the bucket, the packet cannot be sent.
+- ![[Pasted image 20231022183941.png]]
+#### Congestion control technique
+Congestion control refers to the techniques used to control or prevent congestion
+
+- Congestion control techniques can be broadly classified into two categories:
+	- Open Loop Congestion Control
+	-  Closed Loop Congestion Control
+- Open loop congestion control policies are applied to prevent congestion before it happens. The congestion control is handled either by the source or the destination. Open loop control loop have following policies:
+	- Retransmission Policy
+	- Window Policy
+	- Discarding Policy
+	- Acknowledgment Policy
+	- Admission Policy
+- Closed Loop Congestion Control: Closed loop congestion control technique is used to treat or alleviate congestion after it happens. Several techniques are used by different protocols; some of them are:
+	- Backpressure
+	- Choke Packet Technique
+	- Implicit Signaling
+	- Explicit Signaling
+
+# IP
+## What is it 
+- It is a numerical representation that uniquely identifies a specific interface on the network. It is a logical identifier for an interface that is connected to the network.
+## Special IPv4 Address
+- [[1. IP address#Special address]]
+### Feature of IPv4
+- Connectionless
+- Datagram service(meaning no fixed path , can use any route)
+### IPv4 addressing modes
+- Unicast Addressing Mode- In this mode, data is sent only to one destined host.
+- The Destination Address field contains 32-bit IP address of the destination host. Here the client sends data to the targeted server.
+- Broadcast Addressing Mode- In this mode, the packet is addressed to all the hosts in a network segment. The Destination Address field contains a special broadcast address, i.e. 255.255.255.255. When a host sees this packet on the network, it is bound to process it. Here the client sends a packet, which is entertained by all the Servers.
+- Multicast Addressing mode - This mode is a mix of the previous two modes, i.e. th packet sent is neither destined to a single host nor all the hosts on the segment. In this packet, the Destination Address contains a special address which starts with 224.x.x.x and can be entertained by more than one host.
+### IPv4 Header format
+![[Pasted image 20231022185356.png]]
+![[Pasted image 20231022190029.png]]
+- Version: Version is a 4 bit field that indicates the IP version used always contain value (0100).
+	- The most popularly used IP versions are version-4 (IPv4) and version-6 (IPv6).
+	- Only IPv4 uses the above header.
+- Header Length: Header length is a 4 bit field that contains the length of the IP header.
+- Types of Service:
+	- Type of service is a 8 bit field that is used for Quality of Service (QoS).
+	- The datagram is marked for giving a certain treatment using this field.
+- Identification is a 16 bit field.
+	- It is used for the identification of the fragments of an original IP datagram.
+	- When an IP datagram is fragmented,
+	- Each fragmented datagram is assigned the same identification number.
+	-  This number is useful during the re assembly of fragmented datagrams.
+- DF Bit :DF bit stands for Do Not Fragment bit.
+	-  Its value may be 0 or 1.
+	-  DF 0, means fragment allow, if required.
+	- DF 1, means fragmentation not allowed.
+- MF Bit: MF bit stands for More Fragments bit.
+	-  Its value may be 0 or 1.
+	-  MF 0, indicates last or only fragment.
+	-  MF 1, indicates current datagram is fragment of other larger datagram.
+-  fragment Offset: Fragment Offset is a 13 bit field.
+	- It indicates the position of a fragmented datagram in the original unfragmented IP datagram.
+	-  The first fragmented datagram has a fragment offset of zero.
+- Header Checksum: Header checksum is a 16 bit field.
+	- It contains the checksum value of the entire header.
+	-  The checksum value is used for error checking of the header.
+	-  At each hop: -
+	-  The header checksum is compared with the value contained in this field.
+	-  If header checksum is found to be mismatched, then the datagram is discarded.
+	-  Router updates the checksum field whenever it modifies the datagram header.
