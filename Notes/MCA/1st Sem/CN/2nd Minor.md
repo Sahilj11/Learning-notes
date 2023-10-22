@@ -353,3 +353,130 @@ Congestion control refers to the techniques used to control or prevent congestio
 	-  The header checksum is compared with the value contained in this field.
 	-  If header checksum is found to be mismatched, then the datagram is discarded.
 	-  Router updates the checksum field whenever it modifies the datagram header.
+### Type of IPv6 address
+- Unicast: An identifier for a single interface. A packet sent to a unicast address is delivered to the interface identified by that address. (E.g. Telephone communication).
+- Anycast: An identifier for a set of interfaces (typically belonging to different nodes). A packet sent to an anycast address is delivered to one of the interfaces identified by that address (the "nearest" one, according to the routing protocols' measure of distance). (E.g. –Google established various servers all around the world having same anycast IP address. When we send any request on google, it will be delivered to nearest server to us and the response will delivered back.)
+- Multicast: An identifier for a set of interfaces (typically belonging to different nodes). A packet sent to a multicast address is delivered to all interfaces identified by that address. (E.g.- Whatsapp group, A message sent in a group will be delivered to all contacts in group, but not to all contacts in your phone.
+- There are no broadcast addresses in IPv6, their function being superseded by multicast addresses.
+### IPv6 structure
+An IPv6 address is made of 128 bits divided into eight 16-bits blocks. Each block is then
+converted into 4-digit Hexadecimal numbers separated by colon symbols.
+       2001:0000:3238:DFE1:0063:0000:0000:FEFB
+Rule.1: Discard leading Zero(es):
+- In Block 5, 0063, the leading two 0s can be omitted, such as (5th block):
+      2001:0000:3238:DFE1:63:0000:0000:FEFB
+-  Rule.2: If two of more blocks contain consecutive zeroes, omit them all and replace with double colon sign ::, such as (6th and 7th block):
+      2001:0000:3238:DFE1:63::FEFB
+- Consecutive blocks of zeroes can be replaced only once by :: so if there are still blocks of zeroes in the address, they can be shrunk down to a single zero, such as (2nd block):
+    2001:0:3238:DFE1:63::FEFB
+![[Pasted image 20231022222635.png]]
+
+### IPv6 feature
+Certainly, here are the 8 salient features of IPv6:
+
+1. **Expanded Address Space**: IPv6 uses a 128-bit address format, providing a vast number of unique IP addresses.
+
+2. **Simplified Header Format**: IPv6's streamlined header reduces processing overhead.
+
+3. **Elimination of NAT**: IPv6 removes the need for Network Address Translation, offering end-to-end connectivity.
+
+4. **Improved Security**: Built-in IPsec support enhances network security.
+
+5. **Autoconfiguration**: IPv6 allows devices to generate their own addresses without DHCP.
+
+6. **Mobility Support**: IPv6 supports mobile device roaming.
+
+7. **Quality of Service (QoS)**: IPv6 offers better traffic prioritization.
+
+8. **Multicasting**: Improved support for efficient data transmission to multiple recipients.
+### IPv6 +ves -ves
+Certainly, here are five advantages and five disadvantages of IPv6:
+
+**Advantages of IPv6:**
+
+1. **Vast Address Space**: IPv6 provides an enormous address space, ensuring a virtually unlimited supply of unique IP addresses for devices and networks.
+
+2. **Simplified Header**: IPv6's streamlined header format reduces the processing overhead on routers and devices, improving network efficiency.
+
+3. **No NAT Requirement**: IPv6 eliminates the need for Network Address Translation (NAT), allowing every device to have a unique, globally routable IP address and simplifying end-to-end connectivity.
+
+4. **Built-In Security**: IPv6 includes integrated IPsec support, enhancing network security with authentication, encryption, and data integrity features.
+
+5. **Autoconfiguration**: IPv6 allows devices to automatically configure their own IP addresses, reducing the reliance on DHCP servers and simplifying network setup.
+
+**Disadvantages of IPv6:**
+
+1. **Compatibility Challenges**: The transition from IPv4 to IPv6 can be complex and requires mechanisms for coexistence, potentially leading to compatibility issues.
+
+2. **Legacy System Support**: Older hardware, software, and network equipment may lack full IPv6 support, necessitating the maintenance of IPv4 compatibility and dual-stack configurations.
+
+3. **Limited Adoption**: IPv6 adoption is not universal, and many networks still primarily rely on IPv4, causing interoperability challenges.
+
+4. **Learning Curve**: IPv6 introduces new concepts and features, requiring network administrators and IT professionals to adapt and learn, which can be a steep learning curve.
+
+5. **Potential Security Concerns**: While IPv6 incorporates security features, it also introduces new potential security challenges and attack vectors, necessitating careful security measures and monitoring.
+
+### IPv4 vs IPv6
+IPv4 (Internet Protocol version 4) and IPv6 (Internet Protocol version 6) are both protocols used for identifying and addressing devices on a network, but they have several key differences. Here are some of the primary distinctions:
+
+**1. Address Length:**
+
+   - IPv4: IPv4 uses 32-bit addresses, allowing for approximately 4.3 billion unique addresses. This limited address space has led to IPv4 address exhaustion.
+   
+   - IPv6: IPv6 uses 128-bit addresses, which provides a vastly larger address space, accommodating approximately 340 undecillion unique addresses. This large address space is necessary to support the growing number of devices and the Internet of Things (IoT).
+
+**2. Address Notation:**
+
+   - IPv4: IPv4 addresses are represented in dotted-decimal format (e.g., 192.168.1.1).
+
+   - IPv6: IPv6 addresses are represented in hexadecimal notation with colons separating groups of 16 bits (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+
+**3. Header Size:**
+
+   - IPv4: IPv4 headers are 20 to 60 bytes in length and contain various fields, some of which are optional.
+
+   - IPv6: IPv6 headers are fixed at 40 bytes, containing a simplified set of fields, reducing processing overhead.
+
+**4. NAT (Network Address Translation):**
+
+   - IPv4: NAT is commonly used in IPv4 networks to conserve IPv4 addresses by allowing multiple devices to share a single public IP address. This can complicate end-to-end communication.
+
+   - IPv6: IPv6's large address space eliminates the need for NAT, as each device can have a unique global address, simplifying end-to-end connectivity.
+
+**5. Autoconfiguration:**
+
+   - IPv4: Autoconfiguration is not a built-in feature of IPv4, and devices often rely on DHCP servers for address assignment.
+
+   - IPv6: IPv6 includes stateless address autoconfiguration, allowing devices to generate their own IP addresses without DHCP, simplifying network setup.
+
+**6. IPsec Support:**
+
+   - IPv4: IPsec is optional and can be added for security purposes.
+
+   - IPv6: IPsec is a fundamental part of IPv6 and is often mandated, enhancing network security.
+
+**7. Mobility Support:**
+
+   - IPv4: Mobility support typically requires complex solutions like Mobile IP.
+
+   - IPv6: IPv6 has built-in support for mobile devices, simplifying mobility.
+
+**8. Quality of Service (QoS):**
+
+   - IPv4: QoS support is possible but not standardized.
+
+   - IPv6: IPv6 includes improved support for QoS, allowing for traffic prioritization.
+
+**9. Fragmentation Handling:**
+
+   - IPv4: Routers are responsible for fragmenting and reassembling packets.
+
+   - IPv6: Fragmentation is generally handled by the source device, reducing the burden on routers.
+
+**10. Header Checksum:**
+
+   - IPv4: IPv4 headers include a checksum for error detection.
+
+   - IPv6: IPv6 removes the header checksum, placing error checking at higher layers.
+
+These are some of the key differences between IPv4 and IPv6, highlighting IPv6's improvements in terms of address space, header simplicity, security, and support for modern network requirements.
