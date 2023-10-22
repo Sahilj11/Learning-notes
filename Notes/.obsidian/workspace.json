@@ -11,9 +11,11 @@
             "id": "0d717971854217cc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "statics/Pasted image 20231022222635.png"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231022222635.png",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231022222635.png",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231022222635.png"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
               }
             }
           },
@@ -154,7 +156,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "0d717971854217cc",
   "lastOpenFiles": [
     "MCA/1st Sem/CN/2nd Minor.md",
     "statics/Pasted image 20231022222635.png",
