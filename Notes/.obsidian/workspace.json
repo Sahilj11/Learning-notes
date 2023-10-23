@@ -23,11 +23,9 @@
             "id": "3985d83edd933687",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md",
-                "mode": "source",
-                "source": false
+                "file": "statics/Pasted image 20231023084035.png"
               }
             }
           }
@@ -98,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md",
+                "file": "statics/Pasted image 20231023084035.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md",
+                "file": "statics/Pasted image 20231023084035.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md"
+                "file": "statics/Pasted image 20231023084035.png"
               }
             }
           },
@@ -171,8 +169,12 @@
   },
   "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
+    "statics/Pasted image 20231023084537.png",
+    "statics/Pasted image 20231023084520.png",
+    "statics/Pasted image 20231023084442.png",
+    "statics/Pasted image 20231023084035.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/CN/2nd Minor.md",
     "statics/Pasted image 20231022222635.png",
     "statics/Pasted image 20231022190029.png",
@@ -181,10 +183,6 @@
     "Udemy Networking/1. IP address.md",
     "statics/Pasted image 20231022183941.png",
     "statics/Pasted image 20231022183651.png",
-    "statics/Pasted image 20231022163805.png",
-    "statics/Pasted image 20231022163723.png",
-    "statics/Pasted image 20231022161242.png",
-    "statics/Pasted image 20231022160813.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "javaCollection/6. List.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
@@ -206,7 +204,6 @@
     "javaCollection/3. Collection interface.md",
     "Odin project/React/2 . States in react.md",
     "javaCollection/2. Preliminaries.md",
-    "Odin project/React/6 . Strict Mode.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

@@ -122,6 +122,42 @@ It's important to manage thread states properly in multithreaded applications to
 ## Package
 **java package** is a group of similar types of classes, interfaces and sub-packages.
 
+![[Pasted image 20231023084035.png]]
+#### Creating package
+The **package keyword** is used to create a package in java.
+```java
+- //save as Simple.java  
+- package mypack;  
+- public class Simple{  
+-  public static void main(String args[]){  
+-     System.out.println("Welcome to package");  
+-    }  
+- }
+```
+#### Compile package
+```java
+javac -d directory javafilename
+javac -d . Simple.java
+```
+The -d switch specifies the destination where to put the generated class file. You can use any directory name like /home (in case of Linux), d:/abc (in case of windows) etc. If you want to keep the package within the same directory, you can use . (dot).
+
+You need to use fully qualified name e.g. mypack.Simple etc to run the class.
+**To Compile:** javac -d . Simple.java
+**To Run:** java mypack.Simple
+#### How to access package from another package?
+There are three ways to access the package from outside the package.
+
+1. import package.`*`;
+![[Pasted image 20231023084442.png]]
+3. import package.classname;
+![[Pasted image 20231023084520.png]]
+
+5. fully qualified name.
+![[Pasted image 20231023084537.png]]
+
+#### Subpackage
+Package inside the package is called the **subpackage**. It should be created **to categorize the package further**.
+
 Package in java can be categorized in two form, built-in package and user-defined package.
 In Java, a package is a mechanism for organizing related classes and interfaces into a single, coherent namespace. Packages provide a way to structure your code, avoid naming conflicts, and make your code more maintainable and modular. They are essential for organizing and managing larger Java applications. Here's a detailed explanation of packages in Java:
 
