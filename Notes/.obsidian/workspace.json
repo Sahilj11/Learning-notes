@@ -8,22 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0d717971854217cc",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "statics/Pasted image 20231023094658.png"
-              }
-            }
-          },
-          {
             "id": "3985d83edd933687",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231023094658.png",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231023094658.png",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231023094658.png"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
               }
             }
           },
@@ -166,14 +156,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "3985d83edd933687",
   "lastOpenFiles": [
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
+    "statics/Pasted image 20231023094658.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231023102701.png",
     "statics/Pasted image 20231023101901.png",
     "statics/Pasted image 20231023101546.png",
-    "statics/Pasted image 20231023094658.png",
     "statics/Pasted image 20231023084035.png",
     "statics/Pasted image 20231023084537.png",
     "statics/Pasted image 20231023084520.png",
