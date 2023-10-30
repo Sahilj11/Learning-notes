@@ -13,13 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "javaCollection/6. List.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "78b46970e2cf7e88",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231030102945.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "statics/Pasted image 20231030102945.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "statics/Pasted image 20231030102945.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
+                "file": "statics/Pasted image 20231030102945.png"
               }
             }
           },
@@ -156,11 +167,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3985d83edd933687",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
+    "javaCollection/7. Maps.md",
+    "statics/Pasted image 20231030103428.png",
+    "statics/Pasted image 20231030102945.png",
+    "javaCollection/6. List.md",
+    "Odin project/React/2 . States in react.md",
+    "MCA/1st Sem/DBMS MCA/Normalisation.md",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
     "statics/Pasted image 20231023094658.png",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231023102701.png",
     "statics/Pasted image 20231023101901.png",
     "statics/Pasted image 20231023101546.png",
@@ -169,12 +186,8 @@
     "statics/Pasted image 20231023084520.png",
     "statics/Pasted image 20231023084442.png",
     "MCA/1st Sem/CN/2nd Minor.md",
-    "statics/Pasted image 20231022222635.png",
-    "statics/Pasted image 20231022190029.png",
     "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
-    "javaCollection/6. List.md",
-    "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "Odin project/React/React internals/Rendering process.md",
     "Odin project/React/5. Side-Effects.md",
@@ -191,8 +204,6 @@
     "Algo Princeton Book/1.4. Analysis of algo.md",
     "Algo Princeton Book/2.1 Searching.md",
     "javaCollection/3. Collection interface.md",
-    "Odin project/React/2 . States in react.md",
-    "javaCollection/2. Preliminaries.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
