@@ -417,3 +417,52 @@ In summary:
 - Composition establishes a "has-a" relationship, where a class contains instances of other classes as member variables to create more complex objects.
 
 Both inheritance and composition have their uses, and the choice depends on the specific needs and relationships between classes in the design of the system. Inheritance is useful for sharing common behavior and modeling class hierarchies, while composition is useful for building objects by combining smaller components.
+
+### Super keyword 
+In JavaScript, the `super` keyword is used to call functions on an object's parent. It is commonly used within classes and extends the functionality of the parent class or superclass within a child class or subclass.
+
+The `super` keyword has two primary use cases:
+
+1. **Accessing Parent Object's Properties:**
+   - In a constructor of a child class, `super()` is used to call the constructor of the parent class, allowing the child class to inherit properties and behavior from its parent.
+
+   ```javascript
+   class Parent {
+       constructor(name) {
+           this.name = name;
+       }
+   }
+
+   class Child extends Parent {
+       constructor(name, age) {
+           super(name);
+           this.age = age;
+       }
+   }
+
+   const childObj = new Child('Alice', 8);
+   console.log(childObj.name); // Output: Alice
+   console.log(childObj.age);  // Output: 8
+   ```
+
+2. **Calling Parent Object's Methods:**
+   - When you want to access a method from the parent class within the child class, `super.methodName()` is used.
+
+   ```javascript
+   class Parent {
+       greet() {
+           return 'Hello, I am the parent.';
+       }
+   }
+
+   class Child extends Parent {
+       greet() {
+           return super.greet() + ' And I am the child.';
+       }
+   }
+
+   const childObj = new Child();
+   console.log(childObj.greet()); // Output: Hello, I am the parent. And I am the child.
+   ```
+
+The `super` keyword provides a way to access and call the methods and properties of the superclass from a subclass while maintaining the inheritance hierarchy.
