@@ -25,26 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/React/6 . Strict Mode.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec4d01637fca9fc3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Odin project/javascript advance/Classes.md",
+                "file": "Odin project/React/7. Class Components.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/javascript advance/Classes.md",
+                "file": "Odin project/React/7. Class Components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/javascript advance/Classes.md",
+                "file": "Odin project/React/7. Class Components.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/javascript advance/Classes.md"
+                "file": "Odin project/React/7. Class Components.md"
               }
             }
           },
@@ -181,13 +169,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ec4d01637fca9fc3",
+  "active": "78b46970e2cf7e88",
   "lastOpenFiles": [
+    "javaCollection/6. List.md",
     "Odin project/React/1. Data Passing.md",
     "Odin project/React/2 . States in react.md",
     "Odin project/React/7. Class Components.md",
     "Odin project/React/6 . Strict Mode.md",
-    "javaCollection/6. List.md",
     "javaCollection/7. Maps.md",
     "statics/Pasted image 20231030103428.png",
     "statics/Pasted image 20231030102945.png",
