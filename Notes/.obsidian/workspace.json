@@ -25,14 +25,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/React/7. Class Components.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "22caec08df6f7cee",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231103144841.png"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/React/7. Class Components.md",
+                "file": "statics/Pasted image 20231103144841.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/React/7. Class Components.md",
+                "file": "statics/Pasted image 20231103144841.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/React/7. Class Components.md"
+                "file": "statics/Pasted image 20231103144841.png"
               }
             }
           },
@@ -169,27 +179,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "78b46970e2cf7e88",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "javaCollection/6. List.md",
-    "Odin project/React/1. Data Passing.md",
+    "MCA/1st Sem/SE/Software Testing.md",
+    "statics/Pasted image 20231103145019.png",
+    "statics/Pasted image 20231103144841.png",
+    "statics/Pasted image 20231103142031.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "javaCollection/4. Set.md",
+    "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "Odin project/React/2 . States in react.md",
+    "Odin project/React/1. Data Passing.md",
+    "javaCollection/6. List.md",
+    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Odin project/React/7. Class Components.md",
     "Odin project/React/6 . Strict Mode.md",
     "javaCollection/7. Maps.md",
     "statics/Pasted image 20231030103428.png",
     "statics/Pasted image 20231030102945.png",
-    "MCA/1st Sem/DBMS MCA/Normalisation.md",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
     "statics/Pasted image 20231023094658.png",
     "statics/Pasted image 20231023102701.png",
     "statics/Pasted image 20231023101901.png",
     "statics/Pasted image 20231023101546.png",
     "statics/Pasted image 20231023084035.png",
-    "statics/Pasted image 20231023084537.png",
-    "statics/Pasted image 20231023084520.png",
-    "statics/Pasted image 20231023084442.png",
     "MCA/1st Sem/CN/2nd Minor.md",
     "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
@@ -203,10 +216,6 @@
     "Odin project/javascript advance/Scopes.md",
     "Odin project/javascript advance/Classes.md",
     "Web developement/Backend/API.md",
-    "javaCollection/5. Queues.md",
-    "Algo Princeton Book/1.3. Bags , queue and stacks.md",
-    "javaCollection/4. Set.md",
-    "Algo Princeton Book/1.4. Analysis of algo.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
