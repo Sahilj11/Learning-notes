@@ -1,5 +1,5 @@
 ## Basics of testing
-- Testing means software testing . it is done to find discrepancy in the developed software or existing software
+- Software testing is the process of executing a program (or a part of program) with the intent of finding errors
 - Approaches of testing
 	- Black box testing: in this tester does not have the knowledge of the coding . in this testing we only check the functionality of software that is input be pass and output the s/w produce
 	- ![[Pasted image 20231103144841.png]]
@@ -9,46 +9,133 @@
 ### Necessities and obj of software testing 
 Software testing serves multiple necessities and objectives, crucial for ensuring the quality, reliability, and success of software applications. Here are the primary necessities and objectives of software testing:
 ### Necessities of Software Testing:
-1. **Error Detection:**
-   - Identifying and rectifying errors, defects, or bugs in the software before it reaches the end-users.
-2. **Quality Assurance:**
-   - Ensuring that the software meets predefined quality standards and fulfills user expectations.
-3. **Risk Mitigation:**
-   - Reducing the risks associated with software failures, which could result in financial losses, damage to reputation, or safety concerns.
-4. **Compliance:**
-   - Ensuring that the software adheres to regulatory, legal, and industry standards.
-5. **Customer Satisfaction:**
-   - Improving user experience by delivering a product that functions as intended and meets user needs.
-6. **Cost Reduction:**
-   - Identifying and rectifying issues early in the development cycle reduces the cost of fixing defects at later stages of development or after the software is released.
+Software testing is essential for various reasons in the development process, ensuring the quality and reliability of the software. Here's an explanation for each of the listed points:
+
+1. **Gaining Customer Confidence:** Thorough testing ensures that the software meets the specified requirements, functions as intended, and is reliable. This helps in gaining the trust and confidence of the customers in the software's performance and usability.
+
+2. **Checking Software Adaptability:** Testing evaluates the software's adaptability to different environments, devices, and operating systems. It ensures that the software can function properly across various platforms and configurations.
+
+3. **Identifying Errors:** Testing is crucial for identifying and fixing errors, bugs, and defects in the software. By uncovering these issues early in the development process, developers can address them before the software reaches the end-users.
+
+4. **Avoiding Extra Costs:** Detecting and fixing issues during the development phase is less costly than dealing with problems after the software is deployed. Testing helps in identifying and rectifying issues before they escalate, saving time and resources.
+
+5. **Accelerating Software Development:** While testing might seem to slow down the development process, it actually speeds it up in the long run. Catching and fixing issues early prevents delays and rework, leading to a more efficient and timely development cycle.
+
+6. **Avoiding Risks:** Testing mitigates the risks associated with software malfunctions, security vulnerabilities, and potential failures. A thoroughly tested software product is less prone to unexpected errors, ensuring a more stable and secure user experience.
 ### Objectives of Software Testing:
-1. **Validation and Verification:**
-   - Ensuring that the software meets the specified requirements and that it functions as expected.
-
-2. **Identifying Defects:**
-   - Detecting and reporting defects and issues in the software to improve its quality and reliability.
-
-3. **Improving Quality:**
-   - Enhancing the overall quality of the software by eliminating errors and ensuring reliability.
-
-4. **Risk Assessment:**
-   - Evaluating and mitigating risks associated with the software's performance, security, and functionality.
-
-5. **Assuring Functionality:**
-   - Ensuring that all intended functionalities work correctly and meet user expectations.
-
-6. **Documentation and Compliance:**
-   - Providing documentation of the testing process and ensuring the software complies with necessary standards and regulations.
-
-7. **Enhancing User Experience:**
-   - Focusing on usability and user-friendliness to improve the overall user experience.
-
-Software testing is essential to mitigate risks, assure quality, and provide confidence in the software's performance. By meeting these objectives and addressing these necessities, software testing contributes to delivering reliable, high-quality software that satisfies end-user requirements.
+- Finding defects which may get created by the programmer while developing the software. 
+- Gaining confidence in and providing information about the level of quality. 
+- To prevent defects. 
+- To make sure that the end result meets the business and user requirements. 
+- To ensure that it satisfies the BRS that is Business Requirement Specification and SRS that is System Requirement Specifications. 
+- To gain the confidence of the customers by providing them a quality product.
+### Testing principles
+- All tests should be traceable to customer requirements.(from customers point of view) 
+- **Tests should be planned** long before testing begins. (Begins as soon as the requirements model is complete) 
+- The **pareto** principle applies to software testing. ( implies that 80 percent of all errors uncovered during testing will likely be traceable to 20 percent of all program components) 
+- Testing should begin “in the small” and progress toward testing “in the large.” (from individual components and ultimately in the entire system) 
+- Exhaustive testing in not possible. (It is not possible to exhaustively test every program path because the number of paths is simple too large) 
+- To be most effective, testing should be conducted by an independent third party. (Most effective means highest probability of finding errors)
 ## Inspection vs testing
-- Software inspection:- concerned with analysis of static system representation to discover problem (static verification)
-	- May be supplement by tool based document and code analysis
-- Software testing:- Concerned with excersising and observing product behaviour (dynamic verfication)
-	- The system 
+In simple words, **Software testing** is the process of evaluating the product that whether it’s working properly as per requirements. It is related to finding bugs in UI, functionality and as per end-user perspective of the product
+while **Software inspection** is testing plus code review to ensure that it is correct, optimized and maintainable. It is mainly related to finding bugs in program’s code as per both requirements and test cases.
+
+## Testing and debugging
+- Software testing is a process of identifying defects in the software product. It is performed to validate the behavior of the software or the application compared to requirements.
+### Debugging
+- Debugging is the action where the development team or a developer implements after receiving the test report related to the bugs in the software from the testing team. In the software development process, it includes detecting and modifying code errors in a software program
+#### Steps in debugging
+- Identify error 
+- Finding error location
+- Analyze error
+- Prove the analysis
+- Cover lateral damage
+- Fix and validate
+#### +ves of debugging
+- It supports the developer in minimizing the data. 
+- If the perform the debugging, we can report the error condition directly 
+- During the debugging process, the developer can avoid complex one-use testing code that helps the developer save time and energy.
+- Debugging delivers maximum useful information of data structures and allows its informal understanding.
+### Testing vs debugging
+Sure, here's a markdown table presenting the differences between testing and debugging:
+Certainly, here's the updated table with the additional three points:
+
+| S.NO | Testing                                                                                                                          | Debugging                                                                               |
+|------|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| 1.   | It is the implementation of the software with the intent of identifying the defects.                                            | The process of fixing and resolving the defects is known as debugging.                  |
+| 2.   | Testing can be performed either manually or with the help of some automation tools.                                             | The debugging process cannot be automated.                                            |
+| 3.   | A group of test engineers executes testing, and sometimes it can be performed by the developers.                                | Debugging is done by the developer or the programmer.                                   |
+| 4.   | The test engineers perform manual and automated test cases on the application, and if they detect any bug or error, they can report back to the development team for fixing. | The developers will find, evaluate, and remove the software errors. |
+| 5.   | Programming knowledge is not required to perform the testing process.                                                            | Without having an understanding of the programming language, we cannot proceed with the debugging process. |
+| 6.   | Once the coding phase is done, we proceed with the testing process.                                                               | After the implementation of the test case, we can start the Debugging process. |
+| 7.   | Software Testing includes two or more activities such as validation and verification of the software.                         | Debugging tries to match indication with cause, hence leading to the error correction. |
+| 8.   | It is built on different testing levels such as Unit Testing, Integration Testing, System Testing, etc.                       | It is built on different kinds of bugs because there is no such level of debugging possible. |
+| 9.   | Software testing is the presentation of defects.                                                                                    | It is a logical procedure.                                                            |
+| 10.  | Software testing is the vital phase of SDLC (Software Development Life Cycle).                                                 | It is not a part of SDLC because it occurs as a subset of testing.                         |
+## Software testing life cycle
+- sequence of specific activities conducted during the testing process to ensure software quality goals are met. STLC involves both verification and validation activities.
+There are following six major phases in every Software Testing Life Cycle Model (STLC Model): 
+- requirement Analysis 
+	- Requirement Phase Testing also known as Requirement Analysis in which test team studies the requirements from a testing point of view to identify testable requirements and the QA team may interact with various stakeholders to understand requirements in detail. Requirements could be either functional or non-functional.
+	- Activities done in this step 
+		- Identify types of tests to be performed. 
+		- Gather details about testing priorities and focus. 
+		- Prepare Requirement Traceability Matrix (RTM)
+	- Deliverables of this phase
+		- RTM
+		- Automation feasibility report 
+- Test Planning 
+	- Senior QA manager determines the test plan strategy along with efforts and cost estimates for the project. Moreover, the resources, test environment, test limitations and the testing schedule are also determined.
+	- Activities 
+		- Preparation of test plan/strategy document for various types of testing 
+		- Test tool selection 
+		- Test effort estimation 
+		- Resource planning and determining roles and responsibilities. 
+		- Training requirement
+	- Deliverables 
+		- Test plan
+		- Effort estimation document
+- Test case development 
+	- involves the creation, verification and rework of test cases & test scripts after the test plan is ready. Initially, the Test data is identified then created and reviewed and then reworked based on the preconditions. Then the QA team starts the development process of test cases for individual units.
+	- Activities
+		- Create test cases, automation scripts (if applicable) 
+		- Review and baseline test cases and scripts 
+		- Create test data (If Test Environment is available)
+	- Deliverable
+		- Test case
+		- Test data
+- Test Environment setup 
+	- decides the software and hardware conditions under which a work product is tested. It is one of the critical aspects of the testing process and can be done in parallel with the Test Case Development Phase.
+	- Activities
+		- Understand the required architecture, environment set-up and prepare hardware and software requirement list for the Test Environment. 
+		- Setup test Environment and test data 
+		- Perform smoke test on the build
+	- Deliverable
+		- Environment ready with test data setup
+		- Smoke test results
+- Test Execution 
+	- carried out by the testers in which testing of the software build is done based on test plans and test cases prepared. The process consists of test script execution, test script maintenance and bug reporting. If bugs are reported then it is reverted back to development team for correction and retesting will be performed.
+	- Activities
+		- Execute tests as per plan  
+		- Document test results, and log defects for failed cases 
+		- Map defects to test cases in RTM 
+		- Retest the defect fixes 
+		- Track the defects to closure
+	- Deliverable
+		- Completed RTM with execution status
+		- Test cases updated with results
+		- Defect reports
+- Test Cycle closure
+	- completion of test execution which involves several activities like test completion reporting, collection of test completion matrices and test results. Testing team members meet, discuss and analyze testing artifacts to identify strategies that have to be implemented in future, taking lessons from current test cycle
+	- Activities
+		- Evaluate cycle completion criteria based on Time, Test coverage, Cost,Software, Critical Business Objectives, Quality 
+		- Prepare test metrics based on the above parameters.Document the learning out of the project 
+		- Prepare Test closure report 
+		- Qualitative and quantitative reporting of quality of the work product to the customer. 
+		- Test result analysis to find out the defect distribution by type and severity.
+	- Deliverable
+		- Test closure report
+		- Test metrics
 ## Type of testing , more specifically it is levels of testing
 
 ![[Pasted image 20231103142031.png]]
