@@ -136,6 +136,45 @@ There are following six major phases in every Software Testing Life Cycle Model 
 	- Deliverable
 		- Test closure report
 		- Test metrics
+## Software testing strategies and techniques
+- A test strategy is a concise statement that describes how the objectives of the software testing are met. The test strategy views the test event at a high level, concentrates on the objectives of the test event, the techniques that can be used and the resources that are required
+- A testing technique can be defined as a process that ensures that the application being tested functions in a structured way.
+- A testing strategy and technique is based on the method of testing adopted.
+### Methods of testing
+#### Structural vs functional testing
+- If the test cases are developed to check the actual structure of the program code, then it is called structural testing. Structural testing is also known as white box testing, where the tester checks the actual code of the software. However, in functional testing(type of black-box testing), the tester checks only the behavior of the software and will not check the actual code. The tester only checks the response of the software for predefined inputs and tests whether the software produces the desired output
+#### Static vs dynamic testing
+- Static testing refers to the analysis of the program, which is carried out without executing the program. This is a typical white box testing technique, where the developer checks the code to find errors in it. It is preventive in nature and is completed in the verification phase. The common methods include feasibility review and code review.
+- Dynamic testing refers to the analysis of the program in its executable form. This is performed by supplying valid entries and is validated against the expected results. It is a curative method and is performed during the validation phase.
+#### Manual vs Automation testing
+## V-Model
+### Intro
+- The V-model is an SDLC model where execution of processes happens in a sequential manner in a Vshape. It is also known as Verification and Validation model.
+- The V-Model is an extension of the waterfall model and is based on the association of a testing phase for each corresponding development stage. This means that for every single phase in the development cycle, there is a directly associated testing phase.
+### V-Model-Design
+the corresponding testing phase of the development phase is planned in parallel. So, there are Verification phases on one side of the ‘V’ and Validation phases on the other side. The Coding Phase joins the two sides of the V-Model
+![[Pasted image 20231104090003.png]]
+first writing some explaination of verfication phase and then validation phase
+### V-Model Application
+- V- Model application is almost the same as the waterfall model, as both the models are of sequential type. Requirements have to be very clear before the project starts, because it is usually expensive to go back and make changes.
+- Requirements are well defined, clearly documented and fixed. 
+- Product definition is stable. 
+- Technology is not dynamic and is well understood by the project team. 
+- There are no ambiguous or undefined requirements. 
+- The project is short
+### Pros and Cons
+The advantages of the V-Model method are as follows − 
+- This is a highly-disciplined model and Phases are completed one at a time. 
+- Works well for smaller projects where requirements are very well understood. 
+- Simple and easy to understand and use. 
+- Easy to manage due to the rigidity of the model. Each phase has specific deliverables and a review process
+The disadvantages of the V-Model method are as follows − 
+- High risk and uncertainty. 
+- Not a good model for complex and object-oriented projects. 
+- Poor model for long and ongoing projects. 
+- Not suitable for the projects where requirements are at a moderate to high risk of changing. 
+- Once an application is in the testing stage, it is difficult to go back and change functionality. 
+- No working software is produced until late during the life cycle.
 ## Type of testing , more specifically it is levels of testing
 
 ![[Pasted image 20231103142031.png]]

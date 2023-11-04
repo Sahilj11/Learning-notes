@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -157,8 +156,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3985d83edd933687",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
+    "statics/Pasted image 20231104090003.png",
     "javaCollection/6. List.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/SE/Software Testing.md",
