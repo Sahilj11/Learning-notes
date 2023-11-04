@@ -211,6 +211,10 @@ Adhering to good practices and investing time in creating effective unit tests c
 ### Integration testing 
 Integration testing is the next phase after unit testing in the software testing process. It focuses on verifying the interactions and connections between different units (which have already been individually tested in unit testing) when combined or integrated as a group.
 
+**Stubs and Drivers** are the dummy programs in Integration testing used to facilitate the software testing activity. These programs act as a substitute for the missing models in the testing. They do not implement the entire programming logic of the software module but they simulate data communication with the calling module while testing. 
+Stub: Is called by the Module under Test. 
+Driver: Calls the Module to be tested
+
 As a step after unit testing, integration testing ensures that these units work together as expected and that the interfaces between them function correctly. It checks how these various units collaborate, share data, and interact with one another within the larger system.
 
 Here’s how integration testing builds upon unit testing:
@@ -239,10 +243,11 @@ Integration testing strategies are methodologies used to combine and test variou
 1. **Top-Down Integration Testing:**
    - **Approach:** This strategy begins the testing process from the top layer (like testing module which is more important)(or high-level modules) and progressively integrates lower-level modules. It aims to test the integration from the user interface downwards.
    - **Advantages:** It allows for early testing of crucial functionalities, facilitating the identification of critical issues at the higher levels of the system.
-
+![[Pasted image 20231104103445.png]]
 2. **Bottom-Up Integration Testing:**
    - **Approach:** In contrast to top-down, bottom-up integration testing starts from the lower-level modules and gradually adds higher-level modules or components. It verifies the integration from the bottom layers up.
    - **Advantages:** It allows for the early testing of foundational functionalities and addresses critical issues at the lower levels.
+![[Pasted image 20231104103416.png]]
 
 3. **Big Bang Integration Testing:**
    - **Approach:** In this strategy, all or most of the modules are integrated simultaneously. This means the complete system is put together and tested in one go.
@@ -253,6 +258,30 @@ Integration testing strategies are methodologies used to combine and test variou
    - **Advantages:** It balances the advantages of both top-down and bottom-up approaches, allowing for a more comprehensive testing approach that addresses issues at various levels.
 
 These integration strategies differ in their approach to combining modules and are chosen based on the project's needs
+
+#### Regression testing
+Whenever a change in a software application is made, it is quite possible that other areas within the application have been affected by this change. Regression testing is performed to verify that a fixed bug hasn't resulted in another functionality or business rule violation. The intent of regression testing is to ensure that a change, such as a bug fix should not result in another fault being uncovered in the application.
+#### Smoke testing
+Testing the basic and critical feature of software instead of going for regress testing
+
+Smoke Testing comes into the picture at the time of receiving build software from the development team. The purpose of smoke testing is to determine whether the build software is testable or not. It is done at the time of "building software." This process is also known as "Day 0".
+Smoke test activity is the final step before the software build enters the system stage. Smoke tests must be performed on each build that is turned to testing. This applies to new development and major and minor releases of the system
+
+In the smoke testing, we only focus on the positive flow of the application and enter only valid data, not the invalid data. In smoke testing, we verify every build is testable or not; hence it is also known as Build Verification Testing
+
+Smoke Testing is done whenever the new functionalities of software are developed and integrated with existing build that is deployed in QA/staging environment. It ensures that all critical functionalities are working correctly or not. In this testing method, the development team deploys the build in QA. The subsets of test cases are taken, and then testers run test cases on the build. The QA team tests the application against the critical functionalitie
+
+**+ves**
+- Easy to perform testing 
+- Defects will be identified in early stages. 
+- Improves the quality of the system 
+- Reduces the risk 
+- Progress is easier to access. 
+- Saves test effort and time 
+- Easy to detect critical errors and correction of errors. 
+- It runs quickly 
+- Minimises integration risks
+![[Pasted image 20231104105143.png]]
 
 ### System testing 
 System testing is a crucial phase in the software development life cycle that focuses on testing the entire software application as a complete and integrated system. It verifies that the software fulfills the specified requirements and functions as intended in the target environment before it is released to the end-users. 
@@ -265,12 +294,22 @@ System testing categories can be classified based on who is performing the testi
 
 ##### System Testing Categories based on WHO is doing the testing:
 1. **Alpha Testing:**
-   - Testing performed by a select group of potential users or within the development team.
-   - Usually carried out at the developer's site.
-
+Alpha Testing is a type of acceptance testing; performed to identify all possible issues and bugs before releasing the final product to the end users. Alpha testing is carried out by the testers who are internal employees of the organization. The main goal is to identify the tasks that a typical user might perform and test them. To put it as simple as possible, this kind of testing is called alpha only because it is done early on, near the end of the development of the software, and before beta testing. The main focus of alpha testing is to simulate real users by using a black box and white box techniques.
 2. **Beta Testing:**
-   - A broader user acceptance testing (UAT) stage where the software is released to a larger set of external users or customers.
-   - Provides real-world feedback and often takes place at the customer's site.
+Beta Testing is performed by “real users” of the software application in “real environment” and it can be considered as a form of external User Acceptance Testing. It is the final test before shipping a product to the customers. Direct feedback from customers is a major advantage of Beta Testing. This testing helps to test products in customer’s environment.
+
+**Difference b/w Alpha testing and beta testing**
+Difference between alpha and beta testing 
+- Alpha Testing is performed by the Testers within the organization whereas Beta Testing is performed by the end users. 
+- Alpha Testing is performed at Developer’s site whereas Beta Testing is performed at Client’s location. 
+- Reliability and Security testing are not performed in-depth in Alpha Testing while Reliability, Security and Robustness are checked during Beta Testing. 
+- Alpha Testing involves both White box and Black box testing whereas Beta Testing mainly involves Black box testing.
+- Alpha Testing requires testing environment while Beta Testing doesn’t require testing environment. 
+- Alpha Testing requires long execution cycle whereas Beta Testing requires only few weeks of execution. 
+- Critical issues and bugs are addressed and fixed immediately in Alpha Testing whereas issues and bugs are collected from the end users and further implemented in Beta Testing.
+
+Gamma Testing
+Gamma Testing is done when software is ready for release with specified requirements, this testing done directly by skipping all the in-house testing activities. The software is almost ready for final release. No feature development or enhancement of the software is undertaken and tightly scoped bug fixes are the only code.
 ##### System Testing Categories based on Functional/Non-functional Aspects:
 1. **Functional System Testing:**
    - Focuses on verifying that the software functions according to the defined functional requirements.
@@ -280,4 +319,79 @@ System testing categories can be classified based on who is performing the testi
    - Concentrates on aspects other than specific functions and operations.
    - Includes tests related to performance, load testing, stress testing, security, scalability.
 
+##### Recovery testing 
+Recovery Testing is a system test that forces the software to fail in a variety of ways and verifies that recovery is properly performed. The purpose of Recovery Testing is to determine whether software operations can be continued after disaster or integrity loss. Recovery testing involves reverting back software to the point where integrity was known and reprocessing transactions to the failure point
+
+##### Security testing 
+**Type of security testing**
+- Vulnerability scanning
+- security scanning
+- penetration testing
+- risk assessment
+- Ethical hacking
+##### Stress testing 
+Stress testing includes testing the behavior of software under abnormal conditions. For example, it may include taking away some resources or applying a load beyond the actual load limit. The aim of stress testing is to test the software by applying the load to the system and taking over the resources used by the software to identify the breaking point
 These categories highlight not only the role and source of the testing but also whether the testing is directed towards the functionality of the system or its non-functional aspects. Both aspects are essential for ensuring the overall quality and reliability of the system.
+##### Performance testing
+Performance Testing is a software testing process used for testing the speed, response time, stability, reliability, scalability and resource usage of a software application under particular workload. The main purpose of performance testing is to identify and eliminate the performance bottlenecks in the software application. It is a subset of performance engineering and also known as “Perf Testing”.
+The focus of Performance Testing is checking a software programs 
+- Speed – Determines whether the application responds quickly 
+- Scalability – Determines maximum user load the software application can handle. 
+- Stability – Determines if the application is stable under varying loads
+
+Types of performance testing 
+- Load testing – checks the application’s ability to perform under anticipated user loads. The objective is to identify performance bottlenecks before the software application goes live.
+- Endurance testing – is done to make sure the software can handle the expected load over a long period of time.
+- Spike testing
+- etc.
+Process of performance testing 
+![[Pasted image 20231104114747.png]]
+
+### Acceptance testing
+Acceptance testing, a testing technique performed to determine whether or not the software system has met the requirement specifications. The main purpose of this test is to evaluate the system's compliance with the business requirements and verify if it is has met the required criteria for delivery to end users.
+
+## Software Test report
+Software Test Report is a document which contains a summary of all test activities and final test results of a testing project. Test report is an assessment of how well the testing is performed
+### Structure
+1. Project Information All information of the project such as the project name, product name, and version should be described in the test report. 
+2. Test Objective Test Report should include the objective of each round of testing, such as Unit Test, Performance Test, System Test …Etc. 
+3. Test Summary This section includes the summary of testing activity in general. Information detailed here includes, number of test cases executed , number of test cases passed, pass percentage etc.
+4. Defects:- like total number of bugs , status of bugs, number of bugs (open,closed ,resolved)
+
+## Test Artifacts
+Test artifacts are also known as test deliverables. These are the reports or documents created while the testing is being carried out.
+1. **Test Plan:** A document that outlines the scope, approach, resources, and schedule of testing activities. It includes the objectives, strategies, and test estimation for a particular project.
+
+2. **Test Cases:** Detailed descriptions of test scenarios, test conditions, inputs, execution steps, and expected results for specific functionalities or features of the software.
+
+3. **Test Scripts:** A set of instructions or code used for automated testing. It defines the sequence of actions to be executed and validates whether the actual outcomes match the expected results.
+
+4. **Test Scenarios:** High-level descriptions of the end-to-end functionality or behavior to be tested. They define the scope and aim of the testing and are used to derive detailed test cases.
+
+5. **Test Data:** Specific sets of data used to test the software under various conditions, including valid, invalid, and edge cases. It helps in validating the behavior and performance of the software.
+
+6. **Test Logs/Reports:** Records of test execution, including details such as test case status, defects found, issues encountered, and test environment configurations. These reports help in assessing the quality of the software.
+
+7. **Traceability Matrix:** A document that traces and links test artifacts to the corresponding requirements. It ensures that each requirement is covered by test cases and helps in tracking the test coverage.
+
+8. **Defect/Bug Reports:** Documentation of issues found during testing. It includes details like the description of the defect, steps to reproduce, severity, priority, and status of the defect.
+
+9. **Test Summary Report:** A comprehensive report summarizing the overall testing efforts, including test coverage, pass/fail rates, critical defects, and recommendations for further actions.
+
+10. **Test Strategy:** A document that defines the testing approach for the entire project, outlining the overall testing objectives, methods, and resources.
+
+## Testing tools 
+There are two broad categories of software testing tools i.e. static and dynamic. Most of the tools fall clearly into one of these categories
+
+### Static software testing tools 
+Static software testing tools are those that perform analysis of the programs without executing them at all.
+- Complexity analysis tools:- A popular measure of complexity is the cyclomatic complexity(The concept behind cyclomatic complexity is rooted in the control flow of a program. It counts the number of decision points in the code, such as loops, conditional statements (if, else, switch), and other control structures). Tools are available which are based on any of the complexity measures. These tools may take the program as an input, process it and produce a complexity value as output.
+- Syntax and semantic analysis tools:- There are tools in the market that may analyze the program and find errors. Non-declaration of a variable, double declaration of a variable,
+- Flow graph generator tools:- These tools are language dependent and take the program as an input and convert it to its flow graph
+- Code comprehension tools:- These tools may help us to understand unfamiliar source code. They may also identify dead source code, duplicate source code and areas that may require special attention and should be reviewed seriously
+- Code inspector:- Source code inspectors do the simple job of enforcing standards in a uniform way for many programs. They inspect the programs and force us to implement the guidelines of good programming practices.
+### Dynamic software testing tools
+Dynamic software testing tools select test cases and execute the program to get the results. They also analyze the results and find reasons for failures (if any) of the program. They will be used after the implementation of the program and may also test non-functional requirements like efficiency, performance, reliability, etc
+- Coverage analysis tools:- These tools are used to find the level of coverage of the program after executing the selected test cases. They give us an idea about the effectiveness of the selected test cases. They highlight the unexecuted portion of the source code and force us to design special test cases for that portion of the source code.
+- Performance testing tools:- 
+- Functional / Regression Testing Tools:- These tools are used to test the software on the basis of its functionality without considering the implementation details.Some of the popular available tools are IBM Rational’s Robot,
