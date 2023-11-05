@@ -394,4 +394,58 @@ Static software testing tools are those that perform analysis of the programs wi
 Dynamic software testing tools select test cases and execute the program to get the results. They also analyze the results and find reasons for failures (if any) of the program. They will be used after the implementation of the program and may also test non-functional requirements like efficiency, performance, reliability, etc
 - Coverage analysis tools:- These tools are used to find the level of coverage of the program after executing the selected test cases. They give us an idea about the effectiveness of the selected test cases. They highlight the unexecuted portion of the source code and force us to design special test cases for that portion of the source code.
 - Performance testing tools:- 
-- Functional / Regression Testing Tools:- These tools are used to test the software on the basis of its functionality without considering the implementation details.Some of the popular available tools are IBM Rational’s Robot,
+- Functional / Regression Testing Tools:- These tools are used to test the software on the basis of its functionality without considering the implementation details.Some of the popular available tools are IBM Rational’s Robot
+
+## CASE 
+### What is it 
+- CASE stands for computer aided software engineering . it means , development and maintenance of software projects with help of various automated software tools
+- CASE tools are set of software application programs , which are used to automate SDLC activities . CASE tools are used by software manager , analysts and engineers to develop software system
+- There are number of tools like analysis tools , design tools 
+
+### Component of CASE tools
+![[Pasted image 20231105081456.png]]
+- It can be divided into following parts 
+- Central repository :- CASE tools require a central repository , which can serve as a source of common , integrated and consistent information. Central repository is a central place of storage where product specifications , requirement document , related reports and diagrams , other useful info regarding management is stored
+- Upper Case tools :- Used in planning , analysis and design stages of SDLC
+- Lower Case tools:- Lowe CASE tools are used in implementation , testing and maintenance 
+- Integrated Case tools:- helpful in all stages of SDLC , from requirement gathering to testing and documentation
+### Advantages and Disadvantages of CASE Tools
+a) Advantages
+- Produce system with a longer effective operational life.
+- Produces system that more closely meet user needs and requirements.
+- Produces system with excellent documentation.
+-  Produce more flexible system.
+b) Disadvantages
+-  Produce initial system that is more expensive to build and maintain
+ - Require more extensive and accurate definitions of user needs and requirements.
+- May be difficult to customize.
+-  Require training of maintenance staff
+-  May be difficult to use with existing system
+
+### CASE environment 
+CASE environment is a collection of CASE tools and other
+components together with an integration ... Although individual CASE tools are useful, the true power of a tool set can be realized only when these set of tools are integrated into a common framework or
+environment
+![[Pasted image 20231105081949.png]]
+Since totally different tools covering different stages share common data, it’s needed that they integrate
+through some central repository to possess an even read of data related to the package development
+
+### Architecture of CASE 
+![[Pasted image 20231105082219.png]]
+#### User Interface 
+- user interface provides a regular framework for accessing the various tools so creating it easier for the users to act with the different tools and reducing the overhead of learning however the different tools are used.
+#### Object Management System (OMS) and repository
+Different case tools represent the product as a group of entities like specification, design, text data, project arrange, etc. the thing management system maps these logical entities such into the underlying
+storage management system (repository).
+
+### types of CASE tools 
+top five types of CASE (Computer-Aided Software Engineering) tools:
+1. **Diagramming Tools:** Used for creating visual representations of system structures, processes, and data flows, such as Entity-Relationship Diagrams (ERD), Data Flow Diagrams (DFD), and Unified Modeling Language (UML) diagrams.
+
+2. **Modeling Tools:** Support the creation of models representing different aspects of a system, including process models, data models, and object models. They aid in visualizing and documenting the system's architecture and design.
+
+3. **Requirement Management Tools:** Assist in managing and documenting requirements, capturing user needs, and ensuring traceability between requirements and system design. These tools aid in requirement gathering, analysis, and tracking changes.
+
+4. **Version Control Tools:** Help manage different versions and iterations of software, enabling collaboration among developers, tracking changes, and managing source code repositories.
+
+5. **Testing Tools:** Aid in planning, executing, and managing the testing process, including unit testing, integration testing, system testing, and performance testing.

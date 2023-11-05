@@ -14,8 +14,19 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "d4b2576b0123e2f3",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231105081341.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "statics/Pasted image 20231105081341.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "statics/Pasted image 20231105081341.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +131,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "statics/Pasted image 20231105081341.png"
+              }
             }
           },
           {
@@ -148,10 +163,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d53f91c383755139",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "statics/Pasted image 20231104103416.png",
     "MCA/1st Sem/SE/Software Testing.md",
+    "statics/Pasted image 20231105082219.png",
+    "statics/Pasted image 20231105081949.png",
+    "statics/Pasted image 20231105081456.png",
+    "statics/Pasted image 20231105081341.png",
+    "Optimising Queries In Database Using Indexing.md",
+    "statics/Pasted image 20231104103416.png",
     "statics/Pasted image 20231104114747.png",
     "statics/Pasted image 20231104105143.png",
     "statics/Pasted image 20231104103445.png",
@@ -160,8 +180,6 @@
     "javaCollection/6. List.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231103145019.png",
-    "statics/Pasted image 20231103144841.png",
-    "statics/Pasted image 20231103142031.png",
     "javaCollection/4. Set.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "Odin project/React/2 . States in react.md",
@@ -169,8 +187,6 @@
     "Odin project/React/7. Class Components.md",
     "Odin project/React/6 . Strict Mode.md",
     "javaCollection/7. Maps.md",
-    "statics/Pasted image 20231030103428.png",
-    "statics/Pasted image 20231030102945.png",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
     "MCA/1st Sem/CN/2nd Minor.md",
     "Udemy Networking/1. IP address.md",
@@ -184,7 +200,6 @@
     "Odin project/javascript advance/Promises.md",
     "Odin project/javascript advance/Scopes.md",
     "Odin project/javascript advance/Classes.md",
-    "Web developement/Backend/API.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
