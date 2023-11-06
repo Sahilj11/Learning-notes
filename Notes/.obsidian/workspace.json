@@ -8,25 +8,16 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d53f91c383755139",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "d4b2576b0123e2f3",
             "type": "leaf",
             "state": {
               "type": "image",
               "state": {
-                "file": "statics/Pasted image 20231105081341.png"
+                "file": "statics/Pasted image 20231106065524.png"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231105081341.png",
+                "file": "statics/Pasted image 20231106065524.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231105081341.png",
+                "file": "statics/Pasted image 20231106065524.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231105081341.png"
+                "file": "statics/Pasted image 20231106065524.png"
               }
             }
           },
@@ -165,21 +156,23 @@
   },
   "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "MCA/1st Sem/SE/Software Testing.md",
-    "statics/Pasted image 20231105082219.png",
-    "statics/Pasted image 20231105081949.png",
-    "statics/Pasted image 20231105081456.png",
-    "statics/Pasted image 20231105081341.png",
+    "MCA/1st Sem/JAVA/UNIT 1 and 2.md",
+    "statics/Pasted image 20231106080342.png",
+    "Pasted image 2020231106075759.png.md",
+    "statics/Pasted image 20231106075759.png",
+    "statics/Pasted image 20231106080013.png",
+    "statics/Pasted image 20231106080024.png",
+    "statics/Pasted image 20231106072514.png",
+    "statics/Pasted image 20231106065524.png",
+    "statics/Pasted image 20231106072634.png",
+    "statics/Pasted image 20231106065718.png",
     "Optimising Queries In Database Using Indexing.md",
-    "statics/Pasted image 20231104103416.png",
-    "statics/Pasted image 20231104114747.png",
-    "statics/Pasted image 20231104105143.png",
-    "statics/Pasted image 20231104103445.png",
+    "MCA/1st Sem/SE/Software Testing.md",
+    "statics/Pasted image 20231105081341.png",
+    "statics/Pasted image 20231105082219.png",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
-    "statics/Pasted image 20231104090003.png",
     "javaCollection/6. List.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
-    "statics/Pasted image 20231103145019.png",
     "javaCollection/4. Set.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "Odin project/React/2 . States in react.md",
@@ -198,8 +191,6 @@
     "Odin project/Javascript basics/THIS Keyword in js.md",
     "Odin project/javascript advance/Namaste javascript.md",
     "Odin project/javascript advance/Promises.md",
-    "Odin project/javascript advance/Scopes.md",
-    "Odin project/javascript advance/Classes.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

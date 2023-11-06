@@ -7,6 +7,7 @@ Object-oriented technology (OOT) is a software development paradigm that organiz
 
 **Encapsulation:**
 It is a key concept that emphasizes the bundling of data (attributes or properties) and methods (functions or procedures) that operate on that data into a single unit known as an object. Encapsulation is often described by the phrase "data hiding" and serves several important purposes in OOP:
+![[Pasted image 20231106065524.png]]
 
 1. **Data Protection:** Encapsulation protects the internal state (data) of an object by making it private or restricted access. This means that the data can only be accessed or modified through well-defined methods, preventing unauthorized or unintended changes to the object's state.
 
@@ -62,7 +63,12 @@ class Dog extends Animal{
 }
 ```
 **Polymorphism:**
-it allows objects of different classes to be treated as objects of a common base class. This principle enables flexibility and extensibility in your code by allowing you to write code that can work with objects of multiple types in a consistent manner. Here's an explanation of polymorphism:
+Polymorphism (from Greek, meaning “many forms”) is a feature that allows one interface
+to be used for a general class of actions. The specific action is determined by the exact
+nature of the situation. Consider a stack (which is a last-in, first-out list). You might have
+a program that requires three types of stacks. One stack is used for integer values, one for
+floatingpoint values, and one for characters
+![[Pasted image 20231106065718.png]]
 
 1. **Dynamic Binding:** Polymorphism involves the ability to determine the appropriate method or behavior to execute at runtime rather than at compile time. This is known as dynamic binding or late binding. It allows you to write more flexible and adaptable code.
 
@@ -91,28 +97,145 @@ Abstraction is a fundamental concept in object-oriented programming (OOP) that f
 
 6. **Example:** Consider a banking application. The concept of a bank account can be abstracted as a class with methods like `deposit()`, `withdraw()`, and `getBalance()`. The implementation details of how these methods interact with databases, transactions, and security measures are hidden from the user of the class.
 
-## Difference b/w java and c++
-Certainly, here are the top 5 key differences between C++ and Java:
+## Diff b/w java and c++
+Here's the information presented in a markdown table format for better readability:
 
-1. **Memory Management:**
-   - **C++**: Allows manual memory management using pointers, which offers more control but can lead to memory-related bugs.
-   - **Java**: Employs automatic memory management through garbage collection, reducing the risk of memory-related errors.
+| Comparison Index        | C++                                    | Java                                  |
+|-------------------------|----------------------------------------|---------------------------------------|
+| Platform                | C++ is platform-dependent.             | Java is platform-independent.         |
+| Mainly used for         | C++ is mainly used for system programming. | Java is mainly used for application programming. |
+| Design Goal             | Designed for systems and applications programming. | Designed with a goal of being easy to use and accessible to a broader audience. |
+| Goto                    | Supports the goto statement.           | Java doesn't support the goto statement. |
+| Multiple Inheritance    | Supports inheritance.                  | Doesn't support inheritance through class but can be achieved by interfaces. |
+| Operator Overloading    | Supports operator overloading.         | Doesn't support operator overloading. |
+| Pointers                | Supports pointers.                     | Doesn't support pointer internally. |
+| Compiler and Interpreter| Uses compiler only.                    | Uses both compiler and interpreter.    |
+| Call by Value/Reference | Supports both call by value and call by reference. | Supports only call by value. |
+| Structure/Union         | Supports structures and unions.        | Doesn't support structures and unions. |
+| Thread Support          | Doesn't have built-in support for threads. | Has built-in thread support.           |
+| Virtual Keyword         | Supports the virtual keyword for function overriding. | Doesn't have a virtual keyword; methods are virtual by default. |
+| Inheritance Tree        | Creates a new inheritance tree always. | Uses a single inheritance tree with all classes derived from `Object` class. |
+| Hardware                | Nearer to hardware.                    | Not as interactive with hardware.     |
+| Object-oriented         | Object-oriented language.              | Also an object-oriented language, following a single root hierarchy from `java.lang.Object`. |
 
-2. **Platform Independence:**
-   - **C++**: Generates platform-specific machine code, making it less portable.
-   - **Java**: Compiles to platform-independent bytecode, allowing it to run on any system with a compatible JVM, making it highly portable.
+The above table summarizes the key differences between C++ and Java in various aspects such as platform support, language features, design goals, and more.
 
-3. **Syntax and Language Features:**
-   - **C++**: Supports both procedural and object-oriented programming, includes features like pointers and operator overloading.
-   - **Java**: Primarily object-oriented, omits features like pointers and explicit memory management, and offers garbage collection, exception handling, and multithreading as core language features.
+## Message Passing in java
+Message Passing in terms of computers is communication between processes. It is a form
+of communication used in object-oriented programming as well as parallel programming.
+Message passing in Java is like sending an object i.e. message from one thread to another
+thread. It is used when threads do not have shared memory and are unable to share monitors
+or semaphores or any other shared variables to communicate.
 
-4. **Standard Library:**
-   - **C++**: Features the Standard Template Library (STL) known for efficiency and flexibility.
-   - **Java**: Has a comprehensive Java Standard Library, suitable for a wide range of applications, though not as low-level as the C++ STL.
+We mostly use Queue to implement communication
+between threads.
+
+![[Pasted image 20231106072514.png]]
+
+## Binding 
+- Linking b/w method call and method definition
+- Static binding
+	- binding which can be resolved at compile time by compiler
+	- Also called early binding
+	- binding happens before the program actually run
+	- eg. Method overloading
+```java
+class Parent {
+    void display() {
+        System.out.println("Inside Parent class");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Inside Child class");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent obj = new Child(); // Parent reference but Child object
+        obj.display(); // Static binding - method call is resolved at compile time
+    }
+}
+
+```
+- Dynamic binding
+	- When compiler is not able to resolve binding at compile time
+	- Also called late binding
+	- Binding happens during run time
+	- Eg. Method overiding
+	- 
+```java
+class Parent {
+    void display() {
+        System.out.println("Inside Parent class");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        System.out.println("Inside Child class");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent obj = new Child(); // Parent reference but Child object
+        obj.display(); // Dynamic binding - method call is resolved at runtime
+    }
+}
+
+```
+
+## Benefits of OOPS
+1. Simplicity: software objects model real world objects, so the complexity is reduced and the program structure is very clear;
+2. Modularity: each object forms a separate entity whose internal workings are decoupled from other parts of the system;
+3. Modifiability: it is easy to make minor changes in the data representation or theprocedures in an OO program. Changes inside a class do not affect any other part of a program, since the only public interface that the external world has to a class is through the use of methods;
+4. Extensibility: adding new features or responding to changing operating environments can be solved by introducing a few new objects and modifying some existing ones;
+5. Maintainability: objects can be maintained separately, making locating and fixing problems easier;
+6. Re-usability: objects can be reused in different programs
+
+## Application of OOPS
+- User interface design such as windows, menu.
+- Real Time Systems
+- Simulation and Modeling
+- Object oriented databases
+- AI and Expert System
+- Neural Networks and parallel programming
+
+## Data type
+![[Pasted image 20231106072634.png]]
+A variable of primitive type contains a single value of the appropriate size and format for
+its type: a number, a character, or a boolean value.
+- Integer 
+	- Java supports four types of integer types: byte, short, int and long. It does not support unsigned types and thereforeall Java values are signed types. This means that they can be positive or negative.
+
+there are also three kinds of non-primitive types in JAVA. They are also termed as reference or derived types. The non-primitive types are: arrays, classes and interfaces. The value of a non-primitive type variable, in contrast to
+that of a primitive type, is a reference to (an address of) the value or set of values represented by the variable.
+
+## Java Tokens
+The smallest individual units in a program are known as tokens
+- Keywords:- Keywords are some reserved words which have some definite meaning. They cannot be used as variable name and they are written in lower-case letter . eg like abstract,  new , for , int ,if etc.
+- Identifiers :- Java Identifiers are used for naming classes, methods, variables, objects, labels in a program.
+- Literals:- Literals are constant value appears directly in the program. Types like string literals , character , bool, int, float etc.
+```java
+String a = "hello"; // this is a string literal
+char b = 'F'; // this is a char literal
+```
+- Operators
+- Separators:- Separators are symbols used to indicate where groups of code are arranged and divided.
+```java
+{ } Braces
+( ) Parentheses
+[ ] Brackets
+; Semicolon
+, Comma
+. Period
+```
 
 ## Operators in java
 Operators in Java are special symbols and keywords used to perform operations on variables and values. They are fundamental to any programming language and play a crucial role in Java as well. Here are some common categories of operators in Java:
-
 1. **Arithmetic Operators:**
    - `+` (Addition): Adds two numbers.
    - `-` (Subtraction): Subtracts the right operand from the left operand.
@@ -156,27 +279,39 @@ Operators in Java are special symbols and keywords used to perform operations on
 These are the most commonly used operators in Java. They are essential for performing various operations in Java programs, from simple arithmetic calculations to complex logical and bitwise manipulations
 
 ## Java run-time environment 
-The Java Runtime Environment (JRE) is a crucial component of the Java platform that enables the execution of Java applications and applets. It provides the necessary runtime support to interpret and execute Java bytecode. Here are key aspects of the Java Runtime Environment:
-
-1. **Java Virtual Machine (JVM):** The core of the JRE is the Java Virtual Machine (JVM), which is responsible for executing Java bytecode. The JVM translates Java bytecode, which is platform-independent, into machine code that is specific to the host system. It manages memory, handles garbage collection, and ensures proper execution of Java applications.
-
-2. **Java Class Library:** The JRE includes a vast standard library of pre-compiled classes and methods known as the Java Class Library or Java Standard Library. These libraries provide a wide range of functionalities, including I/O operations, network communication, data structures, and user interface components. Developers can leverage these libraries to build robust and feature-rich applications.
-
-3. **Execution Environment:** The JRE provides an execution environment for running Java applications and applets. It manages resources such as memory, threads, and I/O operations, ensuring that Java programs can execute safely and efficiently.
-
-4. **Security Manager:** The JRE incorporates a security manager that controls and enforces security policies for Java applications. It restricts potentially harmful actions that a Java program can perform, such as accessing the file system or making network connections, to protect the host system from malicious code.
-
-5. **Class Loader:** The JRE includes a class loader subsystem that loads classes and resources as needed during the execution of a Java application. Class loaders load classes from the classpath and ensure that classes are only loaded once, promoting code reuse.
-
-6. **Just-In-Time (JIT) Compiler:** Some JRE implementations include a JIT compiler that further optimizes the execution of Java bytecode. The JIT compiler translates frequently executed bytecode into native machine code, improving performance compared to interpreting bytecode directly.
-
-7. **Platform Independence:** One of the key advantages of the JRE is its platform independence. Java applications compiled to bytecode can run on any system with a compatible JRE, regardless of the underlying hardware and operating system.
-
-8. **Versions:** The JRE is versioned to match the corresponding Java Development Kit (JDK) version. Each version of the JRE is designed to be compatible with its corresponding JDK, allowing developers to build and run Java applications consistently.
-
-9. **Deployment:** Users typically need to install the JRE on their systems to run Java applications. Web browsers often include Java plugins or applet support, allowing Java applets to run in a browser without a separate JRE installation.
-
+- the Java Runtime Environment (JRE) is a crucial component of the Java platform that enables the execution of Java applications and applets. It provides the necessary runtime support to interpret and execute Java bytecode. Here are key aspects of the Java Runtime Environment:
+- java The loader for Java applications. This tool is an interpreter and can interpret the class
+ files generated by the javac compiler.
+- javac The compiler, which converts source code into Java bytecode
+- jar The archiver, which packages related class libraries into a single JAR file.
+- javadoc The documentation generator, which automatically generates documentation from
+ source code comments
+- jdb The Java debugger
+- jps The process status tool, which displays process information for current Java processes
+- javap The class file disassembler
+- jppletviewer This tool can be used to run and debug Java applets without a web browser.
+- javah The C header and stub generator, used to write native methods
 In summary, the Java Runtime Environment (JRE) is a critical component of the Java platform that provides the runtime environment and resources necessary for executing Java applications. It ensures platform independence, security, and efficient execution of Java code. Users and developers benefit from the JRE's ability to run Java applications on various systems without modification.
+
+## API
+An application programming interface (API) is a computing interface which defines
+interactions between multiple software intermediaries. It defines the kinds of calls or
+requests that can be made, how to make them, the data formats that should be used, the
+conventions to follow, etc.
+
+## casting
+- Casting means converting one data type to another
+- type 
+	- Implicit casting:- Happens automatically when converting from a narrower range data type to wide range data type 
+		- eg. Converting an int to double/float
+		- Converting float to double
+		- ![[Pasted image 20231106080024.png]]
+		- ![[Pasted image 20231106080342.png]]
+		- 
+	- Explicit casting:- Does not happens automatically , should be done by programmer when converting from wider range data type to narrower range data type
+		- Converting from Double to int
+		- Converting from double to float
+		- ![[Pasted image 20231106080024.png]]
 
 ## Control statements 
 Control statements in Java are used to manage the flow of a program's execution. They allow you to make decisions, repeat actions, and execute code conditionally. Java provides several types of control statements:
