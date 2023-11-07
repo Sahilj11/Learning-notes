@@ -8,6 +8,6 @@
     "downscalePercent": 100
   },
   "attachmentFolderPath": "MCA 1st sem",
-  "vimMode": true,
+  "vimMode": false,
   "readableLineLength": false
 }

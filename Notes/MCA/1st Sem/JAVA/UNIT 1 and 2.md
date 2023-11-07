@@ -1,3 +1,100 @@
+## Types of variable in JAVA
+In Java, variables can be categorized into several types based on their scope, usage, and declaration. Here are the main types of variables in Java:
+
+1. **Local Variables**:
+   - Declared within a method, constructor, or block.
+   - Have limited scope, existing only within the block they are declared in.
+   - Must be initialized before use.
+   - Example:
+   ```java
+   public void someMethod() {
+       int localVar = 10; // local variable
+       // localVar is accessible only within this method
+   }
+   ```
+
+2. **Instance Variables (Non-Static Variables)**:
+   - Belong to an instance of a class and are declared within the class but outside any method, constructor, or block.
+   - They are initialized with default values if not explicitly initialized.
+   - Exist as long as the object exists.
+   - Example:
+   ```java
+   public class MyClass {
+       int instanceVar; // instance variable
+       // instanceVar is accessible within any method in this class
+   }
+   ```
+
+3. **Static Variables (Class Variables)**:
+   - Belong to the class rather than any particular instance.
+   - Declared with the `static` keyword.
+   - Initialized with default values if not explicitly initialized.
+   - Commonly used to represent constants or values shared by all instances of the class.
+   - Example:
+   ```java
+   public class MyClass {
+       static int staticVar; // static variable
+       // staticVar is accessible and shared by all instances of this class
+   }
+   ```
+
+4. **Final Variables**:
+   - Declared using the `final` keyword and can be a local, instance, or static variable.
+   - Once initialized, their value cannot be changed.
+   - Should be assigned a value either during declaration or within the constructor.
+   - Example:
+   ```java
+   public class MyClass {
+       final int finalVar = 100; // final variable
+       // finalVar's value cannot be changed once assigned
+   }
+   ```
+
+5. **Parameters**:
+   - Variables that are listed as part of a method's declaration.
+   - They receive values when the method is called and act as placeholders for the arguments passed.
+   - Local to the method and initialized with the values passed during the method call.
+   - Example:
+   ```java
+   public void someMethod(int parameter) {
+       // parameter is a method parameter
+       // parameter is accessible and holds the value passed during method invocation
+   }
+   ```
+
+#### Global variable
+In Java, the term "global variable" is often used informally to describe variables that seem to be accessible from anywhere within the program. However, in strict Java terminology, there are no true "global variables" like in some other programming languages. Instead, Java has class-level variables, which can be mistaken for global variables due to their wider accessibility.
+
+NOTE: FOR EXAM DO NOT WRITE THIS , this is just for concept clarity . use keyword global variable here
+
+Class-level variables in Java can be both static and non-static (instance variables). They might be perceived as global within the context of a class because they are accessible to all the methods within that class.
+
+1. **Instance Variables (Non-Static Variables)**:
+   - Belong to an instance of a class and are accessible to all non-static methods of that class.
+   - Exist as long as the object exists.
+   - Example:
+   ```java
+   public class MyClass {
+       int instanceVar; // instance variable
+       // instanceVar is accessible within any non-static method in this class
+   }
+   ```
+
+2. **Static Variables (Class Variables)**:
+   - Belong to the class and are shared among all instances (objects) of the class.
+   - Accessible by any method in the class, whether static or non-static.
+   - Initialized once, and changes made by one instance are reflected in other instances.
+   - Example:
+   ```java
+   public class MyClass {
+       static int staticVar; // static variable
+       // staticVar is accessible by any method in this class, regardless of being static or non-static
+   }
+   ```
+
+While these variables might seem globally accessible within the scope of the class, they are not accessible outside the class without an instance of the class (for non-static variables) or without proper access (through the class name) for static variables. This is unlike some languages where global variables can be accessed from any part of the program.
+
+Understanding the scope and accessibility of class-level variables is crucial in Java programming, as it helps maintain data encapsulation and ensures variables are used appropriately within the defined context of a class.
 ## Object oriented technology
 Object-oriented technology (OOT) is a software development paradigm that organizes code and data into reusable and modular structures called objects. It's a widely used approach in modern software development due to its ability to model real-world entities and promote code reusability. Here are some key notes on object-oriented technology:
 
@@ -850,8 +947,49 @@ In this example, the `Shape` abstract class defines an abstract method `draw()` 
 ## Interface in java
 In Java, an interface is a blueprint for a class that defines a set of abstract methods that must be implemented by any concrete class (a class that is not abstract) that declares to implement the interface. An interface specifies a contract that the implementing class must adhere to, ensuring that certain methods are available for use in objects of that class. In addition to abstract methods, interfaces can also include constants (static final fields) and default methods with implementations.
 
-Here are the key features and uses of interfaces in Java:
+Variables declared inside of interface declarations are implicitly final and static, meaning
+they cannot be changed by the implementing class.
+### Default methods in interface
+A default method lets you define a default implementation for an interface method. In other words, by use of a default method, it is now possible for an interface method to provide a body, rather than being abstract. During its development, the default method was also referred to as an extension method, and you will likely see both terms used.
 
+```java
+public interface MyIF {
+// This is a "normal" interface method declaration.
+// It does NOT define a default implementation.
+int getNumber();
+// This is a default method. Notice that it provides
+// a default implementation.
+default String getString() {
+      return "Default String";
+  }
+}
+```
+### Static methods in interface
+JDK 8 added another new capability to interface: the ability to define one or more static
+methods. Like static methods in a class, a static method defined by an interface can be
+called independently of any object. Thus, no implementation of the interface is necessary,
+and no instance of the interface is required, in order to call a static method. Instead, a static
+method is called by specifying the interface name, followed by a period, followed by the
+method name.
+```java
+public interface MyIF {
+// This is a "normal" interface method declaration.
+// It does NOT define a default implementation.
+  int getNumber();
+// This is a default method. Notice that it provides
+// a default implementation.
+  default String getString() {
+     return "Default String";
+  }
+// This is a static interface method.
+  static int getDefaultNumber() {
+      return 0;
+   }
+}
+```
+InterfaceName.staticMethodName
+`int defNum = MyIF.getDefaultNumber();`
+### Here are the key features and uses of interfaces in Java:
 1. **Declaring an Interface:**
    An interface is declared using the `interface` keyword, followed by the interface name.
 
@@ -994,6 +1132,16 @@ In this example, `InterfaceC` extends both `InterfaceA` and `InterfaceB`, and `M
 
 Interface inheritance in Java helps you create modular and extensible code by allowing you to define new interfaces that build upon existing ones. It promotes code reuse and the implementation of common behaviors across classes.
 
+### Difference b/w Interface and classes
+You cannot instantiate an interface.
+•An interface does not contain any constructors.
+•All of the methods in an interface are abstract.
+•An interface cannot contain instance fields. The only fields that can appear in an
+interface must be declared both static and final.
+•An interface is not extended by a class; it is implemented by a class.
+•An interface can extend multiple interfaces.
+to implement an interface, a class must create the complete set of methods
+defined by the interface.
 ## Overriding and Overloading (example of polymorphism )
 In Java, overloading and overriding are two fundamental concepts related to methods in object-oriented programming. They are used to define and manipulate behaviors of classes and their methods. Let's explore each concept:
 
@@ -1057,3 +1205,40 @@ class Dog extends Animal {
 In this example, the `Dog` class overrides the `makeSound` method inherited from the `Animal` class. When you call `makeSound` on a `Dog` object, the overridden method in the `Dog` class will execute, providing a specific implementation.
 
 To summarize, overloading involves defining multiple methods with the same name in the same class but with different parameter lists, while overriding involves providing a specific implementation of a method in a subclass that has the same signature as the method in the superclass. Both concepts are essential for creating flexible and extensible object-oriented code.
+
+## Using Final in context of overriding and Inheritance 
+In Java, the `final` keyword has different implications for classes and methods in the context of inheritance.
+
+1. **Final Class**: When a class is declared as `final`, it means that it cannot be subclassed or extended. It prevents other classes from inheriting from it. For instance:
+
+```java
+final class Parent {
+    // Class implementation
+}
+// This won't be allowed since Parent is final
+class Child extends Parent {
+    // Class implementation
+}
+```
+
+2. **Final Method**: When a method is declared as `final` within a class, it means that the method cannot be overridden by any subclass that might inherit from this class. For example:
+
+```java
+class Parent {
+    public final void display() {
+        // Method implementation
+    }
+}
+
+class Child extends Parent {
+    // Trying to override the final method will result in a compilation error
+    // This is not allowed because the display() method in Parent is final
+    public void display() {
+        // Method implementation
+    }
+}
+```
+
+In summary, the `final` keyword, when used with a class, prevents inheritance, while when used with a method, it prevents that particular method from being overridden in any subclass.
+
+This is particularly useful when you want to ensure that a specific class should not be extended or when a method within a class should not be altered or customized by its subclasses, maintaining the intended functionality.
