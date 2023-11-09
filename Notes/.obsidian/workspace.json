@@ -4,45 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "47e6e8f0f40ccfc5",
+        "id": "90b356a7bd97f310",
         "type": "tabs",
         "children": [
           {
-            "id": "d4b2576b0123e2f3",
+            "id": "2edfe6771219c8a6",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "statics/Pasted image 20231106065524.png"
-              }
-            }
-          },
-          {
-            "id": "8020d0cbe6d1d581",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MCA/1st Sem/JAVA/2nd Minor java.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5dd88b9076e45de2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MCA/1st Sem/JAVA/Detail Notes Multithreading.md"
-              }
+              "state": {}
             }
           },
           {
@@ -179,37 +148,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5dd88b9076e45de2",
+  "active": "2edfe6771219c8a6",
   "lastOpenFiles": [
-    "Pasted image 20231108085405.png",
-    "Pasted image 20231108081327.png",
-    "javaCollection/4. Set.md",
-    "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
-    "Pasted image 20231107075610.png",
+    "statics/Pasted image 20231106065524.png",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
+    "statics/Pasted image 20231109082813.png",
+    "Concurrency.md",
+    "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
+    "statics/Pasted image 20231109110501.png",
+    "statics/Pasted image 20231109105217.png",
+    "statics/Pasted image 20231109091140.png",
+    "javaCollection/7. Maps.md",
+    "javaCollection/6. List.md",
+    "statics/Pasted image 20231107075610.png",
+    "statics/Pasted image 20231108085405.png",
+    "statics/Pasted image 20231108081327.png",
+    "javaCollection/4. Set.md",
     "MCA/1st Sem/JAVA/UNIT 1 and 2.md",
     "Database administrator.md",
-    "Concurrency.md",
-    "statics/Pasted image 20231106065524.png",
     "statics/Pasted image 20231106080342.png",
     "Pasted image 2020231106075759.png.md",
     "statics/Pasted image 20231106075759.png",
-    "statics/Pasted image 20231106080013.png",
-    "statics/Pasted image 20231106080024.png",
-    "statics/Pasted image 20231106072514.png",
-    "statics/Pasted image 20231106072634.png",
-    "statics/Pasted image 20231106065718.png",
     "Optimising Queries In Database Using Indexing.md",
     "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
-    "javaCollection/6. List.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "Odin project/React/2 . States in react.md",
     "Odin project/React/1. Data Passing.md",
     "Odin project/React/7. Class Components.md",
     "Odin project/React/6 . Strict Mode.md",
-    "javaCollection/7. Maps.md",
     "MCA/1st Sem/CN/2nd Minor.md",
     "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/WD/Minor 2nd.md",

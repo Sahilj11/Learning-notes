@@ -94,3 +94,201 @@ public class thread {
 ```
 
 It is good to use runnable interface method to create thread as if we have a class A extending Class B , and now we want to make Class A thread it would not be possible as java do not support multiple inheritance
+
+## Multithreading
+![[Pasted image 20231109082813.png]]
+
+
+```java
+/**
+ * multithread
+ */
+public class multithread {
+
+    public static void main(String[] args) {
+        Thread1 t1 = new Thread1();
+        Thread2 t2 = new Thread2();
+        t1.start();
+        t2.start();
+    }
+
+    static class Thread1 extends Thread {
+        public void run() {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Thread1: " + i);
+            }
+        }
+
+    }
+
+    static class Thread2 extends Thread {
+        public void run() {
+            for (int i = 0; i < 5; i++) {
+                System.out.println("Thread2: " + i);
+            }
+        }
+    }
+}
+```
+
+## Synchronisation
+### What is it 
+- Process by which we control the accessibility of multiple threads to a particular resource
+![[Pasted image 20231109091140.png]]
+to overcome synchronisation disadvantage java introduced java.util.concurrent package
+
+```java
+/**
+ * sync
+ */
+public class sync extends Thread {
+    static seatBooking b;
+    int seats;
+
+    public void run() {
+        b.bookSeat(seats);
+    }
+
+    public static void main(String[] args) {
+        b = new seatBooking();
+        sync sahil = new sync();
+        sahil.seats = 7;
+        sync rahul = new sync();
+        rahul.seats = 6;
+        sahil.start();
+        rahul.start();
+    }
+
+}
+
+class seatBooking {
+    int MAX_SEAT = 10;
+    // using synchronized keyword
+    synchronized void bookSeat(int seats) {
+        if (seats <= MAX_SEAT) {
+            System.out.println("seat booked");
+            MAX_SEAT = MAX_SEAT - seats;
+        } else {
+            System.out.println("Not enough seats");
+        }
+    }
+}
+```
+program of synchronized 
+
+![[Pasted image 20231109105217.png]]
+
+In Java, synchronization is a technique used to control access to critical sections of code, particularly when multiple threads are involved. Synchronization ensures that only one thread can execute a synchronized block of code or method at a time, preventing interference and maintaining data integrity. There are several ways to achieve synchronization in Java:
+
+1. **Synchronized Method:**
+   In Java, you can declare a method as synchronized by using the `synchronized` keyword. When a method is declared as synchronized, only one thread can execute that method for a particular instance of the class at a time.
+
+    ```java
+    public synchronized void synchronizedMethod() {
+        // Critical section of code
+        // Access is synchronized for this method
+    }
+    ```
+
+2. **Synchronized Block:**
+   In cases where synchronizing an entire method is not necessary, you can use synchronized blocks. This allows more fine-grained control over the critical section of code by explicitly defining which part needs synchronization.
+
+    ```java
+    public void someMethod() {
+        // Non-critical section of code
+
+        synchronized (this) {
+            // Critical section of code
+            // Access is synchronized for the block inside the synchronized statement
+        }
+
+        // Non-critical section of code
+    }
+    ```
+
+3. **Static Synchronization:**
+   When dealing with static methods or data members, you might need to synchronize access across all instances of a class. To achieve this, you can use the `static` keyword with the `synchronized` keyword to synchronize static methods or a block.
+
+    ```java
+    public class MyClass {
+        public static synchronized void staticSynchronizedMethod() {
+            // Critical section of code for static method
+            // Access is synchronized for all instances of the class
+        }
+
+        public void someMethod() {
+            // Non-critical section of code
+
+            synchronized (MyClass.class) {
+                // Critical section of code for static block
+                // Access is synchronized for all instances of the class
+            }
+
+            // Non-critical section of code
+        }
+    }
+    ```
+
+Using synchronization mechanisms is crucial for concurrent programming to prevent race conditions and maintain data consistency when multiple threads are working with shared resources. However, excessive synchronization might lead to performance issues, so it's essential to use it judiciously where necessary.
+
+### Cooperation(InterThread communication)
+
+![[Pasted image 20231109110501.png]]
+
+
+### issue of interthread
+```java
+/**
+ * interThread
+ */
+public class interThread {
+
+    public static void main(String[] args) {
+        Totalearnings te = new Totalearnings();
+        te.start();
+        System.out.println(te.total);
+    }
+}
+
+class Totaleakrnings extends Thread {
+    int total = 0;
+
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            total += 100;
+        }
+    }
+}
+// here program is printing 0 instead of 1000. because main thread is not waiting for te thread to complete its work
+```
+
+Solved sol
+```java
+/**
+ * interThread
+ */
+public class interThread {
+
+    public static void main(String[] args) throws InterruptedException{
+        Totalearnings te = new Totalearnings();
+        te.start();
+        synchronized (te) {
+            te.wait();
+            System.out.println(te.total);
+        }
+    }
+}
+
+class Totalearnings extends Thread {
+    int total = 0;
+
+    public void run() {
+        synchronized (this) {
+            for (int i = 0; i < 10; i++) {
+                total += 100;
+            }
+            this.notify();
+        }
+    }
+}
+```
