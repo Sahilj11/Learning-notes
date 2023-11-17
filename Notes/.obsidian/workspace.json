@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "90b356a7bd97f310",
+        "id": "c2b75710e52d1e0c",
         "type": "tabs",
         "children": [
           {
-            "id": "2edfe6771219c8a6",
+            "id": "3600ea179df3fa89",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md"
+              }
             }
           },
           {
@@ -148,30 +156,32 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2edfe6771219c8a6",
+  "active": "3600ea179df3fa89",
   "lastOpenFiles": [
-    "statics/Pasted image 20231106065524.png",
+    "statics/Pasted image 20231109130034.png",
+    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
+    "statics/Pasted image 20231117145507.png",
+    "statics/Pasted image 20231117144046.png",
+    "statics/Pasted image 20231117140850.png",
+    "statics/Pasted image 20231117090807.png",
+    "statics/Pasted image 20231117090555.png",
+    "statics/Pasted image 20231117090436.png",
+    "statics/Pasted image 20231117090352.png",
+    "statics/Pasted image 20231117085657.png",
+    "statics/Pasted image 20231117085423.png",
+    "statics/Pasted image 20231117085217.png",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
-    "statics/Pasted image 20231109082813.png",
-    "Concurrency.md",
     "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
-    "statics/Pasted image 20231109110501.png",
-    "statics/Pasted image 20231109105217.png",
-    "statics/Pasted image 20231109091140.png",
+    "MCA/1st Sem/JAVA/Detail String Notes.md",
+    "Concurrency.md",
     "javaCollection/7. Maps.md",
     "javaCollection/6. List.md",
-    "statics/Pasted image 20231107075610.png",
-    "statics/Pasted image 20231108085405.png",
-    "statics/Pasted image 20231108081327.png",
     "javaCollection/4. Set.md",
     "MCA/1st Sem/JAVA/UNIT 1 and 2.md",
     "Database administrator.md",
-    "statics/Pasted image 20231106080342.png",
     "Pasted image 2020231106075759.png.md",
-    "statics/Pasted image 20231106075759.png",
     "Optimising Queries In Database Using Indexing.md",
     "MCA/1st Sem/SE/Software Testing.md",
-    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "Odin project/React/2 . States in react.md",
@@ -184,7 +194,6 @@
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "Odin project/React/React internals/Rendering process.md",
     "Odin project/React/5. Side-Effects.md",
-    "Odin project/javascript advance/API.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
