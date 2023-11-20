@@ -323,22 +323,24 @@ ORDER BY username ASC;
 To group records in MySQL, you can use the `GROUP BY` clause along with aggregate functions like `COUNT`, `SUM`, `AVG`, etc. This allows you to group rows based on the values in one or more columns and perform calculations on each group. Here's a basic example using the `customers_60` table you provided:
 ![[Pasted image 20231117085217.png]]
 1. **Group by the `username` column and count the number of users with each username:**
+
 ![[Pasted image 20231117085423.png]]
-  ```sql
+```sql
     SELECT username, COUNT(*) AS user_count
     FROM customers_60
     GROUP BY username
     ```
 
-    This query counts the number of occurrences of each unique `username` in the `customers_60` table.
+This query counts the number of occurrences of each unique `username` in the `customers_60` table.
 
 2. **Group by the `username` column and calculate the average password length for each user:**
+
 ![[Pasted image 20231117085657.png]]
 ```sql
     SELECT username, AVG(CHAR_LENGTH(password)) AS avg_password_length
     FROM customers_60
     GROUP BY username;
-    ```
+   ```
 
 This query calculates the average password length for each unique `username` in the `customers_60` table.
 
