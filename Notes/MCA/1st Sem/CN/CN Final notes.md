@@ -68,6 +68,11 @@ A computer network and a distributed system are related concepts, but they have 
 6. **Examples:**
    - **Computer Network:** The internet is a prime example of a computer network where devices are connected to share information globally.
    - **Distributed System:** Google's infrastructure, which includes distributed file systems and data processing frameworks, is an example of a distributed system designed to handle large-scale computations and data storage.
+## Propogation time vs Transmission Time 
+- Propagation delay:- it is time it takes for a bit to travel from point A to point B in the trasmission media
+	- T<sub>p</sub> = (Distance) / Propagation speed
+- Transmission delay:- A sender needs to put the bits in a packet on the line one by one . if first bit of packet is put on line at time t<sub>1</sub> and last bit is put on the line at time t<sub>2</sub> , transmission delay of packet is (t2 - t1).
+	- T<sub>t</sub> = (Packet length) / (Transmission rate or bandwidth) = L / B
 ## Network Hardware
 There is no generally accepted taxonomy into which all computer networks fit, but two dimensions stand out as important: transmission technology and scale.
 ### There are two types of transmission technology that are in widespread use
@@ -163,12 +168,25 @@ it deals how to determine that who may use the network next when the network con
 
 The protocols used to determine who goes next on a multi-access channel belong to a sub-layer of the data link layer called the MAC (Medium Access Control) sub-layer. The MAC sub-layer is especially important in LANs, many of which use a multi-access channel as the basis for communication.
 
+## Functions 
+- It provides an abstraction of the physical layer to the LLC and upper layers of the OSI network.
+- It is responsible for encapsulating frames so that they are suitable for transmission via the physical medium.
+- It resolves the addressing of source station as well as the destination station, or groups of destination stations.
+- It performs multiple access resolutions when more than one data frame is to be transmitted. It determines the channel access methods for transmission.
+- It also performs collision resolution and initiating retransmission in case of collisions.
+- It generates the frame check sequences and thus contributes to protection against transmission errors.
 ## Channel Allocation problem
 ### Static Channel allocation
 The traditional way of allocating a single channel, eg. a telephone line, among multiple competing users is Frequency Division Multiplexing (FDM). If there are N users, the bandwidth is divided into N equal-sized portions, each user being assigned one portion
 
 If the spectrum is cut up into N regions and fewer than N users are currently interested in communicating, a large piece of valuable spectrum will be wasted. If more than N users want to communicate, some of them will be denied permission for lack of bandwidth, even if some of the users who have been assigned a frequency band hardly ever transmit or receive anything.
 
+- Time Division Multiple Access (TDMA) – With TDMA the time axis is divided into time slots of a fixed length.
+	- Each user is allocated a fixed set of time slots at which it can transmit.
+	- TDMA requires that users be synchronized to a common clock. Typically extra overhead bits are required for synchronization.
+- Frequency Division Multiple Access (FDMA) – With FDMA the available frequency bandwidth is divided into disjoint frequency bands.
+	- A fixed band is allocated to each user. FDMA requires a guard band between user frequency bands to avoid cross-talk.
+	- Another static allocation technique is Code Division Multiple Access (CDMA), which is used in many wireless networks
 ### Dynamic channel allocation
 
 **Dynamic Channel Allocation:**
@@ -253,6 +271,34 @@ Disadvantages:
 Synchronization required.
 - Synchronous system: time divided into slots
 - Slot size equals fixed packet transmission time
-
+![[Pasted image 20231122173430.png]]
 #### Carrier sense multiple access protocol
 Protocols in which stations listen for a carrier (i.e., a transmission) and act accordingly are called carrier sense protocols.
+1. 1-presistent method:- it is a simple method . in this , after the station finds the line idle, it sends its frame immediately (with probability 1) . This method has highest chance of collision because two or more ]station may find the medium idle and send frame immediately 
+![[Pasted image 20231122163821.png]]
+
+2. Non-persistent :- in this a station that has frame to send senses the line. if line is idle , it sends immediately . if line is not idle , it waits a random amount time and then sense the line again. this approach reduce the chance of collision because it is unlikely that two or more stations will wait the same amount of time and retry to send simultaneously. however , this method reduce the efficiency of network because the medium remains idle when there may be stations with frames to send. 
+![[Pasted image 20231122164309.png]]
+3. P-Persistent:- it combines advantages of other two strategies . reduce chance of collision and improve efficiency. 
+- With probability p , the station sends its frame.
+- With probabilty q = 1 - p , the station waits for the beginning of next time slot and checks the line again
+	- if the line is idle , it goes to step 1
+	- if line is busy , it acts as though collision has occured
+![[Pasted image 20231122164653.png]]
+https://youtu.be/HyPiw5XWV0c?t=418 link for its explanation
+
+#### CSMA/CD
+Another improvement is for stations to abort their transmissions as soon as they detect a collision. In other words, if two stations sense the channel to be idle and begin transmitting simultaneously, they detect the collision almost immediately. Rather than finish transmitting their frames, which are irretrievably garbled anyway, they should abruptly stop transmitting as soon as the collision is detected. Quickly terminating damaged frames saves time and bandwidth. This protocol, known as CSMA/CD (CSMA with Collision Detection)
+
+Collisions can be detected by looking at the power or pulse width of the received signal and comparing it to the transmitted signal.
+
+After a station detects a collision, it aborts its transmission, waits for a random period of time, and then tries again, assuming that no other station has started transmitting in the meantime.
+
+Frame transmission time should be at least twice the maximum propagation time (Tr = 2 X Tp) this is to ensure that packet size is large enough so that collision can be dedected at the earlier before transmission of packet happen 
+
+#### CSMA/CA (Collision Avoidance) Remaining 
+- In wireless network , much of the sent energy is lost 
+
+## LAN Standards
+
+Covered in PPT 
