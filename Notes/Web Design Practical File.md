@@ -93,8 +93,6 @@ This HTML structure presents a basic form layout using a table. It includes inpu
 ```
 ## (Experiment 3)
 Here's an example of how you can create a basic web page with framesets to include videos and images. Keep in mind that this is for educational purposes, and it's not a recommended practice for real-world web development:
-![[exp3.png]]
-
 
 ```html
 <!DOCTYPE html>
@@ -160,6 +158,7 @@ Now, you would need to create two separate HTML files for the content of each fr
 </html>
 ```
 
+![[exp3.png]]
 In this example:
 
 - We use the `<frameset>` element to create a two-column layout where one frame (`images_frame.html`) contains images, and the other frame (`videos_frame.html`) contains videos.
