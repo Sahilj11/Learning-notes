@@ -302,3 +302,116 @@ Frame transmission time should be at least twice the maximum propagation time (T
 ## LAN Standards
 
 Covered in PPT 
+
+# Data Link Layer
+The main task of the data link layer is to take a raw transmission facility and transform it into a line that appears free of transmission errors in the network layer.
+
+## Functions 
+1. Providing a well-defined service interface to the network layer.
+2. Dealing with transmission errors.
+3. Regulating the flow of data so that slow receivers are not swamped by fastvsenders.
+
+## Requirement and obj of effective data communication 
+- Frame synchronization-Data are sent in blocks called frames. The beginning and end of each frame must be recognizable.
+- Flow control-The sending station must not send frames at a rate faster then the receiving station can absorb them. 
+- Error control-Any bit errors introduced by the transmission system must be corrected.
+- Addressing-On a multipoint line, such as a local area network (LAN), the identity of the two stations involved in a transmission must be specified.
+- Control and data on same link- It is usually not desirable to have a physically separate communications path for control information. Accordingly, the receiver must be able to distinguish control information from the data being transmitted.
+- Link management-The initiation, maintenance, and termination of a sustained data exchange requires a fair amount of coordination and cooperation among stations. Procedures for the management of this exchange are required
+## Services provided to network layer
+Three possible service provided 
+1. Unacknowledged connectionless service.:- Unacknowledged connectionless service consists of having the source machine send independent frames to the destination machine without having the destination machine acknowledge them. No logical connection is established beforehand or released afterward.
+2. Acknowledged connectionless service.:- Acknowledged connectionless service, there are still no logical connections used, but each frame sent is individually acknowledged. In this way, the sender knows whether a frame has arrived correctly. If it has not arrived within a specified time interval, it can be sent again
+3. Acknowledged connection-oriented service:- Connection-oriented service, the source and destination machines establish a connection before any data is transferred. Each frame sent over the connection is numbered, and the data link layer guarantees that each frame sent is indeed received.
+## Framing 
+framing is a process of encapsulating data into frames for reliable transmission over a communication link.
+
+The usual approach is for the data link layer to break the bit stream up into discrete frames and compute the checksum for each frame. When a frame arrives at the destination, the checksum is recomputed. If the newly computed checksum is different from the one contained in the frame, the data link layer knows that an error has occurred and takes steps to deal with it.
+
+### Methods of framing 
+1. **Character Count:**
+   - In the character count framing method, a field in the frame header indicates the number of characters (or bytes) in the data field of the frame. The receiving end uses this count to identify the boundaries of the frame. This method is straightforward and does not involve the insertion of additional control characters.
+
+2. **Flag Bytes with Byte Stuffing:**
+   - This method uses special flag bytes (delimiters) to mark the beginning and end of a frame. Byte stuffing is employed to handle instances where the data field contains the same byte sequence as the flag. To distinguish between actual flags and data that might be mistaken for flags, an escape character is inserted before any occurrence of the flag in the data. This escape character signals that the following byte is not a flag but part of the data.
+
+3. **Starting and Ending Flags, with Bit Stuffing:**
+   - Similar to the flag bytes method, this approach uses special start and end flag sequences to mark the beginning and end of a frame. Bit stuffing is employed to handle cases where the data portion of the frame contains consecutive bits that match the flag sequence. If a specific bit pattern is detected in the data that corresponds to the flag, an extra bit is inserted to avoid confusion between data and flags.
+
+4. **Physical Layer Coding Violations:**
+   - This method involves violating the normal coding rules of the physical layer to indicate the start and end of frames. An example is Manchester encoding, where a transition in the middle of a bit period signifies the start of a frame, and the absence of a transition signifies the end. This approach doesn't rely on specific byte sequences but rather on changes in the physical encoding.
+
+## Error Control
+
+## Flow Control 
+**Flow control** is a mechanism used in networking to manage the rate of data transmission between two devices to prevent congestion or overloading of the receiving system. It ensures that a fast sender does not overwhelm a slow receiver, providing a balance in the data transfer process.
+
+In the context of the Data Link Layer of the OSI model, flow control is particularly important for the following reasons:
+
+1. **Speed Mismatch:**
+   - Devices on a network may operate at different speeds or have varying processing capabilities. For example, a fast sender might be capable of transmitting data at a rate much higher than what the slower receiver can process. Flow control helps regulate the flow of data to match the speed of the slower receiver.
+
+2. **Limited Buffer Capacity:**
+   - The receiving device typically has limited buffer space to store incoming data. If data arrives too quickly for the receiver to process or store, it can lead to buffer overflow and data loss. Flow control helps manage the rate of incoming data to prevent such overflow situations.
+
+3. **Preventing Congestion:**
+   - Flow control helps prevent network congestion, where an excessive amount of data overwhelms the capacity of intermediate network devices or links. Congestion can lead to delays, packet loss, and reduced overall network performance.
+
+4. **Reliability and Quality of Service (QoS):**
+   - Flow control contributes to the reliability and quality of service in a network. By preventing the sender from transmitting data at a rate that the receiver or the network cannot handle, it ensures a more consistent and reliable data transfer experience.
+
+5. **Acknowledgment Mechanisms:**
+   - Flow control often involves the use of acknowledgment mechanisms. The sender waits for acknowledgment from the receiver before sending more data. If acknowledgments are not received within a certain timeframe, it may trigger a slowdown in the transmission rate or retransmission of data.
+
+### There are different methods of implementing flow control, including:
+
+####  **Stop-and-Wait:** The sender waits for an acknowledgment before sending the next frame.
+![[Pasted image 20231123143106.png]]
+1. **Sender Transmits a Frame:**
+    - The sender transmits a data frame to the receiver.
+2. **Sender Waits for Acknowledgment:**
+    - After sending the frame, the sender waits for an acknowledgment (ACK) from the receiver.
+3. **Receiver Receives Frame:**
+    - The receiver receives the frame and checks for errors. If the frame is error-free, the receiver sends an acknowledgment back to the sender.
+4. **Sender Receives Acknowledgment:**
+    - The sender receives the acknowledgment. If the acknowledgment indicates successful receipt, the sender can then proceed to send the next frame. If there's an indication of an error or if the acknowledgment is not received within a specified time (timeout), the sender assumes that the frame was lost or corrupted and retransmits the same frame.
+5. **Receiver Processes Frame and Waits:**
+    - After successfully receiving a frame and sending an acknowledgment, the receiver processes the data and waits for the next frame.
+#### **Sliding Window:** The sender can have multiple frames in transit before receiving acknowledgments.
+
+![[Pasted image 20231123143918.png]]
+![[Pasted image 20231123143937.png]]
+notice here that sliding window shifted because the ack is received for 0 frame
+
+
+The Sliding Window flow control mechanism is a more sophisticated approach compared to the Stop-and-Wait method. It allows the sender to transmit multiple frames before receiving acknowledgments, which can significantly improve the efficiency of data transfer. The process involves several steps:
+
+1. **Initialization:**
+   - Both the sender and the receiver initialize their respective windows. The window size represents the number of frames that can be in transit at any given time.
+
+2. **Sender's Perspective:**
+   - The sender maintains a "send window," which is a range of sequence numbers for frames that it is allowed to send without waiting for acknowledgments.
+
+3. **Receiver's Perspective:**
+   - The receiver maintains a "receive window," representing the range of sequence numbers it is willing to accept. The receive window helps the receiver handle out-of-order frames.
+
+4. **Frame Transmission:**
+   - The sender can transmit frames within the current send window without waiting for acknowledgments. Each frame is assigned a sequence number.
+
+5. **Acknowledgments:**
+   - The receiver receives the frames, checks for errors, and sends acknowledgments for the received frames. The acknowledgment includes information about the highest correctly received frame.
+
+6. **Advancing the Send Window:**
+   - As acknowledgments are received, the sender advances its send window. This advancement allows the sender to transmit new frames with higher sequence numbers.
+
+7. **Sliding the Window:**
+   - The sender's window "slides" forward as acknowledgments are received, allowing the sender to transmit new frames. This sliding action is what gives the method its name.
+
+8. **Retransmission on Timeout or Negative Acknowledgment (NAK):**
+   - If a frame is not acknowledged within a specified time (timeout) or if a negative acknowledgment (NAK) is received, the sender retransmits the frame. In Selective Repeat, only the frames with errors are retransmitted.
+
+9. **Handling Out-of-Order Frames at Receiver:**
+   - The receiver's receive window helps handle out-of-order frames. It acknowledges correctly received frames and signals the sender to retransmit frames that are missing or corrupted.
+
+10. **Continuous Process:**
+    - The process of frame transmission, acknowledgment reception, and window management continues as long as there is data to be transmitted.

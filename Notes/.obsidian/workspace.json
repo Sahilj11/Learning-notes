@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/CN/CN Final notes.md",
+                "file": "Optimising Queries In Database Using Indexing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/CN/CN Final notes.md",
+                "file": "Optimising Queries In Database Using Indexing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/CN/CN Final notes.md"
+                "file": "Optimising Queries In Database Using Indexing.md"
               }
             }
           },
@@ -156,10 +156,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "50d2d8a8cbb5840e",
+  "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
-    "statics/Pasted image 20231122163821.png",
+    "statics/Pasted image 20231123143106.png",
     "MCA/1st Sem/CN/CN Final notes.md",
+    "statics/Pasted image 20231123143937.png",
+    "statics/Pasted image 20231123143918.png",
+    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
+    "statics/Pasted image 20231122163821.png",
     "MCA/1st Sem/SE/Software Testing.md",
     "statics/Pasted image 20231122173430.png",
     "statics/Pasted image 20231122164653.png",
@@ -172,13 +176,9 @@
     "Udemy Networking/2. Cabeling and data flow.md",
     "Web Design Practical File.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
-    "statics/Pasted image 20231118080043.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
-    "statics/Pasted image 20231118131305.png",
-    "statics/Pasted image 20231118124450.png",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Simple html page using css.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
-    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Simple web page.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
     "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
