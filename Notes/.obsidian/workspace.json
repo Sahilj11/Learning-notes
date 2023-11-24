@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "67f1973abe445d61",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "statics/Pasted image 20231124103917.png"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231123204838.png",
+                "file": "statics/Pasted image 20231124103917.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231123204838.png",
+                "file": "statics/Pasted image 20231124103917.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +136,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231123204838.png"
+                "file": "statics/Pasted image 20231124103917.png"
               }
             }
           },
@@ -158,6 +169,11 @@
   },
   "active": "b6d9001c6d4aef86",
   "lastOpenFiles": [
+    "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
+    "statics/Pasted image 20231124174921.png",
+    "statics/Pasted image 20231124173440.png",
+    "statics/Pasted image 20231124103917.png",
+    "statics/Pasted image 20231123204838.png",
     "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "statics/Pasted image 20231124084503.png",
@@ -166,14 +182,10 @@
     "statics/Pasted image 20231123214416.png",
     "statics/Pasted image 20231123214250.png",
     "statics/Pasted image 20231123213509.png",
-    "statics/Pasted image 20231123212626.png",
-    "statics/Pasted image 20231123204838.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
-    "statics/Pasted image 20231123143106.png",
-    "statics/Pasted image 20231123143937.png",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "MCA/1st Sem/SE/Software Testing.md",
     "Udemy Networking/2. Cabeling and data flow.md",
@@ -192,7 +204,6 @@
     "MCA/1st Sem/JAVA/UNIT 1 and 2.md",
     "Database administrator.md",
     "Pasted image 2020231106075759.png.md",
-    "Optimising Queries In Database Using Indexing.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
