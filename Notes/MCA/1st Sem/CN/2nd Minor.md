@@ -49,17 +49,6 @@ The network layer in a computer network is responsible for routing data packets 
 
 7. Quality of Service (QoS):
    QoS mechanisms allow the network to prioritize different types of traffic. It ensures that critical applications, like video conferencing or real-time voice calls, receive the necessary bandwidth and low latency.
-
-8. Resource Allocation:
-   Resource allocation involves managing network resources efficiently, such as bandwidth and processing power. The network layer can determine how resources are distributed among competing network traffic.
-
-9. Statistical Multiplexing:
-   Statistical multiplexing is a technique that allows multiple data streams to share a common network resource, like a link or channel. The network layer may use statistical multiplexing to optimize resource utilization.
-
-10. Security:
-    Security is a critical concern in network design. The network layer should implement security measures to protect data from unauthorized access, eavesdropping, and other threats.
-
-These design issues are essential for designing and implementing a network that can effectively transmit data while considering factors like reliability, efficiency, and security. Network protocols and technologies are developed to address these issues and ensure that data is delivered accurately and efficiently across the network.
 ## Service type
 ### Connection-oriented 
 - A connection-oriented service is one that establishes a dedicated connection between the communicating entities for data transmission. To use a connection-oriented service, we follow three phases:

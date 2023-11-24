@@ -326,6 +326,8 @@ Three possible service provided
 ## Framing 
 framing is a process of encapsulating data into frames for reliable transmission over a communication link.
 
+![[Pasted image 20231123204838.png]]
+
 The usual approach is for the data link layer to break the bit stream up into discrete frames and compute the checksum for each frame. When a frame arrives at the destination, the checksum is recomputed. If the newly computed checksum is different from the one contained in the frame, the data link layer knows that an error has occurred and takes steps to deal with it.
 
 ### Methods of framing 
@@ -343,6 +345,214 @@ The usual approach is for the data link layer to break the bit stream up into di
 
 ## Error Control
 
+The usual way to ensure reliable delivery is to provide the sender with some feedback about what is happening at the other end of the line. Typically, the protocol calls for the receiver to send back special control frames bearing positve or negative acknowledgements about the incoming frames. If the sender receives a positive acknowledgement about a frame, it knows the frame has arrived safely. On the other hand, a negative acknowledgement means that something has gone wrong and the frame must be transmitted again.
+
+Error control in data link layer is the process of detecting and correcting data frames that have been corrupted or lost during transmission.
+
+Data link layer follows a technique to detect transit errors and take necessary actions, which is retransmission of frames whenever error is detected or frame is lost.
+
+### The process is called Automatic Repeat Request (ARQ).
+Automatic Repeat reQuest (ARQ) is a protocol used in communication networks to ensure the reliable delivery of data over unreliable channels. The primary purpose of ARQ protocols is to detect and recover from errors that may occur during the transmission of data. 
+
+ARQ protocols operate by sending data frames from the sender to the receiver, and the receiver sends acknowledgments (ACKs) back to the sender. If the sender does not receive the expected ACK within a specified time (timeout period), it assumes that the frame was lost or corrupted and retransmits the frame.
+
+There are several types of ARQ protocols, including:
+
+1. **Stop-and-Wait ARQ:**
+   - The sender sends a single frame and waits for an acknowledgment before sending the next frame.
+   - Simple but not efficient, as the sender cannot utilize the channel fully.
+
+2. **Go-Back-N ARQ:**
+   - The sender can transmit multiple frames (a window of frames) before receiving acknowledgments.
+   - If an acknowledgment is not received within a timeout period, the sender retransmits all frames in the window starting from the unacknowledged frame.
+
+3. **Selective Repeat ARQ:**
+   - Similar to Go-Back-N, but the sender only retransmits the frames that have not been acknowledged, allowing for more efficient use of the channel.
+
+ARQ protocols are crucial for ensuring data integrity in communication systems where errors may occur due to noise, interference, or other factors. The choice of a specific ARQ protocol depends on the characteristics of the communication channel, the level of reliability required, and the desired efficiency in utilizing the available bandwidth.
+### Phases of error control
+- Error Detection
+- Acknowledgement (ACK)
+	- +ve or -ve ACK
+- Retransmission
+
+### Error Control Protocols
+- STOP and Wait Protocol
+- Sliding Window
+	- GO Back N 
+	- Selective Repeat
+
+#### GO Back N
+"Go-Back-N" (GBN) is a type of automatic repeat request (ARQ) protocol used for error control in data transmission. It is commonly employed in network communication protocols, especially in the context of reliable data transfer over unreliable channels, such as in computer networks.
+
+here N represent the window size
+##### Features 
+1. **Sliding Window:**
+    - GBN uses a sliding window mechanism on the sender's side to manage the transmission of multiple frames.
+    - The sender can transmit a window of frames before waiting for acknowledgments.
+2. **Sequence Numbers:**
+    - Each frame sent by the sender is assigned a unique sequence number.
+    - The sequence numbers help in ordering and identifying frames at the receiver and allow the sender to keep track of the acknowledgment status of each frame.
+3. **Cumulative Acknowledgments:**
+    - The receiver sends cumulative acknowledgments, indicating the highest correctly received and in-order frame.
+    - The sender can use this acknowledgment to advance the window.
+4. **Timeout and Retransmission:**
+    - The sender sets a timer when it sends the first frame in the window.
+    - If the timer expires before an acknowledgment is received, the sender assumes that one or more frames are lost and retransmits all frames in the window.
+5. **Selective Repeat:**
+    - While Go-Back-N is a specific variant, it exhibits a form of selective repeat behavior in that the sender retransmits multiple frames rather than just the lost frame.
+##### Here's a brief overview of how the Go-Back-N protocol works:
+
+1. **Sender Side:**
+   - The sender maintains a window of frames that it can send.
+   - Each frame is assigned a sequence number.
+   - The sender sends frames within the current window to the receiver.
+   - It starts a timer for the oldest unacknowledged frame.
+
+2. **Receiver Side:**
+   - The receiver receives frames and sends acknowledgments (ACKs) for correctly received frames.
+   - The receiver only accepts frames that arrive in order within a specific window.
+
+3. **Sender Timeout:**
+   - If the sender's timer expires before receiving an ACK for the oldest unacknowledged frame, it assumes that the frame (or one of the preceding frames) was lost.
+   - The sender retransmits all frames in the window from the oldest unacknowledged frame.
+
+4. **Receiver Handling:**
+   - The receiver discards out-of-order frames and accepts only frames that arrive within the current window.
+   - Duplicate frames are discarded.
+
+5. **Acknowledgments:**
+   - The receiver sends cumulative ACKs, indicating the highest correctly received frame.
+   - The sender uses the ACK to advance the window.
+
+6. **Error Handling:**
+   - GBN is designed to handle errors by retransmitting frames when the sender's timer expires.
+
+One of the main advantages of Go-Back-N is its simplicity. However, it has some limitations, such as the potential for unnecessary retransmissions when only one frame is lost.
+
+It's worth noting that there are other ARQ protocols, such as Selective Repeat, which can be more efficient in certain situations. Selective Repeat allows the receiver to individually acknowledge correctly received frames, reducing the need for retransmitting frames that have already been successfully received.
+
+#### Selective Repeat ARQ 
+- In this only the erroneous or lost frames are retransmitted , while correct frames are received and buffered 
+- receiver while keeping track of sequence numbers , buffer the frames in memory and sends NACK for only frame which is missing or damaged.
+- Sender will retransmit/send packet for which NACK(negative ACK) is received 
+
+![[Pasted image 20231123213509.png]]
+
+## Error 
+#### Types of error 
+- Bit Error:- aka single bit error , in this only 1 bit in data unit has been changed 
+![[Pasted image 20231123214250.png]]
+- Burst error:- in this 2 or more bits in data unit have changed 
+![[Pasted image 20231123214416.png]]
+
+### Error Detection 
+- means to decide whether the received data is correct or not without having a copy of original message
+- to detect or correct error , some extra bit need to be send with data 
+- extra bit are called as redundant bit
+
+  
+In the context of error detection in networking, redundancy refers to the inclusion of extra information or bits in data transmission to detect errors that may occur during the communication process. The idea is to add redundant bits to the original data so that the recipient can identify and correct errors introduced by noise, interference, or other factors during transmission.
+
+![[Pasted image 20231123214730.png]]
+
+#### There are different types of redundancy techniques used for error detection in networking:
+##### Vertical redundancy check (Parity Check)
+- Parity check is done by adding an extra bit, called parity bit to the data to make a number of 1s either even in case of even parity or odd in case of odd parity.
+- While creating a frame, the sender counts the number of 1s in it and adds the parity bit in the following way.
+- In case of even parity: If a number of 1s is even then parity bit value is 0. If the number of 1s is odd then parity bit value is 1.
+- In case of odd parity: If a number of 1s is odd then parity bit value is 0. If a number of 1s is even then parity bit value is 1.
+- At the receiving end, the parity bit is calculated from the received data bits and compared with the received parity bit. Even parity example
+- This technique generates the total number of 1s even, so it is known as even-parity checking.
+
+![[Pasted image 20231123215914.png]]
+
+#### Single bit vs 2D parity
+**Single Bit Parity:**
+
+1. **Concept:**
+   - Single bit parity involves adding one additional bit to a data word to ensure that the total number of bits set to '1' is even (even parity) or odd (odd parity).
+
+2. **Calculation:**
+   - For even parity, the additional bit is set to make the total number of '1' bits (including the parity bit) even.
+   - For odd parity, the additional bit is set to make the total number of '1' bits odd.
+
+3. **Error Detection:**
+   - Single bit parity can detect the presence of an odd number of errors.
+   - If an odd number of bits are flipped, the parity check will fail.
+
+4. **Example:**
+   - Suppose you have a data word "1101" and you want to use even parity. The parity bit would be set to '0' to make the total number of '1' bits even, resulting in "01101."
+
+**Two-Dimensional Parity:**
+
+1. **Concept:**
+   - Two-dimensional parity extends the concept of single bit parity to two dimensions, creating a matrix of data and parity bits.
+
+2. **Structure:**
+   - Data is organized into rows and columns, and parity bits are calculated for each row and column.
+
+3. **Calculation:**
+   - Parity bits for rows and columns are calculated independently.
+   - The parity of each row is determined, and an additional parity bit for the row is added.
+   - Similarly, the parity of each column is determined, and an additional parity bit for the column is added.
+
+4. **Error Detection:**
+   - Two-dimensional parity can detect and locate errors in both rows and columns.
+   - It can detect and correct single-bit errors and detect multiple-bit errors within a row or column.
+
+5. **Example:**
+   - Consider a 3x3 matrix with data bits:
+     ```
+     1 0 1
+     0 1 1
+     1 1 0
+     ```
+     Parity bits for rows and columns are calculated and added:
+     ```
+     1 0 1 0
+     0 1 1 0
+     1 1 0 1
+     1 0 0 1
+     ```
+     The final matrix is transmitted, and the receiver can use row and column parity checks for error detection.
+
+**Comparison:**
+
+- **Single Bit Parity:**
+  - Detects and signals the presence of an odd number of errors.
+  - Simple and easy to implement.
+  - Limited error detection capability.
+
+- **Two-Dimensional Parity:**
+  - Detects and locates errors in both rows and columns.
+  - Can detect and correct single-bit errors within a row or column.
+  - More complex but provides enhanced error detection capabilities.
+
+#### Checksum
+- They are mathematical values calculated from a set of data, such as a sequence of bits or bytes, and are used to verify the integrity of the data. The basic idea is to generate a checksum at the sender's end and send it along with the data. The receiver then recalculates the checksum based on the received data and compares it with the sent checksum to detect any errors that might have occurred during transmission or storage.
+- Process
+	- Data is divided into fixed sized frames or segments.
+	- The sender adds the segments using 1’s complement arithmetic to get the sum. It then complements the sum to get the checksum and sends it along with the data frames.
+	- The receiver adds the incoming segments along with the checksum using 1’s complement arithmetic to get the sum and then complements it.
+	- If the result is zero, the received frames are accepted; otherwise, they are discarded.
+
+#### Cyclic Redundancy check
+- In CRC technique, a string of n 0s is appended to the data unit, and this n number is less than the number of bits in a predetermined number, known as division which is n+1 bits.
+- Secondly, the newly extended data is divided by a divisor using a process is known as binary division. The remainder generated from this division is known as CRC remainder.
+- Thirdly, the CRC remainder replaces the appended 0s at the end of the original data. This newly generated unit is sent to the receiver.
+- The receiver receives the data followed by the CRC remainder. The receiver will treat this whole unit as a single unit, and it is divided by the same divisor that was used to find the CRC remainder.
+- If the resultant of this division is zero which means that it has no error, and the data is accepted.
+- If the resultant of this division is not zero which means that the data consists of an error. Therefore, the data is discarded.
+![[Pasted image 20231124084503.png]]
+
+### Error Correction
+- Error correction techniques find out the exact number of bits that have been corrupted and as well as their locations. There are two principle ways
+- Backward Error Correction (Retransmission) − If the receiver detects an error in the incoming frame, it requests the sender to retransmit the frame.
+- It is a relatively simple technique. But it can be efficiently used only where retransmitting is not expensive as in fiber optics and the time for retransmission is low relative to the requirements of the application.
+- Forward Error Correction − If the receiver detects some error in the incoming frame, it executes error-correcting code that generates the actual frame.
+- This saves bandwidth required for retransmission.
+- It is inevitable in real-time systems. However, if there are too many errors, the frames need to be retransmitted.
 ## Flow Control 
 **Flow control** is a mechanism used in networking to manage the rate of data transmission between two devices to prevent congestion or overloading of the receiving system. It ensures that a fast sender does not overwhelm a slow receiver, providing a balance in the data transfer process.
 
@@ -363,7 +573,11 @@ In the context of the Data Link Layer of the OSI model, flow control is particul
 5. **Acknowledgment Mechanisms:**
    - Flow control often involves the use of acknowledgment mechanisms. The sender waits for acknowledgment from the receiver before sending more data. If acknowledgments are not received within a certain timeframe, it may trigger a slowdown in the transmission rate or retransmission of data.
 
-### There are different methods of implementing flow control, including:
+### Flow Control Approaches are as:
+- Feedback Based flow control:- sender sends frames after it has received acknowledgments from the user. This is used in the data link layer.
+- Rate Based Flow Control:- It have built in mechanisms to restrict the rate of transmission of data without requiring acknowledgment from the receiver. This is used in the network layer and the transport layer.
+ 
+### Data Link Layer uses feedback based flow control mechanism which mainly uses the techniques as follows:
 
 ####  **Stop-and-Wait:** The sender waits for an acknowledgment before sending the next frame.
 ![[Pasted image 20231123143106.png]]
@@ -378,6 +592,8 @@ In the context of the Data Link Layer of the OSI model, flow control is particul
 5. **Receiver Processes Frame and Waits:**
     - After successfully receiving a frame and sending an acknowledgment, the receiver processes the data and waits for the next frame.
 #### **Sliding Window:** The sender can have multiple frames in transit before receiving acknowledgments.
+
+![[Pasted image 20231123212626.png]]
 
 ![[Pasted image 20231123143918.png]]
 ![[Pasted image 20231123143937.png]]

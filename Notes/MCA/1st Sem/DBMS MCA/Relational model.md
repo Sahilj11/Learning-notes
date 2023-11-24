@@ -149,27 +149,19 @@ In both TRC and DRC, these quantifiers help you specify complex conditions and c
 Tuple Relational Calculus (TRC) and Domain Relational Calculus (DRC) are two different flavors of relational calculus, which is a formal and theoretical framework for querying relational databases. While they both serve the purpose of expressing queries and constraints, they do so in slightly different ways. Here are the key differences between TRC and DRC:
 
 1. **Form of Expression**:
-
    - **TRC (Tuple Relational Calculus)**: In TRC, you specify what you want to retrieve from a relation by defining a formula that describes the desired tuples. You use variables ranging over entire tuples (i.e., variables represent entire rows). Queries are expressed as sets of tuples that satisfy the specified conditions.
-
    - **DRC (Domain Relational Calculus)**: In DRC, you specify what you want to retrieve from a relation by defining a formula that describes the desired attributes or domain values. You use variables ranging over domain values (i.e., variables represent individual column values). Queries are expressed as sets of domain values that satisfy the specified conditions.
 
 2. **Use of Quantifiers**:
-
    - **TRC (Tuple Relational Calculus)**: TRC uses quantifiers like ∃ (existential) and ∀ (universal) to define conditions on entire tuples. You use these quantifiers to express conditions about rows and the relationships between rows.
-
    - **DRC (Domain Relational Calculus)**: DRC also uses quantifiers like ∃ and ∀, but they are used to define conditions on individual domain values or attributes. You use these quantifiers to express conditions about column values.
 
 3. **Clarity and Expressiveness**:
-
    - **TRC (Tuple Relational Calculus)**: TRC can be more intuitive for expressing complex queries that involve conditions on entire rows. It's often easier to understand when the query requires retrieval of specific rows or tuples based on relationships between them.
-
    - **DRC (Domain Relational Calculus)**: DRC can be more concise and suitable for queries that primarily involve conditions on individual attribute values. It's often used when you want to extract specific attributes or domain values from a relation.
 
 4. **Usage**:
-
    - **TRC (Tuple Relational Calculus)**: TRC is less commonly used in practice compared to SQL (Structured Query Language) because it focuses on specifying what to retrieve without specifying how to retrieve it. SQL is more widely used for practical database querying.
-
    - **DRC (Domain Relational Calculus)**: DRC is even less commonly used in practice compared to TRC and SQL. It's primarily used in theoretical discussions and academic contexts to study the formal foundations of database querying.
 
 In summary, TRC and DRC are two variants of relational calculus with distinct approaches to specifying queries. TRC deals with entire rows and can be more intuitive for expressing row-level conditions, while DRC deals with individual column values and is more concise for expressing attribute-level conditions. Both are theoretical frameworks and are not as commonly used in practical database querying as SQL.
