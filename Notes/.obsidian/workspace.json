@@ -23,9 +23,11 @@
             "id": "67f1973abe445d61",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "statics/Pasted image 20231124103917.png"
+                "file": "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "statics/Pasted image 20231124103917.png",
+                "file": "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "statics/Pasted image 20231124103917.png",
+                "file": "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "statics/Pasted image 20231124103917.png"
+                "file": "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md"
               }
             }
           },
@@ -167,14 +169,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "67f1973abe445d61",
   "lastOpenFiles": [
+    "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
     "statics/Pasted image 20231124174921.png",
     "statics/Pasted image 20231124173440.png",
     "statics/Pasted image 20231124103917.png",
     "statics/Pasted image 20231123204838.png",
-    "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "statics/Pasted image 20231124084503.png",
     "statics/Pasted image 20231123215914.png",

@@ -201,3 +201,152 @@ Vbscript (short for visual basic scripting edition) is an active scripting langu
 When employed in Microsoft Internet Explorer, VBScript is similar in function to JavaScript, as a language to write functions that are embedded in or included from HTML pages and interact with the Document Object Model (DOM) of the page, to perform tasks not possible in HTML alone.
 
 VBScript is used for server-side processing of web pages, most notably with Microsoft Active Server Pages (ASP).
+
+# ASP 
+## Basic Syntax
+An ASP file normally contains HTML tags, just like an HTML file. However, an ASP file can also contain server scripts, surrounded by the delimiters <% and %>.
+
+### Write output to browser
+The response.write command is used to write output to a browser. The following example sends the text “Hello World !” to the browser:
+```asp
+<html>
+<body>
+<%
+Response.write(“Hello World ! ”)
+%>
+</body>
+</html>
+```
+
+There is also a shorthand method for the response.write command. The following example also sends the text “Hello World !” to the browser:
+```asp
+<html>
+<body>
+<%=”Hello World ! ”%>
+</body>
+</html>
+```
+### Life Time of variable
+A variable declared outside a procedure can be accessed and changed by any script in the ASP file. A variable declared inside a procedure is created and destroyed every time the procedure is executed.
+
+#### Session Variable
+Session variables are used to store information about ONE single user, and are available to all pages in one application.
+
+#### Application variable 
+Application variables are also available to all pages in one application.
+
+### Procedures
+```asp
+<html>
+<head>
+<% sub vbproc(num1,num2)
+Response.write(num1*num2)
+end sub
+%>
+</head>
+<body>
+<p> Result: <% call vbproc(3,4) %></p>
+</body>
+</html>
+```
+
+Insert the `<%@language=”language”%>` line above the `<html>` tag to write procedures or
+functions in another scripting language than default:
+
+```asp
+<%@ language=”javascript” %>
+<html>
+<head>
+<%
+   function jsproc(num1,num2){
+	Response.write(num1*num2)
+   }
+%>
+</head>
+<body>
+<p> Result: <% jsproc(3,4) %></p>
+</body>
+</html>
+```
+### User Input
+The request object may be used to retrieve user information from forms.
+User input can be retrieved in two ways: With Request.QueryString or Request.form
+
+#### Request.QueryString
+This command is used to collect values in a form with method= “get”. Information sent from a form with the GET method is visible to everyone (will be displayed in the browser’s address bar) and has limits on the amount of information to send. If a user typed “pankaj” and “sharma” in the form example above, the URL sent to the server would look like this:
+`http://www.abes.ac.in/simpleform.asp?fname=pankaj&lname=sharma`
+
+Assume that the ASP file “simpleform.asp” contains the following script:
+```asp
+<body>
+Welcome
+<% response.write(request.querystring(“fname”))
+Response.write(“ ” & request.querystring(“lname”))
+%>
+</body>
+```
+The browser will display the following in the body of the document:
+Welcome pankaj sharma
+
+#### Request.Form
+This command is used to collect values in a form with method= “post”. Information sent from a form with the POST method is invisible to others and has no limits on the amount of information to send.
+
+If a user typed “Bill” and “Gates” in the form example above, the URL sent to the server would look like this:
+`Http://www.abes.ac.in/simpleform.asp`
+Assume that the ASP file “simpleform.asp” contains the following script:
+
+```asp
+<body>
+Welcome
+<%
+Response.write(request.form(“fname”))
+Response.write(“ ” & request.form(“lname”))
+%>
+</body>
+```
+output:
+Welcome Bill Gates
+# JSP
+## JAVA Servlet 
+A Java program that extends the functionality of a Web server, generating dynamic content and interacting with Web clients using a request-response paradigm.
+## JSP
+A text-based document capable of returning both static and dynamic content to a client browser. Static content and dynamic content can be intermixed. Static contents are HTML, XML, Text and Dynamic contents are Java code, Displaying properties of JavaBeans, Invoking business logic defined in Custom tags.
+
+## JSP Object and Component
+In JSP (JavaServer Pages), implicit objects are predefined objects that are automatically created by the JSP container and are available for use in the JSP page without the need for explicit declaration or instantiation. These objects provide information about the request, session, application, and other aspects of the JSP environment. The JSP container makes these implicit objects available during the lifecycle of a JSP page.
+
+Here are the commonly used implicit objects in JSP:
+
+1. **request:**
+   - Represents the client's request to the server. It is an instance of the `HttpServletRequest` class.
+   - Example usage: `request.getParameter("parameterName")` to retrieve request parameters.
+
+2. **response:**
+   - Represents the server's response to the client. It is an instance of the `HttpServletResponse` class.
+   - Example usage: `response.getWriter().write("Hello, World!")` to write content to the response.
+
+3. **out:**
+   - Represents the output stream used to send content to the client's browser. It is an instance of the `JspWriter` class.
+   - Example usage: `<%= "Hello, World!" %>` to write content directly to the response.
+
+4. **session:**
+   - Represents the user's session. It is an instance of the `HttpSession` class.
+   - Example usage: `session.getAttribute("attributeName")` to retrieve session attributes.
+
+5. **application:**
+   - Represents the servlet context or application context. It is an instance of the `ServletContext` class.
+   - Example usage: `application.getRealPath("/")` to get the real path of the web application's root directory.
+
+6. **config:**
+   - Represents the configuration information of the JSP page. It is an instance of the `ServletConfig` class.
+   - Example usage: `config.getInitParameter("parameterName")` to retrieve initialization parameters.
+
+7. **page:**
+   - Represents the JSP page itself. It is an instance of the generated servlet class.
+   - Example usage: `pageContext.getAttribute("attributeName")` to retrieve page attributes.
+
+8. **pageContext:**
+   - Represents the page context, providing access to various objects such as request, response, session, and application.
+   - Example usage: `pageContext.forward("newPage.jsp")` to forward the request to another JSP page.
+
+These implicit objects simplify the development of dynamic web applications by providing easy access to information related to the request, response, session, and application context. Developers can use these objects directly within the JSP page to perform common tasks and access key components of the web application environment.
