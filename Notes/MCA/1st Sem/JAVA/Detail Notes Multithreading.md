@@ -1,21 +1,25 @@
 # Intro
+
 ## Difference b/w Multitasking , Multiprocessing and Multithreading
+
 - Multitasking:- Performing multiple task at a single time
-	- types
-		- Multi Processing
-		- Multi Threading
+  - types
+    - Multi Processing
+    - Multi Threading
 - Multi processing:- When one system is connected to multiple processors in order to complete a task
 - Multi Threading:- Executing multiple threads (Sub-process, small task) at a single time
-	- For eg. when we launch VLC . VLC itself is a process , small task inside vlc like progress bar , timer , audio etc are small task . when these small task are executing simultaneously it is an example of multi threading
+  - For eg. when we launch VLC . VLC itself is a process , small task inside vlc like progress bar , timer , audio etc are small task . when these small task are executing simultaneously it is an example of multi threading
 
 ## Difference b/w process and Thread
-![[Pasted image 20231107075610.png]]
+
+![](../../../statics/Pasted%20image%2020231107075610.png)
 
 Context Switching:- Context switching is a crucial operation performed by an operating system to switch the CPU (Central Processing Unit) from executing one process or thread to another. It's a fundamental aspect of multitasking and allows the CPU to handle multiple processes concurrently.
 
 In computing, especially in the context of operating systems and concurrent programming, the concepts of processes and threads are fundamental but have distinct characteristics:
 
 **Process**:
+
 - A process is an executing instance of a program managed by the operating system.
 - It consists of an executable program, the associated data, and resources (like memory, open files, etc.).
 - Each process has its own memory space, file handles, and other resources.
@@ -25,6 +29,7 @@ In computing, especially in the context of operating systems and concurrent prog
 - Processes are heavyweight in terms of resources and management overhead.
 
 **Thread**:
+
 - A thread is a subset of a process. It represents an independent flow of execution within a process.
 - Threads within the same process share the same memory space and resources.
 - Threads can directly communicate with other threads in the same process using shared memory.
@@ -48,12 +53,14 @@ In computing, especially in the context of operating systems and concurrent prog
 In summary, processes and threads are both mechanisms for concurrent execution but differ in terms of resource utilization, communication, and independence. Threads allow for more lightweight concurrent execution within a process and can communicate more efficiently due to their shared resources, while processes are independent and require more overhead due to their separate memory space.
 
 ## Life cycle of thread
-![[Pasted image 20231108081327.png]]
 
+![](../../../statics/Pasted%20image%2020231108081327.png)
 
 ## Creating thread
+
 ### Two ways to create thread in java
-![[Pasted image 20231108085405.png]]
+
+![](../../../statics/Pasted%20image%2020231108085405.png)
 
 1. Using Runnable interface :- this is present in java.lang package . this interface only contains one method which is run
 2. Thread class:- this is a class given by java , it implements runnable interface , and contains constructors , methods (like run , start etc)
@@ -65,7 +72,7 @@ In summary, processes and threads are both mechanisms for concurrent execution b
 public class thread {
 
     public static void main(String[] args) {
-       Test t = new Test(); 
+       Test t = new Test();
        Test2 t2 = new Test2();
        Thread th = new Thread(t2);
        t.start();
@@ -75,7 +82,7 @@ public class thread {
         @Override
         public void run(){
             for (int i = 0; i < 6; i++) {
-               System.out.println("Thread " + i); 
+               System.out.println("Thread " + i);
             }
         }
 
@@ -85,7 +92,7 @@ public class thread {
         @Override
         public void run(){
             for (int i = 0; i < 6; i++) {
-               System.out.println("Thread2 " + i); 
+               System.out.println("Thread2 " + i);
             }
         }
     }
@@ -96,8 +103,8 @@ public class thread {
 It is good to use runnable interface method to create thread as if we have a class A extending Class B , and now we want to make Class A thread it would not be possible as java do not support multiple inheritance
 
 ## Multithreading
-![[Pasted image 20231109082813.png]]
 
+![](../../../statics/Pasted%20image%2020231109082813.png)
 
 ```java
 /**
@@ -132,10 +139,12 @@ public class multithread {
 ```
 
 ## Synchronisation
-### What is it 
+
+### What is it
+
 - Process by which we control the accessibility of multiple threads to a particular resource
-![[Pasted image 20231109091140.png]]
-to overcome synchronisation disadvantage java introduced java.util.concurrent package
+  ![](../../../statics/Pasted%20image%2020231109091140.png)
+  to overcome synchronisation disadvantage java introduced java.util.concurrent package
 
 ```java
 /**
@@ -174,69 +183,70 @@ class seatBooking {
     }
 }
 ```
-program of synchronized 
 
-![[Pasted image 20231109105217.png]]
+program of synchronized
+
+![](../../../statics/Pasted%20image%2020231109105217.png)
 
 In Java, synchronization is a technique used to control access to critical sections of code, particularly when multiple threads are involved. Synchronization ensures that only one thread can execute a synchronized block of code or method at a time, preventing interference and maintaining data integrity. There are several ways to achieve synchronization in Java:
 
 1. **Synchronized Method:**
    In Java, you can declare a method as synchronized by using the `synchronized` keyword. When a method is declared as synchronized, only one thread can execute that method for a particular instance of the class at a time.
 
-    ```java
-    public synchronized void synchronizedMethod() {
-        // Critical section of code
-        // Access is synchronized for this method
-    }
-    ```
+   ```java
+   public synchronized void synchronizedMethod() {
+       // Critical section of code
+       // Access is synchronized for this method
+   }
+   ```
 
 2. **Synchronized Block:**
    In cases where synchronizing an entire method is not necessary, you can use synchronized blocks. This allows more fine-grained control over the critical section of code by explicitly defining which part needs synchronization.
 
-    ```java
-    public void someMethod() {
-        // Non-critical section of code
+   ```java
+   public void someMethod() {
+       // Non-critical section of code
 
-        synchronized (this) {
-            // Critical section of code
-            // Access is synchronized for the block inside the synchronized statement
-        }
+       synchronized (this) {
+           // Critical section of code
+           // Access is synchronized for the block inside the synchronized statement
+       }
 
-        // Non-critical section of code
-    }
-    ```
+       // Non-critical section of code
+   }
+   ```
 
 3. **Static Synchronization:**
    When dealing with static methods or data members, you might need to synchronize access across all instances of a class. To achieve this, you can use the `static` keyword with the `synchronized` keyword to synchronize static methods or a block.
 
-    ```java
-    public class MyClass {
-        public static synchronized void staticSynchronizedMethod() {
-            // Critical section of code for static method
-            // Access is synchronized for all instances of the class
-        }
+   ```java
+   public class MyClass {
+       public static synchronized void staticSynchronizedMethod() {
+           // Critical section of code for static method
+           // Access is synchronized for all instances of the class
+       }
 
-        public void someMethod() {
-            // Non-critical section of code
+       public void someMethod() {
+           // Non-critical section of code
 
-            synchronized (MyClass.class) {
-                // Critical section of code for static block
-                // Access is synchronized for all instances of the class
-            }
+           synchronized (MyClass.class) {
+               // Critical section of code for static block
+               // Access is synchronized for all instances of the class
+           }
 
-            // Non-critical section of code
-        }
-    }
-    ```
+           // Non-critical section of code
+       }
+   }
+   ```
 
 Using synchronization mechanisms is crucial for concurrent programming to prevent race conditions and maintain data consistency when multiple threads are working with shared resources. However, excessive synchronization might lead to performance issues, so it's essential to use it judiciously where necessary.
 
 ### Cooperation(InterThread communication)
 
-![[Pasted image 20231109110501.png]]
-
+![](../../../statics/Pasted%20image%2020231109110501.png)
 
 ### issue of interthread
+
 ```java
 /**
  * interThread
@@ -263,6 +273,7 @@ class Totaleakrnings extends Thread {
 ```
 
 Solved sol
+
 ```java
 /**
  * interThread

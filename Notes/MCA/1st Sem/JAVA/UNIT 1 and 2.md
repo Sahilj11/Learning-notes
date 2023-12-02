@@ -1,11 +1,14 @@
 ## Types of variable in JAVA
+
 In Java, variables can be categorized into several types based on their scope, usage, and declaration. Here are the main types of variables in Java:
 
 1. **Local Variables**:
+
    - Declared within a method, constructor, or block.
    - Have limited scope, existing only within the block they are declared in.
    - Must be initialized before use.
    - Example:
+
    ```java
    public void someMethod() {
        int localVar = 10; // local variable
@@ -14,10 +17,12 @@ In Java, variables can be categorized into several types based on their scope, u
    ```
 
 2. **Instance Variables (Non-Static Variables)**:
+
    - Belong to an instance of a class and are declared within the class but outside any method, constructor, or block.
    - They are initialized with default values if not explicitly initialized.
    - Exist as long as the object exists.
    - Example:
+
    ```java
    public class MyClass {
        int instanceVar; // instance variable
@@ -26,11 +31,13 @@ In Java, variables can be categorized into several types based on their scope, u
    ```
 
 3. **Static Variables (Class Variables)**:
+
    - Belong to the class rather than any particular instance.
    - Declared with the `static` keyword.
    - Initialized with default values if not explicitly initialized.
    - Commonly used to represent constants or values shared by all instances of the class.
    - Example:
+
    ```java
    public class MyClass {
        static int staticVar; // static variable
@@ -39,10 +46,12 @@ In Java, variables can be categorized into several types based on their scope, u
    ```
 
 4. **Final Variables**:
+
    - Declared using the `final` keyword and can be a local, instance, or static variable.
    - Once initialized, their value cannot be changed.
    - Should be assigned a value either during declaration or within the constructor.
    - Example:
+
    ```java
    public class MyClass {
        final int finalVar = 100; // final variable
@@ -63,6 +72,7 @@ In Java, variables can be categorized into several types based on their scope, u
    ```
 
 #### Global variable
+
 In Java, the term "global variable" is often used informally to describe variables that seem to be accessible from anywhere within the program. However, in strict Java terminology, there are no true "global variables" like in some other programming languages. Instead, Java has class-level variables, which can be mistaken for global variables due to their wider accessibility.
 
 NOTE: FOR EXAM DO NOT WRITE THIS , this is just for concept clarity . use keyword global variable here
@@ -70,9 +80,11 @@ NOTE: FOR EXAM DO NOT WRITE THIS , this is just for concept clarity . use keywor
 Class-level variables in Java can be both static and non-static (instance variables). They might be perceived as global within the context of a class because they are accessible to all the methods within that class.
 
 1. **Instance Variables (Non-Static Variables)**:
+
    - Belong to an instance of a class and are accessible to all non-static methods of that class.
    - Exist as long as the object exists.
    - Example:
+
    ```java
    public class MyClass {
        int instanceVar; // instance variable
@@ -95,16 +107,19 @@ Class-level variables in Java can be both static and non-static (instance variab
 While these variables might seem globally accessible within the scope of the class, they are not accessible outside the class without an instance of the class (for non-static variables) or without proper access (through the class name) for static variables. This is unlike some languages where global variables can be accessed from any part of the program.
 
 Understanding the scope and accessibility of class-level variables is crucial in Java programming, as it helps maintain data encapsulation and ensures variables are used appropriately within the defined context of a class.
+
 ## Object oriented technology
+
 Object-oriented technology (OOT) is a software development paradigm that organizes code and data into reusable and modular structures called objects. It's a widely used approach in modern software development due to its ability to model real-world entities and promote code reusability. Here are some key notes on object-oriented technology:
 
 **Objects and Classes:**
-   - Objects are instances of classes and represent real-world entities or concepts.
-   - Classes define the blueprint for creating objects. They specify attributes (data members) and behaviors (methods) that objects of that class will have.
+
+- Objects are instances of classes and represent real-world entities or concepts.
+- Classes define the blueprint for creating objects. They specify attributes (data members) and behaviors (methods) that objects of that class will have.
 
 **Encapsulation:**
 It is a key concept that emphasizes the bundling of data (attributes or properties) and methods (functions or procedures) that operate on that data into a single unit known as an object. Encapsulation is often described by the phrase "data hiding" and serves several important purposes in OOP:
-![[Pasted image 20231106065524.png]]
+![](../../../statics/Pasted%20image%2020231106065524.png)
 
 1. **Data Protection:** Encapsulation protects the internal state (data) of an object by making it private or restricted access. This means that the data can only be accessed or modified through well-defined methods, preventing unauthorized or unintended changes to the object's state.
 
@@ -113,6 +128,7 @@ It is a key concept that emphasizes the bundling of data (attributes or properti
 3. **Control and Validation:** By encapsulating data with setter methods, you can control the values assigned to object attributes. This allows you to enforce validation rules and business logic, ensuring that only valid data is stored in the object.
 
 4. **Flexibility and Evolution:** Encapsulation enables you to change the internal implementation of an object without affecting the external code that uses the object's interface. This promotes flexibility and makes it easier to adapt and evolve the software over time.
+
 ```java
 public class encap {
 	public static void main(String[] args) {
@@ -140,6 +156,7 @@ Inheritance is another fundamental principle of object-oriented programming (OOP
 4. **"IS-A" Relationship:** Inheritance represents an "IS-A" relationship between the base and derived classes. For example, if you have a base class called `Vehicle`, a derived class called `Car` "IS-A" vehicle, indicating that a car shares characteristics with a vehicle but may have additional features specific to cars.
 
 5. **Method Overriding:** Inheritance allows the derived class to override (provide its implementation for) methods inherited from the base class. This enables polymorphism, where objects of the derived class can be used interchangeably with objects of the base class.
+
 ```java
 public class inheritance {
 	public static void main(String[] args) {
@@ -159,13 +176,14 @@ class Dog extends Animal{
 	}
 }
 ```
+
 **Polymorphism:**
 Polymorphism (from Greek, meaning “many forms”) is a feature that allows one interface
 to be used for a general class of actions. The specific action is determined by the exact
 nature of the situation. Consider a stack (which is a last-in, first-out list). You might have
 a program that requires three types of stacks. One stack is used for integer values, one for
 floatingpoint values, and one for characters
-![[Pasted image 20231106065718.png]]
+![](../../../statics/Pasted%20image%2020231106065718.png)
 
 1. **Dynamic Binding:** Polymorphism involves the ability to determine the appropriate method or behavior to execute at runtime rather than at compile time. This is known as dynamic binding or late binding. It allows you to write more flexible and adaptable code.
 
@@ -176,9 +194,11 @@ floatingpoint values, and one for characters
 4. **"IS-A" Relationship:** Polymorphism is closely related to inheritance. It relies on the "IS-A" relationship between a derived class and its base class. When a class inherits from another class, it "IS-A" type of that superclass, and this allows polymorphic behavior.
 
 5. **Example:** Consider a scenario where you have a base class `Shape` with a method `calculateArea()`. You can have derived classes like `Circle` and `Rectangle` that inherit from `Shape` and override the `calculateArea()` method. When you call `calculateArea()` on a `Shape` object, the appropriate version of the method for the actual object's type (e.g., `Circle` or `Rectangle`) will be executed.
+
 ```java
 
 ```
+
 **Abstraction:**
 Abstraction is a fundamental concept in object-oriented programming (OOP) that focuses on simplifying complex systems by modeling classes, objects, and their behaviors in a way that hides unnecessary details while emphasizing the essential features. Abstraction allows developers to create a high-level view of a system, making it easier to understand, maintain, and work with. Here's an explanation of abstraction:
 
@@ -195,29 +215,31 @@ Abstraction is a fundamental concept in object-oriented programming (OOP) that f
 6. **Example:** Consider a banking application. The concept of a bank account can be abstracted as a class with methods like `deposit()`, `withdraw()`, and `getBalance()`. The implementation details of how these methods interact with databases, transactions, and security measures are hidden from the user of the class.
 
 ## Diff b/w java and c++
+
 Here's the information presented in a markdown table format for better readability:
 
-| Comparison Index        | C++                                    | Java                                  |
-|-------------------------|----------------------------------------|---------------------------------------|
-| Platform                | C++ is platform-dependent.             | Java is platform-independent.         |
-| Mainly used for         | C++ is mainly used for system programming. | Java is mainly used for application programming. |
-| Design Goal             | Designed for systems and applications programming. | Designed with a goal of being easy to use and accessible to a broader audience. |
-| Goto                    | Supports the goto statement.           | Java doesn't support the goto statement. |
-| Multiple Inheritance    | Supports inheritance.                  | Doesn't support inheritance through class but can be achieved by interfaces. |
-| Operator Overloading    | Supports operator overloading.         | Doesn't support operator overloading. |
-| Pointers                | Supports pointers.                     | Doesn't support pointer internally. |
-| Compiler and Interpreter| Uses compiler only.                    | Uses both compiler and interpreter.    |
-| Call by Value/Reference | Supports both call by value and call by reference. | Supports only call by value. |
-| Structure/Union         | Supports structures and unions.        | Doesn't support structures and unions. |
-| Thread Support          | Doesn't have built-in support for threads. | Has built-in thread support.           |
-| Virtual Keyword         | Supports the virtual keyword for function overriding. | Doesn't have a virtual keyword; methods are virtual by default. |
-| Inheritance Tree        | Creates a new inheritance tree always. | Uses a single inheritance tree with all classes derived from `Object` class. |
-| Hardware                | Nearer to hardware.                    | Not as interactive with hardware.     |
-| Object-oriented         | Object-oriented language.              | Also an object-oriented language, following a single root hierarchy from `java.lang.Object`. |
+| Comparison Index         | C++                                                   | Java                                                                                         |
+| ------------------------ | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Platform                 | C++ is platform-dependent.                            | Java is platform-independent.                                                                |
+| Mainly used for          | C++ is mainly used for system programming.            | Java is mainly used for application programming.                                             |
+| Design Goal              | Designed for systems and applications programming.    | Designed with a goal of being easy to use and accessible to a broader audience.              |
+| Goto                     | Supports the goto statement.                          | Java doesn't support the goto statement.                                                     |
+| Multiple Inheritance     | Supports inheritance.                                 | Doesn't support inheritance through class but can be achieved by interfaces.                 |
+| Operator Overloading     | Supports operator overloading.                        | Doesn't support operator overloading.                                                        |
+| Pointers                 | Supports pointers.                                    | Doesn't support pointer internally.                                                          |
+| Compiler and Interpreter | Uses compiler only.                                   | Uses both compiler and interpreter.                                                          |
+| Call by Value/Reference  | Supports both call by value and call by reference.    | Supports only call by value.                                                                 |
+| Structure/Union          | Supports structures and unions.                       | Doesn't support structures and unions.                                                       |
+| Thread Support           | Doesn't have built-in support for threads.            | Has built-in thread support.                                                                 |
+| Virtual Keyword          | Supports the virtual keyword for function overriding. | Doesn't have a virtual keyword; methods are virtual by default.                              |
+| Inheritance Tree         | Creates a new inheritance tree always.                | Uses a single inheritance tree with all classes derived from `Object` class.                 |
+| Hardware                 | Nearer to hardware.                                   | Not as interactive with hardware.                                                            |
+| Object-oriented          | Object-oriented language.                             | Also an object-oriented language, following a single root hierarchy from `java.lang.Object`. |
 
 The above table summarizes the key differences between C++ and Java in various aspects such as platform support, language features, design goals, and more.
 
 ## Message Passing in java
+
 Message Passing in terms of computers is communication between processes. It is a form
 of communication used in object-oriented programming as well as parallel programming.
 Message passing in Java is like sending an object i.e. message from one thread to another
@@ -227,15 +249,17 @@ or semaphores or any other shared variables to communicate.
 We mostly use Queue to implement communication
 between threads.
 
-![[Pasted image 20231106072514.png]]
+![](../../../statics/Pasted%20image%2020231106072514.png)
 
-## Binding 
+## Binding
+
 - Linking b/w method call and method definition
 - Static binding
-	- binding which can be resolved at compile time by compiler
-	- Also called early binding
-	- binding happens before the program actually run
-	- eg. Method overloading
+  - binding which can be resolved at compile time by compiler
+  - Also called early binding
+  - binding happens before the program actually run
+  - eg. Method overloading
+
 ```java
 class Parent {
     void display() {
@@ -257,12 +281,14 @@ public class Main {
 }
 
 ```
+
 - Dynamic binding
-	- When compiler is not able to resolve binding at compile time
-	- Also called late binding
-	- Binding happens during run time
-	- Eg. Method overiding
-	- 
+  - When compiler is not able to resolve binding at compile time
+  - Also called late binding
+  - Binding happens during run time
+  - Eg. Method overiding
+  -
+
 ```java
 class Parent {
     void display() {
@@ -286,6 +312,7 @@ public class Main {
 ```
 
 ## Benefits of OOPS
+
 1. Simplicity: software objects model real world objects, so the complexity is reduced and the program structure is very clear;
 2. Modularity: each object forms a separate entity whose internal workings are decoupled from other parts of the system;
 3. Modifiability: it is easy to make minor changes in the data representation or theprocedures in an OO program. Changes inside a class do not affect any other part of a program, since the only public interface that the external world has to a class is through the use of methods;
@@ -294,6 +321,7 @@ public class Main {
 6. Re-usability: objects can be reused in different programs
 
 ## Application of OOPS
+
 - User interface design such as windows, menu.
 - Real Time Systems
 - Simulation and Modeling
@@ -302,26 +330,33 @@ public class Main {
 - Neural Networks and parallel programming
 
 ## Data type
-![[Pasted image 20231106072634.png]]
+
+![](../../../statics/Pasted%20image%2020231106072634.png)
 A variable of primitive type contains a single value of the appropriate size and format for
 its type: a number, a character, or a boolean value.
-- Integer 
-	- Java supports four types of integer types: byte, short, int and long. It does not support unsigned types and thereforeall Java values are signed types. This means that they can be positive or negative.
+
+- Integer
+  - Java supports four types of integer types: byte, short, int and long. It does not support unsigned types and thereforeall Java values are signed types. This means that they can be positive or negative.
 
 there are also three kinds of non-primitive types in JAVA. They are also termed as reference or derived types. The non-primitive types are: arrays, classes and interfaces. The value of a non-primitive type variable, in contrast to
 that of a primitive type, is a reference to (an address of) the value or set of values represented by the variable.
 
 ## Java Tokens
+
 The smallest individual units in a program are known as tokens
-- Keywords:- Keywords are some reserved words which have some definite meaning. They cannot be used as variable name and they are written in lower-case letter . eg like abstract,  new , for , int ,if etc.
+
+- Keywords:- Keywords are some reserved words which have some definite meaning. They cannot be used as variable name and they are written in lower-case letter . eg like abstract, new , for , int ,if etc.
 - Identifiers :- Java Identifiers are used for naming classes, methods, variables, objects, labels in a program.
 - Literals:- Literals are constant value appears directly in the program. Types like string literals , character , bool, int, float etc.
+
 ```java
 String a = "hello"; // this is a string literal
 char b = 'F'; // this is a char literal
 ```
+
 - Operators
 - Separators:- Separators are symbols used to indicate where groups of code are arranged and divided.
+
 ```java
 { } Braces
 ( ) Parentheses
@@ -332,8 +367,11 @@ char b = 'F'; // this is a char literal
 ```
 
 ## Operators in java
+
 Operators in Java are special symbols and keywords used to perform operations on variables and values. They are fundamental to any programming language and play a crucial role in Java as well. Here are some common categories of operators in Java:
+
 1. **Arithmetic Operators:**
+
    - `+` (Addition): Adds two numbers.
    - `-` (Subtraction): Subtracts the right operand from the left operand.
    - `*` (Multiplication): Multiplies two numbers.
@@ -341,6 +379,7 @@ Operators in Java are special symbols and keywords used to perform operations on
    - `%` (Modulus): Computes the remainder of dividing the left operand by the right operand.
 
 2. **Relational Operators:**
+
    - `==` (Equal to): Checks if two values are equal.
    - `!=` (Not equal to): Checks if two values are not equal.
    - `<` (Less than): Checks if the left operand is less than the right operand.
@@ -349,20 +388,24 @@ Operators in Java are special symbols and keywords used to perform operations on
    - `>=` (Greater than or equal to): Checks if the left operand is greater than or equal to the right operand.
 
 3. **Logical Operators:**
+
    - `&&` (Logical AND): Returns true if both operands are true.
    - `||` (Logical OR): Returns true if at least one operand is true.
    - `!` (Logical NOT): Negates the value of the operand.
 
 4. **Assignment Operators:**
+
    - `=` (Assignment): Assigns the value on the right to the variable on the left.
    - `+=`, `-=`, `*=`, `/=`, `%=` (Compound Assignment): Performs an operation and assigns the result to the left operand.
 
 5. **Increment and Decrement Operators:**
+
    - `++` (Increment): Increases the value of a variable by 1.
    - `--` (Decrement): Decreases the value of a variable by 1.
    - Can be used as either a prefix (`++i`) or postfix (`i++`) operation, with a difference in behavior when used in expressions.
 
 6. **Bitwise Operators:**
+
    - `&` (Bitwise AND): Performs a bitwise AND operation.
    - `|` (Bitwise OR): Performs a bitwise OR operation.
    - `^` (Bitwise XOR): Performs a bitwise XOR (exclusive OR) operation.
@@ -375,46 +418,52 @@ Operators in Java are special symbols and keywords used to perform operations on
 
 These are the most commonly used operators in Java. They are essential for performing various operations in Java programs, from simple arithmetic calculations to complex logical and bitwise manipulations
 
-## Java run-time environment 
+## Java run-time environment
+
 - the Java Runtime Environment (JRE) is a crucial component of the Java platform that enables the execution of Java applications and applets. It provides the necessary runtime support to interpret and execute Java bytecode. Here are key aspects of the Java Runtime Environment:
 - java The loader for Java applications. This tool is an interpreter and can interpret the class
- files generated by the javac compiler.
+  files generated by the javac compiler.
 - javac The compiler, which converts source code into Java bytecode
 - jar The archiver, which packages related class libraries into a single JAR file.
 - javadoc The documentation generator, which automatically generates documentation from
- source code comments
+  source code comments
 - jdb The Java debugger
 - jps The process status tool, which displays process information for current Java processes
 - javap The class file disassembler
 - jppletviewer This tool can be used to run and debug Java applets without a web browser.
 - javah The C header and stub generator, used to write native methods
-In summary, the Java Runtime Environment (JRE) is a critical component of the Java platform that provides the runtime environment and resources necessary for executing Java applications. It ensures platform independence, security, and efficient execution of Java code. Users and developers benefit from the JRE's ability to run Java applications on various systems without modification.
+  In summary, the Java Runtime Environment (JRE) is a critical component of the Java platform that provides the runtime environment and resources necessary for executing Java applications. It ensures platform independence, security, and efficient execution of Java code. Users and developers benefit from the JRE's ability to run Java applications on various systems without modification.
 
 ## API
+
 An application programming interface (API) is a computing interface which defines
 interactions between multiple software intermediaries. It defines the kinds of calls or
 requests that can be made, how to make them, the data formats that should be used, the
 conventions to follow, etc.
 
 ## casting
-- Casting means converting one data type to another
-- type 
-	- Implicit casting:- Happens automatically when converting from a narrower range data type to wide range data type 
-		- eg. Converting an int to double/float
-		- Converting float to double
-		- ![[Pasted image 20231106080024.png]]
-		- ![[Pasted image 20231106080342.png]]
-		- 
-	- Explicit casting:- Does not happens automatically , should be done by programmer when converting from wider range data type to narrower range data type
-		- Converting from Double to int
-		- Converting from double to float
-		- ![[Pasted image 20231106080024.png]]
 
-## Control statements 
+- Casting means converting one data type to another
+- type
+  - Implicit casting:- Happens automatically when converting from a narrower range data type to wide range data type
+    - eg. Converting an int to double/float
+    - Converting float to double
+    - ![](../../../statics/Pasted%20image%2020231106080024.png)
+    - ![](../../../statics/Pasted%20image%2020231106080342.png)
+    -
+  - Explicit casting:- Does not happens automatically , should be done by programmer when converting from wider range data type to narrower range data type
+    - Converting from Double to int
+    - Converting from double to float
+    - ![](../../../statics/Pasted%20image%2020231106080024.png)
+
+## Control statements
+
 Control statements in Java are used to manage the flow of a program's execution. They allow you to make decisions, repeat actions, and execute code conditionally. Java provides several types of control statements:
 
 1. **Conditional Statements:**
+
    - **if Statement:** Executes a block of code if a specified condition is true. Optionally, an `else` block can be used to specify code to execute when the condition is false.
+
      ```java
      if (condition) {
          // Code to execute if condition is true
@@ -439,7 +488,9 @@ Control statements in Java are used to manage the flow of a program's execution.
      ```
 
 2. **Looping Statements:**
+
    - **for Loop:** Repeats a block of code a specified number of times.
+
      ```java
      for (initialization; condition; update) {
          // Code to repeat
@@ -447,6 +498,7 @@ Control statements in Java are used to manage the flow of a program's execution.
      ```
 
    - **while Loop:** Repeats a block of code while a specified condition is true.
+
      ```java
      while (condition) {
          // Code to repeat
@@ -461,7 +513,9 @@ Control statements in Java are used to manage the flow of a program's execution.
      ```
 
 3. **Jump Statements:**
+
    - **break Statement:** Used to exit a loop or switch statement prematurely.
+
      ```java
      for (int i = 0; i < 5; i++) {
          if (i == 3) {
@@ -471,6 +525,7 @@ Control statements in Java are used to manage the flow of a program's execution.
      ```
 
    - **continue Statement:** Used to skip the current iteration of a loop and proceed to the next iteration.
+
      ```java
      for (int i = 0; i < 5; i++) {
          if (i == 2) {
@@ -489,7 +544,8 @@ Control statements in Java are used to manage the flow of a program's execution.
 
 These control statements in Java allow you to create programs with branching logic, repetition, and the ability to make decisions based on conditions. They are essential for writing complex and flexible software.
 
-## Data types 
+## Data types
+
 Java has a rich set of data types that can be categorized into two main categories: primitive data types and reference data types. Here's an overview of the commonly used data types in Java:
 
 **Primitive Data Types:**
@@ -521,14 +577,17 @@ Java has a rich set of data types that can be categorized into two main categori
 
 Java's strong typing ensures type safety and helps catch type-related errors at compile time. Additionally, Java provides automatic type conversion for some data types (e.g., widening conversions), but explicit casting may be required for others (e.g., narrowing conversions).
 
-## Visibility controls 
+## Visibility controls
+
 In Java, access modifiers are used to set the accessibility (visibility) of classes, interfaces, variables, methods, constructors, data members, and the setter methods.
+
 #### Types
-- Public 
-- Private 
-- Protected 
+
+- Public
+- Private
+- Protected
 - Default :- declaration visible only within package only
-![[Pasted image 20230913173824.png]]
+  ![](../../../statics/Pasted%20image%2020230913173824.png)
 
 In Java, accessibility controls or access modifiers are used to specify the visibility or accessibility of classes, methods, fields, and other members within a Java program. There are four main access modifiers in Java:
 
@@ -537,7 +596,7 @@ In Java, accessibility controls or access modifiers are used to specify the visi
 ```java
 public class MyClass {
     public int myField;
-    
+
     public void myMethod() {
         // ...
     }
@@ -549,7 +608,7 @@ public class MyClass {
 ```java
 public class MyClass {
     private int myField;
-    
+
     private void myMethod() {
         // ...
     }
@@ -563,7 +622,7 @@ package mypackage;
 
 public class MyClass {
     protected int myField;
-    
+
     protected void myMethod() {
         // ...
     }
@@ -589,7 +648,7 @@ package mypackage;
 
 class MyClass {
     int myField;
-    
+
     void myMethod() {
         // ...
     }
@@ -607,6 +666,7 @@ public class AnotherClass {
 These access modifiers help you control the visibility and encapsulation of your classes and their members, which is a fundamental aspect of object-oriented programming. They allow you to restrict or expose certain parts of your code to maintain encapsulation, data integrity, and security.
 
 ## Class and methods in java
+
 In Java, classes and methods are fundamental building blocks of object-oriented programming. They are used to define the structure and behavior of objects within your program. Let's dive into each concept:
 
 ### Classes in Java:
@@ -618,13 +678,13 @@ In Java, classes and methods are fundamental building blocks of object-oriented 
        // Fields (instance variables)
        private int myField;
        private String myString;
-       
+
        // Constructor
        public MyClass(int field, String string) {
            this.myField = field;
            this.myString = string;
        }
-       
+
        // Methods
        public void doSomething() {
            System.out.println("Doing something...");
@@ -693,6 +753,7 @@ In Java, classes and methods are fundamental building blocks of object-oriented 
 Classes and methods are essential for organizing and structuring your Java programs, promoting code reusability, and modeling real-world entities in your software.
 
 ## Constructor
+
 In Java, a constructor is a special type of method that is used to initialize objects of a class. Constructors have the same name as the class in which they are defined, and they do not have a return type, not even `void`. They are called automatically when an object of the class is created using the `new` keyword. Constructors are primarily used to set initial values for the object's attributes (fields).
 
 Here's how you declare and use constructors in Java:
@@ -749,7 +810,9 @@ Some important points to remember about constructors in Java:
 - Constructors can have access modifiers (e.g., `public`, `private`, `protected`, or package-private) just like other methods. The access modifier determines where the constructor can be called from.
 
 - Constructors can contain initialization code, setup tasks, or any other logic required to prepare an object for use.
-## Inheritance types 
+
+## Inheritance types
+
 In Java, inheritance is a fundamental concept of object-oriented programming (OOP) that allows you to create new classes (derived or subclass) based on existing classes (base or superclass). Inheritance promotes code reusability and establishes a relationship between classes. There are several types of inheritance in Java:
 
 1. **Single Inheritance:**
@@ -858,7 +921,8 @@ In Java, inheritance is a fundamental concept of object-oriented programming (OO
 
 Java's inheritance mechanism ensures code reusability while avoiding some of the complexities and ambiguities associated with multiple inheritance. Instead of multiple inheritance of classes, Java encourages the use of interfaces to achieve similar goals.
 
-## Abstract class 
+## Abstract class
+
 In Java, an abstract class is a class that cannot be instantiated on its own(cannot make instance of it , meaning cant create a object) but serves as a blueprint for other classes. Abstract classes are used to define a common interface or structure that multiple related classes must adhere to. They allow you to declare methods that have no implementation in the abstract class, which must be implemented by concrete (non-abstract) subclasses. Abstract classes are defined using the `abstract` keyword.
 
 Here are some key characteristics and uses of abstract classes in Java:
@@ -945,11 +1009,14 @@ public class Main {
 In this example, the `Shape` abstract class defines an abstract method `draw()` that both `Circle` and `Rectangle` concrete subclasses must implement. The `resize()` method provides a default implementation that can be inherited by subclasses.
 
 ## Interface in java
+
 In Java, an interface is a blueprint for a class that defines a set of abstract methods that must be implemented by any concrete class (a class that is not abstract) that declares to implement the interface. An interface specifies a contract that the implementing class must adhere to, ensuring that certain methods are available for use in objects of that class. In addition to abstract methods, interfaces can also include constants (static final fields) and default methods with implementations.
 
 Variables declared inside of interface declarations are implicitly final and static, meaning
 they cannot be changed by the implementing class.
+
 ### Default methods in interface
+
 A default method lets you define a default implementation for an interface method. In other words, by use of a default method, it is now possible for an interface method to provide a body, rather than being abstract. During its development, the default method was also referred to as an extension method, and you will likely see both terms used.
 
 ```java
@@ -964,13 +1031,16 @@ default String getString() {
   }
 }
 ```
+
 ### Static methods in interface
+
 JDK 8 added another new capability to interface: the ability to define one or more static
 methods. Like static methods in a class, a static method defined by an interface can be
 called independently of any object. Thus, no implementation of the interface is necessary,
 and no instance of the interface is required, in order to call a static method. Instead, a static
 method is called by specifying the interface name, followed by a period, followed by the
 method name.
+
 ```java
 public interface MyIF {
 // This is a "normal" interface method declaration.
@@ -987,9 +1057,12 @@ public interface MyIF {
    }
 }
 ```
+
 InterfaceName.staticMethodName
 `int defNum = MyIF.getDefaultNumber();`
+
 ### Here are the key features and uses of interfaces in Java:
+
 1. **Declaring an Interface:**
    An interface is declared using the `interface` keyword, followed by the interface name.
 
@@ -997,7 +1070,7 @@ InterfaceName.staticMethodName
    interface MyInterface {
        void abstractMethod(); // Abstract method (no method body)
        int CONSTANT_VALUE = 42; // Constant (static final field)
-       
+
        default void defaultMethod() {
            // Default method with an implementation
            System.out.println("Default implementation of defaultMethod");
@@ -1045,7 +1118,8 @@ InterfaceName.staticMethodName
 
 Interfaces are an essential part of Java's design for achieving multiple inheritance-like behavior, encapsulating contracts, and enabling polymorphism through shared method signatures. They provide a powerful mechanism for defining common behavior that can be implemented by various classes.
 
-#### Interface inheritance 
+#### Interface inheritance
+
 In Java, interface inheritance refers to the ability of one interface to inherit or extend another interface. This allows you to create a new interface that builds upon the definitions in an existing interface, adding new method signatures or constants. Interface inheritance promotes code reuse and helps create a more organized and modular codebase. Java supports multiple interface inheritance, meaning a class can implement multiple interfaces.
 
 Here's how interface inheritance works in Java:
@@ -1133,6 +1207,7 @@ In this example, `InterfaceC` extends both `InterfaceA` and `InterfaceB`, and `M
 Interface inheritance in Java helps you create modular and extensible code by allowing you to define new interfaces that build upon existing ones. It promotes code reuse and the implementation of common behaviors across classes.
 
 ### Difference b/w Interface and classes
+
 You cannot instantiate an interface.
 •An interface does not contain any constructors.
 •All of the methods in an interface are abstract.
@@ -1142,7 +1217,9 @@ interface must be declared both static and final.
 •An interface can extend multiple interfaces.
 to implement an interface, a class must create the complete set of methods
 defined by the interface.
+
 ## Overriding and Overloading (example of polymorphism )
+
 In Java, overloading and overriding are two fundamental concepts related to methods in object-oriented programming. They are used to define and manipulate behaviors of classes and their methods. Let's explore each concept:
 
 ### Method Overloading:
@@ -1206,7 +1283,8 @@ In this example, the `Dog` class overrides the `makeSound` method inherited from
 
 To summarize, overloading involves defining multiple methods with the same name in the same class but with different parameter lists, while overriding involves providing a specific implementation of a method in a subclass that has the same signature as the method in the superclass. Both concepts are essential for creating flexible and extensible object-oriented code.
 
-## Using Final in context of overriding and Inheritance 
+## Using Final in context of overriding and Inheritance
+
 In Java, the `final` keyword has different implications for classes and methods in the context of inheritance.
 
 1. **Final Class**: When a class is declared as `final`, it means that it cannot be subclassed or extended. It prevents other classes from inheriting from it. For instance:

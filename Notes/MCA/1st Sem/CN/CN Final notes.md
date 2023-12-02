@@ -140,7 +140,7 @@ Wireless WAN
 3. **Protocols:**
    - **Meaning (in OSI context):** Protocols in the OSI model refer to the specific rules and conventions that govern communication within a particular layer. These protocols ensure that devices on a network can understand each other's signals and data format.
    - **Example:** At the network layer of the OSI model, the Internet Protocol (IP) is a protocol that defines how data packets should be addressed and routed between devices on different networks.
-![[Pasted image 20231122091409.png]]
+![](../../../statics/Pasted%20image%2020231122091409.png)
 ### Comparison of OSI Reference Model and TCP/IP Model:
 
 **OSI Reference Model:**
@@ -221,7 +221,7 @@ Dynamic Channel Allocation (DCA) is a technique used in communication systems, e
    - Stations can't check if the channel is busy before sending. They just go ahead and send. Only afterward, they find out if it worked.
 
 ## Multiple access protocol
-![[Pasted image 20231122094654.png]]
+![](../../../statics/Pasted%20image%2020231122094654.png)
 
 ### Random access protocols
 Random Access Protocols refer to a class of communication protocols in networking where multiple nodes or devices have access to a shared communication channel, and each node has an equal opportunity to transmit data without a fixed schedule or predefined order. The primary characteristic of random access protocols is that nodes contend for access to the channel, and the contention resolution mechanism involves randomness or probabilistic methods.
@@ -250,7 +250,7 @@ throughput of ALOHA systems is maximized by having a uniform frame size rather t
 
 ##### Pure ALOHA(the original ALOHA is called pure aloha)
 The basic idea of an ALOHA system is simple: let users transmit whenever they have data to be sent. There will be collisions, of course, and the colliding frames will be damaged. However, due to the feedback property of broadcasting, a sender can always find out whether its frame was destroyed by listening to the channel, the same way other users do. If the frame was destroyed, the sender just waits a random amount of time and sends it again. The waiting time must be random or the same frames will collide over and over, in lockstep. Vulnerable time , in which there is a possibility of collision (it is vulnerable time = 2 X T<sub>1</sub>)
-![[Pasted image 20231122100740.png]]
+![](../../../statics/Pasted%20image%2020231122100740.png)
 Advantages:
 - Superior to fixed assignment when there are large number of bursty stations.
 - Adapts to varying number of stations.
@@ -271,20 +271,20 @@ Disadvantages:
 Synchronization required.
 - Synchronous system: time divided into slots
 - Slot size equals fixed packet transmission time
-![[Pasted image 20231122173430.png]]
+![](../../../statics/Pasted%20image%2020231122173430.png)
 #### Carrier sense multiple access protocol
 Protocols in which stations listen for a carrier (i.e., a transmission) and act accordingly are called carrier sense protocols.
 1. 1-presistent method:- it is a simple method . in this , after the station finds the line idle, it sends its frame immediately (with probability 1) . This method has highest chance of collision because two or more ]station may find the medium idle and send frame immediately 
-![[Pasted image 20231122163821.png]]
+![](../../../statics/Pasted%20image%2020231122163821.png)
 
 2. Non-persistent :- in this a station that has frame to send senses the line. if line is idle , it sends immediately . if line is not idle , it waits a random amount time and then sense the line again. this approach reduce the chance of collision because it is unlikely that two or more stations will wait the same amount of time and retry to send simultaneously. however , this method reduce the efficiency of network because the medium remains idle when there may be stations with frames to send. 
-![[Pasted image 20231122164309.png]]
+![](../../../statics/Pasted%20image%2020231122164309.png)
 3. P-Persistent:- it combines advantages of other two strategies . reduce chance of collision and improve efficiency. 
 - With probability p , the station sends its frame.
 - With probabilty q = 1 - p , the station waits for the beginning of next time slot and checks the line again
 	- if the line is idle , it goes to step 1
 	- if line is busy , it acts as though collision has occured
-![[Pasted image 20231122164653.png]]
+![](../../../statics/Pasted%20image%2020231122164653.png)
 https://youtu.be/HyPiw5XWV0c?t=418 link for its explanation
 
 #### CSMA/CD
@@ -326,7 +326,7 @@ Three possible service provided
 ## Framing 
 framing is a process of encapsulating data into frames for reliable transmission over a communication link.
 
-![[Pasted image 20231123204838.png]]
+![](../../../statics/Pasted%20image%2020231123204838.png)
 
 The usual approach is for the data link layer to break the bit stream up into discrete frames and compute the checksum for each frame. When a frame arrives at the destination, the checksum is recomputed. If the newly computed checksum is different from the one contained in the frame, the data link layer knows that an error has occurred and takes steps to deal with it.
 
@@ -437,14 +437,14 @@ It's worth noting that there are other ARQ protocols, such as Selective Repeat, 
 - receiver while keeping track of sequence numbers , buffer the frames in memory and sends NACK for only frame which is missing or damaged.
 - Sender will retransmit/send packet for which NACK(negative ACK) is received 
 
-![[Pasted image 20231123213509.png]]
+![](../../../statics/Pasted%20image%2020231123213509.png)
 
 ## Error 
 #### Types of error 
 - Bit Error:- aka single bit error , in this only 1 bit in data unit has been changed 
-![[Pasted image 20231123214250.png]]
+![](../../../statics/Pasted%20image%2020231123214250.png)
 - Burst error:- in this 2 or more bits in data unit have changed 
-![[Pasted image 20231123214416.png]]
+![](../../../statics/Pasted%20image%2020231123214416.png)
 
 ### Error Detection 
 - means to decide whether the received data is correct or not without having a copy of original message
@@ -454,7 +454,7 @@ It's worth noting that there are other ARQ protocols, such as Selective Repeat, 
   
 In the context of error detection in networking, redundancy refers to the inclusion of extra information or bits in data transmission to detect errors that may occur during the communication process. The idea is to add redundant bits to the original data so that the recipient can identify and correct errors introduced by noise, interference, or other factors during transmission.
 
-![[Pasted image 20231123214730.png]]
+![](../../../statics/Pasted%20image%2020231123214730.png)
 
 #### There are different types of redundancy techniques used for error detection in networking:
 ##### Vertical redundancy check (Parity Check)
@@ -465,7 +465,7 @@ In the context of error detection in networking, redundancy refers to the inclus
 - At the receiving end, the parity bit is calculated from the received data bits and compared with the received parity bit. Even parity example
 - This technique generates the total number of 1s even, so it is known as even-parity checking.
 
-![[Pasted image 20231123215914.png]]
+![](../../../statics/Pasted%20image%2020231123215914.png)
 
 #### Single bit vs 2D parity
 **Single Bit Parity:**
@@ -544,7 +544,7 @@ In the context of error detection in networking, redundancy refers to the inclus
 - The receiver receives the data followed by the CRC remainder. The receiver will treat this whole unit as a single unit, and it is divided by the same divisor that was used to find the CRC remainder.
 - If the resultant of this division is zero which means that it has no error, and the data is accepted.
 - If the resultant of this division is not zero which means that the data consists of an error. Therefore, the data is discarded.
-![[Pasted image 20231124084503.png]]
+![](../../../statics/Pasted%20image%2020231124084503.png)
 
 ### Error Correction
 - Error correction techniques find out the exact number of bits that have been corrupted and as well as their locations. There are two principle ways
@@ -580,7 +580,7 @@ In the context of the Data Link Layer of the OSI model, flow control is particul
 ### Data Link Layer uses feedback based flow control mechanism which mainly uses the techniques as follows:
 
 ####  **Stop-and-Wait:** The sender waits for an acknowledgment before sending the next frame.
-![[Pasted image 20231123143106.png]]
+![](../../../statics/Pasted%20image%2020231123143106.png)
 1. **Sender Transmits a Frame:**
     - The sender transmits a data frame to the receiver.
 2. **Sender Waits for Acknowledgment:**
@@ -593,10 +593,10 @@ In the context of the Data Link Layer of the OSI model, flow control is particul
     - After successfully receiving a frame and sending an acknowledgment, the receiver processes the data and waits for the next frame.
 #### **Sliding Window:** The sender can have multiple frames in transit before receiving acknowledgments.
 
-![[Pasted image 20231123212626.png]]
+![](../../../statics/Pasted%20image%2020231123212626.png)
 
-![[Pasted image 20231123143918.png]]
-![[Pasted image 20231123143937.png]]
+![](../../../statics/Pasted%20image%2020231123143918.png)
+![](../../../statics/Pasted%20image%2020231123143937.png)
 notice here that sliding window shifted because the ack is received for 0 frame
 
 

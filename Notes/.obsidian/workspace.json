@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "MCA/1st Sem/SE/Software Testing.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "MCA/1st Sem/SE/Software Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
+                "file": "MCA/1st Sem/SE/Software Testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
+                "file": "MCA/1st Sem/SE/Software Testing.md"
               }
             }
           },
@@ -158,19 +158,19 @@
   },
   "active": "afe73581e785e498",
   "lastOpenFiles": [
+    "MCA/1st Sem/SE/Software Project management.md",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231202101310.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "statics/Pasted image 20231202100741.png",
     "Pasted image 20231202100647.png",
     "Pasted image 20231202100708.png",
     "Virtualmachine.md",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted.md",
     "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
     "statics/Pasted image 20231202094823.png",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/DBMS MCA/Short notes DBMS.md",
-    "MCA/1st Sem/SE/Software Project management.md",
     "MCA/1st Sem/DBMS MCA/Optimising Queries In Database Using Indexing.md",
     "MCA/1st Sem/DBMS MCA/Data Arch , models, independence.md",
     "statics/Pasted image 20231128075930.png",
@@ -178,7 +178,6 @@
     "statics/Pasted image 20231202093147.png",
     "statics/Pasted image 20231202092928.png",
     "statics/Pasted image 20231202092750.png",
-    "statics/Pasted image 20231202092608.png",
     "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/DBMS MCA/Concurrency.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",

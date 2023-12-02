@@ -730,4 +730,4 @@ You can customize the prompt dialog by changing the message and default value to
 5. **Legal Compliance**: Evolving data privacy regulations require websites to comply with strict cookie usage requirements, adding complexity and potential legal risks for site owners.
 
 
-![](Pasted%20image%2020231202100708.png)
+![](../../../statics/Pasted%2020image%202020231202100708.png)

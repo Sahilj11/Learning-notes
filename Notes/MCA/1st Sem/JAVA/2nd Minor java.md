@@ -1,9 +1,13 @@
 ## Package
+
 **java package** is a group of similar types of classes, interfaces and sub-packages.
 
-![[Pasted image 20231023084035.png]]
+![](../../../statics/Pasted%20image%2020231023084035.png)
+
 #### Creating package
+
 The **package keyword** is used to create a package in java.
+
 ```java
 - //save as Simple.java  
 - package mypack;  
@@ -13,28 +17,34 @@ The **package keyword** is used to create a package in java.
 -    }  
 - }
 ```
+
 #### Compile package
+
 ```java
 javac -d directory javafilename
 javac -d . Simple.java
 ```
+
 The -d switch specifies the destination where to put the generated class file. You can use any directory name like /home (in case of Linux), d:/abc (in case of windows) etc. If you want to keep the package within the same directory, you can use . (dot).
 
 You need to use fully qualified name e.g. mypack.Simple etc to run the class.
 **To Compile:** javac -d . Simple.java
 **To Run:** java mypack.Simple
+
 #### How to access package from another package?
+
 There are three ways to access the package from outside the package.
 
 1. import package.`*`;
-![[Pasted image 20231023084442.png]]
-3. import package.classname;
-![[Pasted image 20231023084520.png]]
+   ![](../../../statics/Pasted%20image%2020231023084442.png)
+2. import package.classname;
+   ![](../../../statics/Pasted%20image%2020231023084520.png)
 
-5. fully qualified name.
-![[Pasted image 20231023084537.png]]
+3. fully qualified name.
+   ![](../../../statics/Pasted%20image%2020231023084537.png)
 
 #### Subpackage
+
 Package inside the package is called the **subpackage**. It should be created **to categorize the package further**.
 
 Package in java can be categorized in two form, built-in package and user-defined package.
@@ -43,17 +53,20 @@ In Java, a package is a mechanism for organizing related classes and interfaces 
 1. **What is a Package?**  
    A package is a directory that contains a group of related Java classes and interfaces. It provides a hierarchical way to organize your Java code. Packages are used to avoid naming conflicts and to create a modular, well-organized codebase.
 
-2. **Why Use Packages?**  
+2. **Why Use Packages?**
+
    - **Organization:** Packages help you organize your classes logically. You can group related classes and interfaces together within a package.
    - **Access Control:** Packages can control the access to classes and their members (fields and methods). You can specify the access level using the `public`, `private`, `protected`, and default (no modifier) access modifiers.
    - **Naming Conflicts:** Packages help avoid naming conflicts. If two classes with the same name exist in different packages, there won't be a conflict as long as you use the fully qualified name (package name + class name) to refer to them.
 
-3. **Package Naming Convention:**  
+3. **Package Naming Convention:**
+
    - Package names are typically written in lowercase letters to distinguish them from class names, which usually start with an uppercase letter.
    - Package names usually follow the reverse domain name convention to ensure uniqueness. For example, if your domain is `example.com`, you might create a package named `com.example.myapp`.
 
 4. **Creating Packages:**  
    To create a package, you need to do the following:
+
    - Include a `package` declaration at the top of your Java source file. For example:
      ```java
      package com.example.myapp;
@@ -62,9 +75,11 @@ In Java, a package is a mechanism for organizing related classes and interfaces 
 
 5. **Accessing Classes in Packages:**  
    To access a class or interface from a package, you can use the `import` statement in your Java source code. For example:
+
    ```java
    import com.example.myapp.MyClass;
    ```
+
    You can then use `MyClass` in your code without specifying the full package name each time.
 
 6. **Classpath:**  
@@ -77,6 +92,7 @@ In Java, a package is a mechanism for organizing related classes and interfaces 
    You can also create nested packages within packages. For example, if you have a package `com.example.myapp`, you can create a subpackage `com.example.myapp.util` to further organize your code.
 
 9. **Package Visibility:**
+
    - Classes with default (package-private) access can be accessed only within the same package.
    - Classes with `public` access can be accessed from anywhere.
 
@@ -85,7 +101,8 @@ In Java, a package is a mechanism for organizing related classes and interfaces 
 
 In summary, packages in Java provide a way to structure, organize, and manage your code, prevent naming conflicts, and control access to classes and their members. They are an essential part of writing modular and maintainable Java applications.
 
-### Creating package and accessing it 
+### Creating package and accessing it
+
 Creating a package and accessing it in Java involves a series of steps. I'll explain the process in detail:
 
 **Creating a Package:**
@@ -150,18 +167,21 @@ Once you have created a package, you can access it in other classes or packages 
 4. **Access Modifier:** The access modifier of a class (e.g., `public`, `private`, `protected`, default) in a package affects how it can be accessed from other classes and packages. For example, if a class is declared as `public`, it can be accessed from any package. If it has default (package-private) access, it can only be accessed within the same package.
 
 In summary, creating and accessing packages in Java involves organizing your source code in a directory structure that matches the package name, including a `package` declaration in your source files, and using `import` statements to access classes from other packages. This helps you structure your code, avoid naming conflicts, and make your Java application more modular and organized.
+
 ### Advantage of Java Package
 
-1) Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+1. Java package is used to categorize the classes and interfaces so that they can be easily maintained.
 
-2) Java package provides access protection.
+2. Java package provides access protection.
 
-3) Java package removes naming collision.
+3. Java package removes naming collision.
 
 ## Input and output
-![[Pasted image 20231023094658.png]]
+
+![](../../../statics/Pasted%20image%2020231023094658.png)
 
 ### Stream
+
 In Java, a stream is a sequence of elements that you can process sequentially. Streams are a powerful and flexible feature introduced in Java 8 as a part of the Java Stream API, which is part of the `java.util.stream` package. Streams provide a way to work with collections of data in a more functional and declarative style. They offer a set of high-level operations that can be applied to collections, making it easier to perform various data manipulation tasks.
 
 Here are some key characteristics and concepts related to streams in Java:
@@ -171,6 +191,7 @@ Here are some key characteristics and concepts related to streams in Java:
 2. **Lazy Evaluation:** One of the significant features of streams is their lazy evaluation. Operations on a stream are not executed until you trigger a terminal operation. This can lead to more efficient and optimized processing.
 
 3. **Intermediate and Terminal Operations:** Stream operations can be categorized into two types:
+
    - **Intermediate Operations:** These operations transform the original stream into another stream, allowing you to filter, map, or modify the elements. Examples include `filter`, `map`, and `sorted`.
    - **Terminal Operations:** Terminal operations produce a result or a side effect. They trigger the execution of the stream operations and include operations like `forEach`, `collect`, and `reduce`.
 
@@ -193,7 +214,9 @@ System.out.println(squaresOfEvenNumbers); // Output: [4, 16, 36, 64, 100]
 In this example, we created a stream from a list of numbers, applied `filter` and `map` intermediate operations to transform the data, and finally collected the result into a list using the `collect` terminal operation.
 
 Streams are particularly useful for simplifying and optimizing data processing tasks, including filtering, mapping, reducing, and more. They are commonly used with collections like lists, sets, and maps, but you can also create streams from other data sources.
+
 ### Byte stream
+
 In Java, byte stream classes are used to perform input and output operations on binary data, such as reading and writing raw bytes. These classes are part of the `java.io` package and are typically used for handling non-text data, like images, audio, video, or any other binary files. Byte stream classes are essential for low-level I/O operations. Here are some of the most commonly used byte stream classes in Java:
 
 1. **`FileInputStream` and `FileOutputStream`:** These classes are used to read from and write to files, respectively. They work with binary data and are commonly used for reading and writing bytes to and from files.
@@ -280,7 +303,9 @@ Certainly, let's delve into more detail about `FileInputStream` and `FileOutputS
    ```
 
 Remember that when working with file streams, it's essential to handle potential exceptions, such as `IOException`, which can occur during file operations. It's good practice to use a `try-with-resources` block to automatically close the streams and handle exceptions effectively. Additionally, always ensure that you close both input and output streams after you're done with them to prevent resource leaks.
-### Character stream class 
+
+### Character stream class
+
 In Java, character stream classes are used for handling character data, such as text, in a character-oriented way. Character stream classes are part of the `java.io` package and are designed for reading and writing text-based data, including characters and strings. They are especially important when dealing with text files, configuration files, and other text-based input and output operations. Here are some of the most commonly used character stream classes in Java:
 
 1. **`FileReader` and `FileWriter`:** These classes are used for reading and writing text files, where characters are represented as Unicode characters. They are commonly used for text-based I/O operations.
@@ -366,7 +391,9 @@ Certainly, let's provide a more detailed explanation of `FileReader` and `FileWr
    ```
 
 When working with file readers and writers, it's important to handle potential exceptions, such as `IOException`, which can occur during file operations. It's a best practice to use a `try-with-resources` block to automatically close the streams and handle exceptions effectively. Additionally, always ensure that you close both input and output streams after you're done with them to prevent resource leaks.
+
 ### String tokenizer Class
+
 In Java, the `StringTokenizer` class is a legacy class that is used to break a string into tokens or smaller parts, based on a specified delimiter or set of delimiters. It's part of the `java.util` package. While `StringTokenizer` is still available in Java, it's considered somewhat outdated, and in most cases, it's recommended to use the `String.split()` method or regular expressions for string splitting, as they provide more flexibility and are more versatile.
 
 Here's how you can use the `StringTokenizer` class:
@@ -409,7 +436,7 @@ public class StringTokenizerExample {
     public static void main(String[] args) {
         String input = "apple,banana,cherry";
         StringTokenizer tokenizer = new StringTokenizer(input, ",");
-        
+
         while (tokenizer.hasMoreTokens()) {
             String token = tokenizer.nextToken();
             System.out.println(token);
@@ -423,7 +450,9 @@ This code will split the input string into tokens separated by commas and print 
 It's important to note that the `StringTokenizer` class doesn't provide as much flexibility as `String.split()` or regular expressions. Therefore, if you need more advanced string splitting or if you are working with regular expressions, you should consider using those methods instead for better control and functionality.
 
 ## Exception handling
+
 ### Intro
+
 - Exception is an unwanted or unexpected event which occur during the execution of a program ie at run time, that disrupts the normal flow of program
 - Exception handling in Java is a mechanism used to deal with runtime errors or exceptional conditions that can occur during the execution of a Java program. These exceptional conditions, known as exceptions, can be caused by various factors, such as incorrect input, hardware failures, or unexpected situations in the program's logic. Exception handling allows Java programs to gracefully handle these exceptions and prevent them from causing the program to crash or behave unpredictably.
 
@@ -460,15 +489,15 @@ Effective exception handling is an essential aspect of writing robust and reliab
 
 ### difference b/w exception and error
 
-![[Pasted image 20231023101546.png]]
+![](../../../statics/Pasted%20image%2020231023101546.png)
 
-![[Pasted image 20231023101901.png]]
-
+![](../../../statics/Pasted%20image%2020231023101901.png)
 
 ### Checked vs unchecked exception
+
 - Wrong Concept:- Compile time exception occurs at compile time and runtime exception occur at runtime
 - Right concept:- All exception occur at runtime
-![[Pasted image 20231023102701.png]]
+  ![](../../../statics/Pasted%20image%2020231023102701.png)
 - Checked exception:- exception which the compiler can check (here the program is not compiled but compiler beforehand warning about these before compiling)
 - Unchecked Exception:-
 
@@ -477,10 +506,12 @@ In Java, exceptions are categorized into two main types: checked exceptions and 
 **Checked Exceptions:**
 
 1. **Compilation Requirement**:
+
    - Checked exceptions must be either caught (using a `try-catch` block) or declared in the method signature using the `throws` keyword.
    - If you call a method that declares a checked exception, you must either catch the exception or declare it in your own method's signature.
 
 2. **Examples**:
+
    - Common checked exceptions include `IOException`, `SQLException`, and `ClassNotFoundException`.
    - These exceptions typically represent external factors beyond the programmer's control, such as I/O errors, database connectivity issues, or class loading problems.
 
@@ -491,10 +522,12 @@ In Java, exceptions are categorized into two main types: checked exceptions and 
 **Unchecked Exceptions (Runtime Exceptions):**
 
 1. **Compilation Requirement**:
+
    - Unchecked exceptions (runtime exceptions) do not require explicit handling (i.e., a `try-catch` block or `throws` declaration).
    - You can catch unchecked exceptions, but it's not mandatory, and you can choose not to handle them.
 
 2. **Examples**:
+
    - Common unchecked exceptions include `NullPointerException`, `ArithmeticException`, and `ArrayIndexOutOfBoundsException`.
    - These exceptions often result from programming errors, such as attempting to access a `null` reference, dividing by zero, or accessing an array out of bounds.
 
@@ -505,6 +538,7 @@ In Java, exceptions are categorized into two main types: checked exceptions and 
 In summary, the key difference between checked and unchecked exceptions is how they are handled in code. Checked exceptions are enforced at compile-time, requiring explicit handling, and they are typically used for recoverable external conditions. Unchecked exceptions do not require explicit handling, and they are often used for programming errors that should be addressed by fixing the code itself.
 
 ### Custom exception
+
 In Java, you can create your own custom exceptions by defining a new class that extends one of the existing exception classes or, more commonly, the `Exception` class. Creating custom exceptions allows you to handle specific error conditions in your application that are not adequately covered by built-in exceptions. Here's how you can define and use a user-defined exception in Java:
 
 1. **Create a User-Defined Exception Class**:
@@ -578,9 +612,11 @@ In Java, you can create your own custom exceptions by defining a new class that 
 Creating custom exceptions can help you make your code more self-explanatory and handle specific error conditions in a way that is meaningful for your application. Make sure to choose between checked and unchecked custom exceptions based on whether you expect the exceptions to be recoverable or indicate programming errors.
 
 ### Try , catch and finally
+
 In Java, the `try`, `catch`, and `finally` blocks are used in the context of exception handling to handle exceptions gracefully and ensure that certain actions are taken regardless of whether an exception is thrown. Here's an overview of each block and their roles in exception handling:
 
 1. **`try` Block**:
+
    - The `try` block is used to enclose the code that may throw an exception. It is followed by one or more `catch` blocks.
    - If an exception is thrown within the `try` block, the program will immediately jump to the appropriate `catch` block to handle the exception.
 
@@ -595,6 +631,7 @@ In Java, the `try`, `catch`, and `finally` blocks are used in the context of exc
    ```
 
 2. **`catch` Block**:
+
    - `catch` blocks are used to handle exceptions that are thrown within the corresponding `try` block.
    - Each `catch` block specifies the type of exception it can catch. If an exception matches the type, the code in that `catch` block is executed.
 
@@ -609,6 +646,7 @@ In Java, the `try`, `catch`, and `finally` blocks are used in the context of exc
    ```
 
 3. **`finally` Block**:
+
    - The `finally` block is optional and follows the `try` and `catch` blocks.
    - The code in the `finally` block is executed regardless of whether an exception occurred or not.
    - It is often used to perform cleanup operations, such as closing resources (e.g., files, database connections), releasing acquired resources, or ensuring that certain actions are taken no matter what.

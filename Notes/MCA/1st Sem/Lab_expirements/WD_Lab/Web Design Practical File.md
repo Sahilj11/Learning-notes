@@ -1,6 +1,6 @@
 ## (Experiment 1) 
 
-![[Pasted image 20231118080138.png]]
+![](../../../statics/Pasted%20image%2020231118080138.png)
 
 ```html
 <!doctype html>
@@ -54,7 +54,7 @@ The code provides a basic structure for a webpage but lacks actual link destinat
 
 This HTML structure presents a basic form layout using a table. It includes input fields for name, email, roll number, and class, followed by a submit button. The form also offers a prompt to login with a hyperlink. For functional use, the form inputs and login link require appropriate URLs or actions.
 
-![[Pasted image 20231118080043.png]]
+![](../../../statics/Pasted%20image%2020231118080043.png)
 
 ```html
 <!doctype html>
@@ -167,7 +167,7 @@ In this example:
 
 ## (Experiment 4)
 Here's a simple homepage created without using an external CSS file. This example includes basic HTML markup to structure the page and style the content using inline styles:
-![[Pasted image 20230927201626.png]]
+![](../../../statics/Pasted%20image%2020230927201626.png)
 
 
 ```html
@@ -223,9 +223,9 @@ In this example:
 ## (Experiment 5)
 
 Here's an example of how to create a user-defined function in JavaScript to get an array of values from the user and then sort them in ascending order:
-![[Pasted image 20230927202318.png]]
+![](../../../statics/Pasted%20image%2020230927202318.png)
 
-![[Pasted image 20230927202337.png]]
+![](../../../statics/Pasted%20image%2020230927202337.png)
 After sorting
 
 ```html
@@ -274,7 +274,7 @@ The `sortArray()` function is called when the "Sort Ascending" button is clicked
 You can enter a list of numbers separated by commas in the input field, and when you click the button, it will sort them in ascending order and display the result.
 
 ## (Experiment 6)
-![[Pasted image 20231118081026.png]]
+![](../../../statics/Pasted%20image%2020231118081026.png)
 ```html
 <!doctype html>
 <html lang="en">
@@ -410,7 +410,7 @@ This HTML document presents a registration form with associated styling and clie
 
 To implement basic event validation for a registration form using HTML and JavaScript, you can use the `onsubmit` event handler to check whether the form data is valid before submitting it. Here's a simple example:
 
-![[Pasted image 20231118124450.png]]
+![](../../../statics/Pasted%20image%2020231118124450.png)
 
 ```html
 <!DOCTYPE html>
@@ -504,9 +504,9 @@ To implement basic event validation for a registration form using HTML and JavaS
 This example includes basic form fields for first name, last name, email, password, and confirm password. The `validateForm` function is called when the form is submitted, and it checks if the required fields are filled out and if the passwords match. If any validation fails, an alert is shown, and the form submission is prevented. Otherwise, the form is submitted.
 ## <u>(Experiment 9)</u>
 Certainly! You can achieve this using JavaScript. Below is an example of a simple HTML page with a button. When the mouse hovers over the button, a new window is opened.
-![[Pasted image 20231118084333.png]]
+![](../../../statics/Pasted%20image%2020231118084333.png)
 this window open after hover of mouse
-![[Pasted image 20231118084409.png]]
+![](../../../statics/Pasted%20image%2020231118084409.png)
 
 
 ```html
@@ -615,7 +615,7 @@ These are just a few examples, and there are many more methods and properties av
 ## (Experiment 12)
 To display a calendar for the selected month and year using JavaScript, HTML, and CSS, you can create a simple web page with dropdowns for month and year. Here's an example using vanilla JavaScript:
 
-![[Pasted image 20231118131305.png]]
+![](../../../statics/Pasted%20image%2020231118131305.png)
 
 ```html
 <!DOCTYPE html>
