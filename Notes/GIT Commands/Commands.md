@@ -422,12 +422,12 @@ ca82a6d - Scott Chacon, 6 years ago : Change version number
 a11bef0 - Scott Chacon, 6 years ago : Initial commit
 ```
 
-![](../../../statics/Pasted%20image%2020230819130232.png)
+![](../statics/Pasted%20image%2020230819130232.png)
 The oneline and format option values are particularly useful with another log option called --graph.
 This option adds a nice little ASCII graph showing your branch and merge history:
 `git log --pretty=format:"%h %s" --graph`
 
-![](../../../statics/Pasted%20image%2020230819130419.png)
+![](../statics/Pasted%20image%2020230819130419.png)
 
 ## Limiting Log Output
 
@@ -453,7 +453,7 @@ the last option and is generally preceded by double dashes (--) to separate the 
 options:
 `$ git log -- path/to/file`
 
-![](../../../statics/Pasted%20image%2020230819130928.png)
+![](../statics/Pasted%20image%2020230819130928.png)
 
 ## undoing things
 
@@ -930,19 +930,19 @@ So, after running `git commit`, your Git repository contains the following five 
 3. One commit object that contains metadata (like your commit message) and a reference to the root tree object.
 
 These objects collectively form a snapshot of your project's state at the time of the commit. Git's history is built by linking these commit objects together in a chain, with each commit pointing to its parent commit, forming a version history of your project. This allows Git to efficiently track changes over time and recreate any previous snapshot of your project if needed.
-![](../../../statics/Pasted%20image%2020231001121804.png)
+![](img/Pasted%20image%2020231001121804.png)
 
 If you make some changes and commit again, the next commit stores a
 pointer to the commit that came immediately before it.
 
-![](../../../statics/Pasted%20image%2020231001121853.png)
+![](img/Pasted%20image%2020231001121853.png)
 
 A branch in Git is simply a lightweight movable pointer to one of these com-
 mits. The default branch name in Git is master. As you start making commits,
 you’re given a master branch that points to the last commit you made. Every
 time you commit, it moves forward automatically.
 
-![](../../../statics/Pasted%20image%2020231001122020.png)
+![](img/Pasted%20image%2020231001122020.png)
 
 ### Creating a branch
 
@@ -956,14 +956,14 @@ $ git branch testing
 
 This creates a new pointer to the same commit you’re currently on.
 
-![](../../../statics/Pasted%20image%2020231001122150.png)
+![](img/Pasted%20image%2020231001122150.png)
 How does Git know what branch you’re currently on? It keeps a special
 pointer called HEAD.
 In Git, this is a pointer to the local branch you’re currently on. In this case, you’re still on master.
 The git branch command only created a new branch – it didn’t switch to that
 branch.
 
-![](../../../statics/Pasted%20image%2020231001122304.png)
+![](img/Pasted%20image%2020231001122304.png)
 
 You can easily see this by running a simple git log command that shows
 you where the branch pointers are pointing. This option is called --decorate.
@@ -989,7 +989,7 @@ $ git checkout testing
 
 This moves HEAD to point to the testing branch.
 
-![](../../../statics/Pasted%20image%2020231001122527.png)
+![](img/Pasted%20image%2020231001122527.png)
 
 What is the significance of that? Well, let’s do another commit:
 
@@ -998,12 +998,12 @@ $ vim test.rb
 $ git commit -a -m 'made a change'
 ```
 
-![](../../../statics/Pasted%20image%2020231001122648.png)
+![](img/Pasted%20image%2020231001122648.png)
 This is interesting, because now your testing branch has moved forward,
 but your master branch still points to the commit you were on when you ran
 git checkout to switch branches. Let’s switch back to the master branch:
 
-![](../../../statics/Pasted%20image%2020231001122714.png)
+![](img/Pasted%20image%2020231001122714.png)
 
 That command did two things. It moved the HEAD pointer back to point to
 the master branch, and it reverted the files in your working directory back to
@@ -1018,7 +1018,7 @@ working directory will be reverted to look like it did the last time you
 committed on that branch. If Git cannot do it cleanly, it will not let you
 switch at all_
 
-![](../../../statics/Pasted%20image%2020231001122910.png)
+![](img/Pasted%20image%2020231001122910.png)
 
 You can also see this easily with the git log command. If you run git log
 --oneline --decorate --graph --all it will print out the history of your
@@ -1060,7 +1060,7 @@ $ git checkout iss53
 You work on your web site and do some commits. Doing so moves the iss53
 branch forward, because you have it checked out (that is, your HEAD is pointing
 to it):
-![](../../../statics/Pasted%20image%2020231001123441.png)
+![](img/Pasted%20image%2020231001123441.png)
 
 However, before you do that, note that if your working directory or staging
 area has uncommitted changes that conflict with the branch you’re checking
@@ -1083,7 +1083,7 @@ $ vim index.html
 $ git commit -a -m 'fixed the broken email address'
 ```
 
-![](../../../statics/Pasted%20image%2020231001123712.png)
+![](img/Pasted%20image%2020231001123712.png)
 
 You can run your tests, make sure the hotfix is what you want, and merge it
 back into your master branch to deploy to production. You do this with the git
@@ -1106,7 +1106,7 @@ following the first commit’s history, Git simplifies things by moving the poin
 forward because there is no divergent work to merge together – this is called a
 “fast-forward.”
 
-![](../../../statics/Pasted%20image%2020231001123923.png)
+![](img/Pasted%20image%2020231001123923.png)
 
 After your super-important fix is deployed, you’re ready to switch back to the
 work you were doing before you were interrupted. However, first you’ll delete
@@ -1118,7 +1118,7 @@ $ git branch -d hotfix
 Deleted branch hotfix (3a0874c).
 ```
 
-![](../../../statics/Pasted%20image%2020231001124035.png)
+![](img/Pasted%20image%2020231001124035.png)
 
 ### Basic Merging
 
@@ -1141,13 +1141,13 @@ commit on the branch you’re on isn’t a direct ancestor of the branch you’r
 merging in, Git has to do some work. In this case, Git does a simple three-way
 merge, using the two snapshots pointed to by the branch tips and the common
 ancestor of the two
-![](../../../statics/Pasted%20image%2020231001124833.png)
+![](img/Pasted%20image%2020231001124833.png)
 Instead of just moving the branch pointer forward, Git creates a new snap-
 shot that results from this three-way merge and automatically creates a new
 commit that points to it. This is referred to as a merge commit, and is special in
 that it has more than one parent.
 
-![](../../../statics/Pasted%20image%2020231001124918.png)
+![](img/Pasted%20image%2020231001124918.png)
 It’s worth pointing out that Git determines the best common ancestor to use
 for its merge base;
 

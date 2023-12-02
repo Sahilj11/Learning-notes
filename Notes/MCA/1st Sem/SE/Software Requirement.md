@@ -53,3 +53,21 @@ is -
 - quick in response
 - effectively handling operational errors
 - providing simple yet consistent user interface
+**Features of good UI**
+- Content presentation
+- Easy Navigation
+- Simple interface
+- Responsive
+- Consistent UI elements
+- Feedback mechanism
+
+## Software Measures and metrics
+Software Measures can be understood as a process of quantifying and symbolizing various attributes
+and aspects of software.
+
+Software Metrics provide measures for various aspects of software process and software
+- Size Metrics:- 
+- Complexity Metrics:- McCabe’s Cyclomatic complexity quantifies the upper bound of the number of independent paths in a program, which is perceived as complexity of the program or its modules.
+- Quality Metrics:- 
+- Process metrics:-In various phases of SDLC, the methods and tools used, the company standards and the performance of development are software process metrics.
+- Resource Metrics:-

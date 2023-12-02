@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "GIT Commands/Commands.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "GIT Commands/Commands.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "GIT Commands/Commands.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md"
+                "file": "GIT Commands/Commands.md"
               }
             }
           },
@@ -158,8 +158,8 @@
   },
   "active": "afe73581e785e498",
   "lastOpenFiles": [
-    "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/SE/Software Requirement.md",
+    "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/SE/Software Project management.md",
