@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "statics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
               }
             }
           },
@@ -169,8 +170,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b6d9001c6d4aef86",
+  "active": "368b9789e4cdafa2",
   "lastOpenFiles": [
+    "Virtualmachine.md",
+    "statics/Pasted image 20231202094823.png",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/DBMS MCA/Short notes DBMS.md",
     "MCA/1st Sem/SE/Software Project management.md",
     "MCA/1st Sem/DBMS MCA/Optimising Queries In Database Using Indexing.md",
@@ -184,12 +189,10 @@
     "statics/Pasted image 20231202071659.png",
     "statics/Pasted image 20231202070834.png",
     "statics/Pasted image 20231202061915.png",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
     "MCA/1st Sem/DBMS MCA/Concurrency.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
-    "statics/Pasted image 20231126210107.png",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/JAVA/GUI Programming.md",
@@ -199,14 +202,12 @@
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Udemy Networking/2. Cabeling and data flow.md",
-    "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Simple html page using css.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Simple web page.md",
     "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
     "MCA/1st Sem/JAVA/Detail String Notes.md",
-    "javaCollection/7. Maps.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

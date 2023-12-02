@@ -9,5 +9,6 @@
   },
   "attachmentFolderPath": "MCA 1st sem",
   "vimMode": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "newLinkFormat": "relative"
 }
