@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Testing.md",
+                "file": "MCA/1st Sem/SE/Software Requirement.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Testing.md",
+                "file": "MCA/1st Sem/SE/Software Requirement.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Testing.md",
+                "file": "MCA/1st Sem/SE/Software Requirement.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Testing.md"
+                "file": "MCA/1st Sem/SE/Software Requirement.md"
               }
             }
           },
@@ -158,6 +158,10 @@
   },
   "active": "afe73581e785e498",
   "lastOpenFiles": [
+    "MCA/1st Sem/SE/Software Testing.md",
+    "MCA/1st Sem/SE/Software Requirement.md",
+    "MCA/1st Sem/CN/CN Final notes.md",
+    "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/SE/Software Project management.md",
     "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231202101310.png",
@@ -178,14 +182,11 @@
     "statics/Pasted image 20231202093147.png",
     "statics/Pasted image 20231202092928.png",
     "statics/Pasted image 20231202092750.png",
-    "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/DBMS MCA/Concurrency.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/JAVA/GUI Programming.md",
-    "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
-    "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Udemy Networking/2. Cabeling and data flow.md",
