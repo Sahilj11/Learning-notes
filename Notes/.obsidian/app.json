@@ -10,5 +10,6 @@
   "attachmentFolderPath": "MCA 1st sem",
   "vimMode": false,
   "readableLineLength": false,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true
 }

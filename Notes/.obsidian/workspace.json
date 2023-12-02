@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7de2abb29a5f65e0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "statics",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -170,11 +156,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "368b9789e4cdafa2",
+  "active": "afe73581e785e498",
   "lastOpenFiles": [
+    "statics/Pasted.md",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
     "Virtualmachine.md",
     "statics/Pasted image 20231202094823.png",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/DBMS MCA/Short notes DBMS.md",
     "MCA/1st Sem/SE/Software Project management.md",
@@ -190,7 +178,6 @@
     "statics/Pasted image 20231202070834.png",
     "statics/Pasted image 20231202061915.png",
     "MCA/1st Sem/SE/Software Testing.md",
-    "MCA/1st Sem/WD/Server Side Scripting and UNIT 4.md",
     "MCA/1st Sem/DBMS MCA/Concurrency.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
@@ -207,7 +194,6 @@
     "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Simple web page.md",
     "MCA/1st Sem/JAVA/Detail Notes Multithreading.md",
-    "MCA/1st Sem/JAVA/Detail String Notes.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
