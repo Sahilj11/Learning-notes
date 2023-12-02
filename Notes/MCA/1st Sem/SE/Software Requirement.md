@@ -71,3 +71,20 @@ Software Metrics provide measures for various aspects of software process and so
 - Quality Metrics:- 
 - Process metrics:-In various phases of SDLC, the methods and tools used, the company standards and the performance of development are software process metrics.
 - Resource Metrics:-
+
+Here are examples for each of the mentioned software metrics:
+
+1. **Size Metrics:**
+   - Example: Lines of Code (LOC) - Counting the number of lines of code in a program or module.
+
+2. **Complexity Metrics:**
+   - Example: McCabe’s Cyclomatic Complexity - Calculating the complexity of a program based on the number of decision points and independent paths.
+
+3. **Quality Metrics:**
+   - Example: Defect Density - Calculating the number of defects or bugs per unit of software size, such as defects per KLOC (thousand lines of code).
+
+4. **Process Metrics:**
+   - Example: Lead Time - Measuring the time taken from the initiation of a software development process to its completion.
+
+5. **Resource Metrics:**
+   - Example: Effort Variance - Comparing the planned effort with the actual effort expended on a project, providing insights into resource utilization.
