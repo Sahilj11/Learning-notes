@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "MCA/1st Sem/SE/Problem Analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9ef3fb54f96d1833",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "MCA/1st Sem/SE/Problem Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md",
+                "file": "MCA/1st Sem/SE/Problem Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/Software Requirement.md"
+                "file": "MCA/1st Sem/SE/Problem Analysis.md"
               }
             }
           },
@@ -158,13 +170,19 @@
   },
   "active": "afe73581e785e498",
   "lastOpenFiles": [
-    "GIT Commands/Commands.md",
+    "Untitled.md",
+    "MCA/1st Sem/SE/Problem Analysis.md",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "statics/Pasted image 20231202115548.png",
+    "statics/Pasted image 20231202115458.png",
+    "statics/Pasted image 20231202115148.png",
+    "statics/Pasted image 20231202114657.png",
     "MCA/1st Sem/SE/Software Requirement.md",
+    "GIT Commands/Commands.md",
     "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/2nd Minor.md",
     "MCA/1st Sem/SE/Software Project management.md",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "statics/Pasted image 20231202101310.png",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "statics/Pasted image 20231202100741.png",
@@ -179,10 +197,6 @@
     "MCA/1st Sem/DBMS MCA/Optimising Queries In Database Using Indexing.md",
     "MCA/1st Sem/DBMS MCA/Data Arch , models, independence.md",
     "statics/Pasted image 20231128075930.png",
-    "statics/Pasted image 20231202093711.png",
-    "statics/Pasted image 20231202093147.png",
-    "statics/Pasted image 20231202092928.png",
-    "statics/Pasted image 20231202092750.png",
     "MCA/1st Sem/DBMS MCA/Concurrency.md",
     "MCA/1st Sem/DBMS MCA/Normalisation.md",
     "MCA/1st Sem/DBMS MCA/Relational model.md",
@@ -192,8 +206,6 @@
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Udemy Networking/2. Cabeling and data flow.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
-    "MCA/1st Sem/Lab_expirements/WD_Lab/Simple html page using css.md",
-    "MCA/1st Sem/Lab_expirements/WD_Lab/Frames to include video and image.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
