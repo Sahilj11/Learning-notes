@@ -145,11 +145,13 @@ As the name suggest, LOC count the total number of lines of source code in a pro
 - NLOC- Non comment lines of code
 - KDSI- Thousands of delivered source instruction
   The size is estimated by comparing it with the existing systems of same kind. The experts use it to predict the required size of various components of software and then add them to get the total size.
-  **+ves**
+
+**+ves**
 - Universally accepted and is used in many models like COCOMO.
 - Estimation is closer to developer’s perspective
 - Simple To use
-  **-ves**
+
+**-ves**
 - A different programming language contains different number of lines.
 - No proper industry standard exists for this technique.
 - It is difficult to estimate the size using this technique in early stages of project.
