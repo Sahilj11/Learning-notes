@@ -125,17 +125,6 @@ SCM (Software Configuration management) defines number of tasks
 
 ![](../../../statics/Pasted%20image%2020231202093147.png)
 
-The Software Configuration Management (SCM) process is a set of practices and procedures that helps manage and control changes to software throughout its development lifecycle. It typically includes:
-
-1. **Identification:** Recognizing and defining software configuration items (SCIs) or objects.
-
-2. **Version Control:** Managing different versions of the software to track changes, revisions, and releases.
-
-3. **Change Control:** Regulating and documenting changes to the software, ensuring proper authorization and tracking.
-
-4. **Configuration Audit:** Reviewing and validating the configuration items to ensure consistency and compliance with requirements.
-
-5. **Status Reporting:** Providing regular updates on the status of the software configuration, including changes, issues, and progress.
 
 #### Baseline
 
