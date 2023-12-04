@@ -50,10 +50,26 @@ Above code constructs the unchecked Checkbox by passing the Boolean valued argum
 This is the special case of the Checkbox component of Java AWT package. This is used as a group of checkboxes which group name is same. Only one Checkbox from a Checkbox Group can be selected at a time. Syntax for creating radio buttons is as follow
 
 ```java
-CheckboxGroup chkgp = new CheckboxGroup();
-add (new Checkbox (“One”, chkgp, false);
-add (new Checkbox (“Two”, chkgp, false);
-add (new Checkbox (“Three”,chkgp, false);
+import java.awt.*;
+/**
+ * radio
+ */
+public class radio {
+
+    public static void main(String[] args) {
+        Frame fr = new Frame();
+        CheckboxGroup chckgrp = new CheckboxGroup();
+        Checkbox chck1 = new Checkbox("C++",chckgrp,false);
+        Checkbox chck2 = new Checkbox("C",chckgrp,false);
+        Checkbox chck3 = new Checkbox("Rust",chckgrp,false);
+        fr.add(chck1);
+        fr.add(chck2);
+        fr.add(chck3);
+        fr.setVisible(true);
+        fr.setSize(300,300);
+        fr.setLayout(new FlowLayout());
+    }
+}
 ```
 
 #### Text Area
