@@ -195,10 +195,6 @@ floatingpoint values, and one for characters
 
 5. **Example:** Consider a scenario where you have a base class `Shape` with a method `calculateArea()`. You can have derived classes like `Circle` and `Rectangle` that inherit from `Shape` and override the `calculateArea()` method. When you call `calculateArea()` on a `Shape` object, the appropriate version of the method for the actual object's type (e.g., `Circle` or `Rectangle`) will be executed.
 
-```java
-
-```
-
 **Abstraction:**
 Abstraction is a fundamental concept in object-oriented programming (OOP) that focuses on simplifying complex systems by modeling classes, objects, and their behaviors in a way that hides unnecessary details while emphasizing the essential features. Abstraction allows developers to create a high-level view of a system, making it easier to understand, maintain, and work with. Here's an explanation of abstraction:
 
@@ -262,21 +258,20 @@ between threads.
 
 ```java
 class Parent {
-    void display() {
-        System.out.println("Inside Parent class");
-    }
-}
+    public int add (int a , int b){
+      return a + b;
+   }
 
-class Child extends Parent {
-    void display() {
-        System.out.println("Inside Child class");
-    }
+   public float add (float a , float b){
+     return a + b;
+  }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Parent obj = new Child(); // Parent reference but Child object
-        obj.display(); // Static binding - method call is resolved at compile time
+        Parent obj = new Parent(); // Parent reference
+        obj.add(1,2); // Static binding - method call is resolved at compile time
+        obj.add(1.2,3.2);
     }
 }
 
