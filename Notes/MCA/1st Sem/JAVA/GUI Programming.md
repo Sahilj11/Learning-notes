@@ -189,45 +189,22 @@ Creating a simple combo box in AWT involves using the `Choice` class. Here's a b
 
 ```java
 import java.awt.*;
-import java.awt.event.*;
-
-public class ComboBoxExample {
-    private Frame frame;
-    private Choice choice;
-
-    public ComboBoxExample() {
-        frame = new Frame("Combo Box Example");
-
-        // Create a Choice (combo box) and add items
-        choice = new Choice();
-        choice.add("Item 1");
-        choice.add("Item 2");
-        choice.add("Item 3");
-        choice.add("Item 4");
-
-        // Add an ItemListener to handle selection events
-        choice.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                System.out.println("Selected: " + choice.getSelectedItem());
-            }
-        });
-
-        // Add the Choice component to the frame
-        frame.add(choice);
-
-        // Set frame properties
-        frame.setSize(300, 200);
-        frame.setLayout(new FlowLayout());
-        frame.setVisible(true);
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent windowEvent) {
-                System.exit(0);
-            }
-        });
-    }
+/**
+ * combo
+ */
+public class combo {
 
     public static void main(String[] args) {
-        new ComboBoxExample();
+        Frame fr = new Frame();
+        Choice choice = new Choice();
+        choice.add("Haryana");
+        choice.add("Delhi");
+        choice.add("UP");
+        choice.add("Himachal");
+        fr.add(choice);
+        fr.setVisible(true);
+        fr.setSize(300, 300);
+        fr.setLayout(new FlowLayout());
     }
 }
 ```
