@@ -183,3 +183,62 @@ left or vice versa. The manager allows aligning the components.
 ```java
 JOptionPane.showMessageDialog(null, "This is an informational message.", "title", JOptionPane.INFORMATION_MESSAGE);
 ```
+
+## Combo Box
+Creating a simple combo box in AWT involves using the `Choice` class. Here's a basic example:
+
+```java
+import java.awt.*;
+import java.awt.event.*;
+
+public class ComboBoxExample {
+    private Frame frame;
+    private Choice choice;
+
+    public ComboBoxExample() {
+        frame = new Frame("Combo Box Example");
+
+        // Create a Choice (combo box) and add items
+        choice = new Choice();
+        choice.add("Item 1");
+        choice.add("Item 2");
+        choice.add("Item 3");
+        choice.add("Item 4");
+
+        // Add an ItemListener to handle selection events
+        choice.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                System.out.println("Selected: " + choice.getSelectedItem());
+            }
+        });
+
+        // Add the Choice component to the frame
+        frame.add(choice);
+
+        // Set frame properties
+        frame.setSize(300, 200);
+        frame.setLayout(new FlowLayout());
+        frame.setVisible(true);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent windowEvent) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        new ComboBoxExample();
+    }
+}
+```
+
+In this example:
+
+1. We create a `Frame` to hold our GUI components.
+2. We create a `Choice` (combo box) named `choice` and add items to it.
+3. We add an `ItemListener` to the `Choice` to handle selection events. The `itemStateChanged` method is called when the user selects a different item in the combo box.
+4. We add the `Choice` to the frame.
+5. The `WindowAdapter` is used to handle the window-closing event.
+
+When you run this program, it will display a window with a combo box containing the specified items. The program will print the selected item to the console whenever the user makes a selection.
+
