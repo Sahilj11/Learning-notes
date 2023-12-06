@@ -77,9 +77,6 @@ while **Software inspection** is testing plus code review to ensure that it is c
 
 ### Testing vs debugging
 
-Sure, here's a markdown table presenting the differences between testing and debugging:
-Certainly, here's the updated table with the additional three points:
-
 | S.NO | Testing                                                                                                                                                                      | Debugging                                                                                                  |
 | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | 1.   | It is the implementation of the software with the intent of identifying the defects.                                                                                         | The process of fixing and resolving the defects is known as debugging.                                     |
@@ -89,9 +86,6 @@ Certainly, here's the updated table with the additional three points:
 | 5.   | Programming knowledge is not required to perform the testing process.                                                                                                        | Without having an understanding of the programming language, we cannot proceed with the debugging process. |
 | 6.   | Once the coding phase is done, we proceed with the testing process.                                                                                                          | After the implementation of the test case, we can start the Debugging process.                             |
 | 7.   | Software Testing includes two or more activities such as validation and verification of the software.                                                                        | Debugging tries to match indication with cause, hence leading to the error correction.                     |
-| 8.   | It is built on different testing levels such as Unit Testing, Integration Testing, System Testing, etc.                                                                      | It is built on different kinds of bugs because there is no such level of debugging possible.               |
-| 9.   | Software testing is the presentation of defects.                                                                                                                             | It is a logical procedure.                                                                                 |
-| 10.  | Software testing is the vital phase of SDLC (Software Development Life Cycle).                                                                                               | It is not a part of SDLC because it occurs as a subset of testing.                                         |
 
 ## Software testing life cycle
 

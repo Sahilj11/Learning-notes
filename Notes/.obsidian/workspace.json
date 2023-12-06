@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/SE/Problem Analysis.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/1st Sem/SE/Problem Analysis.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/1st Sem/SE/Problem Analysis.md",
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/1st Sem/SE/Problem Analysis.md"
+                "file": "MCA/1st Sem/SE/2. Software Engineering.md"
               }
             }
           },
@@ -170,6 +170,11 @@
   },
   "active": "afe73581e785e498",
   "lastOpenFiles": [
+    "MCA/1st Sem/SE/Software Testing.md",
+    "MCA/1st Sem/SE/2. Software Engineering.md",
+    "MCA/1st Sem/SE/Problem Analysis.md",
+    "MCA/1st Sem/SE/Software Project management.md",
+    "MCA/1st Sem/SE/Software Requirement.md",
     "statics/Pasted image 20231202180200.png",
     "statics/Pasted image 20231202180131.png",
     "statics/Pasted image 20231202180059.png",
@@ -181,15 +186,9 @@
     "statics/Pasted image 20231202174547.png",
     "statics/Pasted image 20231202174323.png",
     "Untitled.md",
-    "MCA/1st Sem/SE/Problem Analysis.md",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
-    "statics/Pasted image 20231202115548.png",
-    "MCA/1st Sem/SE/Software Requirement.md",
     "GIT Commands/Commands.md",
-    "MCA/1st Sem/SE/Software Testing.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/2nd Minor.md",
-    "MCA/1st Sem/SE/Software Project management.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
     "Virtualmachine.md",
     "statics/Pasted.md",
