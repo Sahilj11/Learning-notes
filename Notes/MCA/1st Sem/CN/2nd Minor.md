@@ -178,37 +178,21 @@ packets onto the link which is least queued
 
 ![](../../../statics/Pasted%20image%2020231022161242.png)
 
-### Hierarchical Routing
+## Classification of Routing algo
+#### Shortest Path routing 
+In Shortest Path Routing, there are two ways in which we
+can find the shortest path from the source to destination. These are:
 
-In this method of routing the nodes are divided into regions based on
-hierarchy
-A particular node can communicate with nodes at the same hierarchical level or the nodes at
-a lower level and directly under it.
-Here, the path from any source to a destination is fixed and is exactly one if the hierarchy is a tree.
+- On the basis of number of hops used in data transfer.
+- On the basis of distance (in kilometers) among the different hops to reach the destination.
 
-**In Hierarchical routing, the interfaces need to store information about:**
+In shortest path Dijkstra algorithm is implemented. In this algorithm, all the nodes are
+labeled with infinity at the starting. As the algorithm precedes the corresponding node
+value replaces the infinity with the new value. This label may be changed or made
+permanent depending on the calculation of shortest path from the initial position to final
+position.. In starting, these labels are not permanent but when it is termed as the shortest
+path then this label is made as permanent.
 
-- All nodes in its region which are at one level below it.
-- Its peer interfaces.
-- At least one interface at a level above it, for outgoing packages.
-  **+ves**
-- smaller size of routing tables
-- substaintially lesser calculations and updates of routing tables
-  **-ves**
-- Once the hierarchy is imposed on the network, it is followed and possibility of direct paths is ignored.
-- This may lead to sub optimal routing.
-
-### Optimality principle
-
-- We can make a general statement about optimal routes without regard to network topology or traffic which is known as optimality principle.
-- it states that if router J is on optimal path from I to K then optimal path from J to K also fall on same route
-- if the path b/w I and K is optimal then, if any router exist b/w I and K i.e J . so the path b/w from I to J and J to K is also optimal
-  ![](../../../statics/Pasted%20image%2020231022163723.png)
-  ![](../../../statics/Pasted%20image%2020231022163805.png)
-
-## Static routing algo
-
-### Shortest path Routing algo
 
 We need to calculate a shortest path that is optimal.
 A network is represented as a graph, with its terminals as nodes and the links as edges. A
@@ -224,33 +208,44 @@ transmission.
   - Bellman Ford algorithm
   - Floyd Warshall’s algorithm
 
-## Distance vector routing algo
+#### Flooding
+type of static routing algo , 
+uses
+- In military applications, where large numbers of routers may be blown to bits at any instant, the tremendous robustness of flooding is highly desirable.
 
-- Distance Vector Routing is one of the dynamic routing algorithm.
-- It is suitable for packet switched network.
-- In distance vector routing, each router maintains a routing table.
-- It contains one entry for each router in the subnet. This entry has two parts:
-  - The first part shows the preferred outgoing line to be used to reach the destination.
-  - Second part gives an estimate of the time or distance to the destination
-- In distance vector routing, a node tells its neighbor about its distance to every other node in the network.
-- Distance vector algorithm is iterative, asynchronous and distributed in nature.
-  - Distributed: It is distributed in that each node receives information from one or more of its directly attached neighbors, performs calculation and then distributes the result back to its neighbors.
-  - Iterative: It is iterative in that its process continues until no more information is available to be exchanged between neighbors.
-  - Asynchronous: It does not require that all of its nodes operate in the lock step with each other
-- Keys to understand the working of Distance Vector Routing Algorithm:
-  - Knowledge about the whole network: Each router shares its knowledge through the entire network. The Router sends its collected knowledge about the network to its neighbors.
-  - Routing only to neighbors: The router sends its knowledge about the network to only those routers which have direct links. The router sends whatever it has about the network through the ports. The information is received by the router and uses the information to update its own routing table.
-  - Information sharing at regular intervals: Within 30 seconds, the router sends the information to the neighboring routers.
+- In distributed database applications, it is sometimes necessary to update all the databases concurrently, in which flooding can be useful.
 
-## Link state routing algo
+- In wireless networks, all messages transmitted by a station can be received by all other stations within the radio range.
 
+#### Distance vector routing
+In this each router maintains a Distance Vector to every
+other router in its network. This vector contains, among other things, the cost of reaching
+the destination router and the next hop to forward to. Each router starts by exchanging a
+distance vector to its neighbors and eventually ends of exchanging a distance vector to all
+routers in its domain. Obviously, this routing protocol is preferred for small network
+sizes. Distance vector routing is a dynamic algorithm. In this each router maintains its
+own table giving the best known path. These tables are updated by exchanging the
+information from the neighbors. The router is assumed to know the distance to each of its
+neighbors.
+
+DV algorithms are also known as Bellman-Ford routing algorithms and Ford-Fulkerson
+routing algorithms. In these algorithms, every router has a routing table that shows it the
+best route for any destination.
+
+**Count to Infinity**
+- Problem with distance vector routing is whenever a link is broken, other routers unknowingly gives information that they know how to reach a disconnected node. This false information will propagate to all routers. This problem is known as count to infinity.
+- One of the important issue in Distance Vector Routing is Count to Infinity Problem.
+- Counting to infinity is just another name for a routing loop.
+- In distance vector routing, routing loops usually occur when an interface goes down.
+- It can also occur when two routers send updates to each other at the same time.
+
+#### Link State 
 Link state is a dynamic routing algorithm in which each router shares knowledge of its neighbors with every other router in the network.
 
 A router sends its information about its neighbors only to all the routers through flooding.
 Information sharing takes place only whenever there is a change.
 It makes use of Dijkistra’s Algorithm for making routing tables.
 Keys to understand Link state routing:
-
 - Knowledge about the neighborhood: Instead of sending its routing table, a router sends the information about its neighborhood only. A router broadcast its identities and cost of the directly attached links to other routers.
 - Flooding: Each router sends the information to every other router on the internetwork except its neighbors. This process is known as Flooding. Every router that receives the packet sends the copies to all its neighbors. Finally, each and every router receives a copy of the same information.
 - Information sharing: A router sends the information to every other router only when the change occurs in the information.
@@ -261,15 +256,35 @@ Link State Routing Phases:
   - Initial state: Each node knows the cost of its neighbors.
   - Final state: Each node knows the entire graph.
 - Route Calculation - Each node uses Dijkstra's algorithm on the graph to calculate the optimal routes to all nodes. - The Link state routing algorithm is also known as Dijkstra's algorithm which is used to find the shortest path from one node to every other node in the network. - The Dijkstra's algorithm is an iterative, and it has the property that after kth iteration of the algorithm, the least cost paths are well known for k destination nodes.
+#### Hierarchical
+
+In this method of routing the nodes are divided into regions based on hierarchy
+A particular node can communicate with nodes at the same hierarchical level or the nodes at a lower level and directly under it.
+Here, the path from any source to a destination is fixed and is exactly one if the hierarchy is a tree.
+
+**In Hierarchical routing, the interfaces need to store information about:**
+- All nodes in its region which are at one level below it.
+- Its peer interfaces.
+- At least one interface at a level above it, for outgoing packages.
+  **+ves**
+- smaller size of routing tables
+- substaintially lesser calculations and updates of routing tables
+  **-ves**
+- Once the hierarchy is imposed on the network, it is followed and possibility of direct paths is ignored.
+- This may lead to sub optimal routing.
+
+![](../../../statics/Pasted%20image%2020231208075418.png)
+
+
+### Optimality principle
+
+- We can make a general statement about optimal routes without regard to network topology or traffic which is known as optimality principle.
+- it states that if router J is on optimal path from I to K then optimal path from J to K also fall on same route
+- if the path b/w I and K is optimal then, if any router exist b/w I and K i.e J . so the path b/w from I to J and J to K is also optimal
+  ![](../../../statics/Pasted%20image%2020231022163723.png)
+  ![](../../../statics/Pasted%20image%2020231022163805.png)
+
   ![](../../../statics/Pasted%20image%2020231022182812.png)
-
-## count to infinity
-
-- Problem with distance vector routing is whenever a link is broken, other routers unknowingly gives information that they know how to reach a disconnected node. This false information will propagate to all routers. This problem is known as count to infinity.
-- One of the important issue in Distance Vector Routing is Count to Infinity Problem.
-- Counting to infinity is just another name for a routing loop.
-- In distance vector routing, routing loops usually occur when an interface goes down.
-- It can also occur when two routers send updates to each other at the same time.
 
 ## Congestion control
 
@@ -277,7 +292,6 @@ A state occurring in network layer when the message traffic is so heavy that it 
 network response time is called as congestion.
 
 #### Principles of congestion control
-
 Congestion control in networking is a critical aspect of managing data traffic to ensure that the network operates efficiently and fairly. The primary goal of congestion control is to prevent network congestion, which can lead to packet loss, delays, and reduced quality of service. Here are some of the key principles of congestion control in networking:
 
 1. **Load Monitoring**: Networks should continuously monitor the level of congestion. This can be done by measuring factors such as packet loss, delay, or the utilization of network links.
@@ -289,24 +303,19 @@ Congestion control in networking is a critical aspect of managing data traffic t
 7. **Quality of Service (QoS)**: QoS mechanisms can be used to prioritize different types of traffic, giving more resources to critical applications like VoIP or video streaming while limiting resources for less critical traffic.
 
 Effects of Congestion:
-
 - As delay increases, performance decreases.
 - If delay increases, retransmission occurs, making situation worse
 
 Congestion control algorithms:
-
 - Leaky Bucket Algorithm
 - Token bucket Algorithm
 
 #### Leaky bucket algo
-
 - each network interface contains a leaky bucket and the following steps are involved in leaky bucket algorithm: - When host wants to send packet, packet is thrown into the bucket. - The bucket leaks at a constant rate, meaning the network interface transmits packets at a constant rate. - Bursty traffic is converted to a uniform traffic by the leaky bucket. - In practice the bucket is a finite queue that outputs at a finite rate.
   ![](../../../statics/Pasted%20image%2020231022183651.png)
 
 #### Token bucket algo
-
 The leaky bucket algorithm enforces output pattern at the average rate, no matter how bursty the traffic is.
-
 In order to deal with the bursty traffic we need a flexible
 algorithm so that the data is not lost.
 
@@ -325,17 +334,22 @@ Congestion control refers to the techniques used to control or prevent congestio
 - Congestion control techniques can be broadly classified into two categories:
   - Open Loop Congestion Control
   - Closed Loop Congestion Control
-- Open loop congestion control policies are applied to prevent congestion before it happens. The congestion control is handled either by the source or the destination. Open loop control loop have following policies:
-  - Retransmission Policy
-  - Window Policy
-  - Discarding Policy
-  - Acknowledgment Policy
-  - Admission Policy
-- Closed Loop Congestion Control: Closed loop congestion control technique is used to treat or alleviate congestion after it happens. Several techniques are used by different protocols; some of them are:
-  - Backpressure
-  - Choke Packet Technique
-  - Implicit Signaling
-  - Explicit Signaling
+
+Open loop congestion control and closed loop congestion control are two approaches to managing network congestion in data communication. 
+
+1. **Open Loop Congestion Control:**
+   Open loop congestion control policies are implemented proactively to prevent congestion before it occurs. This type of control can be managed either by the source or the destination. The key policies include:
+   - **Retransmission Policy:** This policy involves retransmitting lost or corrupted packets to ensure reliable communication and to prevent congestion caused by packet loss.
+   - **Window Policy:** Involves adjusting the size of the sender's transmission window to control the flow of data and avoid overwhelming the network.
+   - **Discarding Policy:** This policy involves discarding or selectively dropping packets based on certain criteria to regulate the traffic flow and prevent congestion.
+   - **Acknowledgment Policy:** Managing how acknowledgments are handled to control the rate of data transmission and avoid congestion.
+   - **Admission Policy:** This policy determines whether a new connection or data flow can be admitted into the network based on its potential impact on congestion.
+2. **Closed Loop Congestion Control:**
+   Closed loop congestion control techniques are applied reactively to address congestion after it has occurred. Different protocols employ various methods to manage congestion dynamically. Some of the techniques include:
+   - **Backpressure:** Involves sending signals back to the source to slow down or stop sending data temporarily, allowing the congested network to catch up and recover.
+   - **Choke Packet Technique:** Sending special packets to indicate network congestion, causing the sender to adjust its transmission rate accordingly.
+   - **Implicit Signaling:** Utilizing implicit signals, such as increased delay or packet loss, to inform senders about network congestion so that they can adjust their behavior.
+   - **Explicit Signaling:** Involves explicit signaling between network elements to convey information about congestion, allowing for adaptive adjustments in data transmission rates.
 
 # IP
 

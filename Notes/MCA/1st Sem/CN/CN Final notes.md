@@ -181,12 +181,34 @@ The traditional way of allocating a single channel, eg. a telephone line, among 
 
 If the spectrum is cut up into N regions and fewer than N users are currently interested in communicating, a large piece of valuable spectrum will be wasted. If more than N users want to communicate, some of them will be denied permission for lack of bandwidth, even if some of the users who have been assigned a frequency band hardly ever transmit or receive anything.
 
-- Time Division Multiple Access (TDMA) – With TDMA the time axis is divided into time slots of a fixed length.
-	- Each user is allocated a fixed set of time slots at which it can transmit.
-	- TDMA requires that users be synchronized to a common clock. Typically extra overhead bits are required for synchronization.
-- Frequency Division Multiple Access (FDMA) – With FDMA the available frequency bandwidth is divided into disjoint frequency bands.
-	- A fixed band is allocated to each user. FDMA requires a guard band between user frequency bands to avoid cross-talk.
-	- Another static allocation technique is Code Division Multiple Access (CDMA), which is used in many wireless networks
+FDMA (Frequency Division Multiple Access), CDMA (Code Division Multiple Access), and TDMA (Time Division Multiple Access) are all multiple access techniques used in telecommunications to allow multiple users to share the same communication channel. Each of these techniques employs a different approach to allocate and manage the communication resources.
+
+1. **FDMA (Frequency Division Multiple Access):**
+   - In FDMA, the available frequency band is divided into multiple non-overlapping frequency channels.
+   - Each channel is assigned to a specific user or communication stream.
+   - Users can simultaneously transmit and receive on their allocated frequency channels without interfering with each other.
+   - Commonly used in analog communication systems and some early-generation cellular networks.
+
+2. **CDMA (Code Division Multiple Access):**
+   - CDMA allows multiple users to share the same frequency band simultaneously.
+   - Each user is assigned a unique code, and the signals from different users are spread across the entire frequency spectrum.
+   - All users can transmit and receive at the same time and on the same frequency, but the unique codes enable the system to distinguish between different users' signals.
+   - CDMA is known for its efficient use of bandwidth and robustness against interference.
+   - Widely used in 3G and 4G cellular networks.
+
+3. **TDMA (Time Division Multiple Access):**
+   - TDMA divides the available time into time slots.
+   - Users take turns transmitting and receiving during their assigned time slots.
+   - Each time slot is very short, and the sequence of time slots repeats in a cycle.
+   - TDMA is efficient in utilizing time resources and is often used in digital communication systems.
+   - Commonly found in GSM (Global System for Mobile Communications) and other digital cellular networks.
+
+In summary:
+- **FDMA** divides the frequency spectrum into distinct channels.
+- **CDMA** allows multiple users to share the same frequency by using unique codes.
+- **TDMA** divides time into slots, and users take turns using the same frequency.
+
+These multiple access techniques are fundamental to designing and managing communication systems, especially in the context of wireless networks where efficient utilization of available resources is crucial. Each technique has its advantages and is suitable for different types of communication systems and technologies.
 ### Dynamic channel allocation
 
 **Dynamic Channel Allocation:**
@@ -221,25 +243,22 @@ Dynamic Channel Allocation (DCA) is a technique used in communication systems, e
    - Stations can't check if the channel is busy before sending. They just go ahead and send. Only afterward, they find out if it worked.
 
 ## Multiple access protocol
+  
+A multi-access protocol is a set of rules or procedures that govern how multiple users or devices can access and share a communication channel or network medium. These protocols are designed to coordinate and manage the access of multiple users to the shared resources, preventing conflicts and ensuring efficient use of the available bandwidth
+
 ![](../../../statics/Pasted%20image%2020231122094654.png)
 
 ### Random access protocols
 Random Access Protocols refer to a class of communication protocols in networking where multiple nodes or devices have access to a shared communication channel, and each node has an equal opportunity to transmit data without a fixed schedule or predefined order. The primary characteristic of random access protocols is that nodes contend for access to the channel, and the contention resolution mechanism involves randomness or probabilistic methods.
 
 Here are some key points about random access protocols:
-
 1. **Contending for Access:** In a random access protocol, multiple nodes share a common communication channel. When a node has data to transmit, it contends for access to the channel, indicating its intention to send.
-
 2. **Equal Opportunity:** Each node in the network has an equal chance of gaining access to the channel. There is no predefined order or hierarchy among nodes.
-
 3. **No Fixed Schedule:** Unlike scheduled or controlled access protocols, there is no fixed time slot or schedule for nodes to transmit. Nodes transmit whenever they have data to send.
-
 4. **Collision Handling:** Since multiple nodes may attempt to transmit simultaneously, collisions can occur. Collision detection and resolution mechanisms are implemented to manage these situations.
-
 5. **Examples of Random Access Protocols:**
    - **ALOHA:** One of the earliest examples of a random access protocol is the ALOHA protocol, where nodes can transmit data at any time. Collisions are detected, and retransmissions are attempted after random backoff periods.
    - **Carrier Sense Multiple Access (CSMA):** CSMA protocols listen to the channel before transmitting. If the channel is sensed as busy, the node defers its transmission. Variants include CSMA/CD (Collision Detection) and CSMA/CA (Collision Avoidance).
-
 6. **Efficiency and Throughput:** Random access protocols are often efficient in scenarios with variable and unpredictable data transmission patterns. However, as the network becomes more congested or the number of contending nodes increases, the likelihood of collisions also rises, potentially affecting throughput.
 
 Many algorithms for allocating a multiple access channel are known , some of them are:
@@ -335,7 +354,7 @@ The usual approach is for the data link layer to break the bit stream up into di
    - In the character count framing method, a field in the frame header indicates the number of characters (or bytes) in the data field of the frame. The receiving end uses this count to identify the boundaries of the frame. This method is straightforward and does not involve the insertion of additional control characters.
 
 2. **Flag Bytes with Byte Stuffing:**
-   - This method uses special flag bytes (delimiters) to mark the beginning and end of a frame. Byte stuffing is employed to handle instances where the data field contains the same byte sequence as the flag. To distinguish between actual flags and data that might be mistaken for flags, an escape character is inserted before any occurrence of the flag in the data. This escape character signals that the following byte is not a flag but part of the data.
+two   - This method uses special flag bytes (delimiters) to mark the beginning and end of a frame. Byte stuffing is employed to handle instances where the data field contains the same byte sequence as the flag. To distinguish between actual flags and data that might be mistaken for flags, an escape character is inserted before any occurrence of the flag in the data. This escape character signals that the following byte is not a flag but part of the data.
 
 3. **Starting and Ending Flags, with Bit Stuffing:**
    - Similar to the flag bytes method, this approach uses special start and end flag sequences to mark the beginning and end of a frame. Bit stuffing is employed to handle cases where the data portion of the frame contains consecutive bits that match the flag sequence. If a specific bit pattern is detected in the data that corresponds to the flag, an extra bit is inserted to avoid confusion between data and flags.
@@ -604,28 +623,20 @@ The Sliding Window flow control mechanism is a more sophisticated approach compa
 
 1. **Initialization:**
    - Both the sender and the receiver initialize their respective windows. The window size represents the number of frames that can be in transit at any given time.
-
 2. **Sender's Perspective:**
    - The sender maintains a "send window," which is a range of sequence numbers for frames that it is allowed to send without waiting for acknowledgments.
-
 3. **Receiver's Perspective:**
    - The receiver maintains a "receive window," representing the range of sequence numbers it is willing to accept. The receive window helps the receiver handle out-of-order frames.
-
 4. **Frame Transmission:**
    - The sender can transmit frames within the current send window without waiting for acknowledgments. Each frame is assigned a sequence number.
-
 5. **Acknowledgments:**
    - The receiver receives the frames, checks for errors, and sends acknowledgments for the received frames. The acknowledgment includes information about the highest correctly received frame.
-
 6. **Advancing the Send Window:**
    - As acknowledgments are received, the sender advances its send window. This advancement allows the sender to transmit new frames with higher sequence numbers.
-
 7. **Sliding the Window:**
    - The sender's window "slides" forward as acknowledgments are received, allowing the sender to transmit new frames. This sliding action is what gives the method its name.
-
 8. **Retransmission on Timeout or Negative Acknowledgment (NAK):**
    - If a frame is not acknowledged within a specified time (timeout) or if a negative acknowledgment (NAK) is received, the sender retransmits the frame. In Selective Repeat, only the frames with errors are retransmitted.
-
 9. **Handling Out-of-Order Frames at Receiver:**
    - The receiver's receive window helps handle out-of-order frames. It acknowledges correctly received frames and signals the sender to retransmit frames that are missing or corrupted.
 

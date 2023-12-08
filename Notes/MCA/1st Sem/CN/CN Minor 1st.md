@@ -165,7 +165,6 @@ Topology
   - data gets converted into bit stream ,
 
 ## Switching
-
 - technique by which nodes control or switch data to transmit it b/w specific points on a network
 - types
   - Circuit switching (connection oriented)
@@ -179,7 +178,7 @@ Topology
       - long set up time is req
       - line may be held up for long time
   - Packet switching( connectionless)
-    - data is broken into small packets with each packet having source and destin address and sequence number, travelling from one router to next router
+    - data is broken into small packets with each packet having source and destination address and sequence number, travelling from one router to next router
     - packets will travel accross the network , taking the shortest path as possible
     - All packets are reassembled at the receiving end in correct order
     - +ve
@@ -191,6 +190,34 @@ Topology
     - types
       - Datagram approach
       - Virtual circut switching
+Sure, I'd be happy to explain both the Datagram approach and Virtual Circuit Switching.
+
+1. **Datagram Approach:**
+
+   In networking, the datagram approach is a communication model where each packet of data is treated independently, and the network devices make routing decisions for each packet based on the destination address contained in that packet. This is in contrast to a connection-oriented approach where a dedicated path or circuit is established before data transfer begins.
+
+   Key features of the Datagram approach include:
+
+   - **Connectionless:** Datagram networks are connectionless, meaning there is no established path or connection before sending data. Each packet is treated as an independent entity and can follow different routes to reach the destination.
+
+   - **Variable Routing:** As each packet is treated independently, it can take different paths through the network to reach the destination. This flexibility is useful for handling network congestion or failures.
+
+   - **Scalability:** Datagram networks are often more scalable than connection-oriented networks because they do not require the overhead of establishing and maintaining connections.
+
+   - **Example:** The Internet is a classic example of a datagram network, where data is divided into packets, each packet is routed independently, and they may take different routes to reach the same destination.
+
+2. **Virtual Circuit Switching:**
+
+   Virtual Circuit Switching is a communication model that combines elements of both circuit switching and packet switching. In this approach, a virtual circuit is established between the source and destination before data transfer begins. This virtual circuit acts as if it were a dedicated physical circuit for the duration of the communication session.
+
+   Key features of Virtual Circuit Switching include:
+
+   - **Connection Establishment:** Before data transfer begins, a connection setup phase occurs where a virtual circuit is established. This involves reserving resources along the communication path.
+
+   - **Fixed Route:** Once the virtual circuit is established, data follows a fixed route from the source to the destination. This is similar to circuit switching but without the physical dedicated path.
+
+   - **Predictable Delay:** Virtual circuits can provide more predictable and consistent delays compared to pure datagram networks, as the route is fixed for the duration of the communication session.
+In summary, the Datagram approach is connectionless, packets are treated independently and may take different routes, while Virtual Circuit Switching establishes a virtual circuit before data transfer, providing a more predictable and fixed route for the duration of the communication session.
   - Message switching
     - message is transferred as complete unit and routed through intermediate nodes at which it is stored and forwareded
     - there is no establishment of dedicated path b/w the sender and receiver
@@ -217,30 +244,25 @@ Topology
 ## Multiplexing
 
 Multiplexing is a technique used in telecommunications and networking to share a single communication channel or medium for transmitting multiple signals simultaneously. It allows efficient utilization of resources and is widely used in various applications. There are several types of multiplexing, each with its unique characteristics and use cases. Here are some notes on multiplexing and its types:
-
 1. **Multiplexing Definition**: Multiplexing is the process of combining multiple data streams or signals into a single composite signal for transmission over a shared medium and then separating them at the receiving end.
 
 2. **Types of Multiplexing**:
 
    a. **Time-Division Multiplexing (TDM)**:
-
    - In TDM, multiple input signals take turns using the transmission medium.
    - Time slots are allocated to each signal, and data is transmitted in a round-robin fashion.
    - Commonly used in digital voice and data communication systems.
 
    b. **Frequency-Division Multiplexing (FDM)**:
-
    - FDM divides the available bandwidth into multiple frequency bands.
    - Each input signal is allocated a distinct frequency band for transmission.
    - FDM is used in radio and television broadcasting, as well as in some cable TV systems.
 
    c. **Wavelength-Division Multiplexing (WDM)**:
-
    - WDM is a variation of FDM used in optical fiber communication.
    - It utilizes different wavelengths (colors of light) to transmit multiple signals simultaneously over a single optical fiber.
 
 3. **Advantages of Multiplexing**:
-
    - Efficient use of communication channels or resources.
    - Cost-effective by allowing multiple signals to share the same infrastructure.
    - Increased capacity and scalability for communication systems.
@@ -260,39 +282,28 @@ Multiplexing is a technique used in telecommunications and networking to share a
    - Scalability: As the number of signals increases, managing multiplexing becomes more complex.
 
 ## Network devices
-
 1. **Hub**:
-
    - A hub is a basic networking device that connects multiple devices in a network.
    - It operates at the physical layer of the OSI model and simply broadcasts incoming data to all connected devices.
    - Hubs are less efficient than switches and are rarely used in modern networks due to their limited intelligence.
-
 2. **Switch**:
-
    - A switch is a smarter networking device that operates at the data link layer (Layer 2) of the OSI model.
    - It uses MAC addresses to forward data only to the device that needs it, improving network efficiency.
    - Switches are widely used in local area networks (LANs) for faster and more controlled data transmission.
-
 3. **Router**:
-
    - A router is a networking device that operates at the network layer (Layer 3) of the OSI model.
    - It forwards data between different networks, making decisions based on IP addresses.
    - Routers are essential for connecting multiple LANs or connecting a LAN to the internet.
-
 4. **Bridge**:
-
    - A bridge is a device that operates at the data link layer (Layer 2) and connects two or more network segments to form a larger network.
    - It filters and forwards data based on MAC addresses, effectively dividing collision domains.
    - Bridges are used to segment and improve the performance of LANs.
-
 5. **Modem**:
-
    - A modem (short for modulator-demodulator) converts digital data from a computer into analog signals for transmission over telephone lines (for DSL) or cable systems.
    - It also converts incoming analog signals back into digital data for the computer.
    - Modems are crucial for broadband internet and older dial-up connections.
 
 6. **Gateway**:
-
    - A gateway is a device or software that connects two different networks with different communication protocols.
    - It acts as a translator, facilitating data exchange between networks that use different standards.
    - Gateways are commonly used in connecting local networks to the internet.

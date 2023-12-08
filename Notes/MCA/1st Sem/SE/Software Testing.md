@@ -38,7 +38,6 @@ Software testing is essential for various reasons in the development process, en
 - To gain the confidence of the customers by providing them a quality product.
 
 ### Testing principles
-
 - All tests should be traceable to customer requirements.(from customers point of view)
 - **Tests should be planned** long before testing begins. (Begins as soon as the requirements model is complete)
 - The **pareto** principle applies to software testing. ( implies that 80 percent of all errors uncovered during testing will likely be traceable to 20 percent of all program components)
@@ -47,7 +46,6 @@ Software testing is essential for various reasons in the development process, en
 - To be most effective, testing should be conducted by an independent third party. (Most effective means highest probability of finding errors)
 
 ## Inspection vs testing
-
 In simple words, **Software testing** is the process of evaluating the product that whether it’s working properly as per requirements. It is related to finding bugs in UI, functionality and as per end-user perspective of the product
 while **Software inspection** is testing plus code review to ensure that it is correct, optimized and maintainable. It is mainly related to finding bugs in program’s code as per both requirements and test cases.
 
@@ -154,39 +152,30 @@ while **Software inspection** is testing plus code review to ensure that it is c
     - Test metrics
 
 ## Software testing strategies and techniques
-
 - A test strategy is a concise statement that describes how the objectives of the software testing are met. The test strategy views the test event at a high level, concentrates on the objectives of the test event, the techniques that can be used and the resources that are required
 - A testing technique can be defined as a process that ensures that the application being tested functions in a structured way.
 - A testing strategy and technique is based on the method of testing adopted.
 
 ### Methods of testing
-
 #### Structural vs functional testing
-
 - If the test cases are developed to check the actual structure of the program code, then it is called structural testing. Structural testing is also known as white box testing, where the tester checks the actual code of the software. However, in functional testing(type of black-box testing), the tester checks only the behavior of the software and will not check the actual code. The tester only checks the response of the software for predefined inputs and tests whether the software produces the desired output
-
 #### Static vs dynamic testing
-
 - Static testing refers to the analysis of the program, which is carried out without executing the program. This is a typical white box testing technique, where the developer checks the code to find errors in it. It is preventive in nature and is completed in the verification phase. The common methods include feasibility review and code review.
 - Dynamic testing refers to the analysis of the program in its executable form. This is performed by supplying valid entries and is validated against the expected results. It is a curative method and is performed during the validation phase.
 
 #### Manual vs Automation testing
 
 ## V-Model
-
 ### Intro
-
 - The V-model is an SDLC model where execution of processes happens in a sequential manner in a Vshape. It is also known as Verification and Validation model.
 - The V-Model is an extension of the waterfall model and is based on the association of a testing phase for each corresponding development stage. This means that for every single phase in the development cycle, there is a directly associated testing phase.
 
 ### V-Model-Design
-
 the corresponding testing phase of the development phase is planned in parallel. So, there are Verification phases on one side of the ‘V’ and Validation phases on the other side. The Coding Phase joins the two sides of the V-Model
 ![](../../../statics/Pasted%20image%2020231104090003.png)
 first writing some explaination of verfication phase and then validation phase
 
 ### V-Model Application
-
 - V- Model application is almost the same as the waterfall model, as both the models are of sequential type. Requirements have to be very clear before the project starts, because it is usually expensive to go back and make changes.
 - Requirements are well defined, clearly documented and fixed.
 - Product definition is stable.
@@ -249,32 +238,11 @@ Adhering to good practices and investing time in creating effective unit tests c
 
 Integration testing is the next phase after unit testing in the software testing process. It focuses on verifying the interactions and connections between different units (which have already been individually tested in unit testing) when combined or integrated as a group.
 
-**Stubs and Drivers** are the dummy programs in Integration testing used to facilitate the software testing activity. These programs act as a substitute for the missing models in the testing. They do not implement the entire programming logic of the software module but they simulate data communication with the calling module while testing.
+**Stubs and Drivers** are the dummy programs in Integration testing used to facilitate the software testing activity. These programs act as a substitute for the missing modules in the testing. They do not implement the entire programming logic of the software module but they simulate data communication with the calling module while testing.
 Stub: Is called by the Module under Test.
 Driver: Calls the Module to be tested
 
 As a step after unit testing, integration testing ensures that these units work together as expected and that the interfaces between them function correctly. It checks how these various units collaborate, share data, and interact with one another within the larger system.
-
-Here’s how integration testing builds upon unit testing:
-
-1. **Unit Testing Completion**: Before integration testing begins, individual units have already undergone testing in isolation during the unit testing phase. These units—such as functions, classes, or modules—have been tested to ensure they perform as intended.
-
-2. **Combining Units**: Integration testing involves combining these individually tested units together into larger components or groups. These groups could be subsystems, layers, or any combination of units necessary for the system's functionality.
-
-3. **Testing Interactions**: The primary focus of integration testing is to validate how these combined units interact with each other. It examines data flow, control flow, and the exchange of information between different components to ensure they work in sync.
-
-4. **Integration Strategies**: There are different approaches to integration testing:
-
-   - **Top-Down**: Starting from higher-level modules and gradually integrating lower-level modules.
-   - **Bottom-Up**: Integrating from lower-level modules and progressively combining higher-level modules.
-   - **Big Bang**: Integrating all components at once to test the system as a whole.
-   - **Sandwich/Hybrid**: A mix of top-down and bottom-up approaches.
-
-5. **Identifying Interface Issues**: Integration testing helps detect interface defects, communication problems, and inconsistencies that might arise when units interact. It verifies that the integrated components properly exchange information and function as expected.
-
-6. **Verification of System Behavior**: It goes beyond individual unit behavior and assesses the behavior of the system as a whole, ensuring that the integrated units work together harmoniously.
-
-Integration testing is a critical step to ensure that the system is cohesive, functions as intended, and is capable of handling various scenarios and interactions between different components. It provides confidence in the system’s reliability and robustness before proceeding to broader system-level testing.
 
 #### Integration strategies
 
@@ -298,8 +266,6 @@ Integration testing strategies are methodologies used to combine and test variou
 4. **Sandwich (Hybrid) Integration Testing:**
    - **Approach:** This strategy combines both top-down and bottom-up integration testing. It involves integrating some modules from the top down while integrating others from the bottom up.
    - **Advantages:** It balances the advantages of both top-down and bottom-up approaches, allowing for a more comprehensive testing approach that addresses issues at various levels.
-
-These integration strategies differ in their approach to combining modules and are chosen based on the project's needs
 
 #### Regression testing
 
@@ -475,13 +441,11 @@ Dynamic software testing tools select test cases and execute the program to get 
 ## CASE
 
 ### What is it
-
 - CASE stands for computer aided software engineering . it means , development and maintenance of software projects with help of various automated software tools
 - CASE tools are set of software application programs , which are used to automate SDLC activities . CASE tools are used by software manager , analysts and engineers to develop software system
 - There are number of tools like analysis tools , design tools
 
 ### Component of CASE tools
-
 ![](../../../statics/Pasted%20image%2020231105081456.png)
 
 - It can be divided into following parts

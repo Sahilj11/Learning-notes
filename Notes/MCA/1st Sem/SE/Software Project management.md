@@ -1,9 +1,6 @@
 ## Intro
-
 - A Software Project is the complete procedure of software development from requirement gathering to testing and maintenance, carried out according to the execution methodologies, in a specified period of time to achieve intended software product.
-
 ### Need for software project management
-
 ![](../../../statics/Pasted%20image%2020231202061915.png)
 The image above shows triple constraints for software projects. It is an essential part of software organization to deliver quality product, keeping the cost within client’s budget constrain and deliver the project as per scheduled. There are several factors, both internal and external, which may impact this triple constrain triangle. Any of three factors can severely impact the other two.
 Therefore, software project management is essential to incorporate user requirements along with budget and time constraints
@@ -14,7 +11,7 @@ Software project management comprises of a number of activities, which contains 
 deciding scope of software product, estimation of cost in various terms, scheduling of tasks and events,
 and resource management. Project management activities may include:
 
-- Project Planning
+- Project Planning:- involves defining the scope, objectives, timelines, resources, and tasks required for the successful completion of a software development project.
 - Scope Management:- It defines the scope of project; this includes all the activities, process need to be done in order to make a deliverable software product. Scope management is essential because it creates boundaries of the project by clearly defining what would be done in the project and what would not be done. During Project Scope management, it is necessary to
   - Define its scope
   - Define its control and verification
@@ -116,13 +113,11 @@ Steps in Process of communication Management
 Configuration management is a process of tracking and controlling the changes in software in terms of the requirements, design, functions and development of the product.
 
 SCM (Software Configuration management) defines number of tasks
-
 - Identification: Recognizing objects in software configuration.
 - Version Control: Managing and tracking changes to software versions.
 - Change Control: Regulating and documenting modifications to the software.
 - Configuration Audit: Assessing and ensuring the integrity of software configurations.
 - Status Reporting: Communicating the current state and progress of the software configuration.
-
 ![](../../../statics/Pasted%20image%2020231202093147.png)
 
 
