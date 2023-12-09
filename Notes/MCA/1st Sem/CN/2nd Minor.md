@@ -177,7 +177,6 @@ neighbors randomly. This is highly robust method which is usually implemented by
 packets onto the link which is least queued
 
 ![](../../../statics/Pasted%20image%2020231022161242.png)
-
 ## Classification of Routing algo
 #### Shortest Path routing 
 In Shortest Path Routing, there are two ways in which we
@@ -192,7 +191,6 @@ value replaces the infinity with the new value. This label may be changed or mad
 permanent depending on the calculation of shortest path from the initial position to final
 position.. In starting, these labels are not permanent but when it is termed as the shortest
 path then this label is made as permanent.
-
 
 We need to calculate a shortest path that is optimal.
 A network is represented as a graph, with its terminals as nodes and the links as edges. A
@@ -212,9 +210,7 @@ transmission.
 type of static routing algo , 
 uses
 - In military applications, where large numbers of routers may be blown to bits at any instant, the tremendous robustness of flooding is highly desirable.
-
 - In distributed database applications, it is sometimes necessary to update all the databases concurrently, in which flooding can be useful.
-
 - In wireless networks, all messages transmitted by a station can be received by all other stations within the radio range.
 
 #### Distance vector routing

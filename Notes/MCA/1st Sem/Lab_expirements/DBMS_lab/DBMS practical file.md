@@ -55,7 +55,7 @@ SQL (Structured Query Language) is a Database language used for manipulating and
 
 ## (Experiment 2) Creating a Database
 
-![](../../../statics/Pasted%20image%2020231109130034.png)
+![](../../../../statics/Pasted%20image%2020231109130034.png)
 
 1. **Open the Command Line Interface (CLI)**
 
@@ -89,7 +89,7 @@ USE dbms_pract_60;
 
 You can use the CREATE TABLE command with specified constraints to create a table in MySQL with constraints, such as primary keys, foreign keys, unique constraints, or non null constraints. Here's one instance:
 
-![](../../../statics/Pasted%20image%2020231117081843.png)
+![](../../../../statics/Pasted%20image%2020231117081843.png)
 
 Here are the functions of this SQL script:
 
@@ -119,7 +119,7 @@ The `ALTER TABLE` statement in MySQL is used to modify an existing table by addi
 
 ### Add a new column to an existing table:
 
-![](../../../statics/Pasted%20image%2020231117082216.png)
+![](../../../../statics/Pasted%20image%2020231117082216.png)
 
 ```sql
 ALTER TABLE your_table_name
@@ -137,7 +137,7 @@ This command adds a new column named `age` of type `INT` to the existing `users`
 
 ### Drop a column from a table:
 
-![](../../../statics/Pasted%20image%2020231117082404.png)
+![](../../../../statics/Pasted%20image%2020231117082404.png)
 
 ```sql
 ALTER TABLE your_table_name
@@ -155,7 +155,7 @@ This command removes the `age` column from the `users` table.
 
 ### Modify a column's data type:
 
-![](../../../statics/Pasted%20image%2020231117082315.png)
+![](../../../../statics/Pasted%20image%2020231117082315.png)
 
 ```sql
 ALTER TABLE your_table_name
@@ -218,7 +218,7 @@ INSERT INTO customers_60 (user_id, username, email, password)
 VALUES (1, 'Sahil', 'sahil123@gmail.com', 'securepassword');
 ```
 
-![](../../../statics/Pasted%20image%2020231117082755.png)
+![](../../../../statics/Pasted%20image%2020231117082755.png)
 
 This SQL command inserts a new record into the `customers_60s` table. You specify the columns that will receive the values within parentheses after the table name in the `INSERT INTO` statement. Then, using the `VALUES` keyword, you provide the values for those columns in the same order.
 
@@ -240,7 +240,7 @@ Remember to ensure that the data types and constraints align with the table's sc
    Replace `your_database_name` with the actual name of your database.
 
 2. **View Tables:**
-   ![](../../../statics/Pasted%20image%2020231117083207.png)
+   ![](../../../../statics/Pasted%20image%2020231117083207.png)
    To see the tables in the selected database, you can use the following query:
 
    ```sql
@@ -248,7 +248,7 @@ Remember to ensure that the data types and constraints align with the table's sc
    ```
 
 3. **View Table Structure:**
-   ![](../../../statics/Pasted%20image%2020231117083238.png)
+   ![](../../../../statics/Pasted%20image%2020231117083238.png)
    If you want to see the structure (columns and their data types) of a specific table, you can use:
 
    ```sql
@@ -258,7 +258,7 @@ Remember to ensure that the data types and constraints align with the table's sc
    Replace `your_table_name` with the actual name of your table.
 
 4. **View Table Data:**
-   ![](../../../statics/Pasted%20image%2020231117083309.png)
+   ![](../../../../statics/Pasted%20image%2020231117083309.png)
    To view the data in a table, you can use the `SELECT` statement:
 
    ```sql
@@ -268,7 +268,7 @@ Remember to ensure that the data types and constraints align with the table's sc
    Replace `your_table_name` with the actual name of your table. This will retrieve all columns (`*`) for all rows in the specified table.
 
    If you only want specific columns, you can specify them in the query:
-   ![](../../../statics/Pasted%20image%2020231117083339.png)
+   ![](../../../../statics/Pasted%20image%2020231117083339.png)
 
    ```sql
    SELECT column1, column2 FROM your_table_name;
@@ -294,7 +294,7 @@ Replace the following placeholders:
 - `your_condition`: The condition that determines which records to update. If you omit the `WHERE` clause, all records in the table will be updated.
 
 For example, let's say you have a table named `customers_60` and you want to update the salary of the employee with ID 1:
-![](../../../statics/Pasted%20image%2020231117083910.png)
+![](../../../../statics/Pasted%20image%2020231117083910.png)
 
 ```sql
 UPDATE customers_60
@@ -305,7 +305,7 @@ WHERE user_id = 1;
 This query updates the `username` column for the employee with `user_id` equal to 1.
 
 If you want to update multiple columns, you can include them in the `SET` clause:
-![](../../../statics/Pasted%20image%2020231117084027.png)
+![](../../../../statics/Pasted%20image%2020231117084027.png)
 
 ```sql
 UPDATE customers_60
@@ -334,7 +334,7 @@ ORDER BY column_to_sort [ASC | DESC], ...;
 
 For example, if you have a table named `customers_60` and you want to retrieve the names in ascending order:
 
-![](../../../statics/Pasted%20image%2020231117084848.png)
+![](../../../../statics/Pasted%20image%2020231117084848.png)
 
 ```sql
 SELECT *
@@ -345,11 +345,11 @@ ORDER BY username ASC;
 ## (Experiment 10) Grouping record
 
 To group records in MySQL, you can use the `GROUP BY` clause along with aggregate functions like `COUNT`, `SUM`, `AVG`, etc. This allows you to group rows based on the values in one or more columns and perform calculations on each group. Here's a basic example using the `customers_60` table you provided:
-![](../../../statics/Pasted%20image%2020231117085217.png)
+![](../../../../statics/Pasted%20image%2020231117085217.png)
 
 1. **Group by the `username` column and count the number of users with each username:**
 
-![](../../../statics/Pasted%20image%2020231117085423.png)
+![](../../../../statics/Pasted%20image%2020231117085423.png)
 
 ````sql
     SELECT username, COUNT(*) AS user_count
@@ -361,7 +361,7 @@ This query counts the number of occurrences of each unique `username` in the `cu
 
 2. **Group by the `username` column and calculate the average password length for each user:**
 
-![](../../../statics/Pasted%20image%2020231117085657.png)
+![](../../../../statics/Pasted%20image%2020231117085657.png)
 ```sql
     SELECT username, AVG(CHAR_LENGTH(password)) AS avg_password_length
     FROM customers_60
@@ -372,10 +372,10 @@ This query calculates the average password length for each unique `username` in 
 
 ## (Experiment 11) Using Aggregate functions
 
-![](../../../statics/Pasted%20image%2020231117090352.png)
+![](../../../../statics/Pasted%20image%2020231117090352.png)
 
 1. **Count the total number of users:**
-   ![](../../../statics/Pasted%20image%2020231117090436.png)
+   ![](../../../../statics/Pasted%20image%2020231117090436.png)
 
 ````sql
     SELECT COUNT(*) AS total_users
@@ -385,7 +385,7 @@ This query calculates the average password length for each unique `username` in 
  This query returns the total number of rows in the `customers_60` table.
 
 2. **Find the average length of passwords:**
-![](../../../statics/Pasted%20image%2020231117090555.png)
+![](../../../../statics/Pasted%20image%2020231117090555.png)
  ```sql
     SELECT AVG(CHAR_LENGTH(password)) AS average_password_length
     FROM customers_60;
@@ -394,7 +394,7 @@ This query calculates the average password length for each unique `username` in 
  This query calculates the average length of passwords in the `customers_60` table.
 
 3. **Find the maximum and minimum age among the users:**
-![](../../../statics/Pasted%20image%2020231117090807.png)
+![](../../../../statics/Pasted%20image%2020231117090807.png)
 ```sql
     SELECT MAX(age) AS max_age, MIN(age) AS min_age
     FROM customers_60;
@@ -421,7 +421,7 @@ Replace the following placeholders:
 - `your_condition`: The condition to filter the records (optional).
 
 For example, let's say you want to create a view that contains the usernames and email addresses of users from the `customers_60` table:
-![](../../../statics/Pasted%20image%2020231117140850.png)
+![](../../../../statics/Pasted%20image%2020231117140850.png)
 
 ```sql
 CREATE VIEW user_info AS
@@ -449,7 +449,7 @@ Replace `view_name` with the name of the view you want to drop. The `IF EXISTS` 
 
 A subquery in MySQL is a query nested within another query. Subqueries, also known as nested queries or inner queries, are used to retrieve data that will be used in the main query as a condition to further restrict the data to be retrieved. Subqueries can be used in various parts of a SQL statement, such as the SELECT, FROM, WHERE, or HAVING clauses.
 
-![](../../../statics/Pasted%20image%2020231117144046.png)
+![](../../../../statics/Pasted%20image%2020231117144046.png)
 
 ## (Experiment 15) Join in SQL
 
@@ -458,7 +458,7 @@ In MySQL, the `JOIN` clause is used to combine rows from two or more tables base
 1. **INNER JOIN:**
 
    - Returns only the rows where there is a match in both tables based on the specified condition.
-   - ![](../../../statics/Pasted%20image%2020231117145507.png)
+   - ![](../../../../statics/Pasted%20image%2020231117145507.png)
 
    ```sql
    SELECT *

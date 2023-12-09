@@ -23,8 +23,12 @@
             "id": "89cb34ddf62b6ce2",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md"
+              }
             }
           },
           {
@@ -163,8 +171,8 @@
   },
   "active": "89cb34ddf62b6ce2",
   "lastOpenFiles": [
-    "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/CN/2nd Minor.md",
+    "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "statics/Pasted image 20231208075418.png",
