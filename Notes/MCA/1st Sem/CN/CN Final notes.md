@@ -314,7 +314,6 @@ Collisions can be detected by looking at the power or pulse width of the receive
 After a station detects a collision, it aborts its transmission, waits for a random period of time, and then tries again, assuming that no other station has started transmitting in the meantime.
 
 Frame transmission time should be at least twice the maximum propagation time (Tr = 2 X Tp) this is to ensure that packet size is large enough so that collision can be dedected at the earlier before transmission of packet happen 
-
 #### CSMA/CA (Collision Avoidance) Remaining 
 - In wireless network , much of the sent energy is lost 
 
@@ -354,7 +353,7 @@ The usual approach is for the data link layer to break the bit stream up into di
    - In the character count framing method, a field in the frame header indicates the number of characters (or bytes) in the data field of the frame. The receiving end uses this count to identify the boundaries of the frame. This method is straightforward and does not involve the insertion of additional control characters.
 
 2. **Flag Bytes with Byte Stuffing:**
-two   - This method uses special flag bytes (delimiters) to mark the beginning and end of a frame. Byte stuffing is employed to handle instances where the data field contains the same byte sequence as the flag. To distinguish between actual flags and data that might be mistaken for flags, an escape character is inserted before any occurrence of the flag in the data. This escape character signals that the following byte is not a flag but part of the data.
+- two   - This method uses special flag bytes (delimiters) to mark the beginning and end of a frame. Byte stuffing is employed to handle instances where the data field contains the same byte sequence as the flag. To distinguish between actual flags and data that might be mistaken for flags, an escape character is inserted before any occurrence of the flag in the data. This escape character signals that the following byte is not a flag but part of the data.
 
 3. **Starting and Ending Flags, with Bit Stuffing:**
    - Similar to the flag bytes method, this approach uses special start and end flag sequences to mark the beginning and end of a frame. Bit stuffing is employed to handle cases where the data portion of the frame contains consecutive bits that match the flag sequence. If a specific bit pattern is detected in the data that corresponds to the flag, an extra bit is inserted to avoid confusion between data and flags.
