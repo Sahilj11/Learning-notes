@@ -99,7 +99,7 @@ CREATE TABLE customers_60 (
     username VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(100) NOT NULL,
-    PRIMARY KEY (user_id),
+    PRIMARY KEY (user_id)
 );
 ```
 
@@ -108,10 +108,6 @@ CREATE TABLE customers_60 (
 3. The string field "email" is configured to be unique and non-nullable.
 4. The string field password is configured to be non-nullable.
 
-These fields are designated as main keys and unique keys, respectively, by the `main KEY` and `UNIQUE KEY` constraints.
-
-Keep in mind that depending on the type of data you're working with, different data types and constraints may apply.
-To create a table in MySQL with constraints, such as primary keys, foreign keys, unique constraints, or not null constraints, you can use the `CREATE TABLE` statement with specific constraints.
 
 ## (Experiment 4) Alter Table
 
@@ -275,6 +271,13 @@ Remember to ensure that the data types and constraints align with the table's sc
    ```
 
    Replace `column1` and `column2` with the actual column names.
+## (Experiment 7) Delete the database
+![](../../../../statics/Pasted%20image%2020231212123343.png)
+
+```sql
+DROP TABLE `migrations_60`;
+```
+![](../../../../statics/Pasted%20image%2020231212123430.png)
 
 ## (Experiment 8) Modify record
 
@@ -376,16 +379,14 @@ This query calculates the average password length for each unique `username` in 
 
 1. **Count the total number of users:**
    ![](../../../../statics/Pasted%20image%2020231117090436.png)
-
-````sql
-    SELECT COUNT(*) AS total_users
-    FROM customers_60;
-    ```
+```sql
+SELECT COUNT(`*`) AS total users FROM customers 60;
+``` 
 
  This query returns the total number of rows in the `customers_60` table.
 
 2. **Find the average length of passwords:**
-![](../../../../statics/Pasted%20image%2020231117090555.png)
+ ![](../../../../statics/Pasted%20image%2020231117090555.png)
  ```sql
     SELECT AVG(CHAR_LENGTH(password)) AS average_password_length
     FROM customers_60;
@@ -403,6 +404,21 @@ This query calculates the average password length for each unique `username` in 
 Assuming there is a `age` column in your table, this query finds the maximum and minimum age values.
 
 ## (Experiment 12) Queries using the Set operations
+![](../../../../statics/Pasted%20image%2020231212130943.png)
+![](../../../../statics/Pasted%20image%2020231212131001.png)
+
+1. UNION:
+![](../../../../statics/Pasted%20image%2020231212130912.png)
+
+```sql
+SELECT roll_no FROM students_sports_60 UNION SELECT roll_no FROM students_music_60;
+```
+
+2. INTERSECT:
+![](../../../../statics/Pasted%20image%2020231212131148.png)
+3. EXCEPT:
+![](../../../../statics/Pasted%20image%2020231212131312.png)
+
 ## (Experiment 13) Creating views
 Views allow you to encapsulate complex queries and present the result as if it were a table. Here's how you can create a view:
 
@@ -486,12 +502,3 @@ In MySQL, the `JOIN` clause is used to combine rows from two or more tables base
    RIGHT JOIN table2 ON table1.column = table2.column;
    ```
 
-4. **FULL JOIN (or FULL OUTER JOIN):**
-
-   - Returns all rows when there is a match in either the left or right table. If there is no match, NULL values are returned for columns from the table without a match.
-
-   ```sql
-   SELECT *
-   FROM table1
-   FULL JOIN table2 ON table1.column = table2.column;
-   ```

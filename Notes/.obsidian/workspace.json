@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/1st Sem/CN/2nd Minor.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "89cb34ddf62b6ce2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -169,9 +156,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "89cb34ddf62b6ce2",
+  "active": "afe73581e785e498",
   "lastOpenFiles": [
+    "statics/Pasted image 20231212131312.png",
+    "statics/Pasted image 20231212131148.png",
+    "statics/Pasted image 20231212131001.png",
+    "statics/Pasted image 20231212130943.png",
+    "statics/Pasted image 20231212130912.png",
+    "statics/Pasted image 20231212123430.png",
+    "statics/Pasted image 20231212123343.png",
     "MCA/1st Sem/CN/2nd Minor.md",
+    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
@@ -184,12 +179,6 @@
     "statics/Pasted image 20231202180200.png",
     "statics/Pasted image 20231202180131.png",
     "statics/Pasted image 20231202180059.png",
-    "statics/Pasted image 20231202180017.png",
-    "statics/Pasted image 20231202175843.png",
-    "statics/Pasted image 20231202175709.png",
-    "statics/Pasted image 20231202175115.png",
-    "statics/Pasted image 20231202174600.png",
-    "statics/Pasted image 20231202174547.png",
     "Untitled.md",
     "GIT Commands/Commands.md",
     "MCA/1st Sem/WD/Minor 2nd.md",
@@ -205,8 +194,6 @@
     "MCA/1st Sem/DBMS MCA/Relational model.md",
     "MCA/1st Sem/JAVA/GUI Programming.md",
     "MCA/1st Sem/JAVA/2nd Minor java.md",
-    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
-    "Udemy Networking/2. Cabeling and data flow.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
