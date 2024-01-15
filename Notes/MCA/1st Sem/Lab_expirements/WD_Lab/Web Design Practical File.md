@@ -1,6 +1,5 @@
-## (Experiment 1) 
+## Experiment 1: Create a simple webpage using HTML
 
-![](../../../statics/Pasted%20image%2020231118080138.png)
 
 ```html
 <!doctype html>
@@ -27,34 +26,13 @@
 </html>
 ```
 
-This HTML code represents a simple webpage structure with navigation links, a heading, and a paragraph. Here's a brief description of each part:
+**OUTPUT:**
 
-1. `<!doctype html>`: Declares the document type and version of HTML being used.
-
-2. `<html lang="en">`: Specifies that the document is written in English.
-
-3. `<head>`: Contains meta-information about the HTML document, such as character set, viewport settings, and the document title.
-
-    - `<meta charset="UTF-8" />`: Specifies the character encoding of the document as UTF-8, ensuring proper handling of text.
-    
-    - `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`: Sets the viewport properties for responsive design on various devices.
-
-    - `<title>Document</title>`: Sets the title of the webpage, which typically appears in the browser tab.
-
-4. `<body>`: Contains the main content of the webpage.
-
-    - `<a href="">`: Represents navigation links. However, the `href` attributes are currently empty, and they should be filled with the actual URLs or relative paths to the respective pages.
-
-    - `<h1>This is a Heading</h1>`: Defines a top-level heading with the text "This is a Heading."
-
-    - `<p>`: Represents a paragraph of text. The content inside the `<p>` tag is placeholder text (Lorem Ipsum).
-
-The code provides a basic structure for a webpage but lacks actual link destinations. To make the navigation functional, you should replace the empty `href` attributes with the appropriate URLs or paths. Additionally, you may want to add more content, styling, and possibly JavaScript functionality to enhance the webpage.
-## (Experiment 2)
+![](../../../../statics/Pasted%20image%2020231118080138.png)
+## Experiment 2: Designing of registration form with table and use of hyperlink
 
 This HTML structure presents a basic form layout using a table. It includes input fields for name, email, roll number, and class, followed by a submit button. The form also offers a prompt to login with a hyperlink. For functional use, the form inputs and login link require appropriate URLs or actions.
 
-![](../../../statics/Pasted%20image%2020231118080043.png)
 
 ```html
 <!doctype html>
@@ -91,7 +69,11 @@ This HTML structure presents a basic form layout using a table. It includes inpu
   </body>
 </html>
 ```
-## (Experiment 3)
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231118080043.png)
+## Experiment 3: Design a page with frames to include images and videos
 Here's an example of how you can create a basic web page with framesets to include videos and images. Keep in mind that this is for educational purposes, and it's not a recommended practice for real-world web development:
 
 ```html
@@ -158,6 +140,8 @@ Now, you would need to create two separate HTML files for the content of each fr
 </html>
 ```
 
+**OUTPUT:**
+
 ![[exp3.png]]
 In this example:
 
@@ -165,10 +149,8 @@ In this example:
 - Each frame content is in a separate HTML file.
 - Images are displayed using the `<img>` element, and videos are embedded using the `<video>` element with the `controls` attribute for playback controls.
 
-## (Experiment 4)
+## Experiment 4: Add a Cascading style sheet for designing the webpage
 Here's a simple homepage created without using an external CSS file. This example includes basic HTML markup to structure the page and style the content using inline styles:
-![](../../../statics/Pasted%20image%2020230927201626.png)
-
 
 ```html
 <!DOCTYPE html>
@@ -220,13 +202,11 @@ In this example:
 - The `<nav>` element contains a navigation menu.
 - The `<main>` element holds the main content of the homepage, including information about the site, services, and contact details.
 - The `<footer>` element is used for the footer text.
-## (Experiment 5)
 
-Here's an example of how to create a user-defined function in JavaScript to get an array of values from the user and then sort them in ascending order:
-![](../../../statics/Pasted%20image%2020230927202318.png)
+**OUTPUT:**
 
-![](../../../statics/Pasted%20image%2020230927202337.png)
-After sorting
+![](../../../../statics/Pasted%20image%2020230927201626.png)
+## Experiment 5: Use user defined function to get array of values and sort them in ascending order
 
 ```html
 <!DOCTYPE html>
@@ -273,8 +253,14 @@ The `sortArray()` function is called when the "Sort Ascending" button is clicked
 
 You can enter a list of numbers separated by commas in the input field, and when you click the button, it will sort them in ascending order and display the result.
 
-## (Experiment 6)
-![](../../../statics/Pasted%20image%2020231118081026.png)
+**OUTPUT:**
+
+
+![](../../../../statics/Pasted%20image%2020230927202318.png)
+![](../../../../statics/Pasted%20image%2020230927202337.png)
+## Experiment 6: Design a dynamic web page with validation of form field using javascript 
+
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -387,30 +373,77 @@ You can enter a list of numbers separated by commas in the input field, and when
 </html>
 ```
 
-This HTML document presents a registration form with associated styling and client-side validation using JavaScript. Here's a more detailed explanation of its key features:
+**OUTPUT:**
 
-1. **Styling with CSS:**
-   - The `<style>` section within the `<body>` contains CSS rules for styling the webpage. It sets the overall font, margin, and padding for the body, defines the appearance of the form elements within the table, and specifies the look of the submit button.
 
-2. **Form Structure using Table:**
-   - The form is structured using an HTML table (`<table>`) for a neat and organized layout. The table includes rows (`<tr>`) and cells (`<td>`) to arrange form elements.
+![](../../../../statics/Pasted%20image%2020231118081026.png)
+## Experiment 7: Create a Catalogue using ASP
 
-3. **Input Fields and Labels:**
-   - Input fields for name, email, password, and password confirmation are created using `<input>` elements within table cells. Corresponding `<label>` elements improve accessibility and user experience.
 
-4. **JavaScript Validation:**
-   - A `<script>` section at the end of the document contains JavaScript code. It selects the form, listens for its submission event, and prevents the default form submission behavior.
-   - The script retrieves values from the password and confirm password fields, as well as the name field. It then performs basic validation:
-      - If the name field is empty, an alert prompts the user to enter a value in the name field.
-      - If the password and confirm password fields don't match, an alert notifies the user.
-      - If all validation checks pass, a success alert indicates that the form has been submitted.
-## <u>Experiment 7: Create a Catalogue using ASP</u>
+```asp
+<%
+Response.ContentType = "text/html"
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-## (Experiment 8)
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Product Catalog</h2>
+
+    <% ' VBScript code starts here %>
+
+    <% ' Function to display a product div %>
+    <% Sub DisplayProduct(name, description, price) %>
+        <div class="product">
+            <h3><%= name %></h3>
+            <p><%= description %></p>
+            <p>Price: $<%= price %></p>
+        </div>
+    <% End Sub %>
+
+    <% ' Display products using the function %>
+
+    <% DisplayProduct("Product 1", "Description of Product 1.", 19.99) %>
+    <% DisplayProduct("Product 2", "Description of Product 2.", 29.99) %>
+    <% DisplayProduct("Product 3", "Description of Product 3.", 39.99) %>
+
+</body>
+</html>
+```
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231212212946.png)
+## Experiment 8: Event Handling of registration form
 
 To implement basic event validation for a registration form using HTML and JavaScript, you can use the `onsubmit` event handler to check whether the form data is valid before submitting it. Here's a simple example:
 
-![](../../../statics/Pasted%20image%2020231118124450.png)
+
 
 ```html
 <!DOCTYPE html>
@@ -501,13 +534,10 @@ To implement basic event validation for a registration form using HTML and JavaS
 </html>
 ```
 
-This example includes basic form fields for first name, last name, email, password, and confirm password. The `validateForm` function is called when the form is submitted, and it checks if the required fields are filled out and if the passwords match. If any validation fails, an alert is shown, and the form submission is prevented. Otherwise, the form is submitted.
-## <u>(Experiment 9)</u>
-Certainly! You can achieve this using JavaScript. Below is an example of a simple HTML page with a button. When the mouse hovers over the button, a new window is opened.
-![](../../../statics/Pasted%20image%2020231118084333.png)
-this window open after hover of mouse
-![](../../../statics/Pasted%20image%2020231118084409.png)
+**OUTPUT:**
 
+![](../../../../statics/Pasted%20image%2020231118124450.png)
+## Experiment 9: Open a window from current window on Mouse over event
 
 ```html
 <!DOCTYPE html>
@@ -537,11 +567,79 @@ this window open after hover of mouse
 
 In this example, the `openNewWindow` function is called when the mouse hovers over the button. The `window.open` method is then used to open a new window with the specified URL (`https://www.example.com` in this case). The second parameter (`'_blank'`) indicates that the new window should be opened in a new tab or window.
 
-You can customize the URL and other parameters based on your requirements.
+**OUTPUT:**
 
-## <u>(Experiment 11)</u>
+![](../../../../statics/Pasted%20image%2020231118084333.png)
 
-Certainly! Let's demonstrate some common methods associated with Array and Date objects in JavaScript.
+![](../../../../statics/Pasted%20image%2020231118084409.png)
+## Experiment 10: Create a simple application to demonstrate servlets response and request object
+
+
+
+Web.xml File Code
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+  <display-name>Welcome to Tomcat</display-name>
+  <description>
+     Welcome to Tomcat
+  </description>
+   <servlet>
+        <servlet-name>SimpleServlet</servlet-name>
+        <servlet-class>SimpleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimpleServlet</servlet-name>
+        <url-pattern>/SimpleServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+```
+
+```java
+import java.io.*;
+import javax.servlet.*;
+
+@WebServlet("/SimpleServlet")
+public class SimpleServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+        // Set the response content type
+        response.setContentType("text/html;charset=UTF-8");
+
+        // Get information from the request object
+        String clientIP = request.getRemoteAddr();
+        String userAgent = request.getHeader("User-Agent");
+
+        // Get PrintWriter object to write the HTML page
+        PrintWriter out = response.getWriter();
+
+        // Write the HTML response
+        out.println("<html><head><title>Simple Servlet Example</title></head><body>");
+        out.println("<h2>Request and Response Example</h2>");
+        out.println("<p>Client IP Address: " + clientIP + "</p>");
+        out.println("<p>User Agent: " + userAgent + "</p>");
+        out.println("</body></html>");
+
+        // Close the PrintWriter
+        out.close();
+    }
+}
+```
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231212193410.png)
+## Experiment 11: Demonstrate Array Objects and Date Objects predefined methods
 
 ### Array Object:
 
@@ -612,10 +710,9 @@ console.log("Date after adding one day:", currentDate);
 
 These are just a few examples, and there are many more methods and properties available for both Array and Date objects in JavaScript.
 
-## (Experiment 12)
-To display a calendar for the selected month and year using JavaScript, HTML, and CSS, you can create a simple web page with dropdowns for month and year. Here's an example using vanilla JavaScript:
+## Experiment 12: Display calendar for the month and year selected from combo box
 
-![](../../../statics/Pasted%20image%2020231118131305.png)
+To display a calendar for the selected month and year using JavaScript, HTML, and CSS, you can create a simple web page with dropdowns for month and year. Here's an example using vanilla JavaScript:
 
 ```html
 <!DOCTYPE html>
@@ -744,3 +841,241 @@ To display a calendar for the selected month and year using JavaScript, HTML, an
 
 This example includes two dropdowns for selecting the month and year. The calendar is dynamically generated based on the selected month and year. The JavaScript function `displayCalendar()` is called whenever the month or year dropdown is changed. The CSS provides some basic styling for better presentation.
 
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231118131305.png)
+## Experiment 13:  Create a welcome cookie and display different image and text content each time when user hit the page
+
+displaying different content (image and text) each time a user visits a page involves using a combination of HTML, CSS, JavaScript, and server-side scripting (if necessary). Below is a simple example using JavaScript for client-side functionality:
+
+1. **HTML Structure (index.html):**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-container">
+        <img id="welcome-image" src="" alt="Welcome Image">
+        <p id="welcome-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+2. **CSS Styles (styles.css):**
+```css
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#welcome-container {
+    text-align: center;
+}
+
+#welcome-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#welcome-text {
+    font-size: 18px;
+    color: #333;
+}
+```
+
+3. **JavaScript Code (script.js):**
+```javascript
+document.addEventListener("DOMContentLoaded", function() {
+    
+        setWelcomeCookie();
+
+        // Display different content
+        displayRandomContent();
+});
+
+function setWelcomeCookie() {
+    // Set the welcome cookie with a one-day expiration
+    let expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 1);
+    document.cookie = "welcomeCookie=true; expires=" + expirationDate.toUTCString() + "; path=/";
+}
+
+function displayRandomContent() {
+    let images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+    let texts = ["Welcome to our page!", "Discover something new today.", "Enjoy your visit!"];
+
+    let randomImage = images[Math.floor(Math.random() * images.length)];
+    let randomText = texts[Math.floor(Math.random() * texts.length)];
+
+    document.getElementById("welcome-image").src = randomImage;
+    document.getElementById("welcome-text").innerText = randomText;
+}
+
+```
+
+cookie is set, and random content is displayed (different image and text). 
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231212195448.png)
+
+![](../../../../statics/Pasted%20image%2020231212195508.png)
+## Experiment 14: Demostrate request and response object using HTML Form
+
+1. **HTML Form (index.html):**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo</title>
+</head>
+<body>
+    <h2>Submit Form</h2>
+    <form action="FormServlet" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+```
+
+2. **Servlet (FormServlet.java):**
+
+```java
+import java.io.*;
+
+import javax.servlet.*;
+
+@WebServlet("/FormServlet")
+public class FormServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        // Retrieve form data from the request object
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+
+        // Process the data (you can perform any desired operations here)
+        String processedData = "Hello, " + name + "! Your email is: " + email;
+
+        // Set the response type to HTML
+        response.setContentType("text/html");
+
+        // Get the PrintWriter object to write the response
+        PrintWriter out = response.getWriter();
+
+        // Generate the HTML response
+        out.println("<html><head><title>Form Submission Result</title></head><body>");
+        out.println("<h2>Form Submission Result</h2>");
+        out.println("<p>" + processedData + "</p>");
+        out.println("</body></html>");
+    }
+}
+```
+
+In this example, when the user submits the form, the data is sent to the `FormServlet` using the POST method. The servlet uses the `HttpServletRequest` object to retrieve the form parameters (`name` and `email`). Then, it processes the data (in this case, simply concatenates it), and uses the `HttpServletResponse` object to send an HTML response back to the client.
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231212201207.png)
+
+![](../../../../statics/Pasted%20image%2020231212201221.png)
+## Experiment 15: Database connection to display all the values in the table
+
+```java
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+@WebServlet("/DisplayDataServlet")
+public class DisplayDataServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            // Load the JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Connect to the database
+            String jdbcUrl = "jdbc:mysql://localhost:3306/dbms_pract_60";
+            String username = "debian-sys-maint";
+            String password = "lXZrfcxkYQ9rFos7";
+            conn = DriverManager.getConnection(jdbcUrl, username, password);
+
+            // Create and execute the SQL query
+            String sql = "SELECT * FROM customers_60";
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+
+            // Display the results
+            out.println("<html><body>");
+            out.println("<h2>User Data Table</h2>");
+            out.println("<table border='1'>");
+            out.println("<tr><th>User ID</th><th>Username</th><th>Email</th><th>Password</th><th>Age</th></tr>");
+
+            while (rs.next()) {
+                out.println("<tr>");
+                out.println("<td>" + rs.getInt("user_id") + "</td>");
+                out.println("<td>" + rs.getString("username") + "</td>");
+                out.println("<td>" + rs.getString("email") + "</td>");
+                out.println("<td>" + rs.getString("password") + "</td>");
+                out.println("<td>" + rs.getInt("age") + "</td>");
+                // Add more columns as needed
+                out.println("</tr>");
+            }
+
+            out.println("</table>");
+            out.println("</body></html>");
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Close resources
+            try {
+                if (rs != null) rs.close();
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+```
+
+**OUTPUT:**
+
+![](../../../../statics/Pasted%20image%2020231212211121.png)

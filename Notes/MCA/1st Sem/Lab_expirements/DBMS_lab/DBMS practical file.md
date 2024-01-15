@@ -354,11 +354,10 @@ To group records in MySQL, you can use the `GROUP BY` clause along with aggregat
 
 ![](../../../../statics/Pasted%20image%2020231117085423.png)
 
-````sql
+
     SELECT username, COUNT(*) AS user_count
     FROM customers_60
     GROUP BY username
-    ```
 
 This query counts the number of occurrences of each unique `username` in the `customers_60` table.
 
@@ -387,19 +386,18 @@ SELECT COUNT(`*`) AS total users FROM customers 60;
 
 2. **Find the average length of passwords:**
  ![](../../../../statics/Pasted%20image%2020231117090555.png)
- ```sql
-    SELECT AVG(CHAR_LENGTH(password)) AS average_password_length
+ 
+SELECT AVG(CHAR_LENGTH(password)) AS average_password_length
     FROM customers_60;
-    ```
 
- This query calculates the average length of passwords in the `customers_60` table.
+This query calculates the average length of passwords in the `customers_60` table.
 
 3. **Find the maximum and minimum age among the users:**
 ![](../../../../statics/Pasted%20image%2020231117090807.png)
-```sql
+
     SELECT MAX(age) AS max_age, MIN(age) AS min_age
     FROM customers_60;
-    ```
+
 
 Assuming there is a `age` column in your table, this query finds the maximum and minimum age values.
 
