@@ -8,31 +8,41 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4fbee3af63401c85",
+            "id": "00b9657a406f9adc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "javaCollection/2. Preliminaries.md",
+                "file": "GIT Commands/Commands.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "00b9657a406f9adc",
+            "id": "13e4f07a96bfb438",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
+              }
+            }
+          },
+          {
+            "id": "849c2ce2bb364f62",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java Backend/Spring/Intro.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -98,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "java Backend/Spring/Intro.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "java Backend/Spring/Intro.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java Backend/Spring/Intro.md"
+                "file": "MCA/2nd sem/CSA.md"
               }
             }
           },
@@ -171,37 +182,41 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "00b9657a406f9adc",
+  "active": "849c2ce2bb364f62",
   "lastOpenFiles": [
-    "java Backend/servlet/Intro.md",
-    "java Backend/Spring/Intro.md",
-    "java Backend/Spring",
-    "statics/Pasted image 20240113100910.png",
+    "statics/Pasted image 20240301073023.png",
+    "statics/Pasted image 20240301073001.png",
+    "statics/Pasted image 20240301072816.png",
+    "statics/Pasted image 20240301072538.png",
+    "statics/Pasted image 20240301072356.png",
+    "statics/Pasted image 20240301072339.png",
+    "statics/Pasted image 20240301072033.png",
+    "statics/Pasted image 20240301072011.png",
+    "statics/Pasted image 20240301071959.png",
+    "statics/Pasted image 20240301071946.png",
+    "statics/Pasted image 20240301071934.png",
+    "MCA/2nd sem/CSA.md",
+    "MCA/2nd sem",
+    "javaCollection/5. Queues.md",
+    "javaCollection/1. The main interfaces of java collection.md",
     "javaCollection/2. Preliminaries.md",
+    "javaCollection/3. Collection interface.md",
+    "javaCollection/6. List.md",
+    "javaCollection/7. Maps.md",
+    "java Backend/Spring/Intro.md",
+    "java Backend/servlet/Intro.md",
+    "java Backend/Spring",
     "java Backend/servlet",
     "java Backend",
-    "javaCollection/3. Collection interface.md",
-    "javaCollection/7. Maps.md",
     "rust/Intro.md",
     "rust",
-    "javaCollection/6. List.md",
-    "javaCollection/5. Queues.md",
     "javaCollection/4. Set.md",
     "Odin project/React/7. Class Components.md",
     "Odin project/React/8. Component Life cycle.md",
     "Odin project/React/9. React Router.md",
-    "statics/Pasted image 20231226145318.png",
     "Odin project/React/2 . States in react.md",
     "GIT Commands/Commands.md",
     "MCA/1st Sem/Lab_expirements/java_lab/JAVA Practical File.md",
-    "statics/Pasted image 20231215082050.png",
-    "statics/Pasted image 20231215081948.png",
-    "statics/Pasted image 20231215081803.png",
-    "statics/Pasted image 20231214194107.png",
-    "statics/Pasted image 20231214194007.png",
-    "statics/Pasted image 20231214193457.png",
-    "statics/Pasted image 20231214193247.png",
-    "statics/Pasted image 20231214193018.png",
     "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
@@ -210,15 +225,11 @@
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
     "MCA/1st Sem/SE/Software Project management.md",
-    "MCA/1st Sem/SE/Software Requirement.md",
-    "MCA/1st Sem/SE/Software Testing.md",
-    "MCA/1st Sem/SE/2. Software Engineering.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
     "MCA/1st Sem/Lab_expirements/WD_Lab",
     "MCA/1st Sem/Lab_expirements/DBMS_lab",
-    "MCA/1st Sem/Lab_expirements",
     "Untitled.canvas"
   ]
 }

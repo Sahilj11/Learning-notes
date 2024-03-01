@@ -53,3 +53,92 @@ There are three common types of dependency injection:
     ```
 
 Dependency injection makes the code more modular, testable, and flexible. It allows for easier substitution of components, as the dependencies can be changed without modifying the class that uses them. The Spring Framework, for example, utilizes dependency injection as a core concept, and it's often referred to as an Inversion of Control container due to its IoC capabilities.
+
+## IOC Container
+
+![](../../statics/Pasted%20image%2020240115080241.png)
+
+In software development, an Inversion of Control (IoC) container is a software component responsible for managing the instantiation and lifecycle of objects within an application. IoC is a design principle that inverts the flow of control in a system, transferring the control of object instantiation and dependencies from the application code to an external container.
+
+The IoC container is often used in conjunction with Dependency Injection (DI). Dependency Injection is a specific form of IoC where the dependencies of a class (i.e., the objects it relies on) are injected into the class from the outside, rather than being created within the class. The IoC container facilitates this process by managing the creation and resolution of these dependencies.
+
+Key features of an IoC container include:
+
+1. **Object instantiation:** The IoC container is responsible for creating instances of classes or objects as needed by the application.
+
+2. **Dependency resolution:** It manages the dependencies of the objects, injecting them into the dependent objects during their creation.
+
+3. **Lifecycle management:** IoC containers often manage the lifecycle of objects, controlling when they are created, used, and eventually disposed of.
+
+4. **Configuration:** The container is typically configured with information about how objects should be created, wired together, and managed.
+
+Popular IoC containers in the Java world include Spring Framework's IoC container, Google Guice, and Apache Dagger. In the .NET ecosystem, the built-in dependency injection system is widely used, and there are also third-party containers like Autofac and Unity.
+
+Using IoC containers and Dependency Injection can lead to more modular, maintainable, and testable code, as it promotes loose coupling between components and allows for easier substitution of dependencies.
+
+### In context of Spring
+In the context of the Spring Framework, the Inversion of Control (IoC) container is a key component responsible for managing the lifecycle of Java objects and their dependencies. The IoC container is often referred to as the "Spring container," and it is crucial for achieving loose coupling, modularity, and easier maintenance of applications.
+
+There are two types of IoC containers in the Spring Framework:
+
+1. **BeanFactory:**
+   - This is the simplest container and provides the fundamental features of the Spring IoC container.
+   - It is responsible for instantiating, configuring, and managing the lifecycle of beans (objects) defined in the Spring application context.
+   - BeanFactory supports lazy loading of beans, meaning it only creates beans when they are requested.
+
+2. **ApplicationContext:**
+   - ApplicationContext is an extension of the BeanFactory and provides additional features and functionalities.
+   - It is more feature-rich and is suitable for most applications.
+   - ApplicationContext eagerly loads and initializes beans when the container starts up, providing a more efficient and responsive application.
+
+**Key Features of the Spring IoC Container:**
+
+1. **Bean Definition:**
+   - The IoC container relies on bean definitions to understand how to create and configure objects. Bean definitions specify the properties and dependencies of beans.
+
+2. **Bean Lifecycle Management:**
+   - The IoC container manages the complete lifecycle of beans, including their instantiation, initialization, use, and eventual disposal (if necessary).
+
+3. **Dependency Injection:**
+   - The container injects dependencies into beans during the bean's creation, thus achieving dependency injection. This can be done through constructor injection, setter injection, or method injection.
+
+4. **Aspect-Oriented Programming (AOP):**
+   - The Spring IoC container supports AOP, allowing developers to apply cross-cutting concerns (such as logging, security, and transactions) to multiple parts of an application.
+
+5. **Integration with Other Spring Modules:**
+   - The IoC container seamlessly integrates with other Spring modules, such as Spring MVC (for web applications), Spring Data (for data access), and Spring Security (for security concerns).
+
+**Configuration in the Spring IoC Container:**
+
+Spring provides two main ways to configure the IoC container:
+
+1. **XML Configuration:**
+   - Configuration is done using XML files where beans are defined along with their dependencies and properties.
+
+   ```xml
+   <beans>
+      <bean id="myBean" class="com.example.MyBean">
+         <property name="dependency" ref="dependencyBean" />
+      </bean>
+
+      <bean id="dependencyBean" class="com.example.DependencyBean" />
+   </beans>
+   ```
+
+2. **Annotation-Based Configuration:**
+   - Configuration is done using annotations directly in the source code, reducing the need for XML configuration.
+
+   ```java
+   @Component
+   public class MyBean {
+      @Autowired
+      private DependencyBean dependency;
+   }
+
+   @Component
+   public class DependencyBean {
+      // ...
+   }
+   ```
+
+Overall, the IoC container in the Spring Framework plays a crucial role in managing the components of an application, promoting modularity, and facilitating the development of scalable and maintainable software.
