@@ -107,3 +107,90 @@ These logical gates serve as the basic building blocks of digital circuits, allo
 # Boolean algebra
 The number of gates and the number of input terminals for the gates required for the realization of a
 logical expression, in general, get reduced considerably if the expression can be simplified. Therefore, the simplification of logical expression is very important as it saves the hardware required to design a specific system
+### Approaches to design combinational circuit
+The two approaches to the design of combinational circuits that you've described represent different methodologies for achieving the desired logic functionality. Let's explore each approach in more detail:
+
+1. **Traditional Method**:
+   - In the traditional method, the design process involves simplifying the given Boolean expression or truth table using standard methods such as Karnaugh maps, Boolean algebra, or Boolean simplification techniques.
+   - Once the expression is simplified, it is implemented using basic logic gates such as AND, OR, NOT, NAND, NOR, XOR, and XNOR gates.
+   - The simplified expression leads to a circuit design that typically consists of a combination of these basic logic gates interconnected to achieve the desired logic function.
+   - This approach requires expertise in Boolean algebra and logic simplification techniques and often results in circuits with a minimal number of gates, making them efficient in terms of cost and space.
+- The following methods can be used to simplify the Boolean function:
+	1. Algebraic method,
+	2. Karnaugh map technique,
+	3. Variable entered aping (VEM) technique, and
+	4. Quino-McCluskey method.
+2. **Direct Use of Complex Logic Functions in MSI/LSI**:
+   - In this approach, the design process skips the step of simplifying the logical expression or truth table. Instead, complex logic functions available in Medium Scale Integrated Circuits (MSI) or Large Scale Integrated Circuits (LSI) are directly utilized.
+   - MSI and LSI components contain pre-designed, ready-to-use logic functions such as multiplexers, decoders, encoders, adders, subtractors, and comparators.
+   - Designers select appropriate MSI or LSI components based on the required logic functions without necessarily simplifying the logic expression beforehand.
+   - This approach can simplify the design process and reduce design time, as designers can leverage pre-designed and pre-optimized complex logic functions.
+   - However, it may lead to less efficient use of resources compared to the traditional method, as the selected MSI or LSI components may include unnecessary logic elements or functionalities.
+
+In summary, the traditional method involves simplifying the logical expression before implementation using basic logic gates, whereas the direct use of complex logic functions in MSI or LSI skips the simplification step and utilizes pre-designed logic functions directly. Both approaches have their advantages and drawbacks, and the choice between them depends on factors such as design complexity, resource constraints, and design goals.
+
+### Boolean Algebra intro
+Boolean algebra is a mathematical discipline that deals with the manipulation and analysis of logical expressions and functions.deals with binary values, where variables and expressions can take on only two possible values: true (often represented as 1 or "high") and false (often represented as 0 or "low").
+
+# Combinational Circuit
+## Design procedure of CC
+The design procedure of a combinational circuits starts from the verbal outline of the
+problem and ends in a logic circuit diagram. The procedure involves the following steps:
+1. The problem is stated.
+2. The input and output variables are assigned letter symbols.
+3. The truth table that defines the relationship between inputs and outputs is derived.
+4. The simplified Boolean functions for each output are obtained.
+5. The logic diagram is drawn.
+
+## Adder (Example of arithemetic circuit)
+In many computers and other types of processors, adders are used to calculate addresses, similar operations and table indices in the ALU and also in other parts of the processors. 
+
+### Types 
+#### Half adder
+A combinational circuit that performs the arithmetic addition of two bits is called a halfadder. One that performs the addition of three bits (two significant bits and a previous carry) is called a full-adder.
+![](../../statics/Pasted%20image%2020240302071058.png)
+The input variables of a half-adder are called the augend and addend bits. The output variables the sum and carry
+#### Full adder
+A full adder is a combinational circuit used in digital electronics to perform addition of two binary numbers. Unlike a half adder, which can only add two single bits, a full adder can also take into account a carry bit from a previous addition operation, allowing it to add three bits: two bits from the numbers being added (typically denoted as x and y), and a carry-in bit (denoted as z).
+![](../../statics/Pasted%20image%2020240302071643.png)
+
+## Subtractor 
+Subtractor circuits take two binary numbers as input and subtract one binary number
+input from the other binary number input. Similar to adders, it gives out two outputs,
+difference and borrow (carry-in the case of Adder).
+### Half subtractor 
+Half subtractor is a combination circuit with two inputs and two outputs (difference and borrow). It produces the difference between the two binary bits at the input and also produces an output (Borrow) to indicate if a 1 has been borrowed. In the subtraction (AB), A is called as Minuend bit and B is called as Subtrahend bit.
+![](../../statics/Pasted%20image%2020240302071845.png)
+
+### Full Subtractor
+The disadvantage of a half subtractor is overcome by full subtractor. The full subtractor is a combinational circuit with three inputs A,B,C and two output D and C'. A is the 'minuend', B is 'subtrahend', C is the 'borrow' produced by the previous stage, D is the difference output and C' is the borrow output.
+![](../../statics/Pasted%20image%2020240302072009.png)
+
+## Decoder
+A decoder is a combinational circuit in digital electronics that takes binary-coded inputs and converts them into a corresponding set of output signals. Each unique combination of input bits corresponds to a specific output signal.
+Used to convert binary to other codes :
+1. Binary to octal
+2. Binary to Hexa
+3. Binary to Decimal
+
+***The decoders presented in this section are called n-to-m-line decoders, where m ≤ 2n. Their purpose is to generate the 2n (or fewer) binary combinations of the n input variables. A decoder has n inputs and m outputs and is also referred to as an n x m decoder.***
+![](../../statics/Pasted%20image%2020240302075608.png)
+
+here for each input combination  a single output line is active
+### NAND Decoder
+Some decoders are constructed with NAND instead of AND gates. Since a NAND gate produces the AND operation with an inverted output, it becomes more economical to generate the decoder outputs in their complement form. 
+
+By using NAND gates, the need for separate inverters to generate output complements is eliminated. This simplifies the overall circuit design and reduces the number of components required, resulting in a more economical solution.
+![](../../statics/Pasted%20image%2020240302075544.png)
+
+### Decoder expansion
+There are occasions when a certain-size decoder is needed but only smaller sizes are available. When this occurs it is possible to combine two or more decoders with enable inputs to form a larger decoder
+![](../../statics/Pasted%20image%2020240302080727.png)
+
+## Encoder
+An encoder is a digital circuit that performs the inverse operation of the decoder. An encoder has 2n (or less) input lines and n output lines. The output lines generate the binary code corresponding to the input value
+![](../../statics/Pasted%20image%2020240302080911.png)
+## Multiplexer
+It is a combinational circuit that has 2<sup>n</sup> input lines and single output line
+it is a electronic switch that connect 1 out of n input to output
+it is functionally complete , all boolean function can be realised using one multiplexer without any other gates
