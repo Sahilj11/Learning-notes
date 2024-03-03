@@ -455,3 +455,106 @@ To find number of filp flops (n) required to design counter having mode value m 
 | Circuit Size               | Generally larger due to additional synchronization logic.                 | Can be more compact due to simpler design and fewer components.                |
 | Application Examples       | Microprocessors, digital signal processing, critical timing applications. | Simple counting tasks, clock dividers, frequency dividers.                     |
 
+# Basic Computer organisation and Design 
+a "word" typically refers to a basic unit of data that a computer's central processing unit (CPU) can process or manipulate in a single operation. The size of a word is determined by the architecture of the CPU and often corresponds to the width of the CPU's internal data bus.
+
+## Operation and microoperation
+In the context of computer architecture and digital systems:
+
+1. **Operation:**
+   - An operation refers to a high-level task or action that a computer performs. It represents a meaningful task that contributes to the execution of a program or instruction.
+   - Examples of operations include addition, subtraction, multiplication, division, logical operations (AND, OR, NOT), data movement (loading, storing), comparison, branching (jumping to a different instruction based on a condition), and many more.
+   - In programming, operations are specified through instructions, which are encoded commands that tell the computer's central processing unit (CPU) what to do.
+
+2. **Microoperation:**
+   - A microoperation, on the other hand, represents a small, low-level operation or action performed by the hardware components within a CPU to execute an instruction.
+   - Microoperations are the basic building blocks of instruction execution and are typically implemented as simple operations on data within the CPU's registers and other internal components.
+   - These operations are usually very elementary, such as loading data from a register, performing arithmetic or logic operations on data, storing data into a register, shifting bits, incrementing or decrementing a value, and transferring control signals within the CPU.
+   - Each instruction executed by the CPU typically involves a sequence of microoperations that collectively achieve the desired high-level operation specified by the instruction.
+
+In summary, while an operation represents a higher-level task or action that a computer performs, a microoperation is a low-level action performed by the hardware components within the CPU to execute the instruction associated with the operation. Microoperations are the fundamental operations that enable the CPU to carry out the instructions of a program.
+## Overview of how computer work
+Alright, let's break down the key points in simpler terms:
+
+1. **What's Inside a Computer?**
+   A computer is made up of tiny operations called microoperations. These operations happen inside the computer's registers.
+
+2. **How Do Computers Work?**
+   Computers follow instructions to perform tasks. These instructions are like a recipe, telling the computer what to do step by step.
+
+3. **What's a Program?**
+   A program is a set of instructions that tells the computer what to do. It includes operations (like adding or subtracting) and the order in which they should happen.
+
+4. **How Do Computers Understand Instructions?**
+   Instructions are written in binary code, which is a series of 0s and 1s. The computer reads these instructions from its memory and then follows them.
+
+5. **What's in an Instruction?**
+   An instruction has different parts. The most important part is the operation code, which tells the computer what to do (like add or subtract).
+
+6. **How Does the Computer Know What Operation to Perform?**
+   The operation code is like a special code that the computer understands. For example, if the code is 110010, it might mean "add." When the computer sees this code, it knows to add something.
+
+7. **What Happens Next?**
+   Once the computer knows what operation to perform, it starts doing tiny operations inside itself. These tiny operations are called microoperations.
+
+8. **Where Does the Data Come From?**
+   The instructions also tell the computer where to find the data it needs to work with. This could be in the computer's memory or its internal registers.
+
+9. **Putting It All Together**
+   Every computer has its own way of understanding instructions. Computer designers create instruction codes to make sure the computer knows what to do with each instruction.
+
+10. **Why Does This Matter?**
+   Understanding how instructions work helps us understand how computers process information and perform tasks. It's like knowing the language of computers.
+
+## Stored Program organisation
+The simplest way to organize a computer is to have one processor register and instruction code format with two parts. The first part specifies the operation to be performed and the second specifies an address. The memory address tells the control where to find an operand in memory. This operand is read from memory and used as the data to be operated on together with the data stored in the processor register.
+![](../../statics/Pasted%20image%2020240303150418.png)
+ Instructions are stored in one section of memory and data in another. For a memory unit with 4096 words we need 12 bits to specify an address since 2<sup>12</sup> = 4096. If we store each instruction code in one 16-bit memory word, we have available four bits for the operation code (abbreviated op code) to specify one out of 16 possible operations, and 12 bits to specify the address of an operand. 
+ 
+ The control reads a 16-bit instruction from the program portion of memory. It uses the 12-bit address part of the instruction to read a 16-bit operand from the data portion of memory. It then executes the operation specified by the operation code.
+## Direct vs Indirect vs Immediate 
+
+1. **Immediate Operand**: In this mode, the instruction includes the actual value of the operand rather than its memory address. This means that the data needed for the operation is directly embedded within the instruction itself. For example, if you have an instruction to add the number 5 to a register, the value 5 would be part of the instruction.
+
+2. **Direct Address**: Here, the instruction includes the memory address where the operand is stored. So instead of providing the actual data, the instruction provides the location in memory where the data can be found. For instance, if you have an instruction to add the contents of memory address 100 to a register, the instruction would specify the memory address 100 as the operand.
+
+3. **Indirect Address**: This mode is a bit more complex. In indirect addressing, the instruction includes the memory address where the address of the operand is stored, rather than the operand itself. This means that the CPU needs to first fetch the address from memory and then fetch the actual operand from the address stored in memory. It's like having a pointer to the actual data. For example, if you have an instruction to add the contents of the memory address stored in location 200 to a register, the instruction would specify the memory address 200, which holds the address of the actual operand.
+
+To distinguish between direct and indirect addressing modes, one bit in the instruction code can be used. This bit indicates whether the address provided in the instruction is the actual operand (direct address) or a pointer to the operand (indirect address). This distinction allows for flexibility in how instructions access data in memory, depending on the specific needs of the program being executed.
+![](../../statics/Pasted%20image%2020240303151255.png)
+here I is used as mode bit ,if it is 0 then direct and 1 is for indirect
+
+The accumulator register, often abbreviated as "AC," is a crucial component of a computer's central processing unit (CPU). It's a special-purpose register designed to temporarily store data during arithmetic and logic operations.
+
+## Register
+![](../../statics/Pasted%20image%2020240303151650.png)
+
+## Common Bus System
+a bus refers to a communication system that transfers data between different components of a computer system. The bus acts as a pathway or a set of parallel conductors that allow information to travel between various hardware components such as the CPU, memory, input/output devices, and other peripherals.
+
+![](../../statics/Pasted%20image%2020240303154707.png)
+In this computer system setup, multiple registers and memory are connected to a common bus. The specific register or memory output that is selected for the bus lines at any given time is determined by the binary value of selection variables \( S2, S1, \) and \( S0 \). These variables indicate which register's or memory's data should be transferred onto the bus.
+
+Each register has control inputs for loading (LD), incrementing (INR), and clearing (CLR). Some registers only have a load (LD) input. These registers function similarly to binary counters with parallel load and synchronous clear operations.
+
+There are four registers (DR, AC, IR, and TR) with 16-bit data, and two registers (AR and PC) with 12-bit data, used for memory addresses. When the contents of AR or PC are placed on the 16-bit bus, the four most significant bits are set to zeros. When data is transferred from the bus to AR or PC, only the 12 least significant bits are transferred into the register.
+
+The input register (INPR) and output register (OUTR) have 8 bits each. INPR communicates with the least significant bits of the bus, providing data from an input device to be transferred to AC. OUTR can only receive data from the bus, delivering it to an output device.
+
+The memory unit's input and output data are connected to the common bus. However, the memory address is connected to the address register (AR). Therefore, AR specifies the memory address. This setup eliminates the need for a separate address bus. Any register can be used to specify the memory data input during a write operation, and any register except AC can receive data from memory after a read operation.
+
+The accumulator register (AC) receives inputs from an adder and logic circuit. These inputs come from the outputs of AC itself, the data register (DR), and the input register (INPR). The inputs from DR and AC are used for arithmetic and logic operations, such as addition and logical AND. The result of an addition is transferred to AC, and the carry-out of the addition is transferred to a flip-flop named E (extended AC bit).
+
+Overall, this system allows for efficient communication between various registers and memory through the common bus, with control over which data is transferred based on selection variables.
+
+## Instruction Cycle
+A program resides in the memory unit of computer consists of a sequence of instructions. The program is executed in the computer by going through a cycle for
+each instruction. Each instruction cycle in turn is subdivided into a sequence of sub cycles or phases. In the basic computer each instruction cycle consist of the
+following phases.
+
+**Phases of IC**
+1. Fetch instruction from memory
+2. Decode the instruction
+3. Read the effective address from memory if the instruction has an indirect address.
+4. Execute the Instruction
+Upon completion of step 4, the control goes back to step 1 to fetch, decode and execute the next instruction. This process remains continuous indefinitely unless, a HALT instruction is encountered
