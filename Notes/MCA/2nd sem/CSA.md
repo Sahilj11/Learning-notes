@@ -194,3 +194,264 @@ An encoder is a digital circuit that performs the inverse operation of the decod
 It is a combinational circuit that has 2<sup>n</sup> input lines and single output line
 it is a electronic switch that connect 1 out of n input to output
 it is functionally complete , all boolean function can be realised using one multiplexer without any other gates
+![](../../statics/Pasted%20image%2020240303072829.png)
+![](../../statics/Pasted%20image%2020240303072849.png)
+## De-multiplexer
+A demultiplexer, often abbreviated as "demux," is a digital circuit or device used in digital electronics and telecommunications. It takes a single input signal and directs it to one of several possible output lines based on the state of its control inputs.
+![](../../statics/Pasted%20image%2020240303073053.png)
+
+Demultiplexers are essentially the opposite of multiplexers. While multiplexers combine multiple input signals into a single output, demultiplexers take a single input and distribute it to multiple outputs.
+
+Demultiplexers are commonly used in various applications, including:
+
+1. Data transmission: In digital communication systems, demultiplexers are used to route individual data streams from a single transmission line to multiple receivers.
+
+2. Memory systems: Demultiplexers can be used to select specific memory locations or address lines in memory devices.
+
+3. Display systems: In display technology, demultiplexers help in selecting individual segments or pixels in a display matrix.
+
+4. Address decoding: Demultiplexers are used to decode address lines in microprocessor systems, enabling the selection of specific peripheral devices or memory locations.
+
+Demultiplexers come in various configurations, such as 1-to-2, 1-to-4, 1-to-8, etc., depending on the number of output lines they have. They are essential components in digital circuits and play a crucial role in routing and managing data and signals.
+
+![](../../statics/Pasted%20image%2020240303073205.png)
+
+# Sequential Logic
+## Intro
+A sequential circuit is an interconnection of flip-flops and gates. The gates by themselves constitute a combinational circuit, but when included with the flip-flops, the overall circuit is classified as a sequential circuit.
+![](../../statics/Pasted%20image%2020240303073627.png)
+
+## Latch and flip flop
+Latches and flip-flops are both sequential logic circuits used in digital electronics to store binary data. They serve similar functions but have some key differences in their operation and behavior.
+
+**1. Latch:**
+
+- A latch is a basic memory element that stores one bit of data.
+- It operates transparently, meaning it continuously updates its output based on the input as long as the enable signal is active.
+- Latches can be level-sensitive or edge-sensitive. Level-sensitive latches respond to the input as long as the enable signal remains in a certain state (e.g., high or low). Edge-sensitive latches respond to a specific edge transition (e.g., rising or falling edge) of the enable signal.
+- The most common type of latch is the SR latch (Set-Reset latch), which has two inputs: S (set) and R (reset). When S is high and R is low, the output is set to 1; when S is low and R is high, the output is reset to 0; when both S and R are low, the latch maintains its previous state; and when both S and R are high, it enters an invalid state.
+
+**2. Flip-Flop:**
+
+- A flip-flop is a more complex memory element that also stores one bit of data.
+- It has a clock input in addition to the data input, which allows it to change its state only at specific clock transitions.
+- Flip-flops are edge-triggered devices, meaning they capture and store input data only at the rising or falling edge of the clock signal.
+- Common types of flip-flops include D flip-flops, JK flip-flops, and T flip-flops, each with its specific behavior and applications.
+- For example, in a D flip-flop, the input data (D) is captured and stored at the rising or falling edge of the clock signal, depending on the flip-flop's configuration. The stored data remains unchanged until the next clock transition.
+
+**Key Differences:**
+
+- Latches are level-sensitive and continuously update their output based on the input, while flip-flops are edge-triggered and store data only at specific clock transitions.
+- Latches are simpler and require fewer components, making them suitable for simpler applications, while flip-flops provide more precise timing control and are commonly used in more complex sequential circuits.
+
+In summary, while both latches and flip-flops serve as memory elements in digital circuits, they differ in their operation, timing control, and complexity, making them suitable for different applications.
+
+## Level vs Edge 
+In the context of digital circuits, "level-sensitive" and "edge-sensitive" refer to different mechanisms for triggering the operation of certain components, such as latches or flip-flops.
+
+**1. Level-Sensitive:**
+
+Level-sensitive operation means that the circuit responds to the continuous state (or level) of the input signal. In other words, as long as the input signal remains in a particular state (e.g., high or low), the circuit continues to react accordingly.
+
+For example, in a level-sensitive latch:
+- If the latch is level-sensitive to a high input signal, it remains in a set state as long as the input signal is held high.
+- Similarly, if the latch is level-sensitive to a low input signal, it remains in a reset state as long as the input signal is held low.
+
+Level-sensitive circuits are often simpler in design but can be more susceptible to noise and timing issues, especially in asynchronous systems.
+
+**2. Edge-Sensitive:**
+
+Edge-sensitive operation means that the circuit responds to a specific transition or change in the input signal. The most common types of transitions are the rising edge (transition from low to high) and falling edge (transition from high to low) of the input signal.
+
+For example, in an edge-triggered flip-flop:
+- The flip-flop changes its state (captures and stores the input data) only when the clock signal transitions occur, such as the rising or falling edge of the clock.
+- The input data is latched or sampled at these specific moments, ensuring precise timing control and synchronization.
+
+Edge-sensitive circuits are often used in synchronous systems where precise timing is crucial, as they allow for controlled and predictable behavior at specific points in time.
+
+In summary, level-sensitive circuits respond to the continuous state of the input signal, while edge-sensitive circuits respond to specific transitions or edges of the input signal. Each mechanism has its advantages and is chosen based on the requirements of the application.
+## Flip Flops
+- it is a binary cell capable of storing one bit of data
+- it is a sequential circuit
+- contains memory element to store past output
+- has two outputs 
+	- normal 
+	- complement
+- A flip-flop maintains a binary state until directed by a clock pulse to switch states. The difference among various types of flip-flops is in the number of inputs they possess and in the manner in which the inputs affect the binary state
+
+### Use of clock signal in flip flop
+In the context of flip-flops, a "clock" refers to a signal that controls the timing of when the flip-flop changes its state. Flip-flops are sequential logic circuits that store binary data in the form of a one-bit memory. The clock signal acts as a trigger for the flip-flop to read the input data and either latch or change its state accordingly.
+
+When the clock signal transitions from one state to another (e.g., from low to high or high to low, depending on the type of flip-flop and its configuration), the flip-flop samples the input data and updates its output accordingly. This sampling process typically occurs on the rising or falling edge of the clock signal, depending on the specific design of the flip-flop.
+
+The use of a clock signal allows for synchronized operation of multiple flip-flops within a digital circuit, ensuring that data is processed and transferred at the correct times. It also helps in controlling the timing of operations and prevents race conditions that can occur in asynchronous systems.
+
+Different types of flip-flops, such as D flip-flops, JK flip-flops, and T flip-flops, utilize the clock signal in slightly different ways, but in all cases, the clock serves as a crucial timing element for the proper functioning of the flip-flop circuit.
+
+Different types of flip-flops use the clock signal in slightly different ways. Here's how some common types of flip-flops utilize the clock signal:
+
+1. **D Flip-Flop**:
+   - In a D flip-flop (Data flip-flop), the input data (D) is sampled and transferred to the output (Q) on the rising or falling edge of the clock signal, depending on whether it's a positive-edge-triggered or negative-edge-triggered flip-flop.
+   - On the rising edge of the clock, the value of the D input is transferred to the output. The output remains stable until the next rising edge of the clock.
+   - This type of flip-flop is useful for applications where data needs to be latched or stored at specific clock intervals.
+
+2. **JK Flip-Flop**:
+   - A JK flip-flop has two control inputs: J (set) and K (reset), in addition to the clock input. The output of a JK flip-flop changes state on the clock edge only if the J and K inputs are both high.
+   - The clock signal determines when the flip-flop reads the J and K inputs. The output changes state based on the inputs and the current state of the flip-flop on the rising or falling edge of the clock.
+   - JK flip-flops are versatile and can be used for toggling, frequency division, and various other sequential logic operations.
+
+3. **T Flip-Flop**:
+   - A T flip-flop (Toggle flip-flop) toggles its output state whenever the clock signal transitions from one state to another (e.g., from low to high or high to low), provided the T input is high.
+   - When the clock transitions occur and the T input is high, the output switches to its complemented state (i.e., if the output was high, it becomes low, and vice versa).
+   - T flip-flops are often used in applications where a single signal needs to alternate between two states at each clock pulse, such as in frequency division circuits.
+
+Each type of flip-flop utilizes the clock signal in a specific manner to control the timing of data transfer and state changes, allowing for various functionalities in digital circuits.
+### Types
+#### In simple language
+
+1. **SR Flip-Flop (Set-Reset Flip-Flop):**
+   - Think of an SR flip-flop like a simple light switch with two buttons: "Set" (S) and "Reset" (R).
+   - When you press the "Set" button, the flip-flop turns on (1). It stays on until you press the "Reset" button, which turns it off (0).
+   - If both buttons are pressed at the same time, it might cause confusion, and the flip-flop may end up in an unpredictable state.
+
+2. **JK Flip-Flop:**
+   - A JK flip-flop is like an SR flip-flop but with a bit more intelligence. It has two inputs: J and K.
+   - It behaves somewhat like the SR flip-flop, but it has an additional feature: toggling.
+   - If you press the "J" button, it sets the flip-flop (turns it on). If you press the "K" button, it resets the flip-flop (turns it off).
+   - But if you press both "J" and "K" simultaneously, the flip-flop toggles its state. So, if it was off, it turns on, and if it was on, it turns off.
+
+3. **D Flip-Flop (Data Flip-Flop):**
+   - The D flip-flop is the simplest one. It's like having a single button labeled "D" for data.
+   - When you press the "D" button, the flip-flop remembers that state until the next time you press it.
+   - It's like a light switch that you flip once to turn on and flip again to turn off. The flip-flop keeps the last state you set until you change it.
+
+4. **T Flip-Flop (Toggle Flip-Flop):**
+   - The T flip-flop is like a button labeled "T" for toggle.
+   - Each time you press the "T" button, it toggles the state of the flip-flop. So, if it was off, it turns on, and if it was on, it turns off.
+   - It's like a light switch that changes its state every time you flick it, regardless of its previous state.
+
+These flip-flops are fundamental building blocks in digital circuits, used for storing and manipulating binary data. They're like switches but with added intelligence to remember and control their state based on specific input signals.
+#### SR Flip Flop
+- SET RESET flip flop is designed with help of two NAND gate or two NOR gate. these are also called SR Latch
+- The operation of the SR flip-flop is as follows. If there is no signal at the clock input C, the output of the circuit cannot change irrespective of the values at inputs S and R. Only when the clock signal changes from 0 to 1 can the output be affected according to the values in inputs S and R. If S = 1 and R = 0 when C changes from 0 to 1, output Q is cleared to 0. If both S and R are 0 during the clock transition, the output does not change. When both S and R are equal to 1, the output is unpredictable and may go to either 0 or 1, depending on internal timing delays that occur within the circuit
+![](../../statics/Pasted%20image%2020240303074815.png)
+
+![](../../statics/Pasted%20image%2020240303074700.png)
+here t+1 represent Present output and t is past output
+The SR flip-flop should not be pulsed when S = R = 1 since it produces an indeterminate next state. This indeterminate condition makes the SR flip-flop difficult to manage and therefore it is seldom used in practice.
+
+#### D Flip Flop
+The D (data) flip-flop is a slight modification of the SR flip-flop. An SR flip-flop is converted to a D flip-flop by inserting an inverter between S and R and assigning the symbol D to the single input. The D input is sampled during the occurrence of a clock transition from 0 to 1. If D = 1, the output of the flip-flop goes to the 1 state, but if D = 0, the output of the flip-flop goes to the 0 state.
+![](../../statics/Pasted%20image%2020240303075425.png)
+
+Characteristic equation:- Q(t + 1) = D
+
+#### JK Flip Flop
+A JK flip-flop is a refinement of the SR flip-flop in that the indeterminate condition of the SR type is defined in the JK type. Inputs J and K behave like inputs S and R to set and clear the flip-flop, respectively. When inputs J and K are both equal to 1, a clock transition switches the outputs of the flip-flop to their complement state
+![](../../statics/Pasted%20image%2020240303075746.png)
+
+#### T Flip Flop
+Another type of flip-flop found in textbooks is the T (toggle) flip-flop. This flip-flop, shown in Figure 4-5, is obtained from a JK type when inputs J and K are connected to provide a single input designated by T. The T flip-flop therefore has only two conditions.
+![](../../statics/Pasted%20image%2020240303080005.png)
+
+### Excitation table
+The characteristic tables of flip-flops specify the next state when the inputs and the present state are known. During the design of sequential circuits we usually know the required transition from present state to next state and wish to find the flip-flop inpu-t conditions that will cause the required transition. For this reason we need a table that lists the required input combinations for a given change of state. Such a table is called a flipflop excitation table.
+
+## Registers
+- Flip flop is 1-bit memory cell
+- To increase the storage capacity . we have to use group of flip flop . this group of FF is known as registers
+- N-bit of register consists of n number of flip flop and is capable of storing n-bit of word
+### Types of registers
+Registers are digital circuits used in computer systems for storing binary data temporarily. They come in various types, each designed for specific functions or applications. Here are some common types of registers:
+
+1. **Data Register (D-Register):**
+   - A data register stores data temporarily during processing. It can hold a single binary value or a group of binary values.
+   - Data registers are used in arithmetic and logic operations, data movement, and other general-purpose tasks within a computer's central processing unit (CPU) or other parts of the system.
+
+2. **Address Register:**
+   - An address register holds memory addresses. It is used for accessing specific locations in memory or other storage devices.
+   - Address registers are essential for memory management and addressing modes in computer architecture.
+
+3. **Program Counter (PC):**
+   - The program counter register stores the memory address of the next instruction to be fetched and executed in a program.
+   - It is incremented after each instruction fetch, effectively pointing to the next instruction in the program sequence.
+   - The program counter is crucial for controlling the program flow during execution.
+
+4. **Instruction Register (IR):**
+   - The instruction register holds the currently fetched instruction from memory during the instruction execution cycle.
+   - It temporarily stores the opcode and operands of the instruction being executed by the CPU.
+   - The instruction register is used for decoding and executing instructions in the CPU.
+
+5. **Index Register:**
+   - An index register is used for indexed addressing in memory access operations.
+   - It holds an offset value that is added to a base address to calculate the effective memory address.
+   - Index registers are commonly used in array processing and data structures.
+
+6. **Stack Pointer (SP):**
+   - The stack pointer register holds the memory address of the top of the stack in a stack-based memory organization.
+   - It is used for pushing data onto the stack and popping data from the stack during subroutine calls and context switching.
+
+7. **Flag Register:**
+   - A flag register, also known as a status register, stores various status flags that indicate the outcome of arithmetic and logic operations.
+   - Common flags include zero flag, carry flag, sign flag, overflow flag, and parity flag.
+   - Flag registers are used for conditional branching and decision-making in program execution.
+
+These are just a few examples of the types of registers commonly found in computer systems. Depending on the architecture and design of the system, there may be additional types of registers with specialized functions.
+
+### Shift registers
+
+A register capable of shifting its binary information in one or both directions is called a shift register. The logical configuration of a shift register consists of a chain of flip-flops in cascade, with the output of one flip-flop connected to the input of the next flip-flop. All flip-flops receive common clock pulses that initiate the shift from one stage to the next.
+
+D flip flop used here commonly 
+
+These are used to perform arithmetic operation
+
+There are several types of shift registers:
+
+1. **Serial-in, Serial-out (SISO) Shift Register:**
+   - In a Serial-in, Serial-out shift register, data is inputted serially (one bit at a time) and shifted through the register, appearing one bit at a time at the output.
+   - This type of shift register is often used for serial data communication and conversion between serial and parallel data formats.
+
+2. **Serial-in, Parallel-out (SIPO) Shift Register:**
+   - In a Serial-in, Parallel-out shift register, data is inputted serially and shifted through the register, but the output is available in parallel at the register's outputs.
+   - This type of shift register is useful for converting serial data to parallel data, often used in interfacing with parallel devices or systems.
+
+3. **Parallel-in, Serial-out (PISO) Shift Register:**
+   - In a Parallel-in, Serial-out shift register, data is inputted in parallel (multiple bits simultaneously) and then shifted out serially.
+   - This type of shift register is commonly used for parallel-to-serial data conversion.
+
+4. **Parallel-in, Parallel-out (PIPO) Shift Register:**
+   - In a Parallel-in, Parallel-out shift register, data is inputted and outputted in parallel, without any shifting operation.
+   - It's useful for temporary storage of parallel data.
+
+![](../../statics/Pasted%20image%2020240303083943.png)
+
+Shift registers are versatile and find applications in various areas, including:
+- Serial data communication: Used in serial communication protocols such as SPI (Serial Peripheral Interface) and UART (Universal Asynchronous Receiver-Transmitter).
+- Serial-to-parallel and parallel-to-serial conversion: Converting data between serial and parallel formats for interfacing with different types of devices.
+- Data storage and manipulation: Temporary storage and manipulation of data within digital systems.
+
+Shift registers are fundamental building blocks in digital circuits and are widely used in both hardware and software implementations for various applications.
+
+## Counter 
+A register that goes through a predetermined sequence of states upon the application of input pulses is called a counter. The input pulses may be clock pulses or may originate form an external source. They may occur at uniform intervals of time or at random. Counters are found in almost all equipment containing digital logic. They are used for counting the number of occurrences of an event and are useful for generating timing signals to control the sequence of operations in digital computers.
+
+A counter that follows the binary number sequence is called a binary counter. An n-bit binary counter is a register of n flip-flops and associated gates that follows a sequence of states according to the binary count of n bits, from 0 to 2n – 1.
+
+Finding mode value of counter :- just count the different states
+To find number of filp flops (n) required to design counter having mode value m :- 2<sup>n</sup> >= m
+
+### Sync vs Async counter
+
+| Feature                    | Synchronous Counter                                                       | Asynchronous Counter                                                           |
+| -------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Clocking                   | All flip-flops are clocked by the same common clock signal.               | Flip-flops are clocked by individual or separate clock signals.                |
+| Timing Control             | All flip-flops change state simultaneously at each clock pulse.           | Flip-flops change state independently, based on their individual clock pulses. |
+| Timing Constraints         | Synchronization ensures precise timing and avoids timing hazards.         | Lack of synchronization may lead to timing hazards and glitches.               |
+| Design Complexity          | Typically more complex due to synchronization requirements.               | Generally simpler design compared to synchronous counters.                     |
+| Speed Performance          | Can operate at higher speeds due to synchronous operation.                | May be limited in speed due to potential timing hazards.                       |
+| Power Consumption          | May consume more power due to simultaneous switching of all flip-flops.   | Often consumes less power compared to synchronous counterparts.                |
+| Implementation Flexibility | Suitable for applications requiring precise timing and synchronization.   | Suitable for simpler applications or where synchronization is not critical.    |
+| Circuit Size               | Generally larger due to additional synchronization logic.                 | Can be more compact due to simpler design and fewer components.                |
+| Application Examples       | Microprocessors, digital signal processing, critical timing applications. | Simple counting tasks, clock dividers, frequency dividers.                     |
+
