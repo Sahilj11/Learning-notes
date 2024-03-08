@@ -210,3 +210,32 @@ Let A,B be two non-empty sets.Let R be a relation from A to B,i.e. R⊆AxB. The 
 
 ## Equivalence relation
 Let A be a non-empty set. A relation R on A is called an equivalence relation if it is reflexive, symmetric and transitive
+
+## Equivalence Class
+![](../../statics/Pasted%20image%2020240308180312.png)
+## POSET (Partial ordering relation)
+- if R is reflexive , antisymettric and transitive it is partial order relation . And A set 'A' is POSET if it has partial order relation
+![](../../statics/Pasted%20image%2020240308193919.png)
+## Function
+![](../../statics/Pasted%20image%2020240308191103.png)
+![](../../statics/Pasted%20image%2020240308191210.png)
+### Function Composition
+
+![](../../statics/Pasted%20image%2020240308191701.png)
+![](../../statics/Pasted%20image%2020240308191943.png)
+
+### Types of function
+
+#### Injective
+![](../../statics/Pasted%20image%2020240308192322.png)
+![](../../statics/Pasted%20image%2020240308192412.png)
+
+#### Onto 
+![](../../statics/Pasted%20image%2020240308192655.png)
+
+#### Bijective function
+![](../../statics/Pasted%20image%2020240308193017.png)
+
+#### Inverse function
+![](../../statics/Pasted%20image%2020240308193424.png)
+
