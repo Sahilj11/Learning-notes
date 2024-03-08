@@ -182,3 +182,31 @@ used: the multiset {a, a, b} can be denoted as \[a, a, b \].
 The cardinality of a multiset is constructed by summing up the multiplicities of all its elements
 
 # Relation and Function
+
+## Intro
+Cartesian product 
+The Cartesian product of A and B is denoted by A×B and is defined by AXB = {(a,b):a∈A, b∈B}
+(a, b) is called an ordered pair. Let a∈A, c∈A; b∈B, d∈B.
+
+## Concept of relation
+Let A and B be two non-empty sets. A subset R of AXB is said to be a relation from A to B.If A=B, then any subset of A X A is said to be a relation on A. If R ⊆ A X B, and (a,b)∈R;a∈A,b∈B,it is also written as *aRb* and is read as ‘a is R related to b’.
+
+The set of the first components of the ordered pairs of R is called the domain and the set of the second components of the ordered pairs of R is called the range of R. If A,B are finite sets and n(A)=x,n(B)=y; then n(AXB)=xy.So,the number of subsets of AXB is2<sup>xy</sup>.Therefore, the number of relations from A to B is 2<sup>x</sup>
+
+## Identity relation
+A relation on set is said to be identity relation if each element of ordered pair is related to itself only in the given relation Let A be a non-empty set. I = {(a, a): a∈A} ⊆A xA I<sub>A</sub> is called the identity relation on A.
+
+Let A = {1, 2, 3, 4} Then I = {(1, 1), (2, 2), (3, 3), (4, 4)} ⊆A x A
+
+## Inverse relation
+Let A,B be two non-empty sets.Let R be a relation from A to B,i.e. R⊆AxB. The inverse relation of R is denoted by R<sup>-1</sup>,and is defined by R<sup>-1</sup>= {(b, a): (a, b)∈R} ⊆B xA. Clearly, domain of R<sup>-1</sup>= range of R range of R<sup>-1</sup>= domain of R
+
+## Type of relation
+![](../../statics/Pasted%20image%2020240308150714.png)
+![](../../statics/Pasted%20image%2020240308150207.png)
+![](../../statics/Pasted%20image%2020240308150306.png)
+![](../../statics/Pasted%20image%2020240308150433.png)
+![](../../statics/Pasted%20image%2020240308150639.png)
+
+## Equivalence relation
+Let A be a non-empty set. A relation R on A is called an equivalence relation if it is reflexive, symmetric and transitive

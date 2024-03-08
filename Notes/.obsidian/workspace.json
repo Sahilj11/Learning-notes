@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -173,19 +174,19 @@
   },
   "active": "5a041856e7ec77c1",
   "lastOpenFiles": [
+    "statics/Pasted image 20240308150714.png",
+    "statics/Pasted image 20240308150639.png",
+    "statics/Pasted image 20240308150433.png",
+    "statics/Pasted image 20240308150306.png",
+    "statics/Pasted image 20240308150207.png",
     "statics/Pasted image 20240308110430.png",
     "statics/Pasted image 20240308104939.png",
     "statics/Pasted image 20240308104929.png",
     "statics/Pasted image 20240308104704.png",
     "statics/Pasted image 20240308104542.png",
     "statics/Pasted image 20240308104527.png",
-    "statics/Pasted image 20240308104447.png",
-    "statics/Pasted image 20240308104249.png",
-    "statics/Pasted image 20240308103018.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/DM.md",
-    "statics/Pasted image 20240303154707.png",
-    "statics/Pasted image 20240303151650.png",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
     "javaCollection/1. The main interfaces of java collection.md",
