@@ -8,28 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "00b9657a406f9adc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GIT Commands/Commands.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "13e4f07a96bfb438",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.8"
-              }
-            }
-          },
-          {
             "id": "849c2ce2bb364f62",
             "type": "leaf",
             "state": {
@@ -40,9 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5a041856e7ec77c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MCA/2nd sem/DM.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -92,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -109,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/DM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/DM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/CSA.md"
+                "file": "MCA/2nd sem/DM.md"
               }
             }
           },
@@ -182,20 +171,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "849c2ce2bb364f62",
+  "active": "5a041856e7ec77c1",
   "lastOpenFiles": [
+    "statics/Pasted image 20240308110430.png",
+    "statics/Pasted image 20240308104939.png",
+    "statics/Pasted image 20240308104929.png",
+    "statics/Pasted image 20240308104704.png",
+    "statics/Pasted image 20240308104542.png",
+    "statics/Pasted image 20240308104527.png",
+    "statics/Pasted image 20240308104447.png",
+    "statics/Pasted image 20240308104249.png",
+    "statics/Pasted image 20240308103018.png",
+    "MCA/2nd sem/CSA.md",
+    "MCA/2nd sem/DM.md",
     "statics/Pasted image 20240303154707.png",
     "statics/Pasted image 20240303151650.png",
-    "statics/Pasted image 20240303151255.png",
-    "statics/Pasted image 20240303150533.png",
-    "statics/Pasted image 20240303150418.png",
-    "statics/Pasted image 20240303083943.png",
-    "statics/Pasted image 20240303080005.png",
-    "statics/Pasted image 20240303075746.png",
-    "statics/Pasted image 20240303075425.png",
-    "statics/Pasted image 20240303074815.png",
-    "statics/Pasted image 20240303074700.png",
-    "MCA/2nd sem/CSA.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
     "javaCollection/1. The main interfaces of java collection.md",
@@ -224,7 +214,6 @@
     "Udemy Networking/1. IP address.md",
     "MCA/1st Sem/CN/CN Final notes.md",
     "MCA/1st Sem/CN/CN Minor 1st.md",
-    "MCA/1st Sem/SE/Software Project management.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
