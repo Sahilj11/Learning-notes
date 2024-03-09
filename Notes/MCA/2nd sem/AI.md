@@ -245,3 +245,82 @@ In summary, And-Or graphs provide a useful framework for representing and reason
 5. If n is not solvable node, label n as unsolvable. If the start node is labeled as unsolvable, exit with failure. Remove all nodes from open, with unsolvable ancestors.
 6. Otherwise, expand node n generating all of its successor compute the cost of for each newly generated node and place all such nodes on open.
 7. Go back to step (2)
+
+## Minimax
+Minimax is a decision-making algorithm commonly used in game theory, specifically in two-player zero-sum games, such as chess, checkers, or tic-tac-toe. Here are some notes on the minimax algorithm:
+Time complexity :- O(b<sup>d</sup>) , here b is number of child and d is depth
+1. **Objective**: The main objective of minimax is to find the optimal move for a player, assuming that the opponent will also play optimally. It aims to minimize the potential loss (for the worst case scenario) while maximizing the potential gain.
+
+2. **Tree Structure**: The game state is represented as a tree, where each node represents a possible state of the game. The root node represents the current state, and the children nodes represent all possible moves from that state.
+
+3. **Depth-Limited or Full Search**: Minimax can be implemented with either a depth-limited search, where it only evaluates a certain number of moves ahead, or a full search, where it evaluates all possible moves until a terminal state (win, loss, or draw) is reached.
+
+4. **Evaluation Function**: At the leaf nodes of the tree (terminal states), an evaluation function is used to assign a value to that state, indicating the desirability of that outcome for the player. This function should reflect the "goodness" of a particular state from the perspective of the player.
+
+5. **Maximization and Minimization**: The algorithm alternates between maximizing and minimizing. At each level of the tree, one player (Max) aims to maximize the evaluation value of its moves, while the opponent (Min) aims to minimize it.
+
+6. **Backtracking**: After evaluating the leaf nodes, the algorithm backtracks, propagating the values up the tree. At each level, Max chooses the move with the highest value, while Min chooses the move with the lowest value.
+
+7. **Alpha-Beta Pruning**: Minimax can be optimized using alpha-beta pruning, which reduces the number of nodes that need to be evaluated by pruning branches of the tree that cannot possibly lead to a better solution. This technique helps improve the efficiency of the algorithm.
+
+8. **Complexity**: The time complexity of minimax without pruning is exponential in the depth of the tree. However, with alpha-beta pruning, the effective branching factor is reduced, leading to significant improvements in performance.
+
+9. **Application**: Minimax is widely used in various board games and other decision-making problems where there are two players with opposing goals and complete information about the game state.
+
+**Features**
+One key feature of the minimax algorithm is its ability to systematically evaluate possible moves in a game, enabling it to make optimal decisions for a player. Here are some prominent features of the minimax algorithm:
+
+1. **Optimal Strategy**: Minimax ensures that the player makes the best possible move at each decision point, assuming the opponent also makes optimal moves. This is achieved by recursively evaluating the game tree to determine the outcome of all possible moves.
+
+2. **Complete Search**: In theory, minimax can search the entire game tree to find the optimal move. However, in practice, this is often limited to a certain depth due to the exponential growth of the game tree.
+
+3. **Backtracking**: Minimax employs backtracking to propagate the evaluation values of terminal states back up the tree. This allows the algorithm to determine the optimal move at each level of the game tree based on the evaluations of its child nodes.
+
+4. **Evaluation Function**: At terminal states or leaf nodes of the game tree, an evaluation function is used to assign a value to the state based on its desirability for the player. This function can be tailored to the specific game being played and the player's objectives.
+
+5. **Alpha-Beta Pruning**: A key optimization technique used in minimax is alpha-beta pruning, which reduces the number of nodes that need to be evaluated by eliminating branches of the game tree that cannot lead to a better outcome. This significantly improves the efficiency of the algorithm.
+### Alpha-beta pruning 
+Alpha-beta pruning is an optimization technique used in the minimax algorithm to reduce the number of nodes evaluated in the search tree. Here are some notes on alpha-beta pruning:
+
+1. **Objective**: The main goal of alpha-beta pruning is to eliminate branches of the search tree that cannot possibly influence the final decision. By doing so, it reduces the number of nodes that need to be evaluated, thereby improving the efficiency of the minimax algorithm.
+
+2. **Pruning Condition**: Alpha-beta pruning relies on two parameters: alpha and beta. Alpha represents the best value found so far for the maximizing player (Max), while beta represents the best value found so far for the minimizing player (Min). Pruning occurs when the current node's value falls outside the range defined by alpha and beta.
+
+3. **Pruning Rules**:
+   - If the value of a node is greater than or equal to beta (for Max), or less than or equal to alpha (for Min), pruning occurs because it implies that the opposing player already has a better move available elsewhere in the tree.
+   - When pruning occurs, the evaluation of the subtree rooted at that node is skipped, and the algorithm moves on to explore other branches of the tree.
+
+4. **Improvement over Minimax**: Alpha-beta pruning improves upon the minimax algorithm by effectively reducing the search space without affecting the final decision. It allows the algorithm to explore only the most promising branches of the game tree, leading to significant performance gains, especially in games with large state spaces.
+
+5. **Optimality**: Alpha-beta pruning does not affect the optimality of the minimax algorithm. It preserves the correctness of the search by ensuring that the final decision remains the same as if the entire search tree were explored.
+
+6. **Efficiency**: The efficiency of alpha-beta pruning depends on the order in which nodes are evaluated. By evaluating more promising nodes first, the likelihood of pruning occurring increases, resulting in greater efficiency. However, even with a random evaluation order, alpha-beta pruning still provides significant performance improvements over the basic minimax algorithm.
+
+7. **Application**: Alpha-beta pruning is commonly used in various two-player zero-sum games, such as chess, checkers, and Go, where it dramatically reduces the computational overhead of searching through large game trees.
+
+8. **Parallelization**: Alpha-beta pruning can be parallelized to explore multiple branches of the game tree concurrently. This further enhances its efficiency, especially on multi-core or distributed computing systems.
+## Constraint Satisfaction Problem
+![](../../statics/Pasted%20image%2020240309180628.png)
+Constraint Satisfaction Problems (CSPs) are a class of problems in Artificial Intelligence (AI) where variables must be assigned values while satisfying a set of constraints. Here are some notes on CSPs:
+
+1. **Definition**: A CSP consists of a set of variables, each with a domain of possible values, and a set of constraints that specify the allowable combinations of values for subsets of variables.
+
+2. **Variables**: Variables represent unknowns in the problem that need to be assigned values. Each variable has a domain, which is the set of possible values it can take.
+
+3. **Domains**: Domains define the allowable values for each variable. Domains can be finite or infinite, discrete or continuous, depending on the problem domain.
+
+4. **Constraints**: Constraints specify restrictions on the allowable combinations of values for subsets of variables. Constraints can be unary (acting on a single variable), binary (acting on two variables), or higher-order (acting on more than two variables).
+
+5. **Satisfaction**: A solution to a CSP is an assignment of values to variables such that all constraints are satisfied. A solution must respect the domains of the variables and satisfy all constraints.
+
+6. **Examples**: CSPs are used in various AI applications, including scheduling problems, timetabling, configuration problems, logistics, and resource allocation.
+
+7. **Search Algorithms**: CSPs can be solved using various search algorithms, such as backtracking, constraint propagation, and local search methods like hill climbing or simulated annealing.
+
+8. **Backtracking**: Backtracking is a widely used algorithm for solving CSPs. It systematically explores the search space by assigning values to variables and backtracking when a dead-end is reached. It uses depth-first search and can be augmented with heuristics to improve efficiency.
+
+9. **Constraint Propagation**: Constraint propagation techniques, such as arc consistency and forward checking, aim to reduce the search space by eliminating values from domains that cannot participate in any solution. This is achieved by propagating constraints and updating domains accordingly.
+
+10. **Local Search Methods**: Local search algorithms, like hill climbing and simulated annealing, iteratively improve a solution by making small changes to assignments. These methods are useful for large and complex CSPs where complete search algorithms may be impractical.
+
+11. **Complexity**: The complexity of solving CSPs depends on factors such as the size of the search space, the structure of constraints, and the efficiency of the search algorithm. In general, CSPs are NP-complete, meaning that there is no known polynomial-time algorithm to solve them in the worst case.
