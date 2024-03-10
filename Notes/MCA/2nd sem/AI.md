@@ -410,6 +410,7 @@ Depth First Search (DFS) and Breadth First Search (BFS) are two fundamental sear
    - **DFS**: Generally has a lower time complexity compared to BFS, especially in cases where the solution is located deep within the search space.
    - **BFS**: Generally has a higher time complexity compared to DFS, especially in cases where the solution is located near the beginning of the search space.
 # Knowledge Representation
+![](../../statics/Pasted%20image%2020240310090216.png)
 Knowledge representation in AI refers to the process of structuring and organizing knowledge in a form that can be effectively utilized by intelligent systems, such as expert systems, reasoning engines, and cognitive agents. It involves encoding knowledge about the world, problem-solving methods, and domain-specific expertise in a format that can be manipulated and reasoned about by computational systems.
 
 Key aspects of knowledge representation in AI include:
@@ -547,3 +548,66 @@ Unification is a fundamental concept in artificial intelligence (AI) and logic-b
     a. Select two clauses. Call these the parent clauses.
     b. Resolve them together. The resolvent will the disjunction of all the literals of both parent clauses with appropriate substitutions performed and with the following exception: If there is one pair of literals T1 and ¬T2 such that one of the parent clauses contains T2 and the other contains T1 and if T1 and T2 are unifiable, then neither T1 nor T2 should appear in the resolvent. We call T1 and T2 Complementary literals. Use the substitution produced by the unification to create the resolvent. If there is more than one pair of complementary literals, only one pair should omit from the resolvent.
     c. If the resolvent is an empty clause, then a contradiction has found. Moreover, if it is not, then adding it to the set of classes available to the procedure.
+
+
+## Declarative vs Procedural 
+
+| Feature                | Procedural Knowledge                                  | Declarative Knowledge                              |
+|------------------------|-------------------------------------------------------|---------------------------------------------------|
+| Nature                 | Knowledge about how to do something.                  | Knowledge about what is true or how things are.  |
+| Representation         | Typically represented as algorithms, procedures, or rules that specify a sequence of steps or actions to achieve a goal. | Represented as facts, statements, or rules that describe relationships, properties, or constraints in a domain. |
+| Focus                  | Emphasizes processes, actions, and procedures for performing tasks or solving problems. | Emphasizes facts, descriptions, and relationships between entities or concepts. |
+| Example                | A sorting algorithm (e.g., bubble sort, merge sort)   | A fact about the world (e.g., "The sun rises in the east.") |
+| Knowledge Acquisition  | Acquired through learning by doing, experience, or instruction. | Acquired through observation, learning from examples, or formal education. |
+| Usage                  | Used for guiding actions, decision-making, and problem-solving by specifying how tasks should be performed. | Used for reasoning, inference, and understanding by describing the state of the world and relationships between entities. |
+| Change Management      | Typically requires modification or reprogramming of procedures or algorithms to adapt to changes or new requirements. | Often requires updating or adding new facts or rules to accommodate changes in the domain or knowledge base. |
+| Execution Efficiency   | Procedural knowledge can be executed directly by a computer, often requiring less computational effort. | Declarative knowledge may require additional inference or reasoning to derive conclusions or make decisions. |
+| Example AI Application | Expert systems, procedural generation algorithms, robotics control systems. | Knowledge representation, natural language understanding, semantic web technologies. |
+## Logic Programming
+Logic programming is a programming paradigm that is based on formal logic. It uses logical inference rules to express programs and solve problems. In logic programming, computation is performed by deriving logical conclusions from a set of logical statements (also known as rules or clauses) that define the problem domain.
+
+The key features of logic programming include:
+
+1. **Declarative Style**: Logic programming emphasizes a declarative programming style, where programs specify what needs to be achieved rather than how to achieve it. Programs consist of a set of logical statements that describe relationships, constraints, and rules in the problem domain.
+
+2. **Rule-based Programming**: Logic programs are composed of rules in the form of logical clauses. These rules represent relationships between entities in the problem domain and define how new information can be inferred from existing knowledge.
+
+3. **Logical Inference**: Computation in logic programming is driven by logical inference. Programs use logical deduction to derive new conclusions from the given set of rules and facts. The inference process applies logical resolution and unification techniques to match patterns and derive new information.
+
+4. **Horn Clauses**: Logic programming languages typically use a subset of first-order logic known as Horn clauses. Horn clauses are logical statements with at most one positive literal and any number of negative literals. This restriction ensures that programs are computationally tractable and allows for efficient inference.
+
+5. **Backtracking Search**: Many logic programming languages employ backtracking search algorithms to explore different branches of the logical search space and find solutions to the problem. Backtracking involves exploring alternative choices when the current path fails, allowing the program to backtrack and try different paths.
+
+6. **Example Languages**: Prolog (Programming in Logic) is one of the most well-known logic programming languages. It provides a declarative syntax for defining logical rules and queries, along with built-in mechanisms for logical inference and backtracking search.
+
+Logic programming is particularly well-suited for problems involving logical reasoning, constraint satisfaction, and symbolic computation. It has applications in various fields, including artificial intelligence, expert systems, natural language processing, and automated reasoning. Its declarative nature and powerful inference capabilities make it a valuable tool for solving complex problems in these domains.
+
+
+## Forward vs Backward Reasoning
+Here's a comparison between forward and backward reasoning presented in a table format:
+
+| Feature        | Forward Reasoning                                                                                            | Backward Reasoning                                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Definition     | Starts with known facts and uses inference rules to derive new conclusions until a goal is reached.          | Starts with a goal or hypothesis and works backward, using inference rules to determine if known facts support the goal. |
+| Directionality | Proceeds from premises to conclusions.                                                                       | Proceeds from conclusions to premises.                                                                                   |
+| Strategy       | Follows a top-down approach, starting with initial facts and applying inference rules to derive new facts.   | Follows a bottom-up approach, starting with the goal and using inference rules to find supporting facts.                 |
+| Goal           | Typically used when the goal is known and the objective is to derive conclusions from available information. | Often used when the goal is to prove a hypothesis or satisfy a query by finding evidence or support for it.              |
+| Example        | Given the premises "All humans are mortal" and "Socrates is a human", infer "Socrates is mortal".            | Given the goal "Socrates is mortal", determine if there are known facts or rules that support this conclusion.           |
+| Efficiency     | May generate a large number of intermediate conclusions before reaching the desired goal.                    | More targeted and efficient, as it focuses on finding evidence directly relevant to the goal.                            |
+| Applicability  | Commonly used in expert systems, decision support systems, and rule-based reasoning engines.                 | Commonly used in theorem proving, query answering, and goal-driven reasoning tasks.                                      |
+| Implementation | Often implemented using forward chaining algorithms, such as the Rete algorithm in rule-based systems.       | Implemented using backward chaining algorithms, such as goal-driven search or depth-first search.                        |
+| Knowledge Base | Requires a complete or partially complete knowledge base containing facts and inference rules.               | Requires access to a knowledge base or database that contains relevant information for deriving conclusions.             |
+## Control Knowledge
+Control knowledge in artificial intelligence (AI) refers to the knowledge or strategies used by intelligent systems to manage and regulate their problem-solving processes. It encompasses the mechanisms and heuristics employed by AI systems to determine which actions to take, when to take them, and how to allocate computational resources efficiently. Here are some key points about control knowledge in AI:
+
+1. **Task Management**: Control knowledge guides the overall management of tasks and goals within an AI system. It involves strategies for selecting appropriate tasks to work on, prioritizing tasks based on importance or urgency, and coordinating the execution of multiple tasks concurrently.
+
+2. **Search Strategies**: In problem-solving tasks, control knowledge governs the search strategies used to explore the solution space effectively. This includes selecting appropriate search algorithms (e.g., depth-first search, breadth-first search, heuristic search), setting search parameters (e.g., search depth, branching factor), and adapting search strategies based on problem characteristics.
+
+3. **Heuristic Knowledge**: Control knowledge often incorporates domain-specific heuristics or rules of thumb to guide decision-making and problem-solving processes. These heuristics provide guidance on which actions to prioritize, which paths to explore first, and which solutions are likely to be more promising.
+
+4. **Resource Allocation**: Control knowledge helps in managing computational resources efficiently, such as memory, processing power, and time. It involves strategies for allocating resources dynamically based on task requirements, system constraints, and performance considerations.
+
+5. **Learning and Adaptation**: Control knowledge may include mechanisms for learning and adaptation, allowing AI systems to improve their performance over time through experience. This may involve techniques such as reinforcement learning, online learning, or self-adaptation to adjust control strategies based on feedback from the environment.
+
+6. **Problem Decomposition**: Control knowledge plays a role in decomposing complex problems into simpler subproblems, organizing problem-solving processes into manageable steps, and coordinating the interaction between different components of the system.
