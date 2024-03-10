@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/AI.md",
+                "file": "MCA/2nd sem/DM.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/AI.md",
+                "file": "MCA/2nd sem/DM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/AI.md",
+                "file": "MCA/2nd sem/DM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/AI.md"
+                "file": "MCA/2nd sem/DM.md"
               }
             }
           },
@@ -173,19 +173,19 @@
   },
   "active": "5a041856e7ec77c1",
   "lastOpenFiles": [
+    "statics/Pasted image 20240310145238.png",
+    "statics/Pasted image 20240310145201.png",
+    "statics/Pasted image 20240310144710.png",
+    "statics/Pasted image 20240310144358.png",
+    "statics/Pasted image 20240310143856.png",
+    "MCA/2nd sem/AI.md",
     "statics/Pasted image 20240310090216.png",
     "statics/Pasted image 20240310084341.png",
     "statics/Pasted image 20240310081759.png",
     "statics/Pasted image 20240309180628.png",
     "statics/Pasted image 20240309162728.png",
     "statics/Pasted image 20240309153847.png",
-    "statics/Pasted image 20240309153024.png",
-    "statics/Pasted image 20240309152904.png",
-    "statics/Pasted image 20240309151332.png",
     "MCA/2nd sem/DM.md",
-    "MCA/2nd sem/AI.md",
-    "statics/Pasted image 20240308193919.png",
-    "statics/Pasted image 20240308193424.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",

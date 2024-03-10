@@ -239,3 +239,55 @@ Let A be a non-empty set. A relation R on A is called an equivalence relation if
 #### Inverse function
 ![](../../statics/Pasted%20image%2020240308193424.png)
 
+# Logic and Propositional Calculus
+## Proposition and its Compound Statement
+A proposition (or statement) is a declarative statement which is true or false, but not both.
+
+In everyday life we often combine propositions to form more complex propositions or we can say compound proposition. For 
+example combining "Grass is green", and "The sun is red" we say something like "Grass is green and the sun is red"
+
+The fundamental property of a compound proposition is that its truth value is completely determined by the truth values of its sub propositions together with the way in which they are connected to form the compound propositions
+
+## Basic Logic Operation
+### Conjunction (∧)
+Conjunction, p ∧ q Any two propositions can be combined by the word “and” to form a compound
+proposition called the conjunction of the original propositions
+![](../../statics/Pasted%20image%2020240310143856.png)
+
+### Disjunction (∨)
+Any two propositions can be combined by the word “or” to form a compound proposition called the
+disjunction of the original propositions. Symbolically, p ∨ q read “p or q,” denotes the disjunction of p
+and q
+If p and q are false, then p ∨ q is false; otherwise p ∨ q is true. 
+
+### Negation (¬)
+Given any proposition p, another proposition, called the negation of p, can be formed by writing “It is not true that ...” or “It is false that ...” before p or, if possible, by inserting in p the word “not.” Symbolically, the negation of p, read “not p,” is denoted by ¬p
+
+## Tautologies and Contradiction
+
+![](../../statics/Pasted%20image%2020240310144710.png)
+A TAUTOLOGY is a formula which is "always true" --- that is, it is true for every assignment of truth
+values to its simple components.
+
+The opposite of a tautology is a CONTRADICTION, a formula which is "always false". In other words,
+a contradiction is false for every assignment of truth values to its simple components.
+
+Contingency
+
+## Logical Equivalence 
+Two propositions P (p, q, . . .) and Q(p, q, . . .) are said to be logically equivalent, or simply equivalent
+or equal, denoted by P (p, q, . . .) ≡ Q(p, q, . . .) If they have identical truth tables.
+
+## Conditional and Biconditional
+**Conditional**
+Let p and q are two statements and these two statements are of the form “If p then q.” Then Such
+statements are called conditional statements and are denoted by p → q
+![](../../statics/Pasted%20image%2020240310145201.png)
+the conditional p → q is frequently read “p implies q” or “p only if q.” The implication p→ q is false only when p is true, and q is false; otherwise, it is always true. In this implication, p is called the hypothesis (or antecedent) and q is called the conclusion (or consequent)
+
+**Biconditional**
+If p and q are two statements then "p if and only if q" is a compound statement, denoted as p ↔ q and
+referred as a biconditional statement or an equivalence. The equivalence p ↔ q is true only when both p
+and q are true or when both p and q are false.
+
+![](../../statics/Pasted%20image%2020240310145238.png)
