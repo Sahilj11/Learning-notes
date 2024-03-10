@@ -1,7 +1,68 @@
 # AI and its Application
 ## Intro
 Artificial Intelligence is the part of computer science with designing intelligent computer systems, that is, systems that exhibit the characteristics we associate with intelligence in human behavior.
+
+## AI Problems
+AI problems refer to the various types of challenges and tasks that artificial intelligence (AI) systems aim to solve or address. These problems span a wide range of domains and applications, each requiring different techniques, algorithms, and approaches for effective solutions. Here are some key points about AI problems:
+
+1. **Classification**:
+   - AI problems can be classified into different categories based on their characteristics and requirements.
+   - Common classifications include classification, regression, clustering, reinforcement learning, natural language processing, computer vision, and robotics, among others.
+
+2. **Representation**:
+   - AI problems often involve representing knowledge about the problem domain in a suitable format.
+   - Representation schemes such as propositional logic, predicate logic, semantic networks, frames, and ontologies are used to encode domain knowledge.
+
+3. **Search and Optimization**:
+   - Many AI problems require searching through large solution spaces to find optimal or satisfactory solutions.
+   - Search algorithms such as depth-first search, breadth-first search, A* search, genetic algorithms, and simulated annealing are commonly used for this purpose.
+
+4. **Reasoning and Inference**:
+   - Reasoning involves drawing logical conclusions from given information or knowledge.
+   - Inference techniques such as deductive reasoning, inductive reasoning, abductive reasoning, and probabilistic reasoning are used to make inferences in AI systems.
+
+5. **Learning**:
+   - Learning is a central aspect of AI, where systems acquire knowledge or skills from data or experience.
+   - Machine learning techniques such as supervised learning, unsupervised learning, reinforcement learning, and deep learning are used for learning from data.
+
+6. **Planning and Decision Making**:
+   - Planning involves generating sequences of actions to achieve desired goals or objectives.
+   - Decision-making involves selecting actions or choices based on available information and objectives.
+   - Planning and decision-making techniques such as search-based planning, heuristic search, and decision trees are used in AI systems.
+
+## AI Application
+- Games
+- Vision and speech 
+- Natural language processing
+- Robotics
 ## AI Techniques
+Artificial intelligence (AI) techniques refer to the methods, algorithms, and approaches used to develop intelligent systems that can perceive, reason, learn, and act in complex environments. These techniques encompass a wide range of methodologies across different areas of AI research and application. Here are some key notes on AI techniques:
+
+1. **Search Algorithms**:
+   - Search algorithms are used to find solutions to problems by exploring a search space.
+   - Examples include depth-first search, breadth-first search, A* search, hill climbing, genetic algorithms, and simulated annealing.
+   - Search algorithms are commonly used in problem-solving tasks such as route planning, scheduling, and optimization.
+
+2. **Knowledge Representation and Reasoning**:
+   - Knowledge representation involves encoding knowledge about the world in a format suitable for computational reasoning.
+   - Techniques include propositional logic, predicate logic, semantic networks, frames, ontologies, and description logics.
+   - Reasoning techniques include deductive reasoning, inductive reasoning, abductive reasoning, and probabilistic reasoning.
+
+3. **Machine Learning**:
+   - Machine learning is a subfield of AI that focuses on developing algorithms and models that enable computers to learn from data.
+   - Techniques include supervised learning, unsupervised learning, reinforcement learning, and deep learning.
+   - Machine learning is used in various applications such as classification, regression, clustering, anomaly detection, and natural language processing.
+
+4. **Natural Language Processing (NLP)**:
+   - NLP involves developing algorithms and models for understanding, interpreting, and generating human language.
+   - Techniques include parsing, semantic analysis, sentiment analysis, machine translation, question-answering, and text generation.
+   - NLP is used in applications such as chatbots, virtual assistants, sentiment analysis, and language translation.
+
+5. **Computer Vision**:
+   - Computer vision focuses on developing algorithms and systems that enable computers to understand and interpret visual information from images or videos.
+   - Techniques include object detection, image classification, image segmentation, and scene understanding.
+   - Computer vision is used in applications such as autonomous vehicles, surveillance systems, medical image analysis, and augmented reality.
+
 ## Production system
 A production system in artificial intelligence (AI) is a knowledge-based approach to problem-solving and decision-making. It's a rule-based system that operates by applying a set of rules or productions to a given set of inputs, leading to the derivation of new information or actions. Here are some key notes on production systems in AI:
 
