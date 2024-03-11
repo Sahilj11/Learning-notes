@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/DSA.md"
+                "file": "MCA/2nd sem/Python.md"
               }
             }
           },
@@ -173,20 +173,20 @@
   },
   "active": "5a041856e7ec77c1",
   "lastOpenFiles": [
+    "MCA/2nd sem/DSA.md",
+    "MCA/2nd sem/Python.md",
+    "MCA/2nd sem/AI.md",
     "statics/Pasted image 20240311092943.png",
     "statics/Pasted image 20240311071632.png",
     "MCA/2nd sem/DM.md",
-    "MCA/2nd sem/DSA.md",
     "statics/Pasted image 20240310145238.png",
     "statics/Pasted image 20240310145201.png",
     "statics/Pasted image 20240310144710.png",
     "statics/Pasted image 20240310144358.png",
     "statics/Pasted image 20240310143856.png",
-    "MCA/2nd sem/AI.md",
     "statics/Pasted image 20240310090216.png",
     "statics/Pasted image 20240310084341.png",
     "statics/Pasted image 20240310081759.png",
-    "statics/Pasted image 20240309180628.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
