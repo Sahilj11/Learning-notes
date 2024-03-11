@@ -286,4 +286,40 @@ print(3 in my_set)  # Checks if 3 is in the set
 my_set.add(6)  # Adds 6 to the set
 my_set.remove(2)  # Removes 2 from the set
 ```
+## Some operations
+Sure, here are 5 common operation methods for each data type:
 
+### Set:
+1. `add(element)`: Adds a single element to the set.
+2. `remove(element)`: Removes the specified element. Raises an error if the element is not found.
+3. `union(other_set)`: Returns a new set containing all unique elements from both sets.
+4. `intersection(other_set)`: Returns a new set containing common elements from both sets.
+5. `clear()`: Removes all elements from the set.
+
+### Tuple:
+1. `count(element)`: Returns the number of occurrences of `element` in the tuple.
+2. `index(element)`: Returns the index of the first occurrence of `element` in the tuple.
+3. No other methods can modify the tuple as tuples are immutable.
+   
+### List:
+1. `append(element)`: Adds `element` to the end of the list.
+2. `remove(element)`: Removes the first occurrence of `element`.
+3. `sort()`: Sorts the list in ascending order.
+4. `reverse()`: Reverses the order of elements in the list.
+5. `pop([index])`: Removes and returns the element at `index`. If `index` is not provided, removes and returns the last element.
+
+### Dictionary:
+1. `keys()`: Returns a view object containing the keys of the dictionary.
+2. `values()`: Returns a view object containing the values of the dictionary.
+3. `items()`: Returns a view object containing the key-value pairs of the dictionary.
+4. `update(other_dict)`: Updates the dictionary with key-value pairs from `other_dict`.
+5. `clear()`: Removes all elements from the dictionary.
+
+### String:
+1. `upper()`: Converts all characters in the string to uppercase.
+2. `lower()`: Converts all characters in the string to lowercase.
+3. `replace(old, new)`: Replaces all occurrences of `old` with `new`.
+4. `split(sep)`: Splits the string into a list of substrings using `sep` as the delimiter.
+5. `join(iterable)`: Joins elements of `iterable` into a single string, using the string as the separator.
+
+These methods represent common operations used with each data type in Python.
