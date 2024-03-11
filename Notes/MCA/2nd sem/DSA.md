@@ -352,3 +352,156 @@ Linked lists have numerous applications in computer science and software enginee
 5. **Sparse Matrices**: Linked lists are used to represent sparse matrices, where most of the elements are zero. Each non-zero element is stored as a node in the linked list, containing its row, column, and value.
 ## Doubly and Circular 
 # Stack and Queue
+## Queue
+Queue is a linear list which has two ends, one for insertion of elements and other for deletion of elements. The first end is called 'Rear' and the latter is called 'Front'. Elements are inserted from rear end and deleted from front end. Queues are called First In First Out (FIFO)
+Below is the implementation of a queue data structure in C using an array along with its operations: enqueue, dequeue, and display.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 100 // Maximum size of the queue
+
+// Define the structure of a queue
+struct Queue {
+    int items[MAX_SIZE];
+    int front;
+    int rear;
+};
+
+// Function to create an empty queue
+struct Queue* createQueue() {
+    struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
+    queue->front = -1; // Initialize front and rear pointers
+    queue->rear = -1;
+    return queue;
+}
+
+// Function to check if the queue is full
+int isFull(struct Queue* queue) {
+    return (queue->rear == MAX_SIZE - 1);
+}
+
+// Function to check if the queue is empty
+int isEmpty(struct Queue* queue) {
+    return (queue->front == -1 && queue->rear == -1);
+}
+
+// Function to add an element to the queue (enqueue)
+void enqueue(struct Queue* queue, int data) {
+    if (isFull(queue)) {
+        printf("Queue is full\n");
+        return;
+    }
+    if (isEmpty(queue)) {
+        queue->front = 0; // Initialize front pointer
+    }
+    queue->rear++;
+    queue->items[queue->rear] = data;
+}
+
+// Function to remove an element from the queue (dequeue)
+int dequeue(struct Queue* queue) {
+    int data;
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+        return -1;
+    }
+    data = queue->items[queue->front];
+    if (queue->front >= queue->rear) {
+        queue->front = -1;
+        queue->rear = -1;
+    } else {
+        queue->front++;
+    }
+    return data;
+}
+
+// Function to display the elements of the queue
+void display(struct Queue* queue) {
+    int i;
+    if (isEmpty(queue)) {
+        printf("Queue is empty\n");
+    } else {
+        printf("Queue: ");
+        for (i = queue->front; i <= queue->rear; i++) {
+            printf("%d ", queue->items[i]);
+        }
+        printf("\n");
+    }
+}
+
+// Main function to test the queue operations
+int main() {
+    struct Queue* queue = createQueue();
+
+    // Enqueue some elements
+    enqueue(queue, 1);
+    enqueue(queue, 2);
+    enqueue(queue, 3);
+
+    // Display the queue
+    display(queue);
+
+    // Dequeue an element
+    int dequeuedElement = dequeue(queue);
+    printf("Dequeued element: %d\n", dequeuedElement);
+
+    // Display the queue after dequeue operation
+    display(queue);
+
+    return 0;
+}
+```
+
+This code implements a queue data structure using an array. It includes functions to create a queue, check if it is full or empty, enqueue elements, dequeue elements, and display the elements of the queue. You can test the queue operations by compiling and running the code.
+
+### Circular Queue
+Below is the implementation of a circular queue data structure in C along with its operations: enqueue, dequeue, and display.
+
+```c
+insert_CQ(int x)
+{
+   if ((REAR+1)%MAX == FRONT)
+    {
+		printf("Q_FULL");
+		return;
+	}
+	(REAR++)%MAX;
+	CQUEUE[REAR]=x; // CQueue[ ] is an Array Represents
+}
+```
+```c
+int delete_cq()
+{
+	int x;
+	if (REAR == FRONT)
+	{
+		printf("Q_Empty");
+		return;
+	}
+	x = cqueue[FRONT];
+	FRONT = (FRONT+1)%MAX;
+	return (x);
+}
+```
+
+### Deque
+A deque "Double Ended Queue" is a linear list in which elements can be added or removed at either end but not in the middle. There are two variations of a deque namely:
+1. An Input Restricted deque
+2. An Output Restricted deque
+Specifically, an Input-Restricted deque is a deque which allows insertions at only one end of the list but allows deletions at both ends of the list; and an OutputRestricted deque is a deque which allows deletions at only one end of the list but allows insertions at both ends of the list
+![](../../statics/Pasted%20image%2020240311092943.png)
+
+### Priority Queue 
+A priority queue is a collection of elements such that each element has been assigned a priority and the order in which elements are deleted and processed comes from the following rules
+-  An element of higher priority is processed before any element of lower priority.
+- Two elements with the same priority are processed according to the order in which they were added to the queue
+
+A prototype of priority is processed first, and programs with the same priority form a standard queue. There can be two types of implementations of priority queue:
+1. Ascending Priority Queue
+2. Descending Priority Queue
+
+A collection of items into which items can be inserted arbitrarily and from which only the smallest item can be removed is called Ascending Priority Queue.
+
+In Descending Priority Queue only, the largest item is deleted. The elements of priority queue need not be numbers or characters that can be composed directly.
