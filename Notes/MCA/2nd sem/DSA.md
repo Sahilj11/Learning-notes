@@ -505,3 +505,176 @@ A prototype of priority is processed first, and programs with the same priority 
 A collection of items into which items can be inserted arbitrarily and from which only the smallest item can be removed is called Ascending Priority Queue.
 
 In Descending Priority Queue only, the largest item is deleted. The elements of priority queue need not be numbers or characters that can be composed directly.
+
+## Stack
+Stack is an ordered list in which there is only one end, for both insertions and deletions. Elements are inserted and deleted from the same end called "TOP" of the stack. Stack is called Last In First Out (LIFO) list
+
+Using Array
+Certainly! Below is a simple implementation of a stack using an array in C:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_SIZE 100
+
+// Structure to represent a stack
+typedef struct {
+    int items[MAX_SIZE];
+    int top;
+} Stack;
+
+// Function to initialize the stack
+void initializeStack(Stack *stack) {
+    stack->top = -1;
+}
+
+// Function to check if the stack is empty
+int isEmpty(Stack *stack) {
+    return (stack->top == -1);
+}
+
+// Function to check if the stack is full
+int isFull(Stack *stack) {
+    return (stack->top == MAX_SIZE - 1);
+}
+
+// Function to push an element onto the stack
+void push(Stack *stack, int value) {
+    if (isFull(stack)) {
+        printf("Stack Overflow\n");
+        return;
+    }
+    stack->items[++stack->top] = value;
+}
+
+// Function to pop an element from the stack
+int pop(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack Underflow\n");
+        return -1;
+    }
+    return stack->items[stack->top--];
+}
+
+// Function to peek at the top element of the stack
+int peek(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack is empty\n");
+        return -1;
+    }
+    return stack->items[stack->top];
+}
+
+int main() {
+    Stack stack;
+    initializeStack(&stack);
+
+    push(&stack, 10);
+    push(&stack, 20);
+    push(&stack, 30);
+
+    printf("Top element is %d\n", peek(&stack));
+
+    printf("Popped element : %d\n", pop(&stack));
+    printf("Popped element : %d\n", pop(&stack));
+
+    printf("Top element is %d\n", peek(&stack));
+
+    push(&stack, 40);
+
+    printf("Top element is %d\n", peek(&stack));
+
+    return 0;
+}
+```
+
+Using Linked List 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+// Define the structure of a node in the stack
+typedef struct Node {
+    int data;
+    struct Node* next;
+} Node;
+
+// Function to create a new node
+Node* createNode(int data) {
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Structure to represent a stack
+typedef struct {
+    Node* top;
+} Stack;
+
+// Function to initialize the stack
+void initializeStack(Stack *stack) {
+    stack->top = NULL;
+}
+
+// Function to check if the stack is empty
+int isEmpty(Stack *stack) {
+    return (stack->top == NULL);
+}
+
+// Function to push an element onto the stack
+void push(Stack *stack, int value) {
+    Node* newNode = createNode(value);
+    newNode->next = stack->top;
+    stack->top = newNode;
+}
+
+// Function to pop an element from the stack
+int pop(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack Underflow\n");
+        return -1; // return a sentinel value or handle error appropriately
+    }
+    Node* temp = stack->top;
+    int poppedValue = temp->data;
+    stack->top = temp->next;
+    free(temp);
+    return poppedValue;
+}
+
+// Function to peek at the top element of the stack
+int peek(Stack *stack) {
+    if (isEmpty(stack)) {
+        printf("Stack is empty\n");
+        return -1; // return a sentinel value or handle error appropriately
+    }
+    return stack->top->data;
+}
+
+int main() {
+    Stack stack;
+    initializeStack(&stack);
+
+    push(&stack, 10);
+    push(&stack, 20);
+    push(&stack, 30);
+
+    printf("Top element is %d\n", peek(&stack));
+
+    printf("Popped element : %d\n", pop(&stack));
+    printf("Popped element : %d\n", pop(&stack));
+
+    printf("Top element is %d\n", peek(&stack));
+
+    push(&stack, 40);
+
+    printf("Top element is %d\n", peek(&stack));
+
+    return 0;
+}
+```
