@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/Python.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 284.5,
+    "collapsed": true
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/Python.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/Python.md",
+                "file": "MCA/2nd sem/CSA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/Python.md"
+                "file": "MCA/2nd sem/CSA.md"
               }
             }
           },
@@ -173,20 +174,21 @@
   },
   "active": "5a041856e7ec77c1",
   "lastOpenFiles": [
-    "MCA/2nd sem/DSA.md",
+    "statics/Pasted image 20240313210409.png",
+    "statics/Pasted image 20240313210328.png",
+    "statics/Pasted image 20240313210024.png",
+    "statics/Pasted image 20240313205659.png",
+    "statics/Pasted image 20240313205651.png",
+    "statics/Pasted image 20240313205537.png",
+    "statics/Pasted image 20240313205520.png",
+    "statics/Pasted image 20240313205435.png",
+    "statics/Pasted image 20240313205353.png",
+    "statics/Pasted image 20240313205310.png",
+    "statics/Pasted image 20240313205258.png",
     "MCA/2nd sem/Python.md",
+    "MCA/2nd sem/DSA.md",
     "MCA/2nd sem/AI.md",
-    "statics/Pasted image 20240311092943.png",
-    "statics/Pasted image 20240311071632.png",
     "MCA/2nd sem/DM.md",
-    "statics/Pasted image 20240310145238.png",
-    "statics/Pasted image 20240310145201.png",
-    "statics/Pasted image 20240310144710.png",
-    "statics/Pasted image 20240310144358.png",
-    "statics/Pasted image 20240310143856.png",
-    "statics/Pasted image 20240310090216.png",
-    "statics/Pasted image 20240310084341.png",
-    "statics/Pasted image 20240310081759.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
@@ -213,7 +215,6 @@
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "MCA/1st Sem/CN/2nd Minor.md",
-    "Udemy Networking/1. IP address.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

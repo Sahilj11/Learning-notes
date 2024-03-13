@@ -80,7 +80,6 @@ In summary, combinational circuits produce outputs solely based on the current i
    - Symbol: Often represented by the symbol "∨" or a rounded shape with the inputs on the sides and the output at the apex.
    - Boolean expression: The output \(Y\) of an OR gate with inputs \(A\) and \(B\) is given by \(Y = A + B\).
 ![](../../statics/Pasted%20image%2020240301071959.png)
-![](../../statics/Pasted%20image%2020240301072011.png)
 #### **NOT Gate (Inverter)**:
    - Definition: A NOT gate, also known as an inverter, is a digital logic gate that produces an output that is the logical negation of its input. It converts a high input to a low output and vice versa.
    - Symbol: Represented by a triangle with a small circle at the input side.
@@ -246,30 +245,6 @@ Latches and flip-flops are both sequential logic circuits used in digital electr
 
 In summary, while both latches and flip-flops serve as memory elements in digital circuits, they differ in their operation, timing control, and complexity, making them suitable for different applications.
 
-## Level vs Edge 
-In the context of digital circuits, "level-sensitive" and "edge-sensitive" refer to different mechanisms for triggering the operation of certain components, such as latches or flip-flops.
-
-**1. Level-Sensitive:**
-
-Level-sensitive operation means that the circuit responds to the continuous state (or level) of the input signal. In other words, as long as the input signal remains in a particular state (e.g., high or low), the circuit continues to react accordingly.
-
-For example, in a level-sensitive latch:
-- If the latch is level-sensitive to a high input signal, it remains in a set state as long as the input signal is held high.
-- Similarly, if the latch is level-sensitive to a low input signal, it remains in a reset state as long as the input signal is held low.
-
-Level-sensitive circuits are often simpler in design but can be more susceptible to noise and timing issues, especially in asynchronous systems.
-
-**2. Edge-Sensitive:**
-
-Edge-sensitive operation means that the circuit responds to a specific transition or change in the input signal. The most common types of transitions are the rising edge (transition from low to high) and falling edge (transition from high to low) of the input signal.
-
-For example, in an edge-triggered flip-flop:
-- The flip-flop changes its state (captures and stores the input data) only when the clock signal transitions occur, such as the rising or falling edge of the clock.
-- The input data is latched or sampled at these specific moments, ensuring precise timing control and synchronization.
-
-Edge-sensitive circuits are often used in synchronous systems where precise timing is crucial, as they allow for controlled and predictable behavior at specific points in time.
-
-In summary, level-sensitive circuits respond to the continuous state of the input signal, while edge-sensitive circuits respond to specific transitions or edges of the input signal. Each mechanism has its advantages and is chosen based on the requirements of the application.
 ## Flip Flops
 - it is a binary cell capable of storing one bit of data
 - it is a sequential circuit
@@ -558,3 +533,52 @@ following phases.
 3. Read the effective address from memory if the instruction has an indirect address.
 4. Execute the Instruction
 Upon completion of step 4, the control goes back to step 1 to fetch, decode and execute the next instruction. This process remains continuous indefinitely unless, a HALT instruction is encountered
+
+## Types of Instruction
+In computer architecture, there are various types of instructions that a CPU (Central Processing Unit) can execute to perform different operations. These instructions are fundamental to the functioning of a computer system. Here are some common types of instructions in computer architecture:
+
+1. **Arithmetic Instructions**: These instructions are used to perform arithmetic operations such as addition, subtraction, multiplication, and division. They operate on data stored in registers or memory locations.
+
+2. **Logic Instructions**: Logic instructions perform logical operations such as AND, OR, NOT, and XOR. These operations manipulate individual bits or entire data words to perform tasks like bit manipulation, boolean operations, and bitwise arithmetic.
+
+3. **Data Transfer Instructions**: Data transfer instructions move data between memory and registers, or between different registers. These instructions are used to load data into registers, store data into memory, and transfer data between different parts of the system.
+
+4. **Control Transfer Instructions**: Control transfer instructions alter the sequence of instruction execution by changing the flow of control within a program. Examples include unconditional jumps, conditional branches, subroutine calls, and returns.
+
+5. **Input/Output Instructions**: Input/output instructions are used to transfer data between the CPU and external devices such as keyboards, displays, disks, and network interfaces. These instructions enable communication between the CPU and peripherals.
+
+# CPU
+## Intro
+The CPU is made up of three major parts, as shown in Figure 6-1. The register set stores intermediate data used during the execution of the instructions. The arithmetic logic unit (ALU) performs the required microoperations for executing the instructions. The control unit supervises the transfer of information among the registers and instructs the ALU as to which operation to perform.
+![](../../statics/Pasted%20image%2020240313203715.png)
+
+## Types of CPU Organisation
+Single Accumulator Organization:
+In a single accumulator organization, there is a single central accumulator register that is used for arithmetic and logical operations. All operations are performed between the accumulator and another operand, typically fetched from memory or another register. After performing an operation, the result is stored back in the accumulator. This organization simplifies the CPU design and instruction set but may require more memory accesses for certain operations.
+
+General Register Organization:
+In a general register organization, the CPU has multiple general-purpose registers that can hold data and addresses. These registers are used for storing operands, intermediate results, and memory addresses during program execution. General register organization allows for faster execution of instructions as operands can be accessed directly from registers, reducing the need for memory accesses. It also enables more flexible and efficient programming but may require a more complex CPU design.
+
+Stack Organization:
+In stack organization, a stack data structure is used to store data and addresses. The stack grows and shrinks dynamically as data is pushed onto or popped off the stack. The CPU typically includes a special-purpose register called the stack pointer (SP) that points to the top of the stack. Operations such as push and pop are used to add data to and remove data from the stack, respectively. Stack organization is commonly used for function calls, parameter passing, local variable storage, and managing program execution flow. It provides a simple and efficient way to manage data storage and retrieval but may require careful management to avoid stack overflow or underflow.
+
+
+## Control Word
+A control word, also known as a control register or control status register, is a special-purpose register in a computer's CPU or other hardware components that contains control information used to configure or control the behavior of the processor or device.
+
+Control words typically consist of a set of bits, each representing a specific control or configuration option. These bits can be set or cleared by software instructions or by hardware signals to enable or disable certain features, select operating modes, or configure various parameters of the processor or device.
+
+There are 14 binary selection inputs in the unit, and their combined value specifies a control word.
+
+## Flynn 
+![](../../statics/Pasted%20image%2020240313205258.png)
+![](../../statics/Pasted%20image%2020240313205310.png)
+![](../../statics/Pasted%20image%2020240313205353.png)
+![](../../statics/Pasted%20image%2020240313205435.png)
+![](../../statics/Pasted%20image%2020240313205520.png)
+![](../../statics/Pasted%20image%2020240313205537.png)
+## System attribute 
+![](../../statics/Pasted%20image%2020240313205651.png)
+![](../../statics/Pasted%20image%2020240313205659.png)
+![](../../statics/Pasted%20image%2020240313210024.png)![](../../statics/Pasted%20image%2020240313210328.png)
+![](../../statics/Pasted%20image%2020240313210409.png)
