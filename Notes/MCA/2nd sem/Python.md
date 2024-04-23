@@ -325,6 +325,7 @@ Sure, here are 5 common operation methods for each data type:
 These methods represent common operations used with each data type in Python.
 
 ## Functions
+function is a block of reusable code that performs a specific task. Functions allow you to break down your code into smaller, manageable units, making it easier to organize, maintain, and reuse your code
 ### Inbuilt 
 1. **print()**: This function is used to print the specified message or variable to the standard output (usually the console).
 
