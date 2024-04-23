@@ -672,3 +672,125 @@ Control knowledge in artificial intelligence (AI) refers to the knowledge or str
 5. **Learning and Adaptation**: Control knowledge may include mechanisms for learning and adaptation, allowing AI systems to improve their performance over time through experience. This may involve techniques such as reinforcement learning, online learning, or self-adaptation to adjust control strategies based on feedback from the environment.
 
 6. **Problem Decomposition**: Control knowledge plays a role in decomposing complex problems into simpler subproblems, organizing problem-solving processes into manageable steps, and coordinating the interaction between different components of the system.
+# Unit 3
+## Monotonic system in realm of logic reasoning
+In logical reasoning, a monotonic system refers to a system where adding new knowledge or premises never invalidates previous conclusions. This means that once a conclusion is reached based on a set of premises, adding more premises will either strengthen that conclusion or leave it unchanged, but it will never weaken or invalidate it.
+### Limitation of monotonic , it cannot work in real environment
+- Information available is always incomplete
+- As process goes by , situation changes , so is the solution
+- Default assumption are made in order to reduce search time
+### Basic Concepts of non-monotonic system 
+- A non-monotonic logic system is a formal logical system where the addition of new information can lead to the retraction, revision, or qualification of previously drawn conclusions. In traditional, monotonic logic, adding new premises can only strengthen existing conclusions or leave them unchanged.
+- generally default assumption and inference are made for data and knowledge.
+- if rohini is bird (then default assumptions are it can fly)
+#### Golden rule of default reasoning
+- ![](../../statics/Pasted%20image%2020240416111031.png)
+## circumscription
+- If there is something that is not mentioned explicitly in problem then it should not be taken into consideration 
+- meaning avoiding unnecessary details and taking into consideration only those information which are necessary. for example . ram go to bus stand on two wheeler . here unnecessary detail is two wheeler has fuel
+## Probability based reasoning 
+- Real world is the source of uncertanities and to tackle these , probability is the oldest technique which is useful in this scenario , but it is only good for mutually exclusive events, if events are depended on one another then something like bayes theorem is there.
+
+### Bayes theorem 
+### Reasoning using certainty factor(Important and remaining)
+- Probablity based reasoning adopted bayes to handle uncertainity , but it is not always possible to calculate prior important for bayes formula
+- Reasoning using certainty factors is a method used in artificial intelligence and expert systems to handle uncertain or probabilistic information. Certainty factors are numerical values that represent the degree of belief or certainty in a proposition being true or false. Here's how reasoning with certainty factors typically works:
+
+1. **Basic Structure**:
+   - Each proposition or statement is assigned a certainty factor (CF) that ranges between -1.0 (completely false) to +1.0 (completely true).
+   - CF values between -1.0 and 0.0 typically represent varying degrees of disbelief or uncertainty in the truth of the proposition.
+   - CF values between 0.0 and +1.0 represent varying degrees of belief or certainty in the truth of the proposition.
+
+2. **Combining Certainty Factors**:
+   - When combining multiple pieces of evidence or propositions, the overall certainty factor of a conclusion is computed using rules for combining certainty factors. Common rules include:
+     - **Min rule (or conjunction rule)**: This rule combines the CFs of independent pieces of evidence supporting the same conclusion.
+     - **Product rule**: This rule is used when combining CFs for related evidence. It's especially useful when there's dependency or overlap between evidence.
+
+3. **Inference**:
+   - Certainty factors are used to infer conclusions from known facts and evidence. Inference involves combining CFs according to specific rules to compute the CF of the conclusion.
+
+4. **Example**:
+   - Let's say we want to determine if it's going to rain tomorrow based on various sources of evidence:
+     - Weather forecast says there's a 70% chance of rain (CF = +0.7).
+     - Historical data suggests that April usually has rainy days (CF = +0.4).
+   - Using the product rule, we can combine these CFs:
+     - Overall CF for "It will rain tomorrow" = CF(forecast) × CF(historical data) = 0.7 × 0.4 = +0.28.
+   - Therefore, we conclude with a certainty factor of +0.28, indicating moderate belief that it will rain tomorrow.
+
+6. **Limitations**:
+   - Certainty factors rely on the assumption of independence and linearity, which may not hold in all cases.
+   - Handling complex relationships between evidence can be challenging, especially when dealing with non-linear dependencies or indirect evidence.
+#### Measures of belief
+![](../../statics/Pasted%20image%2020240417151532.png)
+#### Measure of disbelief
+![](../../statics/Pasted%20image%2020240417151622.png)
+
+
+![](../../statics/Pasted%20image%2020240417151724.png)
+![](../../statics/Pasted%20image%2020240417151809.png)
+![](../../statics/Pasted%20image%2020240417152123.png)
+## Fuzzy based reasoning
+### Why need 
+- Boolean nature of probablity theory
+- Assumption of probablity theory that real numbers are always correct
+
+![](../../statics/Pasted%20image%2020240417153032.png)
+### Some brief
+1. **Handling Uncertainty**: Fuzzy logic is employed in AI to handle uncertainty and imprecision in data and decision-making. Unlike traditional logic, which deals with binary true/false values, fuzzy logic allows for the representation of degrees of truth. This is particularly useful in situations where concepts are vague or ambiguous.
+
+2. **Fuzzy Sets and Membership Functions**: Fuzzy logic relies on fuzzy sets, where elements have degrees of membership ranging from 0 to 1. Membership functions define how elements are assigned membership degrees based on their characteristics. These functions can be triangular, trapezoidal, Gaussian, or other shapes, depending on the nature of the problem.
+
+3. **Fuzzy Rules**: In fuzzy logic systems, rules are expressed in the form of "if-then" statements, where the conditions and conclusions can be fuzzy propositions. For example, "If the temperature is cold and the humidity is high, then increase the heating." These rules capture the fuzzy relationships between inputs and outputs.
+
+4. **Fuzzy Inference**: Fuzzy inference is the process of deriving crisp decisions or actions from fuzzy inputs and rules. It involves fuzzification (converting crisp inputs to fuzzy sets), applying fuzzy rules to these fuzzy inputs, and then defuzzification (converting fuzzy outputs back to crisp values). Various inference methods like Mamdani and Sugeno are used for this purpose.
+
+5. **Applications**: Fuzzy logic finds applications in various AI domains, including control systems, pattern recognition, decision-making, expert systems, and natural language processing. It is particularly useful in situations where precise mathematical models are difficult to formulate due to uncertainty or complexity.
+
+6. **Advantages**: Fuzzy logic allows for the modeling of human-like reasoning, where decisions are made based on vague or incomplete information. It provides a flexible framework for handling real-world problems that are inherently fuzzy in nature. Additionally, fuzzy systems can be easier to understand and interpret compared to traditional mathematical models.
+
+7. **Challenges**: Despite its advantages, fuzzy logic also poses challenges, such as the selection and tuning of membership functions and rules, as well as computational complexity, especially in systems with large numbers of variables and rules. Additionally, interpreting and explaining fuzzy logic-based decisions to users can sometimes be challenging.
+
+### Fuzzy set
+A fuzzy set is a mathematical concept that generalizes the idea of a classical set by allowing elements to have degrees of membership rather than just being either in the set or not. In a classical set, an element either belongs to the set (membership degree of 1) or does not belong to the set (membership degree of 0). 
+
+In contrast, in a fuzzy set, each element has a membership degree that indicates the degree to which the element belongs to the set. Membership degrees range between 0 and 1, where 0 indicates no membership (completely outside the set) and 1 indicates full membership (completely inside the set). Membership degrees between 0 and 1 represent varying degrees of partial membership or uncertainty.
+
+Imagine we have a set representing "tallness" in humans. In a classical set, we might define the set of tall people as those whose height is greater than 6 feet. So, someone who is exactly 6 feet tall would not be considered tall, and someone who is 6 feet and 1 inch tall would be considered tall.
+
+Now, let's convert this classical set into a fuzzy set to account for degrees of tallness. Instead of defining tallness as a binary condition (either tall or not tall), we assign membership degrees to individuals based on how tall they are.
+
+For example:
+
+- Person A: 5 feet 10 inches tall
+  - Membership degree in the set of tall people: 0.2
+  - Interpretation: Person A is somewhat tall, but not very tall.
+
+- Person B: 6 feet tall
+  - Membership degree in the set of tall people: 0.7
+  - Interpretation: Person B is fairly tall.
+
+- Person C: 6 feet 5 inches tall
+  - Membership degree in the set of tall people: 0.9
+  - Interpretation: Person C is very tall.
+
+- Person D: 5 feet 5 inches tall
+  - Membership degree in the set of tall people: 0.1
+  - Interpretation: Person D is not very tall.
+
+In this fuzzy set representation, individuals can have varying degrees of membership in the set of tall people, reflecting the fact that tallness is not a binary attribute but exists on a continuum. This allows us to capture the nuances and uncertainties associated with defining concepts like "tallness" more accurately.
+
+### Fuzzy operations
+![](../../statics/Pasted%20image%2020240417154017.png)
+### Bayesian network
+![](../../statics/Pasted%20image%2020240417154505.png)
+
+# UNIT 4 
+## Planning 
+Planning in artificial intelligence is about decision-making actions performed by robots or computer programs to achieve a specific goal.
+
+Execution of the plan is about choosing a sequence of tasks with a high probability of accomplishing a specific task.
+We require domain description, task specification, and goal description for any planning system. A plan is considered a sequence of actions, and each action has its preconditions that must be satisfied before it can act and some effects that can be positive or negative
+![](../../statics/Pasted%20image%2020240417155409.png)
+- FSSP:-  given an initial state S in any domain, we perform some necessary actions and obtain a new state S' (which also contains some new terms), called a progression. It continues until we reach the target position. Action should be taken in this matter.
+- BSSP:-  we move from the target state g to the sub-goal g, tracing the previous action to achieve that goal. This process is called regression (going back to the previous goal or sub-goal). These sub-goals should also be checked for consistency. The action should be relevant in this case.
+- 

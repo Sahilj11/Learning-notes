@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "849c2ce2bb364f62",
+            "id": "ba7c151769a2ba0d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5a041856e7ec77c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/CSA.md"
+                "file": "MCA/2nd sem/Python.md"
               }
             }
           },
@@ -172,24 +158,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5a041856e7ec77c1",
+  "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
-    "statics/Pasted image 20240313210409.png",
-    "statics/Pasted image 20240313210328.png",
-    "statics/Pasted image 20240313210024.png",
-    "statics/Pasted image 20240313205659.png",
-    "statics/Pasted image 20240313205651.png",
-    "statics/Pasted image 20240313205537.png",
-    "statics/Pasted image 20240313205520.png",
-    "statics/Pasted image 20240313205435.png",
-    "statics/Pasted image 20240313205353.png",
-    "statics/Pasted image 20240313205310.png",
-    "statics/Pasted image 20240313205258.png",
+    "MCA/2nd sem/AI.md",
+    "statics/Pasted image 20240417155409.png",
+    "statics/Pasted image 20240417154505.png",
+    "statics/Pasted image 20240417154017.png",
+    "statics/Pasted image 20240417153032.png",
+    "statics/Pasted image 20240417152123.png",
+    "statics/Pasted image 20240417151809.png",
+    "statics/Pasted image 20240417151724.png",
+    "statics/Pasted image 20240417151622.png",
+    "statics/Pasted image 20240417151532.png",
+    "statics/Pasted image 20240416111031.png",
+    "java Backend/Spring Security.md",
+    "java Backend/Spring/Intro.md",
+    "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/Python.md",
     "MCA/2nd sem/DSA.md",
-    "MCA/2nd sem/AI.md",
     "MCA/2nd sem/DM.md",
-    "MCA/2nd sem/CSA.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
     "javaCollection/1. The main interfaces of java collection.md",
@@ -197,7 +184,6 @@
     "javaCollection/3. Collection interface.md",
     "javaCollection/6. List.md",
     "javaCollection/7. Maps.md",
-    "java Backend/Spring/Intro.md",
     "java Backend/servlet/Intro.md",
     "java Backend/Spring",
     "java Backend/servlet",
@@ -214,7 +200,6 @@
     "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
     "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
     "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
-    "MCA/1st Sem/CN/2nd Minor.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

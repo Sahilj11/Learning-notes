@@ -483,11 +483,14 @@ Alright, let's break down the key points in simpler terms:
 
 ## Stored Program organisation
 The simplest way to organize a computer is to have one processor register and instruction code format with two parts. The first part specifies the operation to be performed and the second specifies an address. The memory address tells the control where to find an operand in memory. This operand is read from memory and used as the data to be operated on together with the data stored in the processor register.
+
+opcode(operation code)
 ![](../../statics/Pasted%20image%2020240303150418.png)
  Instructions are stored in one section of memory and data in another. For a memory unit with 4096 words we need 12 bits to specify an address since 2<sup>12</sup> = 4096. If we store each instruction code in one 16-bit memory word, we have available four bits for the operation code (abbreviated op code) to specify one out of 16 possible operations, and 12 bits to specify the address of an operand. 
  
  The control reads a 16-bit instruction from the program portion of memory. It uses the 12-bit address part of the instruction to read a 16-bit operand from the data portion of memory. It then executes the operation specified by the operation code.
-## Direct vs Indirect vs Immediate 
+
+## Direct vs Indirect vs Immediate (Operand Mode)
 
 1. **Immediate Operand**: In this mode, the instruction includes the actual value of the operand rather than its memory address. This means that the data needed for the operation is directly embedded within the instruction itself. For example, if you have an instruction to add the number 5 to a register, the value 5 would be part of the instruction.
 
@@ -521,31 +524,23 @@ The memory unit's input and output data are connected to the common bus. However
 The accumulator register (AC) receives inputs from an adder and logic circuit. These inputs come from the outputs of AC itself, the data register (DR), and the input register (INPR). The inputs from DR and AC are used for arithmetic and logic operations, such as addition and logical AND. The result of an addition is transferred to AC, and the carry-out of the addition is transferred to a flip-flop named E (extended AC bit).
 
 Overall, this system allows for efficient communication between various registers and memory through the common bus, with control over which data is transferred based on selection variables.
+## Instruction code
+- Group of bits that tells computer what to do basically
+- contains two thing :- opcode(operation code like ADD , SUB) and address(address of operand on which operation will be performed);
 
+### Types of Instruction
+- Memory reference instructions
+- Register reference instructions
+- Input output Instruction
+
+![](../../statics/Pasted%20image%2020240413165952.png)
+![](../../statics/Pasted%20image%2020240413170115.png)
+![](../../statics/Pasted%20image%2020240413170338.png)
 ## Instruction Cycle
-A program resides in the memory unit of computer consists of a sequence of instructions. The program is executed in the computer by going through a cycle for
-each instruction. Each instruction cycle in turn is subdivided into a sequence of sub cycles or phases. In the basic computer each instruction cycle consist of the
-following phases.
-
-**Phases of IC**
-1. Fetch instruction from memory
-2. Decode the instruction
-3. Read the effective address from memory if the instruction has an indirect address.
-4. Execute the Instruction
-Upon completion of step 4, the control goes back to step 1 to fetch, decode and execute the next instruction. This process remains continuous indefinitely unless, a HALT instruction is encountered
-
-## Types of Instruction
-In computer architecture, there are various types of instructions that a CPU (Central Processing Unit) can execute to perform different operations. These instructions are fundamental to the functioning of a computer system. Here are some common types of instructions in computer architecture:
-
-1. **Arithmetic Instructions**: These instructions are used to perform arithmetic operations such as addition, subtraction, multiplication, and division. They operate on data stored in registers or memory locations.
-
-2. **Logic Instructions**: Logic instructions perform logical operations such as AND, OR, NOT, and XOR. These operations manipulate individual bits or entire data words to perform tasks like bit manipulation, boolean operations, and bitwise arithmetic.
-
-3. **Data Transfer Instructions**: Data transfer instructions move data between memory and registers, or between different registers. These instructions are used to load data into registers, store data into memory, and transfer data between different parts of the system.
-
-4. **Control Transfer Instructions**: Control transfer instructions alter the sequence of instruction execution by changing the flow of control within a program. Examples include unconditional jumps, conditional branches, subroutine calls, and returns.
-
-5. **Input/Output Instructions**: Input/output instructions are used to transfer data between the CPU and external devices such as keyboards, displays, disks, and network interfaces. These instructions enable communication between the CPU and peripherals.
+![](../../statics/Pasted%20image%2020240413170541.png)
+![](../../statics/Pasted%20image%2020240413170919.png)
+![](../../statics/Pasted%20image%2020240413171008.png)
+![](../../statics/Pasted%20image%2020240413171038.png)
 
 # CPU
 ## Intro
@@ -582,3 +577,20 @@ There are 14 binary selection inputs in the unit, and their combined value speci
 ![](../../statics/Pasted%20image%2020240313205659.png)
 ![](../../statics/Pasted%20image%2020240313210024.png)![](../../statics/Pasted%20image%2020240313210328.png)
 ![](../../statics/Pasted%20image%2020240313210409.png)
+
+# Unit 4
+## Memory Hierarchy
+![](../../statics/Pasted%20image%2020240413171929.png)
+## Main Memory
+![](../../statics/Pasted%20image%2020240413172105.png)
+![](../../statics/Pasted%20image%2020240413172207.png)
+
+### Type of access mode
+1. **Sequential Access**: In this mode, data is accessed in a sequential order, meaning one after the other in a sequence. Imagine a list of items stored in a file or on a tape. To access data, you have to start from the beginning and read through the data sequentially until you find the desired piece. It's like reading a book from start to finish without skipping pages. Sequential access is often slower compared to random access, especially when you need to access data that is located far from the current position because you have to read through all the preceding data.
+
+2. **Random Access**: In contrast to sequential access, random access allows you to access any piece of data directly without having to read through the preceding data. Think of it as jumping to a specific page in a book without having to flip through the pages sequentially. Random access is faster for accessing individual pieces of data, but the speed doesn't depend on the location of the data within the storage medium.
+
+3. **Direct Access**: Also known as indexed access or relative access, direct access combines aspects of both sequential and random access. It allows accessing any piece of data directly like random access, but the way to access the data is determined by an index or key value, similar to how you'd look up a word in a dictionary. This mode is efficient for accessing specific data items without having to read through the entire dataset sequentially. Direct access is commonly used in databases where data is organized and accessed using indexes.
+![](../../statics/Pasted%20image%2020240413173816.png)
+![](../../statics/Pasted%20image%2020240413173728.png)
+
