@@ -678,3 +678,6 @@ int main() {
     return 0;
 }
 ```
+
+## Tree
+- A tree data structure is a hierarchical data structure that consists of nodes connected by edges. It is called a "tree" because it resembles a tree in nature, with a single root node representing the trunk and additional nodes branching off from it like branches. it is non cyclic 
