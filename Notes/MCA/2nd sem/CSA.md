@@ -594,6 +594,30 @@ There are 14 binary selection inputs in the unit, and their combined value speci
 ![](../../statics/Pasted%20image%2020240413173816.png)
 ![](../../statics/Pasted%20image%2020240413173728.png)
 
+## Associative memory
+![](../../statics/Pasted%20image%2020240426050100.png)
+![](../../statics/Pasted%20image%2020240426050224.png)
+## Locality of refernce
+![](../../statics/Pasted%20image%2020240426050433.png)
+some eg 
+- program loop
+- subroutins
+- arrays
+## Cache memory
+![](../../statics/Pasted%20image%2020240426050910.png)
+![](../../statics/Pasted%20image%2020240426050919.png)
+![](../../statics/Pasted%20image%2020240426051132.png)
+miss penalty (cache access time + main memory access time)
+### Level of cache 
+![](../../statics/Pasted%20image%2020240426051321.png)
+## Cache mapping 
+![](../../statics/Pasted%20image%2020240426045835.png)
+### Associative memory
+![](../../statics/Pasted%20image%2020240426051504.png)
+![](../../statics/Pasted%20image%2020240426051531.png)
+### Direct mapping
+![](../../statics/Pasted%20image%2020240426051718.png)
+cpu address divided into (tag , index)
 # UNIT 3
 
 ## Instruction set based processor classification (RISC and CISC)
