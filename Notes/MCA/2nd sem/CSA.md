@@ -681,7 +681,7 @@ Key characteristics of scalar architecture include:
 ![](../../statics/Pasted%20image%2020240425213003.png)
 
 ### Super scaler
-1. Superscalar processors are designed to execute multiple instructions simultaneously within a single clock cycle. This is achieved by having multiple execution units, each capable of handling different types of instructions (e.g., arithmetic, load/store, branch).
+1. A superscalar processor is one in which multiple independent instruction pipelines are used. Each pipeline consists of multiple stages, so that each pipeline can handle multiple instructions at a time.
 2. **Instruction-Level Parallelism (ILP)**: The primary goal of superscalar architectures is to exploit ILP, which involves identifying and executing independent instructions in parallel to improve overall performance. This is done by analyzing the instruction stream to identify dependencies and scheduling instructions for concurrent execution whenever possible.
 3. **Dynamic Instruction Scheduling**: Superscalar processors typically employ dynamic instruction scheduling techniques to identify and exploit parallelism at runtime. Instructions are dispatched to execution units dynamically, based on availability of resources and data dependencies.
 4. **Out-of-Order Execution**: Superscalar processors often support out-of-order execution, where instructions are executed as soon as their operands are available, rather than strictly following program order. This allows the processor to overlap the execution of independent instructions and maximize resource utilization.
@@ -702,3 +702,20 @@ here each time 2 instruction is execution and when a single stage of these instr
 ![](../../statics/Pasted%20image%2020240425210519.png)
 ![](../../statics/Pasted%20image%2020240425210909.png)
 ![](../../statics/Pasted%20image%2020240425210930.png)
+![](../../statics/Pasted%20image%2020240425215138.png)
+
+K + (n-1)
+where K is instruction stage , n is number of instruction
+## Amdahl's law
+![](../../statics/Pasted%20image%2020240425214033.png)
+![](../../statics/Pasted%20image%2020240425214041.png)
+## Processor level parallelism 
+A multiprocessor system is an interconnection of two or more CPUs with memory and input—output equipment. The term "processor" in multiprocessor can mean either a central processing unit (CPU) or an input-output processor (IOP). 
+
+there are several physical forms available for establishing an interconnection network.
+Some of these schemes are presented in this section:
+1. Time-shared common bus
+2. Multiport memory
+3. Crossbar switch
+4. Multistage switching network
+5. Hypercube system
