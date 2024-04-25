@@ -638,3 +638,67 @@ PC :- program counter , AR:- address register
 - it is request from hardware device or software program for immediate service by the processor
 - As interrupts is generated the processor provides the requested service by executing interrupt service routine
 
+### types 
+![](../../statics/Pasted%20image%2020240425203651.png)
+![](../../statics/Pasted%20image%2020240425203831.png)
+![](../../statics/Pasted%20image%2020240425203906.png)
+
+## Parallelism
+![](../../statics/Pasted%20image%2020240425211549.png)
+
+![](../../statics/Pasted%20image%2020240425212033.png)
+### Goals of parallelism
+#### Throuput enhancement
+Throughput refers to the rate at which a system can process and complete tasks or transactions within a given period of time. It is a measure of the system's efficiency in handling workloads and is often expressed in terms of tasks completed per unit of time (e.g., transactions per second, instructions per cycle).
+
+Enhancing throughput involves improving the system's ability to process tasks more quickly and efficiently. Here are some techniques commonly used to enhance throughput:
+
+1. **Parallelism**: Parallelism involves executing multiple tasks simultaneously to increase overall throughput. This can be achieved at various levels, including task-level parallelism (executing independent tasks concurrently), data-level parallelism (processing multiple data elements simultaneously), and instruction-level parallelism (simultaneously executing multiple instructions within a single processor core).
+
+2. **Pipeline Processing**: Pipeline processing divides a task into a series of stages, with each stage performing a specific operation. By overlapping the execution of multiple tasks in different stages of the pipeline, throughput can be increased. Pipeline processing is commonly used in processors, where instructions are executed in multiple stages (instruction fetch, decode, execute, etc.).
+
+3. **Caching**: Caching involves storing frequently accessed data or instructions in fast-access memory locations (caches) closer to the processing units. By reducing the time required to access data from slower memory, caching improves overall system throughput.
+
+4. **Prefetching**: Prefetching anticipates future memory accesses and retrieves data in advance, placing it in caches before it is actually needed. This helps to reduce memory access latency and improve overall throughput by ensuring that data is readily available when required.
+6. **Concurrency Control**: In systems with multiple users or processes accessing shared resources, concurrency control techniques such as locking, synchronization, and transaction management are used to ensure efficient utilization of resources and prevent contention, which can degrade throughput.
+
+7. **Load Balancing**: Load balancing distributes tasks evenly across processing units or resources to ensure that no single component becomes a bottleneck. By optimizing resource utilization and minimizing idle time, load balancing improves overall system throughput.
+## Instruction level parallelism 
+Instruction-Level Parallelism (ILP) refers to the simultaneous execution of multiple instructions within a single processor core to improve performance. It aims to exploit opportunities for parallel execution at the instruction level, allowing multiple instructions to be processed concurrently instead of sequentially.
+
+### Scaler Architecture
+Scalar architecture refers to a type of computer architecture where each instruction operates on a single data item at a time. In scalar processors, instructions typically perform arithmetic, logic, or data movement operations on individual data elements, one at a time. This contrasts with vector architectures, where instructions can operate on multiple data elements simultaneously.
+
+Key characteristics of scalar architecture include:
+
+1. **Single Data Stream**: Scalar processors process one data element at a time. Instructions operate on scalar values, which are individual data items (e.g., integers, floating-point numbers) rather than arrays or vectors of data.
+
+2. **Sequential Execution**: Instructions are executed sequentially, with each instruction completing before the next one begins. There is no inherent parallelism at the instruction level within a single processor core.
+
+3. **Limited Parallelism**: While scalar processors may include multiple execution units capable of performing different types of operations (e.g., arithmetic, logic), instructions are typically executed one at a time in program order.
+
+4. **Instruction Pipelining**: Scalar processors often employ instruction pipelining to improve performance by overlapping the execution of multiple instructions. However, each instruction progresses through the pipeline stages independently, and there is no simultaneous execution of multiple instructions.
+![](../../statics/Pasted%20image%2020240425213003.png)
+
+### Super scaler
+1. Superscalar processors are designed to execute multiple instructions simultaneously within a single clock cycle. This is achieved by having multiple execution units, each capable of handling different types of instructions (e.g., arithmetic, load/store, branch).
+2. **Instruction-Level Parallelism (ILP)**: The primary goal of superscalar architectures is to exploit ILP, which involves identifying and executing independent instructions in parallel to improve overall performance. This is done by analyzing the instruction stream to identify dependencies and scheduling instructions for concurrent execution whenever possible.
+3. **Dynamic Instruction Scheduling**: Superscalar processors typically employ dynamic instruction scheduling techniques to identify and exploit parallelism at runtime. Instructions are dispatched to execution units dynamically, based on availability of resources and data dependencies.
+4. **Out-of-Order Execution**: Superscalar processors often support out-of-order execution, where instructions are executed as soon as their operands are available, rather than strictly following program order. This allows the processor to overlap the execution of independent instructions and maximize resource utilization.
+
+![](../../statics/Pasted%20image%2020240425205833.png)
+here each time 2 instruction is execution and when a single stage of these instruction is completed new two instructions are taken for execution
+
+#### Feature of super scalar 
+- Instruction level parallel
+- Single processor
+- RISC Processor
+- Instructions should be independent
+- Multiple pipeline 
+- Multiple instruction are executed per clock cycle
+
+### Pipelining 
+![](../../statics/Pasted%20image%2020240425210502.png)
+![](../../statics/Pasted%20image%2020240425210519.png)
+![](../../statics/Pasted%20image%2020240425210909.png)
+![](../../statics/Pasted%20image%2020240425210930.png)
