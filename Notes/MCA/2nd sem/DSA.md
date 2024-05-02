@@ -681,3 +681,32 @@ int main() {
 
 ## Tree
 - A tree data structure is a hierarchical data structure that consists of nodes connected by edges. It is called a "tree" because it resembles a tree in nature, with a single root node representing the trunk and additional nodes branching off from it like branches. it is non cyclic 
+
+# UNIT 3 
+## Graphs 
+![](../../statics/Pasted%20image%2020240502175847.png)
+### Representation of Graph
+- Sequential : - Adjacent matrix , incidence matrix
+- Linear : Using list
+![](../../statics/Pasted%20image%2020240502180017.png)
+![](../../statics/Pasted%20image%2020240502180139.png)
+![](../../statics/Pasted%20image%2020240502180236.png)
+![](../../statics/Pasted%20image%2020240502180415.png)
+- issues :- use large memory space , disadvantages of arrays also added
+![](../../statics/Pasted%20image%2020240502180607.png)
+**Attempting way**
+![](../../statics/Pasted%20image%2020240502181156.png)
+### DFS
+![](../../statics/Pasted%20image%2020240502181425.png)
+![](../../statics/Pasted%20image%2020240502181436.png)
+
+![](../../statics/Pasted%20image%2020240502181528.png)![](../../statics/Pasted%20image%2020240502182211.png)
+### BFS
+![](../../statics/Pasted%20image%2020240502182500.png)
+![](../../statics/Pasted%20image%2020240502182711.png)
+![](../../statics/Pasted%20image%2020240502182816.png)
+
+### Operations in Graph
+- Insertion :- Just add new node in Linear representation or in case of Sequential representation add row and column 
+- Deletion :- Do the opposite
+![](../../statics/Pasted%20image%2020240502183739.png)
