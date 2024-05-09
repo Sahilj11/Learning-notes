@@ -683,6 +683,8 @@ int main() {
 - A tree data structure is a hierarchical data structure that consists of nodes connected by edges. It is called a "tree" because it resembles a tree in nature, with a single root node representing the trunk and additional nodes branching off from it like branches. it is non cyclic 
 
 # UNIT 3 
+## Heapsort (Referred Mam ppt)
+
 ## Graphs 
 ![](../../statics/Pasted%20image%2020240502175847.png)
 ### Representation of Graph
@@ -710,3 +712,181 @@ int main() {
 - Insertion :- Just add new node in Linear representation or in case of Sequential representation add row and column 
 - Deletion :- Do the opposite
 ![](../../statics/Pasted%20image%2020240502183739.png)
+### Shortest Path
+#### Dijkstra (Single source shortest path)
+#### Floyd Warshall (Multisource shortest path)
+
+# UNIT 4
+## Binary search
+### Pseudocode
+1. Begin with an array sorted in ascending order.
+2. Define two pointers, namely start and finish.
+3. Assign the start pointer with 0, and the finish pointer with the last index of the array.
+4. Define a variable mid, which refers to the middle of the array. It is calculated as (low+high)/2.
+5. If the element at the mid index equals the searched element, return the mid index.
+6. If the searched element is smaller than the mid index element, move the finish to mid-1, effectively discarding the right half of the array.
+7. If the searched element is larger than the mid index element, move the start to mid+1, effectively discarding the left half of the array.
+![](../../statics/Pasted%20image%2020240509083508.png)
+## Sorting algorithms
+### Selection sort
+#### Pseudo 
+1. Find the largest item x, in the range of \[0…n−1\] 
+2. Swap x with the (n−1)th item 
+3. Reduce n by 1 and go to Step 1
+Time complexity : O(n<sup>2</sup>)
+### Bubble Sort
+1. Compare pair of adjacent items 
+2. Swap if the items are out of order
+3. Repeat until the end of array 
+		The largest item will be at the last position 
+4. Reduce n by 1 and go to Step 1
+
+Time complexity : O(n<sup>2</sup>)
+
+![](../../statics/Pasted%20image%2020240509084339.png)
+
+### Insertion sort
+#### Pseudo code
+- We have to start with second element of the array as first element in the array is assumed to be sorted.
+- Compare second element with the first element and check if the second element is smaller then swap them.
+- Move to the third element and compare it with the second element, then the first element and swap as necessary to put it in the correct position among the first three elements.
+- Continue this process, comparing each element with the ones before it and swapping as needed to place it in the correct position among the sorted elements.
+- Repeat until the entire array is sorted.
+![](../../statics/Pasted%20image%2020240509085107.png)
+
+### Merge sort 
+#### Pseudo code
+- **Left** will be equal to **0** and the value of **right** will be equal to **size-1**, where size is the length of the given unsorted array.
+- Find the middle point of this array by applying **mid = (left + right) / 2**.
+- Call the function **mergeSort** by passing the arguments as **(left, mid)** and **(mid + 1, rear)**.
+- The above steps will repeat till **left < right**.
+- Then we will call the **merge** function on two sub-arrays.
+#### Divide and conquer model
+- Merge Sort is a divide-and-conquer sorting algorithm 
+- Divide step 
+	- Divide the array into two (equal) halves 
+	- Recursively sort the two halves 
+- Conquer step 
+	- Merge the two halves to form a sorted array
+
+time-complexity: O(nLogn)
+![](../../statics/Pasted%20image%2020240509085924.png)
+![](../../statics/Pasted%20image%2020240509090000.png)
+### Quick sort
+#### pseudo code
+![](../../statics/Pasted%20image%2020240509090151.png)
+![](../../statics/Pasted%20image%2020240509090231.png)
+Time-complexity : O(nlogn)
+
+Worst case in quicksort
+![](../../statics/Pasted%20image%2020240509095056.png)
+![](../../statics/Pasted%20image%2020240509095149.png)
+The worst-case time complexity of the Quicksort algorithm occurs when the chosen pivot divides the array into two subarrays of unequal sizes, particularly when it consistently picks the smallest or largest element. This scenario leads to unbalanced partitions, where one partition has significantly more elements than the other. As a result, the recursive calls do not divide the problem into subproblems of nearly equal sizes, leading to poor performance.
+
+In the worst-case scenario, Quicksort's time complexity approaches \(O(n^2)\), where \(n\) is the number of elements in the array. This occurs when the input array is already sorted (either in ascending or descending order) or contains many duplicate elements, and the pivot selection strategy consistently selects the minimum or maximum element.
+
+However, it's important to note that the worst-case scenario is relatively rare in practice, especially with randomized pivot selection strategies or careful pivot selection methods like median-of-three. With these strategies, Quicksort typically exhibits an average-case time complexity of \(O(n \log n)\) and is highly efficient in practice for most inputs.
+### Summary
+![](../../statics/Pasted%20image%2020240509090352.png)
+## Internal and external , stable sorting
+
+### Stable sorting
+  
+Stability in sorting algorithms refers to the property where elements with equal keys maintain their relative order after sorting.
+
+For example, suppose you have a list of objects sorted primarily by one attribute, such as their age, and then sorted secondarily by another attribute, such as their name. If you use a stable sorting algorithm, like stable merge sort or stable insertion sort, objects with equal ages will retain their relative order based on their names after sorting.
+
+In scenarios where maintaining the original order of elements with equal keys is important, stable sorting algorithms are preferred. They ensure that the original order is preserved even after sorting, which can be crucial in various applications and algorithms
+
+### Internal and External
+If the data sorting process takes place **entirely within the Random-Access Memory (RAM) of a computer,** it’s called internal sorting. This is possible whenever the size of the dataset to be sorted is small enough to be held in RAM.
+
+For sorting larger datasets, it may be necessary to hold only a smaller chunk of data in memory at a time, since it won’t all fit in the RAM. The rest of the data is normally held on some larger, but slower medium, like a hard disk. **The sorting of these large datasets will require different sets of algorithms which are called external sorting.**
+
+- Internal sort:- Bubble sort,insertion sort,Quicksort
+- External sort:-Merge sort
+## Hash Tables
+### Intro
+In tree tables, the search for an identifier key is carried out via a sequence of comparisons. Hash differs from this, in that the address or location of an identifier, X, is obtained by computing some arithmetic function f, of X. f (X) gives the address of X in the table. This address will be referred to as the hash or home address of X.
+The memory available to maintain the symbol table is assumed to be sequential. This memory is referred to as the hash table, HT.
+Hash table is divided into b buckets , and each bucket is capable of holding records(meaning a single bucket can hold multiple records)
+A hashing function, f (x) is used to perform an identifier transformation on X. f(x) maps the set of possible identifiers onto the integers 0 through b-1. We use the term bucket to denote a unit of storage that can store one or more records. A bucket is typically a disk but could be chosen to be smaller or larger than a disk block
+
+### Hash function
+A hashing function f, transforms an identifier X into a bucket address in the hash table. The desired properties of such a function are that it should be easily computable and that it should minimize the number of collisions.
+
+An ideal hash function distributes the stored keys uniformly across all the buckets so that every bucket has the same number of records. 
+
+Features of good hash function
+- The distribution is uniform, that is, each bucket is assigned the same number of search key values from the set of all possible search key values.
+- The distribution is random, that is, in the average case, each bucket will have nearly the same number of values assigned to it, regardless of the actual distribution of search key values.
+#### Some hashing techniques
+Sure, let's delve into each of these hash functions:
+
+1. **Division Hash Function**:
+   - The division hash function works by taking the remainder of dividing the key by a prime number, typically the size of the hash table.
+   - The formula for the division hash function is: \( h(k) = k \mod m \), where \( k \) is the key and \( m \) is the size of the hash table.
+   - It's a simple and commonly used hash function because it's easy to implement and works well in many situations.
+   - However, it might suffer from clustering if the keys are not uniformly distributed.
+   - Suppose we have a hash table of size 10.
+   - Let's say we want to hash the key 27.
+   - Using the division hash function \( h(k) = k \mod m \), where \( k \) is the key and \( m \) is the size of the hash table:
+     - \( h(27) = 27 \mod 10 = 7 \).
+   - So, the key 27 maps to index 7 in the hash table.
+
+
+2. **Mid-Square Hash Function**:
+   - The mid-square hash function involves squaring the key, taking a portion of the middle bits, and using that as the hash value.
+   - The formula for the mid-square hash function is: \( h(k) = \text{{middle bits}}(k^2) \).
+   - For example, if the key is 123 and its square is 15129, we can use the middle two digits (51) as the hash value.
+   - This hash function is less commonly used due to potential issues with certain key distributions and difficulty in choosing an appropriate portion of the bits.
+
+3. **Folding Hash Function**:
+   - The folding hash function involves dividing the key into fixed-size parts, summing or concatenating these parts, and then applying the division hash function to the result.
+   - It's particularly useful when dealing with keys of variable length, such as strings.
+   - The formula for the folding hash function can vary depending on the method of folding used, but a common approach is to divide the key into equal-sized chunks, sum them up, and then apply the division hash function to the result.
+   - For example, if the key is 123456789 and we divide it into two parts (12, 34, 56, 78, 9), summing them results in 189, which can then be hashed using the division hash function.
+   - Folding hash functions can provide good distribution if properly implemented and can handle keys of variable length efficiently.
+4. Digit analysis:- Digit analysis is a technique used in hashing to distribute keys evenly across hash table slots based on certain characteristics of the keys, such as their numerical values.In digit analysis, the keys are typically numeric values, and the hashing function operates on individual digits or groups of digits within the keys to determine the hash value. The idea is to partition the keys into different groups based on their digit patterns and distribute them across the hash table slots.
+Here's a simplified example of digit analysis in hashing:
+1. **Partitioning Keys**: Divide the keys into groups based on their digit patterns. For example, you might consider the first few digits or the last few digits of each key.
+2. **Hashing Function**: Design a hashing function that operates on these digit groups to compute the hash value. This function should aim to distribute keys evenly across the hash table slots to minimize collisions.    
+3. **Mapping Keys to Slots**: Apply the hashing function to each key to determine its corresponding hash value, and then map the key to the appropriate slot in the hash table based on this hash value.
+4. **Collision Handling**: Handle collisions that may occur when multiple keys map to the same hash value. This can be done using various collision resolution techniques, such as chaining (for open hashing) or probing (for closed hashing). 
+### Some Hash terms 
+#### Identity factor
+The ratio n/T is called the identifier density, where n = number of identifiers T = total number of possible identifiers. The number of identifiers, n, in use is usually several orders of magnitude less than the total number of possible identifiers, T. The number of buckets b, in the hash table are also much less than T.
+
+#### Loading factor 
+The loading factor a is equal to n/sb, where s = number of slots in a bucket b = total number of buckets The number of buckets b is also very less than the total number of possible identifiers, T.
+
+#### Synonyms
+The hash function f almost always maps several different identifiers into the same bucket. Two identifiers I1, I2 are said to be synonyms with respect to f if f(I1) = f (I2). Distinct synonyms are entered into the same bucket so long as all the s slots in that bucket have not been used.
+
+#### Collision
+A collision is said to occur, when two non-identical identifiers are hashed into the same bucket. When the bucket size is 1, collision and overflow occurs simultaneously 
+
+### Bucket overflows
+when a record is inserted, the bucket to which it is mapped has space to store the record, if the bucket does not have enough space, a bucket overflow is said to have occurred.
+
+#### Handling this
+- Overflow chaining:- If a record has be inserted into a bucket b, and b is alre ady full, an overflow bucket is provided for b, and the record is inserted into the overflow bucket. If the overflow bucket is also full, another overflow bucket is provi ded and so on. All the overflow buckets of a given bucket are chained together in a linked list. Overflow handling using such a linked list is called Overflow Chaining.
+- ![](../../statics/Pasted%20image%2020240509094436.png)
+- Deletion
+- Open hashing
+
+#### Open vs close hashing(Open addressing)
+Open hashing and closed hashing (also known as open addressing) are two different approaches for resolving collisions in hash tables:
+1. **Open Hashing**:
+   - Open hashing, also known as separate chaining, involves storing all colliding keys in the same slot of the hash table.
+   - Each slot of the hash table maintains a linked list, array, or other data structure to store multiple items that hash to the same index.
+   - When a collision occurs, the new item is simply added to the existing data structure associated with the slot.
+   - Searching for an item involves hashing the key to find its slot and then traversing the associated data structure to find the desired item.
+   - Open hashing tends to be more memory-efficient compared to closed hashing because it doesn't require additional storage for overflow items.
+
+2. **Closed Hashing (Open Addressing)**:
+   - Closed hashing, or open addressing, involves storing all items directly within the hash table itself, even if collisions occur.
+   - When a collision occurs, the algorithm probes for an alternative location (usually through a sequence of positions determined by a probing function) until an empty slot is found.
+   - The probing function defines the sequence of slots to be examined in case of collisions. Common probing techniques include linear probing, quadratic probing, and double hashing.
+   - Closed hashing typically requires less memory overhead compared to open hashing because it doesn't need additional data structures to handle collisions.
+   - However, closed hashing can suffer from clustering, where consecutive items are placed in nearby slots, potentially leading to longer search times.
