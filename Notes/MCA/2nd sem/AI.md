@@ -1,34 +1,42 @@
 # AI and its Application
 ## Intro
-Artificial Intelligence is the part of computer science with designing intelligent computer systems, that is, systems that exhibit the characteristics we associate with intelligence in human behavior.
+Developing programs to solve complex problems by application of process that are analogous to human reasoning processes
+
+## Knowledge
+Knowledge is organised information , in other words it is a information which helps in decision making
+Intelligence is abilty to draw useful inference from available from the available knowledge
+Human expert has two type of knowledge
+- Domain-specific :- deals with all kinds of knowledge about a particular domain. types of domain-specific knowledge
+	- Knowledge about item or object:- this specifies the description and characteristics of object and its distinct marking for descriptive purpose
+	- Knowledge about events:- For this, knowledge is set of procedures . eg. what will happen if mentos droped in softdrink
+	- Knowledge about task performance :- knowledge about capacity of various objects and limitation of each .  eg. is jeep good for hilly areas
+	- Knowledge about knowledge (Meta knowledge):- it helps in controlling and planning the reasoning process. it has two parts . Meta assertion and Meta rules
+![](../../statics/Pasted%20image%2020240510063027.png)
+Layers of knowledge
+- Layer 1:- Factual Knowledge
+- Layer 2:- Heuristic 
+- Layer 3:- Meta knowledge
 
 ## AI Problems
 AI problems refer to the various types of challenges and tasks that artificial intelligence (AI) systems aim to solve or address. These problems span a wide range of domains and applications, each requiring different techniques, algorithms, and approaches for effective solutions. Here are some key points about AI problems:
 
 1. **Classification**:
-   - AI problems can be classified into different categories based on their characteristics and requirements.
-   - Common classifications include classification, regression, clustering, reinforcement learning, natural language processing, computer vision, and robotics, among others.
-
-2. **Representation**:
-   - AI problems often involve representing knowledge about the problem domain in a suitable format.
-   - Representation schemes such as propositional logic, predicate logic, semantic networks, frames, and ontologies are used to encode domain knowledge.
-
-3. **Search and Optimization**:
-   - Many AI problems require searching through large solution spaces to find optimal or satisfactory solutions.
-   - Search algorithms such as depth-first search, breadth-first search, A* search, genetic algorithms, and simulated annealing are commonly used for this purpose.
-
-4. **Reasoning and Inference**:
-   - Reasoning involves drawing logical conclusions from given information or knowledge.
-   - Inference techniques such as deductive reasoning, inductive reasoning, abductive reasoning, and probabilistic reasoning are used to make inferences in AI systems.
-
-5. **Learning**:
-   - Learning is a central aspect of AI, where systems acquire knowledge or skills from data or experience.
-   - Machine learning techniques such as supervised learning, unsupervised learning, reinforcement learning, and deep learning are used for learning from data.
-
-6. **Planning and Decision Making**:
-   - Planning involves generating sequences of actions to achieve desired goals or objectives.
-   - Decision-making involves selecting actions or choices based on available information and objectives.
-   - Planning and decision-making techniques such as search-based planning, heuristic search, and decision trees are used in AI systems.
+   - A **classification** problem is about assigning one or more categories to a document, product, person, or image—essentially anything. Examples include:
+	- Categorizing incoming support tickets by relevant topics
+	- Classifying images of silicon wafers as containing defects or no defects
+2. Regression:- A **regression problem** is about estimating _numerical_ values given some input. For example, trying to predict the number of months before a machine needs service given the conditions of the current machine, or predicting how specific drug dosage affects blood pressure.
+3. Recommendation:- A **recommendation problem** is about providing personalized content or products to a group of people. Examples include:
+	- Product recommendation
+	- Recommendations on who to follow
+	- Recommendations on jobs to apply for
+	- Recommendations on articles to read
+4. Search relevance:- A **search relevance** problem is about improving the rankings of search results shown to users. Often search relevance improvement starts with the analysis of search logs to diagnose problems using hard data. Search improvement may or may not require heavy use of machine learning
+5. Information extraction:- An **information extraction** problem is about extracting specific information from large volumes of text data. One of the goals of information extraction is to fill templates using data extracted from raw text. Examples include:
+	- Extracting patient symptoms from large volumes of clinical notes
+6. Entity Recognition:- **Entity recognition** is about detecting and extracting _specific_ information from unstructured data. This specific information is often pre-defined. This can include:
+	- Names of places
+	- Organizations
+7. Sentiment analysis:- **Sentiment Analysis** is about discovering emotions in text data such as user reviews, social media comments, and surveys. For example, automatically detecting customer sentiment in social media channels after a new product release.
 
 ## AI Application
 - Games
@@ -62,10 +70,49 @@ Artificial intelligence (AI) techniques refer to the methods, algorithms, and ap
    - Computer vision focuses on developing algorithms and systems that enable computers to understand and interpret visual information from images or videos.
    - Techniques include object detection, image classification, image segmentation, and scene understanding.
    - Computer vision is used in applications such as autonomous vehicles, surveillance systems, medical image analysis, and augmented reality.
+## Problem representation
+- Types of representation 
+	- State Space Representation 
+	- Problem reduction
+### State space representation
+- A set of all possible states of a given problem is known as state space of the problem. one need initial state , set of operators(operators often refer to functions or procedures that manipulate or transform data or representations within an algorithm or model) and goal state
+- ![](../../statics/Pasted%20image%2020240510071922.png)
+#### Features
+1. **States**: The state space comprises all possible states that the system can occupy. States represent the configurations of the system at a particular point in time. These states can be discrete, continuous, or a combination of both.
+2. **State Variables**: State variables are the quantities used to describe the state of the system. They capture relevant information about the system's configuration, such as position, velocity, temperature, etc. State variables can be scalar, vector, or even more complex data structures.
+3. **Actions**: Actions are the possible transitions that the system can make from one state to another. These actions represent the decisions or interventions that can be taken to change the system's state. In AI, actions are often associated with agents or controllers that interact with the environment.
+4. **Transitions**: Transitions describe how the system moves from one state to another based on the actions taken. A transition function or dynamics model specifies the probability or deterministically how the system evolves over time. These transitions can be stochastic or deterministic, depending on the nature of the system.
+5. **Initial State**: The initial state of the system represents its configuration at the beginning of the process or problem-solving task. It serves as the starting point for exploring the state space and finding solutions.
+6. **Goal State**: The goal state defines the desired configuration or outcome that the system aims to achieve. In problem-solving tasks, the goal state represents the solution or the desired end result.
+7. **Constraints**: State space representation can incorporate constraints that limit the set of permissible states or actions. These constraints may arise from physical limitations, resource constraints, or domain-specific requirements.
 
+#### Pros and cons of state space
+##### Importance:
+
+1. **Problem Formulation**: State space representation helps in formulating a problem by defining its states, actions, transitions, and goals. This structured representation facilitates the understanding of the problem domain.
+2. **Algorithm Design**: Many AI algorithms, such as search algorithms (e.g., breadth-first search, depth-first search, A*), planning algorithms (e.g., STRIPS, Graphplan), and reinforcement learning algorithms, operate on state spaces. They use state transitions and goals to find solutions or make decisions.
+3. **Complex Systems Modeling**: State space representation is crucial for modeling complex systems, where the interactions between different components lead to emergent behavior. By representing the system's state and the transitions between states, AI systems can simulate and predict the system's behavior.
+4. **Problem Solving**: AI agents can navigate through the state space to find solutions or make decisions that achieve desired goals. This is applicable in various domains such as robotics, game playing, logistics, scheduling, and natural language processing.
+5. **Efficiency**: Well-designed state space representations can lead to more efficient problem-solving algorithms. By pruning unnecessary states or optimizing search strategies, AI systems can find solutions more quickly.
+
+##### Limitations:
+1. **State Explosion**: In complex problem domains, the state space can become prohibitively large. As the number of states and transitions increases, the computational resources required to explore the entire space grow exponentially. This can make problem-solving infeasible or computationally expensive.
+2. **Intractability**: Some problems may have state spaces that are too large to explore exhaustively or even to represent explicitly. In such cases, approximation techniques or heuristics may be necessary, which can lead to suboptimal solutions.
+3. **Incomplete Information**: State space representations may not capture all relevant aspects of the problem domain, leading to incomplete or inaccurate models. This can result in suboptimal solutions or failure to find solutions altogether.
+4. **Dynamic Environments**: In dynamic environments where states and transitions change over time, maintaining an accurate representation of the state space can be challenging. This can affect the effectiveness of planning and decision-making algorithms.
+5. **Curse of Dimensionality**: In high-dimensional state spaces, the density of states decreases exponentially with the number of dimensions. This can make it difficult to explore the space effectively and to generalize solutions across different states.
+### Problem reduction
+- In this complex problem is broken down or decomposed into set of premitive sub-problems . Solution for these primitive sub-problems are easily obtained . the solution of all sub problems collectively give the solution for complex problem
+#### AND/OR Tree
+- Initial complex probelm is parent node and primitive sub-problems form the leaf node
+- In AND - solution of problem obtained by solving all of sub problem
+- In OR - any of sub problem
+![](../../statics/Pasted%20image%2020240510080301.png)
 ## Production system
-A production system in artificial intelligence (AI) is a knowledge-based approach to problem-solving and decision-making. It's a rule-based system that operates by applying a set of rules or productions to a given set of inputs, leading to the derivation of new information or actions. Here are some key notes on production systems in AI:
-
+### Intro
+- Production systems are rules of form C->A where LHS  is known as condition and RHS is known as Action
+- LHS describe applicability of rule and RHS describe operation to be performed
+- Formal definition:- if one adopts a system with production rules and rules interpreter then that system known as production system
 ![](../../statics/Pasted%20image%2020240309151332.png)
 
 1. **Components**:
@@ -80,65 +127,20 @@ A production system in artificial intelligence (AI) is a knowledge-based approac
    - **Select**: If multiple rules match, the inference engine selects a rule based on the conflict resolution strategy.
    - **Execute**: The selected rule is executed, resulting in modifications to the working memory, such as adding new facts or updating existing ones.
    - **Repeat**: The cycle continues iteratively until no further rules can be applied or until a termination condition is met.
-
-3. **Applications**:
-   - Production systems are widely used in expert systems, which are AI systems designed to mimic the decision-making capabilities of human experts in specific domains.
-   - They are also used in areas such as natural language processing, diagnostic systems, planning and scheduling, and robotics.
-
-The classifications you've mentioned pertain to different characteristics of production systems in terms of their behavior during problem-solving processes. Let's explore each of them:
-
-1. **Monotonic Production System**:
-   - In a monotonic production system, the application of production rules does not change the system's state or the conclusions already drawn. Once a rule is applied and a conclusion is derived, it remains valid and cannot be retracted or modified.
-   - Monotonicity ensures that new information does not contradict or invalidate previously derived conclusions.
-
-2. **Non-monotonic Production System**:
-   - Unlike monotonic systems, non-monotonic production systems allow for the retraction or modification of previously derived conclusions.
-   - New information may cause revisions to existing conclusions, even if those conclusions were previously considered valid.
-   - Non-monotonicity provides greater flexibility in reasoning and decision-making, allowing for adaptive responses to changing circumstances or new evidence.
-
-3. **Partially Commutative Production System**:
-   - In a partially commutative production system, the order in which rules are applied can affect the outcome, but not all rules are sensitive to the order of application.
-   - Some rules may have dependencies or interactions that require specific sequencing, while others may be applied independently of the order.
-   - Partial commutativity allows for a balance between flexibility and control in rule application.
-
-4. **Commutative Production System**:
-   - A commutative production system is one in which the order of rule application does not affect the final outcome.
-   - All rules are independent of the order in which they are applied, and the system's behavior is invariant under permutations of rule application sequences.
-   - Commutativity simplifies reasoning and facilitates parallel or distributed processing, as the system's behavior is deterministic regardless of the execution order.
-
-
-**Advantages and disadvantages of production systems in AI:**
-
-**Advantages:**
-
-1. **Modularity**: Production systems allow for the decomposition of knowledge into discrete, reusable rules, making it easy to update and maintain the system.
-   
-2. **Flexibility**: The rule-based nature of production systems allows for easy modification and adaptation to changing requirements or environments.
-   
-3. **Transparency**: The explicit representation of rules makes the reasoning process transparent and understandable, aiding in system debugging, validation, and explanation.
-   
-4. **Scalability**: Production systems can handle large amounts of knowledge and complex problem-solving tasks by decomposing them into smaller, manageable rules.
-   
-5. **Incremental Development**: Systems can be built incrementally by adding rules gradually, allowing for the gradual refinement and improvement of the system over time.
-   
-6. **Domain Independence**: Production systems can be applied to a wide range of domains, from simple decision-making tasks to complex expert systems.
-
-**Disadvantages:**
-
-1. **Brittleness**: Production systems can suffer from brittleness, where small changes in the input or rules can lead to unexpected or erroneous behavior, especially in complex systems.
-   
-2. **Complexity**: As the number of rules and interactions between rules grows, the system's behavior may become difficult to understand, debug, and maintain.
-   
-3. **Inefficiency**: In some cases, production systems may suffer from inefficiencies due to redundant rule firing or inefficient conflict resolution strategies.
-   
-4. **Difficulty in Learning**: Learning from data or experience can be challenging in rule-based systems, as incorporating new knowledge may require manual intervention to update or create new rules.
-   
-5. **Expressiveness Limitation**: Production systems may have limitations in representing certain types of knowledge or reasoning, especially those requiring complex relationships or probabilistic reasoning.
-   
-6. **Knowledge Acquisition Bottleneck**: Developing a comprehensive set of production rules often requires significant domain expertise and effort, leading to a bottleneck in knowledge acquisition.
-
-Despite these disadvantages, production systems remain a powerful and widely used approach in AI, particularly in expert systems and rule-based reasoning applications, due to their modularity, transparency, and flexibility.
-
+### Types of production system
+- Monotonic:-  Production system in which application of a rule **never** prevents later application of another rule that could have been applied at first time rule was selected . below has 1 and 2 rule , some steps of 1 is done and after that some of 2 is done 
+	- ![](../../statics/Pasted%20image%2020240510073817.png)
+- Non Monotonic:- Production system in which application of a rule  prevents later application of another rule that could have been applied at first time rule was selected 
+- Partial commutative:- This system states that if application of a particular rule transform state x into y then permutation of those rules also transform state x to y
+- Commutative :- it is both monotonic and partial commutative
+#### Relations (showing what type of system good for what type of problem)
+![](../../statics/Pasted%20image%2020240510074533.png)
+## Components of AI
+![](../../statics/Pasted%20image%2020240510080426.png)
+## Searching 
+### Intro
+- At every stage in state space generating algo that we need to apply to reach goal state . search is systematic examination to find goal state
+- 
 # Problem Solving in AI
 
 ## Steps 

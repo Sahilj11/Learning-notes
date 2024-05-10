@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/AI.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/AI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/AI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/DSA.md"
+                "file": "MCA/2nd sem/AI.md"
               }
             }
           },
@@ -160,19 +160,19 @@
   },
   "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
+    "statics/Pasted image 20240510080426.png",
+    "statics/Pasted image 20240510080301.png",
+    "statics/Pasted image 20240510074533.png",
+    "statics/Pasted image 20240510073817.png",
+    "statics/Pasted image 20240510071922.png",
+    "statics/Pasted image 20240510063027.png",
+    "MCA/2nd sem/DSA.md",
     "statics/Pasted image 20240509103124.png",
     "statics/Pasted image 20240509103034.png",
     "statics/Pasted image 20240509102235.png",
     "statics/Pasted image 20240509101640.png",
     "statics/Pasted image 20240509101356.png",
-    "statics/Pasted image 20240509100451.png",
-    "statics/Pasted image 20240509100408.png",
-    "statics/Pasted image 20240509095149.png",
-    "statics/Pasted image 20240509095056.png",
-    "statics/Pasted image 20240509094436.png",
-    "statics/Pasted image 20240509090352.png",
     "MCA/2nd sem/CSA.md",
-    "MCA/2nd sem/DSA.md",
     "MCA/2nd sem/Python.md",
     "MCA/2nd sem/AI.md",
     "java Backend/Spring Security.md",
