@@ -280,38 +280,21 @@ In the context of the A* algorithm, heuristic functions can possess two fundamen
 ## Minimax
 Minimax is a decision-making algorithm commonly used in game theory, specifically in two-player zero-sum games, such as chess, checkers, or tic-tac-toe. Here are some notes on the minimax algorithm:
 Time complexity :- O(b<sup>d</sup>) , here b is number of child and d is depth
-1. **Objective**: The main objective of minimax is to find the optimal move for a player, assuming that the opponent will also play optimally. It aims to minimize the potential loss (for the worst case scenario) while maximizing the potential gain.
 
-2. **Tree Structure**: The game state is represented as a tree, where each node represents a possible state of the game. The root node represents the current state, and the children nodes represent all possible moves from that state.
-
-3. **Depth-Limited or Full Search**: Minimax can be implemented with either a depth-limited search, where it only evaluates a certain number of moves ahead, or a full search, where it evaluates all possible moves until a terminal state (win, loss, or draw) is reached.
-
-4. **Evaluation Function**: At the leaf nodes of the tree (terminal states), an evaluation function is used to assign a value to that state, indicating the desirability of that outcome for the player. This function should reflect the "goodness" of a particular state from the perspective of the player.
-
-5. **Maximization and Minimization**: The algorithm alternates between maximizing and minimizing. At each level of the tree, one player (Max) aims to maximize the evaluation value of its moves, while the opponent (Min) aims to minimize it.
-
-6. **Backtracking**: After evaluating the leaf nodes, the algorithm backtracks, propagating the values up the tree. At each level, Max chooses the move with the highest value, while Min chooses the move with the lowest value.
-
-7. **Alpha-Beta Pruning**: Minimax can be optimized using alpha-beta pruning, which reduces the number of nodes that need to be evaluated by pruning branches of the tree that cannot possibly lead to a better solution. This technique helps improve the efficiency of the algorithm.
-
-8. **Complexity**: The time complexity of minimax without pruning is exponential in the depth of the tree. However, with alpha-beta pruning, the effective branching factor is reduced, leading to significant improvements in performance.
-
-9. **Application**: Minimax is widely used in various board games and other decision-making problems where there are two players with opposing goals and complete information about the game state.
-
-**Features**
-One key feature of the minimax algorithm is its ability to systematically evaluate possible moves in a game, enabling it to make optimal decisions for a player. Here are some prominent features of the minimax algorithm:
-
-1. **Optimal Strategy**: Minimax ensures that the player makes the best possible move at each decision point, assuming the opponent also makes optimal moves. This is achieved by recursively evaluating the game tree to determine the outcome of all possible moves.
-
-2. **Complete Search**: In theory, minimax can search the entire game tree to find the optimal move. However, in practice, this is often limited to a certain depth due to the exponential growth of the game tree.
-
-3. **Backtracking**: Minimax employs backtracking to propagate the evaluation values of terminal states back up the tree. This allows the algorithm to determine the optimal move at each level of the game tree based on the evaluations of its child nodes.
-
-4. **Evaluation Function**: At terminal states or leaf nodes of the game tree, an evaluation function is used to assign a value to the state based on its desirability for the player. This function can be tailored to the specific game being played and the player's objectives.
-
-5. **Alpha-Beta Pruning**: A key optimization technique used in minimax is alpha-beta pruning, which reduces the number of nodes that need to be evaluated by eliminating branches of the game tree that cannot lead to a better outcome. This significantly improves the efficiency of the algorithm.
+The main objective of minimax is to find the optimal move for a player, assuming that the opponent will also play optimally. It aims to minimize the potential loss (for the worst case scenario) while maximizing the potential gain.
+The plausible move generator generates necessary states for further evaluation and static function ranks each of the state
+![](../../statics/Pasted%20image%2020240510133812.png)
+![](../../statics/Pasted%20image%2020240510133824.png)
+![](../../statics/Pasted%20image%2020240510133902.png)
+**Issues**
+1. **Exponential Growth:** The minimax algorithm explores the entire game tree, which can lead to exponential growth in the number of nodes to be evaluated, especially in complex games with a large branching factor and depth.
+2. **Computational Complexity:** As the depth of the game tree increases, the computational cost of evaluating all possible moves becomes prohibitive, making it impractical for real-time decision-making in complex games.
+3. **Redundant Evaluations:** Minimax may evaluate the same game state multiple times, leading to redundant computations and wasted resources. This inefficiency becomes more pronounced as the size of the game tree increases.
+4. **Memory Requirements:** Storing the entire game tree in memory for evaluation can require a significant amount of memory, especially for games with large branching factors and deep search depths.
+5. **Optimality Assumption:** Minimax assumes that both players play optimally, which may not always hold true in practice, especially in games with imperfect information or stochastic elements.
 ### Alpha-beta pruning 
 Alpha-beta pruning is an optimization technique used in the minimax algorithm to reduce the number of nodes evaluated in the search tree. Here are some notes on alpha-beta pruning:
+![](../../statics/Pasted%20image%2020240510134535.png)
 
 1. **Objective**: The main goal of alpha-beta pruning is to eliminate branches of the search tree that cannot possibly influence the final decision. By doing so, it reduces the number of nodes that need to be evaluated, thereby improving the efficiency of the minimax algorithm.
 
