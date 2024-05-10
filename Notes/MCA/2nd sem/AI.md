@@ -140,22 +140,20 @@ Artificial intelligence (AI) techniques refer to the methods, algorithms, and ap
 ## Searching 
 ### Intro
 - At every stage in state space generating algo that we need to apply to reach goal state . search is systematic examination to find goal state
-- 
-# Problem Solving in AI
-
-## Steps 
-### State Space Representation
-A set of all possible states for a given problem is known as state space of the problem
-
-### Search Space Control
-The searching process in AI can be broadly classified into two major types. Viz. Brute Force Search and Heuristics Search. Brute Force Search do not have any domain specific knowledge. All they need is initial state, the final state and a set of legal operators. 
-
-#### Depth First Search
+- Things needed for search
+	- Initial state description of problem
+	- set of legal operators that changes the state. In chess , it is the rule
+	- final or goal state
+### Types 
+#### Uninformed (Brute force)
+- these explore all alternative during the search process . they do not domain specific knowledge. All they need initial state , legal operators and goal state
+- DFS and BFS
+##### DFS
 Depth-First Search is one the important technique of Brute Force Search  
 In Depth-First Search, search begins by expanding the initial node, i.e., by using an operator, generate all successors of the 
 initial node and test them
 
-##### Steps 
+**Steps** 
 1. Put the initial node on the list of START.
 2. If (START is empty) or (START = GOAL) terminate search.
 3. Remove the first node from the list of START. Call this node d.
@@ -165,10 +163,33 @@ initial node and test them
 
 ![](../../statics/Pasted%20image%2020240309152904.png)
 
-#### Breath First Search
+Time Complexity :- amt of time needed is proportional to the depth that and branching factor that for DFS seach the total amt of time needed O(b<sup>d</sup>)
+Space Complexity:- DFS only store the path it is currently pursing hence space complexity is linear function of depth O(d)
+**Features**
+1. **Exploration of Entire Branches:** DFS traverses one branch of a graph as deeply as possible before backtracking, making it suitable for problems requiring exhaustive exploration of paths.
+2. **Backtracking:** DFS efficiently explores alternative paths by backtracking when it reaches a dead-end, ensuring thorough exploration of the graph without duplicating efforts.
+3. **Memory Efficiency:** DFS typically requires less memory compared to other traversal algorithms like Breadth-First Search (BFS), making it suitable for memory-constrained environments or large graphs.
+4. **Recursion:** DFS can be implemented using recursion, simplifying its implementation and resulting in concise and elegant code for exploring graph structures.
+5. **Applications:** DFS has diverse applications in various domains, including pathfinding, network analysis, topological sorting, identifying strongly connected components, and more, showcasing its versatility and usefulness in solving graph-related problems.
+**Pros and Cons**
+
+**Advantages:**
+1. **Simplicity:** DFS is relatively easy to understand and implement. It follows a simple approach of exploring deeper into the graph before backtracking.
+2. **Memory Efficiency:** DFS typically uses less memory compared to Breadth-First Search (BFS), as it only needs to store information about the current path from the starting node to the current node.
+3. **Space Efficiency:** In many cases, DFS can be more space-efficient than BFS. This is particularly true when the graph has a large number of nodes but only a few paths between them.
+4. **Applications:** DFS has various applications in graph theory and computer science, including topological sorting, finding strongly connected components, solving puzzles, and more.
+5. **Speed:** In certain situations, DFS can be faster than BFS, especially when the search space is large and solutions are located deep in the graph. DFS tends to go deep quickly before exploring alternatives, which can lead to faster solutions in some scenarios.
+
+**Disadvantages:**
+1. **Completeness:** DFS does not guarantee finding the shortest path between two nodes. It may find a solution, but it might not be the optimal one. This can be a disadvantage if finding the shortest path is critical.
+2. **Non-Optimality:** Due to its nature, DFS might traverse deep into one branch of the graph before considering other branches. This can lead to non-optimal solutions in some cases, especially if the goal is to find the shortest path or the solution closest to the root.
+3. **Stack Overflow:** DFS is implemented using recursion or an explicit stack. In cases of deep or infinite graphs, DFS may lead to stack overflow errors, especially in recursive implementations, as it goes deeper and deeper into the graph without finding a solution or backtracking.
+4. **Disconnected Graphs:** In the case of disconnected graphs, DFS may not visit all nodes unless modified to do so. It can get stuck exploring one connected component and may not explore others unless explicitly instructed.
+5. **Time Complexity:** Although DFS can be fast in certain scenarios, its time complexity can be high in dense graphs or graphs with cycles. In such cases, DFS may visit many nodes repeatedly, leading to longer execution times.
+##### BFS
 Breadth first search is also like depth first search. Here searching progresses level by level. Unlike depth first search, which goes deep into the tree. An operator employed to generate all possible children of a node
 
-##### Steps
+**Steps**
 1. Put the initial node on the list of START.
 2. If (START is empty) or (START = GOAL) terminate search.
 3. Remove the first node from the list of START. Call this node d.
@@ -178,21 +199,26 @@ Breadth first search is also like depth first search. Here searching progresses 
 
 ![](../../statics/Pasted%20image%2020240309153024.png)
 
+time complexity: - Same as DFS
+Space complexity:- same as time complexity of BFS (It has to remember every node it is generated)
+
 **Issues**
 1. Amount of time needed to generate all the nodes is considerable because of the time complexity.
 2. Memory constraint is also a major hurdle because of space complexity.
 3. The Searching process remembers all unwanted nodes, which is of no practical use for the search
 
-## Heuristic Search technique
-The basic idea of heuristic search is that, rather than trying all possible search paths, you try and focus on paths that seem to be getting you nearer your goal state
-
+#### Informed Search(Heuristics)
+- The basic idea of heuristic search is that, rather than trying all possible search paths, you try and focus on paths that seem to be getting you nearer your goal state
+- Used when
+	- Problems for which no exact algorithms are known and one need to find approximate and appropritate solution . For eg. Computer vision
+	- Problem for which exact solution are known but computationally not feasible For eg. rubiks cube
 **Heuristic Function**
-A heuristic function, also known as a heuristic evaluation function or simply a heuristic, is a function that provides an estimate of how close a given state is to the goal state.
-Heuristic functions are designed to exploit domain-specific knowledge or rules of thumb to prioritize exploration of states that are likely to lead to a solution.
+- A heuristic function, also known as a heuristic evaluation function or simply a heuristic, is a function that provides an estimate of how close a given state is to the goal state. 
+- Heuristic functions are designed to exploit domain-specific knowledge or rules of thumb to prioritize exploration of states that are likely to lead to a solution.
+**Hill Climbing**
 
-### Types 
-#### Hill Climbing
 Hill climbing uses a simple heuristic function viz., the amount of distance the node is from the goal. This algorithm is also called Discrete Optimization Algorithm. 
+
 **Steps**
 1. Put the initial node on the list of START.
 2. If (START is empty) or (STRAT = GOAL) terminate search.
@@ -205,16 +231,17 @@ Hill climbing uses a simple heuristic function viz., the amount of distance the 
 - Local Maximum: A state that is better than all its neighbours but no so when compared to the states that are farther away.
 - Plateau: A flat area of search space, in which all the neighbours have the same value.
 - Ridge: Described as a long and narrow stretch of elevated ground or narrow elevation or raised part running along or across a surface by the Oxford English Dictionary
+![](../../statics/Pasted%20image%2020240510101953.png)
 **Sol**
 - Backtracking for local maximum: Backtracking helps in undoing what has been done so far and permits to try a totally different path to attain the global peak.
-- A big jump is the solution to escape from the plateau.
+- A big jump is the solution to escape from the plateau. it is recommended because in plateau all neghbiour plateau points have same value
 - Trying different paths at the same time is the solution for circumventing ridges
 
 #### Best First Search 
 Best first search is a little like hill climbing, in that it uses an evaluation function and always chooses the next node to be that with the best score. The heuristic function used here (evaluation function) is an indicator of how far the node is from the goal node. Goal nodes have an evaluation function value of zero.
 **Steps**
 1. Put the initial node on the list of START.
-2. If (START is empty) or (STRAT = GOAL) terminate search.
+2. If (START is empty) or (START = GOAL) terminate search.
 3. Remove the first node from the list of START. Call this node d.
 4. If (d = GOAL) terminate search with success.
 5. Else if node d has successors, generate all of them. Find out how far they are from the goal node. Sort all the children generated so far by the remaining distance from the goal.
@@ -223,6 +250,7 @@ Best first search is a little like hill climbing, in that it uses an evaluation 
 8. Go to step 2.
 
 #### A\* 
+![](../../statics/Pasted%20image%2020240510105820.png)
 Each time A* enters a state, it calculates the cost f(n), (n being the neighboring node), to travel to all of the neighboring nodes, and then enters the node with the lowest value of f(n).
 f(n) = g(n) + h(n)
 g(n) being the value of the shortest path from the start node to node n, and h(n) being a heuristic approximation of the node’s value.
@@ -242,73 +270,13 @@ In the context of the A* algorithm, heuristic functions can possess two fundamen
    - Mathematically, if \(f\) is the total estimated cost to reach the goal through node \(n'\), then \(f(n) \leq f(n') + c\).
    - Consistent heuristic functions maintain a property known as the "triangle inequality," which ensures that the estimated cost of reaching the goal from any node is non-decreasing along the path.
    - Consistency guarantees that the A* algorithm will always find the optimal solution, even in the presence of cycles or redundant paths in the search space.
-## Problem reduction
-Problem reduction is a problem-solving strategy used in artificial intelligence (AI) and computer science to solve complex problems by breaking them down into smaller, more manageable subproblems. This approach involves transforming the original problem into simpler forms until a solution can be easily derived. Here are some key notes on problem reduction in AI:
+#### AO\*
+![](../../statics/Pasted%20image%2020240510110259.png)
+![](../../statics/Pasted%20image%2020240510110504.png)
+![](../../statics/Pasted%20image%2020240510110555.png)
 
-1. **Basic Idea**:
-   - Problem reduction involves decomposing a complex problem into a series of simpler subproblems, each of which is easier to solve.
-   - The solution to the original problem is obtained by solving the subproblems and combining their solutions in a systematic manner.
-
-2. **Steps**:
-   - **Identify Subproblems**: Break down the original problem into smaller, more manageable subproblems. Each subproblem should represent a distinct aspect or component of the original problem.
-   - **Solve Subproblems**: Solve each subproblem independently using appropriate problem-solving techniques or algorithms. This may involve applying specific algorithms, heuristics, or domain-specific knowledge.
-   - **Combine Solutions**: Combine the solutions to the subproblems to obtain a solution to the original problem. This step may involve integrating or synthesizing the individual solutions in a coherent manner.
-
-3. **Example**:
-   - Consider the problem of finding the shortest path from a start node to a goal node in a graph. Problem reduction can be applied by decomposing this problem into smaller subproblems, such as finding the shortest path from the start node to each intermediate node along the way. Once the shortest paths to the intermediate nodes are determined, the overall shortest path can be obtained by combining these solutions.
-
-4. **Benefits**:
-   - **Simplicity**: Problem reduction simplifies complex problems by breaking them down into smaller, more understandable components.
-   - **Modularity**: Each subproblem can be solved independently, allowing for modular design and implementation.
-   - **Efficiency**: Solving smaller subproblems can be computationally more efficient than tackling the entire problem at once, especially for large and complex problem domains.
-   - **Scalability**: Problem reduction facilitates scalability by enabling the solution of large-scale problems through incremental decomposition.
-
-5. **Applications**:
-   - Problem reduction is used in various AI applications, including planning and scheduling, theorem proving, optimization, and decision making.
-   - It is particularly useful in domains where problems can be decomposed into smaller, more tractable components, such as logistics, engineering, and operations research.
-
-6. **Challenges**:
-   - Identifying appropriate subproblems and determining how to combine their solutions effectively can be challenging, especially for highly interconnected or interdependent problem domains.
-   - The decomposition of the original problem may introduce additional complexity or overhead, requiring careful consideration of trade-offs.
-
-### Relationship among Sub Problems(AND-OR)
-![](../../statics/Pasted%20image%2020240309162728.png)
-
-In problem reduction, particularly in the context of AI planning and reasoning, And-Or graphs are often used to represent the relationships among subproblems. An And-Or graph is a directed graph where nodes represent subproblems, and edges represent the relationships among these subproblems. There are two types of edges: And edges and Or edges.
-
-1. **And Edges**:
-   - An And edge represents a dependency or conjunction between subproblems.
-   - If a node (A) is connected to multiple nodes (B1,B2,B3...) by And edges, it means that all of these subproblems must be solved in order to solve ( A ).
-   - In other words, the solutions to all connected subproblems must be combined or satisfied to progress to the next level.
-
-2. **Or Edges**:
-   - An Or edge represents a choice or disjunction between subproblems.
-   - If a node ( A ) is connected to multiple nodes ( B1, B2, ..., Bn ) by Or edges, it means that any one of these subproblems can be solved to progress to the next level.
-   - In other words, the solutions to any one of the connected subproblems are sufficient to satisfy the requirements of \( A \).
-
-3. **Combining Subproblems**:
-   - In an And-Or graph, the combination of subproblems occurs at And nodes.
-   - At an And node, the solutions to all connected subproblems are combined in some way to satisfy the requirements of the parent node.
-   - The combination may involve aggregation, merging, synchronization, or other operations depending on the problem domain.
-
-4. **Efficiency**:
-   - And-Or graphs provide a structured representation of the relationships among subproblems, which can facilitate efficient problem-solving algorithms.
-   - By carefully analyzing the graph structure, it is possible to develop algorithms that exploit the dependencies and choices among subproblems to minimize the search space and computation time.
-
-5. **Applications**:
-   - And-Or graphs are commonly used in AI planning, theorem proving, decision making, and other areas where problems can be decomposed into a hierarchy of subproblems with complex dependencies and choices.
-
-In summary, And-Or graphs provide a useful framework for representing and reasoning about the relationships among subproblems in problem reduction. They allow for the explicit representation of dependencies and choices, enabling more efficient and systematic problem-solving algorithms.
-
-**Steps for AO\***
-1. Place the start node on open.
-2. Using the search tree, compute the most promising solution tree TP.
-3. Select node n that is both on open and a part of tp, remove n from open and place it no closed.
-4. If n is a goal node, label n as solved. If the start node is solved, exit with success where tp is the solution tree, remove all nodes from open with a solved ancestor.
-5. If n is not solvable node, label n as unsolvable. If the start node is labeled as unsolvable, exit with failure. Remove all nodes from open, with unsolvable ancestors.
-6. Otherwise, expand node n generating all of its successor compute the cost of for each newly generated node and place all such nodes on open.
-7. Go back to step (2)
-
+#### Generate and test
+![](../../statics/Pasted%20image%2020240510111621.png)
 ## Minimax
 Minimax is a decision-making algorithm commonly used in game theory, specifically in two-player zero-sum games, such as chess, checkers, or tic-tac-toe. Here are some notes on the minimax algorithm:
 Time complexity :- O(b<sup>d</sup>) , here b is number of child and d is depth
