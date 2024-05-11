@@ -545,7 +545,28 @@ int main() {
 - Insertion :- Just add new node in Linear representation or in case of Sequential representation add row and column 
 - Deletion :- Do the opposite
 ![](../../statics/Pasted%20image%2020240502183739.png)
+
+### Red black tree
+![](../../statics/Pasted%20image%2020240511085418.png)
+- It is a self balancing BST
+- Every node is either red or black , root is always black
+- Every leaf node which is nil is always black , if node is red then its children are black
+- Every path from a node to any of its descendent NIL node has same number of black nodes
+![](../../statics/Pasted%20image%2020240511084754.png)
+### Splay trees
+A splay tree is a self-adjusting binary search tree (BST) where recently accessed elements are quickly accessed again. When an element is accessed, it is moved to the root of the tree by a series of rotations called splaying. Here are some key features of splay trees:
+
+1. **Self-Adjusting**: Splay trees adapt their structure based on the access pattern of elements. Frequently accessed elements move closer to the root, improving the average access time.
+
+2. **Splaying Operation**: The splaying operation brings the accessed node to the root by performing a series of rotations (zig-zag and zig-zig rotations) and tree restructuring. This operation helps maintain balance and ensures that frequently accessed nodes are located closer to the root, improving future access times.
+
+3. **No Balancing Factor**: Unlike AVL trees or red-black trees, splay trees do not maintain a balancing factor at each node. Instead, they rely on the splaying operation to maintain balance based on the access pattern.
+
+4. **Amortized Analysis**: The time complexity of splay tree operations (such as insertion, deletion, and search) is analyzed in an amortized sense. Although individual operations might have a higher time complexity, the overall performance is efficient over a sequence of operations.
+
+5. **No Strict Guarantees**: Splay trees do not provide strict worst-case performance guarantees like AVL trees or red-black trees. However, they perform well in practice for many applications, especially when there is temporal locality in theaccess pattern.
 ### Shortest Path
+
 #### Dijkstra (Single source shortest path)
 #### Floyd Warshall (Multisource shortest path)
 
