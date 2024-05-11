@@ -188,136 +188,34 @@ Linked lists have numerous applications in computer science and software enginee
 ## Queue
 Queue is a linear list which has two ends, one for insertion of elements and other for deletion of elements. The first end is called 'Rear' and the latter is called 'Front'. Elements are inserted from rear end and deleted from front end. Queues are called First In First Out (FIFO)
 Below is the implementation of a queue data structure in C using an array along with its operations: enqueue, dequeue, and display.
+#### Enqueue
+1. START 
+2. Check if the queue is full. 
+3. If the queue is full, produce overflow error and exit. 
+4. If the queue is not full, increment rear pointer to point the next empty space. 
+5. Add data element to the queue location, where the rear is pointing. 
+6. return success. 
+7. END
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
+#### Dequeue
+1. START 
+2. Check if the queue is empty. 
+3. If the queue is empty, produce underflow error and exit. 
+4. If the queue is not empty, access the data where front is pointing. 
+5. Increment front pointer to point to the next available data element. 
+6. Return success. 
+7. END
 
-#define MAX_SIZE 100 // Maximum size of the queue
+#### Array implementation
+- Two pointers are created one is FRONT and other is REAR , if Dequeue Move front++ , in dequeue rear--
 
-// Define the structure of a queue
-struct Queue {
-    int items[MAX_SIZE];
-    int front;
-    int rear;
-};
-
-// Function to create an empty queue
-struct Queue* createQueue() {
-    struct Queue* queue = (struct Queue*)malloc(sizeof(struct Queue));
-    queue->front = -1; // Initialize front and rear pointers
-    queue->rear = -1;
-    return queue;
-}
-
-// Function to check if the queue is full
-int isFull(struct Queue* queue) {
-    return (queue->rear == MAX_SIZE - 1);
-}
-
-// Function to check if the queue is empty
-int isEmpty(struct Queue* queue) {
-    return (queue->front == -1 && queue->rear == -1);
-}
-
-// Function to add an element to the queue (enqueue)
-void enqueue(struct Queue* queue, int data) {
-    if (isFull(queue)) {
-        printf("Queue is full\n");
-        return;
-    }
-    if (isEmpty(queue)) {
-        queue->front = 0; // Initialize front pointer
-    }
-    queue->rear++;
-    queue->items[queue->rear] = data;
-}
-
-// Function to remove an element from the queue (dequeue)
-int dequeue(struct Queue* queue) {
-    int data;
-    if (isEmpty(queue)) {
-        printf("Queue is empty\n");
-        return -1;
-    }
-    data = queue->items[queue->front];
-    if (queue->front >= queue->rear) {
-        queue->front = -1;
-        queue->rear = -1;
-    } else {
-        queue->front++;
-    }
-    return data;
-}
-
-// Function to display the elements of the queue
-void display(struct Queue* queue) {
-    int i;
-    if (isEmpty(queue)) {
-        printf("Queue is empty\n");
-    } else {
-        printf("Queue: ");
-        for (i = queue->front; i <= queue->rear; i++) {
-            printf("%d ", queue->items[i]);
-        }
-        printf("\n");
-    }
-}
-
-// Main function to test the queue operations
-int main() {
-    struct Queue* queue = createQueue();
-
-    // Enqueue some elements
-    enqueue(queue, 1);
-    enqueue(queue, 2);
-    enqueue(queue, 3);
-
-    // Display the queue
-    display(queue);
-
-    // Dequeue an element
-    int dequeuedElement = dequeue(queue);
-    printf("Dequeued element: %d\n", dequeuedElement);
-
-    // Display the queue after dequeue operation
-    display(queue);
-
-    return 0;
-}
-```
-
-This code implements a queue data structure using an array. It includes functions to create a queue, check if it is full or empty, enqueue elements, dequeue elements, and display the elements of the queue. You can test the queue operations by compiling and running the code.
+#### Linked list 
+- Insertion at tail and deletion at head
+![](../../statics/Pasted%20image%2020240511181742.png)
 
 ### Circular Queue
 Below is the implementation of a circular queue data structure in C along with its operations: enqueue, dequeue, and display.
 
-```c
-insert_CQ(int x)
-{
-   if ((REAR+1)%MAX == FRONT)
-    {
-		printf("Q_FULL");
-		return;
-	}
-	(REAR++)%MAX;
-	CQUEUE[REAR]=x; // CQueue[ ] is an Array Represents
-}
-```
-```c
-int delete_cq()
-{
-	int x;
-	if (REAR == FRONT)
-	{
-		printf("Q_Empty");
-		return;
-	}
-	x = cqueue[FRONT];
-	FRONT = (FRONT+1)%MAX;
-	return (x);
-}
-```
 
 ### Deque
 A deque "Double Ended Queue" is a linear list in which elements can be added or removed at either end but not in the middle. There are two variations of a deque namely:
@@ -345,172 +243,19 @@ Stack is an ordered list in which there is only one end, for both insertions and
 Using Array
 Certainly! Below is a simple implementation of a stack using an array in C:
 
-```c
-#include <stdio.h>
-#include <stdlib.h>
+### Push operation
+1. Checks if the stack is full.
+2. If the stack is full, produces an error and exit.
+3. If the stack is not full, increments top to point next empty space.
+4. Adds data element to the stack location, where top is pointing.
+5. Returns success.
 
-#define MAX_SIZE 100
-
-// Structure to represent a stack
-typedef struct {
-    int items[MAX_SIZE];
-    int top;
-} Stack;
-
-// Function to initialize the stack
-void initializeStack(Stack *stack) {
-    stack->top = -1;
-}
-
-// Function to check if the stack is empty
-int isEmpty(Stack *stack) {
-    return (stack->top == -1);
-}
-
-// Function to check if the stack is full
-int isFull(Stack *stack) {
-    return (stack->top == MAX_SIZE - 1);
-}
-
-// Function to push an element onto the stack
-void push(Stack *stack, int value) {
-    if (isFull(stack)) {
-        printf("Stack Overflow\n");
-        return;
-    }
-    stack->items[++stack->top] = value;
-}
-
-// Function to pop an element from the stack
-int pop(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack Underflow\n");
-        return -1;
-    }
-    return stack->items[stack->top--];
-}
-
-// Function to peek at the top element of the stack
-int peek(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty\n");
-        return -1;
-    }
-    return stack->items[stack->top];
-}
-
-int main() {
-    Stack stack;
-    initializeStack(&stack);
-
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
-
-    printf("Top element is %d\n", peek(&stack));
-
-    printf("Popped element : %d\n", pop(&stack));
-    printf("Popped element : %d\n", pop(&stack));
-
-    printf("Top element is %d\n", peek(&stack));
-
-    push(&stack, 40);
-
-    printf("Top element is %d\n", peek(&stack));
-
-    return 0;
-}
-```
-
-Using Linked List 
-```c
-#include <stdio.h>
-#include <stdlib.h>
-
-// Define the structure of a node in the stack
-typedef struct Node {
-    int data;
-    struct Node* next;
-} Node;
-
-// Function to create a new node
-Node* createNode(int data) {
-    Node* newNode = (Node*)malloc(sizeof(Node));
-    if (newNode == NULL) {
-        printf("Memory allocation failed.\n");
-        exit(1);
-    }
-    newNode->data = data;
-    newNode->next = NULL;
-    return newNode;
-}
-
-// Structure to represent a stack
-typedef struct {
-    Node* top;
-} Stack;
-
-// Function to initialize the stack
-void initializeStack(Stack *stack) {
-    stack->top = NULL;
-}
-
-// Function to check if the stack is empty
-int isEmpty(Stack *stack) {
-    return (stack->top == NULL);
-}
-
-// Function to push an element onto the stack
-void push(Stack *stack, int value) {
-    Node* newNode = createNode(value);
-    newNode->next = stack->top;
-    stack->top = newNode;
-}
-
-// Function to pop an element from the stack
-int pop(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack Underflow\n");
-        return -1; // return a sentinel value or handle error appropriately
-    }
-    Node* temp = stack->top;
-    int poppedValue = temp->data;
-    stack->top = temp->next;
-    free(temp);
-    return poppedValue;
-}
-
-// Function to peek at the top element of the stack
-int peek(Stack *stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty\n");
-        return -1; // return a sentinel value or handle error appropriately
-    }
-    return stack->top->data;
-}
-
-int main() {
-    Stack stack;
-    initializeStack(&stack);
-
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
-
-    printf("Top element is %d\n", peek(&stack));
-
-    printf("Popped element : %d\n", pop(&stack));
-    printf("Popped element : %d\n", pop(&stack));
-
-    printf("Top element is %d\n", peek(&stack));
-
-    push(&stack, 40);
-
-    printf("Top element is %d\n", peek(&stack));
-
-    return 0;
-}
-```
+### Pop operation 
+1. Checks if the stack is empty.
+2. If the stack is empty, produces an error and exit.
+3. If the stack is not empty, accesses the data element at which top is pointing.
+4. Decreases the value of top by 1.
+5. Returns success.
 
 ## Tree
 - A tree data structure is a hierarchical data structure that consists of nodes connected by edges. It is called a "tree" because it resembles a tree in nature, with a single root node representing the trunk and additional nodes branching off from it like branches. it is non cyclic 
@@ -736,8 +481,6 @@ Now, let's analyze the distribution of digits within these hash values:
   - Digit 7: 2 occurrences
   - Digit 4: 1 occurrence
 
-In this simple example, we observe the distribution of digits within the hash values. We can see that certain digits appear more frequently than others, indicating potential patterns or biases in the hash function. This analysis helps us understand the characteristics of the hash function and may provide insights into its performance, collision resistance, and security properties.
-
 ### Some Hash terms 
 #### Identity factor
 The ratio n/T is called the identifier density, where n = number of identifiers T = total number of possible identifiers. The number of identifiers, n, in use is usually several orders of magnitude less than the total number of possible identifiers, T. The number of buckets b, in the hash table are also much less than T.
@@ -755,7 +498,7 @@ A collision is said to occur, when two non-identical identifiers are hashed into
 when a record is inserted, the bucket to which it is mapped has space to store the record, if the bucket does not have enough space, a bucket overflow is said to have occurred.
 
 #### Handling this
-- Overflow chaining:- If a record has be inserted into a bucket b, and b is alre ady full, an overflow bucket is provided for b, and the record is inserted into the overflow bucket. If the overflow bucket is also full, another overflow bucket is provi ded and so on. All the overflow buckets of a given bucket are chained together in a linked list. Overflow handling using such a linked list is called Overflow Chaining.
+- Overflow chaining:- If a record has be inserted into a bucket b, and b is already full, an overflow bucket is provided for b, and the record is inserted into the overflow bucket. If the overflow bucket is also full, another overflow bucket is provi ded and so on. All the overflow buckets of a given bucket are chained together in a linked list. Overflow handling using such a linked list is called Overflow Chaining.
 - ![](../../statics/Pasted%20image%2020240509094436.png)
 - Deletion
 - Open hashing
