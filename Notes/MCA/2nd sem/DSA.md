@@ -31,7 +31,7 @@ Data Abstraction when supported as a data type in a language is called Abstract 
 
 ## Static and Dynamic Memory Allocation
 In static memory allocation memory is allocated at compile time.
-allocating memory at run time (instead of compile time), this is called Dynamic Memory Allocation. It is done by using standard library functions malloc () and calloc ().
+allocating memory at run time (instead of compile time), this is called Dynamic Memory Allocation. It is done by using standard library functions malloc () and calloc().
 
 ## Static and Dynamic Variable
 Static variables are declared and named while writing the program. (Space for them exists as long as the program, in which they are declared, is running.) Static variables cannot be created or destroyed during execution of the program in which
@@ -113,7 +113,7 @@ link is a pointer of struct node type i.e. it can hold the address of variable o
 #### Insertion at beginning
 **ALGO**
 - addBeg(list,item)
-- Create a new node
+- Create a new node and Set NEXT = NULL
 - assign the item to new node
 - Set link of new node to node where head is pointing
 - update head to new node
@@ -174,7 +174,7 @@ addbeg() {
 ## Merging Sorted linked list
 **ALGO**
 1. If one of the lists is empty return the other.
-2. Initialize a node **output = NULL** , which will the head of the merged list. Compare the first element of both list and create a dummy node **temp** which stores the smaller value and make **output** referencing to it.
+	1. Initialize a node **output = NULL** , which will the head of the merged list. Compare the first element of both list and create a dummy node **temp** which stores the smaller value and make **output** referencing to it.
 	- If **A.val < B.val** , create a dummy node **temp** and set output = temp and A = A.next.
 	- Else, create a dummy node **temp** and set output = temp and B= B.next.
 3. Initialize a pointer **curr** = **output** and Iterate till any of the lists reaches its end. Compare the current node’s value of both the list
@@ -183,7 +183,6 @@ addbeg() {
 	- Move the **curr** pointer, **curr = curr.next** .
 4. If list A reaches its end in the above loop then append the remaining node of B into the output list (or vice versa).
 5. Return **output** .
-
 ## Reversing linked list
 **ALGO**
 - Initialize three pointers **prev** as NULL, **curr** as **head**, and **next** as NULL.
