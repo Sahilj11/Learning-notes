@@ -259,7 +259,27 @@ Certainly! Below is a simple implementation of a stack using an array in C:
 
 ## Tree
 - A tree data structure is a hierarchical data structure that consists of nodes connected by edges. It is called a "tree" because it resembles a tree in nature, with a single root node representing the trunk and additional nodes branching off from it like branches. it is non cyclic 
+### M-Way Search tree
+M-way search trees, also known as M-ary trees, are a type of tree data structure where each node can have up to \( M \) children. Here are some key points to note about M-way search trees:
 
+1. **Definition**: An M-way search tree is a balanced tree where each internal node contains \( M-1 \) keys and \( M \) children. The keys in each node are stored in sorted order, and the keys in the left child are less than the keys in the node, and the keys in the right child are greater than the keys in the node.
+
+2. **Balanced Structure**: M-way search trees are typically balanced to ensure efficient search, insertion, and deletion operations. Balancing ensures that the height of the tree remains relatively small, optimizing the time complexity of operations.
+
+3. **Search Operation**: Searching in an M-way search tree is similar to searching in a binary search tree but extended to handle multiple children. At each node, a comparison is made to determine which child to traverse next based on the search key. This process continues until the key is found or a leaf node (null pointer) is reached.
+
+4. **Applications**: M-way search trees are commonly used in databases, file systems, and indexing structures where fast search, insertion, and deletion operations are required, and the dataset is dynamic.
+### B-Trees
+- These are M-Way search tree with some rules
+- Every node must have atleast ceil m/2 children before creating new node
+- Root can have minimum 2 children
+- All leaf at same level 
+- Creation pointer is bottom up
+- B-trees are efficient for large datasets and disk-based storage systems because they minimize disk I/O operations due to their balance and node size.
+    - They provide logarithmic time complexity for search, insert, delete operations, making them suitable for databases and file systems.
+- **Applications**:
+    - B-trees are commonly used in databases and file systems, where large amounts of data need to be stored efficiently.
+    - They are also utilized in databases for indexing, providing fast retrieval of records based on indexed keys.
 # UNIT 3 
 ## Heapsort (Referred Mam ppt)
 
