@@ -57,6 +57,32 @@ The simplest data structure that makes use of computed addresses to locate its e
 - 2D
 - 3D
 - Multi D
+### Traversal in Array
+- **Step 1: Start**
+- **Step 2: \[Initialize  variable.\] Set `i = LB`**
+- **Step 3: Repeat  steps 4 and 5 While i <= `UB`**
+- **Step 4: Apply process (Print )  to data`[i]`.**
+- **Step 5: Increment i=i+1**
+- **Step 6: End of loop**
+- **Step 7: Stop**
+### Insertion in Array
+- **Step 1: Start**
+- **Step 2: \[Initialize variable \] `Set i = size - 1`**
+- **Step 3: Repeat Step 4 and 5  While `i >= pos-1`**
+- **Step 4: \[Move `ith` element forward. \] set `arr[i+1] = arr[i]`**
+- **Step 5: \[Decrease counter. \] Set `i = i - 1`**
+- **Step 6: \[End of step 3 loop. \]**
+- **Step 7: \[Insert element. \] Set `arr[pos-1] = item`**
+- **Step 8: Stop**
+### Deletion in Array
+- **Step 1: Start**
+- **Step 2: \[Initialize  variable\] `Set i = pos - 1`**
+- **Step 3: Repeat Step 4 and 5 for `i = pos - 1`  to `i < size`**
+- **Step 4: \[Move `ith` element left side \] set `a[i] = a[i+1]`**
+- **Step 5: \[Incerement \] Set `i = i + 1`**
+- **Step 6: \[End of step 03 loop. \]**
+- **Step 7: \[Update Array Size\] set `size = size - 1`**
+- **Step 8: Stop**
 ### 1D
 A one-dimensional array is a list of finite number n of homogeneous data elements (i.e. data elements of the same type) such that:
 1. The elements of the array are referenced respectively by an index set consisting of n consecutive numbers.
