@@ -659,12 +659,48 @@ class Circle:
 ```
 
 ### Destroying Objects:
-Python automatically handles memory management and object destruction using garbage collection. Objects are automatically
+In Python, objects are managed by a mechanism called "garbage collection". Python automatically reclaims memory occupied by objects that are no longer in use, meaning there are no references to them. This process is transparent to the programmer, and you typically don't need to explicitly "destroy" objects.
 
+However, there are a few ways you can influence the garbage collection process:
 
-```python
-del car1  # Delete car1 object
-```
+1. **Deletion using `del`**: You can use the `del` statement to remove a reference to an object. When there are no more references to an object, it becomes eligible for garbage collection.
+
+    ```python
+    x = 5
+    del x  # Removes the reference to the object 5
+    ```
+
+2. **Closing resources**: If an object holds external resources (like open files, database connections, etc.), you should explicitly close or release those resources when they are no longer needed. This is often done using context managers or explicit `close()` methods.
+
+    ```python
+    # Example with file
+    with open('example.txt', 'r') as file:
+        data = file.read()
+    # File is automatically closed when exiting the `with` block
+
+    # Example with database connection
+    connection = open_database_connection()
+    # Use connection...
+    connection.close()
+    ```
+
+3. **Weak references**: Sometimes you might want to hold a reference to an object without preventing it from being garbage collected. Weak references can be used for this purpose.
+
+    ```python
+    import weakref
+
+    obj = SomeObject()
+    weak_ref = weakref.ref(obj)
+    ```
+
+4. **`gc` module**: Python has a built-in `gc` module that provides functions to control and debug the garbage collection process. However, it's rarely needed in typical Python programming.
+
+    ```python
+    import gc
+
+    # Force garbage collection
+    gc.collect()
+    ```
 
 ### Polymorphism:
 Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables code reuse and flexibility.
