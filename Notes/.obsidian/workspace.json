@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/DSA.md",
+                "file": "MCA/2nd sem/Python.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/DSA.md"
+                "file": "MCA/2nd sem/Python.md"
               }
             }
           },
@@ -161,6 +160,7 @@
   },
   "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
+    "MCA/2nd sem/DSA.md",
     "statics/Pasted image 20240511181742.png",
     "statics/Pasted image 20240511122442.png",
     "statics/Pasted image 20240511085418.png",
@@ -172,8 +172,6 @@
     "statics/Pasted image 20240510133812.png",
     "statics/Pasted image 20240510111621.png",
     "statics/Pasted image 20240510110555.png",
-    "statics/Pasted image 20240510110504.png",
-    "MCA/2nd sem/DSA.md",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/Python.md",
     "java Backend/Spring Security.md",
