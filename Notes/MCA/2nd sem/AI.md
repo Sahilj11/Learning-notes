@@ -515,6 +515,9 @@ In summary, while propositional logic deals with simple true/false statements an
 ![](../../statics/Pasted%20image%2020240310084341.png)
 Resolution aims to prove the validity or satisfiability of a logical statement (conclusion) by finding a contradiction when the negation of that statement is combined with other known statements (premises). If a contradiction is derived, it implies that the original statement must be true.
 
+
+![](../../statics/Pasted%20image%2020240515192409.png)
+
 ### Propositional Logic Resolution
 1. Convert all the propositions of F to clause form.
 2. Negate P and convert the result to clause form. Add it to the set of clauses obtained in step 1.
@@ -523,26 +526,13 @@ Resolution aims to prove the validity or satisfiability of a logical statement (
    b. Resolve them together. The resulting clause, called the resolvent, will be the disjunction of all of the literals of both of the parent clauses with the following exception: If there are any pairs of literals L and ¬ L such that one of the parent clauses contains L and the other contains ¬L, then select one such pair and eliminate both L and ¬ L from the resolvent.
    c. If the resolvent is the empty clause, then a contradiction has been found. If it is not, then adding it to the set of classes available to the procedure
 ### Unification
-Unification is a fundamental concept in artificial intelligence (AI) and logic-based reasoning systems that involves finding substitutions for variables in logical expressions to make them syntactically equivalent. It is commonly used in various AI tasks, including automated theorem proving, natural language processing, and symbolic computation. Here's a note on unification and the unification algorithm in AI:
+Unification is a fundamental concept in artificial intelligence (AI) and logic-based reasoning systems that involves finding substitutions for variables in logical expressions to make them syntactically equivalent. It is commonly used in various AI tasks, including automated theorem proving, natural language processing, and symbolic computation. 
+![](../../statics/Pasted%20image%2020240515191203.png)
+![](../../statics/Pasted%20image%2020240515191219.png)
 
-1. **Definition**: Unification is the process of finding a substitution that makes two terms or expressions syntactically identical. In other words, it seeks to find values for variables in the terms such that they become equal. For example, unifying the terms f(x, y) and f(a, b) would yield the substitution {x/a, y/b}.
-
-2. **Unification Algorithm**:
-   - **Occurs Check**: Before unifying two terms, the unification algorithm checks for occurrences of variables within each term to avoid infinite loops caused by circular dependencies. This is known as the occurs check.
-   - **Most General Unifier (MGU)**: The goal of the unification algorithm is to find the most general unifier (MGU), which is the most general substitution that makes the terms syntactically equivalent. The MGU is unique if it exists.
-   - **Recursive Process**: The unification algorithm proceeds recursively, considering different cases based on the structure of the terms being unified. It handles unification of atomic terms, compound terms, and variables separately, applying substitutions as necessary to make them match.
-   - **Backtracking**: If the unification algorithm encounters conflicts or contradictions during the unification process, it may need to backtrack and explore alternative paths. Backtracking ensures completeness in finding the MGU.
-   - **Optimizations**: Various optimizations can be applied to improve the efficiency of the unification algorithm, such as occurs check optimizations, constraint propagation techniques, and memoization.
-
-3. **Applications in AI**:
-   - **Automated Theorem Proving**: Unification is used in theorem proving systems to unify hypotheses and resolve conflicts during the proof search process.
-   - **Natural Language Processing**: In natural language processing, unification is employed in parsing and semantic analysis to match syntactic structures and resolve semantic ambiguities.
-   - **Symbolic Computation**: Unification is utilized in symbolic computation systems to manipulate algebraic expressions, equations, and constraints.
-
-4. **Limitations and Challenges**:
-   - **Efficiency**: The efficiency of the unification algorithm can degrade for complex terms or expressions with a large number of variables and constraints.
-   - **Undecidability**: Unification is undecidable in the presence of certain constructs, such as higher-order functions or recursive types. In such cases, approximate or heuristic methods may be employed.
-
+![](../../statics/Pasted%20image%2020240515191354.png)
+![](../../statics/Pasted%20image%2020240515191607.png)
+![](../../statics/Pasted%20image%2020240515191713.png)
 ### Predicate Resolution
 1. Convert all the statements of F to clause form.
 2. Negate P and convert the result to clause form. Add it to the set of clauses obtained in 1.
