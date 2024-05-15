@@ -423,7 +423,47 @@ Depth First Search (DFS) and Breadth First Search (BFS) are two fundamental sear
 6. **Time Complexity**:
    - **DFS**: Generally has a lower time complexity compared to BFS, especially in cases where the solution is located deep within the search space.
    - **BFS**: Generally has a higher time complexity compared to DFS, especially in cases where the solution is located near the beginning of the search space.
-# Knowledge Representation
+
+# UNIT 2
+
+## Logic 
+### Intro
+- Logic can be defined as scientific study of process of reasoning and system of rules and procedures that help in reasoning process
+- it can be classifed into two categories :- predicate logic and propositional logic 
+### Propositional logic
+- it is simplest form , all statement are called proposition. A proposition in propositional logic takes only two values
+- either TRUE or FALSE
+- two kinds of proposition atomic and molecular (these are formed by combining two or more atomic proposition using connectives)
+![](../../statics/Pasted%20image%2020240515181645.png)
+![](../../statics/Pasted%20image%2020240515182352.png)
+![](../../statics/Pasted%20image%2020240515182535.png)
+### Predicate logic (First order logic)
+- Predicate logic, also known as first-order logic or predicate calculus, is a formal system for representing and reasoning about relationships, properties, and quantified statements in artificial intelligence (AI) and logic-based systems. 
+- It uses three additional notions. Predicate , terms , quantifiers
+#### Predicate
+- It is defined as relation that binds two atoms together e.g baskar likes aeroplanes is represented as LIKES(Baskar,aeroplanes)
+- Also possible to have function as argument eg. Ravi father is rani father -> FATHER(father(ravi),rani)
+#### Terms
+- Terms are those arguments in predicate 
+- ![](../../statics/Pasted%20image%2020240515184419.png)
+
+#### Quantifiers 
+- It is a symbol that permits one to declare or identify the range or scope of the variable in a logical expression
+- Universal quantifier and Existential quantifier
+- ![](../../statics/Pasted%20image%2020240515185320.png)
+#### Free and bound variables 
+- variable in a formula is free if and only if the occurence is outside the scope of the quantifier having the variable 
+- ![](../../statics/Pasted%20image%2020240515185616.png)
+- above z is free in first portion
+- variable in a formula is bound if and only if the occurence is within the scope of the quantifier having the variable
+- above z is bound in second portion
+
+### Unification
+
+### Resolution
+![](../../statics/Pasted%20image%2020240515190140.png)
+
+## Knowledge Representation
 ![](../../statics/Pasted%20image%2020240310090216.png)
 Knowledge representation in AI refers to the process of structuring and organizing knowledge in a form that can be effectively utilized by intelligent systems, such as expert systems, reasoning engines, and cognitive agents. It involves encoding knowledge about the world, problem-solving methods, and domain-specific expertise in a format that can be manipulated and reasoned about by computational systems.
 
@@ -470,59 +510,7 @@ Certainly! Let's explain each of these knowledge representation techniques:
 | Application         | Commonly used for basic logical reasoning, circuit design, and theorem proving.                     | Widely used in AI, knowledge representation, database querying, and formal logic reasoning systems.                      |
 
 In summary, while propositional logic deals with simple true/false statements and logical connectives, predicate logic extends this by introducing variables, quantifiers, and predicates, allowing for more expressive representations and reasoning about relationships between objects in a domain.
-### Propositional Logic
-![](../../statics/Pasted%20image%2020240310081759.png)
-Propositional logic, also known as sentential logic or propositional calculus, is a fundamental component of artificial intelligence (AI) and logic-based reasoning systems. Here are some key points about propositional logic in AI:
 
-1. **Basic Elements**: Propositional logic deals with propositions, which are statements that can be either true or false. These propositions are represented using variables (p, q, r, etc.), logical connectives, and parentheses to form complex logical expressions.
-
-2. **Logical Connectives**:
-   - **AND (∧)**: Represents conjunction or logical "and". The compound proposition is true only if both operands are true.
-   - **OR (∨)**: Represents disjunction or logical "or". The compound proposition is true if at least one of the operands is true.
-   - **NOT (¬)**: Represents negation or logical "not". Negates the truth value of the operand.
-   - **IMPLICATION (→)**: Represents material implication. The compound proposition is false only if the antecedent is true and the consequent is false.
-   - **BICONDITIONAL (↔)**: Represents logical equivalence. The compound proposition is true if both operands have the same truth value.
-
-3. **Syntax and Semantics**: Propositional logic has well-defined syntax and semantics. The syntax specifies how to form valid logical expressions, while the semantics define the meaning of these expressions in terms of truth values.
-
-4. **Truth Tables**: Truth tables are used to enumerate all possible truth value assignments to the variables in a propositional expression and determine the truth value of the entire expression under each assignment. This technique allows for systematic evaluation of logical expressions.
-
-5. **Inference Rules**: Propositional logic provides a set of inference rules for deriving new propositions from existing ones. Common inference rules include modus ponens, modus tollens, conjunction elimination, and disjunction introduction.
-
-6. **Applications**:
-   - Propositional logic forms the basis for knowledge representation in AI, where logical statements are used to encode facts, rules, and constraints about a domain.
-   - It is widely used in automated reasoning systems, theorem proving, and formal verification to make logical deductions and prove theorems.
-   - Propositional logic also serves as the foundation for more complex logical formalisms, such as first-order logic and modal logic, which extend its expressive power.
-
-7. **Limitations**: Propositional logic has limitations in expressing quantification and dealing with complex relationships involving objects and properties. It lacks the ability to reason about variables, functions, and quantifiers, which are addressed in higher-order logics.
-
-In summary, propositional logic is a fundamental tool in AI for representing knowledge, making logical deductions, and performing automated reasoning. Its simplicity and rigor make it well-suited for formalizing logical reasoning tasks and building intelligent systems that operate based on logical principles.
-
-### Predicate Logic 
-Predicate logic, also known as first-order logic or predicate calculus, is a formal system for representing and reasoning about relationships, properties, and quantified statements in artificial intelligence (AI) and logic-based systems. Here are some key points about predicate logic in AI:
-
-1. **Predicates**: Predicate logic extends propositional logic by introducing predicates, which are functions that represent properties or relationships between objects in the domain. Predicates can take one or more arguments and can be true or false depending on the values of their arguments.
-
-2. **Quantifiers**: Predicate logic introduces quantifiers to express statements about the entire domain of discourse. There are two main quantifiers:
-   - **Universal Quantifier (∀)**: Denotes "for all" or "for every". It asserts that a statement holds true for all objects in the domain.
-   - **Existential Quantifier (∃)**: Denotes "there exists" or "there is at least one". It asserts that a statement holds true for at least one object in the domain.
-
-3. **Variables**: Predicate logic uses variables to represent objects or individuals in the domain. Variables can be universally quantified or existentially quantified within a logical expression.
-
-4. **Syntax and Semantics**: Predicate logic has a well-defined syntax for constructing logical expressions using predicates, variables, quantifiers, and logical connectives. The semantics of predicate logic define the meaning of these expressions in terms of truth values over interpretations or models of the domain.
-
-5. **Terms and Formulas**: Predicate logic distinguishes between terms, which represent objects or individuals, and formulas, which represent statements or assertions about these objects. Formulas in predicate logic can be atomic (predicates applied to terms) or compound (formed by combining atomic formulas with logical connectives and quantifiers).
-
-6. **Inference and Deduction**: Predicate logic supports various inference rules and deduction mechanisms for deriving new logical conclusions from existing premises. Common inference rules include universal instantiation, existential instantiation, universal generalization, and existential generalization.
-
-7. **Applications**:
-   - Predicate logic is widely used in knowledge representation and reasoning tasks in AI, where it provides a rich and expressive formalism for encoding facts, rules, constraints, and relationships in a domain.
-   - It serves as the basis for logical programming languages like Prolog, which use predicate logic for defining programs and querying knowledge bases.
-   - Predicate logic is also used in automated theorem proving, natural language understanding, semantic web technologies, and formal verification of software and hardware systems.
-
-8. **Expressive Power**: Predicate logic has greater expressive power than propositional logic, as it allows for the representation of complex relationships, quantification over variables, and reasoning about properties of objects and individuals in a domain.
-
-In summary, predicate logic is a powerful formalism in AI for representing and reasoning about relationships, properties, and quantified statements in a domain. Its expressive capabilities and formal semantics make it well-suited for various knowledge-intensive tasks and logical reasoning applications.
 ## Resolution principle
 ![](../../statics/Pasted%20image%2020240310084341.png)
 Resolution aims to prove the validity or satisfiability of a logical statement (conclusion) by finding a contradiction when the negation of that statement is combined with other known statements (premises). If a contradiction is derived, it implies that the original statement must be true.
