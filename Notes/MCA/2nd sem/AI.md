@@ -779,6 +779,16 @@ Green approach and STRIPS Approach
 - BSSP:-  we move from the target state g to the sub-goal g, tracing the previous action to achieve that goal. This process is called regression (going back to the previous goal or sub-goal). These sub-goals should also be checked for consistency. The action should be relevant in this case.
 
 ### Non Linear planning
+![](../../statics/Pasted%20image%2020240516191214.png)
+
+![](../../statics/Pasted%20image%2020240516191055.png)
+![](../../statics/Pasted%20image%2020240516191918.png)
+![](../../statics/Pasted%20image%2020240516192002.png)
+![](../../statics/Pasted%20image%2020240516192059.png)
+
+### Hierarchical Planning
+![](../../statics/Pasted%20image%2020240516191546.png)
+![](../../statics/Pasted%20image%2020240516191641.png)
 
 ## NLP
 
