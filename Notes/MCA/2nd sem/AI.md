@@ -272,8 +272,17 @@ In the context of the A* algorithm, heuristic functions can possess two fundamen
    - Consistency guarantees that the A* algorithm will always find the optimal solution, even in the presence of cycles or redundant paths in the search space.
 #### AO\*
 ![](../../statics/Pasted%20image%2020240510110259.png)
-![](../../statics/Pasted%20image%2020240510110504.png)
-![](../../statics/Pasted%20image%2020240510110555.png)
+![](../../statics/Pasted%20image%2020240516094834.png)
+![](../../statics/Pasted%20image%2020240516094846.png)
+**AO Algo**
+1. Initialise the graph to start node 
+2. Traverse the graph following the current path accumulating nodes that have not yet been expanded or solved 
+3. Pick any of these nodes and expand it and if it has no successors call this value FUTILITY otherwise calculate only f for each of the successors. 
+4. If f is 0 then mark the node as SOLVED 
+5. Change the value of f for the newly created node to reflect its successors by back propagation. 
+6. Wherever possible use the most promising routes and if a node is marked as SOLVED then mark the parent node as SOLVED. 
+7. If starting node is SOLVED or value greater than FUTILITY, stop, else repeat from 2.
+![](../../statics/Pasted%20image%2020240516094910.png)
 
 #### Generate and test
 ![](../../statics/Pasted%20image%2020240510111621.png)
