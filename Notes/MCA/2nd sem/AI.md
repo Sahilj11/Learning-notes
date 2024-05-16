@@ -582,7 +582,6 @@ The key features of logic programming include:
 
 Logic programming is particularly well-suited for problems involving logical reasoning, constraint satisfaction, and symbolic computation. It has applications in various fields, including artificial intelligence, expert systems, natural language processing, and automated reasoning. Its declarative nature and powerful inference capabilities make it a valuable tool for solving complex problems in these domains.
 
-
 ## Forward vs Backward Reasoning
 Here's a comparison between forward and backward reasoning presented in a table format:
 
@@ -763,11 +762,62 @@ In this fuzzy set representation, individuals can have varying degrees of member
 
 # UNIT 4 
 ## Planning 
-Planning in artificial intelligence is about decision-making actions performed by robots or computer programs to achieve a specific goal.
+![](../../statics/Pasted%20image%2020240516185840.png)
+![](../../statics/Pasted%20image%2020240516185940.png)
+![](../../statics/Pasted%20image%2020240516190142.png)
+![](../../statics/Pasted%20image%2020240516190152.png)
+Green approach and STRIPS Approach
 
-Execution of the plan is about choosing a sequence of tasks with a high probability of accomplishing a specific task.
-We require domain description, task specification, and goal description for any planning system. A plan is considered a sequence of actions, and each action has its preconditions that must be satisfied before it can act and some effects that can be positive or negative
+![](../../statics/Pasted%20image%2020240516190322.png)
+![](../../statics/Pasted%20image%2020240516190345.png)
+
+**ALGO**
+![](../../statics/Pasted%20image%2020240516190529.png)
+
 ![](../../statics/Pasted%20image%2020240417155409.png)
 - FSSP:-  given an initial state S in any domain, we perform some necessary actions and obtain a new state S' (which also contains some new terms), called a progression. It continues until we reach the target position. Action should be taken in this matter.
 - BSSP:-  we move from the target state g to the sub-goal g, tracing the previous action to achieve that goal. This process is called regression (going back to the previous goal or sub-goal). These sub-goals should also be checked for consistency. The action should be relevant in this case.
-- 
+
+### Non Linear planning
+
+## NLP
+
+### Issues 
+- Lexical Ambiguity Lexical Ambiguity exists in the presence of two or more possible meanings of the sentence within a single word
+- Syntactic Ambiguity Syntactic Ambiguity exists in the presence of two or more possible meanings within the sentence. i saw the girl with binocular
+- Referential Ambiguity Referential Ambiguity exists when you are referring to something using the pronoun. Kiran went to Sunita. She said, "I am hungry.
+### Phases 
+![](../../statics/Pasted%20image%2020240516184841.png)
+
+![](../../statics/Pasted%20image%2020240516183039.png)
+![](../../statics/Pasted%20image%2020240516183134.png)
+![](../../statics/Pasted%20image%2020240516183206.png)
+![](../../statics/Pasted%20image%2020240516183331.png)
+![](../../statics/Pasted%20image%2020240516184747.png)
+![](../../statics/Pasted%20image%2020240516184805.png)
+![](../../statics/Pasted%20image%2020240516184922.png)
+![](../../statics/Pasted%20image%2020240516184933.png)
+
+
+![](../../statics/Pasted%20image%2020240516183403.png)
+
+Context free grammer used by syntactic processing
+
+![](../../statics/Pasted%20image%2020240516183645.png)
+
+![](../../statics/Pasted%20image%2020240516183943.png)
+![](../../statics/Pasted%20image%2020240516184123.png)
+Context free grammer
+
+
+### Type of parsing techniques
+1. **Dependency Parsing**: Dependency parsing analyzes the relationships between words in a sentence by representing them as a dependency tree. Each word is a node in the tree, and the edges represent syntactic dependencies between words, such as subject-verb or verb-object relationships. Dependency parsing aims to find the most likely dependency tree for a given sentence.
+    
+2. **Constituency Parsing**: Constituency parsing breaks down a sentence into its constituent phrases or syntactic units, such as noun phrases (NP), verb phrases (VP), and prepositional phrases (PP). It represents the hierarchical structure of a sentence using a parse tree, where each node corresponds to a phrase and its children represent its constituents. Constituency parsing is based on phrase structure grammar rules.
+    
+3. **Transition-Based Parsing**: Transition-based parsing is a parsing approach that uses a sequence of transitions to build a parse tree incrementally. Each transition corresponds to a specific operation, such as shifting a word onto the stack, reducing a set of words into a phrase, or attaching a phrase to its parent node in the parse tree. Transition-based parsers often use machine learning models to predict the next transition based on the current parsing state.
+    
+4. **Chart Parsing**: Chart parsing is a dynamic programming technique for parsing sentences using context-free grammar rules. It builds a chart data structure to efficiently explore all possible parse trees for a given sentence. The chart stores partial parse trees and their associated probabilities, allowing for efficient parsing by avoiding redundant computations.
+
+#### Discourse analysis
+Discourse analysis in Natural Language Processing (NLP) focuses on understanding the structure, coherence, and flow of text beyond the level of individual sentences. It examines how sentences are connected and organized to form coherent discourse units, such as paragraphs, conversations, or entire documents. Discourse analysis plays a crucial role in tasks such as text summarization, sentiment analysis, question answering, and dialogue systems.
