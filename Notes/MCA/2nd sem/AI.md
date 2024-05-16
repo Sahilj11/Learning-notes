@@ -641,8 +641,30 @@ In logical reasoning, a monotonic system refers to a system where adding new kno
 - Real world is the source of uncertanities and to tackle these , probability is the oldest technique which is useful in this scenario , but it is only good for mutually exclusive events, if events are depended on one another then something like bayes theorem is there.
 
 ### Bayes theorem 
+#### Intro
+- **Bayes’ theorem** describes the probability of occurrence of an event related to any condition. It is also considered for the case of conditional probability. Bayes theorem is also known as the formula for the probability of “causes”
+#### Formula 
+![](../../statics/Pasted%20image%2020240516163623.png)
+![](../../statics/Pasted%20image%2020240516163637.png)
+Where A1, A2, A3,........, An is a set of mutually exclusive and exhaustive events.
+
+It shows the simple relationship between joint and conditional probabilities. Here,
+
+P(A|B) is known as **posterior**, which we need to calculate, and it will be read as Probability of hypothesis A when we have occurred an evidence B.
+
+P(B|A) is called the likelihood, in which we consider that hypothesis is true, then we calculate the probability of evidence.
+
+P(A) is called the **prior probability**, probability of hypothesis before considering the evidence
+
+P(B) is called **marginal probability**, pure probability of an evidence.
+
+#### Application
+- It is used to calculate the next step of the robot when the already executed step is given.
+- Bayes' theorem is helpful in weather forecasting.
+- It can solve the Monty Hall problem.
 ### Reasoning using certainty factor(Important and remaining)
-- Probablity based reasoning adopted bayes to handle uncertainity , but it is not always possible to calculate prior important for bayes formula
+- Probablity based reasoning adopted bayes to handle uncertainity , but it is not always possible to calculate priori and conditional probibilties in many situation important for bayes formula
+	- Consider a scenario where you want to predict whether a customer will purchase a product based on certain features such as age, gender, income, and browsing history. You could use Bayesian reasoning to model this problem. However, obtaining precise probabilities for all possible combinations of these features might be impractical due to the sheer number of possibilities and the complexity of the data
 - Reasoning using certainty factors is a method used in artificial intelligence and expert systems to handle uncertain or probabilistic information. Certainty factors are numerical values that represent the degree of belief or certainty in a proposition being true or false. Here's how reasoning with certainty factors typically works:
 
 1. **Basic Structure**:
@@ -669,6 +691,9 @@ In logical reasoning, a monotonic system refers to a system where adding new kno
 6. **Limitations**:
    - Certainty factors rely on the assumption of independence and linearity, which may not hold in all cases.
    - Handling complex relationships between evidence can be challenging, especially when dealing with non-linear dependencies or indirect evidence.
+
+Confidence C , tells us about how likely a statement is true or untrue 
+There are two ways to measure CF
 #### Measures of belief
 ![](../../statics/Pasted%20image%2020240417151532.png)
 #### Measure of disbelief
@@ -676,8 +701,11 @@ In logical reasoning, a monotonic system refers to a system where adding new kno
 
 
 ![](../../statics/Pasted%20image%2020240417151724.png)
-![](../../statics/Pasted%20image%2020240417151809.png)
-![](../../statics/Pasted%20image%2020240417152123.png)
+
+### Rule based system
+![](../../statics/Pasted%20image%2020240516175636.png)
+![](../../statics/Pasted%20image%2020240516175649.png)
+types of rule based system are forward chaning(reasoning) and backward chaining(reasoning)
 ## Fuzzy based reasoning
 ### Why need 
 - Boolean nature of probablity theory
