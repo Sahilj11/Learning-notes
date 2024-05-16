@@ -303,7 +303,8 @@ The plausible move generator generates necessary states for further evaluation a
 5. **Optimality Assumption:** Minimax assumes that both players play optimally, which may not always hold true in practice, especially in games with imperfect information or stochastic elements.
 ### Alpha-beta pruning 
 Alpha-beta pruning is an optimization technique used in the minimax algorithm to reduce the number of nodes evaluated in the search tree. Here are some notes on alpha-beta pruning:
-![](../../statics/Pasted%20image%2020240510134535.png)
+![](../../statics/Pasted%20image%2020240516101811.png)
+<a href="https://youtu.be/6qJtngq24r8">reference</a>
 
 1. **Objective**: The main goal of alpha-beta pruning is to eliminate branches of the search tree that cannot possibly influence the final decision. By doing so, it reduces the number of nodes that need to be evaluated, thereby improving the efficiency of the minimax algorithm.
 
@@ -319,9 +320,7 @@ Alpha-beta pruning is an optimization technique used in the minimax algorithm to
 
 6. **Efficiency**: The efficiency of alpha-beta pruning depends on the order in which nodes are evaluated. By evaluating more promising nodes first, the likelihood of pruning occurring increases, resulting in greater efficiency. However, even with a random evaluation order, alpha-beta pruning still provides significant performance improvements over the basic minimax algorithm.
 
-7. **Application**: Alpha-beta pruning is commonly used in various two-player zero-sum games, such as chess, checkers, and Go, where it dramatically reduces the computational overhead of searching through large game trees.
-
-8. **Parallelization**: Alpha-beta pruning can be parallelized to explore multiple branches of the game tree concurrently. This further enhances its efficiency, especially on multi-core or distributed computing systems.
+7. **Application**: Alpha-beta pruning is commonly used in various two-player zero-sum games, such as chess, checkers, and Go, where it dramatically reduces the computational overhead of searching through large 
 ## Constraint Satisfaction Problem
 ![](../../statics/Pasted%20image%2020240309180628.png)
 Constraint Satisfaction Problems (CSPs) are a class of problems in Artificial Intelligence (AI) where variables must be assigned values while satisfying a set of constraints. Here are some notes on CSPs:
