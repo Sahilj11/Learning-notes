@@ -1,35 +1,4 @@
 # Digital logical Gates
-## Some Definations
-- Signals:- these are physical quantities which vary over time
-- Binary logic deals with binary variables and with operations that assume a logical meaning. It is used to describe, in algebraic or tabular form, the manipulation and processing of binary information. 
-- The manipulation of binary information is done by logic circuits called gates. Gates are blocks of hardware that produce signals of binary 1 or 0 when input logic requirements are satisfied.
-## Digital vs Analog signal
-Digital and analog signals are two different types of signals used to represent and transmit information in various electronic systems. Here's a breakdown of their differences and the benefits of one over the other:
-
-**Digital Signals:**
-1. **Representation**: Digital signals represent information using discrete values, typically binary (0s and 1s). Each value is called a bit. Digital signals are represented as sequences of these discrete values.
-2. **Accuracy**: Digital signals are less susceptible to noise and interference compared to analog signals. They can be transmitted over longer distances without significant loss of quality.
-3. **Processing**: Digital signals can be easily processed, manipulated, and analyzed using digital circuits and algorithms. They allow for precise control and manipulation of information.
-4. **Storage**: Digital signals can be stored and reproduced without degradation. This makes digital storage mediums (such as hard drives, flash drives, and optical discs) reliable for long-term storage of data.
-5. **Compression**: Digital signals can be compressed efficiently, allowing for the storage and transmission of large amounts of information in a compact form. This is essential for multimedia applications such as audio and video streaming.
-
-**Analog Signals:**
-1. **Representation**: Analog signals represent information using continuous values that vary over time. These values can be any real number within a certain range. Examples include voltage, current, and frequency.
-2. **Resolution**: Analog signals have infinite resolution, meaning they can represent an infinite number of values within their range. This allows for smooth and continuous representation of information.
-3. **Natural Representation**: Many real-world phenomena, such as sound, light, and temperature, are inherently analog in nature. Analog signals provide a natural representation of these phenomena without the need for conversion.
-4. **Sensitivity**: Analog signals can capture subtle variations in input signals with high sensitivity, making them suitable for applications where fine details need to be preserved.
-
-**Benefits of Digital over Analog:**
-1. **Noise Immunity**: Digital signals are less susceptible to noise and interference, making them more reliable in noisy environments.
-2. **Ease of Processing**: Digital signals can be easily processed, manipulated, and analyzed using digital circuits and algorithms, allowing for complex operations and functions.
-3. **Storage and Reproduction**: Digital signals can be stored and reproduced without degradation, making them suitable for long-term storage and transmission.
-4. **Compression**: Digital signals can be compressed efficiently, allowing for the storage and transmission of large amounts of information in a compact form.
-**Benefits of Analog over Digital:**
-1. **Resolution**: Analog signals have infinite resolution, allowing for smooth and continuous representation of information without quantization effects.
-2. **Natural Representation**: Analog signals provide a natural representation of many real-world phenomena without the need for conversion, preserving the fidelity of the original information.
-3. **Sensitivity**: Analog signals can capture subtle variations in input signals with high sensitivity, making them suitable for applications where fine details need to be preserved, such as in audio and video recording.
-In summary, the choice between digital and analog signals depends on the specific requirements of the application. While digital signals offer advantages in terms of noise immunity, processing capabilities, and storage efficiency, analog signals excel in providing high resolution, natural representation, and sensitivity to subtle variations in input signals.
-
 ## Basic Digital circuit
 ### What is it 
 A digital circuit is a circuit that operates using digital signals, which are discrete signals represented by binary numbers (0s and 1s). These circuits are designed to process, store, and transmit digital information using a combination of logic gates and other digital components.
@@ -106,41 +75,11 @@ These logical gates serve as the basic building blocks of digital circuits, allo
 # Boolean algebra
 The number of gates and the number of input terminals for the gates required for the realization of a
 logical expression, in general, get reduced considerably if the expression can be simplified. Therefore, the simplification of logical expression is very important as it saves the hardware required to design a specific system
-### Approaches to design combinational circuit
-The two approaches to the design of combinational circuits that you've described represent different methodologies for achieving the desired logic functionality. Let's explore each approach in more detail:
-
-1. **Traditional Method**:
-   - In the traditional method, the design process involves simplifying the given Boolean expression or truth table using standard methods such as Karnaugh maps, Boolean algebra, or Boolean simplification techniques.
-   - Once the expression is simplified, it is implemented using basic logic gates such as AND, OR, NOT, NAND, NOR, XOR, and XNOR gates.
-   - The simplified expression leads to a circuit design that typically consists of a combination of these basic logic gates interconnected to achieve the desired logic function.
-   - This approach requires expertise in Boolean algebra and logic simplification techniques and often results in circuits with a minimal number of gates, making them efficient in terms of cost and space.
-- The following methods can be used to simplify the Boolean function:
-	1. Algebraic method,
-	2. Karnaugh map technique,
-	3. Variable entered aping (VEM) technique, and
-	4. Quino-McCluskey method.
-2. **Direct Use of Complex Logic Functions in MSI/LSI**:
-   - In this approach, the design process skips the step of simplifying the logical expression or truth table. Instead, complex logic functions available in Medium Scale Integrated Circuits (MSI) or Large Scale Integrated Circuits (LSI) are directly utilized.
-   - MSI and LSI components contain pre-designed, ready-to-use logic functions such as multiplexers, decoders, encoders, adders, subtractors, and comparators.
-   - Designers select appropriate MSI or LSI components based on the required logic functions without necessarily simplifying the logic expression beforehand.
-   - This approach can simplify the design process and reduce design time, as designers can leverage pre-designed and pre-optimized complex logic functions.
-   - However, it may lead to less efficient use of resources compared to the traditional method, as the selected MSI or LSI components may include unnecessary logic elements or functionalities.
-
-In summary, the traditional method involves simplifying the logical expression before implementation using basic logic gates, whereas the direct use of complex logic functions in MSI or LSI skips the simplification step and utilizes pre-designed logic functions directly. Both approaches have their advantages and drawbacks, and the choice between them depends on factors such as design complexity, resource constraints, and design goals.
 
 ### Boolean Algebra intro
 Boolean algebra is a mathematical discipline that deals with the manipulation and analysis of logical expressions and functions.deals with binary values, where variables and expressions can take on only two possible values: true (often represented as 1 or "high") and false (often represented as 0 or "low").
 
 # Combinational Circuit
-## Design procedure of CC
-The design procedure of a combinational circuits starts from the verbal outline of the
-problem and ends in a logic circuit diagram. The procedure involves the following steps:
-1. The problem is stated.
-2. The input and output variables are assigned letter symbols.
-3. The truth table that defines the relationship between inputs and outputs is derived.
-4. The simplified Boolean functions for each output are obtained.
-5. The logic diagram is drawn.
-
 ## Adder (Example of arithemetic circuit)
 In many computers and other types of processors, adders are used to calculate addresses, similar operations and table indices in the ALU and also in other parts of the processors. 
 
@@ -235,31 +174,6 @@ Demultiplexers come in various configurations, such as 1-to-2, 1-to-4, 1-to-8, e
 ## Intro
 A sequential circuit is an interconnection of flip-flops and gates. The gates by themselves constitute a combinational circuit, but when included with the flip-flops, the overall circuit is classified as a sequential circuit.
 ![](../../statics/Pasted%20image%2020240303073627.png)
-
-## Latch and flip flop
-Latches and flip-flops are both sequential logic circuits used in digital electronics to store binary data. They serve similar functions but have some key differences in their operation and behavior.
-
-**1. Latch:**
-
-- A latch is a basic memory element that stores one bit of data.
-- It operates transparently, meaning it continuously updates its output based on the input as long as the enable signal is active.
-- Latches can be level-sensitive or edge-sensitive. Level-sensitive latches respond to the input as long as the enable signal remains in a certain state (e.g., high or low). Edge-sensitive latches respond to a specific edge transition (e.g., rising or falling edge) of the enable signal.
-- The most common type of latch is the SR latch (Set-Reset latch), which has two inputs: S (set) and R (reset). When S is high and R is low, the output is set to 1; when S is low and R is high, the output is reset to 0; when both S and R are low, the latch maintains its previous state; and when both S and R are high, it enters an invalid state.
-
-**2. Flip-Flop:**
-
-- A flip-flop is a more complex memory element that also stores one bit of data.
-- It has a clock input in addition to the data input, which allows it to change its state only at specific clock transitions.
-- Flip-flops are edge-triggered devices, meaning they capture and store input data only at the rising or falling edge of the clock signal.
-- Common types of flip-flops include D flip-flops, JK flip-flops, and T flip-flops, each with its specific behavior and applications.
-- For example, in a D flip-flop, the input data (D) is captured and stored at the rising or falling edge of the clock signal, depending on the flip-flop's configuration. The stored data remains unchanged until the next clock transition.
-
-**Key Differences:**
-
-- Latches are level-sensitive and continuously update their output based on the input, while flip-flops are edge-triggered and store data only at specific clock transitions.
-- Latches are simpler and require fewer components, making them suitable for simpler applications, while flip-flops provide more precise timing control and are commonly used in more complex sequential circuits.
-
-In summary, while both latches and flip-flops serve as memory elements in digital circuits, they differ in their operation, timing control, and complexity, making them suitable for different applications.
 
 ## Flip Flops
 - it is a binary cell capable of storing one bit of data
@@ -477,23 +391,6 @@ opcode(operation code)
 ## Register
 ![](../../statics/Pasted%20image%2020240303151650.png)
 
-## Common Bus System
-a bus refers to a communication system that transfers data between different components of a computer system. The bus acts as a pathway or a set of parallel conductors that allow information to travel between various hardware components such as the CPU, memory, input/output devices, and other peripherals.
-
-![](../../statics/Pasted%20image%2020240303154707.png)
-In this computer system setup, multiple registers and memory are connected to a common bus. The specific register or memory output that is selected for the bus lines at any given time is determined by the binary value of selection variables \( S2, S1, \) and \( S0 \). These variables indicate which register's or memory's data should be transferred onto the bus.
-
-Each register has control inputs for loading (LD), incrementing (INR), and clearing (CLR). Some registers only have a load (LD) input. These registers function similarly to binary counters with parallel load and synchronous clear operations.
-
-There are four registers (DR, AC, IR, and TR) with 16-bit data, and two registers (AR and PC) with 12-bit data, used for memory addresses. When the contents of AR or PC are placed on the 16-bit bus, the four most significant bits are set to zeros. When data is transferred from the bus to AR or PC, only the 12 least significant bits are transferred into the register.
-
-The input register (INPR) and output register (OUTR) have 8 bits each. INPR communicates with the least significant bits of the bus, providing data from an input device to be transferred to AC. OUTR can only receive data from the bus, delivering it to an output device.
-
-The memory unit's input and output data are connected to the common bus. However, the memory address is connected to the address register (AR). Therefore, AR specifies the memory address. This setup eliminates the need for a separate address bus. Any register can be used to specify the memory data input during a write operation, and any register except AC can receive data from memory after a read operation.
-
-The accumulator register (AC) receives inputs from an adder and logic circuit. These inputs come from the outputs of AC itself, the data register (DR), and the input register (INPR). The inputs from DR and AC are used for arithmetic and logic operations, such as addition and logical AND. The result of an addition is transferred to AC, and the carry-out of the addition is transferred to a flip-flop named E (extended AC bit).
-
-Overall, this system allows for efficient communication between various registers and memory through the common bus, with control over which data is transferred based on selection variables.
 ## Instruction code
 - Group of bits that tells computer what to do basically
 - contains two thing :- opcode(operation code like ADD , SUB) and address(address of operand on which operation will be performed);
