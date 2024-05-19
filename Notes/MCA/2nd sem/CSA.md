@@ -528,12 +528,6 @@ Stack Organization:
 In stack organization, a stack data structure is used to store data and addresses. The stack grows and shrinks dynamically as data is pushed onto or popped off the stack. The CPU typically includes a special-purpose register called the stack pointer (SP) that points to the top of the stack. Operations such as push and pop are used to add data to and remove data from the stack, respectively. Stack organization is commonly used for function calls, parameter passing, local variable storage, and managing program execution flow. It provides a simple and efficient way to manage data storage and retrieval but may require careful management to avoid stack overflow or underflow.
 
 
-## Control Word
-A control word, also known as a control register or control status register, is a special-purpose register in a computer's CPU or other hardware components that contains control information used to configure or control the behavior of the processor or device.
-
-Control words typically consist of a set of bits, each representing a specific control or configuration option. These bits can be set or cleared by software instructions or by hardware signals to enable or disable certain features, select operating modes, or configure various parameters of the processor or device.
-
-There are 14 binary selection inputs in the unit, and their combined value specifies a control word.
 
 ## Flynn 
 ![](../../statics/Pasted%20image%2020240313205258.png)
@@ -577,6 +571,65 @@ MIPS (Million Instructions Per Second) and MFLOPS (Million Floating Point Operat
 5. **Limitations**:
    - Like MIPS, it may not reflect real-world performance accurately since it doesn't consider memory bottlenecks or other system components.
    - Specific to floating-point operations, so it doesn’t give a comprehensive view of general processor performance.
+## Microprogrammed Control Unit
+### Hardware vs Microprogrammed Control Unit
+![](../../statics/Pasted%20image%2020240519144815.png)
+Control word:- Strings of 0 and 1s which specify binary control variable
+### Microprogrammed Control unit organisation
+![](../../statics/Pasted%20image%2020240519151803.png)
+
+![](../../statics/Pasted%20image%2020240519145430.png)
+### Address sequencing
+Address sequencing is a fundamental concept in computer architecture, particularly in the context of instruction execution, memory access, and control unit design. It involves determining the sequence of addresses that the CPU needs to access during program execution. Here are detailed notes on address sequencing:
+
+### Definition
+Address sequencing refers to the process of generating the sequence of memory addresses that the CPU accesses while executing instructions. This involves fetching instructions, accessing operands, and storing results in a coordinated manner.
+
+### Key Concepts
+1. **Program Counter (PC)**:
+   - A special register that holds the address of the next instruction to be executed.
+   - It increments after fetching an instruction to point to the subsequent instruction in the sequence.
+
+2. **Instruction Sequencing**:
+   - The process of determining the next instruction to execute, which can be sequential or involve jumps/branches based on control flow instructions.
+   - Sequential execution: The next instruction is at the next memory address (PC + 1).
+   - Branching: The next instruction address is determined by the instruction itself (e.g., jump or branch instructions).
+
+3. **Addressing Modes**:
+   - Various modes determine how the effective address of an operand is calculated.
+   - Common modes include immediate, direct, indirect, indexed, and register addressing.
+
+### Mechanisms of Address Sequencing
+1. **Sequential Addressing**:
+   - Instructions are fetched from consecutive memory locations.
+   - The PC increments by a fixed amount (typically the instruction length) after each fetch.
+
+2. **Branching and Jumping**:
+   - Control instructions modify the PC based on certain conditions or unconditionally.
+   - Examples include `JMP` (unconditional jump), `BEQ` (branch if equal), `BNE` (branch if not equal).
+
+3. **Subroutine Calls and Returns**:
+   - Subroutine calls involve jumping to a different part of the program and storing the return address.
+   - The return instruction fetches the address from a stack or a register to resume execution after the subroutine.
+
+4. **Interrupts and Exceptions**:
+   - External or internal events can alter the normal sequencing of instructions.
+   - The CPU jumps to an interrupt service routine (ISR) address, and after handling the interrupt, returns to the original sequence.
+
+### Importance in Computer Architecture
+Address sequencing is critical for:
+- **Correct Program Execution**: Ensures that instructions are fetched and executed in the correct order.
+- **Control Flow Management**: Handles branches, loops, function calls, and interrupts efficiently.
+- **Performance Optimization**: Efficient sequencing can reduce delays and improve instruction throughput.
+- **Flexibility and Scalability**: Proper sequencing mechanisms support complex instruction sets and advanced CPU features.
+### Micro Instruction
+![](../../statics/Pasted%20image%2020240519150801.png)
+![](../../statics/Pasted%20image%2020240519151406.png)
+![](../../statics/Pasted%20image%2020240519150938.png)
+![](../../statics/Pasted%20image%2020240519151018.png)
+### Microprogram sequencer
+![](../../statics/Pasted%20image%2020240519151827.png)
+![](../../statics/Pasted%20image%2020240519151905.png)
 
 # Unit 4
 ## Memory Hierarchy
