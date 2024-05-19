@@ -671,6 +671,62 @@ miss penalty (cache access time + main memory access time)
 ### Direct mapping
 ![](../../statics/Pasted%20image%2020240426051718.png)
 cpu address divided into (tag , index)
+![](../../statics/Pasted%20image%2020240519203736.png)
+### Direct Mapping
+
+**Concept:**
+- Direct mapping maps each block of main memory to a specific cache line.
+- The cache is divided into multiple lines, each of which can store one block of data from main memory.
+- The mapping is determined by a simple modulo operation on the block address.
+
+**Mechanism:**
+- **Address Division:** A memory address is divided into three parts:
+  - **Tag:** Identifies the block.
+  - **Index:** Identifies the specific cache line.
+  - **Block Offset:** Identifies the specific data within the block.
+- **Mapping Function:** The index part of the address determines the cache line where the block will be stored. For example, if the cache has \(N\) lines, the block address \(A\) will be stored in cache line \(A \mod N\).
+
+**Advantages:**
+- Simple implementation.
+- Low cost due to simpler hardware requirements.
+
+**Disadvantages:**
+- Potential for high conflict misses: If multiple blocks map to the same cache line, they will continuously overwrite each other, leading to frequent cache misses.
+- Limited flexibility in data placement.
+
+### Associative Mapping (Fully Associative Mapping)
+
+**Concept:**
+- In associative mapping, any block of main memory can be loaded into any line of the cache.
+- There are no fixed positions for a particular block; it can be stored anywhere in the cache.
+
+**Mechanism:**
+- **Address Division:** A memory address is divided into two parts:
+  - **Tag:** Identifies the block.
+  - **Block Offset:** Identifies the specific data within the block.
+- **Mapping Function:** The cache controller searches the entire cache to find a block with a matching tag. This allows any block to be placed in any cache line.
+
+**Advantages:**
+- Minimizes conflict misses: Since any block can be placed in any cache line, the chance of overwriting a frequently used block is reduced.
+- Increased flexibility in data placement.
+
+**Disadvantages:**
+- Higher complexity and cost: Requires more complex hardware for searching the entire cache.
+- Longer access times compared to direct mapping, due to the need to search all lines.
+
+### Comparison Summary
+
+| Feature                  | Direct Mapping                | Associative Mapping             |
+| ------------------------ | ----------------------------- | ------------------------------- |
+| **Flexibility**          | Fixed position for each block | Any block can go into any line  |
+| **Complexity**           | Simple, low-cost              | Complex, higher-cost            |
+| **Conflict Misses**      | High potential                | Low potential                   |
+| **Access Time**          | Faster due to simple lookup   | Slower due to full cache search |
+| **Hardware Requirement** | Less complex                  | More complex                    |
+![](../../statics/Pasted%20image%2020240519204441.png)
+![](../../statics/Pasted%20image%2020240519204729.png)
+![](../../statics/Pasted%20image%2020240519204830.png)
+
 # UNIT 3
 
 ## Instruction set based processor classification (RISC and CISC)
