@@ -68,7 +68,7 @@ In summary, combinational circuits produce outputs solely based on the current i
 ### Basic operation
 ![](../../statics/Pasted%20image%2020240301071351.png)
 
-
+**Logic Gate:-** fundamental building blocks of digital circuits. They perform basic logical functions that are essential for digital computing. Each gate implements a Boolean function, which takes one or more binary inputs and produces a single binary output.
 #### **AND Gate**:
    - Definition: An AND gate is a digital logic gate that produces a high (binary 1) output only when all of its inputs are high (binary 1). Otherwise, it produces a low (binary 0) output.
    - Symbol: Usually represented by the symbol "&" or a triangle with the inputs on the sides and the output at the apex.
@@ -190,9 +190,10 @@ There are occasions when a certain-size decoder is needed but only smaller sizes
 An encoder is a digital circuit that performs the inverse operation of the decoder. An encoder has 2n (or less) input lines and n output lines. The output lines generate the binary code corresponding to the input value
 ![](../../statics/Pasted%20image%2020240302080911.png)
 ## Multiplexer
-It is a combinational circuit that has 2<sup>n</sup> input lines and single output line
+It is a combinational circuit that has 2<sup>n</sup> input lines and single output line. n will be number of select lines
 it is a electronic switch that connect 1 out of n input to output
-it is functionally complete , all boolean function can be realised using one multiplexer without any other gates
+![](../../statics/Pasted%20image%2020240519064142.png)
+
 ![](../../statics/Pasted%20image%2020240303072829.png)
 ![](../../statics/Pasted%20image%2020240303072849.png)
 ## De-multiplexer
@@ -215,6 +216,21 @@ Demultiplexers come in various configurations, such as 1-to-2, 1-to-4, 1-to-8, e
 
 ![](../../statics/Pasted%20image%2020240303073205.png)
 
+## K-Map
+![](../../statics/Pasted%20image%2020240519065256.png)
+![](../../statics/Pasted%20image%2020240519065333.png)
+![](../../statics/Pasted%20image%2020240519065640.png)
+![](../../statics/Pasted%20image%2020240519065849.png)
+### Advantages of K-map
+
+1. **Visual Simplification**: Easier to see and group terms compared to algebraic methods.
+2. **Error Reduction**: Less prone to errors than manual Boolean algebra manipulation.
+3. **Efficiency**: Quickly simplifies complex Boolean expressions.
+
+### Limitations of K-map
+
+1. **Scalability**: Becomes impractical for functions with more than 5 or 6 variables due to the complexity and size of the map.
+2. **Manual Process**: Still requires careful manual grouping and interpretation.
 # Sequential Logic
 ## Intro
 A sequential circuit is an interconnection of flip-flops and gates. The gates by themselves constitute a combinational circuit, but when included with the flip-flops, the overall circuit is classified as a sequential circuit.
@@ -409,6 +425,8 @@ Shift registers are versatile and find applications in various areas, including:
 Shift registers are fundamental building blocks in digital circuits and are widely used in both hardware and software implementations for various applications.
 
 ## Counter 
+![](../../statics/Pasted%20image%2020240519072958.png)
+
 A register that goes through a predetermined sequence of states upon the application of input pulses is called a counter. The input pulses may be clock pulses or may originate form an external source. They may occur at uniform intervals of time or at random. Counters are found in almost all equipment containing digital logic. They are used for counting the number of occurrences of an event and are useful for generating timing signals to control the sequence of operations in digital computers.
 
 A counter that follows the binary number sequence is called a binary counter. An n-bit binary counter is a register of n flip-flops and associated gates that follows a sequence of states according to the binary count of n bits, from 0 to 2n – 1.
@@ -447,40 +465,6 @@ In the context of computer architecture and digital systems:
    - These operations are usually very elementary, such as loading data from a register, performing arithmetic or logic operations on data, storing data into a register, shifting bits, incrementing or decrementing a value, and transferring control signals within the CPU.
    - Each instruction executed by the CPU typically involves a sequence of microoperations that collectively achieve the desired high-level operation specified by the instruction.
 
-In summary, while an operation represents a higher-level task or action that a computer performs, a microoperation is a low-level action performed by the hardware components within the CPU to execute the instruction associated with the operation. Microoperations are the fundamental operations that enable the CPU to carry out the instructions of a program.
-## Overview of how computer work
-Alright, let's break down the key points in simpler terms:
-
-1. **What's Inside a Computer?**
-   A computer is made up of tiny operations called microoperations. These operations happen inside the computer's registers.
-
-2. **How Do Computers Work?**
-   Computers follow instructions to perform tasks. These instructions are like a recipe, telling the computer what to do step by step.
-
-3. **What's a Program?**
-   A program is a set of instructions that tells the computer what to do. It includes operations (like adding or subtracting) and the order in which they should happen.
-
-4. **How Do Computers Understand Instructions?**
-   Instructions are written in binary code, which is a series of 0s and 1s. The computer reads these instructions from its memory and then follows them.
-
-5. **What's in an Instruction?**
-   An instruction has different parts. The most important part is the operation code, which tells the computer what to do (like add or subtract).
-
-6. **How Does the Computer Know What Operation to Perform?**
-   The operation code is like a special code that the computer understands. For example, if the code is 110010, it might mean "add." When the computer sees this code, it knows to add something.
-
-7. **What Happens Next?**
-   Once the computer knows what operation to perform, it starts doing tiny operations inside itself. These tiny operations are called microoperations.
-
-8. **Where Does the Data Come From?**
-   The instructions also tell the computer where to find the data it needs to work with. This could be in the computer's memory or its internal registers.
-
-9. **Putting It All Together**
-   Every computer has its own way of understanding instructions. Computer designers create instruction codes to make sure the computer knows what to do with each instruction.
-
-10. **Why Does This Matter?**
-   Understanding how instructions work helps us understand how computers process information and perform tasks. It's like knowing the language of computers.
-
 ## Stored Program organisation
 The simplest way to organize a computer is to have one processor register and instruction code format with two parts. The first part specifies the operation to be performed and the second specifies an address. The memory address tells the control where to find an operand in memory. This operand is read from memory and used as the data to be operated on together with the data stored in the processor register.
 
@@ -489,20 +473,6 @@ opcode(operation code)
  Instructions are stored in one section of memory and data in another. For a memory unit with 4096 words we need 12 bits to specify an address since 2<sup>12</sup> = 4096. If we store each instruction code in one 16-bit memory word, we have available four bits for the operation code (abbreviated op code) to specify one out of 16 possible operations, and 12 bits to specify the address of an operand. 
  
  The control reads a 16-bit instruction from the program portion of memory. It uses the 12-bit address part of the instruction to read a 16-bit operand from the data portion of memory. It then executes the operation specified by the operation code.
-
-## Direct vs Indirect vs Immediate (Operand Mode)
-
-1. **Immediate Operand**: In this mode, the instruction includes the actual value of the operand rather than its memory address. This means that the data needed for the operation is directly embedded within the instruction itself. For example, if you have an instruction to add the number 5 to a register, the value 5 would be part of the instruction.
-
-2. **Direct Address**: Here, the instruction includes the memory address where the operand is stored. So instead of providing the actual data, the instruction provides the location in memory where the data can be found. For instance, if you have an instruction to add the contents of memory address 100 to a register, the instruction would specify the memory address 100 as the operand.
-
-3. **Indirect Address**: This mode is a bit more complex. In indirect addressing, the instruction includes the memory address where the address of the operand is stored, rather than the operand itself. This means that the CPU needs to first fetch the address from memory and then fetch the actual operand from the address stored in memory. It's like having a pointer to the actual data. For example, if you have an instruction to add the contents of the memory address stored in location 200 to a register, the instruction would specify the memory address 200, which holds the address of the actual operand.
-
-To distinguish between direct and indirect addressing modes, one bit in the instruction code can be used. This bit indicates whether the address provided in the instruction is the actual operand (direct address) or a pointer to the operand (indirect address). This distinction allows for flexibility in how instructions access data in memory, depending on the specific needs of the program being executed.
-![](../../statics/Pasted%20image%2020240303151255.png)
-here I is used as mode bit ,if it is 0 then direct and 1 is for indirect
-
-The accumulator register, often abbreviated as "AC," is a crucial component of a computer's central processing unit (CPU). It's a special-purpose register designed to temporarily store data during arithmetic and logic operations.
 
 ## Register
 ![](../../statics/Pasted%20image%2020240303151650.png)
@@ -529,9 +499,9 @@ Overall, this system allows for efficient communication between various register
 - contains two thing :- opcode(operation code like ADD , SUB) and address(address of operand on which operation will be performed);
 
 ### Types of Instruction
-- Memory reference instructions
-- Register reference instructions
-- Input output Instruction
+- Memory reference instructions:- Memory reference instructions are those that involve operations which read from or write to the memory. They typically involve specifying a memory address from which data is to be read or to which data is to be written.
+- Register reference instructions:- Register reference instructions perform operations directly on the processor's registers. These operations include data transfer, arithmetic, logical operations, and control instructions that do not involve memory access.
+- Input output Instruction:- I/O reference instructions enable the CPU to send data to and receive data from I/O devices. They are essential for handling external communications and managing device operations
 
 ![](../../statics/Pasted%20image%2020240413165952.png)
 ![](../../statics/Pasted%20image%2020240413170115.png)
@@ -577,6 +547,36 @@ There are 14 binary selection inputs in the unit, and their combined value speci
 ![](../../statics/Pasted%20image%2020240313205659.png)
 ![](../../statics/Pasted%20image%2020240313210024.png)![](../../statics/Pasted%20image%2020240313210328.png)
 ![](../../statics/Pasted%20image%2020240313210409.png)
+
+## MIPS
+![](../../statics/Pasted%20image%2020240519075309.png)
+![](../../statics/Pasted%20image%2020240519075333.png)
+![](../../statics/Pasted%20image%2020240519075609.png)
+![](../../statics/Pasted%20image%2020240519075700.png)
+MIPS (Million Instructions Per Second) and MFLOPS (Million Floating Point Operations Per Second) are both metrics used to measure the performance of a computer processor, but they focus on different aspects of computation. Here's a breakdown of the differences between them:
+
+### MIPS (Million Instructions Per Second)
+1. **Definition**: MIPS measures the number of instructions a processor can execute in one second.
+2. **Focus**: It counts the execution rate of all types of instructions, including integer and control instructions, not just floating-point operations.
+3. **Usage**: MIPS is often used to indicate the general speed of a processor in performing basic operations.
+4. **Advantages**:
+   - Simple to understand and calculate.
+   - Useful for comparing the performance of processors within the same architecture.
+5. **Limitations**:I/O reference instructions enable the CPU to send data to and receive data from I/O devices. They are essential for handling external communications and managing device operations
+   - Does not account for the complexity or variability of instructions (some instructions may take more cycles to execute than others).
+   - Can be misleading when comparing different architectures because different instruction sets may have different complexities.
+   - Ignores the impact of memory latency, I/O operations, and other factors that affect real-world performance.
+
+### MFLOPS (Million Floating Point Operations Per Second)
+1. **Definition**: MFLOPS measures the number of floating-point operations a processor can perform in one second.
+2. **Focus**: Specifically targets floating-point operations, which are critical in scientific, engineering, and graphics computations.
+3. **Usage**: MFLOPS is particularly relevant in fields requiring heavy mathematical computations, like scientific simulations, 3D graphics, and computational physics.
+4. **Advantages**:
+   - Provides a clearer picture of a processor's ability to handle floating-point intensive tasks.
+   - More relevant than MIPS for applications involving complex numerical calculations.
+5. **Limitations**:
+   - Like MIPS, it may not reflect real-world performance accurately since it doesn't consider memory bottlenecks or other system components.
+   - Specific to floating-point operations, so it doesn’t give a comprehensive view of general processor performance.
 
 # Unit 4
 ## Memory Hierarchy
