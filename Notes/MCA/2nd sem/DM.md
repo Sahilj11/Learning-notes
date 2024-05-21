@@ -447,3 +447,72 @@ Q is rational
 ![](../../statics/Pasted%20image%2020240521150959.png)
 ![](../../statics/Pasted%20image%2020240521151014.png)
 ![](../../statics/Pasted%20image%2020240521151201.png)
+
+# UNIT 4 
+Operational Research (O.R.), also known as Operations Research, is a discipline that deals with the application of advanced analytical methods to help make better decisions. Here are some of its key features and characteristics:
+
+### Nature and Characteristics of Operational Research
+
+1. **Interdisciplinary Approach**:
+   O.R. integrates techniques from mathematics, statistics, computer science, economics, and engineering. This interdisciplinary nature allows it to tackle a wide range of problems across various domains.
+
+2. **Quantitative Analysis**:
+   At its core, O.R. relies on quantitative techniques to analyze complex systems and decision-making processes. This includes mathematical modeling, statistical analysis, and optimization techniques.
+
+3. **Problem-Solving Focus**:
+   O.R. is fundamentally oriented towards solving real-world problems. It seeks to provide optimal or near-optimal solutions to issues faced by organizations, businesses, and governments.
+
+4. **Modeling**:
+   One of the primary tools in O.R. is the development of mathematical models that represent real-world systems. These models can be used to simulate different scenarios and predict outcomes, helping in decision-making.
+
+5. **Optimization**:
+   A significant aspect of O.R. is finding the best possible solution from a set of feasible solutions. This involves techniques like linear programming, integer programming, and nonlinear programming to optimize resources and processes.
+
+### Applications of Operational Research
+
+Operational Research finds applications in various fields, including:
+
+- **Manufacturing and Production**: Optimizing production schedules, inventory management, and supply chain logistics.
+- **Transportation and Logistics**: Route planning, fleet management, and traffic flow optimization.
+- **Healthcare**: Resource allocation, scheduling of medical staff, and optimizing patient flow.
+- **Finance**: Portfolio optimization, risk management, and pricing strategies.
+- **Military**: Strategic planning, resource allocation, and logistics.
+- **Energy**: Power generation and distribution, optimizing energy usage, and planning for renewable energy integration.
+
+Overall, Operational Research provides a robust framework for addressing complex decision-making problems, leveraging quantitative analysis, and fostering better, data-driven decisions.
+
+## Methodology in operation research
+![](../../statics/Pasted%20image%2020240521201257.png)
+![](../../statics/Pasted%20image%2020240521201347.png)
+![](../../statics/Pasted%20image%2020240521201455.png)
+**Step 1 – Definition and Identification of problem –**  
+It is impossible to obtain ‘Right answers from wrong problem’. In formulating the problem, objectives, alternative course of action, constraints and effect of the system under study must be well established.  
+
+**Step -2- Constructing a mathematical model –**  
+The next step is to construct a mathematical model of the problem with following basic elements :-  
+Decision or controllable variables and parameters or uncontrollable variables : A controllable variable is one that can be directly controlled by the decision maker. The value of these variables are to be determined. Uncontrollable variables are those which are not under direct control of decision maker. Ex govt. policy, increasing prices.  
+**Constraints or restriction**– The model must include constraints in order to check physical limitation of the system.  
+Objective function : i.e mathematical expression of profit or cost for a particular operation.  
+Ex. : Two products P1 and P2 Two machines M1 M2  
+one unit of P1 requires 3 hours on M1 and 1 hour on M2  
+one unit of P2 requires 2 hours on M1 and 2 hour on M2  
+No of hours available per week on M1 and M2 are 60 & 40. Profit contribution of P1 and P2 are Rs. 60 and Rs. 50 per unit. desired to maximize profit. Draft a mathematical model.  
+→ x1 and x2 = controllable variable whose values are to be determined, profits per unit, cost/unit amount of resources are all uncontrollable.  
+Equation (i) = objective function (ii) and (iii) are constraints  
+
+**Step 3 – Deriving a solution –**  
+The next step is to obtain a solution i.e. determination of those values of the decision variables that optimize the given objective (maximization of profit and minimization of cost).  
+
+**Step 4- Testing the model and the solution –**  
+It involves testing of the model used. A model is valid if it can provide a reliable prediction of system’s performance. A good operation research analyst continuously tries to update his model.  
+
+**Step 5- Implementation and control**  
+The next step is implementing the solution derived. Explanation of the solution be made in terms of procedure used in actual system. After applying the solution, observe response of the system. A control over the solution is established by proper feedback.
+
+![](../../statics/Pasted%20image%2020240521202815.png)
+
+![](../../statics/Pasted%20image%2020240521202916.png)
+![](../../statics/Pasted%20image%2020240521202937.png)
+![](../../statics/Pasted%20image%2020240521203028.png)
+![](../../statics/Pasted%20image%2020240521203044.png)
+
