@@ -46,17 +46,25 @@ If A is a subset of B, but the re exists at least one element in B which is not 
 proper subset of B, denoted by A⊂B.In other words, A⊂B <-> (A ⊆ B and A≠B)
 Example of propersubset is N ⊂ Z where N is set of natural number and Z is set of integer
 A is also subset of itself
+![](../../statics/Pasted%20image%2020240521081059.png)
+![](../../statics/Pasted%20image%2020240521081115.png)
+![](../../statics/Pasted%20image%2020240521081246.png)
+![](../../statics/Pasted%20image%2020240521081347.png)
 
 ### Powerset
 The set consisting of all the subsets of a given set A as its elements, is called the power set
 of A and is denoted by P(A) or 2<sup>A</sup>. Thus, P(A) or 2<sup>A</sup> = {X: X ⊆ A}
 if A = {1, 2}, then PA= {$, {1}, {2}, A}
 From these examples we can conclude that if a set A has n elements,then P(A) has 2<sup>n</sup>elements
+![](../../statics/Pasted%20image%2020240521081435.png)
 
 ### Universal set
 A set is called a Universal Set or the Universal discourse if it contains all the sets under consideration in a particular discussion. A universal set is denoted by U.
 
 In connection with the sets N, Z, Q we can take R as the universal set
+
+### Disjoint set
+![](../../statics/Pasted%20image%2020240521082029.png)
 
 ## SET OPERATIONS
 ### UNION OF SET
@@ -79,6 +87,7 @@ sets A and B are called disjoint sets
 ![](../../statics/Pasted%20image%2020240308104527.png)
 ### DIFFERENCE OF SET
 The difference of two sets A and B is the set of all elements which are members of A, but not of B. It is denoted by A–B.
+
 ![](../../statics/Pasted%20image%2020240308104249.png)
 ![](../../statics/Pasted%20image%2020240308104542.png)
 
@@ -89,7 +98,12 @@ members of A is called the Compliment of A, denoted by A<sup>c</sup> or A<sup>'<
 ![](../../statics/Pasted%20image%2020240308104704.png)
 identities
 ![](../../statics/Pasted%20image%2020240308104929.png)
+
 ![](../../statics/Pasted%20image%2020240308104939.png)
+![](../../statics/Pasted%20image%2020240521081702.png)
+
+### Symmetric 
+![](../../statics/Pasted%20image%2020240521082549.png)
 ## Law of algebra of sets
 Sure, let's integrate proofs for some of the laws of algebra of sets with the above responses:
 
@@ -140,10 +154,8 @@ Sure, let's integrate proofs for some of the laws of algebra of sets with the ab
       Similar to the previous property, we can prove this by considering the properties of intersections and complements.
 
 6. **Idempotent Laws**:
-
     - **Union (A ∪ A = A)**:
       This is straightforward because if an element is in A, it's still in A when you union A with itself.
-
     - **Intersection (A ∩ A = A)**:
       Similarly, if an element is in A, it's still in A when you intersect A with itself.
 
@@ -158,7 +170,47 @@ Sure, let's integrate proofs for some of the laws of algebra of sets with the ab
       Similar to the previous property, we can prove this by considering the properties of unions, intersections, complements, and the definition of sets.
 
 ## Counting principles
-## Classes of Set
+The counting principle, also known as the rule of product, is a fundamental concept in combinatorics that helps determine the number of possible outcomes in various situations. When applied to sets, it allows us to count the number of ways to combine elements from different sets under certain conditions.
+
+### Basic Counting Principle (Rule of Product)
+The basic counting principle states that if you have a sequence of events where each event can occur in a certain number of ways, the total number of possible outcomes for the sequence is the product of the number of ways each event can occur.
+
+#### Example:
+If you have two sets:
+- Set \( A \) with \( |A| = 3 \) elements: \( A = \{a_1, a_2, a_3\} \)
+- Set \( B \) with \( |B| = 2 \) elements: \( B = \{b_1, b_2\} \)
+
+The number of ways to choose one element from \( A \) and one element from \( B \) is:
+\[ |A| \times |B| = 3 \times 2 = 6 \]
+
+So, the possible pairs are: \( (a_1, b_1), (a_1, b_2), (a_2, b_1), (a_2, b_2), (a_3, b_1), (a_3, b_2) \).
+
+### Extended Counting Principle
+
+The counting principle can be extended to more than two sets. If you have \( n \) sets, the total number of ways to choose one element from each set is the product of the number of elements in each set.
+
+#### Example:
+If you have three sets:
+- Set \( A \) with \( |A| = 3 \) elements: \( A = \{a_1, a_2, a_3\} \)
+- Set \( B \) with \( |B| = 2 \) elements: \( B = \{b_1, b_2\} \)
+- Set \( C \) with \( |C| = 4 \) elements: \( C = \{c_1, c_2, c_3, c_4\} \)
+
+The number of ways to choose one element from each set is:
+\[ |A| \times |B| \times |C| = 3 \times 2 \times 4 = 24 \]
+
+### Applications of the Counting Principle
+
+1. **Permutations and Combinations:**
+   - **Permutations:** The counting principle helps calculate permutations where the order matters. For example, the number of ways to arrange \( n \) distinct items is \( n! \) (n factorial).
+   - **Combinations:** The counting principle is also the basis for combinations where the order does not matter. The number of ways to choose \( k \) items from \( n \) items is given by \( \binom{n}{k} \).
+
+2. **Probability:**
+   - In probability, the counting principle helps calculate the total number of possible outcomes, which is essential for determining probabilities of specific events.
+
+3. **Cartesian Products:**
+   - The principle is directly applied in finding the size of Cartesian products of sets. If \( A \) and \( B \) are sets, then \( |A \times B| = |A| \times |B| \).
+## Classes of Set(Write types of sets)
+- Singleton : - only one element
 ## Partition of set
 Let S be a nonempty set. A partition of S is a subdivision of S into non overlapping, nonempty subsets.
 Precisely, a partition of S is a collection {Ai } of nonempty subsets of S such that:
@@ -181,6 +233,10 @@ To distinguish between sets and multisets, a notation that incorporates square b
 used: the multiset {a, a, b} can be denoted as \[a, a, b \].
 The cardinality of a multiset is constructed by summing up the multiplicities of all its elements
 
+## Duality 
+![](../../statics/Pasted%20image%2020240521083352.png)
+![](../../statics/Pasted%20image%2020240521083612.png)
+
 # Relation and Function
 
 ## Intro
@@ -189,6 +245,11 @@ The Cartesian product of A and B is denoted by A×B and is defined by AXB = {(a,
 (a, b) is called an ordered pair. Let a∈A, c∈A; b∈B, d∈B.
 
 ## Concept of relation
+![](../../statics/Pasted%20image%2020240521084319.png)
+total possible relation is 2<sup>mXn</sup>
+![](../../statics/Pasted%20image%2020240521084615.png)
+![](../../statics/Pasted%20image%2020240521084800.png)
+
 Let A and B be two non-empty sets. A subset R of AXB is said to be a relation from A to B.If A=B, then any subset of A X A is said to be a relation on A. If R ⊆ A X B, and (a,b)∈R;a∈A,b∈B,it is also written as *aRb* and is read as ‘a is R related to b’.
 
 The set of the first components of the ordered pairs of R is called the domain and the set of the second components of the ordered pairs of R is called the range of R. If A,B are finite sets and n(A)=x,n(B)=y; then n(AXB)=xy.So,the number of subsets of AXB is2<sup>xy</sup>.Therefore, the number of relations from A to B is 2<sup>x</sup>
@@ -218,6 +279,7 @@ Let A be a non-empty set. A relation R on A is called an equivalence relation if
 ![](../../statics/Pasted%20image%2020240308193919.png)
 ## Function
 ![](../../statics/Pasted%20image%2020240308191103.png)
+X is domain , Y is co-domain  and to where we go is range
 ![](../../statics/Pasted%20image%2020240308191210.png)
 ### Function Composition
 

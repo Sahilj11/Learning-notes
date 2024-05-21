@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/DM.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/DM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/CSA.md",
+                "file": "MCA/2nd sem/DM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/CSA.md"
+                "file": "MCA/2nd sem/DM.md"
               }
             }
           },
@@ -161,21 +160,21 @@
   },
   "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
-    "statics/Pasted image 20240519204830.png",
-    "statics/Pasted image 20240519204729.png",
-    "statics/Pasted image 20240519204714.png",
-    "statics/Pasted image 20240519204441.png",
-    "statics/Pasted image 20240519203736.png",
-    "statics/Pasted image 20240519151905.png",
-    "statics/Pasted image 20240519151827.png",
-    "statics/Pasted image 20240519151803.png",
-    "statics/Pasted image 20240519151406.png",
-    "statics/Pasted image 20240519151018.png",
-    "statics/Pasted image 20240519150938.png",
+    "statics/Pasted image 20240521084800.png",
+    "statics/Pasted image 20240521084615.png",
+    "statics/Pasted image 20240521084319.png",
+    "statics/Pasted image 20240521083612.png",
+    "statics/Pasted image 20240521083526.png",
+    "statics/Pasted image 20240521083352.png",
+    "statics/Pasted image 20240521082549.png",
+    "statics/Pasted image 20240521082110.png",
+    "statics/Pasted image 20240521082029.png",
+    "statics/Pasted image 20240521081702.png",
+    "statics/Pasted image 20240521081435.png",
+    "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/AI.md",
     "MCA/2nd sem/Python.md",
     "MCA/2nd sem/DSA.md",
-    "MCA/2nd sem/CSA.md",
     "java Backend/Spring Security.md",
     "java Backend/Spring/Intro.md",
     "MCA/2nd sem/DM.md",
