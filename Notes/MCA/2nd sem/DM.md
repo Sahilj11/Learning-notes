@@ -391,3 +391,13 @@ Q is rational
 ![](../../statics/Pasted%20image%2020240521102619.png)
 
 ### Cosets
+![](../../statics/Pasted%20image%2020240521103329.png)
+### Cyclic Group
+![](../../statics/Pasted%20image%2020240521104046.png)
+### Lagrange theorem
+![](../../statics/Pasted%20image%2020240521104400.png)
+![](../../statics/Pasted%20image%2020240521104456.png)
+
+
+### Normal Subgroup
+![](../../statics/Pasted%20image%2020240521105004.png)
