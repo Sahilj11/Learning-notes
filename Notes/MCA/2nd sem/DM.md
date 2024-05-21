@@ -300,7 +300,8 @@ X is domain , Y is co-domain  and to where we go is range
 
 #### Inverse function
 ![](../../statics/Pasted%20image%2020240308193424.png)
-
+possible in only bijective function
+![](../../statics/Pasted%20image%2020240521093238.png)
 # Logic and Propositional Calculus
 ## Proposition and its Compound Statement
 A proposition (or statement) is a declarative statement which is true or false, but not both.
@@ -324,6 +325,10 @@ If p and q are false, then p ∨ q is false; otherwise p ∨ q is true.
 
 ### Negation (¬)
 Given any proposition p, another proposition, called the negation of p, can be formed by writing “It is not true that ...” or “It is false that ...” before p or, if possible, by inserting in p the word “not.” Symbolically, the negation of p, read “not p,” is denoted by ¬p
+![](../../statics/Pasted%20image%2020240521093714.png)
+
+## Implication
+![](../../statics/Pasted%20image%2020240521094146.png)
 
 ## Tautologies and Contradiction
 
@@ -353,3 +358,36 @@ referred as a biconditional statement or an equivalence. The equivalence p ↔ q
 and q are true or when both p and q are false.
 
 ![](../../statics/Pasted%20image%2020240310145238.png)
+
+## Group 
+### Intro
+
+### Properties
+![](../../statics/Pasted%20image%2020240521095431.png)
+![](../../statics/Pasted%20image%2020240521095614.png)
+![](../../statics/Pasted%20image%2020240521095735.png)
+![](../../statics/Pasted%20image%2020240521100000.png)
+![](../../statics/Pasted%20image%2020240521100225.png)
+![](../../statics/Pasted%20image%2020240521100339.png)
+
+
+![](../../statics/Pasted%20image%2020240521100415.png)
+![](../../statics/Pasted%20image%2020240521100513.png)
+
+### Subgroup
+
+![](../../statics/Pasted%20image%2020240521101544.png)
+![](../../statics/Pasted%20image%2020240521101657.png)
+Q is rational
+
+![](../../statics/Pasted%20image%2020240521101820.png)
+![](../../statics/Pasted%20image%2020240521101923.png)
+![](../../statics/Pasted%20image%2020240521102048.png)
+![](../../statics/Pasted%20image%2020240521102314.png)
+![](../../statics/Pasted%20image%2020240521102428.png)
+![](../../statics/Pasted%20image%2020240521102440.png)
+![](../../statics/Pasted%20image%2020240521102558.png)
+![](../../statics/Pasted%20image%2020240521102604.png)
+![](../../statics/Pasted%20image%2020240521102619.png)
+
+### Cosets
