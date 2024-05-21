@@ -401,3 +401,49 @@ Q is rational
 
 ### Normal Subgroup
 ![](../../statics/Pasted%20image%2020240521105004.png)
+# UNIT 3
+![](../../statics/Pasted%20image%2020240521140610.png)
+![](../../statics/Pasted%20image%2020240521140646.png)
+![](../../statics/Pasted%20image%2020240521140758.png)
+ ![](../../statics/Pasted%20image%2020240521140929.png)
+ ![](../../statics/Pasted%20image%2020240521141008.png)
+ ![](../../statics/Pasted%20image%2020240521141117.png)
+ ![](../../statics/Pasted%20image%2020240521141329.png)
+ ![](../../statics/Pasted%20image%2020240521141534.png)
+ ![](../../statics/Pasted%20image%2020240521141555.png)
+ ![](../../statics/Pasted%20image%2020240521141736.png)
+ ![](../../statics/Pasted%20image%2020240521142026.png)
+ ![](../../statics/Pasted%20image%2020240521142012.png)
+ 
+ 
+![](../../statics/Pasted%20image%2020240521142208.png)
+![](../../statics/Pasted%20image%2020240521142633.png)
+![](../../statics/Pasted%20image%2020240521142849.png)
+
+![](../../statics/Pasted%20image%2020240521143137.png)
+![](../../statics/Pasted%20image%2020240521143432.png)
+![](../../statics/Pasted%20image%2020240521143625.png)
+
+![](../../statics/Pasted%20image%2020240521143846.png)
+
+![](../../statics/Pasted%20image%2020240521144027.png)
+![](../../statics/Pasted%20image%2020240521144044.png)
+### Isomorphic
+
+![](../../statics/Pasted%20image%2020240521150556.png)
+
+
+
+![](../../statics/Pasted%20image%2020240521150245.png)
+
+
+
+![](../../statics/Pasted%20image%2020240521150715.png)
+![](../../statics/Pasted%20image%2020240521150745.png)
+![](../../statics/Pasted%20image%2020240521150818.png)
+![](../../statics/Pasted%20image%2020240521150834.png)
+![](../../statics/Pasted%20image%2020240521150857.png)
+![](../../statics/Pasted%20image%2020240521150918.png)
+![](../../statics/Pasted%20image%2020240521150959.png)
+![](../../statics/Pasted%20image%2020240521151014.png)
+![](../../statics/Pasted%20image%2020240521151201.png)
