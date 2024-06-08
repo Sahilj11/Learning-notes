@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/2nd sem/DM.md",
+                "file": "java Backend/Hibernate/Primary key.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/2nd sem/DM.md",
+                "file": "java Backend/Hibernate/Primary key.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/2nd sem/DM.md",
+                "file": "java Backend/Hibernate/Primary key.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/2nd sem/DM.md"
+                "file": "java Backend/Hibernate/Primary key.md"
               }
             }
           },
@@ -160,24 +160,28 @@
   },
   "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
+    "java Backend/Hibernate/Mappings.md",
+    "java Backend/Hibernate/Primary key.md",
+    "statics/Pasted image 20240608120150.png",
+    "statics/Pasted image 20240608115451.png",
+    "statics/Pasted image 20240608115433.png",
+    "java Backend/Hibernate/Context.md",
+    "java Backend/Hibernate/Entities.md",
+    "statics/Pasted image 20240607114920.png",
+    "statics/Pasted image 20240607114719.png",
+    "statics/Pasted image 20240607114121.png",
+    "MCA/2nd sem/DM.md",
+    "java Backend/Hibernate",
     "statics/Pasted image 20240521203044.png",
     "statics/Pasted image 20240521203028.png",
     "statics/Pasted image 20240521202937.png",
     "statics/Pasted image 20240521202916.png",
-    "statics/Pasted image 20240521202840.png",
-    "statics/Pasted image 20240521202815.png",
-    "statics/Pasted image 20240521201455.png",
-    "statics/Pasted image 20240521201347.png",
-    "statics/Pasted image 20240521201257.png",
-    "statics/Pasted image 20240521151201.png",
-    "statics/Pasted image 20240521151014.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/AI.md",
     "MCA/2nd sem/Python.md",
     "MCA/2nd sem/DSA.md",
     "java Backend/Spring Security.md",
     "java Backend/Spring/Intro.md",
-    "MCA/2nd sem/DM.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
     "javaCollection/1. The main interfaces of java collection.md",
@@ -198,14 +202,10 @@
     "Odin project/React/2 . States in react.md",
     "GIT Commands/Commands.md",
     "MCA/1st Sem/Lab_expirements/java_lab/JAVA Practical File.md",
-    "MCA/1st Sem/Lab_expirements/WD_Lab/Web Design Practical File.md",
-    "MCA/1st Sem/Lab_expirements/WD_Lab/SortingCode.md",
-    "MCA/1st Sem/Lab_expirements/DBMS_lab/DBMS practical file.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",
     "MCA/1st Sem/Lab_expirements/WD_Lab",
-    "MCA/1st Sem/Lab_expirements/DBMS_lab",
     "Untitled.canvas"
   ]
 }
