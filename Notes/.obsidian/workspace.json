@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java Backend/Hibernate/Primary key.md",
+                "file": "java Backend/Hibernate/Mappings.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "java Backend/Hibernate/Primary key.md",
+                "file": "java Backend/Hibernate/Mappings.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "java Backend/Hibernate/Primary key.md",
+                "file": "java Backend/Hibernate/Mappings.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java Backend/Hibernate/Primary key.md"
+                "file": "java Backend/Hibernate/Mappings.md"
               }
             }
           },
@@ -160,12 +160,13 @@
   },
   "active": "ba7c151769a2ba0d",
   "lastOpenFiles": [
-    "java Backend/Hibernate/Mappings.md",
+    "java Backend/Hibernate/Context.md",
+    "statics/Pasted image 20240608121240.png",
     "java Backend/Hibernate/Primary key.md",
+    "java Backend/Hibernate/Mappings.md",
     "statics/Pasted image 20240608120150.png",
     "statics/Pasted image 20240608115451.png",
     "statics/Pasted image 20240608115433.png",
-    "java Backend/Hibernate/Context.md",
     "java Backend/Hibernate/Entities.md",
     "statics/Pasted image 20240607114920.png",
     "statics/Pasted image 20240607114719.png",
@@ -175,7 +176,6 @@
     "statics/Pasted image 20240521203044.png",
     "statics/Pasted image 20240521203028.png",
     "statics/Pasted image 20240521202937.png",
-    "statics/Pasted image 20240521202916.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/AI.md",
     "MCA/2nd sem/Python.md",
@@ -201,7 +201,6 @@
     "Odin project/React/9. React Router.md",
     "Odin project/React/2 . States in react.md",
     "GIT Commands/Commands.md",
-    "MCA/1st Sem/Lab_expirements/java_lab/JAVA Practical File.md",
     "Odin project/React/React internals",
     "javaCollection",
     "MCA/1st Sem/Lab_expirements/java_lab",

@@ -6,4 +6,5 @@
 - Every entity must have an id in java
 ## Column
 - If name of field differnct from name of column (column(name))
-- 
+
+![](../../statics/Pasted%20image%2020240608121240.png)
