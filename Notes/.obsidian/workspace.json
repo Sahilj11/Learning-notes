@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Odin project/javascript advance/Closure and Module pattern.md",
+                "file": "MCA/3rd Sem/Machine learning.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Odin project/javascript advance/Closure and Module pattern.md",
+                "file": "MCA/3rd Sem/Machine learning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Odin project/javascript advance/Closure and Module pattern.md",
+                "file": "MCA/3rd Sem/Machine learning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Odin project/javascript advance/Closure and Module pattern.md"
+                "file": "MCA/3rd Sem/Machine learning.md"
               }
             }
           },
@@ -161,6 +161,15 @@
   },
   "active": "51813268b5e9d2ed",
   "lastOpenFiles": [
+    "MCA/3rd Sem/Machine learning.md~",
+    "statics/Pasted image 20240902232307.png",
+    "statics/Pasted image 20240902232142.png",
+    "statics/Pasted image 20240902230845.png",
+    "statics/Pasted image 20240902230735.png",
+    "statics/Pasted image 20240902230639.png",
+    "statics/Pasted image 20240902230410.png",
+    "statics/Pasted image 20240902230300.png",
+    "Odin project/javascript advance/Closure and Module pattern.md",
     "Cloud computing/4. google cloud SDK.md",
     "Cloud computing/2. Cloud console.md",
     "Cloud computing/1. Cloud vs Traditional architecture.md",
@@ -179,16 +188,9 @@
     "statics/Pasted image 20240608121240.png",
     "statics/Pasted image 20240608120150.png",
     "statics/Pasted image 20240608115451.png",
-    "statics/Pasted image 20240608115433.png",
     "java Backend/Hibernate/Entities.md",
-    "statics/Pasted image 20240607114920.png",
-    "statics/Pasted image 20240607114719.png",
-    "statics/Pasted image 20240607114121.png",
     "MCA/2nd sem/DM.md",
     "java Backend/Hibernate",
-    "statics/Pasted image 20240521203044.png",
-    "statics/Pasted image 20240521203028.png",
-    "statics/Pasted image 20240521202937.png",
     "MCA/2nd sem/CSA.md",
     "MCA/2nd sem/AI.md",
     "MCA/2nd sem/Python.md",
@@ -199,14 +201,11 @@
     "javaCollection/5. Queues.md",
     "javaCollection/1. The main interfaces of java collection.md",
     "javaCollection/2. Preliminaries.md",
-    "javaCollection/3. Collection interface.md",
-    "javaCollection/6. List.md",
     "java Backend/Spring",
     "java Backend/servlet",
     "java Backend",
     "rust",
     "Odin project/React/React internals",
-    "javaCollection",
-    "MCA/1st Sem/Lab_expirements/java_lab"
+    "javaCollection"
   ]
 }
