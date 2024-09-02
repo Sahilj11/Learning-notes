@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "62c1a467ddcee31b",
+        "id": "947c604c94fe30d5",
         "type": "tabs",
         "children": [
           {
-            "id": "ba7c151769a2ba0d",
+            "id": "51813268b5e9d2ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "java Backend/Hibernate/Mappings.md",
+                "file": "Odin project/javascript advance/Closure and Module pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "async",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 323.5
   },
   "right": {
     "id": "51d87145d5c0628d",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "java Backend/Hibernate/Mappings.md",
+                "file": "Odin project/javascript advance/Closure and Module pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "java Backend/Hibernate/Mappings.md",
+                "file": "Odin project/javascript advance/Closure and Module pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "java Backend/Hibernate/Mappings.md"
+                "file": "Odin project/javascript advance/Closure and Module pattern.md"
               }
             }
           },
@@ -141,11 +141,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 465.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -158,12 +159,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba7c151769a2ba0d",
+  "active": "51813268b5e9d2ed",
   "lastOpenFiles": [
+    "Cloud computing/4. google cloud SDK.md",
+    "Cloud computing/2. Cloud console.md",
+    "Cloud computing/1. Cloud vs Traditional architecture.md",
+    "JAVA methods/Arrays.md",
+    "Untitled.md",
+    "Untitled.canvas",
+    "DSA problem/Problems.md",
+    "rust/Intro.md",
+    "Odin project/React/2 . States in react.md",
+    "Bug crowd taxanomy/P4.md",
+    "Untitled",
+    "java Backend/Hibernate/Mappings.md",
+    "java Backend/Hibernate/Spring data jpa queries.md",
+    "java Backend/Hibernate/Primary key.md",
     "java Backend/Hibernate/Context.md",
     "statics/Pasted image 20240608121240.png",
-    "java Backend/Hibernate/Primary key.md",
-    "java Backend/Hibernate/Mappings.md",
     "statics/Pasted image 20240608120150.png",
     "statics/Pasted image 20240608115451.png",
     "statics/Pasted image 20240608115433.png",
@@ -188,23 +201,12 @@
     "javaCollection/2. Preliminaries.md",
     "javaCollection/3. Collection interface.md",
     "javaCollection/6. List.md",
-    "javaCollection/7. Maps.md",
-    "java Backend/servlet/Intro.md",
     "java Backend/Spring",
     "java Backend/servlet",
     "java Backend",
-    "rust/Intro.md",
     "rust",
-    "javaCollection/4. Set.md",
-    "Odin project/React/7. Class Components.md",
-    "Odin project/React/8. Component Life cycle.md",
-    "Odin project/React/9. React Router.md",
-    "Odin project/React/2 . States in react.md",
-    "GIT Commands/Commands.md",
     "Odin project/React/React internals",
     "javaCollection",
-    "MCA/1st Sem/Lab_expirements/java_lab",
-    "MCA/1st Sem/Lab_expirements/WD_Lab",
-    "Untitled.canvas"
+    "MCA/1st Sem/Lab_expirements/java_lab"
   ]
 }

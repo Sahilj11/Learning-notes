@@ -129,3 +129,7 @@ Certainly! Here are 20 important methods for working with arrays in Java, along 
     ```
 
 Remember to import `java.util.Arrays` when using these methods. Arrays in Java are zero-indexed, so the first element is at index 0, the second at index 1, and so on.
+```js
+asdaasd
+asdasdad
+```
