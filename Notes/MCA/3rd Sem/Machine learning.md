@@ -174,7 +174,21 @@ Machine learning is generally categorized into three main types based on how the
 
 ### K mean clustering
 
-K-Means Clustering is one of the most popular unsupervised learning algorithms used to partition a dataset into distinct groups, or clusters. The goal is to divide the data points into k clusters, where each data point belongs to the cluster with the nearest mean (centroid), resulting in clusters of similar data points.
+- K-Means Clustering is one of the most popular unsupervised learning algorithms used to partition a dataset into distinct groups, or clusters. The goal is to divide the data points into k clusters, where each data point belongs to the cluster with the nearest mean (centroid), resulting in clusters of similar data points.
+- find centroid (prototype)(mean) of K cluster.
+- **steps**
+ - Randomly place K centroid.
+ - assign each data point to its closest cluster.
+ - update the centroid
+#### stopping
+- after some iteration.
+- when centroid dont change.
+- when few/no data point change cluster.
+
+#### problems
+- needs K: K-means requires the user to specify the number of clusters (K) in advance. This can be a drawback because the "correct" number of clusters is often not known beforehand. Choosing an inappropriate K can lead to poor clustering results. For example, if K is too low, distinct groups might be merged, while if K is too high, the algorithm might create clusters that are not meaningful. 
+- outlier sensitive: K-means is sensitive to outliers because it uses the mean to calculate the center of a cluster. Outliers, which are data points that are significantly different from others, can skew the mean and, consequently, the position of the cluster center. This can result in poorly defined clusters, where some clusters may be heavily influenced by outliers rather than representing the true underlying structure of the data.
+- hard clustering: K-means performs hard clustering, meaning each data point is assigned to exactly one cluster. This can be limiting when data points naturally belong to more than one cluster or when the boundaries between clusters are not clear. Hard clustering forces a strict division, which might not accurately reflect the data's true structure, especially in cases where clusters overlap.
 
 #### 1. Key Concepts
 - Clusters: Groups of similar data points.
@@ -199,3 +213,65 @@ Repeat the assignment and update steps until the centroids no longer change sign
 Final Clusters:
 
 Once the centroids stabilize, the algorithm outputs the final clusters.
+
+### Self organising map
+- use processing units (neurons) to place centroid on an adjustable map , SOM.
+- model self organize based on learning rules and interaction.
+- processing units maintains proximity relationship as they grow.
+![](../../statics/Pasted%20image%2020240904075919.png)
+#### Goal
+- find weight values such that adjacent units have similar values.
+- input are assigned to units that are similar to them.
+- each unit become center of a cluster.
+- K-mean == constrained SOM! 
+
+#### SOM (for exam)
+A Self-Organizing Map (SOM) is an unsupervised learning algorithm used for clustering and visualizing high-dimensional data. It was introduced by Teuvo Kohonen in the 1980s and is sometimes referred to as a "Kohonen map."
+
+##### **Key Concepts**
+
+1. **Grid of Neurons:**
+   - SOM consists of a grid (usually 2D) of neurons or nodes.
+   - Each neuron is associated with a weight vector that has the same dimension as the input data.
+   - The grid can be rectangular or hexagonal, where each neuron is connected to its neighbors.
+
+2. **Training Process:**
+   - **Initialization:** Neurons are initialized with random weight vectors.
+   - **Input Data:** For each input data point:
+     1. **Best Matching Unit (BMU):** The neuron with the weight vector most similar to the input data point is identified as the BMU.
+     2. **Neighborhood Update:** The weights of the BMU and its neighboring neurons are adjusted to become more like the input data point. The amount of adjustment depends on the distance of the neuron from the BMU (closer neurons are adjusted more).
+     3. **Learning Rate:** The learning rate and the neighborhood radius decrease over time, making the SOM converge.
+
+3. **Topology Preservation:**
+   - SOM preserves the topological relationships of the input data. Data points that are similar in the input space will map to neurons that are close to each other on the grid.
+   - This makes SOM useful for visualizing complex, high-dimensional data in a 2D map.
+
+4. **Dimensionality Reduction:**
+   - SOM can be seen as a method of reducing the dimensionality of data while preserving its structure, making it easier to visualize and interpret.
+
+##### **Applications of SOM**
+
+1. **Data Visualization:**
+   - SOM is often used to visualize complex, high-dimensional datasets. For example, it can be used to create a map of customer segments in marketing data.
+
+2. **Clustering:**
+   - SOM clusters data in an unsupervised manner, grouping similar data points together on the grid. Each neuron can be seen as representing a cluster of similar data points.
+
+3. **Feature Mapping:**
+   - SOM can be used to project data onto a lower-dimensional space, helping to identify patterns and structures within the data.
+
+4. **Anomaly Detection:**
+   - By mapping normal data to a SOM, anomalies can be detected by identifying data points that map to unusual or less frequently activated neurons.
+
+##### **Advantages of SOM**
+
+- **Topological Preservation:** SOM maintains the relationships between data points, making it great for visualization.
+- **Interpretability:** The 2D grid structure allows for easy interpretation of the results.
+- **Unsupervised Learning:** SOM doesn't require labeled data, making it useful in scenarios where labeled data is scarce or unavailable.
+
+##### **Limitations of SOM**
+
+- **Complexity:** Training SOM can be computationally intensive, especially with large datasets or large grids.
+- **Fixed Grid Size:** The size of the grid must be decided beforehand, which can be challenging. A too-small grid might not capture all the data's nuances, while a too-large grid can be computationally expensive.
+- **Static Clusters:** Once the SOM is trained, the clusters are static and may not adapt well to new data without retraining.
+
