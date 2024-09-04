@@ -274,4 +274,85 @@ A Self-Organizing Map (SOM) is an unsupervised learning algorithm used for clust
 - **Complexity:** Training SOM can be computationally intensive, especially with large datasets or large grids.
 - **Fixed Grid Size:** The size of the grid must be decided beforehand, which can be challenging. A too-small grid might not capture all the data's nuances, while a too-large grid can be computationally expensive.
 - **Static Clusters:** Once the SOM is trained, the clusters are static and may not adapt well to new data without retraining.
+#### Numerical
+
+##### **Step 1: Initial Setup**
+
+ **Dataset**
+We'll use a small dataset with 2-dimensional data points:
+- Data Points: `[(0.1, 0.2), (0.8, 0.6), (0.3, 0.4), (0.9, 0.7)]`
+
+**SOM Grid**
+We'll create a 2x2 SOM grid with 4 neurons. Each neuron will have a weight vector initialized randomly. Let's assume the following initial weights:
+- Neuron 1: `(0.2, 0.3)`
+- Neuron 2: `(0.6, 0.9)`
+- Neuron 3: `(0.4, 0.5)`
+- Neuron 4: `(0.7, 0.8)`
+
+##### **Step 2: Training Process**
+
+We'll go through one iteration of training to see how SOM updates the neurons' weights.
+
+**Iteration 1: Process Data Point (0.1, 0.2)**
+
+1. **Find the Best Matching Unit (BMU):**
+   - Calculate the Euclidean distance between the input `(0.1, 0.2)` and each neuron's weight vector:
+     - Neuron 1: Distance = `√((0.1 - 0.2)² + (0.2 - 0.3)²) = √(0.01 + 0.01) = √0.02 ≈ 0.14`
+     - Neuron 2: Distance = `√((0.1 - 0.6)² + (0.2 - 0.9)²) = √(0.25 + 0.49) = √0.74 ≈ 0.86`
+     - Neuron 3: Distance = `√((0.1 - 0.4)² + (0.2 - 0.5)²) = √(0.09 + 0.09) = √0.18 ≈ 0.42`
+     - Neuron 4: Distance = `√((0.1 - 0.7)² + (0.2 - 0.8)²) = √(0.36 + 0.36) = √0.72 ≈ 0.85`
+   - **BMU:** Neuron 1 has the smallest distance (0.14), so it's the BMU.
+
+2. **Update BMU and Neighboring Neurons:**
+   - Assume a learning rate of `0.5` and a neighborhood radius that covers all neurons.
+   - **Update Neuron 1 (BMU):**
+     - New Weight = Old Weight + Learning Rate * (Input - Old Weight)
+     - `(0.2, 0.3) + 0.5 * ((0.1, 0.2) - (0.2, 0.3)) = (0.2, 0.3) + (0.5 * (-0.1, -0.1)) = (0.2, 0.3) + (-0.05, -0.05) = (0.15, 0.25)`
+   - **Update Neuron 2:**
+     - New Weight = `(0.6, 0.9) + 0.5 * ((0.1, 0.2) - (0.6, 0.9)) = (0.6, 0.9) + 0.5 * (-0.5, -0.7) = (0.6, 0.9) + (-0.25, -0.35) = (0.35, 0.55)`
+   - **Update Neuron 3:**
+     - New Weight = `(0.4, 0.5) + 0.5 * ((0.1, 0.2) - (0.4, 0.5)) = (0.4, 0.5) + 0.5 * (-0.3, -0.3) = (0.4, 0.5) + (-0.15, -0.15) = (0.25, 0.35)`
+   - **Update Neuron 4:**
+     - New Weight = `(0.7, 0.8) + 0.5 * ((0.1, 0.2) - (0.7, 0.8)) = (0.7, 0.8) + 0.5 * (-0.6, -0.6) = (0.7, 0.8) + (-0.3, -0.3) = (0.4, 0.5)`
+
+###### **New Weights After First Iteration:**
+- Neuron 1: `(0.15, 0.25)`
+- Neuron 2: `(0.35, 0.55)`
+- Neuron 3: `(0.25, 0.35)`
+- Neuron 4: `(0.4, 0.5)`
+
+##### **Step 3: Repeat for Other Data Points**
+
+The training process is repeated for each data point in the dataset. Each time, the BMU is found, and the weights of the BMU and its neighbors are updated. Over many iterations, the neurons' weights gradually adjust to represent the input data more accurately, and similar data points map to neurons that are close to each other on the grid.
+
+##### **Final SOM After Training**
+After multiple iterations, the weights of the neurons stabilize, and the grid reflects the structure of the data. Similar data points will be close together on the map, and you can use the SOM to visualize and cluster the data.
+
+##### **Summary**
+
+- **Input:** A set of 2D data points.
+- **SOM Grid:** A 2x2 grid with neurons initialized with random weights.
+- **Training:** For each data point, find the BMU, then update the BMU and its neighbors.
+- **Result:** A map where similar data points are close together, providing a visual representation of the data's structure.
+
+This simple example shows how SOM works by adjusting neuron weights to cluster and organize data in a way that preserves the relationships between the data points.
+
+Here's a comparison between K-means and SOM in a table format:
+
+| **Aspect**                      | **K-means**                                          | **Self-Organizing Map (SOM)**                   |
+|---------------------------------|-----------------------------------------------------|-------------------------------------------------|
+| **Clustering Approach**         | Partition-based, clusters data into `K` groups.     | Grid-based, organizes data into a 2D or 3D grid.|
+| **Data Representation**         | Centroids represent the center of clusters.         | Neurons in the grid represent clusters.         |
+| **Initialization**              | Requires specifying the number of clusters `K`.     | Requires specifying grid dimensions (e.g., 2x2).|
+| **Assignment Type**             | Hard assignment: each data point belongs to one cluster. | Soft assignment: data points influence the BMU and its neighbors. |
+| **Learning Process**            | Iteratively updates centroids by minimizing intra-cluster variance. | Iteratively updates neuron weights to reflect input data, preserving topological structure. |
+| **Output**                      | Set of `K` distinct clusters.                       | A grid where similar data points map to nearby neurons. |
+| **Topology Preservation**       | No preservation of topological relationships.       | Preserves topological relationships, mapping similar data points to nearby neurons. |
+| **Sensitivity to Initialization**| High sensitivity to initial centroid positions.    | Less sensitive due to neighborhood adjustments. |
+| **Convergence**                 | Typically faster, but results can vary based on initialization. | Slower, but usually provides a stable, structured output. |
+| **Visualization**               | Produces distinct clusters without inherent structure. | Provides a structured, visual representation of data relationships. |
+| **Flexibility**                 | Fixed clusters, requires re-running for new data.   | More flexible, grid adapts to new data over training. |
+| **Common Applications**         | Market segmentation, document clustering, image compression. | Data visualization, pattern recognition, anomaly detection. |
+| **Example Output**              | `K` clusters each represented by a centroid.        | A 2D grid where each neuron represents a cluster, with neighbors reflecting similar data. |
+| **Scalability**                 | Scalable to large datasets, but limited by `K`.     | Can be computationally intensive, especially with large grids. |
 
