@@ -401,13 +401,9 @@ PCA is useful for preventing **overfitting** in machine learning by reducing the
 #### 2. create covariance matrix (if 2 attribute then 2X2 , if 3 attribute then 3X3 and so on).
 
 If you have three attributes (or features) \(x\), \(y\), and \(z\), the **covariance matrix** will be a 3x3 symmetric matrix that represents the covariances between each pair of attributes.
-\[
-\text{Cov}(X) = \begin{pmatrix}
-\text{Cov}(x, x) & \text{Cov}(x, y) & \text{Cov}(x, z) \\
-\text{Cov}(y, x) & \text{Cov}(y, y) & \text{Cov}(y, z) \\
-\text{Cov}(z, x) & \text{Cov}(z, y) & \text{Cov}(z, z)
-\end{pmatrix}
-\]
+
+![](../../statics/Pasted%20image%2020240907082423.png)
+
 
 Where:
 - **Cov(x, x)**, **Cov(y, y)**, and **Cov(z, z)** are the **variances** of \(x\), \(y\), and \(z\), respectively.
@@ -419,9 +415,8 @@ Where:
 
 For two variables \(a\) and \(b\), the covariance is calculated as:
 
-\[
-\text{Cov}(a, b) = \frac{1}{n-1} \sum_{i=1}^{n} (a_i - \bar{a})(b_i - \bar{b})
-\]
+![](../../statics/Pasted%20image%2020240907082318.png)
+
 Where \( \bar{a} \) and \( \bar{b} \) are the means of the variables \(a\) and \(b\), respectively, and \(n\) is the number of observations.
 
 #### 3. Finding eigen value 
