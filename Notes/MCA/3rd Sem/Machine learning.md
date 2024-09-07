@@ -422,3 +422,12 @@ Where \( \bar{a} \) and \( \bar{b} \) are the means of the variables \(a\) and \
 #### 3. Finding eigen value 
 
 ![](../../statics/Pasted%20image%2020240907082106.png)
+
+# UNIT 2
+
+## Decision Tree
+
+A Decision Tree is a supervised learning algorithm used for both classification and regression tasks. It splits the dataset into subsets based on the most significant features, forming a tree structure where each internal node represents a decision based on a feature, each branch represents an outcome of that decision, and each leaf node represents the final prediction.
+
+![](../../statics/Pasted%20image%2020240907083712.png)
+![](../../statics/Pasted%20image%2020240907084243.png)
