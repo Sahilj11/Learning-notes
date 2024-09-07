@@ -356,3 +356,74 @@ Here's a comparison between K-means and SOM in a table format:
 | **Example Output**              | `K` clusters each represented by a centroid.        | A 2D grid where each neuron represents a cluster, with neighbors reflecting similar data. |
 | **Scalability**                 | Scalable to large datasets, but limited by `K`.     | Can be computationally intensive, especially with large grids. |
 
+## Overfitting and UnderFitting
+**Overfitting and Underfitting** are common issues in machine learning models that relate to how well the model generalizes to unseen data.
+
+### 1. **Overfitting**:
+- **Definition**: Overfitting occurs when a model learns the training data too well, including noise and outliers, resulting in poor generalization to new, unseen data.
+- **Symptoms**: High accuracy on training data but poor performance on test/validation data.
+- **Cause**: The model is too complex, with too many parameters relative to the amount of training data.
+- **Solution**:
+  - Use simpler models (reduce model complexity).
+  - Apply regularization techniques (e.g., L1, L2).
+  - Gather more training data.
+  - Use cross-validation to tune the model properly.
+
+### 2. **Underfitting**:
+- **Definition**: Underfitting occurs when a model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and test/validation data.
+- **Symptoms**: Low accuracy on both training and validation/test data.
+- **Cause**: The model has too few parameters or is not trained long enough, resulting in insufficient learning.
+- **Solution**:
+  - Use a more complex model.
+  - Train for a longer period (increase epochs in neural networks).
+  - Improve feature engineering to capture more relevant patterns.
+  - Remove data noise that may interfere with learning. 
+
+## Principal Component analysis
+**Principal Component Analysis (PCA)** is a dimensionality reduction technique used to simplify complex datasets by transforming them into a new set of variables, called **principal components**, which capture the maximum variance in the data while reducing dimensionality.
+
+### Key Concepts:
+
+1. **Overfitting**:
+   - In machine learning, overfitting occurs when a model is too complex and fits the noise in the data rather than generalizing to unseen data. PCA helps mitigate **overfitting** by reducing the number of input features (dimensionality) and focusing only on the most important ones. By keeping the principal components that explain the most variance, PCA removes less important, noisy features, which reduces model complexity and overfitting.
+
+2. **Principal Components**:
+   - **Principal components** are the new set of axes or variables created by PCA. These components are linear combinations of the original features, and they are ordered by the amount of variance they capture. The first principal component captures the most variance in the data, the second captures the next highest amount of variance orthogonal to the first, and so on. Only the most significant components are retained, simplifying the dataset while preserving its essential information.
+
+3. **Orthogonous**:
+   - Each principal component is **orthogonal** (perpendicular) to the others. This means that there is no correlation between the principal components. By ensuring orthogonality, PCA captures the variance in different directions of the data without overlap, making the components statistically independent from one another. This property ensures that each principal component captures unique information, further aiding in reducing overfitting.
+
+### Summary:
+PCA is useful for preventing **overfitting** in machine learning by reducing the dimensionality of the data. It identifies the most important **principal components**, which are **orthogonal** to one another, thus capturing the maximum variance in the data while ignoring noise and redundant information. This results in a simpler, more generalizable model.
+
+### Numerical
+#### 1. Calculate mean of each attribute
+#### 2. create covariance matrix (if 2 attribute then 2X2 , if 3 attribute then 3X3 and so on).
+
+If you have three attributes (or features) \(x\), \(y\), and \(z\), the **covariance matrix** will be a 3x3 symmetric matrix that represents the covariances between each pair of attributes.
+\[
+\text{Cov}(X) = \begin{pmatrix}
+\text{Cov}(x, x) & \text{Cov}(x, y) & \text{Cov}(x, z) \\
+\text{Cov}(y, x) & \text{Cov}(y, y) & \text{Cov}(y, z) \\
+\text{Cov}(z, x) & \text{Cov}(z, y) & \text{Cov}(z, z)
+\end{pmatrix}
+\]
+
+Where:
+- **Cov(x, x)**, **Cov(y, y)**, and **Cov(z, z)** are the **variances** of \(x\), \(y\), and \(z\), respectively.
+- **Cov(x, y)** = **Cov(y, x)** is the **covariance** between \(x\) and \(y\).
+- **Cov(x, z)** = **Cov(z, x)** is the **covariance** between \(x\) and \(z\).
+- **Cov(y, z)** = **Cov(z, y)** is the **covariance** between \(y\) and \(z\).
+
+##### Covariance Formula:
+
+For two variables \(a\) and \(b\), the covariance is calculated as:
+
+\[
+\text{Cov}(a, b) = \frac{1}{n-1} \sum_{i=1}^{n} (a_i - \bar{a})(b_i - \bar{b})
+\]
+Where \( \bar{a} \) and \( \bar{b} \) are the means of the variables \(a\) and \(b\), respectively, and \(n\) is the number of observations.
+
+#### 3. Finding eigen value 
+
+![](../../statics/Pasted%20image%2020240907082106.png)
