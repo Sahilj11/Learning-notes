@@ -160,3 +160,29 @@ Conclusion:- Efficient utilization.
 
 ![](../../statics/Pasted%20image%2020240909181638.png)
 
+
+# UNIT 2
+
+## Process
+- It is a program in execution.
+- A program is not a process by defalut. program is a passive entity i.e a file containing a list of instructions stored on disk
+- program becomes process when an executable file is loaded into main memory and when its PCB is created.
+- A process on the other hand is an active entity , which requires resources like main memory, CPU time, register , system buses etc.
+![](../../statics/Pasted%20image%2020240909190011.png)
+![](../../statics/Pasted%20image%2020240909190140.png)
+![](../../statics/Pasted%20image%2020240909190224.png)
+
+### PCB (Process control block)
+- each process is represented in OS by PCB also called task control block.
+- PCB simply serves as a repository for any information that may vary from process to process. It contains many piecies of information
+- process state:- the state may be new , ready , running , waiting , halted and so on.
+- program counter:- contains address of next instruction to be executed for this process.
+- CPU register:- the register vary in number and type , depending on computer architecture. like accumulators etc.
+- CPU scheduling information:- includes process priority, pointers to scheduling queues, and any other scheduling parameters.
+- memory management information:- 
+
+### Process State
+![](../../statics/Pasted%20image%2020240909190825.png)
+![](../../statics/Pasted%20image%2020240909190931.png)
+
+
