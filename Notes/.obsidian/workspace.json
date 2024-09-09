@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MCA/3rd Sem/Machine learning.md",
+                "file": "MCA/3rd Sem/AOS.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MCA/3rd Sem/Machine learning.md",
+                "file": "MCA/3rd Sem/AOS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MCA/3rd Sem/Machine learning.md",
+                "file": "MCA/3rd Sem/AOS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MCA/3rd Sem/Machine learning.md"
+                "file": "MCA/3rd Sem/AOS.md"
               }
             }
           },
@@ -161,6 +161,10 @@
   },
   "active": "51813268b5e9d2ed",
   "lastOpenFiles": [
+    "MCA/3rd Sem/AOS.md~",
+    "statics/Pasted image 20240909172132.png",
+    "MCA/3rd Sem/Data Analytics.md",
+    "MCA/3rd Sem/Machine learning.md",
     "MCA/3rd Sem/Machine learning.md~",
     "statics/Pasted image 20240907084243.png",
     "statics/Pasted image 20240907083712.png",
@@ -171,7 +175,6 @@
     "statics/Pasted image 20240902232307.png",
     "statics/Pasted image 20240902232142.png",
     "statics/Pasted image 20240902230845.png",
-    "statics/Pasted image 20240902230735.png",
     "Odin project/javascript advance/Closure and Module pattern.md",
     "Cloud computing/4. google cloud SDK.md",
     "Cloud computing/2. Cloud console.md",
@@ -199,8 +202,6 @@
     "java Backend/Spring/Intro.md",
     "MCA/2nd sem",
     "javaCollection/5. Queues.md",
-    "javaCollection/1. The main interfaces of java collection.md",
-    "javaCollection/2. Preliminaries.md",
     "java Backend/Spring",
     "java Backend/servlet",
     "java Backend",
