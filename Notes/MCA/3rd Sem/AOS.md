@@ -19,6 +19,11 @@ OS provides convinence to its users and provides efficient resource allocation a
 - Network management:- manages network protocoles and functions , enabling the OS to establish network connection.
 - Security and protection
 
+## Structure of OS
+
+### INTRO
+- common approach is to partition the tasks into small components , or modules , rather than have one monolithic system 
+
 ## Types of OS 
 
 ### Batch OS
@@ -108,4 +113,31 @@ Conclusion:- Efficient utilization.
 - complex scheduling
 - complex memory management
 
-### Multitasking 
+### Multitasking OS / time sharing / multi programming with round robin / fair share
+- It is a logical extension of multi programming , it allows many users to share computer simultaneously. the CPU execute multiple jobs by switching among them. but the switch occurs so rapidly that it give user impression of parallelism. 
+- For Multitasking to take place , firstly there should be multi-programming i.e presence of multiple program ready for execution. and secondly the concept of time sharing.
+
+![](../../statics/Pasted%20image%2020240909180044.png)
+
+### Multi processing OS / tightly coupled system
+- multiprocessor OS refers to the use of two or more CPU within a single computer system. these multiple cpu share system bus , memory and other peripheral devices.
+- multiple concurrent processes each can run on a separate CPU, here achieving a true parallelism.
+
+![](../../statics/Pasted%20image%2020240909180519.png)
+![](../../statics/Pasted%20image%2020240909180603.png)
+![](../../statics/Pasted%20image%2020240909180651.png)
+
+### Real time OS
+- special purpose OS which has well defined time constraints. Processing must be done within the defined time limit or system will fail.
+- valued more quickly or how predictably it can respond, without buffer delays than for the amount of work it can perform in a given time period.
+- For eg: Air traffic control system , petroleum refinery.
+![](../../statics/Pasted%20image%2020240909181137.png)
+![](../../statics/Pasted%20image%2020240909181150.png)
+
+### Distributed OS
+- It is a software over a collection of independent, networked, communicating, loosely coupled nodes and physically separate computational nodes.
+- nodes communicate with one another through various network such as internet. they handle jobs which are serviced by multiple CPUs. Each individual node holds a specific software subset of the global aggregate OS.
+- Suitable when :- resource sharing, computation speedup,Reliability, communication.
+
+![](../../statics/Pasted%20image%2020240909181638.png)
+
