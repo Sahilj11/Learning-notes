@@ -22,7 +22,26 @@ OS provides convinence to its users and provides efficient resource allocation a
 ## Structure of OS
 
 ### INTRO
-- common approach is to partition the tasks into small components , or modules , rather than have one monolithic system 
+- common approach is to partition the tasks into small components , or modules , rather than have one monolithic system.
+
+#### Simple Structure
+- many OS do not have well-defined structures. initially started as simple ,small and limited system and then grew beyond their original scope. MS-DOS
+- not divided into modules. its interface , levels and functionality are not well separated.
+
+#### Layered approach
+![](../../statics/Pasted%20image%2020240909183111.png)
+
+#### Micro-kernel approach
+- this method structures the OS by removing all nonessential component from kernel and implementing them as system and user-level program. the result is small kernel.
+![](../../statics/Pasted%20image%2020240909183324.png)
+- Mach OS used Micro-kernel approach.
+- benefit is , it makes extending the OS easier. All services are added to user space and consequently do not require modification of kernel.
+
+## System Calls
+- provides means for a user program to ask the OS to perform tasks reserved for OS on the user program behalf.
+![](../../statics/Pasted%20image%2020240909183847.png)
+- it provides a interface to the services made available by OS. these calls are generally available as routines written in C and C++.
+- API specifies a set of functions that are available to an application programmer, including the parameters that are passed to each function and the return values the programmer can except.
 
 ## Types of OS 
 
