@@ -1,4 +1,5 @@
 {
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "Notes/statics"
+  "attachmentFolderPath": "Notes/statics",
+  "newLinkFormat": "relative"
 }
