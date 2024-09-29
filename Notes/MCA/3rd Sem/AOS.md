@@ -1,5 +1,4 @@
 # UNIT 1
-
 ## INTRO
 OS is a program that act as a intermediary b/w computer user and computer.
 OS provides an environment to run various application program.
