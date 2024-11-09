@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/System Design/Database Design.md",
+                "file": "Notes/MCA/3rd Sem/Data Analytics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Notes/System Design/Database Design.md",
+                "file": "Notes/MCA/3rd Sem/Data Analytics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Notes/System Design/Database Design.md",
+                "file": "Notes/MCA/3rd Sem/Data Analytics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Notes/System Design/Database Design.md"
+                "file": "Notes/MCA/3rd Sem/Data Analytics.md"
               }
             }
           }
@@ -148,10 +148,14 @@
   },
   "active": "4dfd4190d3de235a",
   "lastOpenFiles": [
+    "Notes/Elastic Search/Basic.md",
+    "Notes/statics/Pasted image 20241003091311.png",
+    "Notes/System Design/Database Design.md",
+    "Notes/Elastic Search",
+    "Untitled",
     "Notes/statics/Pasted image 20240929141145.png",
     "Notes/statics/Pasted image 20240929141003.png",
     "Notes/GIT Commands/Commands.md",
-    "Notes/System Design/Database Design.md",
     "Notes/statics/Pasted image 20240929140738.png",
     "Notes/MCA/3rd Sem/AOS.md",
     "Notes/System Design",
