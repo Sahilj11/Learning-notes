@@ -185,3 +185,184 @@ Conclusion:- Efficient utilization.
 ![](../../statics/Pasted%20image%2020240909190931.png)
 
 
+## Scheduling 
+#### Intro
+- Scheduling :- process of determining which process in ready queue is allocated to CPU
+- Types
+	- Non-pre-emptive:- once CPU has been allocated to process , the process keep the CPU until it release the CPU willingly
+	- ![](../../statics/Pasted%20image%2020241111174405.png)
+	- ![](../../statics/Pasted%20image%2020241111174429.png)
+	- ![](../../statics/Pasted%20image%2020241111174516.png)
+	- ![](../../statics/Pasted%20image%2020241111180212.png)
+#### Scheduling Performance criteria
+- CPU Utilisation
+- Throughput:- number of process per unit time.
+- Waiting time
+- Response time:- time takes to start responding , not the time takes to output response
+
+#### Terms 
+![](../../statics/Pasted%20image%2020241111174819.png)
+- Convey effect:- if smaller process has to wait more for the CPU because of Larger process then this effect is called convey effect , it result in more avg waiting time. Solution. smaller process have to be executed before longer process.
+
+#### Multilevel scheduling
+![](../../statics/Pasted%20image%2020241111181225.png)
+![](../../statics/Pasted%20image%2020241111181404.png)
+## Deadlock
+![](../../statics/Pasted%20image%2020241111181834.png)
+![](../../statics/Pasted%20image%2020241111182017.png)
+![](../../statics/Pasted%20image%2020241111182150.png)
+![](../../statics/Pasted%20image%2020241111182205.png)
+![](../../statics/Pasted%20image%2020241111182317.png)
+![](../../statics/Pasted%20image%2020241111182454.png)
+
+## Deadlock handling 
+![](../../statics/Pasted%20image%2020241112075301.png)
+![](../../statics/Pasted%20image%2020241112075322.png)
+![](../../statics/Pasted%20image%2020241112075339.png)
+![](../../statics/Pasted%20image%2020241112075419.png)
+![](../../statics/Pasted%20image%2020241112075451.png)
+![](../../statics/Pasted%20image%2020241112075520.png)
+Deadlock avoidance is a strategy in operating systems to prevent situations where processes become indefinitely blocked, waiting for resources held by each other. Unlike deadlock prevention, which limits resource allocation to avoid circular waiting, deadlock avoidance dynamically examines resource allocation to ensure safe states.
+
+### Key Concepts of Deadlock Avoidance
+
+1. **Deadlock Conditions**:
+   - Deadlock occurs when the following four conditions hold simultaneously:
+     - **Mutual Exclusion**: Only one process can use a resource at a time.
+     - **Hold and Wait**: Processes holding resources can request additional ones.
+     - **No Preemption**: Resources cannot be forcibly taken; they must be released by the process.
+     - **Circular Wait**: A closed chain of processes exists where each process holds resources requested by the next.
+   - Deadlock avoidance aims to prevent circular wait through careful resource allocation.
+
+2. **Safe and Unsafe States**:
+   - A **safe state** is one in which the system can allocate resources without leading to a deadlock, as it can guarantee each process will eventually finish.
+   - An **unsafe state** doesn’t mean a deadlock occurs immediately, but it has a potential for deadlock if resource requests are handled poorly.
+   - Deadlock avoidance algorithms ensure the system remains in a safe state.
+
+3. **Banker’s Algorithm**:
+   - One of the most well-known deadlock avoidance algorithms.
+   - Works by analyzing the maximum resources each process might need and ensuring that resources are only allocated if they keep the system in a safe state.
+   - **Algorithm steps**:
+     - Check if enough resources are available to fulfill the request.
+     - Pretend to allocate the resources and test if the system remains in a safe state.
+     - If safe, allocate resources; otherwise, deny the request.
+
+4. **Resource Allocation Graph (RAG)**:
+   - A graphical approach to model resource allocation and detect potential deadlocks.
+   - **Claim Edges**: Show potential future requests (dotted lines).
+   - If all requests can be resolved without forming a cycle, the allocation is safe; if a cycle forms, a deadlock risk exists.
+   
+5. **Advantages of Deadlock Avoidance**:
+   - Prevents deadlocks by maintaining safe states and carefully granting resource requests.
+   - More flexible than deadlock prevention since it doesn’t impose strict rules on resource allocation and usage.
+
+6. **Challenges of Deadlock Avoidance**:
+   - Requires knowledge of maximum resource requirements, which can be difficult to predict.
+   - May involve complex calculations, especially in systems with multiple resources and processes.
+   - Inefficient for high-load systems, as it may delay processes to avoid entering an unsafe state.
+
+### When to Use Deadlock Avoidance
+- Suitable for systems where resource usage is predictable.
+- Common in databases, real-time systems, and operating systems where resources are managed and predictable constraints are in place.
+## Memory 
+![](../../statics/Pasted%20image%2020241112063441.png)
+![](../../statics/Pasted%20image%2020241112063909.png)
+![](../../statics/Pasted%20image%2020241112064028.png)
+![](../../statics/Pasted%20image%2020241112064109.png)
+![](../../statics/Pasted%20image%2020241112065239.png)
+![](../../statics/Pasted%20image%2020241112065425.png)
+
+
+![](../../statics/Pasted%20image%2020241112065638.png)
+![](../../statics/Pasted%20image%2020241112065732.png)![](../../statics/Pasted%20image%2020241112070035.png)
+![](../../statics/Pasted%20image%2020241112070126.png)
+![](../../statics/Pasted%20image%2020241112070243.png)
+![](../../statics/Pasted%20image%2020241112070329.png)
+![](../../statics/Pasted%20image%2020241112070458.png)
+In operating systems, paging is a memory management technique that allows processes to use more memory than physically available by dividing memory into fixed-size blocks, or pages. This helps in efficiently managing and allocating memory while supporting multi-programming. Here’s an overview:
+
+### 1. **Paging Basics**
+   - Physical memory (RAM) is divided into fixed-size blocks called **frames**.
+   - Logical memory (address space of a process) is divided into equally sized **pages**.
+   - Pages of a process are mapped to frames in physical memory through a **page table**.
+
+### 2. **Page Table**
+   - Each process has a page table that keeps track of where its pages are stored in physical memory.
+   - The page table maps each page in virtual memory to a frame in physical memory.
+   - **Page table entries (PTEs)** typically contain the frame number, protection bits (read/write), and a valid/invalid bit.
+
+### 3. **Page Faults**
+   - A **page fault** occurs when a process tries to access a page not currently in physical memory.
+   - The OS handles a page fault by loading the missing page from secondary storage (e.g., disk) into a free frame in RAM.
+   - This may involve **page replacement** if no free frames are available, where the OS swaps out a page from RAM to disk.
+
+### 4. **Page Replacement Algorithms**
+   - To manage limited physical memory, the OS may need to replace pages in memory with pages from disk.
+   - Common algorithms include:
+     - **FIFO (First-In, First-Out)**: Replaces the oldest page in memory.
+     - **LRU (Least Recently Used)**: Replaces the page that hasn't been used for the longest time.
+     - **Optimal**: Replaces the page that won’t be used for the longest time in the future (theoretical).
+
+### 5. **Benefits of Paging**
+   - **Eliminates External Fragmentation**: Pages are of a fixed size, so there’s no external fragmentation.
+   - **Efficient Memory Use**: Processes can use non-contiguous memory, allowing better use of available memory.
+   - **Virtual Memory**: Enables processes to use more memory than is physically available.
+
+### 6. **Challenges**
+   - **Page Table Overhead**: Page tables can become large, especially with large virtual address spaces.
+   - **TLB (Translation Lookaside Buffer)**: A cache used to speed up virtual-to-physical address translation by storing recent translations.
+   - **Swapping Overhead**: Frequent page faults and swaps can slow down the system.
+
+Paging thus enables efficient memory management, supporting virtual memory and multi-programming but requires effective page replacement strategies to maintain performance.
+
+![](../../statics/Pasted%20image%2020241112071531.png)
+The **Translation Lookaside Buffer (TLB)** is a specialized, high-speed cache in a computer’s memory management unit (MMU) that stores recent translations of virtual memory addresses to physical memory addresses. The TLB is essential for speeding up the virtual memory process by reducing the time it takes to translate virtual addresses to physical addresses.
+
+1. **Purpose of the TLB**:
+   - Every time a program accesses memory, the virtual address it uses must be translated to a physical address in RAM. This is done by looking up page tables, which can be a slow process.
+   - The TLB stores recent address translations, allowing the system to skip the page table lookup for frequently accessed addresses and directly retrieve the physical address.
+   - By caching these translations, the TLB significantly speeds up memory access for the CPU.
+
+2. **Structure of the TLB**:
+   - A TLB is a small associative memory or content-addressable memory, meaning it can quickly match virtual addresses to physical addresses.
+   - Each TLB entry holds a **virtual page number** and the corresponding **physical frame number**.
+   - Additional information, such as access permissions, is often stored in each TLB entry.
+
+3. **TLB Hit and Miss**:
+   - **TLB Hit**: When a virtual address has a matching entry in the TLB, the physical address is retrieved directly, avoiding a time-consuming page table lookup.
+   - **TLB Miss**: If there’s no matching entry in the TLB, the system performs a page table lookup to get the physical address. This is slower, but once retrieved, the translation is stored in the TLB for future use.
+
+4. **Replacement Policies**:
+   - Since the TLB has limited space, it cannot store all address translations, so older entries must be replaced.
+   - Common replacement policies include **Least Recently Used (LRU)**, **First-In-First-Out (FIFO)**, or **Random Replacement**.
+
+5. **Benefits of TLB**:
+   - **Reduced Latency**: TLB significantly lowers the time required for address translation, which is essential for system performance, especially in multitasking environments.
+   - **Higher CPU Efficiency**: By minimizing time spent on address translation, the TLB allows the CPU to execute instructions more efficiently.
+   
+6. **TLB and Context Switching**:
+   - During a **context switch** (switching between processes), the TLB entries might become invalid since the new process has its own virtual-to-physical address mappings.
+   - Some systems **flush the TLB** on every context switch, while others use **process-specific tags** (ASIDs or Address Space Identifiers) to retain entries between context switches.
+
+7. **TLB in Multi-Level Paging**:
+   - In systems with multi-level paging, the TLB is even more critical because multi-level page tables involve multiple memory accesses for each translation.
+   - TLB entries help bypass these repeated lookups, making memory access quicker and more efficient.
+The TLB is a small, fast cache for storing recent virtual-to-physical address translations, reducing the need for repeated page table lookups. Its presence is vital for efficient memory management, improving overall system performance by allowing quicker memory access.
+## Segmentation 
+
+![](../../statics/Pasted%20image%2020241112073504.png)
+
+![](../../statics/Pasted%20image%2020241112073619.png)
+
+| Feature                | Paging                                                             | Segmentation                                                                                                            |
+| ---------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| **Division of Memory** | Divides memory into fixed-size pages.                              | Divides memory into variable-sized segments.                                                                            |
+| **Logical Unit**       | Pages have no inherent meaning; they’re arbitrary units of memory. | Segments correspond to logical parts of a program (e.g., functions, arrays).                                            |
+| **Size**               | Pages are typically a fixed size (e.g., 4 KB).                     | Segments vary in size based on the program’s structure.                                                                 |
+| **Address Structure**  | Logical address is split into a page number and offset.            | Logical address has a segment number and offset.                                                                        |
+| **Memory Table**       | Uses a page table to map pages to physical memory.                 | Uses a segment table to map segments to physical memory.                                                                |
+| **Fragmentation**      | Leads to internal fragmentation (unused space within pages).       | Leads to external fragmentation (scattered free spaces between segments).                                               |
+| **Protection**         | Typically less granular protection per page.                       | Allows fine-grained protection per segment.                                                                             |
+| **Usage**              | Suitable for systems emphasizing efficient memory use.             | Suitable for systems that require modular programming.                                                                  |
+| **Example Use Cases**  | Common in virtual memory systems like Linux or Windows.            | Used in modular programming or systems that need logical separation, sometimes combined with paging for modern systems. |
+
