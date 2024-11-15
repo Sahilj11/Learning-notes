@@ -1,3 +1,44 @@
+# Spring Ecosystem
+### Spring Ecosystem
+- Spring core : - Spring context, enables spring to manage instances of your app. 
+	- Spring aspects, helps spring intercept and manipulate methods you define your app.
+	- Spring expression language, allow to specifies configuration using specific language.
+#### Foundation of spring
+- Spring works based on principle of inversion of control(IoC) , instead of allowing app to control execution we give control to some other piece of software - in our case, the spring framework. Through configuration we instruct the framework on how to manage the code we write, which defines he logic of the app.
+- Controls refers to action like create an instance , or calling a method
+- IoC container glues spring components and components of your application to the framework together. core component that is responsible for instantiating, configuring, and managing the lifecycle of Spring beans.
+#### Spring boot
+- Spring boot is a project part of the spring ecosystem that introduces the concept of "convention over configuration"
+
+# Spring Context: Defining beans
+#### Intro
+- Context (also know as the application context in spring app) . it is like a place in the memory of your app in which we add all the object instances that we want the framework to manage.
+- Spring uses instances in context to connect your app to various functionalities it provides.
+- We will name these object instances "beans".
+
+#### Maven Project Structure
+![](../../statics/Pasted%20image%2020241115113148.png)
+
+#### Adding new beans to spring context
+- Ways to add bean in context
+	- Using @bean annotation
+	- Using stereotype annotation
+	- Programmatically
+
+**Creating basic project**
+- After adding spring-context dependency 
+- creating main class , creating instance of spring context
+```java
+public class Main{
+	public static void main(String[] args){
+		var context = new AnnotationConfigApplicationContext();
+		Parrot p = new Parrot();
+	}
+}
+```
+
+**Using @Bean annotation**
+- 
 ## Depenedency injection and inversion of control
 
 **Inversion of Control (IoC):**

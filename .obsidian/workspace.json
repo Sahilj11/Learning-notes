@@ -25,12 +25,14 @@
             "id": "a6ea43cb3d219a4b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.7.6"
+                "file": "Notes/java Backend/Spring/Intro.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "title": "Intro"
             }
           }
         ],
@@ -177,6 +179,7 @@
   },
   "active": "a6ea43cb3d219a4b",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20241115113148.png",
     "Notes/statics/Pasted image 20241113180750.png",
     "Notes/statics/Pasted image 20241113180740.png",
     "Notes/statics/Pasted image 20241113180724.png",
@@ -189,7 +192,6 @@
     "Notes/statics/Pasted image 20241112075419.png",
     "Notes/statics/Pasted image 20241112075339.png",
     "Notes/statics/Pasted image 20241112075322.png",
-    "Notes/statics/Pasted image 20241112075301.png",
     "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/Elastic Search/Basic.md",
     "Notes/System Design/Database Design.md",
