@@ -37,8 +37,111 @@ public class Main{
 }
 ```
 
-**Using @Bean annotation**
-- 
+##### Using @Bean annotation
+- Steps:
+	1. Defining a configuration class:- spring config class is specified by fact it is annotated with @Configuration . all spring related config are done like this.
+	2. Create method that return Bean, and annotate method with @Bean:- method name become bean name
+	3. Make spring initialize its context using config class
+```java
+@Configuration
+class beanConfig{
+
+	@Bean
+	Parrot parrot(){
+		var p = new Parrot();
+		p.setName("mik");
+		return p;
+	}
+}
+```
+
+```java
+public class Main{
+
+	public static void main(String[] arg){
+		var context = new AnnotationConfigApplicationContext(beanConfig.class);
+
+		Parrot p = context.getBean(Parrot.class);
+		String n = p.getName();
+	}
+}
+```
+
+**Adding bean of same type**
+
+```java
+@Configuration
+public class ProjectConfig {
+	@Bean
+	Parrot parrot1() {
+		var p = new Parrot();
+		p.setName("Koko");
+		return p;
+	}
+	@Bean
+	Parrot parrot2() {
+		var p = new Parrot();
+		p.setName("Miki");
+		return p;
+	}
+	@Bean
+	Parrot parrot3() {
+		var p = new Parrot();
+		p.setName("Riki");
+		return p;
+	}
+}
+```
+we cannot get bean only by specifying the type, it will give exception. hence need to use bean name which is method name by default or can be specified.
+```java
+public class Main {
+	public static void main(String[] args) {
+		var context = new
+		AnnotationConfigApplicationContext(ProjectConfig.class);
+		Parrot p = context.getBean("parrot2", Parrot.class);
+		System.out.println(p.getName());
+	}
+}
+```
+
+specifying name:
+- `@Bean(name="ri")`
+Defining a bean primary
+- having multiple bean of same type , we can mark a bean you want to be primary using `@Primary` so if no name is given , exception will not occur.
+```java
+@Bean
+@Primary
+Parrot parrot(){
+	return new Parrot();
+}
+```
+
+##### Using Stereotype annotations
+- Steps 
+	1. Using `@Component` annotation , mark the classes for which you want Spring to add instance
+	2. Using `@ComponentScan` annotation over config class , instruct spring where to find the classes you marked.
+
+![](../../statics/Pasted%20image%2020241119064917.png)
+in componentscan we list packages where we defined classes with stereotype annotation.
+
+_Although it looks that stereotype approach is more easy due to less code , but bean approach is useful when you want to create bean of classes which you do not own (like class of a library , String , Integer class)_
+
+![](../../statics/Pasted%20image%2020241119065201.png)
+
+**Using @PostConstruct**
+- We can add this annotation on a stereotype class method and it will get executed after creation of instance by spring in context. Instructs Spring to call that method after the constructor finishes its execution.
+
+there is also `@PreDestroy` with this annotation , you define a method that spring class immediately before closing and clearing the context. but it is not safe because sometimes spring can also fail to clear context.
+
+##### Creating bean programmatically
+- What if one need to register bean in spring depending on specific config of application.
+- we need to call registerBean() of ApplicationContext instance. it has four paramentrs
+	1. Use the first parameter beanName to define a name for the bean you add in the Spring context. If you don’t need to give a name to the bean you’re adding, you can use null as a value when you call the method.
+	2. The second parameter is the class that defines the bean you add to the context. Say you want to add an instance of the class Parrot; the value you give to this parameter is Parrot.class.
+	3. The third parameter is an instance of Supplier. The implementation of this Supplier needs to return the value of the instance you add to the context. Remember, Supplier is a functional interface you find in the java.util .function package. The purpose of a supplier implementation is to return a value you define without taking parameters.
+	4. The fourth and last parameter is a varargs of BeanDefinitionCustomizer. (If this doesn’t sound familiar, that’s okay; the BeanDefinitionCustomizer is just an interface you implement to configure different characteristics of the bean; e.g., making it primary.) Being defined as a varargs type, you can omit this parameter entirely, or you can give it more values of type BeanDefinitionCustomizer.
+![](../../statics/Pasted%20image%2020241119070435.png)
+
 ## Depenedency injection and inversion of control
 
 **Inversion of Control (IoC):**

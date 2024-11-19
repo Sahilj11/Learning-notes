@@ -164,7 +164,7 @@ Conclusion:- Efficient utilization.
 
 ## Process
 - It is a program in execution.
-- A program is not a process by defalut. program is a passive entity i.e a file containing a list of instructions stored on disk
+- A program is not a process by default. program is a passive entity i.e a file containing a list of instructions stored on disk.
 - program becomes process when an executable file is loaded into main memory and when its PCB is created.
 - A process on the other hand is an active entity , which requires resources like main memory, CPU time, register , system buses etc.
 ![](../../statics/Pasted%20image%2020240909190011.png)
@@ -365,4 +365,3 @@ The TLB is a small, fast cache for storing recent virtual-to-physical address tr
 | **Protection**         | Typically less granular protection per page.                       | Allows fine-grained protection per segment.                                                                             |
 | **Usage**              | Suitable for systems emphasizing efficient memory use.             | Suitable for systems that require modular programming.                                                                  |
 | **Example Use Cases**  | Common in virtual memory systems like Linux or Windows.            | Used in modular programming or systems that need logical separation, sometimes combined with paging for modern systems. |
-

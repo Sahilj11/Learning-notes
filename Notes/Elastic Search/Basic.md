@@ -14,4 +14,3 @@
 	- **Replica Shard**: A copy of the primary shard for redundancy.
 	- **Replication Group**: The primary shard and all its replicas.
 - **Some time health of a index show yellow because both replica and primary shard is on same node.**
-- 
