@@ -1,4 +1,373 @@
 # Unit 1
+### scales of measurements and their implementation
+In data science, **scales of measurement** refer to how variables are categorized, measured, and quantified. These scales determine the types of statistical analyses you can perform on the data and the models you can apply.
+
+There are four main types of scales:
+1. **Nominal**  
+2. **Ordinal**  
+3. **Interval**  
+4. **Ratio**
+
+**1. Nominal Scale**
+- **Description**: 
+  - Data is categorized without a specific order. 
+  - Categories are distinct and mutually exclusive.
+- **Examples**: Gender, Colors, Nationality, Yes/No responses.
+
+ **Characteristics**:
+- No inherent order.
+- Cannot perform arithmetic operations.
+- Can count frequency or mode.
+
+**Implementation in Data Science**:
+
+##### Example in Python:
+```R
+# Nominal Data
+data <- data.frame(Color = c("Red", "Blue", "Green"))
+
+# One-hot Encoding
+encoded <- model.matrix(~ Color - 1, data)
+print(encoded)
+
+# Label Encoding
+data$Color_Encoded <- as.numeric(as.factor(data$Color))
+print(data)
+
+```
+
+**2. Ordinal Scale**
+- **Description**: 
+  - Data is categorized with a meaningful order, but intervals between values are not equal.
+- **Examples**: Satisfaction levels (High, Medium, Low), Rankings (1st, 2nd, 3rd).
+
+**Characteristics**:
+- Has an inherent order.
+- Cannot calculate meaningful differences.
+- Can compute median or percentiles.
+
+**Implementation in Data Science**:
+
+ Example in R:
+```R
+# Ordinal Data
+data <- data.frame(Rating = c("Low", "Medium", "High"))
+
+# Ordinal Encoding
+data$Rating_Encoded <- as.numeric(factor(data$Rating, levels = c("Low", "Medium", "High"), ordered = TRUE))
+print(data)
+```
+
+
+ **3. Interval Scale**
+- **Description**: 
+  - Data is numeric, with equal intervals between values but no true zero point.
+- **Examples**: Temperature in Celsius or Fahrenheit, Dates.
+
+ **Characteristics**:
+- Can calculate differences but not ratios.
+- Addition and subtraction are meaningful.
+- Cannot compute meaningful ratios (e.g., 20°C is not "twice as hot" as 10°C).
+
+**Implementation in Data Science**:
+
+ Example in R:
+```R
+# Interval Data
+data <- c(10, 20, 30, 40)
+
+# Standardization
+scaled_data <- scale(data)
+print(scaled_data)
+
+```
+
+---
+
+ **4. Ratio Scale**
+- **Description**: 
+  - Data is numeric, with equal intervals and a true zero point.
+- **Examples**: Height, Weight, Age, Income.
+
+**Characteristics**:
+- Supports all mathematical operations.
+- Ratios are meaningful (e.g., 20kg is twice as heavy as 10kg).
+
+**Implementation in Data Science**:
+
+ Example in R:
+```R
+# Ratio Data
+library(scales)
+
+data <- c(10, 20, 30, 40)
+
+# Normalization
+normalized_data <- rescale(data, to = c(0, 1))
+print(normalized_data)
+```
+
+### **Summary of Usage in Data Science**
+
+| Scale    | Data Type   | Encoding/Techniques | Examples               | Suitable Models                     |
+| -------- | ----------- | ------------------- | ---------------------- | ----------------------------------- |
+| Nominal  | Categorical | One-hot, Label      | Gender, Colors         | Logistic Regression, Decision Trees |
+| Ordinal  | Categorical | Ordinal Encoding    | Satisfaction, Rankings | Decision Trees, Gradient Boosting   |
+| Interval | Numerical   | Standardization     | Temperature            | Linear Regression, SVM              |
+| Ratio    | Numerical   | Normalization       | Income, Weight         | Any numerical model                 |
+## Working with vectors, matrices and tabular data (data frames)
+Here are the notes with **vectors**, **matrices**, and **data frames** in **R**, including the creation and common methods for each:
+
+### **1. Vectors**
+
+#### **What is it?**
+- A **vector** is a one-dimensional array used to store a sequence of elements of the **same type** (e.g., numeric, character, logical, etc.).
+- Vectors are the basic building blocks in R.
+
+#### **Creating a Vector**:
+You can create a vector using the `c()` function, which stands for **combine** or **concatenate**.
+
+```R
+# Numeric vector
+v_numeric <- c(1, 2, 3, 4, 5)
+
+# Character vector
+v_char <- c("apple", "banana", "cherry")
+
+# Logical vector
+v_logical <- c(TRUE, FALSE, TRUE)
+
+# Integer vector
+v_int <- c(1L, 2L, 3L)
+
+# Complex vector
+v_complex <- c(1+2i, 3+4i)
+```
+
+#### **Features**:
+- **Homogeneous**: All elements must be of the same type.
+- Supports **element-wise operations** (e.g., addition, multiplication).
+- Can be used for basic **mathematical operations**, subsetting, and logical comparisons.
+
+#### **Methods**:
+| **Method**        | **Description**                                | **Example**                  |
+| ----------------- | ---------------------------------------------- | ---------------------------- |
+| `c()`             | Combines elements into a vector                | `v <- c(1, 2, 3, 4)`         |
+| `length()`        | Returns the number of elements in the vector   | `length(v)`                  |
+| `class()`         | Returns the class/type of the vector           | `class(v)`                   |
+| `typeof()`        | Returns the underlying type of vector elements | `typeof(v)`                  |
+| `sort()`          | Sorts the vector                               | `sort(v, decreasing = TRUE)` |
+| `unique()`        | Returns unique elements from the vector        | `unique(v)`                  |
+| `sum()`, `mean()` | Summary statistics (sum, mean)                 | `sum(v)`, `mean(v)`          |
+| `rep()`           | Replicates elements of the vector              | `rep(v, times = 2)`          |
+| `seq()`           | Creates a sequence of numbers                  | `seq(1, 10, by = 2)`         |
+| `is.vector()`     | Checks if the object is a vector               | `is.vector(v)`               |
+
+### **2. Matrices**
+
+#### **What is it?**
+- A **matrix** is a two-dimensional array with **rows and columns** where all elements are of the **same type**.
+- It's an extension of the vector to multiple dimensions.
+
+#### **Creating a Matrix**:
+You can create a matrix using the `matrix()` function, which allows you to define the elements, number of rows (`nrow`), and number of columns (`ncol`).
+
+```R
+# Create a matrix with 3 rows and 3 columns
+m <- matrix(1:9, nrow = 3, byrow = TRUE)
+print(m)
+```
+
+#### **Features**:
+- **Homogeneous**: All elements must be of the same type (e.g., all numeric, all characters).
+- Supports operations such as **matrix multiplication**, **transpose**, **addition**, etc.
+- Rows and columns are indexed starting from 1.
+
+#### **Methods**:
+| **Method**                 | **Description**                                         | **Example**                        |
+| -------------------------- | ------------------------------------------------------- | ---------------------------------- |
+| `matrix()`                 | Creates a matrix                                        | `m <- matrix(1:9, nrow = 3)`       |
+| `dim()`                    | Returns the dimensions (rows and columns) of the matrix | `dim(m)`                           |
+| `t()`                      | Transposes the matrix                                   | `t(m)`                             |
+| `nrow()`, `ncol()`         | Returns the number of rows or columns                   | `nrow(m)`, `ncol(m)`               |
+| `colnames()`, `rownames()` | Sets or retrieves column/row names                      | `colnames(m) <- c("A", "B", "C")`  |
+| `sum()`, `mean()`          | Summary statistics (sum, mean) for matrix elements      | `sum(m)`, `mean(m)`                |
+| `apply()`                  | Apply a function over rows/columns                      | `apply(m, 1, sum)` (sum over rows) |
+| `is.matrix()`              | Checks if an object is a matrix                         | `is.matrix(m)`                     |
+
+### **3. Data Frames**
+
+#### **What is it?**
+- A **data frame** is a two-dimensional table where each column can contain different types of data (numeric, character, etc.).
+- It is the most commonly used data structure for storing data in R, especially for datasets.
+
+#### **Creating a Data Frame**:
+You can create a data frame using the `data.frame()` function, which allows you to specify the column names and their respective data.
+
+```R
+# Create a data frame
+df <- data.frame(
+  Name = c("Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 35),
+  Height = c(5.5, 5.8, 6.0)
+)
+
+print(df)
+```
+
+#### **Features**:
+- Each column can have different data types (numeric, character, factor, etc.).
+- Rows can be accessed by index, and columns by name.
+- Data frames are the standard way of storing data for statistical analysis in R.
+
+#### **Methods**:
+| **Method**         | **Description**                                             | **Example**                                                   |
+| ------------------ | ----------------------------------------------------------- | ------------------------------------------------------------- |
+| `data.frame()`     | Creates a data frame                                        | `df <- data.frame(Name = c("Alice", "Bob"), Age = c(25, 30))` |
+| `str()`            | Displays the structure of the data frame                    | `str(df)`                                                     |
+| `summary()`        | Provides summary statistics for each column                 | `summary(df)`                                                 |
+| `head()`, `tail()` | Returns the first/last few rows of the data frame           | `head(df)`, `tail(df)`                                        |
+| `dim()`            | Returns the dimensions (rows and columns) of the data frame | `dim(df)`                                                     |
+| `nrow()`, `ncol()` | Returns the number of rows/columns                          | `nrow(df)`, `ncol(df)`                                        |
+| `names()`          | Retrieves or sets the column names                          | `names(df)`                                                   |
+| `subset()`         | Subsets the data frame based on conditions                  | `subset(df, Age > 30)`                                        |
+| `is.data.frame()`  | Checks if an object is a data frame                         | `is.data.frame(df)`                                           |
+
+#### **Summary Comparison**
+
+| Structure      | Description                                             | Creation Syntax | Example                                                       |
+| -------------- | ------------------------------------------------------- | --------------- | ------------------------------------------------------------- |
+| **Vector**     | One-dimensional array of homogeneous elements.          | `c()`           | `v <- c(1, 2, 3)`                                             |
+| **Matrix**     | Two-dimensional array of homogeneous elements.          | `matrix()`      | `m <- matrix(1:9, nrow = 3)`                                  |
+| **Data Frame** | Two-dimensional table with different types of elements. | `data.frame()`  | `df <- data.frame(Name = c("Alice", "Bob"), Age = c(25, 30))` |
+|                |                                                         |                 |                                                               |
+
+## Reading and write data frame to files
+### **Reading and Writing Tabular Data in R**
+
+In R, reading and writing data from and to various file formats (CSV, Excel, etc.) is an essential part of data manipulation. Below are the key functions used for reading and writing tabular data in R.
+
+---
+
+### **1. Reading and Writing CSV Files**
+
+#### **Reading CSV File**:
+   - **Function**: `read.csv()`
+   - **Description**: Reads a CSV (Comma Separated Values) file and returns it as a data frame.
+   - **Syntax**:
+     ```R
+     df <- read.csv("data.csv")
+     ```
+   - **Common Parameters**:
+     - `header`: A logical value (default is `TRUE`). If `TRUE`, the first row of the file is used as column names.
+     - `sep`: Defines the separator (default is `,` for CSV).
+     - `stringsAsFactors`: If `TRUE`, converts string variables to factors (default behavior before R 4.0).
+
+   - **Example**:
+     ```R
+     df <- read.csv("data.csv")
+     head(df)  # Display the first few rows of the data
+     ```
+
+#### **Writing CSV File**:
+   - **Function**: `write.csv()`
+   - **Description**: Writes a data frame to a CSV file.
+   - **Syntax**:
+     ```R
+     write.csv(df, "output.csv", row.names = FALSE)
+     ```
+   - **Common Parameters**:
+     - `row.names`: Whether to write row names (default is `TRUE`).
+     - `na`: String to replace missing values (default is `NA`).
+
+   - **Example**:
+     ```R
+     write.csv(df, "output.csv", row.names = FALSE)
+     ```
+
+---
+
+### **2. Reading and Writing Excel Files**
+
+#### **Reading Excel File**:
+   - **Package**: `readxl` (for reading `.xls` and `.xlsx` files)
+   - **Function**: `read_excel()`
+   - **Description**: Reads an Excel file and returns a data frame.
+   - **Syntax**:
+     ```R
+     library(readxl)
+     df <- read_excel("data.xlsx")
+     ```
+
+   - **Common Parameters**:
+     - `sheet`: The name or index of the sheet to read (default is the first sheet).
+     - `range`: A cell range to read.
+
+   - **Example**:
+     ```R
+     df <- read_excel("data.xlsx", sheet = "Sheet1")
+     head(df)
+     ```
+
+#### **Writing Excel File**:
+   - **Package**: `openxlsx` or `writexl`
+   - **Function**: `write.xlsx()`
+   - **Description**: Writes a data frame to an Excel file.
+   - **Syntax**:
+     ```R
+     library(openxlsx)
+     write.xlsx(df, "output.xlsx")
+     ```
+
+   - **Common Parameters**:
+     - `rowNames`: Whether to write row names (default is `TRUE`).
+     - `colNames`: Whether to write column names (default is `TRUE`).
+
+   - **Example**:
+     ```R
+     write.xlsx(df, "output.xlsx", rowNames = FALSE)
+     ```
+
+---
+
+
+#### **3. Working with File Paths and Directories**
+
+- **Set Working Directory**:
+   - **Function**: `setwd()`
+   - **Description**: Sets the working directory, where files are read from or written to.
+   - **Syntax**:
+     ```R
+     setwd("path/to/directory")
+     ```
+
+- **Check Working Directory**:
+   - **Function**: `getwd()`
+   - **Description**: Returns the current working directory.
+   - **Syntax**:
+     ```R
+     getwd()
+     ```
+
+- **List Files in Directory**:
+   - **Function**: `list.files()`
+   - **Description**: Lists all files in the current working directory.
+   - **Syntax**:
+     ```R
+     list.files()
+     ```
+
+### **Summary of Functions**
+
+| **Task**                    | **Function in R** | **Package**             | **Example**                     |
+| --------------------------- | ----------------- | ----------------------- | ------------------------------- |
+| **Reading CSV**             | `read.csv()`      | Base R                  | `df <- read.csv("data.csv")`    |
+| **Writing CSV**             | `write.csv()`     | Base R                  | `write.csv(df, "output.csv")`   |
+| **Reading Excel**           | `read_excel()`    | `readxl`                | `df <- read_excel("data.xlsx")` |
+| **Writing Excel**           | `write.xlsx()`    | `openxlsx` or `writexl` | `write.xlsx(df, "output.xlsx")` |
+| **Set Working Directory**   | `setwd()`         | Base R                  | `setwd("path/to/directory")`    |
+| **Get Working Directory**   | `getwd()`         | Base R                  | `getwd()`                       |
+| **List Files in Directory** | `list.files()`    | Base R                  | `list.files()`                  |
 
 # Unit 3
 
