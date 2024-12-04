@@ -1,44 +1,66 @@
 # Unit 1
 
-### Performance measure of learning
-1. Generality:- refers to ML model's ability to perform well accross various datasets and environment, not just one it was trained on.
-2. Efficiency:- How quickly a model can learn from data. A spam detection algorithm that quickly adapts to new type of spam emails
-3. Robustness:- ability of a model to handle errors, noise and unexcpected data without failing. A voice recognition system able to recognize voice in a noisy room.
-4. Efficacy:- overall effectiveness of a ML model in performing its intended tasks.
-5. Ease of implementation:- how straightforward is it to develop and deploy a ML model.
+## Intro
+- Machine learning is defined as the subset of computer science, that aims to build and train models based on previous data/sample data to forecast or predict and decide without any functionality of explicit programming to do so
+
+## Stages of Model Development in Ml
+![](../../statics/Pasted%20image%2020241204104925.png)
+
+- Problem Identification:- At this stage, a well thought questionnaire is prepared to understand the problem to be solved
+- Data collection:- All the primary and secondary data sources of data collection are identified. The primary sources involve the processes of collecting data directly from the participants. On other hand, secondary data sources are the previously published datasets that may be re-utilized to train models for specific purposes.
+- Data Cleaning and Preparation: The raw data collected in the previous stage may not be suitable for the training purposes. It may contain noise, null-values, outliers, etc. The data cleaning is done to handle such issues
+- Data Visualization: Sometimes plotting the data into graph or representing it into the tabular format gives more useful insights
+- Model Training: The model is trained with the previous dataset. The dataset consists of feature set and associated values
+- Model Testing: After training of the model, the trained model is being tested for its performance in terms accuracy, standard error, mean square error, etc.
+- Model Deployment: The model deployment relates to the actual implementation of the model for application purpose.
+
+## Types of ML
 
 ### Supervised learning
-- involves training a machine learning model using labeled data, which means the **data is already associated with correct answer**.
+- involves training a machine learning model using labeled data, which means the **data is already associated with correct answer**. 
   Eg: predicting house prices based on features like size and location, using a dataset where prices are known, allows the model to learn and make accurate predictions on new, unseen data.
+
+#### Classification and Regression
+
+The Supervised Machine Learning is categorized as: Classification and Regression.
+
+##### Classification
+- Classification is the supervised machine learning technique that targets to identify the correct category of the upcoming or new instance. It tries to set the possible accurate boundaries to maximize the difference between the available categories in the dataset. It includes classifiers such as decision trees, naïve bayes, rule-based classifiers, case-based reasoning, support vector machines etc
+
+##### Regression
+- Regression means to comprehend the relationship between dependent and independent variables among the datasets. The most common use of regression is to generate prediction that gives the estimates, such as for a company's sales revenue, where the independent variable may be price of the product and company’s sales revenue will be dependent variable 
+
+
+- Simple vs Multivariate regression
+    - When the relationship is computed between one dependent and one independent variable; it is simple regression; when the relationship is computed between one dependent and multiple independent variable; for such cases it is multi-variate regression. For example, when happiness index is calculated in terms of income only; it is simple regression.if happiness index is calculated in terms of income, time-spent-with-family, health-status, etc., it is multi-variate regression.
+
+**Linear vs Non-linear regression**
+
+if the relationship between dependent and independent variable is either positive or negative i.e., a straight-line relation; it is referred to as linear regression as in. If the curve between dependent and independent variable is not a straight line, then it is non-linear regression as in.For prediction and forecasting, generally, linear regression model is used.
+
+![](../../statics/Pasted%20image%2020241204115427.png)
+![](../../statics/Pasted%20image%2020241204115438.png)
+
+The simple linear equation is represented by the equation where 𝑎 and 𝑏 are regression coefficients that establishes the relationship between dependent variable 𝑦 and independent variable 𝑥.
+    `y = a + bx`
+
+Where,
+y: The output label i.e., the category label.
+𝑋: The feature set.
+𝑎 and 𝑏: Regression coefficients. 𝑏 defines the slope that infers about the relative change in the dependent variable value with respect to independent variables’ value. b is known as intercept; it represents the value of dependent variable in the absence of independent variables.
+Since, the data gathered may have clerical errors, noise or incorrect values etc. This may affect the accuracy of the regression estimate. Therefore, can be re-written with ɛ, the permissible error of the estimate (random error component).
+𝑦 = 𝑏𝑋 + 𝑎 + ɛ
+
+- Methods used too formulate regression equation.
+    - Ordinary Least Square Method: This is an estimator method that computes the values of regression coefficients such that sum of squared residuals i.e., error in prediction is minimum. The sum of squared residuals is the difference between the observed dependent variable value and predicted dependent variable value.
+    - Logistic Regression: This method builds a probabilistic regression model that computes the probability to predict that an instance belongs to a specific category. The linear regression assumes that data follows the linear function while logistic regression uses the sigmoid function given in equation.![](../../statics/Pasted%20image%2020241204120427.png)
+    - Lasso and Ridge regression techniques are used to regularize the linear regression model to prevent the problem of over- fitting. The lasso and ridge regression aim to shrink the coefficients to reduce the model complexity and multi-collinearity
 
 #### Steps in Supervised learning
 - input and output pairing:- each input is paired with its correct label.
 - training:- model learns by compairing its prediction with actual label and adjusting itself to improve accuracy.
 - error correction:- if model predicts incorrectly it adjusts its internal parameters to reduce error.
 - outcome:- model eventually learn to map input to correct output.
-
-### Unsupervised learning
-- involves training model without any label , which means the model tries to identify patterns and data groupings on its own.
-  Eg: Imagine placing a mix of different coins on a table and asking to sort them. without explaining any criteria , the child might start grouping by size,color etc.
-
-#### Steps 
-- input without labels:- the model receives data without any explicit instructions on what to do with it.
-- pattern recognition:- model analyze data and tries to find any natural grouping or patterns.
-- self-organisation:- model organise data into different categories based on the patterns it receives.
-- outcome:- model creates its own system of categorization without external guidance.
-
-### machine learning
-- subset of AI allows computers to learn from and make decisions based on data,without being explicitly programmed.
-- involves developing algorithm that allow computers to process and learn from data automatically.
-
-> Machine learning is the study of computer algorithms that improve automatically through experience. It is a field of artificial intelligence that focuses on developing systems that can learn from and make predictions or decisions based on data.
-
-### Types of ML
-Machine learning is generally categorized into three main types based on how the learning process is structured and the nature of the feedback the model receives. Here are the three primary types:
-
-#### 1. **Supervised Learning**
-
-**Description**: In supervised learning, the model is trained on a labeled dataset, meaning that each training example is paired with an output label. The goal is to learn a mapping from inputs to outputs that can be used to predict the labels for new, unseen data.
 
 **Examples**:
 - **Classification**: Email spam detection, sentiment analysis, image classification.
@@ -47,13 +69,13 @@ Machine learning is generally categorized into three main types based on how the
 **Key Algorithms**:
 - Linear Regression
 - Logistic Regression
-- Decision Trees
+    - Decision Trees
 - Support Vector Machines (SVM)
-- Neural Networks
+    - Neural Networks
 
-#### 2. **Unsupervised Learning**
-
-**Description**: In unsupervised learning, the model is trained on data without explicit labels. The goal is to identify patterns, relationships, or structures within the data. The model learns to group or organize the data based on similarities or differences.
+### Unsupervised learning
+- Unsupervised learning is the process of training a model to use the structure of a dataset to make decisions successfully without using labels. For example, if the same problem of house prediction is considered for the unsupervised learning, the dataset will not contain the furnishing status in the training data. Unsupervised learning with unlabelled is used to build a model that is fully input-based. When there is an increase in disproportionally rising disorganized unlabelled data, unsupervised learning is used in addition to labelled data.
+- Eg: Imagine placing a mix of different coins on a table and asking to sort them. without explaining any criteria , the child might start grouping by size,color etc.
 
 **Examples**:
 - **Clustering**: Customer segmentation, grouping similar documents, image segmentation.
@@ -62,12 +84,22 @@ Machine learning is generally categorized into three main types based on how the
 
 **Key Algorithms**:
 - K-Means Clustering
-- Hierarchical Clustering
+    - Hierarchical Clustering
 - Principal Component Analysis (PCA)
 
-#### 3. **Reinforcement Learning**
+#### Steps 
+- input without labels:- the model receives data without any explicit instructions on what to do with it.
+- pattern recognition:- model analyze data and tries to find any natural grouping or patterns.
+- self-organisation:- model organise data into different categories based on the patterns it receives.
+- outcome:- model creates its own system of categorization without external guidance.
 
-**Description**: In reinforcement learning, the model learns to make decisions by interacting with an environment. The model receives feedback in the form of rewards or penalties based on its actions, and it aims to learn a strategy that maximizes cumulative rewards over time.
+### Semi-supervised learning
+- Semi-supervised learning is a branch of machine learning that focuses on using both labelled and unlabelled data to implement particular learning algorithms. Conceptually positioned halfway within unsupervised and supervised learning, this permits the usage of the considerable amounts of unlabelled data present from several use cases in addition to the more prevalent smaller clusters of annotated data. When there is a lack of labelled data, semi-supervised classification approaches are quite helpful.
+
+### **Reinforcement Learning**
+- Reinforcement learning means learning from experiences. It is concerned with intelligent agents and their actions in the environment to maximize collective reward . It is widely used in self-driving car, fraud detection, etc.
+
+![](../../statics/Pasted%20image%2020241204111329.png)
 
 **Examples**:
 - **Game Playing**: Training AI to play games like chess, Go, or video games.
@@ -77,13 +109,16 @@ Machine learning is generally categorized into three main types based on how the
 **Key Algorithms**:
 - Q-Learning
 
-#### Summary
+## Performance measure of learning
+1. Generality:- refers to ML model's ability to perform well accross various datasets and environment, not just one it was trained on.
+2. Efficiency:- How quickly a model can learn from data. A spam detection algorithm that quickly adapts to new type of spam emails
+3. Robustness:- ability of a model to handle errors, noise and unexcpected data without failing. A voice recognition system able to recognize voice in a noisy room.
+4. Efficacy:- overall effectiveness of a ML model in performing its intended tasks.
+5. Ease of implementation:- how straightforward is it to develop and deploy a ML model.
 
-- **Supervised Learning**: Learning from labeled data to make predictions or classify new data.
-- **Unsupervised Learning**: Finding hidden patterns or structures in unlabeled data.
-- **Reinforcement Learning**: Learning to make a sequence of decisions by receiving rewards or penalties from interactions with an environment.
 
-### Application of ML
+
+## Application of ML
 
 1. **Image Recognition**:
    - **Example**: Identifying objects, people, or scenes in photos and videos. Used in applications like facial recognition and autonomous vehicles.
@@ -106,7 +141,7 @@ Machine learning is generally categorized into three main types based on how the
 7. **Autonomous Vehicles**:
    - **Example**: Enabling self-driving cars to make real-time decisions based on sensor data, including navigation, obstacle detection, and traffic management.
 
-### Advantages of Machine Learning
+## Advantages of Machine Learning
 
 1. **Automation of Tasks**:
    - **Advantage**: ML algorithms can automate repetitive tasks and processes, reducing the need for manual intervention and increasing efficiency.
@@ -126,7 +161,7 @@ Machine learning is generally categorized into three main types based on how the
 6. **Anomaly Detection**:
    - **Advantage**: ML algorithms can identify unusual patterns or outliers, useful in areas like fraud detection and cybersecurity.
 
-### Disadvantages of Machine Learning
+## Disadvantages of Machine Learning
 
 1. **Data Dependency**:
    - **Disadvantage**: ML models require large amounts of high-quality data for training. Inadequate or biased data can lead to poor performance and unreliable results.
@@ -145,6 +180,14 @@ Machine learning is generally categorized into three main types based on how the
 
 6. **High Resource Consumption**:
    - **Disadvantage**: Training and deploying ML models can require significant computational resources and energy, which may be a concern for scalability and environmental impact.
+
+## Learning Association
+- Associations refer to the relationship between different variables or features that define the data. Learning of these associations is done via rule-based machine learning algorithms and data mining techniques. The process of finding significant relationship among attributes is known as association learning. This involves evaluating degree of similarity, identification of hidden relationships in the databases.
+
+### Methods of learning association
+- Apriori Algorithm: The algorithm works better on the transaction-based data. It produces the association rules by leveraging the common datasets. This approach effectively calculates the frequent item sets taken together by using a breadth-first search or a hash tree-based approach. 
+- Eclat algorithm: Eclat stands for the Equivalence Class Transformation. This algorithm uses the Depth-First Search (DFS) to search a transaction database for frequent item-sets
+- F-P Growth Algorithm: F-P growth algorithm organizes the database as a common pattern or tree. This frequent tree is used to identify the most frequent patterns
 
 ### Clustering
 - Process of sorting items into groups based on their similarities forming distant clusters where items within each cluster are more alike each other than to those in other cluster.
