@@ -159,12 +159,14 @@ there is also `@PreDestroy` with this annotation , you define a method that spri
 ```java
 @Configuration
 public class ProjectConfig {
+
 	@Bean
 	public Parrot parrot() {
 		Parrot p = new Parrot();
 		p.setName("Koko");
 		return p;
 	}
+	
 	@Bean
 	public Person person() {
 		Person p = new Person();
@@ -256,3 +258,28 @@ public class Person {
 	}
 }
 ```
+
+## Dealing with circular dependencies
+- A circular dependency is a situation in which, to create a bean (let’s name it Bean A), Spring needs to inject another bean that doesn’t exist yet (Bean B). But Bean B also requests a dependency to Bean A. So, to create Bean B, Spring needs first to have Bean A. Spring is now in a deadlock. It cannot create Bean A because it needs Bean B, and it cannot create Bean B because it needs Bean A.
+- A circular dependency is easy to avoid. You just need to make sure you don’t define objects whose creation depends on the other.
+
+## Choosing from multiple beans in spring context
+- scenario in which Spring needs to inject a value into a parameter or class field but has multiple beans of the same type to choose from.
+- The identifier of the parameter matches the name of one of the beans from the context (which, remember, is the same as the name of the method annotated with @Bean that returns its value). In this case, Spring will choose the bean for which the name is the same as the parameter.
+- The identifier of the parameter doesn’t match any of the bean names from the context. Then you have the following options:
+	- You marked one of the beans as primary (as we discussed in chapter 2, using the @Primary annotation). In this case, Spring will select the primary bean for injection.
+	- You can explicitly select a specific bean using the @Qualifier annotation,
+	- If none of the beans is primary and you don’t use @Qualifier, the app will fail with an exception, complaining that the context contains more beans of the same type and Spring doesn’t know which one to choose.
+
+
+```java
+@Bean
+public Person person(@Qualifier("parrot2") Parrot parrot) {
+	Person p = new Person();
+	p.setName("Ella");
+	p.setParrot(parrot);
+	return p;
+}
+```
+
+# Using Abstractions
