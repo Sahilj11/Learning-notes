@@ -25,8 +25,14 @@
 The Supervised Machine Learning is categorized as: Classification and Regression.
 
 ##### Classification
-- Classification is the supervised machine learning technique that targets to identify the correct category of the upcoming or new instance. It tries to set the possible accurate boundaries to maximize the difference between the available categories in the dataset. It includes classifiers such as decision trees, naïve bayes, rule-based classifiers, case-based reasoning, support vector machines etc
-
+- Classification is the supervised machine learning technique that targets to identify the correct category of the upcoming or new instance. It tries to set the possible accurate boundaries to maximize the difference between the available categories in the dataset. It includes classifiers such as decision trees, naïve bayes, rule-based classifiers, case-based reasoning, support vector machines etc.
+- The classification algorithms are categorized into two categories namely: Lazy Learner and Eager Learners. 
+	- The lazy learner holds the training data until test data appears. When it appears; it begins the classification process based on most related stored data. 
+	- On other hand Eager Learners build the classification model based on the stored training data. Eager learners spend more time in training the model while lazy learners spend more time on prediction.
+![](../../statics/Pasted%20image%2020241205114732.png)
+- k-nearest neighbor:- it computes the 𝑘-nearest neighbors i.e., most similar instances from the training dataset. Each of the 𝑘 neighbors have a class label defined in the dataset. The label of test dataset will be predicted on the basis of the majority of labels among 𝑘- nearest neighbors. The similarity between new instance and training instances is calculated by computing the distance between them.
+- ![](../../statics/Pasted%20image%2020241205121034.png)
+ 
 ##### Regression
 - Regression means to comprehend the relationship between dependent and independent variables among the datasets. The most common use of regression is to generate prediction that gives the estimates, such as for a company's sales revenue, where the independent variable may be price of the product and company’s sales revenue will be dependent variable 
 
@@ -56,6 +62,21 @@ Since, the data gathered may have clerical errors, noise or incorrect values etc
     - Logistic Regression: This method builds a probabilistic regression model that computes the probability to predict that an instance belongs to a specific category. The linear regression assumes that data follows the linear function while logistic regression uses the sigmoid function given in equation.![](../../statics/Pasted%20image%2020241204120427.png)
     - Lasso and Ridge regression techniques are used to regularize the linear regression model to prevent the problem of over- fitting. The lasso and ridge regression aim to shrink the coefficients to reduce the model complexity and multi-collinearity
 
+#### Regression vs classification
+Here’s a detailed **10-point difference** between **Regression** and **Classification**:
+
+| **Aspect**                   | **Regression**                                                    | **Classification**                                                                       |
+| ---------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **1. Output Type**           | Continuous numerical values (e.g., 12.5, 78.0).                   | Discrete class labels (e.g., "Cat", "Dog").                                              |
+| **2. Objective**             | Predict a continuous quantity or value.                           | Predict the class or category of an object.                                              |
+| **3. Example Problem**       | Predicting house prices, stock prices, temperature.               | Email classification (Spam/Not Spam), disease diagnosis (Healthy/Sick).                  |
+| **4. Algorithms Used**       | Linear Regression, Polynomial Regression, SVR, etc.               | Logistic Regression, SVM, Decision Trees, k-NN, Naive Bayes.                             |
+| **5. Evaluation Metrics**    | MAE (Mean Absolute Error), MSE (Mean Squared Error), R², RMSE.    | Accuracy, Precision, Recall, F1-Score, AUC-ROC.                                          |
+| **6. Output Format**         | A real number or continuous output.                               | A class label (categorical value).                                                       |
+| **7. Output Interpretation** | The output represents a real value on a continuous scale.         | The output represents membership in a specific class or category.                        |
+| **8. Data Nature**           | Data used is continuous (e.g., temperature, height, weight).      | Data used is categorical (e.g., types of animals, disease state).                        |
+| **9. Model Complexity**      | Tends to work with more complex relationships in data.            | Often focuses on boundaries or separations between classes.                              |
+| **10. Use Case**             | Predicting quantities for business forecasting, price prediction. | Classifying items, detecting patterns, and decisions for action (e.g., fraud detection). |
 #### Steps in Supervised learning
 - input and output pairing:- each input is paired with its correct label.
 - training:- model learns by compairing its prediction with actual label and adjusting itself to improve accuracy.
@@ -76,12 +97,19 @@ Since, the data gathered may have clerical errors, noise or incorrect values etc
 ### Unsupervised learning
 - Unsupervised learning is the process of training a model to use the structure of a dataset to make decisions successfully without using labels. For example, if the same problem of house prediction is considered for the unsupervised learning, the dataset will not contain the furnishing status in the training data. Unsupervised learning with unlabelled is used to build a model that is fully input-based. When there is an increase in disproportionally rising disorganized unlabelled data, unsupervised learning is used in addition to labelled data.
 - Eg: Imagine placing a mix of different coins on a table and asking to sort them. without explaining any criteria , the child might start grouping by size,color etc.
+#### Clustering
+- Clustering is an unsupervised form of machine learning that tends to find the clusters among the datasets. These clusters are the collections of similar data instances. The similarity is calculated on the basis of distance measures. The clustering algorithms may form clusters by partitioning approach or tree-based approach.
+- ![](../../statics/Pasted%20image%2020241205122311.png)
+#### K mean clustering
+- 𝑘-means is a partitioning clustering technique that divides the dataset into 𝑘 clusters. The 𝑘 −means algorithm proceeds as follows:
+- Step I. The clustering begins with randomly selecting 𝑘 centroids. Each centroid is represented by the feature vector. The centroid is assumed to be the centre of cluster.
+- Step II. The distance is computed between each centroid and each data point in the dataset. The selected distance measure is applied on each attribute feature of the feature vector.
+- Step III. The data points are grouped with the nearest centroids forming 𝑘 clusters.
+![](../../statics/Pasted%20image%2020241205122543.png)
 
-**Examples**:
-- **Clustering**: Customer segmentation, grouping similar documents, image segmentation.
-- **Dimensionality Reduction**: Reducing the number of features in data while preserving important information (e.g., PCA).
-- **Anomaly Detection**: Identifying unusual patterns or outliers in data.
-
+#### SOM(Self organising map)
+- Self-organizing Feature Map is an unsupervised machine learning technique that creates a low- dimensional (usually two-dimensional) representation of a higher-dimensional data collection while maintaining the topological structure of the data. It helps to easily visualize higher dimensional data.
+- 
 **Key Algorithms**:
 - K-Means Clustering
     - Hierarchical Clustering
