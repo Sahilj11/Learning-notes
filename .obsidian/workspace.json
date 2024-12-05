@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/3rd Sem/Machine learning.md",
+                "file": "Notes/java/Java Interview Ques.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Machine learning"
+              "title": "Java Interview Ques"
             }
           }
         ]
@@ -164,22 +164,23 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
-    "Notes/statics/Pasted image 20241205122543.png",
-    "Notes/statics/Pasted image 20241205122311.png",
-    "Notes/statics/Pasted image 20241205121034.png",
-    "Notes/statics/Pasted image 20241205114732.png",
-    "Notes/MCA/3rd Sem/Machine learning.md~",
-    "Notes/statics/Pasted image 20241204120427.png",
-    "Notes/statics/Pasted image 20241204115438.png",
-    "Notes/statics/Pasted image 20241204115427.png",
-    "Notes/statics/Pasted image 20241204111329.png",
-    "Notes/statics/Pasted image 20241204104925.png",
+    "Notes/statics/Pasted image 20241205230241.png",
+    "Notes/statics/Pasted image 20241205222645.png",
+    "Notes/statics/Pasted image 20241205222011.png",
+    "Notes/statics/Pasted image 20241205221850.png",
+    "Notes/statics/Pasted image 20241205221626.png",
+    "Notes/statics/Pasted image 20241205221620.png",
+    "Notes/statics/Pasted image 20241205221602.png",
+    "Notes/statics/Pasted image 20241205221536.png",
+    "Notes/statics/Pasted image 20241205221458.png",
+    "Notes/statics/Pasted image 20241205221445.png",
+    "Notes/statics/Pasted image 20241205221312.png",
     "Notes/java Backend/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
-    "Notes/MCA/3rd Sem/Data Analytics.md",
-    "Notes/statics/Pasted image 20241119070435.png",
-    "Notes/statics/Pasted image 20241119065201.png",
-    "Notes/MCA/3rd Sem/AOS.md",
+    "Notes/java/Java Interview Ques.md",
     "Notes/MCA/3rd Sem/Machine learning.md",
+    "Notes/MCA/3rd Sem/Machine learning.md~",
+    "Notes/MCA/3rd Sem/Data Analytics.md",
+    "Notes/MCA/3rd Sem/AOS.md",
     "Notes/Elastic Search/Basic.md",
     "Notes/DSA problem/Problems.md",
     "Notes/MCA/3rd Sem/Theory of Computation.md",

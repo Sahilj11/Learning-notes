@@ -137,6 +137,60 @@ Here’s a detailed **10-point difference** between **Regression** and **Classif
 **Key Algorithms**:
 - Q-Learning
 
+## SOM
+https://www.youtube.com/watch?v=DsYm4Tlr1rw&t=153s
+
+## PCA
+
+## Dimension reduction
+It involves reducing the number of features (dimensions) in the data while retaining essential patterns, relationships, and structures that are important for the learning process.
+
+### Why Dimensionality Reduction is Important in Machine Learning
+
+1. **Curse of Dimensionality**: As the number of dimensions increases, the volume of the feature space grows exponentially, making the data sparse and harder for algorithms to generalize.
+2. **Improved Model Performance**: Reducing irrelevant or redundant features can prevent overfitting and lead to more accurate models.
+3. **Computational Efficiency**: Fewer dimensions mean faster training and inference times.
+4. **Visualization**: Dimensionality reduction allows complex, high-dimensional data to be visualized in 2D or 3D, aiding in insights and exploratory analysis.
+
+### Techniques in Machine Learning
+
+#### 1. **Feature Selection**
+
+Selects a subset of the original features without altering them. It retains the most important features based on specific criteria.
+
+- **Filter Methods**: Use statistical techniques like correlation or mutual information.
+- **Wrapper Methods**: Iteratively evaluate feature subsets using the model's performance (e.g., Recursive Feature Elimination).
+- **Embedded Methods**: Perform feature selection as part of the model training (e.g., Lasso Regression for regularization).
+
+#### 2. **Feature Extraction**
+
+Transforms data into a lower-dimensional space, creating new features that capture the most critical information.
+
+- **Linear Techniques**:
+    - **Principal Component Analysis (PCA)**: Projects data onto a lower-dimensional subspace that maximizes variance.
+    - **Singular Value Decomposition (SVD)**: Factorizes data into matrices for dimensionality reduction.
+    - **Linear Discriminant Analysis (LDA)**: Finds linear combinations of features that separate classes.
+- **Non-Linear Techniques**:
+    - **t-SNE (t-Distributed Stochastic Neighbor Embedding)**: Reduces dimensions while preserving local data structure, suitable for visualization.
+    - **UMAP (Uniform Manifold Approximation and Projection)**: Similar to t-SNE but faster and preserves more global structure.
+    - **Autoencoders**: Neural networks designed to learn efficient representations of data.
+
+### Applications in Machine Learning
+
+1. **Data Preprocessing**: Simplifies datasets before training machine learning models.
+2. **Clustering**: Improves the quality of clustering algorithms like k-means or DBSCAN by reducing noise and redundant features.
+3. **Classification/Regression**: Helps build better predictive models by focusing on meaningful features.
+4. **Anomaly Detection**: Identifies unusual patterns in a reduced feature space.
+
+### Challenges
+
+- **Choosing the Right Technique**: The effectiveness of a method depends on the data and the problem.
+- **Trade-off Between Dimensionality and Information**: Reducing dimensions too much can lead to loss of critical information.
+- **Interpretability**: Transformed features in techniques like PCA or autoencoders may not have intuitive meanings.
+
+Dimensionality reduction helps create efficient, interpretable, and high-performing machine learning models.
+
+
 ## Performance measure of learning
 1. Generality:- refers to ML model's ability to perform well accross various datasets and environment, not just one it was trained on.
 2. Efficiency:- How quickly a model can learn from data. A spam detection algorithm that quickly adapts to new type of spam emails
