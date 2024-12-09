@@ -565,3 +565,185 @@ Single layer
 
 
 ![](../../statics/Pasted%20image%2020241207110241.png)
+
+### Characteristics of perceptron model
+1) It's an algorithm for machine learning that makes use of binary classifiers that are learned under supervision.
+2) The weighted coefficient is automatically learnt in a perceptron.
+3) Weights are first compounded by input features before choosing whether to activate a neuron or not.
+4) To establish if a function is more significant than zero, the activation function employs a step rule.
+5) In order to distinguish between two linearly separable classes, +1 and -1, linear decision boundaries are drawn.
+6) They must have output signals if the total of all input values is greater than the threshold value; otherwise, no outputs will be displayed.
+### Advantages
+Advantages:
+- Multi-layered perceptron models are capable of resolving complex nonlinear problems.
+- For both little and large input data, it functions well.
+- After training, help us in making quick predictions.
+- Enables the achievement of a comparable accuracy ratio for both large and small data.
+
+### Disadvantages:
+- The computations of multi-layered perceptron models are difficult and time-consuming.
+- It is challenging to predict the extent to which each independent variable is influenced by the dependent variable.
+- The effectiveness of the model depends on how well it was trained.
+### Perceptron rule (video)
+## Gradient descent , difference threshold remaining
+
+# UNIT 4
+## Bayesian learning
+
+### Conditional probability
+
+Conditional probability is the probability of an event occurring given that another event has already occurred. It quantifies how the probability of an event changes when we have additional information.
+
+#### Formula
+
+The conditional probability of event AA given event BB is denoted as P(A∣B)P(A|B), and is defined as:
+
+![](../../statics/Pasted%20image%2020241209094028.png)
+
+
+![](../../statics/Pasted%20image%2020241209094059.png)
+![](../../statics/Pasted%20image%2020241209094127.png)![](../../statics/Pasted%20image%2020241209094127%201.png)
+
+#### Examples
+
+![](../../statics/Pasted%20image%2020241209094209.png)
+
+### Bayes’ Theorem in Machine Learning
+
+Bayes' Theorem is a fundamental concept in probability theory that provides a way to update the probability of a hypothesis based on new evidence. It forms the backbone of several machine learning algorithms, especially in probabilistic models.
+
+#### Formula
+![](../../statics/Pasted%20image%2020241209094532.png)
+
+#### Steps in Bayes' Theorem
+
+1. **Start with Prior**: Define initial belief P(H) about the hypothesis.
+2. **Incorporate Likelihood**: Determine how likely the observed evidence (P(E∣H) is under the hypothesis.
+3. **Normalize**: Adjust probabilities based on all possible hypotheses P(E).
+
+#### Applications in Machine Learning
+
+1. **Naive Bayes Classifier**:
+    - Assumes feature independence.
+    - Used in text classification, spam detection, sentiment analysis.
+    - Computes posterior probabilities for class labels and chooses the one with the highest value.
+2. **Bayesian Networks**:
+    - Graphical models representing probabilistic relationships among variables.
+    - Used in decision-making and reasoning under uncertainty.
+3. **Bayesian Inference**:
+    - Updates model parameters as new data becomes available.
+    - Common in probabilistic programming and hierarchical models.
+4. **Generative Models**:
+    - Utilizes P(E∣H) to generate new samples from learned distributions.
+
+
+### Naive Bayes Classifier (Pending)
+
+The **Naive Bayes** classifier is a probabilistic machine learning model based on **Bayes' Theorem**, used for classification tasks. It is called _naive_ because it makes a simplifying assumption that the features (or attributes) used to predict the class are **conditionally independent** given the class label. Despite its simplicity and the assumption of independence, it often performs surprisingly well in many real-world applications, such as text classification, spam detection, and sentiment analysis.
+
+#### Key Concepts
+
+1. **Bayes' Theorem**
+2. **Independence Assumption**: The _naive_ assumption is that all features are independent given the class. 
+3. **Class Prediction**: The goal of the Naive Bayes classifier is to predict the class label C for a given feature vector X. The class with the highest posterior probability is selected:
+
+#### Types of Naive Bayes Classifiers
+
+1. **Gaussian Naive Bayes**:
+    
+    - Assumes that the features are normally distributed (Gaussian distribution) for each class.
+    - Useful when features are continuous and have a bell-shaped distribution.
+    - The likelihood P(xi∣C)P(x_i | C) for a continuous feature xix_i is calculated using the probability density function of the normal distribution:
+    
+    P(xi∣C)=12πσ2exp⁡(−(xi−μ)22σ2)P(x_i | C) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( - \frac{(x_i - \mu)^2}{2\sigma^2} \right)
+    
+    Where μ\mu is the mean and σ\sigma is the standard deviation of the feature in class CC.
+    
+2. **Multinomial Naive Bayes**:
+    
+    - Typically used for discrete features, like word counts in text classification problems (e.g., spam detection).
+    - Assumes that the features follow a multinomial distribution, where the likelihood is modeled as:
+    
+    P(x1,x2,…,xn∣C)=∏i=1nP(xi∣C)P(x_1, x_2, \dots, x_n | C) = \prod_{i=1}^n P(x_i | C)
+    
+    Here, xix_i represents counts or frequencies of features (e.g., words).
+    
+3. **Bernoulli Naive Bayes**:
+    
+    - Similar to multinomial Naive Bayes, but assumes binary/boolean features (e.g., the presence or absence of a feature).
+    - It uses the Bernoulli distribution, where the likelihood is:
+    
+    P(xi∣C)=P(xi=1∣C)xi⋅P(xi=0∣C)(1−xi)P(x_i | C) = P(x_i = 1 | C)^{x_i} \cdot P(x_i = 0 | C)^{(1 - x_i)}
+    
+    This is often used in binary classification or when features are binary.
+    
+
+#### Training the Naive Bayes Classifier
+
+1. **Calculate Prior Probabilities**: Estimate the probability of each class based on the training data:
+    
+    P(C)=Number of samples in class CTotal number of samplesP(C) = \frac{\text{Number of samples in class } C}{\text{Total number of samples}}
+2. **Estimate Likelihoods**: Calculate the likelihood P(xi∣C)P(x_i | C) for each feature xix_i given the class CC:
+    
+    - For categorical data, this is typically the frequency of each feature value within each class.
+    - For continuous data (in Gaussian Naive Bayes), this involves computing the mean and standard deviation of each feature for each class.
+3. **Prediction**: Given a new sample, compute the posterior probability for each class using the formula:
+    
+    P(C∣X)∝P(C)⋅∏i=1nP(xi∣C)P(C|X) \propto P(C) \cdot \prod_{i=1}^n P(x_i | C)
+    
+    The class with the highest posterior probability is chosen as the predicted class.
+    
+
+#### Advantages of Naive Bayes
+
+1. **Simple and Fast**:
+    
+    - The classifier is easy to implement and computationally efficient, especially for large datasets.
+    - It requires only a small amount of training data to estimate the parameters (priors and likelihoods).
+2. **Works Well with High-Dimensional Data**:
+    
+    - Naive Bayes performs particularly well in high-dimensional spaces, such as text classification tasks where the number of features (words) can be large.
+3. **Handles Missing Data**:
+    
+    - Since it independently considers each feature, it can handle missing data by ignoring those features during classification.
+4. **Effective for Categorical and Continuous Data**:
+    
+    - Naive Bayes can handle both types of data by using the appropriate model (Gaussian, multinomial, or Bernoulli).
+
+#### Disadvantages of Naive Bayes
+
+1. **Independence Assumption**:
+    
+    - The assumption of conditional independence of features is often unrealistic in many real-world datasets, which can lead to suboptimal performance when features are correlated.
+2. **Sensitive to Imbalanced Data**:
+    
+    - If the class distribution is highly imbalanced, Naive Bayes may be biased toward the majority class.
+3. **Limited Flexibility**:
+    
+    - Naive Bayes does not model complex relationships between features, which can limit its ability to handle more complex decision boundaries.
+
+#### Applications
+
+1. **Text Classification**:
+    
+    - Spam detection, sentiment analysis, and document classification are common uses, especially with the multinomial or Bernoulli Naive Bayes model.
+2. **Medical Diagnosis**:
+    
+    - Classifying diseases based on symptoms or medical test results.
+3. **Recommendation Systems**:
+    
+    - Used in systems that recommend products or services based on user preferences.
+4. **Real-Time Prediction**:
+    
+    - Due to its simplicity and speed, Naive Bayes is often used in applications requiring real-time predictions.
+
+### Key Takeaways
+
+- **Naive Bayes** is a fast and efficient classification algorithm based on Bayes' Theorem and the assumption of feature independence.
+- It is particularly useful for large, high-dimensional datasets and applications like text classification.
+- Despite its "naive" independence assumption, Naive Bayes can perform well in many practical scenarios, especially when the independence assumption holds reasonably true.
+
+
+![](../../statics/Pasted%20image%2020241209095724.png)
+
+
