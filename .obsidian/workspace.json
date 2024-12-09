@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Java Interview Ques"
             }
+          },
+          {
+            "id": "4d033f97651e6511",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Notes/statics/Pasted image 20241209082306.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20241209082306"
+            }
           }
         ]
       }
@@ -164,27 +176,27 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
-    "Notes/statics/Pasted image 20241205230241.png",
-    "Notes/statics/Pasted image 20241205222645.png",
-    "Notes/statics/Pasted image 20241205222011.png",
-    "Notes/statics/Pasted image 20241205221850.png",
-    "Notes/statics/Pasted image 20241205221626.png",
-    "Notes/statics/Pasted image 20241205221620.png",
-    "Notes/statics/Pasted image 20241205221602.png",
-    "Notes/statics/Pasted image 20241205221536.png",
-    "Notes/statics/Pasted image 20241205221458.png",
-    "Notes/statics/Pasted image 20241205221445.png",
-    "Notes/statics/Pasted image 20241205221312.png",
-    "Notes/java Backend/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
+    "Notes/statics/Pasted image 20241209083652.png",
+    "Notes/statics/Pasted image 20241209082537.png",
+    "Notes/statics/Pasted image 20241209082306.png",
     "Notes/java/Java Interview Ques.md",
+    "Notes/statics/Pasted image 20241209081014.png",
+    "Notes/statics/Pasted image 20241209080659.png",
+    "Notes/statics/Pasted image 20241209080644.png",
+    "Notes/statics/Pasted image 20241209080539.png",
+    "Notes/statics/Pasted image 20241209080251.png",
+    "Notes/java/Java For Interview.md",
     "Notes/MCA/3rd Sem/Machine learning.md",
+    "Notes/statics/Pasted image 20241207111417.png",
+    "Notes/statics/Pasted image 20241207110241.png",
+    "Notes/statics/Pasted image 20241207110219.png",
     "Notes/MCA/3rd Sem/Machine learning.md~",
+    "Notes/java Backend/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
     "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/MCA/3rd Sem/AOS.md",
     "Notes/Elastic Search/Basic.md",
     "Notes/DSA problem/Problems.md",
     "Notes/MCA/3rd Sem/Theory of Computation.md",
-    "Notes/java/Java For Interview.md",
     "Notes/java/Wrapper class.md",
     "Notes/java/ArrayList.md",
     "Notes/java/Intro.md",
