@@ -271,44 +271,12 @@ Dimensionality reduction helps create efficient, interpretable, and high-perform
 - Eclat algorithm: Eclat stands for the Equivalence Class Transformation. This algorithm uses the Depth-First Search (DFS) to search a transaction database for frequent item-sets
 - F-P Growth Algorithm: F-P growth algorithm organizes the database as a common pattern or tree. This frequent tree is used to identify the most frequent patterns
 
-### Clustering
-- Process of sorting items into groups based on their similarities forming distant clusters where items within each cluster are more alike each other than to those in other cluster.
-- entails discovering patterns without explicit guidance, akin to exploring a forest without a map , where similarities guide the grouping process. it's a form of unsupervised learning akin to solving a puzzle without knowledge of final solution.
-- Unsupervised learning
-![](../../statics/Pasted%20image%2020240902230300.png)
-#### Clustering vs Classification
-
-![](../../statics/Pasted%20image%2020240902230410.png)
-
-#### Hierarchical clustering
-![](../../statics/Pasted%20image%2020240902230639.png)![](../../statics/Pasted%20image%2020240902230735.png)
-![](../../statics/Pasted%20image%2020240902230845.png)
-
-### Reinforcement learning
-- type of ML where an agent learns to make decisions by performing actions and receiving feedback in the forms of rewards or penalties. This method is similar to how individuals learn from consequences of their actions in real life.
-- **Concepts:**
-    - environments
-    - state
-    - actions
-    - rewards
-
 ### Regression
 - statistical technique used to analyze the relationship between dependent variable and one or more indepenent variable. it is widely used in areas like finance, economics , and more , to predict outcomes and undergoing variable interaction.
 ![](../../statics/Pasted%20image%2020240902232142.png)
 ![](../../statics/Pasted%20image%2020240902232307.png)
 
 ### K mean clustering
-
-- K-Means Clustering is one of the most popular unsupervised learning algorithms used to partition a dataset into distinct groups, or clusters. The goal is to divide the data points into k clusters, where each data point belongs to the cluster with the nearest mean (centroid), resulting in clusters of similar data points.
-- find centroid (prototype)(mean) of K cluster.
-- **steps**
- - Randomly place K centroid.
- - assign each data point to its closest cluster.
- - update the centroid
-#### stopping
-- after some iteration.
-- when centroid dont change.
-- when few/no data point change cluster.
 
 #### problems
 - needs K: K-means requires the user to specify the number of clusters (K) in advance. This can be a drawback because the "correct" number of clusters is often not known beforehand. Choosing an inappropriate K can lead to poor clustering results. For example, if K is too low, distinct groups might be merged, while if K is too high, the algorithm might create clusters that are not meaningful. 
@@ -319,26 +287,6 @@ Dimensionality reduction helps create efficient, interpretable, and high-perform
 - Clusters: Groups of similar data points.
 - Centroid: The center of a cluster. Each centroid is the mean of all points in that cluster.
 - Distance Measure: Typically, Euclidean distance is used to measure how close a data point is to a centroid.
-#### 2. The K-Means Algorithm
-- The K-Means algorithm follows these steps:
-
-**Initialization:**
-
-Select k, the number of clusters.
-Randomly choose k initial centroids from the dataset.
-Assignment Step:
-
-Assign each data point to the nearest centroid. This forms k clusters.
-Update Step:
-
-Recalculate the centroids by taking the mean of all data points in each cluster.
-Repeat:
-
-Repeat the assignment and update steps until the centroids no longer change significantly, indicating convergence.
-Final Clusters:
-
-Once the centroids stabilize, the algorithm outputs the final clusters.
-
 ### Self organising map
 - use processing units (neurons) to place centroid on an adjustable map , SOM.
 - model self organize based on learning rules and interaction.
@@ -399,70 +347,6 @@ A Self-Organizing Map (SOM) is an unsupervised learning algorithm used for clust
 - **Complexity:** Training SOM can be computationally intensive, especially with large datasets or large grids.
 - **Fixed Grid Size:** The size of the grid must be decided beforehand, which can be challenging. A too-small grid might not capture all the data's nuances, while a too-large grid can be computationally expensive.
 - **Static Clusters:** Once the SOM is trained, the clusters are static and may not adapt well to new data without retraining.
-#### Numerical
-
-##### **Step 1: Initial Setup**
-
- **Dataset**
-We'll use a small dataset with 2-dimensional data points:
-- Data Points: `[(0.1, 0.2), (0.8, 0.6), (0.3, 0.4), (0.9, 0.7)]`
-
-**SOM Grid**
-We'll create a 2x2 SOM grid with 4 neurons. Each neuron will have a weight vector initialized randomly. Let's assume the following initial weights:
-- Neuron 1: `(0.2, 0.3)`
-- Neuron 2: `(0.6, 0.9)`
-- Neuron 3: `(0.4, 0.5)`
-- Neuron 4: `(0.7, 0.8)`
-
-##### **Step 2: Training Process**
-
-We'll go through one iteration of training to see how SOM updates the neurons' weights.
-
-**Iteration 1: Process Data Point (0.1, 0.2)**
-
-1. **Find the Best Matching Unit (BMU):**
-   - Calculate the Euclidean distance between the input `(0.1, 0.2)` and each neuron's weight vector:
-     - Neuron 1: Distance = `√((0.1 - 0.2)² + (0.2 - 0.3)²) = √(0.01 + 0.01) = √0.02 ≈ 0.14`
-     - Neuron 2: Distance = `√((0.1 - 0.6)² + (0.2 - 0.9)²) = √(0.25 + 0.49) = √0.74 ≈ 0.86`
-     - Neuron 3: Distance = `√((0.1 - 0.4)² + (0.2 - 0.5)²) = √(0.09 + 0.09) = √0.18 ≈ 0.42`
-     - Neuron 4: Distance = `√((0.1 - 0.7)² + (0.2 - 0.8)²) = √(0.36 + 0.36) = √0.72 ≈ 0.85`
-   - **BMU:** Neuron 1 has the smallest distance (0.14), so it's the BMU.
-
-2. **Update BMU and Neighboring Neurons:**
-   - Assume a learning rate of `0.5` and a neighborhood radius that covers all neurons.
-   - **Update Neuron 1 (BMU):**
-     - New Weight = Old Weight + Learning Rate * (Input - Old Weight)
-     - `(0.2, 0.3) + 0.5 * ((0.1, 0.2) - (0.2, 0.3)) = (0.2, 0.3) + (0.5 * (-0.1, -0.1)) = (0.2, 0.3) + (-0.05, -0.05) = (0.15, 0.25)`
-   - **Update Neuron 2:**
-     - New Weight = `(0.6, 0.9) + 0.5 * ((0.1, 0.2) - (0.6, 0.9)) = (0.6, 0.9) + 0.5 * (-0.5, -0.7) = (0.6, 0.9) + (-0.25, -0.35) = (0.35, 0.55)`
-   - **Update Neuron 3:**
-     - New Weight = `(0.4, 0.5) + 0.5 * ((0.1, 0.2) - (0.4, 0.5)) = (0.4, 0.5) + 0.5 * (-0.3, -0.3) = (0.4, 0.5) + (-0.15, -0.15) = (0.25, 0.35)`
-   - **Update Neuron 4:**
-     - New Weight = `(0.7, 0.8) + 0.5 * ((0.1, 0.2) - (0.7, 0.8)) = (0.7, 0.8) + 0.5 * (-0.6, -0.6) = (0.7, 0.8) + (-0.3, -0.3) = (0.4, 0.5)`
-
-###### **New Weights After First Iteration:**
-- Neuron 1: `(0.15, 0.25)`
-- Neuron 2: `(0.35, 0.55)`
-- Neuron 3: `(0.25, 0.35)`
-- Neuron 4: `(0.4, 0.5)`
-
-##### **Step 3: Repeat for Other Data Points**
-
-The training process is repeated for each data point in the dataset. Each time, the BMU is found, and the weights of the BMU and its neighbors are updated. Over many iterations, the neurons' weights gradually adjust to represent the input data more accurately, and similar data points map to neurons that are close to each other on the grid.
-
-##### **Final SOM After Training**
-After multiple iterations, the weights of the neurons stabilize, and the grid reflects the structure of the data. Similar data points will be close together on the map, and you can use the SOM to visualize and cluster the data.
-
-##### **Summary**
-
-- **Input:** A set of 2D data points.
-- **SOM Grid:** A 2x2 grid with neurons initialized with random weights.
-- **Training:** For each data point, find the BMU, then update the BMU and its neighbors.
-- **Result:** A map where similar data points are close together, providing a visual representation of the data's structure.
-
-This simple example shows how SOM works by adjusting neuron weights to cluster and organize data in a way that preserves the relationships between the data points.
-
-Here's a comparison between K-means and SOM in a table format:
 
 | **Aspect**                      | **K-means**                                          | **Self-Organizing Map (SOM)**                   |
 |---------------------------------|-----------------------------------------------------|-------------------------------------------------|
@@ -551,8 +435,133 @@ Where \( \bar{a} \) and \( \bar{b} \) are the means of the variables \(a\) and \
 # UNIT 2
 
 ## Decision Tree
+### Intro
+A decision tree is the simplest and extremely understandable categorization or classification
+approach. It is a powerful supervised machine learning algorithm that has a hierarchy based-tree like structure, whose leaf nodes contains the class labels; root node and internal node represents the attribute test or split test. The results of attribute test i.e., decisions are represented by the branches, therefore it referred to as decision tree.
 
-A Decision Tree is a supervised learning algorithm used for both classification and regression tasks. It splits the dataset into subsets based on the most significant features, forming a tree structure where each internal node represents a decision based on a feature, each branch represents an outcome of that decision, and each leaf node represents the final prediction.
+![](../../statics/Pasted%20image%2020241207103537.png)
+### Steps 
+1. Start by identifying the feature or attribute that will best distinguish between the classes using the complete dataset. Metrics like computing information gain or the Gini index are used to identify the finest trait.
+2. After identifying the finest characteristic, split the data collection into two (or more) parts of the attribute value based on split test results.
+3. If a part of the dataset only contains labels for a class, the process stops here and designate it as the leaf node i.e., class label. 
+4. This procedure is repeated until we have all leaf nodes, that contain information from the same class. The finalize decision tree algorithm’s model is shown in a flowchart.
+
+### Benefits of Decision Trees in Machine Learning
+
+1. **Interpretability**: Decision trees are easy to understand and interpret, even for non-technical stakeholders. They visually represent decisions, making them intuitive.
+2. **Feature Selection**: Decision trees inherently perform feature selection by splitting the data based on the most significant attributes at each node.
+3. **Non-linear Relationships**: They can model non-linear relationships effectively without requiring transformations of input data.
+4. **Versatility**: Decision trees can handle both numerical and categorical data, making them flexible for a wide range of applications.
+5. **No Need for Scaling**: They don’t require feature scaling or normalization, simplifying data preprocessing.
+### Limitations of Decision Trees in Machine Learning
+
+1. **Overfitting**: Decision trees can easily overfit the training data, especially when they grow too deep.
+2. **Instability**: Small changes in the data can lead to entirely different splits, making the model unstable.
+3. **Bias towards Dominant Features**: They can be biased when certain features dominate due to imbalanced data.
+4. **Poor Performance on Large Datasets**: Single decision trees might not perform well on large and complex datasets compared to ensemble methods like random forests.
+5. **Limited Predictive Power**: Alone, decision trees often yield lower predictive accuracy compared to more sophisticated models like gradient boosting or neural networks.
+
+### Appropriate problem for decision tree algo
+Decision tree has wide scope capabilities to solve the problems defines with following characteristics.
+
+1. **Instances have attribute-value pairs**:  
+   Each example is described by some properties (like "Temperature") and their values (like "Hot" or "Cold"). Decision trees work well when these values are distinct, but they can also handle numbers (e.g., 30°C) if needed.
+
+2. **The output is usually a fixed set of categories**:  
+   Decision trees are good for problems where the result falls into specific groups (like "Yes" or "No"). They can also work with more groups (like "Low," "Medium," "High") or even numbers, but that’s less common.
+
+3. **They handle "OR" conditions**:  
+   Decision trees can naturally describe situations where something happens under one condition **OR** another (e.g., "It's a good day if it's sunny **OR** warm").
+
+4. **They can handle errors in data**:  
+   Even if the data has mistakes (like a wrong label or value), decision trees can still figure out the right patterns most of the time.
+
+5. **They can deal with missing information**:  
+   If some examples are missing a value (like "Humidity" not recorded for some days), decision trees can still work and make decisions based on the available data.
+
+### Entropy Measure
+![](../../statics/Pasted%20image%2020241206124449.png)
+
 
 ![](../../statics/Pasted%20image%2020240907083712.png)
 ![](../../statics/Pasted%20image%2020240907084243.png)
+
+## Regression
+### some typical applications for machine learning regression models
+- Forecasting a continuous result, such as stock prices, sales, or property values.
+- Estimating the success of future retail or marketing initiatives in order to ensure that resources are used efficiently.
+- Predict user or customer behaviour on webpages that sell goods or offer streaming services, etc.
+- Evaluating data sets to discover the connections between factors and outcomes.
+- Calculating interest rates or stocks value based on a diversity of factors.
+- Data visualisation for time series.
+### Multiregression
+- To predict the outcome of a parameter according to the values of two or more additional components, a statistical technique called multiple linear regression is utilised.
+![](../../statics/Pasted%20image%2020241206120126.png)
+
+
+# UNIT 3
+## ANN
+
+### Intro / Neural network representation
+- An **Artificial Neural Network (ANN)** is a computational model inspired by the structure and functioning of biological neural networks in the human brain. It is composed of interconnected units called **neurons** or **nodes**, which process data by simulating the way neurons signal each other in biological systems.
+![](../../statics/Pasted%20image%2020241207100213.png)
+
+An effective neural network has three key layers:
+1. Input layer: This layer accepts all inputs from the programmer, as the name would imply.
+2. Hidden Layers: These are located between the input layer & the output layer. This is the layer where the computations that produce the output are done.
+3. Output Layer: The output is finally supplied via this layer after the inputs undergo a number of changes via the hidden layer
+#### Activation function
+- it apply a non-linear transformation and decide whether a neuron should be activated or not.
+- ![](../../statics/Pasted%20image%2020241207101538.png)
+- ![](../../statics/Pasted%20image%2020241207101601.png)
+- ![](../../statics/Pasted%20image%2020241207101749.png)
+- ![](../../statics/Pasted%20image%2020241207101805.png)
+
+#### Cost function
+A **cost function** is a mathematical function that measures the **error** between the predicted values of a machine learning model and the actual target values. It quantifies how well or poorly the model performs.
+##### **Purpose of the Cost Function**
+- To guide the **optimization process** by providing a scalar value representing the model's performance.
+- The goal of training is to **minimize the cost function** by adjusting the model parameters (weights and biases).
+##### **types of Cost Functions**
+
+![](../../statics/Pasted%20image%2020241207104309.png)
+
+
+---
+
+
+## Appropriate problem for Neural network
+
+1. **Real-Valued Output**:
+    
+    - The target function (the concept to be learned) can be represented as a real-valued function.
+    - Data used for training and predictions involve real numbers, which can include Boolean values (e.g., true/false mapped to +1/-1), integers, or vectors.
+2. **Time-Intensive Training**:
+    
+    - ANNs require longer training times compared to simpler models like decision trees.
+    - Training time depends on factors like the number of examples, learning rate, and network complexity.
+    - Training duration can vary from minutes to hours.
+3. **Opaque Decision-Making**:
+    
+    - ANNs act like "black boxes," making it hard to interpret how they perform categorizations.
+    - Human understanding of the internal computations is not necessary for many tasks.
+4. **Fast Evaluation After Training**:
+    
+    - Once trained, ANNs can quickly evaluate inputs for their intended purpose.
+    - For example, an ANN trained to classify objects (e.g., bus, car, tank) can make quick decisions, which is vital in time-critical scenarios like avoiding collisions.
+
+
+## Perceptron
+- A **perceptron** is one of the simplest types of artificial neural networks, designed to simulate how neurons in the human brain process information. It is a foundational concept in machine learning and artificial intelligence.
+- A perceptron takes several **inputs**, processes them through **weighted connections**, and produces a **binary output** (e.g., 0 or 1).
+- It acts like a simple **binary classifier**.
+
+### Types
+- Single layer: Single layer perceptron can only learn a single label pattern.
+- Multilayer: Multilayer perceptrons have the ability to process information from two or more layers and comprehend it. The Perceptron approach determines a linear decision boundary by learning the weights for the input signals. 
+
+![](../../statics/Pasted%20image%2020241207111417.png)
+Single layer 
+
+
+![](../../statics/Pasted%20image%2020241207110241.png)
