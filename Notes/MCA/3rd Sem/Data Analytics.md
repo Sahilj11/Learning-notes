@@ -369,7 +369,394 @@ In R, reading and writing data from and to various file formats (CSV, Excel, etc
 | **Get Working Directory**   | `getwd()`         | Base R                  | `getwd()`                       |
 | **List Files in Directory** | `list.files()`    | Base R                  | `list.files()`                  |
 
+# UNIT 2
+
+### **Difference Between Random and Normally Distributed Variables**
+
+| **Feature**                     | **Randomly Distributed Variable**                                                                  | **Normally Distributed Variable**                                             |
+| ------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Nature of Data**              | Data generated randomly, not following a specific pattern or shape.                                | Data follows a specific bell-shaped, symmetric curve (Gaussian distribution). |
+| **Distribution Type**           | Can be any distribution (uniform, Poisson, binomial, exponential, etc.).                           | Follows a normal (Gaussian) distribution.                                     |
+| **Shape**                       | No specific shape, depending on the underlying distribution.                                       | Symmetric, bell-shaped curve (mean = median = mode).                          |
+| **Parameterization**            | Depends on the type of distribution (mean, variance, etc.).                                        | Defined by two parameters: **mean (μ)** and **standard deviation (σ)**.       |
+| **Occurrence of Data Points**   | Equal likelihood of occurrence within a specified range for uniform distributions.                 | Most data points are near the mean, with fewer points farther away.           |
+| **Common Real-World Examples**  | Event occurrence times (Poisson), random selections (uniform), etc.                                | Heights, test scores, measurement errors, etc.                                |
+| **Mean and Standard Deviation** | Varies based on distribution; may not have a well-defined mean or SD (e.g., uniform distribution). | Well-defined; 68% of data lies within 1 standard deviation of the mean.       |
+| **Symmetry**                    | Can be asymmetric, depending on the distribution.                                                  | Always symmetric around the mean.                                             |
+
+### **R Methods Related to Random and Normally Distributed Variables**
+
+| **Type of Distribution**                      | **R Method**            | **Description**                                                                                             |
+| --------------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------- |
+| **Random Distribution (Uniform)**             | `runif(n, min, max)`    | Generates **n** random numbers uniformly distributed between **min** and **max**.                           |
+| **Random Distribution (Poisson)**             | `rpois(n, lambda)`      | Generates **n** random numbers from a Poisson distribution with mean **lambda**.                            |
+| **Random Distribution (Exponential)**         | `rexp(n, rate)`         | Generates **n** random numbers from an exponential distribution with rate **rate**.                         |
+| **Random Distribution (Binomial)**            | `rbinom(n, size, prob)` | Generates **n** random numbers from a binomial distribution with **size** trials and probability **prob**.  |
+| **Normal Distribution**                       | `rnorm(n, mean, sd)`    | Generates **n** random numbers from a normal distribution with mean **mean** and standard deviation **sd**. |
+| **Visualizing Random Distribution**           | `hist()`                | Plots a histogram of the data, useful for visualizing the distribution.                                     |
+| **Checking Normality**                        | `shapiro.test(x)`       | Performs Shapiro-Wilk test to check if the data in **x** is normally distributed.                           |
+| **Generating Normal Distribution**            | `dnorm(x, mean, sd)`    | Generates the **density** of the normal distribution at a given point **x**.                                |
+| **Generating Normal Distribution (CDF)**      | `pnorm(x, mean, sd)`    | Generates the **cumulative probability** of the normal distribution at point **x**.                         |
+| **Generating Normal Distribution (Quantile)** | `qnorm(p, mean, sd)`    | Computes the **quantile** function for the normal distribution at probability **p**.                        |
+| **Generating Normal Distribution (Random)**   | `rnorm(n, mean, sd)`    | Generates **n** random numbers from a normal distribution with mean **mean** and standard deviation **sd**. |
+
+### **Summary**
+
+- **Random distributions** can follow any underlying probability distribution (e.g., uniform, Poisson, etc.), with no specific pattern or symmetry.
+- **Normal distributions** follow a bell-shaped, symmetric curve, and their values are concentrated around the mean with a well-defined spread (standard deviation).
+- In **R**, methods such as `runif()`, `rnorm()`, and `rpois()` are used to generate random and normally distributed variables. You can use statistical tests like the **Shapiro-Wilk test** (`shapiro.test()`) to check if data is normally distributed.
+### Random and Normally Distributed Variables, and Skewed Normal Distribution
+
+#### **1. Random Variables**
+
+A **random variable** is a variable that takes on different values based on the outcome of a random event or experiment. There are two types of random variables:
+
+- **Discrete Random Variable**: Takes specific values, usually integers. Example: The number of heads in 10 coin flips.
+- **Continuous Random Variable**: Takes any value within a range. Example: Height, weight, or temperature.
+
+Random variables can follow different probability distributions, which define the likelihood of different outcomes.
+
+#### **2. Normal Distribution (Gaussian Distribution)**
+
+A **Normal Distribution** is one of the most commonly encountered probability distributions. It is symmetric and follows the classic bell curve.
+
+- **Probability Density Function (PDF)** of the normal distribution:
+    ![](../../statics/Pasted%20image%2020241211111457.png)
+- **Key Characteristics**:
+    
+    - **Symmetry**: The normal distribution is symmetric around the mean.
+    - **Mean, Median, Mode**: For a normal distribution, the mean, median, and mode are all equal.
+    - **68-95-99.7 Rule**: In a normal distribution:
+        - 68% of the data lies within one standard deviation of the mean.
+        - 95% lies within two standard deviations.
+        - 99.7% lies within three standard deviations.
+- **Example**: Heights of a group of people, IQ scores, or measurement errors.
+    
+
+#### **3. Skewed Normal Distribution**
+
+A **Skewed Normal Distribution** is a generalization of the normal distribution that allows for **skewness** (asymmetry). Unlike the symmetric normal distribution, a skewed normal distribution can have a tail on one side (left or right).
+
+- **Probability Density Function (PDF)** of the skewed normal distribution:
+    ![](../../statics/Pasted%20image%2020241211111546.png)
+- **Key Characteristics**:
+    - **Skewness**: The skewness parameter α\alpha controls the direction and degree of skew. If α>0\alpha > 0, the distribution is right-skewed (longer tail on the right). If α<0\alpha < 0, it is left-skewed.
+    - **Asymmetry**: Unlike the normal distribution, the skewed normal distribution does not have a perfect bell shape and can be stretched more on one side.
+    - **Combines Features**: It combines features of both the normal distribution (bell shape) and a skewed distribution (asymmetry).
+- **Applications**:
+    
+    - Skewed distributions are common in real-world data, such as income distribution, certain biological processes, and waiting times, where data may be heavily skewed to the right (e.g., the income of people where most earn a low amount but a few earn a very high amount).
+- **Skewness Control**: The parameter α\alpha allows for control over the amount of skewness. A skewed normal distribution is flexible and can approximate other distributions (e.g., uniform or exponential) by adjusting α\alpha.
+    
+
+---
+
+#### **5. Comparison of Normal and Skewed Normal Distribution**
+
+| **Feature**            | **Normal Distribution**                            | **Skewed Normal Distribution**                        |
+| ---------------------- | -------------------------------------------------- | ----------------------------------------------------- |
+| **Shape**              | Symmetric, bell-shaped                             | Asymmetric, skewed                                    |
+| **Skewness**           | No skew (skewness = 0)                             | Skewness controlled by α\alpha                        |
+| **Mean, Median, Mode** | All are equal                                      | Mean, median, and mode may differ                     |
+| **Parameter(s)**       | Mean μ\mu, Std Dev σ\sigma                         | Mean μ\mu, Std Dev σ\sigma, Skewness α\alpha          |
+| **Use Case**           | Common in natural sciences (e.g., heights, errors) | Often used in economics, finance, and biological data |
+![](../../statics/Pasted%20image%2020241211111745.png)
+- **Normal Distribution** is a fundamental concept in statistics, representing symmetric, bell-shaped data.
+- The **Skewed Normal Distribution** generalizes the normal distribution by allowing for asymmetry, which makes it more flexible for modeling real-world data with skewed patterns.
+- Understanding the behavior of these distributions is essential for choosing the right model for various data types and ensuring accurate predictions in statistical and machine learning applications.
+
+## Z-Score
+
+A **Z-score**, also known as the **standard score**, is a statistical measure that describes the position of a data point relative to the mean of a group of data points. It indicates how many standard deviations a data point is from the mean. Z-scores are useful for comparing data from different distributions or scales.
+
+### **1. Definition of Z-Score**
+
+The **Z-score** of a data point XX is calculated using the formula:
+
+![](../../statics/Pasted%20image%2020241211112307.png)
+
+The Z-score represents how far the data point is from the mean in terms of standard deviations.
+
+### **2. Interpretation of Z-Score**
+
+- **Z = 0**: The data point is **exactly at the mean**.
+- **Z > 0**: The data point is **above the mean**.
+- **Z < 0**: The data point is **below the mean**.
+- **Z = 1**: The data point is **1 standard deviation above the mean**.
+- **Z = -1**: The data point is **1 standard deviation below the mean**.
+
+Z-scores give a **relative measure** of a data point’s position, regardless of the scale of the data.
+
+
+### **3. Uses of Z-Score**
+
+- **Identifying Outliers**: A Z-score that is too high (e.g., > 3) or too low (e.g., < -3) indicates that the data point is an **outlier**.
+- **Standardizing Data**: Z-scores are used in **standardization** (also called normalization) to transform data to a standard normal distribution. This is often a preprocessing step in machine learning.
+- **Comparing Different Datasets**: Z-scores allow for comparison between different datasets, even if they have different units or scales. By converting both datasets into Z-scores, they can be compared on the same scale.
+- **Hypothesis Testing**: Z-scores are used in hypothesis testing, especially in **Z-tests** to determine whether a sample mean significantly differs from the population mean.
+
+### **4. Example Calculation of Z-Score**
+
+![](../../statics/Pasted%20image%2020241211112248.png)
+
+
+### **5. Practical Applications of Z-Score**
+
+- **Outlier Detection**: If a Z-score is larger than 3 or smaller than -3, the data point can be considered an outlier.
+- **Standardization in Machine Learning**: In algorithms like **Support Vector Machines (SVM)**, **k-Nearest Neighbors (k-NN)**, and **Principal Component Analysis (PCA)**, Z-scores are used to standardize data, improving model performance by eliminating scale issues.
+- **Quality Control**: In manufacturing or process control, Z-scores are used to monitor the production process and identify whether products meet quality standards (e.g., in **Six Sigma**).
+
+### **Conclusion**
+
+The Z-score is a powerful tool for comparing data points within a distribution, identifying outliers, and standardizing data. It enables comparisons across datasets with different scales and is widely used in various fields like statistics, quality control, and machine learning. Understanding Z-scores and how they relate to probability and data distribution is crucial for effective data analysis.
+
+## Outlier
+
+An **outlier** is a data point that significantly deviates from other observations in a dataset. Outliers can occur due to variability in the data, errors in measurement, or they may represent rare, extreme events. Outliers can distort statistical analyses and models, which is why detecting and handling them is crucial.
+
+Outliers can be:
+
+- **Univariate**: Involving a single variable or feature.
+- **Multivariate**: Involving relationships between multiple variables.
+
+Detecting outliers is essential in cleaning data before performing analysis or modeling. Common methods to detect outliers include the **Z-score**, **IQR (Interquartile Range)** method, and **visualization techniques** such as boxplots.
+
+### Detecting Outliers in R
+
+Detecting outliers in a dataset is an essential part of data analysis and can help ensure that your models and results are not skewed by extreme values. In R, there are several ways to detect outliers, including using summary statistics, visualizations, and statistical tests.
+
+Here are common methods to detect outliers in R:
+
+### **1. Using Summary Statistics (Z-Score Method)**
+
+One common method to detect outliers is by calculating the **Z-score** for each data point. A Z-score greater than 3 or less than -3 usually indicates an outlier.
+
+#### Steps:
+
+1. Calculate the mean and standard deviation of the data.
+2. Compute the Z-score for each data point.
+3. Flag data points with Z-scores greater than 3 or less than -3.
+
+#### Example:
+
+```R
+# Sample data
+data <- c(10, 12, 15, 14, 13, 13, 17, 100, 14, 13)
+
+# Calculate Z-scores
+z_scores <- (data - mean(data)) / sd(data)
+
+# Detect outliers: Z-score greater than 3 or less than -3
+outliers <- data[abs(z_scores) > 3]
+outliers
+```
+
+In this example, any data point with an absolute Z-score greater than 3 will be flagged as an outlier.
+
+### **2. Using Boxplots**
+
+A **boxplot** provides a visual way to detect outliers. Outliers are typically points that lie beyond 1.5 times the interquartile range (IQR) from the first and third quartiles.
+
+#### Steps:
+
+1. Plot a boxplot for the data.
+2. Points outside the "whiskers" of the boxplot are outliers.
+
+#### Example:
+
+```R
+# Sample data
+data <- c(10, 12, 15, 14, 13, 13, 17, 100, 14, 13)
+
+# Create a boxplot
+boxplot(data, main="Boxplot for Outlier Detection")
+
+# Identifying outliers
+outliers <- boxplot.stats(data)$out
+outliers
+```
+
+In this example, `boxplot.stats(data)$out` returns the outliers based on the IQR method.
+
+### **3. Using IQR (Interquartile Range) Method**
+
+The **IQR method** defines outliers as data points that are below the first quartile minus 1.5 times the IQR or above the third quartile plus 1.5 times the IQR.
+
+#### Steps:
+![](../../statics/Pasted%20image%2020241211113104.png)
+
+#### Example:
+
+```R
+# Sample data
+data <- c(10, 12, 15, 14, 13, 13, 17, 100, 14, 13)
+
+# Calculate Q1, Q3, and IQR
+Q1 <- quantile(data, 0.25)
+Q3 <- quantile(data, 0.75)
+IQR_value <- IQR(data)
+
+# Identify outliers
+outliers <- data[data < (Q1 - 1.5 * IQR_value) | data > (Q3 + 1.5 * IQR_value)]
+outliers
+```
+
+In this example, the data points that are outside the acceptable range (based on IQR) are considered outliers.
+
+### **4. Using the `outliers` Package**
+
+The `outliers` package in R provides a function called `grubbs.test()` to detect outliers using Grubbs' Test, which is a formal statistical test to detect a single outlier in a univariate dataset.
+
+#### Steps:
+
+1. Install and load the `outliers` package.
+2. Use the `grubbs.test()` function to test for outliers.
+
+#### Example:
+
+```R
+# Install and load the outliers package
+install.packages("outliers")
+library(outliers)
+
+# Sample data
+data <- c(10, 12, 15, 14, 13, 13, 17, 100, 14, 13)
+
+# Perform Grubbs' test for outliers
+grubbs.test(data)
+```
+
+The output will tell you if there are any significant outliers based on Grubbs' test.
+
+
 # Unit 3
+
+## R related notes for unit 
+### **Estimating Coefficients in Simple and Multiple Regression in R**
+
+In regression analysis, estimating coefficients involves determining the relationship between independent variables (predictors) and a dependent variable (target). In both **simple linear regression** (one predictor) and **multiple linear regression** (multiple predictors), R provides several methods to estimate the coefficients.
+
+### **1. Simple Linear Regression**
+
+In **simple linear regression**, we estimate the coefficients for a model of the form:
+![](../../statics/Pasted%20image%2020241211113847.png)
+#### **Methods to Estimate Coefficients in Simple Linear Regression:**
+
+1. **Using `lm()` Function**:
+    
+    - The most common method in R to fit a linear model and estimate coefficients is by using the `lm()` function.
+    
+    ```R
+    # Simple Linear Regression in R
+    model <- lm(y ~ x, data = dataset)
+    summary(model)
+    ```
+    
+    This method estimates both the **intercept** β0 and the **slope** β1 by minimizing the residual sum of squares (RSS).
+    
+2. **Using `coef()` Function**:
+    
+    - The `coef()` function extracts the coefficients from a fitted linear model object.
+    ```R
+    # Extracting the coefficients
+    coefficients <- coef(model)
+    ```
+### **2. Multiple Linear Regression**
+
+In **multiple linear regression**, the model includes two or more predictors. The equation for multiple regression is:
+
+![](../../statics/Pasted%20image%2020241211114012.png)
+
+#### **Methods to Estimate Coefficients in Multiple Linear Regression:**
+
+1. **Using `lm()` Function**:
+    
+    - This is the most straightforward way to perform multiple regression in R.
+    
+    ```R
+    # Multiple Linear Regression in R
+    model <- lm(y ~ x1 + x2 + x3, data = dataset)
+    summary(model)
+    ```
+    
+    The `summary(model)` will provide the coefficients, standard errors, t-values, and p-values for each predictor.
+    
+2. **Using `coef()` Function**:
+    
+    - After fitting the model, you can use `coef()` to extract the estimated coefficients for each predictor.
+    
+    ```R
+    # Extracting coefficients
+    coefficients <- coef(model)
+    ```
+    
+3. **Using `step()` for Stepwise Regression**:
+    
+    - Stepwise regression helps in selecting the most significant predictors by adding or removing variables based on criteria (AIC, BIC).
+    
+    ```R
+    # Stepwise Regression using AIC
+    model_step <- step(model, direction = "both")
+    summary(model_step)
+    ```
+    
+4. **Using `glm()` Function for Generalized Linear Models**:
+    
+    - If the regression model involves a non-normal error distribution (e.g., logistic regression), `glm()` can be used.
+    
+    ```R
+    # Generalized Linear Model (e.g., Logistic Regression)
+    model_glm <- glm(y ~ x1 + x2 + x3, family = binomial(link = "logit"), data = dataset)
+    summary(model_glm)
+    ```
+
+### **3. Methods to Estimate Coefficients: General Overview**
+
+| **Method**                                | **Description**                                                                                                                              | **R Function**                  |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Ordinary Least Squares (OLS)**          | The most common method used to estimate coefficients by minimizing the residual sum of squares (RSS).                                        | `lm()`                          |
+| **Coefficient Extraction**                | Extracts the estimated coefficients from a fitted model object.                                                                              | `coef()`                        |
+| **Stepwise Regression**                   | A method of selecting the best subset of predictors based on AIC, BIC, or other criteria.                                                    | `step()`                        |
+| **Generalized Linear Models (GLM)**       | Used for models where the dependent variable is not normally distributed (e.g., logistic regression, Poisson regression).                    | `glm()`                         |
+| **Multiple Regression with Interactions** | Adds interaction terms to explore the combined effect of predictors.                                                                         | `lm()` (e.g., `x1 * x2`)        |
+| **Robust Regression**                     | Estimates coefficients using techniques that are less sensitive to outliers, such as Huber regression.                                       | `rlm()` from the `MASS` package |
+| **Ridge Regression**                      | A regularization method that applies a penalty to the coefficients to prevent overfitting, especially when predictors are highly correlated. | `glmnet()`                      |
+| **Lasso Regression**                      | Similar to Ridge but applies L1 regularization, which leads to sparse solutions (coefficients can be zero).                                  | `glmnet()`                      |
+
+### **Example for Simple and Multiple Regression in R**
+
+#### **Simple Linear Regression Example:**
+
+```R
+# Simple linear regression with one predictor
+model_simple <- lm(y ~ x, data = dataset)
+summary(model_simple)  # Shows estimated coefficients (intercept and slope)
+```
+
+#### **Multiple Linear Regression Example:**
+
+```R
+# Multiple linear regression with multiple predictors
+model_multiple <- lm(y ~ x1 + x2 + x3, data = dataset)
+summary(model_multiple)  # Shows estimated coefficients for each predictor
+```
+
+#### **Stepwise Regression Example:**
+
+```R
+# Stepwise regression for model selection based on AIC
+model_stepwise <- step(model_multiple, direction = "both")
+summary(model_stepwise)  # Shows the final selected model and coefficients
+```
+
+### **Conclusion**
+
+- **Simple linear regression** estimates coefficients for one independent variable.
+- **Multiple linear regression** estimates coefficients for multiple independent variables.
+- The **lm()** function is the primary tool in R for both simple and multiple regression.
+- You can extract coefficients using the **coef()** function and perform additional steps like stepwise selection using the **step()** function.
+- Regularization methods like **Ridge** and **Lasso** help to handle multicollinearity and overfitting by imposing penalties on coefficients.
+
 
 ### Descriptive vs prescriptive vs Predictive
 Descriptive, predictive, and prescriptive analytics represent three main stages of data analytics, each serving a unique purpose in helping organizations make informed decisions.
