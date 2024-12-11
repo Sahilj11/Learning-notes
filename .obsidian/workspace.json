@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "Data Analytics"
             }
-          },
-          {
-            "id": "4d033f97651e6511",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Notes/statics/Pasted image 20241209082306.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20241209082306"
-            }
           }
         ]
       }
@@ -176,6 +164,9 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20241211103710.png",
+    "Notes/statics/Pasted image 20241209082306.png",
+    "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/statics/Pasted image 20241210101520.png",
     "Notes/statics/Pasted image 20241210101318.png",
     "Notes/statics/Pasted image 20241209182209.png",
@@ -186,13 +177,10 @@
     "Notes/statics/Pasted image 20241209181728.png",
     "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/statics/Pasted image 20241209095724.png",
-    "Notes/statics/Pasted image 20241209094532.png",
-    "Notes/statics/Pasted image 20241209094209.png",
     "Notes/java/Java Interview Ques.md",
     "Notes/java/Java For Interview.md",
     "Notes/MCA/3rd Sem/Machine learning.md~",
     "Notes/java Backend/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
-    "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/MCA/3rd Sem/AOS.md",
     "Notes/Elastic Search/Basic.md",
     "Notes/DSA problem/Problems.md",
