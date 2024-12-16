@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/3rd Sem/Data Analytics.md",
+                "file": "Notes/MCA/3rd Sem/Cyber security.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Analytics"
+              "title": "Cyber security"
             }
           }
         ]
@@ -164,19 +164,21 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20241216121804.png",
+    "Notes/statics/Pasted image 20241216112635.png",
+    "Notes/statics/Pasted image 20241216102241.png",
+    "Notes/statics/Pasted image 20241216102028.png",
+    "Notes/statics/Pasted image 20241216101943.png",
+    "Notes/MCA/3rd Sem/Theory of Computation.md",
+    "Notes/MCA/3rd Sem/Cyber security.md",
+    "Notes/MCA/3rd Sem/Machine learning.md",
+    "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/statics/Pasted image 20241211114012.png",
     "Notes/statics/Pasted image 20241211113847.png",
     "Notes/statics/Pasted image 20241211113104.png",
     "Notes/statics/Pasted image 20241211112307.png",
     "Notes/statics/Pasted image 20241211112248.png",
     "Notes/statics/Pasted image 20241211111745.png",
-    "Notes/statics/Pasted image 20241211111546.png",
-    "Notes/statics/Pasted image 20241211111457.png",
-    "Notes/statics/Pasted image 20241211103710.png",
-    "Notes/statics/Pasted image 20241209082306.png",
-    "Notes/MCA/3rd Sem/Data Analytics.md",
-    "Notes/statics/Pasted image 20241210101520.png",
-    "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/java/Java Interview Ques.md",
     "Notes/java/Java For Interview.md",
     "Notes/MCA/3rd Sem/Machine learning.md~",
@@ -184,7 +186,6 @@
     "Notes/MCA/3rd Sem/AOS.md",
     "Notes/Elastic Search/Basic.md",
     "Notes/DSA problem/Problems.md",
-    "Notes/MCA/3rd Sem/Theory of Computation.md",
     "Notes/java/Wrapper class.md",
     "Notes/java/ArrayList.md",
     "Notes/java/Intro.md",
