@@ -283,3 +283,42 @@ public Person person(@Qualifier("parrot2") Parrot parrot) {
 ```
 
 # Using Abstractions
+## Using interface to define contract
+- In Java, the interface is an abstract structure you use to declare a specific responsibility. An object implementing the interface has to define this responsibility.
+- We can say that the interface specifies the “what needs to happen,” while every object implementing the interface specifies the “how it should happen.”
+
+### Using interface for decoupling responsibility
+- When changing an object’s responsibility, we want to avoid the need to change other objects using the changed responsibility. This design’s problem occurs because the DeliveryDetailsPrinter object specifies both what it needs and how it needs.  an object only needs to specify what it needs and stay completely unaware of how the what is implemented
+- ![](../../statics/Pasted%20image%2020241217075458.png)
+
+### Implementing the requirement without using framework
+- In standard real-world applications, we usually refer to the objects implementing uses cases as services,
+- When we have an object working directly with a database, we generally name such an object repository. Sometimes you also find such objects referred to as data access objects (DAO).
+- objects whose responsibility is to establish communication with something outside the app, we name these objects proxies,
+- We start the implementation of the use case with writing this POJO(A POJO is a simple object without dependencies, only described by its attributes and methods. In our case, the Comment class defines a POJO describing the details of a comment by its two attributes: author and text.) class. The responsibility of this type of object is simply to model the data the app uses, and we call it model
+## Using dependency injection with abstraction
+### Deciding which object should be part of spring context
+- When you add an object to the Spring context, you allow the framework to manage it with some specific functionality the framework provides. If you add the object to be managed by Spring without getting any benefit from the framework, you just over-engineer your implementation
+- We use stereotype annotations for the classes that Spring needs to create instances and add these instances to its context. It doesn’t make sense to add stereotype annotations on interfaces or abstract classes because these cannot be instantiated. Syntactically, you can do this, but it is not useful.
+- Spring sees the attributes are defined with interface types and is smart enough to search in its context for beans created with classes that implement these interfaces. As we discussed in chapter 2, because we have only one constructor in the class, the @Autowired annotation is optional.
+- We only need to tell Spring where to find the classes annotated with stereotype anno- tations and test the app. The next listing presents the project’s configuration class where we use the @ComponentScan annotation to tell Spring where to find the classes annotated with @Component.
+- ![](../../statics/Pasted%20image%2020241217080232.png)
+- ![](../../statics/Pasted%20image%2020241217080300.png)
+
+### Chossing what to autowire from multiple implementation of an abstraction
+- what happens if the Spring context contains more instances that match a requested abstraction
+- Using the @Primary annotation to mark one of the beans for implementation as the default
+- Using the @Qualifier annotation to name a bean and then refer to it by its name for DI
+- The question I usually hear at this moment is, “Now we have two implementations, but Spring will always inject only one of them? Why have both classes in this case?”
+- It’s possible that, at some point, you use a dependency that provides an implementation for a specific interface (figure 4.10), but the provided implementation is not suitable for your app, and you choose to define your custom implementation. Then @Primary is your simplest solution.
+- ![](../../statics/Pasted%20image%2020241217080614.png)
+- ![](../../statics/Pasted%20image%2020241217080627.png)
+- ![](../../statics/Pasted%20image%2020241217080646.png)
+
+
+## Spring context: Bean scopes and life cycle
+Spring has multiple different approaches for creating beans and managing their
+life cycle, and in the Spring world we name these approaches scopes. In this chapter, we
+discuss two scopes you’ll often find in Spring apps: singleton and prototype.
+
+### Using singleton bean scope
