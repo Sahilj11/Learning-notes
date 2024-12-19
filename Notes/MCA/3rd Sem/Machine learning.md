@@ -140,6 +140,83 @@ Here’s a detailed **10-point difference** between **Regression** and **Classif
 ## SOM
 https://www.youtube.com/watch?v=DsYm4Tlr1rw&t=153s
 
+### **Definition**
+- **Self-Organizing Maps (SOM)** are unsupervised learning algorithms used for dimensionality reduction and data visualization.
+- SOM organizes high-dimensional data into a 2D grid while preserving the topological structure of the data.
+
+### **Key Characteristics**
+
+1. **Unsupervised Learning**:
+    
+    - Does not require labeled data.
+    - Identifies patterns and relationships in the data based on similarity.
+2. **Topology Preservation**:
+    
+    - Nearby nodes on the SOM grid represent data points that are similar in the input space.
+3. **Dimensionality Reduction**:
+    
+    - Converts high-dimensional input data into a simpler, interpretable 2D map.
+
+### **Components**
+
+1. **Input Layer**:
+    
+    - Accepts the high-dimensional input vector.
+2. **Output Layer**:
+    
+    - A 2D grid of neurons (nodes) where each node has a weight vector of the same dimension as the input vector.
+3. **Weights**:
+    
+    - Each neuron in the grid is associated with a weight vector that adapts during training.
+
+### **How SOM Works**
+
+1. **Initialization**:
+    
+    - Weight vectors of neurons are initialized (randomly or heuristically).
+2. **Input Matching**:
+    
+    - For each input, the **Best Matching Unit (BMU)** is identified as the neuron whose weight vector is closest to the input vector.
+3. **Weight Update**:
+    
+    - The BMU and its neighboring neurons adjust their weights to resemble the input vector.
+    - Adjustment strength decreases with time and distance from the BMU.
+4. **Iteration**:
+    
+    - Steps are repeated for all input data until convergence.
+
+### **Applications**
+
+1. **Data Clustering**:
+    
+    - Grouping similar data points (e.g., customer segmentation).
+2. **Data Visualization**:
+    
+    - Reducing dimensions to visualize clusters and patterns in datasets.
+3. **Feature Extraction**:
+    
+    - Identifying key features in high-dimensional data.
+4. **Anomaly Detection**:
+    
+    - Identifying outliers by analyzing distant BMUs.
+5. **Biological and Medical Data Analysis**:
+    
+    - Analyzing gene expression data or MRI scans.
+
+### **Advantages**
+
+1. No need for labeled data.
+2. Maintains relationships between data points.
+3. Suitable for high-dimensional data.
+4. Can detect clusters and patterns.
+
+
+### **Disadvantages**
+
+1. Requires careful tuning of hyperparameters (e.g., learning rate, neighborhood function).
+2. Computationally intensive for large datasets.
+3. Limited scalability for very high-dimensional data.
+
 ## PCA
 
 ## Dimension reduction
@@ -587,6 +664,55 @@ Advantages:
 ### Perceptron rule (video)
 ## Gradient descent , difference threshold remaining
 
+![](../../statics/Pasted%20image%2020241217162532.png)
+![](../../statics/Pasted%20image%2020241217162608.png)
+![](../../statics/Pasted%20image%2020241217163210.png)
+![](../../statics/Pasted%20image%2020241217163242.png)
+![](../../statics/Pasted%20image%2020241217163304.png)
+![](../../statics/Pasted%20image%2020241217163321.png)
+![](../../statics/Pasted%20image%2020241217163431.png)
+![](../../statics/Pasted%20image%2020241217163453.png)
+![](../../statics/Pasted%20image%2020241217163534.png)
+
+#### Differentiable threshold unit
+
+A **Differentiable Threshold Unit (DTU)** is an alternative to traditional activation functions or threshold-based functions in machine learning that allows gradients to flow through during backpropagation. It is particularly useful when dealing with thresholding operations that are non-differentiable, like **step functions**, which block gradient flow.
+
+ **1. Background and Motivation**
+
+- In machine learning, threshold functions like the Heaviside step function output discrete values (0 or 1) based on an input threshold.
+- These functions are **non-differentiable**, which makes them incompatible with gradient-based optimization techniques like backpropagation used in deep learning.
+- A Differentiable Threshold Unit (DTU) approximates the behavior of a threshold while being smooth and differentiable.
+
+ **2. Core Idea**
+
+- The DTU introduces a smooth, differentiable approximation of a **hard threshold function**.
+- It replaces the abrupt change with a **smooth transition** using a continuous function (e.g., sigmoid, tanh, or a custom soft-thresholding function).
+- This allows for gradient computations and enables optimization via **gradient descent**.
+
+ **3. Examples of Differentiable Threshold Functions**
+
+Below are common differentiable approximations of threshold functions:
+![](../../statics/Pasted%20image%2020241217164009.png)
+ 
+ **4. Applications**
+
+- **Binary Classification**: DTUs can approximate the decision boundary for binary output tasks.
+- **Sparse Learning**: In sparse coding, soft thresholding is used for shrinkage to encourage sparsity.
+- **Neural Networks**: Used as activation functions to model threshold-like behavior without losing differentiability.
+
+ **5. Key Properties**
+
+- **Smoothness**: The DTU is smooth and differentiable, enabling gradient flow.
+- **Sharpness**: By tuning parameters (like kk in sigmoid/tanh), the approximation can closely mimic hard thresholds.
+- **Gradient Flow**: DTUs allow gradients to propagate backward through threshold operations.
+
+ **6. Challenges**
+
+- **Sharpness vs. Smoothness Tradeoff**: Making the threshold sharper (higher kk) can lead to numerical instability.
+- **Approximation Error**: There is always a tradeoff between fidelity to the true hard threshold and smoothness.
+
+
 # UNIT 4
 ## Bayesian learning
 
@@ -652,46 +778,16 @@ The **Naive Bayes** classifier is a probabilistic machine learning model based o
 1. **Gaussian Naive Bayes**:
     
     - Assumes that the features are normally distributed (Gaussian distribution) for each class.
-    - Useful when features are continuous and have a bell-shaped distribution.
-    - The likelihood P(xi∣C)P(x_i | C) for a continuous feature xix_i is calculated using the probability density function of the normal distribution:
-    
-    P(xi∣C)=12πσ2exp⁡(−(xi−μ)22σ2)P(x_i | C) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left( - \frac{(x_i - \mu)^2}{2\sigma^2} \right)
-    
-    Where μ\mu is the mean and σ\sigma is the standard deviation of the feature in class CC.
-    
+    - Useful when features are continuous and have a bell-shaped distribution
 2. **Multinomial Naive Bayes**:
     
     - Typically used for discrete features, like word counts in text classification problems (e.g., spam detection).
-    - Assumes that the features follow a multinomial distribution, where the likelihood is modeled as:
-    
-    P(x1,x2,…,xn∣C)=∏i=1nP(xi∣C)P(x_1, x_2, \dots, x_n | C) = \prod_{i=1}^n P(x_i | C)
-    
-    Here, xix_i represents counts or frequencies of features (e.g., words).
     
 3. **Bernoulli Naive Bayes**:
     
     - Similar to multinomial Naive Bayes, but assumes binary/boolean features (e.g., the presence or absence of a feature).
-    - It uses the Bernoulli distribution, where the likelihood is:
-    
-    P(xi∣C)=P(xi=1∣C)xi⋅P(xi=0∣C)(1−xi)P(x_i | C) = P(x_i = 1 | C)^{x_i} \cdot P(x_i = 0 | C)^{(1 - x_i)}
-    
+
     This is often used in binary classification or when features are binary.
-    
-
-#### Training the Naive Bayes Classifier
-
-1. **Calculate Prior Probabilities**: Estimate the probability of each class based on the training data:
-    
-    P(C)=Number of samples in class CTotal number of samplesP(C) = \frac{\text{Number of samples in class } C}{\text{Total number of samples}}
-2. **Estimate Likelihoods**: Calculate the likelihood P(xi∣C)P(x_i | C) for each feature xix_i given the class CC:
-    
-    - For categorical data, this is typically the frequency of each feature value within each class.
-    - For continuous data (in Gaussian Naive Bayes), this involves computing the mean and standard deviation of each feature for each class.
-3. **Prediction**: Given a new sample, compute the posterior probability for each class using the formula:
-    
-    P(C∣X)∝P(C)⋅∏i=1nP(xi∣C)P(C|X) \propto P(C) \cdot \prod_{i=1}^n P(x_i | C)
-    
-    The class with the highest posterior probability is chosen as the predicted class.
     
 
 #### Advantages of Naive Bayes
