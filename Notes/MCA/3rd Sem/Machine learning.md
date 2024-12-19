@@ -843,3 +843,85 @@ The **Naive Bayes** classifier is a probabilistic machine learning model based o
 ![](../../statics/Pasted%20image%2020241209095724.png)
 
 
+## SVM
+
+
+### **1. Introduction**
+
+Support Vector Machine (SVM) is a supervised learning algorithm used for both **classification** and **regression** tasks. Its primary focus is on finding an optimal hyperplane that separates data points into different classes with the maximum margin.
+
+---
+![](../../statics/Pasted%20image%2020241219171953.png)
+### **2. Key Concepts**
+
+#### **2.1 Hyperplane**
+
+- A hyperplane is a decision boundary in the feature space that separates classes.
+- In a 2D space, it is a line; in a 3D space, it is a plane. For higher dimensions, it becomes a general subspace.
+
+#### **2.2 Margin**
+
+- The margin is the distance between the hyperplane and the nearest data points from each class.
+- SVM aims to maximize this margin to ensure the model is robust and has better generalization.
+
+#### **2.3 Support Vectors**
+
+- Support Vectors are the data points closest to the hyperplane.
+- They are the most critical data points for defining the hyperplane.
+- Removing support vectors can change the position or orientation of the hyperplane.
+
+---
+
+### **3. SVM Objective**
+
+#### **Optimization Goal**
+![](../../statics/Pasted%20image%2020241219171613.png)
+### **4. Types of SVM**
+
+#### **4.1 Linear SVM**
+
+- Used for linearly separable datasets.
+- Directly finds a hyperplane to separate the classes.
+
+#### **4.2 Non-Linear SVM**
+
+- Used when the data is not linearly separable.
+- Uses a **kernel trick** to map data into a higher-dimensional space where a linear hyperplane can be used.
+
+---
+
+### **5. The Kernel Trick**
+
+The kernel trick transforms the input space into a higher-dimensional space without explicitly computing the transformation. It allows SVM to handle non-linear boundaries.
+
+#### **5.1 Common Kernels**
+![](../../statics/Pasted%20image%2020241219171731.png)
+### **6. Soft Margin and Regularization**
+
+- Real-world datasets may not always be perfectly separable. SVM introduces **soft margins** to handle misclassification.
+
+#### **Slack Variable (ξi\xi_i)**:
+
+![](../../statics/Pasted%20image%2020241219171758.png)
+### **7. Steps for Training an SVM**
+![](../../statics/Pasted%20image%2020241219171817.png)
+### **8. Advantages of SVM**
+
+1. **Effective in High-Dimensional Spaces**:
+    - Handles large feature sets well.
+2. **Robust to Overfitting**:
+    - Especially when the number of dimensions is greater than the number of samples.
+3. **Flexible with Kernels**:
+    - Can model complex relationships by choosing appropriate kernels.
+
+---
+
+### **9. Limitations of SVM**
+
+1. **Computational Complexity**:
+    - Solving quadratic optimization becomes slow with large datasets.
+2. **Choosing Kernel and Parameters**:
+    - Requires careful tuning of kernel type, CC, and kernel parameters.
+3. **Not Suitable for Overlapping Classes**:
+    - Struggles when classes have significant overlap or are noisy.
+
