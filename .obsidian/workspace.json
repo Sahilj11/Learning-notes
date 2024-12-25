@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/3rd Sem/Machine learning.md",
+                "file": "Notes/MCA/3rd Sem/Data Analytics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Machine learning"
+              "title": "Data Analytics"
             }
           }
         ]
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "18757d7566ffc7cf",
@@ -164,21 +165,22 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
+    "Notes/Backend notes/docker/Docker.md",
+    "Notes/statics/Pasted image 20241221152950.png",
+    "Notes/statics/Pasted image 20241221151803.png",
+    "Notes/statics/Pasted image 20241221151319.png",
+    "Notes/statics/Pasted image 20241221151207.png",
+    "Notes/statics/Pasted image 20241221151117.png",
+    "Notes/statics/Pasted image 20241221150610.png",
+    "Notes/statics/Pasted image 20241221150350.png",
+    "Notes/statics/Pasted image 20241221150137.png",
+    "Notes/MCA/3rd Sem/Machine learning.md",
+    "Notes/Backend notes/docker",
     "Notes/statics/Pasted image 20241219171953.png",
     "Notes/statics/Pasted image 20241219171817.png",
-    "Notes/statics/Pasted image 20241219171758.png",
-    "Notes/statics/Pasted image 20241219171731.png",
-    "Notes/statics/Pasted image 20241219171613.png",
-    "Notes/statics/Pasted image 20241217164009.png",
-    "Notes/statics/Pasted image 20241217163534.png",
-    "Notes/statics/Pasted image 20241217163453.png",
-    "Notes/statics/Pasted image 20241217163431.png",
-    "Notes/statics/Pasted image 20241217163321.png",
-    "Notes/statics/Pasted image 20241217163304.png",
-    "Notes/java Backend/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
+    "Notes/Backend notes/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
     "Notes/MCA/3rd Sem/Cyber security.md",
     "Notes/MCA/3rd Sem/Theory of Computation.md",
-    "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/java/Java Interview Ques.md",
     "Notes/java/Java For Interview.md",

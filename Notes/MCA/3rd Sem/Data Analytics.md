@@ -107,21 +107,57 @@ normalized_data <- rescale(data, to = c(0, 1))
 print(normalized_data)
 ```
 
-### **Summary of Usage in Data Science**
+### **Difference of Usage in Data Science**
 
-| Scale    | Data Type   | Encoding/Techniques | Examples               | Suitable Models                     |
-| -------- | ----------- | ------------------- | ---------------------- | ----------------------------------- |
-| Nominal  | Categorical | One-hot, Label      | Gender, Colors         | Logistic Regression, Decision Trees |
-| Ordinal  | Categorical | Ordinal Encoding    | Satisfaction, Rankings | Decision Trees, Gradient Boosting   |
-| Interval | Numerical   | Standardization     | Temperature            | Linear Regression, SVM              |
-| Ratio    | Numerical   | Normalization       | Income, Weight         | Any numerical model                 |
+| **Feature**                 | **Nominal**               | **Ordinal**                         | **Interval**                                              | **Ratio**                                               |
+| --------------------------- | ------------------------- | ----------------------------------- | --------------------------------------------------------- | ------------------------------------------------------- |
+| **Definition**              | Categories with no order. | Categories with a meaningful order. | Ordered data with consistent intervals, but no true zero. | Ordered data with consistent intervals and a true zero. |
+| **Order Matters?**          | No                        | Yes                                 | Yes                                                       | Yes                                                     |
+| **Equal Intervals?**        | No                        | No                                  | Yes                                                       | Yes                                                     |
+| **True Zero?**              | No                        | No                                  | No                                                        | Yes                                                     |
+| **Mathematical Operations** | Counting only             | Ranking only                        | Add/Subtract                                              | All (Add/Subtract, Multiply/Divide)                     |
+| **Examples**                | Car colors (Red, Blue)    | Star ratings (1 star, 2 stars)      | Temperature (°C, °F)                                      | Weight (kg), Age (years)                                |
+
 ## Working with vectors, matrices and tabular data (data frames)
 Here are the notes with **vectors**, **matrices**, and **data frames** in **R**, including the creation and common methods for each:
+
+Here’s a comparison between **vectors** and **lists** in R:
+
+| **Feature**               | **Vector**                                               | **List**                                                           |
+| ------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Definition**            | A collection of elements of the **same data type**.      | A collection of elements that can be of **different data types**.  |
+| **Homogeneity**           | Homogeneous (all elements must be of the same type).     | Heterogeneous (elements can be of different types).                |
+| **Types of Data Allowed** | Numeric, character, logical, or complex (one type only). | Numeric, character, logical, complex, other lists, or data frames. |
+| **Length**                | Fixed at creation.                                       | Can grow or shrink dynamically.                                    |
+| **Access**                | Access elements using index (`vector[1]`).               | Access elements using index (`list[[1]]`) or name (`list$name`).   |
+| **Use Case**              | When all data is of the same type.                       | When you need to store mixed data types together.                  |
+| **Example**               | `c(1, 2, 3)` (numeric vector).                           | `list(1, "two", TRUE)` (numeric, character, and logical).          |
+
+---
+
+### **Examples**
+
+#### **Vector**
+
+```R
+vec <- c(1, 2, 3)  # Numeric vector
+print(vec)         # Output: 1 2 3
+```
+
+#### **List**
+
+```R
+lst <- list(1, "two", TRUE)  # List with mixed data types
+print(lst)                   # Output: [[1]] 1  [[2]] "two"  [[3]] TRUE
+```
 
 ### **1. Vectors**
 
 #### **What is it?**
 - A **vector** is a one-dimensional array used to store a sequence of elements of the **same type** (e.g., numeric, character, logical, etc.).
+- A vector is nothing else than a sequence of elements of a certain type. _R_ distinguishes vectors with two different modes.
+	- **Atomic vectors**: All elements must have the same basic type (e.g., numeric, character, …).
+	- **Lists**: Special vector mode. Different elements can have different types.
 - Vectors are the basic building blocks in R.
 
 #### **Creating a Vector**:
@@ -194,7 +230,7 @@ print(m)
 | `sum()`, `mean()`          | Summary statistics (sum, mean) for matrix elements      | `sum(m)`, `mean(m)`                |
 | `apply()`                  | Apply a function over rows/columns                      | `apply(m, 1, sum)` (sum over rows) |
 | `is.matrix()`              | Checks if an object is a matrix                         | `is.matrix(m)`                     |
-
+- cbind ,rbind ,rev,diag,rowSums,colSums
 ### **3. Data Frames**
 
 #### **What is it?**
@@ -241,13 +277,127 @@ print(df)
 | **Matrix**     | Two-dimensional array of homogeneous elements.          | `matrix()`      | `m <- matrix(1:9, nrow = 3)`                                  |
 | **Data Frame** | Two-dimensional table with different types of elements. | `data.frame()`  | `df <- data.frame(Name = c("Alice", "Bob"), Age = c(25, 30))` |
 |                |                                                         |                 |                                                               |
+The `subset()` function in R is used to extract subsets of a dataframe or matrix based on certain conditions or by selecting specific rows and columns. It is a more user-friendly and readable way to filter data, compared to directly using indexing with square brackets (`[ ]`).
+
+### Syntax of `subset()` function:
+
+```R
+subset(x, subset, select, drop = FALSE, ...)
+```
+
+- **`x`**: The object (usually a dataframe or matrix) you want to subset.
+- **`subset`**: The condition used to filter rows. It is a logical expression.
+- **`select`**: A vector of column names or indices that you want to keep.
+- **`drop`**: Logical. If `TRUE`, the result is simplified to the lowest possible dimension.
+
+### Examples:
+
+#### 1. **Basic Subsetting (Rows Based on Condition)**
+
+You can use the `subset()` function to filter rows based on conditions.
+
+```R
+# Example dataframe
+df <- data.frame(
+  Name = c("Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 35),
+  Gender = c("F", "M", "M")
+)
+
+# Subset rows where Age > 30
+df_subset <- subset(df, Age > 30)
+print(df_subset)
+```
+
+**Output:**
+
+```
+    Name Age Gender
+3 Charlie  35      M
+```
+
+In this example, `subset(df, Age > 30)` selects only the rows where the value in the "Age" column is greater than 30.
+
+#### 2. **Subset with Multiple Conditions**
+
+You can also apply multiple conditions using logical operators like `&` (AND), `|` (OR).
+
+```R
+# Subset where Age > 25 and Gender is "M"
+df_subset_multiple <- subset(df, Age > 25 & Gender == "M")
+print(df_subset_multiple)
+```
+
+**Output:**
+
+```
+    Name Age Gender
+2    Bob  30      M
+3 Charlie  35      M
+```
+
+#### 3. **Select Specific Columns Using `select`**
+
+You can choose which columns to keep in the subset by using the `select` argument.
+
+```R
+# Subset where Age > 25 and only select Name and Age columns
+df_subset_columns <- subset(df, Age > 25, select = c(Name, Age))
+print(df_subset_columns)
+```
+
+**Output:**
+
+```
+    Name Age
+2    Bob  30
+3 Charlie  35
+```
+
+#### 4. **Dropping Single Column**
+
+If the `drop` argument is set to `TRUE`, the result will be simplified to a vector or matrix when possible (e.g., when selecting only one column).
+
+```R
+# Subset where Age > 25 and select only the Age column (drop = TRUE)
+df_subset_drop <- subset(df, Age > 25, select = Age, drop = TRUE)
+print(df_subset_drop)
+```
+
+**Output:**
+
+```
+[1] 30 35
+```
+
+In this case, since `drop = TRUE`, the result is simplified to a vector (since only one column was selected).
+### Key Points:
+
+- `subset()` simplifies code and makes it easier to apply logical conditions.
+- It works on dataframes and matrices (though matrices are more limited).
+- The `select` argument allows you to select specific columns by name or index.
+- The `drop` argument helps simplify the result when selecting a single column.
+
+### Summary of Parameters:
+
+|**Parameter**|**Description**|
+|---|---|
+|`x`|The dataframe or matrix to subset.|
+|`subset`|Logical condition to filter rows.|
+|`select`|A vector of column names or indices to select.|
+|`drop`|Logical value (TRUE/FALSE) for simplifying output.|
+
+In practice, `subset()` is a convenient function for filtering data and selecting specific columns in a readable way.
+
+### Order function
+`df_sorted <- df[order(df$Age), ]`
 
 ## Reading and write data frame to files
-### **Reading and Writing Tabular Data in R**
 
 In R, reading and writing data from and to various file formats (CSV, Excel, etc.) is an essential part of data manipulation. Below are the key functions used for reading and writing tabular data in R.
 
----
+read.table is more generic function where seperator can be specified
+`df <- read.table("data.csv", header = TRUE, sep = ",")`
 
 ### **1. Reading and Writing CSV Files**
 
@@ -276,6 +426,7 @@ In R, reading and writing data from and to various file formats (CSV, Excel, etc
      ```R
      write.csv(df, "output.csv", row.names = FALSE)
      ```
+
    - **Common Parameters**:
      - `row.names`: Whether to write row names (default is `TRUE`).
      - `na`: String to replace missing values (default is `NA`).
@@ -284,8 +435,6 @@ In R, reading and writing data from and to various file formats (CSV, Excel, etc
      ```R
      write.csv(df, "output.csv", row.names = FALSE)
      ```
-
----
 
 ### **2. Reading and Writing Excel Files**
 
@@ -368,7 +517,800 @@ In R, reading and writing data from and to various file formats (CSV, Excel, etc
 | **Set Working Directory**   | `setwd()`         | Base R                  | `setwd("path/to/directory")`    |
 | **Get Working Directory**   | `getwd()`         | Base R                  | `getwd()`                       |
 | **List Files in Directory** | `list.files()`    | Base R                  | `list.files()`                  |
+## Statistical data
+### Summary of `summary()`:
 
+- **Numeric vectors/dataframes**: Provides statistical summaries like Min, 1st Qu., Median, Mean, 3rd Qu., and Max.
+- **Categorical data (factors)**: Provides a count of occurrences of each category.
+- **Dataframes**: Summary statistics are calculated for each column based on the type (numeric or factor).
+- **Model objects**: For models, `summary()` provides details like coefficients, R-squared, residuals, and p-values.
+
+## Quantile-Quantile plot and sample and population
+### 1. **Discriminating Between Sample and Population**
+
+**Population** and **sample** are key concepts in statistics that represent different subsets of data.
+
+- **Population**: A population refers to the entire set of data or individuals that you're interested in studying. It includes all possible values, outcomes, or members that fit a certain criteria.
+    
+    - Example: All the students in a country, all the cars produced in a year, etc.
+    - A population is usually large or sometimes practically infinite (e.g., all possible outcomes of a random experiment).
+- **Sample**: A sample is a subset of the population, selected to represent the whole. Since it may not be feasible to collect data from an entire population, a sample is drawn to infer or estimate the characteristics of the population.
+    
+    - Example: A group of 500 students selected from a population of 1,000 students in a school.
+    - A sample is a smaller subset of the population.
+
+#### Key Differences:
+
+| **Aspect**     | **Population**                                                      | **Sample**                                              |
+| -------------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
+| **Definition** | Entire group or collection of interest.                             | A subset of the population.                             |
+| **Size**       | Can be very large or infinite.                                      | Always smaller than the population.                     |
+| **Purpose**    | Represents all data points for analysis.                            | Used to make inferences about the population.           |
+| **Parameters** | Population parameters (e.g., population mean, population variance). | Sample statistics (e.g., sample mean, sample variance). |
+| **Examples**   | All employees in a company, all voters in an election.              | A random selection of employees, a poll of voters.      |
+
+### 2. **Quantile-Quantile (Q-Q) Plot**
+
+A **Quantile-Quantile (Q-Q) plot** is a graphical tool used to assess whether a dataset follows a specific theoretical distribution, like a normal distribution. It compares the quantiles of the observed data with the quantiles of the expected distribution.
+
+#### What is a Q-Q plot?
+
+A Q-Q plot is a plot that compares the quantiles of two distributions. The x-axis represents the theoretical quantiles (e.g., the quantiles of the normal distribution), and the y-axis represents the quantiles of the observed data.
+
+- **If the data follows the specified distribution** (e.g., normal distribution), the points in the Q-Q plot will approximately lie on a straight line.
+- **If the data does not follow the specified distribution**, the points will deviate from the line, revealing skewness, heavy tails, or other departures from the assumed distribution.
+
+#### How to Interpret a Q-Q Plot:
+
+1. **Straight line (45-degree angle)**:
+    
+    - If the points lie on or close to a straight line, it suggests that the data follows the theoretical distribution (e.g., normal distribution).
+2. **Upward or downward curve**:
+    
+    - If the points bend upwards or downwards away from the line, it indicates that the data may have heavy tails or skewness. For instance, a right tail heavy distribution (positive skew) will show a curve above the line, and a left tail heavy distribution (negative skew) will show a curve below the line.
+3. **Outliers**:
+    
+    - Points far away from the line indicate that those data points are outliers or that the distribution is not normal or doesn’t match the expected distribution.
+
+#### Example in R:
+
+Here’s how you can create a Q-Q plot in R for testing whether a dataset follows a normal distribution:
+
+```R
+# Generating random normal data
+data <- rnorm(100, mean = 0, sd = 1)
+
+# Q-Q plot for normal distribution
+qqnorm(data)
+qqline(data, col = "red")  # Adds a reference line
+```
+
+**Explanation**:
+
+- `qqnorm()` creates a Q-Q plot for the normal distribution.
+- `qqline()` adds a reference line to the plot.
+
+If the data is normally distributed, the points in the Q-Q plot should fall approximately along the red line. If the points deviate significantly from the line, this suggests that the data does not follow a normal distribution.
+
+### Summary:
+
+- **Sample vs. Population**: The population is the entire set of data, while the sample is a smaller subset from the population, used to make inferences about the population.
+- **Q-Q Plot**: A Q-Q plot is a graphical tool used to compare the quantiles of observed data to a theoretical distribution, helping to assess if the data fits that distribution. It is commonly used to check for normality.
+
+
+Here is a list of important methods and functions related to **Quantile-Quantile (Q-Q) plots** in R, which are used to assess how well a dataset follows a theoretical distribution (e.g., normal distribution):
+
+### 1. **`qqnorm()`**: Q-Q Plot for Normal Distribution
+
+This function creates a Q-Q plot for a dataset against the standard normal distribution (mean = 0, standard deviation = 1).
+
+#### Syntax:
+
+```R
+qqnorm(x, main = NULL, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", ...)
+```
+
+- **`x`**: A numeric vector of data values.
+- **`main`**: Optional title for the plot.
+- **`xlab`, `ylab`**: Optional labels for the x and y axes.
+
+#### Example:
+
+```R
+data <- rnorm(100)  # Generate random normal data
+qqnorm(data)  # Q-Q plot against normal distribution
+qqline(data, col = "red")  # Adds a reference line
+```
+
+### 2. **`qqline()`**: Add a Reference Line to Q-Q Plot
+
+This function adds a reference line to the Q-Q plot. This line represents the expected quantiles of the theoretical distribution. It helps in visually determining if the data fits the assumed distribution.
+
+#### Syntax:
+
+```R
+qqline(x, distribution = qnorm, probs = c(0.25, 0.75), ...)
+```
+
+- **`x`**: Data to be plotted.
+- **`distribution`**: The distribution to compare against (e.g., `qnorm` for normal).
+- **`probs`**: Quantiles for the reference line calculation.
+
+#### Example:
+
+```R
+data <- rnorm(100)
+qqnorm(data)
+qqline(data, col = "red")
+```
+
+### 3. **`qqplot()`**: General Q-Q Plot (Any Distribution)
+
+This function creates a Q-Q plot comparing the quantiles of two datasets (or a dataset and a theoretical distribution). It is more general than `qqnorm()` as it allows comparison to distributions other than the normal distribution.
+
+#### Syntax:
+
+```R
+qqplot(x, y, main = NULL, xlab = "Theoretical Quantiles", ylab = "Sample Quantiles", ...)
+```
+
+- **`x`**: Theoretical distribution or data.
+- **`y`**: Data to compare against the distribution or theoretical quantiles.
+- **`main`, `xlab`, `ylab`**: Optional titles and labels.
+
+#### Example:
+
+```R
+data1 <- rnorm(100)
+data2 <- rnorm(100, mean = 2)  # Different mean, still normal
+qqplot(data1, data2)
+```
+
+### 4. **`qqplot()` for Different Distributions**:
+
+To compare data against a different distribution (e.g., exponential), you can specify the distribution function explicitly.
+
+#### Example:
+
+```R
+data <- rexp(100)  # Exponential distribution
+qqplot(qexp, data)  # Compare with expected exponential distribution
+```
+
+### 5. **`qqchisq()`**: Q-Q Plot for Chi-Square Distribution
+
+This function is used to create a Q-Q plot for a dataset against a chi-square distribution.
+
+#### Example:
+
+```R
+data <- rchisq(100, df = 2)  # Chi-square distributed data
+qqplot(qchisq, data)
+```
+
+### 6. **`qqbeta()`**: Q-Q Plot for Beta Distribution
+
+This function is used for comparing data against a Beta distribution.
+
+#### Example:
+
+```R
+data <- rbeta(100, shape1 = 2, shape2 = 5)  # Beta distribution data
+qqplot(qbeta, data)
+```
+
+### 7. **`qqexp()`**: Q-Q Plot for Exponential Distribution
+
+This function creates a Q-Q plot to compare data against an exponential distribution.
+
+#### Example:
+
+```R
+data <- rexp(100)  # Exponential distribution data
+qqplot(qexp, data)
+```
+
+### 8. **`qqgamma()`**: Q-Q Plot for Gamma Distribution
+
+This function is used to create a Q-Q plot comparing data with the Gamma distribution.
+
+#### Example:
+
+```R
+data <- rgamma(100, shape = 2, rate = 1)  # Gamma distributed data
+qqplot(qgamma, data)
+```
+
+### 9. **`qqpois()`**: Q-Q Plot for Poisson Distribution
+
+This function creates a Q-Q plot comparing data with a Poisson distribution.
+
+#### Example:
+
+```R
+data <- rpois(100, lambda = 3)  # Poisson distribution data
+qqplot(qpois, data)
+```
+
+### 10. **`qqbinom()`**: Q-Q Plot for Binomial Distribution
+
+This function generates a Q-Q plot for binomially distributed data.
+
+#### Example:
+
+```R
+data <- rbinom(100, size = 10, prob = 0.5)  # Binomial distribution data
+qqplot(qbinom, data)
+```
+
+### Summary of Common Q-Q Plot Functions:
+
+|**Function**|**Purpose**|**Distribution Compared To**|
+|---|---|---|
+|`qqnorm()`|Create a Q-Q plot for normal distribution.|Normal distribution|
+|`qqline()`|Add a reference line to a Q-Q plot.|Normal (default) or other distribution|
+|`qqplot()`|General Q-Q plot to compare two datasets or a dataset vs. a theoretical distribution.|Any distribution|
+|`qqchisq()`|Q-Q plot for chi-square distribution.|Chi-square distribution|
+|`qqbeta()`|Q-Q plot for Beta distribution.|Beta distribution|
+|`qqexp()`|Q-Q plot for exponential distribution.|Exponential distribution|
+|`qqgamma()`|Q-Q plot for gamma distribution.|Gamma distribution|
+|`qqpois()`|Q-Q plot for Poisson distribution.|Poisson distribution|
+|`qqbinom()`|Q-Q plot for binomial distribution.|Binomial distribution|
+
+### How to Interpret a Q-Q Plot:
+
+- If the points lie close to the reference line, the data follows the assumed distribution (e.g., normal).
+- Deviations from the line indicate that the data may not follow the assumed distribution.
+    - **Upward or downward bending** indicates skewness.
+    - **Curves** suggest heavier or lighter tails than the assumed distribution.
+
+Using these Q-Q plot methods, you can visually assess how well your data matches various statistical distributions.
+
+## Random 
+`runif(n, min = 0, max = 1)`
+
+## Function
+### Notes on Functions in R
+
+Functions in R are used to encapsulate a block of code that performs a specific task. Functions are an essential feature of R because they enable code reusability, simplify complex tasks, and improve program structure. Here's an overview of functions in R:
+
+### 1. **Creating a Function in R**
+
+To create a function in R, use the `function()` keyword. A function typically has the following structure:
+
+```R
+function_name <- function(arg1, arg2, ...) {
+  # Body of the function
+  # Code that performs operations
+  return(result)  # Return a value (optional)
+}
+```
+
+- **`function_name`**: The name of the function.
+- **`arg1, arg2, ...`**: The arguments (inputs) that the function will accept.
+- **`return(result)`**: The `return()` statement is used to specify what the function will output. This is optional; if omitted, R will return the result of the last evaluated expression.
+
+#### Example:
+
+```R
+add_numbers <- function(a, b) {
+  result <- a + b
+  return(result)
+}
+
+# Calling the function
+add_numbers(5, 3)
+```
+
+### 2. **Arguments and Parameters**
+
+- **Arguments** are the values passed to a function when calling it.
+- **Parameters** are the variables defined in the function definition that will hold the values of the arguments passed.
+
+R allows default values for function arguments:
+
+```R
+greet <- function(name = "Guest") {
+  print(paste("Hello", name))
+}
+
+greet()          # Uses default value "Guest"
+greet("Alice")   # Uses provided value "Alice"
+```
+
+### 3. **Return Values**
+
+Functions in R return values by default as the result of the last evaluated expression. You can explicitly return a value using the `return()` function. If `return()` is omitted, the function will return the last computed result.
+
+```R
+multiply <- function(x, y) {
+  x * y   # This is implicitly returned
+}
+
+result <- multiply(2, 3)
+```
+
+You can also return more complex objects like lists, data frames, or other functions:
+
+```R
+create_list <- function(a, b) {
+  return(list(a = a, b = b))
+}
+
+my_list <- create_list(5, 10)
+```
+
+### 4. **Function Scope**
+
+In R, variables created inside a function are local to that function. These variables cannot be accessed outside the function unless explicitly returned.
+
+```R
+add_two <- function(x) {
+  result <- x + 2  # result is local to the function
+  return(result)
+}
+
+add_two(5)   # result is returned
+```
+
+### 5. **Anonymous Functions**
+
+R allows the creation of functions without a name (anonymous functions). These are typically used when you need a function for a one-time use, often within `apply` or `lapply` functions.
+
+```R
+x <- c(1, 2, 3, 4)
+result <- sapply(x, function(x) x^2)  # Anonymous function to square each element
+```
+
+### 7. **Vectorized Operations in Functions**
+
+Functions in R are often written to work efficiently with vectors, i.e., they automatically handle operations on vectors element-wise.
+
+```R
+add_numbers <- function(x, y) {
+  return(x + y)
+}
+
+# Works element-wise
+result <- add_numbers(1:5, 10)
+```
+
+### 8. **Function Types in R**
+
+R supports different types of functions that can be used in various contexts, such as:
+
+- **Base functions**: Functions like `sum()`, `mean()`, `plot()` are built into R.
+- **User-defined functions**: Functions you create yourself to handle specific tasks.
+- **Built-in functions in packages**: Functions from libraries (e.g., `dplyr`, `ggplot2`).
+
+### 9. **Error Handling in Functions**
+
+You can use `stop()` and `warning()` to handle errors and issues within a function.
+
+- **`stop()`**: Used to generate an error and halt the function execution.
+- **`warning()`**: Used to issue a warning without stopping the function.
+
+#### Example:
+
+```R
+safe_divide <- function(a, b) {
+  if (b == 0) {
+    stop("Cannot divide by zero")
+  }
+  return(a / b)
+}
+
+# Example call
+safe_divide(10, 0)   # Will stop with an error message
+```
+
+
+###  **Function Application (`apply`, `lapply`, `sapply`, `tapply`)**
+
+R provides several powerful functions to apply a function to data structures such as matrices, lists, and vectors. These functions help you avoid explicit loops and enable efficient, vectorized operations. The primary functions for function application in R are `apply()`, `lapply()`, `sapply()`, and `tapply()`.
+
+### 1. **`apply()`**
+The `apply()` function is used to apply a function over the rows or columns of a matrix or 2-dimensional array.
+
+#### Syntax:
+```R
+apply(X, MARGIN, FUN, ...)
+```
+- **`X`**: The array or matrix to apply the function to.
+- **`MARGIN`**: A numeric vector indicating whether to apply the function to rows (1) or columns (2).
+- **`FUN`**: The function to apply.
+- **`...`**: Additional arguments passed to the function.
+
+#### Example:
+```R
+# Create a 3x3 matrix
+mat %3C- matrix(1:9, nrow = 3)
+
+# Apply the sum function to each row (MARGIN = 1)
+row_sums <- apply(mat, 1, sum)
+print(row_sums)
+
+# Apply the sum function to each column (MARGIN = 2)
+col_sums <- apply(mat, 2, sum)
+print(col_sums)
+```
+
+#### Output:
+```
+row_sums
+[1]  6 15 24
+
+col_sums
+[1] 12 15 18
+```
+
+- **MARGIN = 1** applies the function to rows.
+- **MARGIN = 2** applies the function to columns.
+
+### 2. **`lapply()`**
+The `lapply()` function is used to apply a function to each element of a list and returns a list.
+
+#### Syntax:
+```R
+lapply(X, FUN, ...)
+```
+- **`X`**: A list or vector to which the function is applied.
+- **`FUN`**: The function to apply.
+- **`...`**: Additional arguments passed to the function.
+
+#### Example:
+```R
+# Create a list
+my_list <- list(a = 1:5, b = 6:10, c = 11:15)
+
+# Apply the sum function to each list element
+list_sums <- lapply(my_list, sum)
+print(list_sums)
+```
+
+#### Output:
+```
+$a
+[1] 15
+
+$b
+[1] 40
+
+$c
+[1] 65
+```
+
+The result is a list where each element corresponds to the sum of the respective list element.
+
+### 3. **`sapply()`**
+The `sapply()` function is similar to `lapply()`, but it simplifies the result. If possible, it tries to simplify the result to an array or vector.
+
+#### Syntax:
+```R
+sapply(X, FUN, ..., simplify = TRUE)
+```
+- **`X`**: A list or vector to which the function is applied.
+- **`FUN`**: The function to apply.
+- **`simplify`**: If `TRUE`, attempts to simplify the result into an array or vector.
+
+#### Example:
+```R
+# Create a list
+my_list <- list(a = 1:5, b = 6:10, c = 11:15)
+
+# Apply the sum function to each list element
+list_sums <- sapply(my_list, sum)
+print(list_sums)
+```
+
+#### Output:
+```
+ a  b  c 
+15 40 65 
+```
+
+In this case, `sapply()` simplifies the result to a numeric vector, while `lapply()` would return a list.
+
+### 4. **`tapply()`**
+The `tapply()` function is used to apply a function to subsets of a vector, grouped by a factor. It is useful when you want to perform group-wise operations.
+
+#### Syntax:
+```R
+tapply(X, INDEX, FUN, ..., simplify = TRUE)
+```
+- **`X`**: A vector to apply the function to.
+- **`INDEX`**: A factor or a list of factors that defines the grouping structure.
+- **`FUN`**: The function to apply.
+- **`simplify`**: If `TRUE`, the result is simplified to a vector or matrix.
+
+#### Example:
+```R
+# Create a numeric vector and a factor
+scores <- c(85, 90, 78, 92, 88, 76)
+groups <- factor(c("A", "A", "B", "B", "C", "C"))
+
+# Apply the mean function to each group
+group_means <- tapply(scores, groups, mean)
+print(group_means)
+```
+
+#### Output:
+```
+ A   B   C 
+87.5 85.0 76.0 
+```
+
+In this case, `tapply()` calculates the mean of the `scores` vector for each group defined by the `groups` factor.
+
+### Comparison of `apply()`, `lapply()`, `sapply()`, and `tapply()`
+
+| Function       | Used For                                                     | Input Data Type | Output Data Type                     | Simplification                      |
+| -------------- | ------------------------------------------------------------ | --------------- | ------------------------------------ | ----------------------------------- |
+| **`apply()`**  | Apply a function to rows or columns of a matrix              | Matrix, Array   | Vector (row or column results)       | No (unless specifically handled)    |
+| **`lapply()`** | Apply a function to each element of a list                   | List            | List (preserves input structure)     | No                                  |
+| **`sapply()`** | Apply a function to each element of a list                   | List            | Simplified output (usually vector)   | Yes (attempts simplification)       |
+| **`tapply()`** | Apply a function to subsets of a vector, grouped by a factor | Vector, Factor  | Vector or Array (group-wise results) | Yes (simplifies to vector or array) |
+
+### Key Points:
+- **`apply()`**: Works on matrices and arrays, allowing you to perform row-wise or column-wise operations.
+- **`lapply()`**: Applies a function to each element of a list and always returns a list, preserving the structure.
+- **`sapply()`**: Similar to `lapply()`, but simplifies the result into a vector or matrix if possible.
+- **`tapply()`**: Works with vectors and applies a function to subsets of the data defined by a grouping factor.
+
+#### Example:
+
+```R
+# Applying sum to rows of a matrix
+mat <- matrix(1:9, nrow = 3)
+apply(mat, 1, sum)  # Sum of each row
+```
+
+## Factor
+A **factor** in R is used to represent categorical data (i.e., variables that take on a limited number of distinct values, often referred to as levels). Factors are particularly useful for storing categorical variables such as gender, species, or any other kind of classification. Factors are treated differently than other types of data, such as vectors or strings, because they store both the unique levels and the corresponding integer codes for the levels.
+
+#### **Key Features of Factors in R**
+
+- **Categorical data representation**: Factors are ideal for representing categorical variables, especially those with a fixed number of distinct values.
+- **Levels**: A factor has a set of unique values called "levels". Levels are the categories that the factor can take.
+- **Efficiency**: Factors are more memory-efficient than character vectors because they store data as integer codes instead of strings, with each level represented by an integer.
+- **Order**: Factors can be either ordered (with a natural ordering between the levels) or unordered.
+
+`factor(x, levels = NULL, labels = NULL, ordered = FALSE)`
+- **`x`**: A vector of categorical values to be converted to a factor.
+- **`levels`**: A vector of unique levels (categories) that the factor can take. If not provided, R automatically determines the levels from the input data.
+- **`labels`**: Custom labels for the levels. If not provided, the levels are used as labels.
+- **`ordered`**: Logical value indicating whether the factor should be ordered. Default is `FALSE`
+
+## Tabular data
+
+In R, tabular data is usually represented by data frames, which are similar to tables in a relational database or spreadsheets. 
+
+Here’s an overview of key tasks and how they are performed in R:
+
+### 1. **Sorting Data**
+
+Sorting data in R can be done using the `order()` function or the `arrange()` function from the **dplyr** package.
+
+#### **Using `order()`**:
+
+The `order()` function sorts the rows of a data frame based on one or more columns.
+
+```R
+# Example DataFrame
+data <- data.frame(
+  Name = c("John", "Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 22, 35),
+  Salary = c(50000, 60000, 45000, 70000)
+)
+
+# Sort by Age
+sorted_data <- data[order(data$Age), ]
+print(sorted_data)
+
+# Sort by Salary (descending order)
+sorted_data_desc <- data[order(-data$Salary), ]
+print(sorted_data_desc)
+```
+
+#### **Using `arrange()` from `dplyr`**:
+
+The `arrange()` function from the **dplyr** package allows more intuitive sorting.
+
+```R
+# Load dplyr package
+library(dplyr)
+
+# Sort by Age using arrange
+sorted_data <- arrange(data, Age)
+print(sorted_data)
+
+# Sort by Salary in descending order using arrange
+sorted_data_desc <- arrange(data, desc(Salary))
+print(sorted_data_desc)
+```
+
+### 2. **Filtering Cases (Rows)**
+
+Filtering cases is done to extract rows that meet certain conditions. You can use the `subset()` function or the `filter()` function from the **dplyr** package.
+
+#### **Using `subset()`**:
+
+```R
+# Filter rows where Age is greater than 25
+filtered_data <- subset(data, Age > 25)
+print(filtered_data)
+```
+
+#### **Using `filter()` from `dplyr`**:
+
+```R
+# Filter rows where Salary is greater than 50000 using filter
+filtered_data <- filter(data, Salary > 50000)
+print(filtered_data)
+```
+
+### 3. **Selecting Variables (Columns)**
+
+Selecting variables means choosing specific columns from a data frame. This can be done using base R or the `select()` function from **dplyr**.
+
+#### **Using base R**:
+
+```R
+# Select only Name and Age columns
+selected_data <- data[, c("Name", "Age")]
+print(selected_data)
+```
+
+#### **Using `select()` from `dplyr`**:
+
+```R
+# Select only Name and Age columns using select
+selected_data <- select(data, Name, Age)
+print(selected_data)
+```
+
+### 4. **Deriving New Variables (Columns)**
+
+You can derive new variables using the `$` operator or the `mutate()` function from **dplyr**.
+
+#### **Using base R**:
+
+```R
+# Add a new column 'Age_Group' based on Age
+data$Age_Group <- ifelse(data$Age > 30, "Old", "Young")
+print(data)
+```
+
+#### **Using `mutate()` from `dplyr`**:
+
+```R
+# Add a new column 'Age_Group' using mutate
+data <- mutate(data, Age_Group = ifelse(Age > 30, "Old", "Young"))
+print(data)
+```
+
+### 5. **Grouping and Summarizing Data**
+
+Grouping data by a variable and summarizing it is commonly done using `aggregate()` in base R or `group_by()` and `summarize()` (or `summarise()`) from **dplyr**.
+
+#### **Using `aggregate()` in base R**:
+
+```R
+# Group by Age_Group and calculate mean Salary
+summary_data <- aggregate(Salary ~ Age_Group, data = data, FUN = mean)
+print(summary_data)
+```
+
+#### **Using `group_by()` and `summarize()` from `dplyr`**:
+
+```R
+# Group by Age_Group and calculate mean Salary using dplyr
+summary_data <- data %>%
+  group_by(Age_Group) %>%
+  summarize(Mean_Salary = mean(Salary))
+print(summary_data)
+```
+
+### 6. **Combining Multiple Operations**
+
+You can chain multiple operations together using **dplyr**'s pipe (`%>%`) operator, which allows you to apply a sequence of operations to a data frame.
+
+#### Example:
+
+```R
+# Filter, select, and summarize data using pipes
+result <- data %>%
+  filter(Salary > 50000) %>%
+  select(Name, Age, Salary) %>%
+  mutate(Age_Group = ifelse(Age > 30, "Old", "Young")) %>%
+  group_by(Age_Group) %>%
+  summarize(Mean_Salary = mean(Salary))
+
+print(result)
+```
+
+### 7. **Handling Missing Values**
+
+Handling missing values (`NA`) is an important part of data manipulation. Common methods to deal with missing values include removing rows with `NA`s, replacing `NA`s with a default value, or imputing missing values.
+
+#### **Removing rows with `NA` values**:
+
+```R
+# Remove rows with missing values
+clean_data <- na.omit(data)
+print(clean_data)
+```
+
+#### **Replacing `NA` with a specific value**:
+
+```R
+# Replace NA values in Salary column with 0
+data$Salary[is.na(data$Salary)] <- 0
+print(data)
+```
+
+### 8. **Handling Duplicates**
+
+You can identify and remove duplicate rows using the `duplicated()` function or `distinct()` from **dplyr**.
+
+#### **Using `duplicated()`**:
+
+```R
+# Identify duplicate rows
+duplicates <- data[duplicated(data), ]
+print(duplicates)
+
+# Remove duplicate rows
+data_no_duplicates <- data[!duplicated(data), ]
+print(data_no_duplicates)
+```
+
+#### **Using `distinct()` from `dplyr`**:
+
+```R
+# Remove duplicates using distinct
+data_no_duplicates <- distinct(data)
+print(data_no_duplicates)
+```
+
+### 9. **Reshaping Data: Wide to Long (or vice versa)**
+
+Reshaping data is often needed for analysis. The **reshape()** function or functions like `pivot_longer()` and `pivot_wider()` from the **tidyr** package can help in this regard.
+
+#### **Using `pivot_longer()` and `pivot_wider()` from `tidyr`**:
+
+```R
+# Install and load tidyr package
+library(tidyr)
+
+# Create an example data frame
+data <- data.frame(
+  ID = 1:3,
+  Year1 = c(10, 20, 30),
+  Year2 = c(15, 25, 35)
+)
+
+# Pivot longer: wide to long format
+data_long <- pivot_longer(data, cols = starts_with("Year"))
+print(data_long)
+
+# Pivot wider: long to wide format
+data_wide <- pivot_wider(data_long, names_from = name, values_from = value)
+print(data_wide)
+```
+
+### Summary of Key Functions:
+
+- **Sorting**: `order()`, `arrange()` (from `dplyr`).
+- **Filtering**: `subset()`, `filter()` (from `dplyr`).
+- **Selecting variables**: `select()` (from `dplyr`), `data[, c()]` (base R).
+- **Deriving new variables**: `mutate()` (from `dplyr`), `$` (base R).
+- **Grouping and summarizing**: `aggregate()`, `group_by()` + `summarize()` (from `dplyr`).
+- **Handling missing values**: `na.omit()`, `is.na()`, `replace()` (base R).
+- **Handling duplicates**: `duplicated()`, `distinct()` (from `dplyr`).
+- **Reshaping data**: `pivot_longer()`, `pivot_wider()` (from `tidyr`).
+
+These functions are essential for performing comprehensive data manipulation in R and can be combined for powerful, efficient workflows.
 # UNIT 2
 
 ### **Difference Between Random and Normally Distributed Variables**
@@ -400,6 +1342,12 @@ In R, reading and writing data from and to various file formats (CSV, Excel, etc
 | **Generating Normal Distribution (Quantile)** | `qnorm(p, mean, sd)`    | Computes the **quantile** function for the normal distribution at probability **p**.                        |
 | **Generating Normal Distribution (Random)**   | `rnorm(n, mean, sd)`    | Generates **n** random numbers from a normal distribution with mean **mean** and standard deviation **sd**. |
 
+| Function             | Purpose                                                                                                                                     |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dnorm(x, mean, sd)` | Calculates the **probability density** at `x` for a normal distribution with a given mean and standard deviation.                           |
+| `pnorm(x, mean, sd)` | Calculates the **cumulative probability** up to `x` for a normal distribution with a given mean and standard deviation.                     |
+| `qnorm(p, mean, sd)` | Calculates the **quantile** (inverse of CDF) for a given probability `p` in a normal distribution with a given mean and standard deviation. |
+| `rnorm(n, mean, sd)` | Generates `n` **random values** from a normal distribution with a given mean and standard deviation.                                        |
 ### **Summary**
 
 - **Random distributions** can follow any underlying probability distribution (e.g., uniform, Poisson, etc.), with no specific pattern or symmetry.
@@ -501,17 +1449,14 @@ Z-scores give a **relative measure** of a data point’s position, regardless of
 
 
 ### **5. Practical Applications of Z-Score**
-
 - **Outlier Detection**: If a Z-score is larger than 3 or smaller than -3, the data point can be considered an outlier.
 - **Standardization in Machine Learning**: In algorithms like **Support Vector Machines (SVM)**, **k-Nearest Neighbors (k-NN)**, and **Principal Component Analysis (PCA)**, Z-scores are used to standardize data, improving model performance by eliminating scale issues.
 - **Quality Control**: In manufacturing or process control, Z-scores are used to monitor the production process and identify whether products meet quality standards (e.g., in **Six Sigma**).
 
 ### **Conclusion**
-
 The Z-score is a powerful tool for comparing data points within a distribution, identifying outliers, and standardizing data. It enables comparisons across datasets with different scales and is widely used in various fields like statistics, quality control, and machine learning. Understanding Z-scores and how they relate to probability and data distribution is crucial for effective data analysis.
 
 ## Outlier
-
 An **outlier** is a data point that significantly deviates from other observations in a dataset. Outliers can occur due to variability in the data, errors in measurement, or they may represent rare, extreme events. Outliers can distort statistical analyses and models, which is why detecting and handling them is crucial.
 
 Outliers can be:
@@ -627,7 +1572,10 @@ grubbs.test(data)
 ```
 
 The output will tell you if there are any significant outliers based on Grubbs' test.
-
+## Missing value
+- `na.omit()` for removing NA values
+- `is.na()`
+- `data_imputed_mean <- ifelse(is.na(data), mean(data, na.rm = TRUE), data)` imputing (replace NA with mean)
 
 # Unit 3
 
