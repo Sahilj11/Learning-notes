@@ -864,3 +864,139 @@ Encrypt and scatter
 - **Geo Steganography:** Free tool for hiding data in BMP images or WAV files.
 - **SSuitePicsel:** Free portable app for hiding text in image files using a unique method.
 - **OpenPuff:** Professional tool for storing files as image, audio, video, or flash files with steganography.
+
+# UNIT 3 
+
+## IT Act 2000
+punishments for each section under the **Information Technology Act, 2000**:
+1. **Section 43**:  
+    Punishes unauthorized access, damage, or data theft. If someone gains unauthorized access to a computer system or network, they can be fined up to **₹25 lakhs**. The punishment depends on the severity of the damage caused.
+    
+2. **Section 43A**:  
+    Deals with compensation for failure to protect sensitive personal data. If an entity fails to implement reasonable security practices leading to a breach, they may be required to pay compensation for loss or damage to the affected individuals.
+    
+3. **Section 66B**:  
+    Punishes the dishonestly receiving or retaining stolen computer resources or data. The punishment is **up to 3 years of imprisonment** or a fine of **up to ₹1 lakh**, or both.
+    
+4. **Section 66C**:  
+    Punishes identity theft by using someone's identity without permission, such as accessing or stealing passwords. The punishment includes **up to 3 years of imprisonment** and a fine of **up to ₹1 lakh**.
+    
+5. **Section 66D**:  
+    Punishes cheating by impersonating someone online. The punishment is **up to 3 years of imprisonment** or a fine of **up to ₹1 lakh**, or both.
+    
+6. **Section 66E**:  
+    Deals with the violation of privacy, particularly with the sharing of private images or videos without consent. The punishment is **up to 3 years of imprisonment** and a fine of **up to ₹2 lakh**.
+    
+7. **Section 66F**:  
+    Addresses cyber terrorism, including acts that cause disruption or damage to critical infrastructure. The punishment for cyber terrorism is **imprisonment for life** or **up to 10 years** with a fine, depending on the case's severity.
+    
+8. **Section 67**:  
+    Punishes the publishing or transmitting obscene material in electronic form. The punishment for such acts is **up to 5 years** of imprisonment and a fine of **up to ₹10 lakh** for the first offense, with the possibility of a higher penalty for subsequent offenses.
+
+## Digital signature
+
+A **digital signature** is a cryptographic method used to authenticate the identity of a sender and ensure the integrity of a message or document in the digital world. It serves as an electronic equivalent of a handwritten signature or stamped seal but provides much higher security.
+
+### Key Concepts of Digital Signatures:
+
+1. **Authentication**: It verifies the identity of the sender, ensuring that the message or document actually comes from the claimed sender.
+    
+2. **Integrity**: It ensures that the content of the message or document has not been altered during transmission. If the content is changed, the digital signature will no longer match.
+    
+3. **Non-repudiation**: The sender cannot deny sending the message once it has been signed, providing legal proof of the sender’s involvement.
+
+### How Digital Signatures Work:
+Digital signatures use **Public Key Infrastructure (PKI)**, which involves two keys:
+
+- **Private Key**: Kept secret by the sender, used to generate the signature.
+- **Public Key**: Shared with others, used to verify the signature.
+
+### Process of Creating a Digital Signature:
+
+1. **Hashing**: The document or message is hashed using a hashing algorithm (e.g., SHA-256) to generate a unique hash value.
+2. **Encrypting the Hash**: The hash value is encrypted using the sender's private key. This encrypted hash value becomes the digital signature.
+3. **Sending the Document**: The sender sends the document along with the digital signature.
+4. **Verification**: The recipient uses the sender’s public key to decrypt the digital signature and obtain the original hash. The recipient then hashes the received document. If the hashes match, it verifies both the authenticity and integrity of the document.
+
+### Use Cases:
+
+- **E-commerce**: Ensures secure online transactions.
+- **Email Security**: Ensures that the email content has not been tampered with and verifies the sender's identity.
+- **Legal Documents**: Used for electronic signatures on contracts, agreements, etc.
+
+### Advantages:
+
+- **Security**: Provides strong encryption and prevents tampering.
+- **Trust**: Builds trust in digital communication and transactions.
+- **Efficiency**: Fast and secure compared to physical signatures.
+
+In India, digital signatures are legally recognized under the **Information Technology Act, 2000** and are widely used in e-commerce, online banking, and government services.
+
+![](../../statics/Pasted%20image%2020241227163906.png)
+
+### Digital signature attack
+**Digital Signature Attacks** refer to various methods used by attackers to break or exploit the digital signature process. Here are the types you mentioned:
+
+### 1. **Attack of Chosen-Message (CMA - Chosen Message Attack)**:
+
+- **Definition**: In a chosen-message attack, the attacker can choose arbitrary messages and obtain their corresponding digital signatures from a legitimate signer.
+- **Objective**: The goal is to gather enough signed messages to forge the signature of a new message. The attacker may try to generate a valid signature for an unsigned message using the signatures obtained from previous chosen messages.
+- **Attack Process**: The attacker can analyze the relationship between the message and its signature and may attempt to manipulate or create a new message that passes signature verification.
+- **Impact**: This type of attack tests the strength of the signature scheme in handling arbitrary message inputs, and if the signature system is not robust, the attacker may find a way to forge signatures.
+
+### 2. **Attack of Known Message (KMA - Known Message Attack)**:
+
+- **Definition**: In a known-message attack, the attacker already knows the message and the corresponding valid signature, and attempts to forge a signature for a different message.
+- **Objective**: The attacker uses the known message-signature pair to analyze and potentially discover weaknesses in the signature algorithm, which can be exploited to sign other messages.
+- **Attack Process**: The attacker might try to deduce the private key or generate a valid signature for a different message based on the known pair, aiming to deceive others with a forged signature.
+- **Impact**: This attack exploits the system's vulnerability to known message-signature pairs and tests whether a new message can be forged using the knowledge of the old signature.
+
+### 3. **Attack of Key-only (KOA - Key-only Attack)**:
+
+- **Definition**: In a key-only attack, the attacker only has access to the public key, but no information about the private key or message.
+- **Objective**: The attacker’s goal is to forge a digital signature without the knowledge of the private key by exploiting the relationship between the public key and the signature algorithm.
+- **Attack Process**: The attacker may attempt to find weaknesses in the signature scheme, such as exploiting poor implementations or mathematical weaknesses in the algorithm used for signing. If successful, the attacker can generate a valid signature that verifies correctly with the public key.
+- **Impact**: This type of attack can lead to the compromise of the integrity of the entire digital signature system if the system has weaknesses that allow for key recovery or signature forgery from just the public key.
+
+### Summary of Attacks:
+
+1. **Chosen-Message Attack**: The attacker chooses arbitrary messages to be signed, then tries to forge signatures for new messages.
+2. **Known-Message Attack**: The attacker knows the message and its valid signature and tries to forge a signature for a different message.
+3. **Key-only Attack**: The attacker has access to the public key but attempts to forge a signature without knowing the private key or the message content.
+
+These attacks highlight the importance of strong digital signature algorithms and careful implementation to prevent vulnerabilities and ensure the security of digital transactions and communications.
+
+
+## IT act amendment
+
+- Cyber security measures tightening
+- A legal framework for digital signatures establishing
+- Identifying and applying intermediaries
+- Decryption of electronic records, monitoring and regulating the interception
+- Cyber forensics
+- Cyber terrorism
+![](../../statics/Pasted%20image%2020241227164854.png)
+
+## IPC
+- **Section 292 (IPC)**: Prevents the sale or distribution of obscene content, including child exploitation material, with penalties up to 2 years in prison and a fine of Rs. 2000, and up to 5 years and Rs. 50,000 for repeat offenders.
+    
+- **Section 354C (IPC)**: Criminalizes receiving or publishing unauthorized images of a woman’s private parts or sexual acts, with punishments of up to 3 years for first-time offenders and 7 years for repeat offenders.
+    
+- **Section 354D (IPC)**: Defines and punishes cyber and physical stalking, including using electronic means to contact an unwilling woman, with up to 3 years in prison for the first offense and up to 5 years for repeat offenses.
+
+## Thread for org
+![](../../statics/Pasted%20image%2020241227165401.png)
+
+- Physical:- The hidden basis of an incidence that cause canaffectprobably in the failure as well as the systems damage physically is called physical threat.
+
+## Social Computing
+Utilization of social software by organizations and any interested parties, such as partners,
+customers, and employees refers as Social Computing. The intersection of social behavior and computational systems is the subject of social computing, a subfield of computer science.
+
+### Social computing ways 
+- Social software:- Any system computation, that allows social interaction between people‘s groups. It is also called Application Oriented Social Computing. Such systems examples are as follows. like online gaming , social media , wiki page , blog
+- social intelligent computing:- crowd sourcing , dark social media
+
+### Social computing tools 
+- online gaming , online dating , blogging , socail media , forums , wiki , crowd sourcing ,RSS.
+2
