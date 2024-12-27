@@ -1975,13 +1975,13 @@ Measuring the quality of fit in predictive modeling refers to assessing how well
 
 Here are **5 key points** for measuring the **quality of fit** in predictive modeling:
 
-| **Metric**             | **Purpose**                                    | **Interpretation**                                     | **Higher Values**                   | **Lower Values**                     |
-|------------------------|------------------------------------------------|-------------------------------------------------------|-------------------------------------|--------------------------------------|
-| **R-Squared (R²)**      | Measures the proportion of variance explained by the model | Indicates how well the model fits the data | Better fit (closer to 1) | Worse fit (closer to 0) |
-| **Mean Squared Error (MSE)** | Measures the average squared difference between actual and predicted values | Indicates the error in the model's predictions | Smaller values indicate a better fit | Larger values indicate poor fit |
-| **Root Mean Squared Error (RMSE)** | Provides error in the same units as the target variable | Measures how far off predictions are from the true values | Smaller values indicate better model performance | Larger values indicate worse performance |
-| **Mean Absolute Error (MAE)** | Measures the average absolute difference between predicted and actual values | More intuitive error measure compared to MSE | Smaller values suggest better fit | Larger values suggest worse fit |
-| **Cross-Validation Score** | Measures model performance by evaluating it on multiple subsets of data | Ensures that the model generalizes well to new, unseen data | Higher scores indicate a better generalization | Lower scores indicate overfitting or poor generalization | 
+| **Metric**                         | **Purpose**                                                                  | **Interpretation**                                          | **Higher Values**                                | **Lower Values**                                         |     |
+| ---------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------- | --- |
+| **R-Squared (R²)**                 | Measures the proportion of variance explained by the model                   | Indicates how well the model fits the data                  | Better fit (closer to 1)                         | Worse fit (closer to 0)                                  |     |
+| **Mean Squared Error (MSE)**       | Measures the average squared difference between actual and predicted values  | Indicates the error in the model's predictions              | Smaller values indicate a better fit             | Larger values indicate poor fit                          |     |
+| **Root Mean Squared Error (RMSE)** | Provides error in the same units as the target variable                      | Measures how far off predictions are from the true values   | Smaller values indicate better model performance | Larger values indicate worse performance                 |     |
+| **Mean Absolute Error (MAE)**      | Measures the average absolute difference between predicted and actual values | More intuitive error measure compared to MSE                | Smaller values suggest better fit                | Larger values suggest worse fit                          |     |
+| **Cross-Validation Score**         | Measures model performance by evaluating it on multiple subsets of data      | Ensures that the model generalizes well to new, unseen data | Higher scores indicate a better generalization   | Lower scores indicate overfitting or poor generalization |     |
 
 These five metrics help evaluate the model’s fit and generalization capability.
 
@@ -2049,14 +2049,14 @@ Here’s the explanation without formulas:
 
 #### **Differences Between Simple Linear, Multiple Linear, and Logistic Regression**
 
-| **Aspect**                  | **Simple Linear Regression**                               | **Multiple Linear Regression**                          | **Logistic Regression**                                      |
-|-----------------------------|------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------|
-| **Dependent Variable**      | Continuous numeric variable (e.g., house price)            | Continuous numeric variable (e.g., salary)              | Binary categorical variable (e.g., yes/no, 0/1)             |
-| **Independent Variables**    | One independent variable (X)                               | Two or more independent variables (X₁, X₂, ..., Xn)     | One or more independent variables (X₁, X₂, ..., Xn)        |
-| **Purpose**                  | Predict a continuous value based on a linear relationship   | Predict a continuous value based on multiple predictors  | Predict the probability of a binary outcome                  |
-| **Equation**                 | Linear relationship between dependent and independent variables | Linear relationship, but with multiple independent variables | Probability of a binary outcome based on independent variables |
-| **Use Cases**                | Predicting continuous values, e.g., temperature, sales    | Predicting continuous values, e.g., house price, income | Classification problems, e.g., email spam detection, customer churn prediction |
-| **Output**                   | Continuous numeric value                                   | Continuous numeric value                                 | Probability of event (between 0 and 1), which is then mapped to a class (0 or 1) |
+| **Aspect**                | **Simple Linear Regression**                                    | **Multiple Linear Regression**                               | **Logistic Regression**                                                          |
+| ------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------- |
+| **Dependent Variable**    | Continuous numeric variable (e.g., house price)                 | Continuous numeric variable (e.g., salary)                   | Binary categorical variable (e.g., yes/no, 0/1)                                  |
+| **Independent Variables** | One independent variable (X)                                    | Two or more independent variables (X₁, X₂, ..., Xn)          | One or more independent variables (X₁, X₂, ..., Xn)                              |
+| **Purpose**               | Predict a continuous value based on a linear relationship       | Predict a continuous value based on multiple predictors      | Predict the probability of a binary outcome                                      |
+| **Equation**              | Linear relationship between dependent and independent variables | Linear relationship, but with multiple independent variables | Probability of a binary outcome based on independent variables                   |
+| **Use Cases**             | Predicting continuous values, e.g., temperature, sales          | Predicting continuous values, e.g., house price, income      | Classification problems, e.g., email spam detection, customer churn prediction   |
+| **Output**                | Continuous numeric value                                        | Continuous numeric value                                     | Probability of event (between 0 and 1), which is then mapped to a class (0 or 1) |
 
 ---
 
@@ -2411,12 +2411,10 @@ The **holdout method** is a technique used to evaluate machine learning models b
         - **Validation Set (optional):** Used for tuning hyperparameters and preventing overfitting.
         - **Testing Set:** Used to evaluate the model's final performance.
 2. **Typical Ratios:**
-    
     - **Training:** 60-80%
     - **Validation:** 10-20% (if used)
     - **Testing:** 10-20%
 3. **Process:**
-    
     - Train the model using the training set.
     - Evaluate the model's performance on the validation set to adjust parameters.
     - Test the finalized model on the testing set.
@@ -2466,13 +2464,13 @@ Random sampling involves selecting random subsets of data for training, testing,
 
 ### **Comparison: Holdout vs. Random Sampling**
 
-|**Aspect**|**Holdout**|**Random Sampling**|
-|---|---|---|
-|**Purpose**|Evaluate model on a fixed split.|Select representative data subsets.|
-|**Data Splitting**|Fixed split (e.g., train/test).|Randomized, may vary across runs.|
-|**Bias Reduction**|May vary based on split choice.|More effective in reducing bias.|
-|**Stratification**|Not inherently stratified.|Supports stratified sampling.|
-|**When to Use?**|Large datasets, quick evaluations.|To ensure unbiased, representative data.|
+| **Aspect**         | **Holdout**                        | **Random Sampling**                      |
+| ------------------ | ---------------------------------- | ---------------------------------------- |
+| **Purpose**        | Evaluate model on a fixed split.   | Select representative data subsets.      |
+| **Data Splitting** | Fixed split (e.g., train/test).    | Randomized, may vary across runs.        |
+| **Bias Reduction** | May vary based on split choice.    | More effective in reducing bias.         |
+| **Stratification** | Not inherently stratified.         | Supports stratified sampling.            |
+| **When to Use?**   | Large datasets, quick evaluations. | To ensure unbiased, representative data. |
 
 
 ### **Best Practices**
