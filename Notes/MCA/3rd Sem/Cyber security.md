@@ -999,4 +999,76 @@ customers, and employees refers as Social Computing. The intersection of social 
 
 ### Social computing tools 
 - online gaming , online dating , blogging , socail media , forums , wiki , crowd sourcing ,RSS.
-2
+
+
+# UNIT 4
+## Critical infrastructure
+Critical infrastructure (CI) includes a group of systems and assets, whether it is physical or
+virtual, necessary to a nation. Any interruption of its services may have a serious impact on the economic, national security, public health or interests of any large group etc.
+
+The term Information Infrastructure usually refers to define inter-connected computers and
+networks, and any information passing through them.
+
+![](../../statics/Pasted%20image%2020241227212104.png)
+## Cyber attacks example
+- AIIMS attack 2022
+- Ukraine power grid 
+- iranian cyber attack on new york
+
+## Cyber weapons
+![](../../statics/Pasted%20image%2020241227212824.png)
+
+## Framework for improving critical infrastructure 
+
+### Component 
+- The Framework Core
+- A Framework Profile
+
+### Framework core
+The Framework Core provides a set of activities to achieve specific Cyber Security outcomes, and references examples of guidance to achieve those outcomes
+
+The Framework Core consists of four main components that interact as follows:
+
+1. **Functions**: High-level groupings of cybersecurity activities—Identify, Protect, Detect, Respond, and Recover.
+2. **Categories**: These align cybersecurity outcomes with program needs and organize them within a function.
+3. **Subcategories**: Detailed, actionable outcomes within each category, supporting the achievement of its goals.
+4. **Informative References**: Standards, guidelines, or practices that provide methods to achieve subcategory outcomes; they are examples, not exhaustive.
+
+### Framework profile
+The alignment of the organization's functions, categories, and subcategories with its business requirements, risk tolerance, and resources is referred to as the Framework Profile (or Profile)
+
+## Framework of cyber attack spectrum
+The levels provided can be explained in the context of a cybersecurity framework as stages of increasing sophistication and impact of cybersecurity threats or incidents. Here's how they relate to the framework's core elements:
+
+### **Contextual Mapping to the Framework Core**
+
+1. **Level 1: Network Denied**
+    
+    - **Function**: Detect, Protect, Respond
+    - **Category**: This level focuses on threats that block or deny access to the network, such as Distributed Denial of Service (DDoS) attacks.
+    - **Subcategories**: Outcomes might include monitoring traffic, implementing firewalls, or activating intrusion prevention systems.
+    - **Informative References**: Standards like NIST SP 800-41 (firewalls) or ISO 27001 (access control policies).
+2. **Level 2: Enterprise Denial**
+    
+    - **Function**: Protect, Recover
+    - **Category**: Expands the scope to an organization-wide denial of service or data loss, impacting all critical systems.
+    - **Subcategories**: Address comprehensive backup systems, disaster recovery, and redundancy measures.
+    - **Informative References**: Guidelines for business continuity (e.g., NIST SP 800-34).
+3. **Level 3: Enterprise Manipulation**
+    
+    - **Function**: Detect, Respond
+    - **Category**: Relates to threats where attackers manipulate or alter enterprise systems or data.
+    - **Subcategories**: Focus on monitoring changes to system configurations, detecting unauthorized access, and responding to tampering.
+    - **Informative References**: Logging and monitoring standards, such as CIS Controls and NIST guidelines.
+4. **Level 4: Mission Denied**
+    
+    - **Function**: Recover, Identify
+    - **Category**: Addresses incidents that hinder critical missions or goals of the organization, causing operational failure.
+    - **Subcategories**: Include risk management processes, prioritization of recovery activities, and impact assessments.
+    - **Informative References**: Incident response frameworks like NIST SP 800-61.
+5. **Level 5: Mission Manipulation**
+    
+    - **Function**: Respond, Recover, Identify
+    - **Category**: The most sophisticated level, where attackers manipulate mission-critical outcomes, leading to strategic or operational damage.
+    - **Subcategories**: Include advanced threat detection, response strategies, and resilience-building activities.
+    - **Informative References**: Advanced Persistent Threat (APT) handling guidelines, such as those in NIST and ISO standards.
