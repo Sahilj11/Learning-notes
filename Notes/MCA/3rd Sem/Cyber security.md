@@ -704,3 +704,163 @@ Computer forensic:- A field of technology that uses techniques to identify for i
 - Mobile Forensics: Celebrite UFED
 - Network Analysis: Wireshark
 - Linux Distribution: Cain
+
+### Digital forensic technique 
+
+1. **Reverse Steganography**  
+    Cybercriminals hide information in digital files like images. Reverse steganography is the process of extracting that hidden data from the file, which may not look suspicious at first.    
+2. **Stochastic Forensics**  
+    This technique helps analyze digital activities that don’t leave clear evidence, like changes caused unintentionally by digital processes. It’s useful for investigating breaches caused by insider threats where no obvious traces are left.
+3. **Cross-drive Analysis**  
+    This method detects patterns by comparing data across different computer drives. It helps identify suspicious activities by linking similar information across multiple drive    
+4. **Live Analysis**  
+    Live analysis happens while a device or computer is running. It involves analyzing volatile data (like what’s in RAM) using system tools and is done in a forensic lab to ensure the evidence is preserved correctly.
+5. **Deleted File Recovery**  
+    Deleted file recovery, also called data carving, is the process of finding partially deleted files by searching through the computer's memory and system for traces of those files.
+### Digital evidence collection
+![](../../statics/Pasted%20image%2020241227121141.png)
+## Cyber crime
+
+### Classification
+1. **Cyber Terrorism**  
+    Cyber terrorism involves using computers and the internet to carry out harmful acts that could lead to loss of life. It encompasses using software or hardware to threaten or harm citizens.
+    
+2. **Cyber Extortion**  
+    Cyber extortion happens when attackers threaten websites or systems with attacks like denial of service unless a ransom is paid. They demand money in exchange for stopping the attacks and ensuring security.
+    
+3. **Cyber Warfare**  
+    Cyber warfare involves using computers and networks in war zones for offensive or defensive operations. It includes cyberattacks, espionage, and disruption of systems during conflicts.
+    
+4. **Internet Fraud**  
+    Internet fraud uses online platforms to deceive victims by hiding or falsifying information to steal money or property. It covers various illegal activities conducted through the internet.
+    
+5. **Cyber Stalking**  
+    Cyber stalking is the harassment of victims through messages, emails, or offensive comments online. Stalkers often know their targets and may combine online and offline harassment to intensify their actions.
+
+### Types of attack cybercrime
+- phishing, ddos, software piracy , hacking
+## Password cracking 
+### Techniques
+1. **Crunch**  
+    Crunch generates a list of all possible password combinations to hack passwords. It creates a wordlist used in password cracking attempts on Kali Linux.
+    
+2. **Rainbow Crack**  
+    Rainbow Crack uses precomputed Rainbow Tables to crack password hashes. It compares the stored hash with precomputed hashes to find the matching password without brute force.
+    
+3. **Burp Suite**  
+    Burp Suite is a web application security testing tool. It intercepts and modifies browser requests to find vulnerabilities like XSS or SQL injection, with both free and paid versions available.
+    
+4. **Maltego**  
+    Maltego gathers and visualizes information about networks or organizations from the internet. It helps uncover connections and details about ownership and resources.
+    
+5. **John the Ripper**  
+    John the Ripper is a tool for cracking passwords and hashes using dictionary attacks or customized wordlists. It works on various file types like zipped or locked files.
+
+## Keylogger
+- software based ( javascript based , form based). 
+- hardware based (usb , smartphone sensor)
+- prevention( anti-keylogger , anti virus , form filler automatic , one time password, voice to text )
+## spyware 
+### Types
+- **Adware**: Spyware that tracks user activity to deliver targeted advertisements.
+- **Tracking Cookies**: Spyware that collects user activity data and shares it with third parties.
+- **Trojan**: Spyware that steals sensitive data like bank details for illegal activities.
+- **Keyloggers**: Spyware that records keystrokes to capture sensitive information like passwords.
+- **Stalkerware**: Spyware on mobile devices that tracks user movements for third parties.
+- **System Monitor**: Spyware that tracks system-wide activities, including calls, chats, and sensitive data.
+
+![](../../statics/Pasted%20image%2020241227123524.png)
+## Phishing
+
+1. **Spear Phishing**:  
+    Targets specific individuals or organizations to steal financial or sensitive data, often appearing to come from trusted sources.
+    
+2. **Clone Phishing**:  
+    Hackers copy trusted email messages, add fake links, and send them to many users to steal data or spread malware.
+    
+3. **Cat Phishing**:  
+    Attackers manipulate victims emotionally, often through fake dating profiles, to steal money or personal information.
+    
+4. **Voice Phishing (Vishing)**:  
+    Uses fake phone calls or caller IDs to trick victims into sharing private information like credit card numbers.
+    
+5. **SMS Phishing (Smishing)**:  
+    Cybercriminals send fake text messages redirecting users to malicious websites that steal sensitive information.
+## Trojan
+
+### Types
+1. **Backdoor Trojans:**  
+    Allows hackers to remotely control a computer to upload, download, or execute files automatically.
+    
+2. **Exploit Trojans:**  
+    Injects malicious code to exploit weaknesses in specific software.
+    
+3. **Rootkit Trojans:**  
+    Hides existing malware to avoid detection and maximize damage.
+    
+4. **Banker Trojans:**  
+    Targets sensitive banking and financial transaction information.
+    
+5. **DDoS Trojans:**  
+    Executes Distributed Denial of Service (DDoS) attacks to overwhelm and disable networks or systems.
+    
+6. **Downloader Trojans:**  
+    Downloads additional malware, often bringing more Trojans to the device.
+
+#### Trojan
+- A Trojan (or Trojan Horse) is malicious software disguised as legitimate or useful software.
+- **Purpose:** It tricks users into downloading or running it, granting unauthorized access to attackers.
+- **Characteristics:**
+    1. Does not replicate itself like a virus.
+    2. Can act as spyware, steal data, or provide remote control over the system.
+
+## Backdoor
+### **Types of Backdoor Exploits **
+
+1. **Backdoor Exploits:**  
+    Exploits weaknesses in system or software to gain illegal access, such as breaking into banking systems to control online transactions.
+2. **Remote Access Backdoor:**  
+    Grants hackers remote access via deceptive methods, like fake email security updates that install malware unknowingly.
+
+
+## Stenography
+Steganography is the art and science of embedding secret messages into a cover message in such a way that no one other than the sender and intended recipient suspects the existence of the message.
+
+![](../../statics/Pasted%20image%2020241227124750.png)
+![](../../statics/Pasted%20image%2020241227124830.png)
+
+### Types of stenography
+
+1. **Text Steganography:**
+    
+    - This method involves hiding secret information in text files by manipulating spaces, formatting, or using patterns like capitalized letters or specific word placements.
+    - Example: Encoding a message by selectively adding extra spaces between words or lines.
+Format Based Method
+Random and statistical generation
+Linguistic Method
+2. **Image Steganography:**
+    
+    - Hides data in digital images by altering the least significant bits (LSB) of pixel values. These changes are imperceptible to the human eye.
+    - Example: Embedding a secret message in the RGB values of an image file.
+Least significant bit insertion
+Masking and Filtering
+Redundant Pattern Encoding
+Encrypt and scatter
+1. **Video Steganography:**
+    
+    - Embeds hidden data within video files by modifying frames, inserting extra data in unused bits, or encoding in metadata.
+    - Example: Storing information in specific frames of a video or within the compression artifacts of the file.
+4. **Audio Steganography:**
+    
+    - Conceals information within audio files by manipulating frequencies, phase shifts, or by using echo hiding techniques.
+    - Example: Embedding a secret message in low-frequency sound waves undetectable to listeners.
+5. **Network Steganography:**
+    
+    - Uses network traffic or protocols to hide data. This can include altering headers, unused fields in packets, or timing intervals between transmissions.
+    - Example: Hiding messages in the sequence of packet delivery or using covert channels in communication protocols like TCP/IP.
+
+### Stenography tools
+- **StegHide:** Open-source software that allows hiding secret files within image or audio files.
+- **Geo Steganography:** Free tool for hiding data in BMP images or WAV files.
+- **SSuitePicsel:** Free portable app for hiding text in image files using a unique method.
+- **OpenPuff:** Professional tool for storing files as image, audio, video, or flash files with steganography.
