@@ -530,15 +530,11 @@ L2TP connects remote users to a corporate network efficiently. It reduces costs 
 - By frequently changing things like IP addresses or system configurations, it makes it harder and more expensive for attackers to succeed.
 - **Purpose**: To increase the difficulty and cost of attacking a system, reducing the time the system is vulnerable.
 
----
-
 **Mimic Defense (MD)**
-
 - Mimic Defense creates multiple copies of the same functionality to handle external requests.
 - By using redundancy and changing how requests are handled, it makes it harder for attackers to find weaknesses in the system.
 - **Purpose**: To protect the system by balancing security flaws through changes in how the system operates.
 
----
 
 **Defense in Cyber Security**
 
@@ -644,7 +640,7 @@ Simply, the creation of the mind refers to as Intellectual Property (IP)when som
 1. **Patent**  
     A patent grants exclusive rights to an inventor for a specific period, typically 20 years, to prevent others from making, using, or selling the invention without permission. It protects new inventions or technological advancements.
     
-2. **Copyrights**  
+2. **Copyrights** 
     Copyrights protect original works of authorship, such as literature, music, and art, giving the creator exclusive rights to reproduce, distribute, and perform the work. It lasts for the creator’s lifetime plus a set number of years.
     
 3. **Trademark**  
@@ -703,10 +699,9 @@ Computer forensic:- A field of technology that uses techniques to identify for i
 - Windows Registry Analysis: Reorganizing the Registry
 - Mobile Forensics: Celebrite UFED
 - Network Analysis: Wireshark
-- Linux Distribution: Cain
+- Linux Distribution: Caine
 
 ### Digital forensic technique 
-
 1. **Reverse Steganography**  
     Cybercriminals hide information in digital files like images. Reverse steganography is the process of extracting that hidden data from the file, which may not look suspicious at first.    
 2. **Stochastic Forensics**  
@@ -717,6 +712,8 @@ Computer forensic:- A field of technology that uses techniques to identify for i
     Live analysis happens while a device or computer is running. It involves analyzing volatile data (like what’s in RAM) using system tools and is done in a forensic lab to ensure the evidence is preserved correctly.
 5. **Deleted File Recovery**  
     Deleted file recovery, also called data carving, is the process of finding partially deleted files by searching through the computer's memory and system for traces of those files.
+
+
 ### Digital evidence collection
 ![](../../statics/Pasted%20image%2020241227121141.png)
 ## Cyber crime
@@ -815,7 +812,7 @@ Computer forensic:- A field of technology that uses techniques to identify for i
     2. Can act as spyware, steal data, or provide remote control over the system.
 
 ## Backdoor
-### **Types of Backdoor Exploits **
+### Types of Backdoor Exploits
 
 1. **Backdoor Exploits:**  
     Exploits weaknesses in system or software to gain illegal access, such as breaking into banking systems to control online transactions.
@@ -871,22 +868,16 @@ Encrypt and scatter
 punishments for each section under the **Information Technology Act, 2000**:
 1. **Section 43**:  
     Punishes unauthorized access, damage, or data theft. If someone gains unauthorized access to a computer system or network, they can be fined up to **₹25 lakhs**. The punishment depends on the severity of the damage caused.
-    
 2. **Section 43A**:  
     Deals with compensation for failure to protect sensitive personal data. If an entity fails to implement reasonable security practices leading to a breach, they may be required to pay compensation for loss or damage to the affected individuals.
-    
 3. **Section 66B**:  
     Punishes the dishonestly receiving or retaining stolen computer resources or data. The punishment is **up to 3 years of imprisonment** or a fine of **up to ₹1 lakh**, or both.
-    
 4. **Section 66C**:  
     Punishes identity theft by using someone's identity without permission, such as accessing or stealing passwords. The punishment includes **up to 3 years of imprisonment** and a fine of **up to ₹1 lakh**.
-    
 5. **Section 66D**:  
     Punishes cheating by impersonating someone online. The punishment is **up to 3 years of imprisonment** or a fine of **up to ₹1 lakh**, or both.
-    
 6. **Section 66E**:  
     Deals with the violation of privacy, particularly with the sharing of private images or videos without consent. The punishment is **up to 3 years of imprisonment** and a fine of **up to ₹2 lakh**.
-    
 7. **Section 66F**:  
     Addresses cyber terrorism, including acts that cause disruption or damage to critical infrastructure. The punishment for cyber terrorism is **imprisonment for life** or **up to 10 years** with a fine, depending on the case's severity.
     

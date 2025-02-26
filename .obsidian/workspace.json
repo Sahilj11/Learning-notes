@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/3rd Sem/Cyber security.md",
+                "file": "Notes/Backend notes/Hibernate/Primary key.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cyber security"
+              "title": "Primary key"
+            }
+          },
+          {
+            "id": "09fac71d98e06436",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/Javascript Deep/Deep JS Foundation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Deep JS Foundation"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +55,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -162,26 +178,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9d4041267c18b3fa",
+  "active": "09fac71d98e06436",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20250226121956.png",
+    "Notes/statics/Pasted image 20250226121725.png",
+    "Notes/statics/Pasted image 20250226121210.png",
+    "Notes/statics/Pasted image 20250226120640.png",
+    "Notes/Javascript Deep/Deep JS Foundation.md",
+    "Notes/Javascript Deep",
+    "Notes/Backend notes/Hibernate/Spring data jpa queries.md",
+    "Notes/Backend notes/Hibernate/Primary key.md",
+    "Notes/Backend notes/Hibernate/Mappings.md",
+    "Notes/Backend notes/Hibernate/Entities.md",
+    "Notes/Backend notes/Hibernate/Context.md",
+    "Notes/Backend notes/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
+    "Notes/statics/Pasted image 20250101100550.png",
+    "Notes/MCA/3rd Sem/Cyber security.md",
     "Notes/statics/Pasted image 20241227212824.png",
     "Notes/statics/Pasted image 20241227212104.png",
     "Notes/statics/Pasted image 20241227165401.png",
     "Notes/statics/Pasted image 20241227164854.png",
     "Notes/statics/Pasted image 20241227163906.png",
     "Notes/statics/Pasted image 20241227155628.png",
-    "Notes/statics/Pasted image 20241227124830.png",
-    "Notes/statics/Pasted image 20241227124750.png",
-    "Notes/statics/Pasted image 20241227123524.png",
-    "Notes/statics/Pasted image 20241227121141.png",
-    "Notes/statics/Pasted image 20241227115045.png",
     "Notes/javaCollection/2. Preliminaries.md",
-    "Notes/MCA/3rd Sem/Cyber security.md",
     "Notes/MCA/3rd Sem/Data Analytics.md",
     "Notes/Backend notes/docker/Docker.md",
     "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/Backend notes/docker",
-    "Notes/Backend notes/Spring/Intro (Source , Spring Start Here by Laurentiu Spilca).md",
     "Notes/MCA/3rd Sem/Theory of Computation.md",
     "Notes/java/Java Interview Ques.md",
     "Notes/java/Java For Interview.md",
