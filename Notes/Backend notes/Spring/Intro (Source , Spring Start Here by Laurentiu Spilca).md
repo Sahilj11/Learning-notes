@@ -322,3 +322,77 @@ life cycle, and in the Spring world we name these approaches scopes. In this cha
 discuss two scopes you’ll often find in Spring apps: singleton and prototype.
 
 ### Using singleton bean scope
+The singleton bean scope defines Spring’s default approach for managing the beans
+in its context
+
+#### How it works 
+Spring creates a singleton bean when it loads the context and assigns the bean a
+name (sometimes also referred to as bean ID). We name this scope singleton because
+you always get the same instance when you refer to a specific bean. But be careful! You
+can have more instances of the same type in the Spring context if they have different
+names
+
+the singleton concept allows multiple instances of the same type, and singleton means
+unique per name but not unique per app.
+
+#### Use case in real world
+Because the singleton bean scope assumes that multiple components of the app
+can share an object instance, the most important thing to consider is that these beans
+must be immutable. Most often, a real-world app executes actions on multiple threads
+(e.g., any web app). In such a scenario, multiple threads share the same object
+instance. If these threads change the instance, you encounter a race-condition scenario.
+
+A race condition is a situation that can happen in multithreaded architectures
+when multiple threads try to change a shared resource. In case of a race condition,
+the developer needs to properly synchronize the threads to avoid unexpected execu-
+tion results or errors.
+
+If you want mutable singleton beans (whose attributes change), you need to make
+these beans concurrent by yourself (mainly by employing thread synchronization). But
+singleton beans aren’t designed to be synchronized. They’re commonly used to define
+an app’s backbone class design and delegate responsibilities one to another.
+
+#### Rules
+- Make an object bean in the Spring context only if you need Spring to manage it so that the framework can augment that bean with a specific capability. If the object doesn’t need any capability offered by the framework, you don’t need to make it a bean.
+- If you need to make an object bean in the Spring context, it should be singleton only if it’s immutable. Avoid designing mutable singleton beans.
+- If a bean needs to be mutable, an option could be to use the prototype scope.
+
+#### Lazy and eager instantion
+Spring creates all singleton beans when it initializes the context—this is
+Spring’s default behavior. We’ve used only this default behavior, which is also called
+eager instantiation. In this section, we discuss a different approach of the framework,
+lazy instantiation,
+
+With lazy instantiation, Spring doesn’t create the singleton instances when it creates the context. Instead, it creates each instance the first time someone refers to the bean.
+
+by adding the @Lazy annotation above the class (for stereotype annotations approach) or above the @Bean method (for the @Bean method approach). You’ll observe the output no longer appears in the console when running the app because we instructed Spring to create the bean only when someone uses it.
+
+In a lazy instantiation, the framework has to first check if the instance exists and
+eventually create it if it doesn’t, so from the performance point of view, it’s better to
+have the instances in the context already (eager) because it spares some checks the
+framework needs to do when one bean delegates to another. Another advantage of
+eager instantiation is when something is wrong and the framework cannot create a
+bean; we can observe this issue when starting the app. With lazy instantiation, some-
+one would observe the issue only when the app is already executing and it reaches the
+point that the bean needs to be created.
+
+### Using prototype bean scope
+Every time you request a reference to a prototype-scoped bean, Spring creates a new object instance. For prototype beans, Spring doesn’t create and manage an object instance
+directly. The framework manages the object’s type and creates a new instance every
+time someone requests a reference to the bean.
+
+When you create the bean using the @Bean annotation approach, @Scope goes together with @Bean over the method that declares the bean. 
+When declaring the bean with stereotype annotations, you use the @Scope annotation
+and the stereotype annotation over the class that declares the bean.
+![](../../statics/Pasted%20image%2020250101100550.png)
+
+*Directly injecting a shared instance of `CommentProcessor` into `CommentService` creates thread safety issues due to the singleton scope of the latter. Adjusting the scope of `CommentProcessor` or redesigning it for thread safety resolves the problem.*
+
+Be careful with injecting a prototype-scoped bean into a singleton-scoped bean.
+When you do something like this, you need to be aware that the singleton
+instance always uses the same prototype instance, which Spring injects when it
+creates the singleton instance. This is usually a vicious design because the point
+of making a bean prototype-scoped is to get a different instance for every use.
+
+
+## Aspect 
