@@ -749,3 +749,365 @@ This is why **unnecessary closures** holding large data structures can lead to *
 we are declaring 3 j's so each time closure on different variable
 ![](../statics/Pasted%20image%2020250313095808.png)
 if using let in loop , creates new i for each iteration
+
+
+### Module Pattern
+#### Namespace pattern
+![](../statics/Pasted%20image%2020250313125756.png)
+The **Namespace Pattern** in JavaScript is a way to organize code into a structured, modular format by grouping related functions, variables, and objects under a single global object. This helps prevent global namespace pollution and avoids naming conflicts.
+
+This is not a module because properties and variables are public.
+
+#### Module
+![](../statics/Pasted%20image%2020250313130541.png)
+![](../statics/Pasted%20image%2020250313130557.png)
+purpose of module is to track state over time, 
+The **Module Pattern** in JavaScript is a design pattern that allows you to create encapsulated, reusable, and self-contained pieces of code with private and public members. It is an improvement over the **Namespace Pattern** as it allows private variables and methods, which cannot be accessed directly from outside the module.
+![](../statics/Pasted%20image%2020250313131004.png)
+
+### ES6 Modules
+
+**modules in JavaScript (using the Module Pattern or ES6 Modules) are singletons** by design. This means that when a module is imported or executed, it is **initialized only once**, and any subsequent imports or calls refer to the same instance.
+
+![](../statics/Pasted%20image%2020250313131756.png)
+![](../statics/Pasted%20image%2020250313131910.png)
+
+## Objects 
+
+### This
+![](../statics/Pasted%20image%2020250313154314.png)
+![](../statics/Pasted%20image%2020250313154403.png)
+![](../statics/Pasted%20image%2020250313154507.png)
+![](../statics/Pasted%20image%2020250313154534.png)
+
+```js
+function ask(question) {
+    console.log(this.teacher, question);
+}
+function otherClass() {
+    var myContext = {
+        teacher: "Suzy"
+    };
+    ask.call(myContext, "Why?");
+}
+otherClass(); // Suzy, Why?
+```
+The `call` method lets you run a function and manually set what `this` should be inside that function.
+
+**Example:**
+
+```js
+function sayHello() {
+    console.log("Hello, " + this.name);
+}
+
+const person = { name: "Alice" };
+
+sayHello.call(person); // Output: Hello, Alice
+```
+
+🔹 Normally, `this` inside `sayHello` would be `undefined` (or `window` in browsers).  
+🔹 But with `.call(person)`, we tell JavaScript: "Run `sayHello`, but pretend `this` is `person`."
+
+ **Another Example (With Arguments):**
+
+```js
+function introduce(greeting, punctuation) {
+    console.log(greeting + ", " + this.name + punctuation);
+}
+
+const user = { name: "Bob" };
+
+introduce.call(user, "Hi", "!"); // Output: Hi, Bob!
+```
+
+Here, `"Hi"` and `"!"` are passed as extra arguments to the function.
+
+👉 **Think of `call` as a way to "borrow" a function and use it with a different object.**
+
+### Different ways to call a function
+#### Implicit and explicit binding
+**Implicit Binding in JavaScript (`this`)**
+
+**Implicit binding** is a rule that determines what `this` refers to inside a function **when the function is called through an object**.
+
+ **Rule:**
+
+📌 When a function is called using **dot notation (`obj.method()`)**, `this` inside the function refers to the object **before the dot**.
+
+---
+
+**Example of Implicit Binding**
+
+```js
+const person = {
+    name: "Alice",
+    greet: function () {
+        console.log("Hello, " + this.name);
+    }
+};
+
+person.greet(); // Output: Hello, Alice
+```
+
+👉 **Why?**
+
+- The function `greet` is called on `person`, so `this` inside `greet` refers to `person`.
+
+---
+
+**Example with Nested Objects**
+
+```js
+const user = {
+    name: "Bob",
+    details: {
+        age: 25,
+        showAge: function () {
+            console.log(this.age);
+        }
+    }
+};
+
+user.details.showAge(); // Output: 25
+```
+
+👉 **Why?**
+
+- `showAge` is called using `user.details.showAge()`, so `this` refers to `user.details`.
+
+---
+
+**Breaking Implicit Binding**
+
+If the function is assigned to a variable or passed as a callback, **implicit binding is lost**, and `this` becomes `undefined` (or `window` in non-strict mode).
+
+```js
+const person = {
+    name: "Charlie",
+    speak: function () {
+        console.log("I am " + this.name);
+    }
+};
+
+const talk = person.speak; // Function reference assigned
+talk(); // Output: I am undefined (or "I am " in browsers)
+```
+
+👉 **Why?**
+
+- `talk` is called **without an object**, so `this` defaults to `undefined` in strict mode (or `window` otherwise).
+
+---
+
+**Fixing Implicit Binding Loss**
+
+1. **Use `.bind()`**
+
+```js
+const boundTalk = person.speak.bind(person);
+boundTalk(); // Output: I am Charlie
+```
+
+2. **Use an arrow function** (for certain cases)
+
+```js
+const person2 = {
+    name: "Diana",
+    speak: () => console.log("I am " + this.name)
+};
+
+person2.speak(); // Output: I am undefined (arrow functions don't have their own `this`)
+```
+
+**Key Takeaway:** **Implicit binding works only when a function is directly called on an object (`obj.method()`). If assigned or passed around, `this` is lost.**
+![](../statics/Pasted%20image%2020250313155808.png)
+#### Explicit  binding
+**Explicit Binding in JavaScript (`this`)**
+
+**Explicit binding** means **manually setting** what `this` should refer to when calling a function. This is done using `.call()`, `.apply()`, or `.bind()`.
+
+ **1️⃣ Using `.call()`**
+
+📌 `.call(thisArg, arg1, arg2, ...)`  
+Calls the function immediately, setting `this` to `thisArg`.
+
+```js
+function greet(greeting) {
+    console.log(greeting + ", " + this.name);
+}
+
+const person = { name: "Alice" };
+
+greet.call(person, "Hello"); // Output: Hello, Alice
+```
+
+👉 **Why?**
+
+- `call(person, "Hello")` forces `this` to be `person`.
+
+ **2️⃣ Using `.apply()`**
+
+📌 `.apply(thisArg, [argsArray])`  
+Like `call()`, but takes arguments as an array.
+
+```js
+greet.apply(person, ["Hi"]); // Output: Hi, Alice
+```
+
+👉 **Why use `apply`?**
+
+- Useful when arguments are in an array.
+
+ **3️⃣ Using `.bind()`**
+
+📌 `.bind(thisArg, arg1, arg2, ...)`  
+Returns a **new function** with `this` permanently set.
+
+```js
+const boundGreet = greet.bind(person, "Hey");
+boundGreet(); // Output: Hey, Alice
+```
+
+👉 **Why?**
+
+- Unlike `call()` and `apply()`, `bind()` **does not call the function immediately**. It returns a new function that you can call later.
+
+**Example: Fixing `this` inside Callbacks**
+
+When passing a function to an event handler or another function, `this` might get lost. **Use `.bind()` to fix it!**
+
+```js
+const user = {
+    name: "Charlie",
+    sayHello: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+setTimeout(user.sayHello, 1000);  // Output: Hello, undefined
+
+setTimeout(user.sayHello.bind(user), 1000); // Output: Hello, Charlie
+```
+
+👉 **Why?**
+
+- `setTimeout(user.sayHello)` loses `this`.
+- `bind(user)` ensures `this` always refers to `user`.
+
+---
+
+
+**🔹 Key Takeaways**
+
+| Method     | Calls Function Immediately? | Accepts Arguments Individually? | Accepts Arguments as an Array? | Returns a New Function? |
+| ---------- | --------------------------- | ------------------------------- | ------------------------------ | ----------------------- |
+| `.call()`  | ✅ Yes                       | ✅ Yes                           | ❌ No                           | ❌ No                    |
+| `.apply()` | ✅ Yes                       | ❌ No                            | ✅ Yes                          | ❌ No                    |
+| `.bind()`  | ❌ No                        | ✅ Yes                           | ❌ No                           | ✅ Yes                   |
+
+📌 **Use `call` when you know arguments beforehand.**  
+📌 **Use `apply` when arguments are in an array.**  
+📌 **Use `bind` when you need a function that remembers `this` for later.**
+
+
+#### Hard Binding 
+**Hard Binding in JavaScript (`this`)**
+
+Hard binding is when we **permanently bind** a function to a specific `this` value so that it **cannot be overridden**.
+
+This is done using `.bind()` or by manually wrapping the function in another function.
+
+---
+
+**1️⃣ Using `.bind()` (Most Common)**  
+`.bind(thisArg)` creates a new function that **always** uses `thisArg` as `this`, no matter how it’s called.
+
+```js
+const person = {
+    name: "Alice",
+    sayHello: function() {
+        console.log("Hello, " + this.name);
+    }
+};
+
+const greet = person.sayHello.bind(person); 
+
+greet(); // Output: Hello, Alice
+
+setTimeout(greet, 1000); // Output: Hello, Alice (Still bound!)
+```
+
+Even if `greet` is called later or passed to another function, it **always uses `person` as `this`**.
+
+---
+
+**2️⃣ Using a Wrapper Function (Manual Hard Binding)**  
+Another way to **manually** hard-bind `this` is by creating a wrapper function.
+
+```js
+function sayHello() {
+    console.log("Hello, " + this.name);
+}
+
+const user = { name: "Bob" };
+
+// Manually binding `this`
+const hardBoundGreet = function() {
+    return sayHello.call(user);
+};
+
+hardBoundGreet(); // Output: Hello, Bob
+
+setTimeout(hardBoundGreet, 1000); // Output: Hello, Bob
+```
+
+The wrapper function **always calls `sayHello` with `user` as `this`**, so it can’t be changed.
+
+---
+
+**3️⃣ Hard Binding with Constructor Functions**  
+Hard binding ensures that `this` always refers to a specific object, even when using `new`.
+
+```js
+function Person(name) {
+    this.name = name;
+}
+
+function greet() {
+    console.log("Hello, " + this.name);
+}
+
+const alice = new Person("Alice");
+
+// Hard binding `this` to `alice`
+const boundGreet = greet.bind(alice);
+
+boundGreet(); // Output: Hello, Alice
+
+const bob = new Person("Bob");
+boundGreet.call(bob); // Output: Hello, Alice (hard binding ignores `call`!)
+```
+
+Even when trying to override `this` with `.call()`, `boundGreet` **always** uses `alice` as `this`.
+
+---
+
+**🔹 Key Takeaways**
+
+|Method|Can Override `this`?|Creates a New Function?|Persistent?|
+|---|---|---|---|
+|`.call()`|✅ Yes|❌ No|❌ No|
+|`.apply()`|✅ Yes|❌ No|❌ No|
+|`.bind()`|❌ No|✅ Yes|✅ Yes|
+|Wrapper Function|❌ No|✅ Yes|✅ Yes|
+
+Use `.bind()` when you always want a function to use the same `this`, no matter how it’s called.  
+Use a wrapper function when `.bind()` is not available (like in very old JS versions).
+
+
+#### new keyword (third way to call function)
+![](../statics/Pasted%20image%2020250313161437.png)
+
+#### Default Binding
+![](../statics/Pasted%20image%2020250313161925.png)
