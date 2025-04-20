@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Odin project/React/2 . States in react.md",
+                "file": "Notes/MCA/4th Sem/SPM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 . States in react"
+              "title": "SPM"
             }
           }
         ],
@@ -180,6 +180,15 @@
   },
   "active": "09fac71d98e06436",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20250420112013.png",
+    "Notes/statics/Pasted image 20250420111120.png",
+    "Notes/statics/Pasted image 20250420102933.png",
+    "Notes/MCA/1st Sem/SE/Software Project management.md",
+    "Notes/MCA/1st Sem/SE/Problem Analysis.md",
+    "Notes/MCA/4th Sem/SPM.md",
+    "Notes/statics/Pasted image 20250420102254.png",
+    "Notes/Odin project/React/2 . States in react.md",
+    "Notes/MCA/4th Sem",
     "Notes/Odin project/HTML and CSS/HTML.md~",
     "Notes/Odin project/javascript advance/Promises.md~",
     "Notes/Odin project/javascript advance/Namaste javascript.md~",
@@ -191,8 +200,6 @@
     "Notes/Odin project/React/2 . States in react.md~",
     "Notes/Odin project/Javascript basics/Fundamentals 3.md~",
     "Notes/Odin project/Javascript basics/Fundamental 5.md~",
-    "Notes/Odin project/Javascript basics/Errors.md~",
-    "Notes/Odin project/Javascript basics/Arrays in JS.md~",
     "Notes/Backend notes/Hibernate/Primary key.md",
     "Notes/java/Java For Interview.md",
     "Notes/statics/Pasted image 20250417132219.png",
@@ -202,11 +209,8 @@
     "Notes/statics/Pasted image 20250408195714.png",
     "Notes/statics/Pasted image 20250408194417.png",
     "Notes/statics/Pasted image 20250408194316.png",
-    "Notes/statics/Pasted image 20250405064926.png",
     "Notes/java/Java Interview Ques.md",
     "Notes/Javascript Deep/Deep JS Foundation.md",
-    "Notes/statics/Pasted image 20250324215412.png",
-    "Notes/statics/Pasted image 20250324210707.png",
     "Notes/Javascript Deep/Async JS.md",
     "Notes/Backend notes/Hibernate/Spring data jpa queries.md",
     "Notes/Backend notes/Hibernate/Mappings.md",
@@ -221,10 +225,6 @@
     "Notes/MCA/3rd Sem/Theory of Computation.md",
     "Notes/MCA/3rd Sem/AOS.md",
     "Notes/Elastic Search/Basic.md",
-    "Notes/DSA problem/Problems.md",
-    "Notes/java/Wrapper class.md",
-    "Notes/java/ArrayList.md",
-    "Notes/java/Intro.md",
-    "Notes/System Design/Database Design.md"
+    "Notes/DSA problem/Problems.md"
   ]
 }
