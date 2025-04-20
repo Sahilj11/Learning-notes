@@ -1,5 +1,4 @@
 
-
 #### **Why Java is Not 100% Object-Oriented?**
 
 - Java uses **primitive data types** (e.g., `int`, `boolean`, `float`) that are not objects.
@@ -10,12 +9,15 @@
 1. **Safety:** Direct memory access using pointers can lead to errors or security vulnerabilities.
 2. **Simplicity:** Pointers add complexity, contradicting Java’s design principle of simplicity.
 3. **Memory Management:** JVM handles memory allocation, avoiding direct access by the user.
+
+
 #### **What is the JIT Compiler in Java?**
+[Java For Interview#JVM](Java%20For%20Interview.md)
 
 - The **Just-In-Time (JIT) compiler** converts frequently used bytecode into native machine code during runtime, enhancing performance.
 - It optimizes "hotspots" (frequently executed code) dynamically.
 #### **Why is String Immutable in Java?**
-
+[Java For Interview#Strings](Java%20For%20Interview.md)
 1. **String Pool Efficiency:** If strings were mutable, changes in one reference would affect others.
 2. **Security:** Immutable strings ensure integrity in sensitive areas like networking or file operations.
 3. **Thread-Safety:** Immutable objects can be shared safely across threads without synchronization.

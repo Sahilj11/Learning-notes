@@ -1,15 +1,15 @@
 In JavaScript, a Promise is a object that represents a value that might be available now, or in the future, or possibly never. It's used for handling asynchronous operations, such as fetching data from a server, reading a file, or any task that doesn't necessarily complete immediately. Promises provide a more structured and readable way to manage asynchronous code compared to traditional callback-based approaches.
-![[Pasted image 20230825073826.png]]
+![](../../statics/Pasted%20image%2020230825073826.png )
 lets take example of promise api , here when the api is called for data , it create a empty object . even when the object is not having the data . an empty object is created with key and value as undefined . 
 
 when the 7th line is executed the javascipt return us an empty object which is essentialy just an promise.
 the program will continue executing rest of the code, even if the data is not return .
-![[Pasted image 20230825074207.png]]
+![](../../statics/Pasted%20image%2020230825074207.png )
 
 and when the server return the data that object is filled with data .
 notice here that the .then method is used . this is to attach the callback function to the promise object . and this function will be called once the api return the data.
 
-![[Pasted image 20230825074857.png]]
+![](../../statics/Pasted%20image%2020230825074857.png )
 
 promise object are immutable , 
 

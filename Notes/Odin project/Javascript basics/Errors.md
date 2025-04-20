@@ -1,8 +1,8 @@
 - A `ReferenceError` is thrown when one refers to a variable that is not declared and/or initialized within the current scope.
 - Another important part of an error is the stack trace. This helps you understand when the error was thrown in your application, and what functions were called that led up to the error. So, for example, if we have the following code:
-- ![[Pasted image 20230614071504.png]]
+- ![](../../statics/Pasted%20image%2020230614071504.png )
 - Our function `print()` should call on `add()`, which returns a variable named `c`, which currently has not been declared. The corresponding error is as follows:
-- ![[Pasted image 20230614071534.png]]
+- ![](../../statics/Pasted%20image%2020230614071534.png )
 - The stack trace tells us that:
 	1. `c is not defined` in scope of `add()`, which is declared on line 5
 	2. `add()` was called by `print()`, which was declared on line 9

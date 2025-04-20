@@ -152,7 +152,7 @@ function myFunction(a, b, c) {
 myFunction(1, 2, 3);
 
 ```
-![[Pasted image 20230616063240.png]]
+![](../../statics/Pasted%20image%2020230616063240.png )
 1. In this example, changing the value of `a` to `10` also updates the corresponding index in the `arguments` object.
 2. Rest parameter (`...restParam`):
     - The rest parameter allows you to capture any extra arguments passed to a function as an array.
@@ -168,7 +168,7 @@ function myFunction(a, b, ...restParam) {
 myFunction(1, 2, 3, 4, 5);
 
 ```
-- ![[Pasted image 20230616063335.png]]
+- ![](../../statics/Pasted%20image%2020230616063335.png )
 - 1. In this example, even though the value of `a` is changed to `10`, the rest parameter `restParam` still retains its original value, which is `[3, 4, 5]`.
 - To summarize, in non-strict functions, the `arguments` object synchronizes its indices with the values of named parameters, allowing changes in the parameters to reflect in the `arguments` object. On the other hand, the rest parameter bundles extra parameters into an array but does not update its value when named parameters are reassigned.
 

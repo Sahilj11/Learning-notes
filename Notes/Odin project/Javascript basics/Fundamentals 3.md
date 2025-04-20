@@ -70,7 +70,7 @@ function doubleItem(item) {
 ### Function return value 
 - Some functions don't return any value. (In these cases, our reference pages list the return value as `void` or `undefined`.)
 ### Parameters and arguments 
-![[Pasted image 20230613152615.png]]
+![](../../statics/Pasted%20image%2020230613152615.png )
 
 - parameters are the items listed between the parentheses in the function declaration
 - Function arguments are the actual values we decide to pass to the function. In the example above, the function definition is written on the first line: `function favoriteAnimal(animal)`. The parameter, `animal`, is found inside the parentheses

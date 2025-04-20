@@ -995,8 +995,68 @@ setTimeout(user.sayHello.bind(user), 1000); // Output: Hello, Charlie
 - `setTimeout(user.sayHello)` loses `this`.
 - `bind(user)` ensures `this` always refers to `user`.
 
----
+In JavaScript, when you pass a method like `workshop1.ask` directly to `setTimeout`, it loses its original object (`workshop1`) because **functions in JavaScript are first-class objects** and can be detached from their owners.
 
+ Why Does `this` Get Lost?
+
+1. **Function Reference Extraction:**
+    
+    ```js
+    setTimeout(workshop1.ask, 10, "Can I ask a question?");
+    ```
+    
+    Here, `workshop1.ask` is passed **as a reference** to `setTimeout`. This means `setTimeout` calls it as a **standalone function** rather than a method of `workshop1`.
+    
+2. **How `setTimeout` Calls the Function:**  
+    Internally, `setTimeout` calls `workshop1.ask` like this:
+    
+    ```js
+    function execute() {
+        workshop1.ask("Can I ask a question?");
+    }
+    execute(); // "ask" runs as a normal function, not as `workshop1.ask`
+    ```
+    
+    Since it's a standalone function call, `this` inside `ask` does **not** refer to `workshop1`, but instead:
+    
+    - In **strict mode** (`"use strict"`), `this` is `undefined`.
+    - In **non-strict mode**, `this` defaults to the global object (`window` in browsers, `global` in Node.js).
+
+How to Fix This?
+
+Since JavaScript does **not automatically bind `this`**, you need to explicitly bind it:
+
+1. **Use `.bind()`**
+
+```js
+setTimeout(workshop1.ask.bind(workshop1), 10, "Can I ask a question?");
+```
+
+- `.bind(workshop1)` creates a **new function** where `this` is permanently set to `workshop1`.
+
+2. **Use an Arrow Function**
+
+```js
+setTimeout(() => workshop1.ask("Can I ask a question?"), 10);
+```
+
+- Arrow functions don’t have their own `this`; they inherit `this` from their surrounding scope, preserving the context.
+
+3. **Store `this` in a Variable**
+
+```js
+var self = workshop1;
+setTimeout(function() {
+    self.ask("Can I ask a question?");
+}, 10);
+```
+
+- This is an older trick used before `.bind()` and arrow functions became popular.
+
+Summary
+- When you pass `workshop1.ask` to `setTimeout`, it becomes a detached function.
+- Since it’s called as a normal function, `this` does not point to `workshop1`.
+- Use `.bind()`, an arrow function, or store `this` in a variable to maintain context.
 
 **🔹 Key Takeaways**
 
@@ -1111,3 +1171,19 @@ Use a wrapper function when `.bind()` is not available (like in very old JS vers
 
 #### Default Binding
 ![](../statics/Pasted%20image%2020250313161925.png)
+
+### Binding precendence
+![](../statics/Pasted%20image%2020250324210017.png)
+### Arrow Function & Lexical scope
+![](../statics/Pasted%20image%2020250324210157.png)
+- In arrow function there is no this context , so it treats teacher as a variable and try to resolve it lexically
+- so here this.teacher is looked in ask , and ask this context is workshop so it resolve it to Kyle
+![](../statics/Pasted%20image%2020250324210707.png)
+here there is only two scope , one is ask function and other is global scope
+
+## Prototype
+### Intro
+In JavaScript, **prototype** is a built-in mechanism that allows objects to inherit properties and methods from other objects. Every function in JavaScript automatically has a `prototype` property, which is used when creating new objects.
+![](../statics/Pasted%20image%2020250324215412.png)
+
+### Prototype Chain

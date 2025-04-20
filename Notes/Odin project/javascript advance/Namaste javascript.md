@@ -14,7 +14,7 @@
 	- created in 2 phase
 		- creation phase (memory creation phase):- JS will allocate memory to all variable and function. in memory component , variable are stored as undefined(initially , even if in code value have been assigned to them) and function are stored with complete code
 		  - 2nd phase is code execution , line by line code execution take place , if JS encounter a variable assigned value it  populated in memory component that variable value from undefined to the assigned value. if a function is defined then nothing happens as the code is already in memory component . but if a function is called in the code . a brand new execution context is created inside the code component with its own memory and code component
-		  ![[Pasted image 20230623065903.png]]
+		  ![](../../statics/Pasted%20image%2020230623065903.png )
 		  - after creation of execution context inside the code component when function is declared , it goes through same process . first variable is stored as undefined in memory 
 		  - after the function is done running this execution context of function will be deleted (whenever the same function is called again execution context will be created)
 - Call stack (execution context stack , program stack ,control stack , runtime stack , machine stack)
@@ -54,12 +54,12 @@ console.log(myVariable); // Output: 10
 - In the example above, the variable `myVariable` is declared and assigned the value of `10` later in the code. Even though the first `console.log` statement appears before the declaration, it does not throw an error. Instead, it prints `undefined` because the declaration is hoisted to the top, but the assignment occurs at its original position.
 
 ## How functions work in JS
-- ![[Pasted image 20230623074418.png]]
+- ![](../../statics/Pasted%20image%2020230623074418.png )
 - output was 10,100,1
-- ![[Pasted image 20230623074830.png]]
-- ![[Pasted image 20230623075038.png]]
+- ![](../../statics/Pasted%20image%2020230623074830.png )
+- ![](../../statics/Pasted%20image%2020230623075038.png )
 - notice that GEC is on line 3 
-- ![[Pasted image 20230623075128.png]]
+- ![](../../statics/Pasted%20image%2020230623075128.png )
 
 ### Window and this in JS
 - Window :- JS engine at start create an global object created with global execution context.  object is named window and this window object contains various function which can be accessed from anywhere in the code
@@ -108,12 +108,12 @@ Lexical environments help maintain variable scope and provide the necessary cont
 - Lexical environment is the local memory along the lexical environment of its parent
 - Lexical means hierarchy 
 
-- ![[Pasted image 20230623082656.png]]
+- ![](../../statics/Pasted%20image%2020230623082656.png )
 - here the output will be 10 (`console.log(b)`) on last line
-- ![[Pasted image 20230623082810.png]]
+- ![](../../statics/Pasted%20image%2020230623082810.png )
 - here the orange is the reference to the lexical environment its of parent
 - global lexical points to NULL
-- ![[Pasted image 20230623083220.png]]
+- ![](../../statics/Pasted%20image%2020230623083220.png )
 - here when c function is called , JS look for variable b , it is not there . then it use lexical environment reference to look in a's function execution context and it finds it there (reason why b is 10 in a context instead of undefined is because it was called in line 9, before the c function calling)
 #### Scope chain
 Certainly! The scope chain is a concept closely related to lexical environments in JavaScript.
@@ -149,7 +149,7 @@ By following the scope chain, JavaScript can maintain the correct scope and prov
 
 ### let & const in JS 🔥Temporal Dead Zone
 In JavaScript, `let` and `const` declarations also exhibit hoisting, but with some differences compared to `var` declarations.
-![[Pasted image 20230623095517.png]]
+![](../../statics/Pasted%20image%2020230623095517.png )
 - although even before initializing the let or const variable , it is allocated undefined value but it is not in global space . they are allocated in separate memory space and we cannot access these until some value is initialized in them
 
 1. `let` Hoisting:
@@ -221,7 +221,7 @@ These errors are valuable as they provide information about what went wrong in y
 	- used to combine multiple JS statement into one group
 	- need to group these statement through so that we can pass multiple statement into place where JS expect a single statement 
 		- for example in `if(true)` JS expect a single statement , but we use `{}` to create a block and give multiple statement
-	- ![[Pasted image 20230623102025.png]]
+	- ![](../../statics/Pasted%20image%2020230623102025.png )
 	- you can see let and const are block scope where as var is in global
 ### Shadowing (not work with let and const)
 In JavaScript, shadowing refers to a situation where a variable declared in a nested scope has the same name as a variable declared in an outer scope. This leads to the nested variable "shadowing" or overriding the outer variable within its scope, effectively hiding the outer variable from that particular scope.

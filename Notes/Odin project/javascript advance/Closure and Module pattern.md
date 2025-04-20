@@ -233,7 +233,7 @@ Overall, this prototype-based approach in JavaScript offers a more dynamic and f
 ## Module Design pattern 
 The module design pattern in JavaScript is a way to encapsulate related variables, functions, and objects into a single, self-contained unit. It provides a structure for organizing and separating code into reusable modules, promoting modularity, encapsulation, and information hiding
 
-![[Pasted image 20230708103752.png]]
+![](../../statics/Pasted%20image%2020230708103752.png )
 
 The module pattern typically involves creating a function that acts as a closure, defining private variables and functions within that closure. It then returns an object that exposes only the necessary properties and methods, effectively creating a public API for interacting with the module while keeping the internal implementation hidden.
 

@@ -14,7 +14,7 @@ let user = {}; // "object literal" syntax
 	2. The second one has the name `"age"` and the value `30`.
 - The resulting `user` object can be imagined as a cabinet with two signed files labeled “name” and “age”.
 - We can add, remove and read files from it at any time.
-- ![[Pasted image 20230618052540.png]]
+- ![](../../statics/Pasted%20image%2020230618052540.png )
 - Property values are accessible using the dot notation:
 ```javascript
 / get property values of the object: 
@@ -145,7 +145,7 @@ alert( "blabla" in user ); // false, user.blabla doesn't exist
 - Please note that on the left side of `in` there must be a _property name_. That’s usually a quoted string.
 
 ## Array manipulation on a website
-- ![[Pasted image 20230619071824.png]]
+- ![](../../statics/Pasted%20image%2020230619071824.png )
 - here in this code , first we visited the https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 - then here the objective is to create a list with all element having De in them 
 - to do this first we need to find the div name in which all these name are in it . which is mw-category 

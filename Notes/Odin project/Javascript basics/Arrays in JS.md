@@ -102,7 +102,7 @@ All of these methods will convert a string into an array where each element repr
 - For example:- `array.splice(2,0,"Lemon", "Kiwi");`
 	- The first parameter (2) defines the position **where** new elements should be **added** (spliced in). The second parameter (0) defines **how many** elements should be **removed**. The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be **added**. The `splice()` method returns an array with the deleted items
 - Array slice():- slices out a piece of an array into a new array.method does not remove any elements from the source array. The `slice()` method can take two arguments like `slice(1, 3)`. The method then selects elements from the start argument, and up to (but not including) the end argument. If the end argument is omitted, like in the first examples, the `slice()` method slices out the rest of the array
-- ![[Pasted image 20230614111420.png]]
+- ![](../../statics/Pasted%20image%2020230614111420.png)
 - In JavaScript, arrays are reference types. This means that when you assign an array to a variable or pass it as an argument to a function, you are actually working with a reference to the array's memory location, rather than a direct copy of the array's values. ^797caf
 - When you assign an array to a variable or pass it as an argument, the variable doesn't contain the actual array data but rather a reference (or pointer) to the memory location where the array is stored. Multiple variables can refer to the same array in memory.
 - Here's an example to illustrate how arrays are reference types:
@@ -317,7 +317,7 @@ const sum = arr.reduce((total, currentValue) =>{
 }, 0);
 console.log(sum);
 ```
-- ![[Pasted image 20230619081637.png]]
+- ![]( ../../statics/Pasted%20image%2020230619081637.png )
 - more problem related to reduce method
 
 ##### Array some
@@ -446,18 +446,18 @@ btn.addEventListener("click", () => {
 	- /a/g :- flag global 
 	- /a/i :- search for a or A . you can also combine these flag like /a/gi :- here it will search all the a or A
 - we can add certain thing in regular expression . like /e+/g :- match e or more than one e
-- /ea?/g:- optional . ![[Pasted image 20230616052341.png]]
+- /ea?/g:- optional . ![](../../statics/Pasted%20image%2020230616052341.png )
 	- you can see here it is ignoring the a's and only looking for ea
 - /ea*/g:- match 0 or more of the preceding token ![[Pasted image 20230616052536.png]]
 - /.at/g:- it matches anything at all , but it can't match a new line![[Pasted image 20230616052812.png]]
 - /t./g:- here will search t and one character after t. you can also do /t../g :- but here you can see instead of continuing the search through next line it is not doing that 
-	- ![[Pasted image 20230616052958.png]]
+	- ![](../../statics/Pasted%20image%2020230616052958.png )
 - if you want to search for . or any special character than use /`\`./g :- here the `\` is a escape character that cancel the character that comes after it 
 - /`\`w/g:- matches any word character. you can use W to do the opposite which is not matching the word character
 - /`\`s/g :- any form of white spaces. you can use S to do the opposite
 - /`\`w{4,}/g :- what if we want to search for word for a certain length , inside the {} we can put min and max value . this expression will search for 4 or more character . here , is playing the role 
 - /[fc]at/g :- inside of [ ] the character which is mentioned . it will see all the word that start with f or c and ends with at 
-	- ![[Pasted image 20230616053901.png]]
+	- ![](../../statics/Pasted%20image%2020230616053901.png )
 - /[a-zA-Z]at/g:- we can also do ranges inside the square bracket from a to z and also in capital letters 
 - /(t|T)he/g :- anything inside of () is a group . here in this example it is searching for uppercase and lowecase t
 - good practice is to store the regular expression in a separate variable , for more readability

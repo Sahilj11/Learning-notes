@@ -194,7 +194,7 @@ Using the `<kbd>` tag can enhance the accessibility and clarity of keyboard-rela
 - Indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the `<blockquote>` element.
 #### `<small>`
 - Represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size smaller, such as from `small` to `x-small`.
-- ![[Pasted image 20230624061224.png]]
+- ![](../../statics/Pasted%20image%2020230624061224.png )
 
 #### `<sub> && <sup>`
 
@@ -283,12 +283,12 @@ Image maps created using the `<map>` and `<area>` tags are useful for various pu
 #### `<img> , <video> , <audio>`
 
 ### Embedded content
-![[Pasted image 20230624062519.png]]
+![](../../statics/Pasted%20image%2020230624062519.png )
 
 ### SVG and MathML
-![[Pasted image 20230624065559.png]]
+![](../../statics/Pasted%20image%2020230624065559.png )
 
 ### Scripting 
-![[Pasted image 20230624070008.png]]
+![](../../statics/Pasted%20image%2020230624070008.png )
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
