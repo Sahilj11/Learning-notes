@@ -448,3 +448,96 @@ If the critical path is Task A → Task B → Task D and Task B is delayed, the 
     
 - The critical path highlights tasks that must stay on track for the project to finish on time
 
+# UNIT 4
+# Contracts
+
+## **1. Introduction (in context of SPM)**
+
+In **Software Project Management**, a **contract** is a formal agreement between two parties — usually the **client (customer)** and the **software development organization**. The contract outlines **what software will be delivered**, **how**, **when**, **by whom**, and **under what terms and conditions** (including payment and liabilities). Contracts help manage expectations, responsibilities, and reduce risks in software projects.
+
+## **2. Types of Contracts in SPM**
+There are several types of contracts commonly used in software projects:
+### a) **Fixed Price Contract (FPC)**
+- The client pays a pre-agreed amount regardless of the actual effort/time spent.
+- Best for well-defined requirements
+- **Risk** is on the **vendor**.
+
+### b) **Time and Material Contract (T&M)**
+
+- The client pays for the time and resources used.
+    
+- Flexible for projects with evolving requirements.
+    
+- **Risk** is on the **client**.
+    
+
+### c) **Cost-Reimbursable Contract**
+
+- Client pays the actual cost incurred plus a fee (profit margin).
+    
+- Used when exact requirements and costs are hard to define.
+    
+- Variants: **Cost plus Fixed Fee (CPFF)**, **Cost plus Incentive Fee (CPIF)**
+    
+
+### d) **Incentive-Based Contract**
+
+- Rewards or penalties based on performance metrics (like early delivery).
+    
+- Encourages better performance.
+    
+
+### e) **Unit Price Contract**
+
+- Payment is based on unit deliverables (e.g., per feature/module).
+    
+- Often used in Agile or modular development approaches.
+    
+
+---
+
+## **3. Stages in Contract Placement (in SPM context)**
+
+Contract placement involves several structured stages:
+
+### 1. **Requirement Identification**
+
+- Identify and define project scope, objectives, and deliverables.
+    
+- Basis for selecting the type of contract.
+- Identifying mandatory and desirable needs
+    
+
+### 2. **Bidding / Tendering**
+
+- Request for Proposal (RFP) or Invitation to Bid (ITB) is issued.
+    
+- Vendors prepare and submit proposals based on requirements.
+    
+
+### 3. **Proposal Evaluation**
+
+- Proposals are evaluated based on technical capability, cost, timeline, experience, etc.
+    
+
+### 4. **Negotiation**
+
+- Final terms and conditions, timelines, pricing, and deliverables are discussed.
+    
+- Aim is to reach mutual understanding and agreement.
+    
+
+### 5. **Contract Award and Signing**
+
+- The chosen vendor is awarded the contract.
+    
+- Legal agreement is signed by both parties.
+    
+
+### 6. **Contract Execution and Monitoring**
+- Project work starts; performance is monitored against the contract.
+- May include periodic reviews, milestone validations, and audits.
+
+### 7. **Contract Closure**
+- Upon completion, the contract is formally closed.
+- Final deliverables are accepted, and payments settled.
