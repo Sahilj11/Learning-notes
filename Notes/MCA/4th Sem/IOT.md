@@ -244,3 +244,212 @@ based applications.
 - Supports a wide range of guest operating systems.
     
 - Suitable for organizations that need high performance and scalability for their virtualization workloads.
+## Virtual Migration Techniques
+Moving a virtual machine (VM) from one physical host to another, whether it is active or
+not, is known as virtual machine migration. This operation is typically done to balance the
+workload or carry out maintenance without interrupting services. Virtualization and cloud
+computing are not complete without VM migration solutions, which give administrators
+the opportunity to maximise resource utilisation and improve service availability.
+### 1. Live Migration
+- Moves an active virtual machine (VM) from one physical host to another **without stopping** its services.
+- Requires a **shared storage infrastructure** that allows both physical hosts to access the same disk images.
+- Commonly used to:
+    - Optimize resource usage,
+    - Balance workloads,
+    - Perform maintenance tasks without downtime.
+- Widely used in cloud computing to enhance availability and resource optimization.
+
+### 2. Cold Migration
+- Involves **stopping** the VM before moving it to another physical host.
+- The VM's disk image is copied to the new host and then started.
+- Does **not** require shared storage infrastructure.
+- Simple and reliable, but causes **brief service interruption**, making it less ideal for critical services.
+
+### 3. Storage Migration
+- Transfers a VM's **storage** from one physical host to another.
+- Often used along with live or cold migration to:
+    - Move VMs to faster or larger storage systems,
+    - Support business continuity and disaster recovery.
+- Can relocate a VM’s storage to a different physical location if needed.
+
+### 4. Cross-Platform Migration
+- Moves a VM from one **virtualization platform** to another.
+- Useful for:
+    - Migrating from legacy to modern virtualization platforms,
+    - Consolidating multiple platforms into a single one.
+- Requires **conversion** of the VM’s disk image and configuration to a new format.    
+- Can be complex and time-consuming.
+## EC2
+
+### Overview
+
+- **Amazon EC2** is a web service by AWS allowing users to **rent virtual computers** to run their applications.
+    
+- Provides **scalable computing capacity** in the cloud for quick and easy application deployment.
+    
+
+### Key Features
+
+- **Instance Types**:
+    
+    - Wide range tailored to specific needs.
+        
+    - Some optimized for **memory-intensive** workloads, others for **compute-intensive** tasks.
+        
+    - Users choose based on their application requirements and pay only for what they use.
+        
+- **Amazon Machine Images (AMIs)**:
+    
+    - Pre-configured images with OS and required applications.
+        
+    - Users can also create **custom AMIs** with their own configurations.
+        
+- **Storage Options**:
+    
+    - **Amazon Elastic Block Store (EBS)**: Persistent block-level storage volumes for EC2 instances.
+        
+    - **Amazon Elastic File System (EFS)**: Scalable file storage for EC2 instances.
+        
+
+### Key Benefits
+
+- **Scalability**:
+    
+    - Easily launch or terminate instances based on demand.
+        
+    - Helps manage costs by paying only for needed capacity.
+        
+- **Flexibility**:
+    
+    - Freedom to choose **operating systems**, **software**, and **instance configurations**.
+        
+    - Wide range of **networking** and **security options** for secure connections to other resources.
+        
+
+### Conclusion
+- **Amazon EC2** is a **powerful and flexible** service ideal for many applications and workloads.    
+- Its instance variety, storage solutions, scalability, and security features make it a popular choice for businesses and developers.
+
+# UNIT 3
+
+## Features of Public Cloud Computing
+
+- **Third-party Managed Infrastructure**:  
+    Computing services like storage, processing power, and applications are provided by third-party vendors.
+    
+- **Internet-Based Access**:  
+    Services are available online to anyone with an internet connection and payment method.
+    
+- **Shared Resource Pool**:  
+    Multiple customers share the same pool of computing resources maintained by the provider.
+    
+- **Large Provider Networks**:  
+    Offered by major technology firms like Amazon, Microsoft, and Google with global server and storage networks.
+    
+- **High Scalability and Flexibility**:  
+    Resources can be easily provisioned and scaled up or down without major upfront investments.
+    
+- **High Availability and Reliability**:  
+    Providers offer Service Level Agreements (SLAs) ensuring uptime and performance.
+    
+- **Pay-Per-Use Pricing Model**:  
+    Users only pay for the resources they consume, reducing total cost of ownership
+## Why Public Cloud 
+
+- **Cost Effectiveness**:  
+    Pay only for the resources used, avoiding the need for large upfront investments in infrastructure.
+    
+- **Scalability**:  
+    Easily scale resources up or down based on demand, ensuring efficient resource management.
+    
+- **Flexibility**:  
+    Wide range of resources and services available — from storage and processing to advanced services like data analytics and machine learning.
+    
+- **Accessibility**:  
+    Services can be accessed from anywhere with an internet connection.
+    
+- **Security**:  
+    Advanced, cutting-edge security measures are provided by public cloud vendors to protect data and applications.
+    
+- **Collaboration**:  
+    Teams can easily collaborate and share information across different locations, boosting productivity and efficiency.
+    
+- **Innovation**:  
+    Continuous introduction of new services and technologies, giving businesses access to the latest tools without needing heavy investment.
+
+## Public Cloud Service Model
+- IaaS
+	- Uses
+		- Test and Development Environment
+		- Web Hosting
+		- Big Data Processing
+		- Disaster Recovery:- aaS can also be used for disaster recovery, as it provides a cost-effective way to replicate data and applications to an off-site location.
+- PaaS
+- SaaS
+- Disaster Recovery as a Service (DRaaS), 
+- Database as a Service (DBaaS)
+- Security as a Service
+
+## Offerings and Vendor
+| Category | Offering                         | Vendor                      | Description                                                    |
+| -------- | -------------------------------- | --------------------------- | -------------------------------------------------------------- |
+| **IaaS** | Amazon EC2                       | Amazon Web Services (AWS)   | Virtual servers to run applications.                           |
+|          | Amazon S3                        | Amazon Web Services (AWS)   | Scalable object storage service.                               |
+|          | Amazon EBS                       | Amazon Web Services (AWS)   | Persistent block storage for EC2.                              |
+|          | Microsoft Azure Virtual Machines | Microsoft Azure             | Virtual machines for deploying apps.                           |
+|          | Google Compute Engine            | Google Cloud Platform (GCP) | Scalable virtual machine instances.                            |
+|          | IBM Cloud Infrastructure         | IBM Cloud                   | Virtual servers, storage, and networking.                      |
+|          | Oracle Cloud Infrastructure      | Oracle Cloud                | High-performance compute and storage.                          |
+| **PaaS** | AWS Elastic Beanstalk            | Amazon Web Services (AWS)   | Platform to deploy and manage applications automatically.      |
+|          | Google App Engine                | Google Cloud Platform (GCP) | Fully managed platform for app development.                    |
+|          | Microsoft Azure App Service      | Microsoft Azure             | Hosting service for web apps and APIs.                         |
+|          | Heroku                           | Salesforce                  | Cloud platform for easy app deployment and scaling.            |
+|          | Red Hat OpenShift                | Red Hat (IBM)               | PaaS for containerized application development.                |
+|          | Oracle Cloud Platform            | Oracle Cloud                | Platform services for application development and integration. |
+
+## AWS Storage and Database Services
+
+### Storage Services:
+
+1. **Amazon S3 (Simple Storage Service)**:
+    
+    - Object-based storage service.
+        
+    - Highly scalable, durable, and available.
+        
+    - Replicates data across multiple sites.
+        
+    - Used for storing images, videos, logs, and backups.
+        
+2. **Amazon EBS (Elastic Block Store)**:
+    
+    - Block-based storage service for EC2 instances.
+    - Offers various volume types (SSD, HDD) for different use cases.
+    - Provides encryption for data both in transit and at rest.
+        
+3. **Amazon EFS (Elastic File System)**:
+    - File-based storage for Linux workloads.
+    - Scalable, highly available, and durable.
+    - Can be mounted on multiple EC2 instances simultaneously.
+
+### Database Services:
+1. **Amazon RDS (Relational Database Service)**:
+    - Managed relational database service (supports MySQL, PostgreSQL, Oracle, SQL Server).
+    - Provides high availability, durability, and automated backups.
+2. **Amazon DynamoDB**:
+    - NoSQL database service.
+    - Offers fast and reliable performance with automatic scaling.
+    - Provides encryption in transit and replication across multiple availability zones.
+3. **Amazon Aurora**:
+    - Cloud-native relational database engine.
+    - Compatible with MySQL and PostgreSQL.        
+    - High performance, scalability, and availability with automatic multi-AZ replication.
+
+## Private vs Public Cloud 
+| Feature           | Public Cloud                                                           | Private Cloud                                                                          |
+| ----------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Cost**          | More cost-effective (pay-as-you-go, no infrastructure investment).     | High upfront investment and ongoing maintenance costs.                                 |
+| **Security**      | Shared infrastructure; relatively more vulnerable to security threats. | Higher security with full control over infrastructure and data.                        |
+| **Compliance**    | May face challenges meeting strict compliance requirements.            | Better suited for industries with strict compliance needs (e.g., healthcare, finance). |
+| **Scalability**   | Unlimited scalability; easy to add or remove resources.                | Limited scalability; resource expansion can be difficult.                              |
+| **Customization** | Less customization; managed by cloud service provider.                 | High customization; tailor infrastructure and applications to specific needs.          |
