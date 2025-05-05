@@ -2163,3 +2163,364 @@ A View is a straightforward component of a user interface. Advance viewing compo
 - **Use Case:** Categorized menus, FAQs with questions and answers.
     
 - **Data Structure:** Uses two-level hierarchy – Group (parent) and Children.
+
+
+## **SQLite in Android – Notes**
+
+### ✅ **Introduction**
+
+- **SQLite** is a **lightweight**, **standalone**, and **open-source** database engine.
+    
+- Stores data **locally on the device** in the form of a **text file**.
+    
+- Included **by default** in the Android Studio SDK.
+
+### 📦 **Key Features**
+
+|Feature|Description|
+|---|---|
+|Local storage|No external server needed; data saved in local disk as `.db` file.|
+|Lightweight|Entire database is just a few hundred KB in size.|
+|No separate server required|Works without a separate database server; embedded in the app.|
+|Relational database support|Supports tables, indexes, triggers, views, and SQL queries.|
+|C-based implementation|Fast execution as it's written in C.|
+|Import/export support|`.db` files can be opened in **SQLite Browser** or exported/imported.|
+|Zero-configuration|No setup needed, unlike MySQL/SQL Server etc.|
+
+---
+
+### 🔄 **Comparison with Traditional Databases**
+
+|Traditional DBMS (MySQL, Oracle)|SQLite|
+|---|---|
+|Requires server & setup|Embedded into the app, no setup required|
+|JDBC/ODBC/Drivers needed|No external driver or connector needed|
+|Suitable for client-server apps|Suitable for **mobile** or embedded applications|
+
+---
+
+### 📁 **Where SQLite is Located in Android**
+
+- SQLite library is available under:
+    
+    ```java
+    android.database.sqlite
+    ```
+    
+
+### 📚 **Key Classes in SQLite (Android)**
+
+|Class|Purpose|
+|---|---|
+|`SQLiteOpenHelper`|Helps in creating, updating, and managing databases.|
+|`SQLiteDatabase`|Represents the database and provides methods to execute SQL.|
+|`Cursor`|Holds result set returned from a query.|
+|`ContentValues`|Used to insert data into database.|
+
+---
+
+### 🔨 **Steps to Use SQLite in Android**
+
+1. **Create a subclass of `SQLiteOpenHelper`**
+    
+2. **Override `onCreate()` and `onUpgrade()` methods**
+    
+3. **Use `SQLiteDatabase` to perform CRUD operations**
+    
+4. **Use `Cursor` to retrieve query results**
+Here are the structured and simplified notes on **Creating and Using SQLite Database in Android**, based on your provided content:
+
+---
+
+### ✅ **Creating a Database**
+
+- Use the method:
+    
+    ```java
+    SQLiteDatabase mydb = openOrCreateDatabase("DatabaseName", MODE_PRIVATE, null);
+    ```
+    
+- **Parameters**:
+    
+    - `"DatabaseName"`: Name of the database file
+        
+    - `MODE_PRIVATE`: Only accessible by your app
+        
+    - `null`: For default cursor factory
+        
+
+---
+
+### 🏗️ **Opening Existing Database with Custom Options**
+
+```java
+openDatabase(String path, SQLiteDatabase.CursorFactory factory, int flags)
+```
+
+---
+
+### 📋 **Creating a Table**
+
+- Use `execSQL()` method to run SQL commands:
+    
+    ```java
+    mydb.execSQL("CREATE TABLE Exam(firstname VARCHAR, lastname VARCHAR);");
+    ```
+    
+
+---
+
+### ➕ **Inserting Data**
+
+- Insert a record into the table:
+    
+    ```java
+    mydb.execSQL("INSERT INTO Exam VALUES('sunil','verma');");
+    ```
+    
+- Insert/Update using bound arguments:
+    
+    ```java
+    execSQL(String sql, Object[] bindArgs)
+    ```
+    
+
+---
+
+### 🔍 **Fetching Data**
+
+- Use `rawQuery()` with a `Cursor`:
+    
+    ```java
+    Cursor rs = mydb.rawQuery("SELECT * FROM Exam", null);
+    rs.moveToFirst();
+    String firstname = rs.getString(0);
+    String lastname = rs.getString(1);
+    ```
+    
+
+---
+
+### 📑 **Important Cursor Functions**
+
+|Method|Description|
+|---|---|
+|`getColumnCount()`|Returns total number of columns|
+|`getColumnIndex(String colName)`|Returns index of column by name|
+|`getColumnName(int colIndex)`|Returns column name using index|
+|`getColumnNames()`|Returns array of all column names|
+|`getCount()`|Returns total number of rows in result set|
+|`getPosition()`|Returns current cursor position|
+|`isClosed()`|Returns `true` if cursor is closed|
+
+## 🌀 SQLite with Spinner – Notes
+
+### ✅ Purpose:
+
+To populate a `Spinner` widget (dropdown list) with data stored in an **SQLite database**.
+
+### 🔧 Key Steps:
+
+1. **Create/Open Database** using `SQLiteOpenHelper`.
+    
+2. **Create Table** and **Insert Data** if not already present.
+    
+3. **Query Data** using a `Cursor`.
+    
+4. **Convert Cursor data into a List or ArrayList**.
+    
+5. **Use ArrayAdapter** to bind data to Spinner.
+    
+
+### 📌 Example Flow:
+
+```java
+SQLiteDatabase db = myHelper.getReadableDatabase();
+Cursor cursor = db.rawQuery("SELECT city_name FROM Cities", null);
+
+ArrayList<String> cityList = new ArrayList<>();
+while (cursor.moveToNext()) {
+    cityList.add(cursor.getString(0)); // column index 0
+}
+
+ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cityList);
+spinner.setAdapter(adapter);
+```
+
+---
+
+## 📋 SQLite with ListView – Notes
+
+### ✅ Purpose:
+
+To display a list of data stored in SQLite in a `ListView`.
+
+### 🔧 Key Steps:
+
+1. **Create/Open Database** using `SQLiteOpenHelper`.
+    
+2. **Create Table** and **Insert Sample Data**.
+    
+3. **Use Cursor to Fetch Records**.
+    
+4. **Store Data in an ArrayList or directly use CursorAdapter**.
+    
+5. **Bind to ListView** using `ArrayAdapter` or `SimpleCursorAdapter`.
+    
+
+### 📌 Example Flow:
+
+```java
+SQLiteDatabase db = myHelper.getReadableDatabase();
+Cursor cursor = db.rawQuery("SELECT name FROM Students", null);
+
+ArrayList<String> studentList = new ArrayList<>();
+while (cursor.moveToNext()) {
+    studentList.add(cursor.getString(0));
+}
+
+ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, studentList);
+listView.setAdapter(adapter);
+```
+
+---
+
+### 📝 Notes:
+
+- Use **SimpleCursorAdapter** if you want to directly use the Cursor with ListView.
+    
+- Always **close the cursor** and **database** when done to avoid memory leaks.
+
+## 📁 XML & JSON Parsing – Notes
+
+### 📌 **1. XML Parsing Methods in Android**
+
+#### ✅ a. **SAX (Simple API for XML) Parser**
+
+- **Event-driven** parser – processes XML as it reads it.
+    
+- Efficient in **memory usage**, good for large files.
+    
+- Uses **callbacks**: `startElement()`, `characters()`, `endElement()`.
+    
+
+**Pros:** Fast and low memory.  
+**Cons:** Complex for nested structures.
+
+**Example Usage:**
+
+```java
+SAXParserFactory factory = SAXParserFactory.newInstance();
+SAXParser parser = factory.newSAXParser();
+XMLReader reader = parser.getXMLReader();
+reader.setContentHandler(new CustomHandler());
+reader.parse(new InputSource(inputStream));
+```
+
+---
+
+#### ✅ b. **DOM (Document Object Model) Parser**
+
+- Loads entire XML document into memory as a **tree structure**.
+    
+- Easy to navigate and manipulate.
+    
+
+**Pros:** Easy to use and modify.  
+**Cons:** Not memory-efficient for large files.
+
+**Example Usage:**
+
+```java
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+DocumentBuilder builder = factory.newDocumentBuilder();
+Document doc = builder.parse(inputStream);
+NodeList nodeList = doc.getElementsByTagName("tagName");
+```
+
+---
+
+#### ✅ c. **XML Pull Parser**
+
+- **Recommended** for Android.
+    
+- Provides **control** over parsing by pulling events (`START_TAG`, `TEXT`, `END_TAG`).
+    
+- Works similarly to SAX but more flexible and easy in Android.
+    
+
+**Example Usage:**
+
+```java
+XmlPullParser parser = Xml.newPullParser();
+parser.setInput(inputStream, null);
+
+while (parser.next() != XmlPullParser.END_DOCUMENT) {
+    if (parser.getEventType() == XmlPullParser.START_TAG) {
+        if (parser.getName().equals("tagName")) {
+            // Do something
+        }
+    }
+}
+```
+
+---
+
+### 📌 **2. JSON (JavaScript Object Notation)**
+
+#### ✅ a. **JSON Basics**
+
+- **Lightweight** data-interchange format.
+    
+- Easy to read and write.
+    
+- Uses **key-value pairs**.
+    
+
+**Example:**
+
+```json
+{
+  "name": "John",
+  "age": 25,
+  "isStudent": false
+}
+```
+
+---
+
+#### ✅ b. **JSON Parsing in Android**
+
+Use `org.json` package for parsing.
+
+##### → **Parsing a JSON Object:**
+
+```java
+String json = "{\"name\":\"John\", \"age\":25}";
+JSONObject jsonObject = new JSONObject(json);
+String name = jsonObject.getString("name");
+int age = jsonObject.getInt("age");
+```
+
+##### → **Parsing a JSON Array:**
+
+```java
+String json = "[{\"name\":\"John\"}, {\"name\":\"Jane\"}]";
+JSONArray jsonArray = new JSONArray(json);
+
+for (int i = 0; i < jsonArray.length(); i++) {
+    JSONObject obj = jsonArray.getJSONObject(i);
+    String name = obj.getString("name");
+}
+```
+
+---
+
+### 📝 Summary Table:
+
+|Parser|Memory Usage|Speed|Use Case|Complexity|
+|---|---|---|---|---|
+|SAX|Low|Fast|Large XML files|Medium|
+|DOM|High|Slow|Small XML, easy nav|Easy|
+|XML Pull|Low|Fast|Android-friendly XML|Medium|
+|JSON (org.json)|Low|Fast|Most Android apps today|Easy|
