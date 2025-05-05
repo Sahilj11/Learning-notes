@@ -611,7 +611,46 @@ new AlertDialog.Builder(this)
 ```
 
 ```java
-spinner.setAdapter(new ArrayAdapter<>(...));
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    
+    // List of countries to show in the dropdown
+    String[] countries = { "India", "USA", "China", "Japan", "Other" };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Link Spinner from layout
+        Spinner spinner = findViewById(R.id.spinner);
+
+        // Set listener to handle selection
+        spinner.setOnItemSelectedListener(this);
+
+        // Create adapter with list of countries
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+            android.R.layout.simple_spinner_item, countries);
+        
+        // Set dropdown style
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Set adapter to spinner
+        spinner.setAdapter(adapter);
+    }
+
+    // Required methods for OnItemSelectedListener
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // You can show a Toast or perform action when item selected
+        Toast.makeText(getApplicationContext(), "Selected: " + countries[position], Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Optional
+    }
+}
+
 ```
 
 ---
@@ -648,8 +687,55 @@ ratingBar.setOnRatingBarChangeListener(...);
 
 **Description:** Dialog for selecting a date.
 
+```xml
+-   <DatePicker  
+-         android:id="@+id/datePicker"  
+-         android:layout_width="wrap_content"  
+-         android:layout_height="wrap_content"  
+-         android:layout_above="@+id/textView1"  
+-         android:layout_centerHorizontal="true"  
+-         android:layout_marginBottom="36dp" />
+```
+
 ```java
-new DatePickerDialog(this, (view, y, m, d) -> {...}, 2024, 0, 1).show();
+public class MainActivity extends AppCompatActivity {
+
+    DatePicker datePicker;
+    Button button;
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Link views from layout
+        datePicker = findViewById(R.id.datePicker);
+        button = findViewById(R.id.button1);
+        textView = findViewById(R.id.textView1);
+
+        // Show current date on screen
+        textView.setText("Current Date: " + getSelectedDate());
+
+        // When button is clicked, update date
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setText("Selected Date: " + getSelectedDate());
+            }
+        });
+    }
+
+    // Get date from DatePicker as a string
+    public String getSelectedDate() {
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth() + 1; // Month is 0-based
+        int year = datePicker.getYear();
+
+        return day + "/" + month + "/" + year;
+    }
+}
+
 ```
 
 ---
@@ -732,30 +818,17 @@ dm.enqueue(req);
 ## Activity
 
 ### 📱 **Activity in Android**
-
 - **Activity** is one of the most important components of any Android application.
-    
 - **Activities** represent the **User Interface (UI) screens** that the user interacts with.
-    
 - It is similar to the `main()` function in other programming languages — it acts as the **main entry point** for user interaction.
-    
 - An app can have **multiple activities**, such as a login screen, home screen, settings screen, etc.
-    
 - All activities must be **declared in the `AndroidManifest.xml`** file, with appropriate attributes (like intent filters, launch mode, etc.).
-    
-
----
 
 ### 🔁 **Activity Lifecycle Methods**
-
 Each Activity goes through a set of lifecycle stages. These are:
-
 1. **`onCreate()`** – Called when the activity is first created.
-    
 2. **`onStart()`** – Called when the activity becomes visible to the user.
-    
 3. **`onResume()`** – Called when the activity starts interacting with the user.
-    
 4. **`onPause()`** – Called when another activity is taking focus (but this activity is still partially visible).
     
 5. **`onStop()`** – Called when the activity is no longer visible to the user.
@@ -770,53 +843,28 @@ Each Activity goes through a set of lifecycle stages. These are:
 ## 🧩 **Fragments in Android**
 
 ### 📌 **Definition**
-
 - A **Fragment** is a reusable portion of the user interface in an Android activity.
-    
 - Fragments **represent a behavior or a part of the user interface** in an activity.
-    
 - A fragment **must always be embedded in an activity**, and it cannot live on its own.
-    
 - Even though it’s hosted inside an activity, it has its **own lifecycle**, closely related to the activity’s lifecycle.
-    
-
----
 
 ### 🧠 **Why Use Fragments?**
-
-- Due to various **screen sizes** (phones, tablets, TVs), it’s difficult to manage UIs for each device.
-    
+- Due to various **screen sizes** (phones, tablets, TVs), it’s difficult to manage UIs for each device.    
 - Fragments help build **responsive UIs** by letting you **combine, reuse, and adjust UI components dynamically**.
-    
-
----
 
 ### 🔄 **Fragment Lifecycle (Key Methods)**
 Sure! Here's an explanation of each **Fragment Lifecycle method** without the code:
 
----
-
 ### 1️⃣ **`onAttach()`**
-
 - **Description**: This method is called when the fragment is **first associated** with its host activity. It's the first lifecycle method in the fragment's lifecycle.
-    
-- **When it happens**: This happens only once, right after the fragment is added to the activity.
-    
+- **When it happens**: This happens only once, right after the fragment is added to the activity.    
 - **Usage**: You can use this method to initialize or set up data or objects that need access to the host activity (e.g., communication between the fragment and the activity).
-    
-
----
 
 ### 2️⃣ **`onCreate()`**
 
 - **Description**: This method is called when the fragment is **created**.
-    
 - **When it happens**: It's called after `onAttach()` and before `onCreateView()`.
-    
 - **Usage**: You can perform initializations, like retrieving arguments, setting up resources, or initializing variables that should only be set once.
-    
-
----
 
 ### 3️⃣ **`onCreateView()`**
 
@@ -830,26 +878,14 @@ Sure! Here's an explanation of each **Fragment Lifecycle method** without the co
 ---
 
 ### 4️⃣ **`onActivityCreated()`**
-
 - **Description**: Called when the **host activity’s `onCreate()` method** has finished, and the activity’s view is ready.
-    
-- **When it happens**: This is called after the fragment's view has been created and the activity's view hierarchy is set up.
-    
+- **When it happens**: This is called after the fragment's view has been created and the activity's view hierarchy is set up.    
 - **Usage**: This is used to perform any additional setup that requires both the activity and fragment's views to be available.
-    
-
----
 
 ### 5️⃣ **`onStart()`**
-
 - **Description**: This method is called when the fragment becomes **visible** to the user but isn’t yet interactive.
-    
 - **When it happens**: It’s called after `onCreateView()` and before `onResume()`.
-    
 - **Usage**: You can use this method to start animations, register listeners, or initialize any resources that should be active when the fragment is visible.
-    
-
----
 
 ### 6️⃣ **`onResume()`**
 
@@ -1076,10 +1112,6 @@ protected void onCreate(Bundle savedInstanceState) {
 </LinearLayout>
 ```
 
----
-
-Would you like an example with `startActivityForResult()` and result passing as well?
-Intent is one of the most important and most used app components of an android application. 
 
 Using Intents, you can call to other app components or to other activity or also call other applications on your mobile phone. 
 
@@ -1108,12 +1140,9 @@ It is used to passing information from one activity to another activity that mea
 ### 1. 📘 **Explicit Intent**
 
 - Used when **calling a specific component**, such as starting a known Activity or Service in your own app.
-    
 - You **explicitly specify** the target component’s class name.
-    
 
 **Syntax:**
-
 ```java
 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
 startActivity(intent);
@@ -1144,35 +1173,20 @@ intent.setData(Uri.parse("https://www.google.com"));
 startActivity(intent);
 ```
 
----
-
 ## 🔀 **Intent Use Case Example**
 
 ### 💡 Scenario:
-
 - You have an app with **two activities**:
-    
     - **FirstActivity** has a button.
-        
     - On button click, it uses:
-        
         - **Explicit Intent** to move to **SecondActivity**.
-            
         - **SecondActivity** uses **two fragments**.
-            
         - A **button in SecondActivity** opens a web page via an **Implicit Intent**.
-            
 
 ### ✅ Steps Covered:
-
 1. Start **SecondActivity** from **FirstActivity** using **Explicit Intent**.
-    
-2. Open a **web page** from **SecondActivity** using **Implicit Intent**.
-    
+2. Open a **web page** from **SecondActivity** using **Implicit Intent**.    
 3. Show **two fragments** in SecondActivity.
-    
-
----
 
 ## 🎯 **Summary Points for Exam**
 
@@ -1186,25 +1200,14 @@ startActivity(intent);
 | Intent Filters  | Used to declare what actions your app can respond to (in `AndroidManifest.xml`). |
 
 ## Android Menu
-
 Menus in Android are an essential component of the **user interface**. They allow users to interact with the application and perform **actions directly** from a centralized location without navigating deeply into the app.
-
 Menus are commonly used in apps to provide access to **commands**, **settings**, **actions**, or **features** in a structured and user-friendly way.
 
----
-
 ### 🧾 **Why Menus Are Important**
-
 - Provide a **familiar UI experience** for users.
-    
 - Allow quick access to key features.
-    
-- Help maintain **clean layouts** by placing secondary actions outside of the main UI.
-    
+- Help maintain **clean layouts** by placing secondary actions outside of the main UI.    
 - Enhance user productivity and application navigation.
-    
-
----
 
 ## 📑 **Types of Menus in Android**
 
@@ -1221,14 +1224,10 @@ The **Options Menu** is the primary collection of menu items for an activity. It
 Used for **global actions** like Settings, Search, About, Logout, etc., which are relevant across the whole activity or app.
 
 **Key Method**:
-
 - `onCreateOptionsMenu(Menu menu)` – to inflate the menu layout from XML.
-    
 - `onOptionsItemSelected(MenuItem item)` – to handle clicks on menu items.
-    
 
 **Menu XML Example**:
-
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_settings"
@@ -1237,8 +1236,6 @@ Used for **global actions** like Settings, Search, About, Logout, etc., which ar
           android:showAsAction="ifRoom" />
 </menu>
 ```
-
----
 
 ### 2️⃣ **Context Menu**
 
@@ -1485,17 +1482,10 @@ When designing a screen that requires dynamic positioning of elements such as pl
 - Arranges children **horizontally** in a row and **vertically** in multiple rows.
     
 - Number of columns = maximum number of child views in any `TableRow`.
-    
 - Columns are **not explicitly declared**.
-    
 - Each **`<TableRow>`** represents one **row** in the table.
-    
 - Each **cell** can hold **only one view** (e.g., `TextView`, `EditText`, `ImageView`, etc.).
-    
 - **Borders** are not shown by default.
-    
-
----
 
 ### 🔹 **Important Points:**
 
@@ -1738,13 +1728,13 @@ Here are clean and detailed notes on **GridLayout in Android**:
 
 ### 🔹 **Important XML Attributes for LinearLayout:**
 
-|Attribute|Description|
-|---|---|
-|`android:orientation`|Direction of layout: `"horizontal"` or `"vertical"`.|
-|`android:gravity`|Aligns all children inside LinearLayout (e.g., `center`, `top`, `bottom`).|
-|`android:layout_gravity`|Aligns an individual child view inside the parent layout.|
-|`android:layout_weight`|Distributes remaining space proportionally among children.|
-|`android:baselineAligned`|If `false`, disables baseline alignment (used in vertical layouts).|
+| Attribute                 | Description                                                                |
+| ------------------------- | -------------------------------------------------------------------------- |
+| `android:orientation`     | Direction of layout: `"horizontal"` or `"vertical"`.                       |
+| `android:gravity`         | Aligns all children inside LinearLayout (e.g., `center`, `top`, `bottom`). |
+| `android:layout_gravity`  | Aligns an individual child view inside the parent layout.                  |
+| `android:layout_weight`   | Distributes remaining space proportionally among children.                 |
+| `android:baselineAligned` | If `false`, disables baseline alignment (used in vertical layouts).        |
 
 ---
 
@@ -1988,23 +1978,17 @@ adapter.notifyDataSetChanged(); // Refresh the ListView
     - You need **custom layouts** (e.g., multiple views in one item: image + text).
     - You want more flexibility than `ArrayAdapter`.
 
----
-
 ### 🧱 **Methods to Implement in a Custom Adapter:**
 
-|Method|Purpose|
-|---|---|
-|`getCount()`|Returns total number of items|
-|`getItem(int position)`|Returns the item at the specified position|
-|`getItemId(int position)`|Returns item ID for the specified position|
-|`getView(int position, View convertView, ViewGroup parent)`|Returns the view for each item|
-
----
+| Method                                                      | Purpose                                    |
+| ----------------------------------------------------------- | ------------------------------------------ |
+| `getCount()`                                                | Returns total number of items              |
+| `getItem(int position)`                                     | Returns the item at the specified position |
+| `getItemId(int position)`                                   | Returns item ID for the specified position |
+| `getView(int position, View convertView, ViewGroup parent)` | Returns the view for each item             |
 
 ### ✅ **Example: CustomAdapter using BaseAdapter**
-
 #### 📌 Java Code
-
 ```java
 public class CustomAdapter extends BaseAdapter {
 
@@ -2036,16 +2020,12 @@ public class CustomAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.list_item, null);
-
         TextView textView = convertView.findViewById(R.id.textView);
         textView.setText(languages.get(position));
-
         return convertView;
     }
 }
 ```
-
----
 
 ### 📄 `list_item.xml`
 
@@ -2058,8 +2038,6 @@ public class CustomAdapter extends BaseAdapter {
     android:padding="10dp"
     android:textSize="18sp" />
 ```
-
----
 
 ### 🧠 **How to use in MainActivity:**
 
@@ -2074,8 +2052,6 @@ CustomAdapter adapter = new CustomAdapter(this, languages);
 ListView listView = findViewById(R.id.listView);
 listView.setAdapter(adapter);
 ```
-
----
 
 ### 📌 **Key Points:**
 
@@ -2101,20 +2077,11 @@ listView.setAdapter(adapter);
 
 ## View
 A View is a straightforward component of a user interface. Advance viewing components help to display a long list of items in android main activity. The data can be in any form to display. Each viewing components classes having a number function to interact with users. It is in charge of drawing and event handling
-
-
 ### 1. **GridView**
-
 - **Purpose:** Displays items in a two-dimensional, scrollable grid.
-    
 - **Use Case:** Ideal for image galleries or product thumbnails.
-    
 - **Behavior:** Scrolls vertically and arranges elements in rows and columns.
-    
 - **Needs an Adapter:** Typically used with `ArrayAdapter` or `BaseAdapter`.
-    
-
----
 
 ### 2. **WebView**
 
@@ -2216,9 +2183,6 @@ A View is a straightforward component of a user interface. Advance viewing compo
 |`SQLiteDatabase`|Represents the database and provides methods to execute SQL.|
 |`Cursor`|Holds result set returned from a query.|
 |`ContentValues`|Used to insert data into database.|
-
----
-
 ### 🔨 **Steps to Use SQLite in Android**
 
 1. **Create a subclass of `SQLiteOpenHelper`**
@@ -2228,9 +2192,6 @@ A View is a straightforward component of a user interface. Advance viewing compo
 3. **Use `SQLiteDatabase` to perform CRUD operations**
     
 4. **Use `Cursor` to retrieve query results**
-Here are the structured and simplified notes on **Creating and Using SQLite Database in Android**, based on your provided content:
-
----
 
 ### ✅ **Creating a Database**
 
@@ -2383,12 +2344,8 @@ ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_
 listView.setAdapter(adapter);
 ```
 
----
-
 ### 📝 Notes:
-
 - Use **SimpleCursorAdapter** if you want to directly use the Cursor with ListView.
-    
 - Always **close the cursor** and **database** when done to avoid memory leaks.
 
 ## 📁 XML & JSON Parsing – Notes
@@ -2396,19 +2353,14 @@ listView.setAdapter(adapter);
 ### 📌 **1. XML Parsing Methods in Android**
 
 #### ✅ a. **SAX (Simple API for XML) Parser**
-
 - **Event-driven** parser – processes XML as it reads it.
-    
 - Efficient in **memory usage**, good for large files.
-    
 - Uses **callbacks**: `startElement()`, `characters()`, `endElement()`.
-    
 
 **Pros:** Fast and low memory.  
 **Cons:** Complex for nested structures.
 
 **Example Usage:**
-
 ```java
 SAXParserFactory factory = SAXParserFactory.newInstance();
 SAXParser parser = factory.newSAXParser();
@@ -2417,20 +2369,13 @@ reader.setContentHandler(new CustomHandler());
 reader.parse(new InputSource(inputStream));
 ```
 
----
-
 #### ✅ b. **DOM (Document Object Model) Parser**
-
 - Loads entire XML document into memory as a **tree structure**.
-    
 - Easy to navigate and manipulate.
-    
 
 **Pros:** Easy to use and modify.  
 **Cons:** Not memory-efficient for large files.
-
 **Example Usage:**
-
 ```java
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 DocumentBuilder builder = factory.newDocumentBuilder();
@@ -2441,13 +2386,9 @@ NodeList nodeList = doc.getElementsByTagName("tagName");
 ---
 
 #### ✅ c. **XML Pull Parser**
-
 - **Recommended** for Android.
-    
 - Provides **control** over parsing by pulling events (`START_TAG`, `TEXT`, `END_TAG`).
-    
 - Works similarly to SAX but more flexible and easy in Android.
-    
 
 **Example Usage:**
 
@@ -2486,8 +2427,6 @@ while (parser.next() != XmlPullParser.END_DOCUMENT) {
   "isStudent": false
 }
 ```
-
----
 
 #### ✅ b. **JSON Parsing in Android**
 
