@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/4th Sem/IOT.md",
+                "file": "Notes/MCA/4th Sem/MAD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IOT"
+              "title": "MAD"
             }
           }
         ],
@@ -194,9 +194,14 @@
   },
   "active": "c44c17cc6923109a",
   "lastOpenFiles": [
+    "Notes/MCA/4th Sem/MAD Unit-1-4 (MCA & IT).pdf",
+    "Notes/statics/Pasted image 20250505065438.png",
+    "Notes/Javascript Deep/Deep JS Foundation.md",
+    "Notes/MCA/4th Sem/MAD.md",
+    "Notes/Javascript Deep/Async JS.md",
+    "Notes/MCA/4th Sem/IOT.md",
     "Notes/statics/Pasted image 20250428105123.png",
     "Notes/MCA/2nd sem/DSA.md",
-    "Notes/MCA/4th Sem/IOT.md",
     "Notes/statics/Pasted image 20250427121332.png",
     "Notes/statics/Pasted image 20250427121036.png",
     "Notes/statics/Pasted image 20250427120837.png",
@@ -225,11 +230,7 @@
     "Notes/Backend notes/Hibernate/Primary key.md",
     "Notes/java/Java For Interview.md",
     "Notes/statics/Pasted image 20250417132219.png",
-    "Notes/statics/Pasted image 20250417131905.png",
-    "Notes/statics/Pasted image 20250417130541.png",
     "Notes/java/Java Interview Ques.md",
-    "Notes/Javascript Deep/Deep JS Foundation.md",
-    "Notes/Javascript Deep/Async JS.md",
     "Notes/Backend notes/Hibernate/Spring data jpa queries.md",
     "Notes/Backend notes/Hibernate/Mappings.md",
     "Notes/Backend notes/Hibernate/Entities.md",
@@ -238,7 +239,6 @@
     "Notes/MCA/3rd Sem/Cyber security.md",
     "Notes/javaCollection/2. Preliminaries.md",
     "Notes/MCA/3rd Sem/Data Analytics.md",
-    "Notes/Backend notes/docker/Docker.md",
-    "Notes/MCA/3rd Sem/Machine learning.md"
+    "Notes/Backend notes/docker/Docker.md"
   ]
 }
