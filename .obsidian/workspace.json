@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "18757d7566ffc7cf",
@@ -194,6 +195,7 @@
   },
   "active": "09fac71d98e06436",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20250511135301.png",
     "Notes/statics/Pasted image 20250511071519.png",
     "Notes/statics/Pasted image 20250511064124.png",
     "Notes/statics/Pasted image 20250511062554.png",
@@ -204,7 +206,6 @@
     "Notes/statics/Pasted image 20250510222116.png",
     "Notes/statics/Pasted image 20250510222045.png",
     "Notes/statics/Pasted image 20250510222026.png",
-    "Notes/statics/Pasted image 20250510222004.png",
     "Notes/MCA/4th Sem/SPM.md",
     "Notes/MCA/4th Sem/Data Mining.md",
     "Notes/MCA/4th Sem/MAD.md",
