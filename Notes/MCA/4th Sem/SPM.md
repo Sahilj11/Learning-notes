@@ -1,3 +1,342 @@
+# UNIT 1
+## Project as System
+
+### ✅ **Project as a System (Expanded Notes)**
+
+A **software project** can be viewed as a **system** because it comprises a structured set of **interrelated and interdependent components** working together to achieve a defined goal — the successful delivery of a software product.
+
+---
+
+### 📌 **System Components in a Software Project**
+
+#### 1. **Inputs**
+
+These are the raw materials required to initiate and execute the project:
+
+- **Requirements**: Functional and non-functional needs of the client.
+    
+- **Resources**:
+    
+    - **Human resources** (developers, testers, PMs)
+        
+    - **Time** (schedule, deadlines)
+        
+    - **Budget** (financial support, cost estimates)
+        
+    - **Tools** (IDEs, project management software)
+        
+
+---
+
+#### 2. **Process**
+The set of activities and operations that transform inputs into outputs:
+- **Project Planning**: Creating work breakdown structure (WBS), timeline, and resource plan.
+- **Design & Development**: Architecture, coding, module development.
+- **Testing**: Unit testing, integration testing, system testing.
+- **Implementation**: Deployment and delivery.
+
+#### 3. **Outputs**
+
+The end products delivered at the end of the project lifecycle:
+- **Working Software Application**
+- **User Manuals & Documentation**
+- **Training Materials**
+- **Project Reports**
+
+#### 4. **Feedback Mechanism**
+
+Feedback is critical for process improvement and control:
+
+- **Client Feedback**: Demos, UAT (User Acceptance Testing)
+- **Internal Reviews**: Code reviews, sprint retrospectives
+- **Test Results**: Bug reports, QA insights
+- **Progress Tracking**: Milestone reviews, burn-down charts
+
+Feedback helps:
+- Identify deviations
+- Apply corrective actions
+- Improve future processes
+
+#### 5. **Environment**
+
+The external and internal factors influencing the system:
+
+- **Internal Environment**: Organizational culture, team structure, communication style
+    
+- **External Environment**:
+    
+    - Client expectations
+        
+    - Legal and regulatory requirements
+        
+    - Market trends and technology evolution
+        
+    - Competition
+        
+
+---
+
+### 🔄 **Why View a Project as a System?**
+
+- Helps understand **dependencies** and **interactions**
+    
+- Facilitates **better control and planning**
+    
+- Encourages **systematic thinking**
+    
+- Supports **feedback-driven improvements**
+    
+
+---
+
+### ✍️ Example:
+
+In a mobile app development project:
+
+- **Inputs**: Client needs, 6 developers, ₹10 lakh budget, 6 months
+    
+- **Process**: Agile sprints, design, coding, QA
+    
+- **Outputs**: Android & iOS apps with admin dashboard
+    
+- **Feedback**: Sprint demo reviews, app testing
+    
+- **Environment**: Client company, end-users, competition apps
+
+## Management Control
+
+### ✅ **Management Control – Definition**
+
+**Management Control** is the process by which project managers ensure that project activities are carried out as planned, deviations are identified, and corrective actions are taken to keep the project on track.
+
+It ensures the project meets:
+- **Time**    
+- **Cost**
+- **Quality**    
+- **Scope** objectives.
+
+### ✅ **Objectives of Management Control**
+- Monitor **progress** and performance
+- Detect **variances** from the plan
+- Take **corrective actions**
+- Optimize **resource utilization** 
+- Ensure **goal alignment** across the team
+
+### ✅ **Elements of Management Control System**
+
+1. **Planning**
+    - Define scope, schedule, cost, quality, and risk plans.
+2. **Measuring**
+    - Collect performance data: effort, schedule adherence, cost usage.
+3. **Comparing**
+    - Compare actual performance vs planned (baseline) using metrics.
+4. **Correcting**    
+    - Apply changes: reassign resources, modify timelines, or redefine scope.
+
+### ✅ **Types of Control Techniques**
+
+| Technique                 | Description                            |
+| ------------------------- | -------------------------------------- |
+| **Gantt Chart**           | Visual timeline of tasks               |
+| **PERT/CPM**              | Time estimation and critical path      |
+| **Earned Value Analysis** | Measures cost and schedule performance |
+| **Milestone Tracking**    | Reviews progress at key points         |
+| **Variance Analysis**     | Compares planned vs actual performance |
+
+---
+
+### ✅ **Control Metrics**
+
+- **Schedule Variance (SV)**  
+    `SV = EV - PV` (Earned Value - Planned Value)
+    
+- **Cost Variance (CV)**  
+    `CV = EV - AC` (Earned Value - Actual Cost)
+    
+- **Performance Indices**:
+    
+    - **CPI** = EV / AC
+        
+    - **SPI** = EV / PV
+        
+
+---
+
+### ✅ **Tools Used in Management Control**
+
+- **Project Management Software** (e.g., MS Project, Jira, Trello)
+    
+- **Dashboards and KPIs**
+    
+- **Timesheets and Reports**
+    
+- **Meetings** (Stand-ups, Reviews)
+    
+
+---
+
+### ✅ **Benefits of Effective Management Control**
+
+- Keeps the project **within budget and schedule**
+    
+- Improves **decision-making**
+    
+- Enhances **accountability**
+    
+- Reduces **risks**
+    
+- Increases **customer satisfaction**
+    
+
+---
+
+### ✍️ Example:
+
+In an Agile project:
+
+- Daily stand-ups and sprint reviews help **monitor progress**.
+    
+- Burndown charts **compare** planned vs actual story points.
+    
+- If delays are found, the manager **reallocates team resources** (correction).
+## 📘 Requirement Specification – SPM Notes
+
+### ✅ **Definition**
+
+**Requirement Specification** is a formal, detailed description of the system’s expected functionalities, constraints, and interfaces. It acts as a **blueprint** for software development and serves as a **contract** between the client and the developers.
+
+---
+
+### ✅ **Purpose**
+
+- Define **what** the system should do (not how)
+    
+- Guide **design, development, and testing**
+    
+- Ensure **clear communication** among stakeholders
+    
+- Allow **cost, time, and resource estimation**
+    
+
+---
+
+### ✅ **Types of Requirements**
+
+|Type|Description|Example|
+|---|---|---|
+|**Functional**|Actions the system must perform|"User can register and login"|
+|**Non-functional**|Quality attributes (performance, security, etc.)|"System must respond within 2 sec"|
+|**User Requirements**|User needs in natural language|"Customer should view order status"|
+|**System Requirements**|Detailed internal requirements and technical constraints|"App must use PostgreSQL DB"|
+
+---
+
+### ✅ **SRS – Software Requirement Specification Document**
+
+A well-structured document that includes all requirements. It provides a **complete description** of the system to be developed.
+
+---
+
+### 📄 **Standard SRS Template (IEEE Format)**
+
+1. **Introduction**
+    
+    - Purpose
+        
+    - Scope
+        
+    - Definitions, Acronyms
+        
+    - References
+        
+2. **Overall Description**
+    
+    - Product perspective
+        
+    - Product functions
+        
+    - User classes and characteristics
+        
+    - Assumptions and dependencies
+        
+3. **Specific Requirements**
+    
+    - Functional requirements
+        
+    - Non-functional requirements
+        
+    - Interface requirements
+        
+4. **Appendices**
+    
+    - Glossary
+        
+    - Supporting documents
+        
+
+---
+
+### ✅ **Characteristics of a Good SRS**
+
+|Quality|Description|
+|---|---|
+|**Correct**|All stated requirements are accurate|
+|**Complete**|Covers all necessary functionalities|
+|**Unambiguous**|Clearly understandable with one interpretation|
+|**Verifiable**|Can be tested or verified|
+|**Consistent**|No contradictions or logical conflicts|
+|**Modifiable**|Can be changed easily|
+|**Traceable**|Each requirement linked to its origin|
+
+---
+
+### ✅ **Sample Functional Requirement**
+
+> **FR-01:** The system shall allow a user to sign in using email and password.
+
+### ✅ **Sample Non-functional Requirement**
+
+> **NFR-01:** The system shall support up to 1000 concurrent users with a 99.9% uptime.
+
+---
+
+### ✅ **Benefits of SRS**
+
+- Acts as a **reference** throughout the project
+    
+- Minimizes **ambiguity and rework**
+    
+- Improves **communication**
+    
+- Essential for **testing and validation**
+    
+- Basis for **project estimation and control**
+    
+
+---
+
+### ✅ **Simple Example (SRS Snippet)**
+
+```text
+1. Introduction
+   1.1 Purpose: Define the requirements for an online library system.
+
+2. Overall Description
+   2.1 Product Functions:
+       - Search for books
+       - Borrow/return books
+       - Admin can add/remove books
+
+3. Specific Requirements
+   3.1 Functional:
+       FR-01: Users can register with email and password.
+       FR-02: Users can search for books by title or author.
+
+   3.2 Non-functional:
+       NFR-01: System should respond within 1 second for 95% of queries.
+```
+
+
 # Unit 3
 ## Risk Management 
 ### Intro

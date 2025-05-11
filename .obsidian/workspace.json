@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/4th Sem/MAD.md",
+                "file": "Notes/MCA/4th Sem/Data Mining.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MAD"
+              "title": "Data Mining"
             }
           },
           {
@@ -194,8 +194,21 @@
   },
   "active": "09fac71d98e06436",
   "lastOpenFiles": [
-    "Notes/MCA/4th Sem/MAD Codes.md",
+    "Notes/statics/Pasted image 20250511071519.png",
+    "Notes/statics/Pasted image 20250511064124.png",
+    "Notes/statics/Pasted image 20250511062554.png",
+    "Notes/statics/Pasted image 20250510223046.png",
+    "Notes/statics/Pasted image 20250510222447.png",
+    "Notes/statics/Pasted image 20250510222156.png",
+    "Notes/statics/Pasted image 20250510222128.png",
+    "Notes/statics/Pasted image 20250510222116.png",
+    "Notes/statics/Pasted image 20250510222045.png",
+    "Notes/statics/Pasted image 20250510222026.png",
+    "Notes/statics/Pasted image 20250510222004.png",
+    "Notes/MCA/4th Sem/SPM.md",
+    "Notes/MCA/4th Sem/Data Mining.md",
     "Notes/MCA/4th Sem/MAD.md",
+    "Notes/MCA/4th Sem/MAD Codes.md",
     "Notes/javaCollection/7. Maps.md",
     "Notes/javaCollection/4. Set.md",
     "Notes/javaCollection/3. Collection interface.md",
@@ -217,20 +230,7 @@
     "Notes/Backend notes/Hibernate/Mappings.md",
     "Notes/Backend notes/Hibernate/Primary key.md",
     "Notes/Backend notes/Hibernate/Spring data jpa queries.md",
-    "Notes/Backend notes/docker/Docker.md",
-    "Notes/Operating system/User interface.md",
-    "Notes/Operating system/System calls.md",
-    "Notes/statics/Pasted image 20250505125645.png",
-    "Notes/statics/Pasted image 20250505083409.png",
     "Notes/MCA/4th Sem/MAD Unit-1-4 (MCA & IT).pdf",
-    "Notes/statics/Pasted image 20250505065438.png",
-    "Notes/statics/Pasted image 20250428105123.png",
-    "Notes/statics/Pasted image 20250427121332.png",
-    "Notes/statics/Pasted image 20250427121036.png",
-    "Notes/statics/Pasted image 20250427120837.png",
-    "Notes/statics/Pasted image 20250420112013.png",
-    "Notes/statics/Pasted image 20250420111120.png",
-    "Notes/statics/Pasted image 20250420102933.png",
     "Notes/MCA/4th Sem",
     "Notes/Odin project/HTML and CSS/HTML.md~",
     "Notes/Odin project/javascript advance/Promises.md~",
