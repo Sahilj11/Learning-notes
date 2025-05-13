@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/MCA/4th Sem/Data Mining.md",
+                "file": "Notes/Javascript Deep/Deep JS Foundation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Mining"
+              "title": "Deep JS Foundation"
             }
           },
           {
@@ -107,8 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "18757d7566ffc7cf",
@@ -195,6 +194,9 @@
   },
   "active": "09fac71d98e06436",
   "lastOpenFiles": [
+    "Notes/statics/Pasted image 20250513160823.png",
+    "Notes/MCA/3rd Sem/Machine learning.md",
+    "Notes/MCA/4th Sem/Data Mining.md",
     "Notes/statics/Pasted image 20250511135301.png",
     "Notes/statics/Pasted image 20250511071519.png",
     "Notes/statics/Pasted image 20250511064124.png",
@@ -205,9 +207,7 @@
     "Notes/statics/Pasted image 20250510222128.png",
     "Notes/statics/Pasted image 20250510222116.png",
     "Notes/statics/Pasted image 20250510222045.png",
-    "Notes/statics/Pasted image 20250510222026.png",
     "Notes/MCA/4th Sem/SPM.md",
-    "Notes/MCA/4th Sem/Data Mining.md",
     "Notes/MCA/4th Sem/MAD.md",
     "Notes/MCA/4th Sem/MAD Codes.md",
     "Notes/javaCollection/7. Maps.md",
@@ -230,7 +230,6 @@
     "Notes/Backend notes/Hibernate/Entities.md",
     "Notes/Backend notes/Hibernate/Mappings.md",
     "Notes/Backend notes/Hibernate/Primary key.md",
-    "Notes/Backend notes/Hibernate/Spring data jpa queries.md",
     "Notes/MCA/4th Sem/MAD Unit-1-4 (MCA & IT).pdf",
     "Notes/MCA/4th Sem",
     "Notes/Odin project/HTML and CSS/HTML.md~",
