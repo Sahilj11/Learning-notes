@@ -1831,3 +1831,12 @@ above deepJS does not have this dunder so it goes above , Workshop.prototype als
 
 
 ### Shadowing Prototypes
+
+- Two different level of prototype chain with same property
+
+![](../statics/Pasted%20image%2020250520094739.png)
+![](../statics/Pasted%20image%2020250520094754.png)
+
+
+## Prototypal inheritance 
+![](../statics/Pasted%20image%2020250520095041.png)

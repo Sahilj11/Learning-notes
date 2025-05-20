@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/Javascript Deep/Deep JS Foundation.md",
+                "file": "Notes/Javascript Deep/Async JS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deep JS Foundation"
+              "title": "Async JS"
             }
           },
           {
@@ -194,19 +194,21 @@
   },
   "active": "09fac71d98e06436",
   "lastOpenFiles": [
+    "Notes/Javascript Deep/Deep JS Foundation.md",
+    "Notes/statics/Pasted image 20250520095041.png",
+    "Notes/statics/Pasted image 20250520094754.png",
+    "Notes/statics/Pasted image 20250520094739.png",
+    "Notes/java/Java For Interview.md",
+    "Notes/statics/Pasted image 20250520085020.png",
+    "Notes/statics/Pasted image 20250519213140.png",
+    "Notes/statics/Pasted image 20250519212619.png",
+    "Notes/statics/Pasted image 20250519212511.png",
+    "Notes/Odin project/React/3. Render and commit.md",
     "Notes/statics/Pasted image 20250513160823.png",
     "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/MCA/4th Sem/Data Mining.md",
     "Notes/statics/Pasted image 20250511135301.png",
     "Notes/statics/Pasted image 20250511071519.png",
-    "Notes/statics/Pasted image 20250511064124.png",
-    "Notes/statics/Pasted image 20250511062554.png",
-    "Notes/statics/Pasted image 20250510223046.png",
-    "Notes/statics/Pasted image 20250510222447.png",
-    "Notes/statics/Pasted image 20250510222156.png",
-    "Notes/statics/Pasted image 20250510222128.png",
-    "Notes/statics/Pasted image 20250510222116.png",
-    "Notes/statics/Pasted image 20250510222045.png",
     "Notes/MCA/4th Sem/SPM.md",
     "Notes/MCA/4th Sem/MAD.md",
     "Notes/MCA/4th Sem/MAD Codes.md",
@@ -227,9 +229,6 @@
     "Notes/Backend notes/Spring Security.md",
     "Notes/Backend notes/servlet/Intro.md",
     "Notes/Backend notes/Hibernate/Context.md",
-    "Notes/Backend notes/Hibernate/Entities.md",
-    "Notes/Backend notes/Hibernate/Mappings.md",
-    "Notes/Backend notes/Hibernate/Primary key.md",
     "Notes/MCA/4th Sem/MAD Unit-1-4 (MCA & IT).pdf",
     "Notes/MCA/4th Sem",
     "Notes/Odin project/HTML and CSS/HTML.md~",
