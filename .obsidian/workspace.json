@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/java/Java For Interview.md",
+                "file": "Notes/DBMS/JOIN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java For Interview"
+              "title": "JOIN"
             }
           }
         ]
@@ -165,17 +165,21 @@
   },
   "active": "9d4041267c18b3fa",
   "lastOpenFiles": [
+    "Notes/DBMS/Basic.md",
+    "Notes/DBMS/JOIN.md",
+    "Notes/statics/Pasted image 20250522211450.png",
+    "Notes/statics/Pasted image 20250522211423.png",
+    "Notes/statics/Pasted image 20250522211156.png",
+    "Notes/statics/Pasted image 20250522210913.png",
+    "Notes/statics/Pasted image 20250522210900.png",
+    "Notes/statics/Pasted image 20250522210737.png",
+    "Notes/DBMS/Normalisation.md",
+    "Notes/statics/Pasted image 20250522205721.png",
+    "Notes/DBMS/File System vs DBMS.md",
+    "Notes/java/Java For Interview.md",
     "Notes/statics/Pasted image 20250522103221.png",
     "Notes/statics/Pasted image 20250522103127.png",
     "Notes/statics/Pasted image 20250522083105.png",
-    "Notes/statics/Pasted image 20250522075012.png",
-    "Notes/statics/Pasted image 20250522074817.png",
-    "Notes/statics/Pasted image 20250522074802.png",
-    "Notes/statics/Pasted image 20250522074654.png",
-    "Notes/statics/Pasted image 20250522074110.png",
-    "Notes/statics/Pasted image 20250522073958.png",
-    "Notes/statics/Pasted image 20250522073316.png",
-    "Notes/statics/Pasted image 20250522073251.png",
     "Notes/MCA/1st Sem/JAVA/Detail String Notes.md",
     "Notes/javaCollection/1. The main interfaces of java collection.md",
     "Notes/javaCollection/7. Maps.md",
@@ -186,7 +190,6 @@
     "Notes/javaCollection/2. Preliminaries.md",
     "Notes/Javascript Deep/Async JS.md",
     "Notes/Javascript Deep/Deep JS Foundation.md",
-    "Notes/java/Java For Interview.md",
     "Notes/Odin project/React/3. Render and commit.md",
     "Notes/MCA/3rd Sem/Machine learning.md",
     "Notes/MCA/4th Sem/Data Mining.md",
@@ -198,9 +201,6 @@
     "Notes/Odin project/javascript advance/Asynchronus code.md",
     "Notes/Odin project/javascript advance/Namaste javascript.md",
     "Notes/Odin project/javascript advance/preventDefault() method.md",
-    "Notes/Odin project/javascript advance/Promises.md",
-    "Notes/Odin project/javascript advance/SOLID design principles.md",
-    "Notes/Operating system/virtual machine.md",
     "Notes/MCA/4th Sem/MAD Unit-1-4 (MCA & IT).pdf",
     "Notes/MCA/4th Sem",
     "Notes/Odin project/HTML and CSS/HTML.md~",
