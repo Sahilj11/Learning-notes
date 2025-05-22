@@ -3000,3 +3000,76 @@ In this example, when a producer adds an item, it calls `notifyAll()` to wake up
 ## Wrapper class
 - Convert primitive value into objects
 - Process of converting primitive to object is boxing and java do that automatically hence autoboxing
+
+
+
+```
+Student ID: 1
+```
+
+Here’s why:
+
+### Step-by-step explanation:
+
+```java
+Student student1 = new Student(1, "John Doe");
+```
+
+- Creates a `Student` object with `id = 1` and stores the reference in `student1`.
+    
+
+```java
+fun(student1);
+```
+
+- Passes the reference of `student1` to the method `fun`.
+    
+
+Inside `fun`:
+
+```java
+Student s = new Student(2, "Jane Doe"); 
+a = s;
+```
+
+- A new `Student` object with `id = 2` is created and assigned to local variable `s`.
+    
+- Then, the local variable `a` (which initially pointed to `student1`) is now made to point to this new student `s`.
+    
+- But this change affects only the **local copy** of the reference `a`. It does **not** change what `student1` in the `main` method points to.
+    
+
+Java is **pass-by-value**, and that includes object references. That means:
+
+- When you pass `student1` to `fun`, a **copy of the reference** is passed.
+    
+- Changing `a` to point to a new object **does not affect** `student1`.
+    
+
+### Therefore:
+
+After `fun(student1)`, `student1` **still points to the original object** with ID `1`, and hence:
+
+```java
+System.out.println("Student ID: " + student1.getId());
+```
+
+prints:
+
+```
+Student ID: 1
+```
+
+---
+
+If you had **modified the object that `a` refers to**, like this:
+
+```java
+public static void fun(Student a) {
+    a.setId(2); // assuming there's a setId method
+}
+```
+
+Then the change would reflect in `student1`, because both `a` and `student1` would be pointing to the **same object**.
+
+But assigning a new object to `a` doesn’t affect `student1`.
