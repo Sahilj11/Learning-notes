@@ -1927,3 +1927,1076 @@ class Outer {
 |Access to outer members|Yes|
 |Access to local variables|Only final or effectively final|
 |Static members allowed|No|
+
+## Collection
+The **Collection Framework in Java** is a unified architecture for representing and manipulating collections of objects. It provides a set of interfaces and classes that make it easy to work with groups of data — such as lists, sets, and maps — in a consistent and efficient way.
+![](../statics/Pasted%20image%2020250521144019.png)
+![](../statics/Pasted%20image%2020250521144115.png)
+
+### List Interface 
+
+![](../statics/Pasted%20image%2020250521144158.png)
+![](../statics/Pasted%20image%2020250521144331.png)
+![](../statics/Pasted%20image%2020250521144311.png)
+#### ArrayList
+
+![](../statics/Pasted%20image%2020250521144403.png)
+![](../statics/Pasted%20image%2020250521144959.png)
+![](../statics/Pasted%20image%2020250521145042.png)
+![](../statics/Pasted%20image%2020250521145154.png)
+![](../statics/Pasted%20image%2020250521145305.png)
+```java
+List<Integer> ls = new ArrayList<>(initialCapacity: 11);
+```
+
+- We cannot have a method to know the capacity but we can use reflection
+![](../statics/Pasted%20image%2020250521145744.png)
+- here using Arrays.asList() do not allow for adding and deleting but replacing , class name is `java.util.Arrays$ArrayList`.
+- in case of List.of() we cannot even do replace
+
+| Method                            | Description                                  | Time Complexity              |
+| --------------------------------- | -------------------------------------------- | ---------------------------- |
+| `add(E e)`                        | Adds element to the end                      | O(1) amortized               |
+| `add(int index, E element)`       | Inserts element at index                     | O(n)                         |
+| `get(int index)`                  | Returns element at index                     | O(1)                         |
+| `set(int index, E element)`       | Replaces element at index                    | O(1)                         |
+| `remove(int index)`               | Removes element at index                     | O(n)                         |
+| `remove(Object o)`                | Removes first occurrence                     | O(n)                         |
+| `clear()`                         | Removes all elements                         | O(n)                         |
+| `contains(Object o)`              | Checks if element exists                     | O(n)                         |
+| `indexOf(Object o)`               | Returns index of first occurrence            | O(n)                         |
+| `lastIndexOf(Object o)`           | Returns index of last occurrence             | O(n)                         |
+| `size()`                          | Returns number of elements                   | O(1)                         |
+| `isEmpty()`                       | Checks if list is empty                      | O(1)                         |
+| `toArray()`                       | Converts list to array                       | O(n)                         |
+| `ensureCapacity(int minCapacity)` | Ensures capacity without resizing frequently | O(n) worst case              |
+| `trimToSize()`                    | Trims unused memory                          | O(n)                         |
+| `clone()`                         | Creates shallow copy                         | O(n)                         |
+| `iterator()`                      | Returns iterator                             | O(1)                         |
+| `subList(int from, int to)`       | Creates a view of the portion of the list    | O(1) (but changes reflected) |
+
+**Comparator**
+- Interface allowing custom ordering
+- ![](../statics/Pasted%20image%2020250521150646.png)
+- contains compare method , it is a functional interface , compare two object of same type and decide its order
+![](../statics/Pasted%20image%2020250521150922.png)
+- if int is -ve then o1 comes before o2 , if 0 then they are equal , if +ve then o1 comes after o2.
+
+![](../statics/Pasted%20image%2020250521152349.png)
+this do not work, null tells that follow natural ordering , but here in custom object , natural ordering is not defined
+
+![](../statics/Pasted%20image%2020250521152450.png)
+in String class it implements Comparable that is why the sort function work on a String list
+![](../statics/Pasted%20image%2020250521152915.png)
+
+
+#### LinkedList
+![](../statics/Pasted%20image%2020250521153212.png)
+![](../statics/Pasted%20image%2020250521153327.png)
+![](../statics/Pasted%20image%2020250521153444.png)
+
+| Method                              | Description                        | Time Complexity |
+| ----------------------------------- | ---------------------------------- | --------------- |
+| `add(E e)`                          | Adds to end                        | O(1)            |
+| `add(int index, E element)`         | Inserts at index                   | O(n)            |
+| `get(int index)`                    | Gets element at index              | O(n)            |
+| `set(int index, E element)`         | Replaces element at index          | O(n)            |
+| `remove(int index)`                 | Removes element at index           | O(n)            |
+| `remove(Object o)`                  | Removes first occurrence           | O(n)            |
+| `clear()`                           | Removes all elements               | O(n)            |
+| `contains(Object o)`                | Checks if list contains element    | O(n)            |
+| `size()`                            | Returns number of elements         | O(1)            |
+| `isEmpty()`                         | Checks if list is empty            | O(1)            |
+| `indexOf(Object o)`                 | First occurrence index             | O(n)            |
+| `lastIndexOf(Object o)`             | Last occurrence index              | O(n)            |
+| `addFirst(E e)` / `offerFirst(E e)` | Adds to beginning                  | O(1)            |
+| `addLast(E e)` / `offerLast(E e)`   | Adds to end                        | O(1)            |
+| `removeFirst()` / `pollFirst()`     | Removes from beginning             | O(1)            |
+| `removeLast()` / `pollLast()`       | Removes from end                   | O(1)            |
+| `peekFirst()` / `getFirst()`        | Gets first element without removal | O(1)            |
+| `peekLast()` / `getLast()`          | Gets last element without removal  | O(1)            |
+| `iterator()`                        | Returns iterator                   | O(1)            |
+| `descendingIterator()`              | Iterator from end to start         | O(1)            |
+#### Vector
+![](../statics/Pasted%20image%2020250521154108.png)
+![](../statics/Pasted%20image%2020250521154129.png)
+![](../statics/Pasted%20image%2020250521154532.png)
+
+#### Stack
+it do not implements List interface directly 
+![](../statics/Pasted%20image%2020250521155106.png)
+![](../statics/Pasted%20image%2020250521155119.png)
+
+#### CopyOnWriteArrayList
+- It **creates a new copy of the internal array** every time a write operation (like `add()`, `set()`, `remove()`) is performed.
+- Read operations (like `get()`, `iterator()`) operate on a **stable, immutable snapshot** of the array.
+- No need for external synchronization when iterating or accessing.
+![](../statics/Pasted%20image%2020250521155832.png)
+
+### Map
+
+![](../statics/Pasted%20image%2020250521204632.png)
+
+![](../statics/Pasted%20image%2020250521160301.png)
+![](../statics/Pasted%20image%2020250521160726.png)
+![](../statics/Pasted%20image%2020250521160736.png)
+#### HashMap
+
+![](../statics/Pasted%20image%2020250521161950.png)
+![](../statics/Pasted%20image%2020250521162201.png)
+![](../statics/Pasted%20image%2020250521162217.png)
+![](../statics/Pasted%20image%2020250521162231.png)
+![](../statics/Pasted%20image%2020250521162249.png)
+![](../statics/Pasted%20image%2020250521162321.png)
+![](../statics/Pasted%20image%2020250521162406.png)
+![](../statics/Pasted%20image%2020250521162435.png)
+![](../statics/Pasted%20image%2020250521162511.png)
+![](../statics/Pasted%20image%2020250521162548.png)
+![](../statics/Pasted%20image%2020250521162857.png)
+- Red Black Tree used after java 8
+![](../statics/Pasted%20image%2020250521163049.png)
+- Size will get doubled
+- ![](../statics/Pasted%20image%2020250521163441.png)
+![](../statics/Pasted%20image%2020250521163503.png)
+- It use balanced tree if it hits a threashold of a linked list which is 8 by default
+- Important to note that equals method is called to search a linkedlist or tree , so if you create a Custom class for key ensure to implement equals method
+- 
+![](../statics/Pasted%20image%2020250521164716.png)
+
+#### LinkedHashMap
+![](../statics/Pasted%20image%2020250521165233.png)
+![](../statics/Pasted%20image%2020250521173137.png)
+- accessorder set true ensure that the key which is access get to last 
+- this can be used for LRU cache
+
+
+### Garbage Collection
+- System.gc()
+
+#### WeakHashMap
+
+- A **Map** implementation where the **keys are stored using weak references**.
+    
+- If a key is no longer referenced elsewhere in the program (i.e., no strong references), it becomes **eligible for garbage collection**.
+    
+- When GC collects the key, the corresponding entry is **automatically removed** from the map.
+
+### 🔑 Key Points:
+
+|Feature|Details|
+|---|---|
+|Class Name|`java.util.WeakHashMap`|
+|Implements|`Map<K, V>`|
+|Key reference type|**Weak** reference|
+|Value reference type|**Strong** reference|
+|Garbage collected entries|✅ Yes, if key has no strong reference|
+|Thread-safe?|❌ No (needs external sync)|
+
+---
+
+### 🧪 Example Code:
+
+```java
+import java.util.WeakHashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        WeakHashMap<Object, String> map = new WeakHashMap<>();
+        Object key = new Object();
+
+        map.put(key, "Value");
+
+        System.out.println("Before GC: " + map);
+
+        key = null;  // Remove strong reference to key
+        System.gc(); // Suggest garbage collection
+
+        try { Thread.sleep(100); } catch (Exception ignored) {}
+
+        System.out.println("After GC: " + map);
+    }
+}
+```
+
+### 📤 Sample Output:
+
+```
+Before GC: {java.lang.Object@6bc7c054=Value}
+After GC: {}
+```
+
+---
+
+### 📋 Comparison with `HashMap`:
+
+|Feature|`HashMap`|`WeakHashMap`|
+|---|---|---|
+|Key reference|Strong|Weak|
+|Entry removal|Manual|Automatic (GC-based)|
+|Memory leaks|Possible|Less likely|
+|Use cases|General purpose|Caching, metadata|
+
+---
+
+### 🧠 When to Use `WeakHashMap`?
+
+- When you want the **map entries to disappear automatically** when keys are no longer in use.
+    
+- For **caching**, **plugin managers**, or **metadata mapping** where retaining keys is not necessary.
+    
+- When avoiding **memory leaks** is important.
+    
+
+---
+
+### ⚠️ Limitations:
+- **Not thread-safe** → Use `Collections.synchronizedMap()` or a concurrent alternative.
+- Garbage collection timing is **non-deterministic**.
+
+
+#### IdentityHashMap
+
+- `IdentityHashMap` is a special `Map` implementation that **compares keys using `==` (reference equality)** instead of `.equals()`.
+    
+- It’s part of the `java.util` package.
+    
+
+---
+
+### 🔑 Key Characteristics:
+
+| Feature              | Description                                                            |
+| -------------------- | ---------------------------------------------------------------------- |
+| Key comparison       | Uses `==` (identity comparison) instead of `.equals()`                 |
+| Value comparison     | Uses `==` for keys only, values behave normally                        |
+| Null keys/values     | ✅ Allows one `null` key and multiple `null` values                     |
+| Underlying structure | Backed by a simple array, not a traditional hash bucket like `HashMap` |
+| Thread-safe          | ❌ No, must be synchronized externally if used by multiple threads      |
+| Performance          | Fast for small maps, no hashing based on `hashCode()`                  |
+
+---
+
+### 🧪 Example Code:
+
+```java
+import java.util.IdentityHashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        IdentityHashMap<String, String> map = new IdentityHashMap<>();
+
+        String a = new String("key");
+        String b = new String("key");
+
+        map.put(a, "value1");
+        map.put(b, "value2");
+
+        System.out.println(map.size());  // Output: 2
+    }
+}
+```
+
+### ❓ Why size is 2?
+
+- Because `a == b` is `false` (different objects), even though `a.equals(b)` is `true`.
+    
+- `IdentityHashMap` treats `a` and `b` as **different keys**.
+    
+
+---
+
+### 📋 Comparison: `HashMap` vs `IdentityHashMap`
+
+| Feature          | `HashMap`                   | `IdentityHashMap`                     |
+| ---------------- | --------------------------- | ------------------------------------- |
+| Key comparison   | `.equals()` + `.hashCode()` | `==` (reference equality)             |
+| Use case         | General-purpose maps        | Object identity-based mappings        |
+| Memory leak risk | Low                         | Higher (due to identity logic)        |
+| Performance      | Optimized for general use   | Faster for small, identity-based maps |
+
+### 🧠 When to Use `IdentityHashMap`?
+- **Frameworks** or **tools** that need to **track object identity**, not just logical equality. 
+- Example: Keeping metadata for specific object instances in a cache.
+
+### ⚠️ Cautions:
+
+- Don’t use `IdentityHashMap` where logical equality is expected.
+- Not intuitive: Two logically equal keys may be treated as different.
+- Not a replacement for `HashMap` in most everyday cases.
+### Comparable 
+
+- `Comparable` is an **interface** in `java.lang` used to define the **natural ordering** of objects.
+    
+- It is used when you want to **sort custom objects** using `Collections.sort()` or `Arrays.sort()`.
+    
+
+---
+
+### 🔑 Key Points
+
+|Feature|Description|
+|---|---|
+|Interface|`java.lang.Comparable<T>`|
+|Method to implement|`int compareTo(T o)`|
+|Purpose|Defines **natural order** of class instances|
+|Sorting usage|Used by sorting methods like `Collections.sort()`|
+|Modifies original class|✅ Yes – implements in the class itself|
+
+---
+
+### 🧪 Syntax:
+
+```java
+public class Student implements Comparable<Student> {
+    int marks;
+
+    public Student(int marks) {
+        this.marks = marks;
+    }
+
+    @Override
+    public int compareTo(Student other) {
+        return this.marks - other.marks; // ascending order
+    }
+}
+```
+
+---
+
+### 📊 Return Values of `compareTo()`:
+
+|Return Value|Meaning|
+|---|---|
+|Negative|`this < other`|
+|Zero|`this == other`|
+|Positive|`this > other`|
+
+---
+
+### 🧪 Usage Example:
+
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> list = new ArrayList<>();
+        list.add(new Student(85));
+        list.add(new Student(75));
+        list.add(new Student(95));
+
+        Collections.sort(list); // uses compareTo internally
+    }
+}
+```
+
+---
+
+### 📋 `Comparable` vs `Comparator`
+
+|Feature|`Comparable`|`Comparator`|
+|---|---|---|
+|Defined in|The class itself|A separate class (or lambda)|
+|Method|`compareTo(T o)`|`compare(T o1, T o2)`|
+|Sorting flexibility|Only one natural order|Can define multiple sort logics|
+|Modifies class?|✅ Yes|❌ No (external)|
+
+---
+
+### 📌 Use Cases:
+
+- Sorting a list of custom objects (e.g., Students by marks).
+    
+- Used in **TreeSet**, **TreeMap**, and other sorted collections.
+    
+- When a **default/natural** order is required.
+    
+
+#### Sorted Map
+![](../statics/Pasted%20image%2020250521202923.png)
+![](../statics/Pasted%20image%2020250521203207.png)
+Treemap using red black tree
+![](../statics/Pasted%20image%2020250521203535.png)
+![](../statics/Pasted%20image%2020250521203554.png)
+![](../statics/Pasted%20image%2020250521203606.png)
+
+
+### HashTable
+- Legacy 
+- it is synchronized, now use ConcurrentHashMap
+- no null key or value
+
+### ConcurrentHashMap
+- In java 7 it is using segment based locking , hashmap is divided into 16 segments 
+- Only the segment been written or read from is locked not the entire map
+- In java 8 , compare and swap approach , no locking except resizing or collision 
+**CAS** is a low-level atomic instruction used in concurrent programming to achieve **lock-free thread-safe operations**.
+- It does not allow null as key
+It works like this:
+
+> "If the value at a memory location is equal to an expected value, update it to a new value. Otherwise, do nothing."
+
+- `ConcurrentHashMap` is a thread-safe implementation of `Map` in `java.util.concurrent` package.
+    
+- Unlike `HashMap`, it allows **concurrent access** from multiple threads **without explicit synchronization**
+
+- **No segments**.
+    
+- It uses **fine-grained locking at the bucket/bin level**, and **CAS (Compare-And-Swap)** for non-blocking reads and some updates.
+    
+- Locking occurs:
+    
+    - When **resizing the map**
+        
+    - When **multiple threads try to update the same bin**
+        
+    - When bins turn into **tree nodes** (for collision handling)
+
+#### ConcurrentSkipListMap
+- It is a Thread safe tree map
+- Use SkipList
+- ![](../statics/Pasted%20image%2020250521222057.png)
+- ![](../statics/Pasted%20image%2020250521222219.png)
+
+#### EnumMap
+- If you are using enum as a key , and key belong to single enum , then we can use the EnumMap , here advantage is the map knows the keys in advance
+- So resizing is not required here 
+- Order is same as of enum
+- no hashing
+
+#### ImmutableMap
+![](../statics/Pasted%20image%2020250521223026.png)
+
+## Set
+
+
+### Queue
+- adding element called enqueue , and removing it is called dequeue
+- Interface
+![](../statics/Pasted%20image%2020250521231428.png)
+#### Priority Queue
+- Order element based on their natural ordering
+- Does not allow null element
+- Implemented using heap
+- Delete , insert (logn) 
+
+### Deque
+- Double ended queue
+- ![](../statics/Pasted%20image%2020250521232454.png)
+- ArrayDeque , no null allowed , fast iteration
+- Here in ArrayDeque , circular array is been used
+
+
+### BlockingQueue
+- Thread safe queue
+- It is a interface , using implementation like ArrayBlockingQueue
+- wait for queue to become non-empty / wait for space
+- ![](../statics/Pasted%20image%2020250521235849.png)
+
+
+## MultiThreading
+![](../statics/Pasted%20image%2020250522072823.png)
+![](../statics/Pasted%20image%2020250522072837.png)
+![](../statics/Pasted%20image%2020250522072941.png)
+![](../statics/Pasted%20image%2020250522073137.png)
+![](../statics/Pasted%20image%2020250522073251.png)
+![](../statics/Pasted%20image%2020250522073316.png)
+![](../statics/Pasted%20image%2020250522073958.png)
+![](../statics/Pasted%20image%2020250522074110.png)
+- Extends Thread class and override run method
+- 
+### Creating Thread 
+![](../statics/Pasted%20image%2020250522074654.png)
+- Using Runnable 
+- ![](../statics/Pasted%20image%2020250522074802.png)
+- ![](../statics/Pasted%20image%2020250522074817.png)
+### Lifecycle of thread
+![](../statics/Pasted%20image%2020250522075012.png)
+ In Java multithreading, `sleep()`, `start()`, and `join()` are fundamental methods for managing thread execution. Let's break down each one:
+
+### 1. `Thread.sleep(long milliseconds)`
+
+- **Purpose:** The `sleep()` method is used to pause the execution of the _currently executing thread_ for a specified duration in milliseconds.
+- **Behavior:**
+    - When a thread calls `sleep()`, it temporarily stops its execution and moves from the `Running` state to the `Timed Waiting` state.
+    - It doesn't release any monitors (locks) it might be holding. This is a crucial distinction from `wait()`.
+    - After the specified time elapses, the thread moves back to the `Runnable` state (ready to be picked up by the scheduler), but there's no guarantee it will immediately start running again. The scheduler decides when it gets CPU time.
+    - `sleep()` is a static method, meaning it always affects the thread that is currently executing the `sleep()` call, not necessarily the `Thread` object on which it's invoked (though it's usually called as `Thread.sleep()`).
+- **Signature:** `public static native void sleep(long millis) throws InterruptedException`
+- **Exception Handling:** It throws an `InterruptedException` if another thread interrupts the current thread while it is sleeping. You must handle this exception (usually by catching it and deciding how to respond, e.g., cleaning up or logging).
+- **Use Cases:**
+    - To slow down operations.
+    - To give other threads a chance to execute.
+    - To simulate real-world delays.
+    - In situations where you need to periodically check for a condition.
+
+**Example:**
+
+Java
+
+```java
+public class SleepExample extends Thread {
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+            try {
+                Thread.sleep(1000); // Pause for 1 second
+            } catch (InterruptedException e) {
+                System.out.println(Thread.currentThread().getName() + " was interrupted.");
+                Thread.currentThread().interrupt(); // Restore the interrupted status
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SleepExample t1 = new SleepExample();
+        SleepExample t2 = new SleepExample();
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+### 2. `Thread.start()`
+
+- **Purpose:** The `start()` method is used to begin the execution of a thread. It's the entry point for a new thread's execution.
+- **Behavior:**
+    - When `start()` is called on a `Thread` object, the Java Virtual Machine (JVM) creates a new execution stack for that thread.
+    - It then calls the `run()` method of that `Thread` object (or the `run()` method of the `Runnable` object if the `Thread` was constructed with a `Runnable`).
+    - It's important to note that `start()` itself doesn't directly execute the `run()` method. Instead, it makes the thread eligible to be run by the thread scheduler.
+    - Calling `start()` more than once on the same thread object will result in an `IllegalThreadStateException`.
+- **Lifecycle:** `start()` moves a thread from the `New` state to the `Runnable` state.
+- **Use Cases:** Essential for initiating any new thread of execution in Java.
+
+**Example:**
+
+Java
+
+```java
+public class StartExample extends Thread {
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + " is running.");
+    }
+
+    public static void main(String[] args) {
+        StartExample t1 = new StartExample();
+        StartExample t2 = new StartExample();
+
+        t1.start(); // This will call the run() method of t1 in a new thread
+        t2.start(); // This will call the run() method of t2 in another new thread
+
+        // If you mistakenly call run() directly, it won't create a new thread:
+        // t1.run(); // This would execute run() in the main thread
+    }
+}
+```
+
+### 3. `Thread.join()`
+
+- **Purpose:** The `join()` method allows one thread to wait for the completion of another thread. When `join()` is called on a thread object, the calling thread will pause its execution until the thread on which `join()` was called finishes its execution.
+- **Behavior:**
+    - If thread A calls `t.join()`, where `t` is another thread, then thread A will block (go into the `Waiting` or `Timed Waiting` state) until thread `t` completes its execution.
+    - `join()` has overloaded versions:
+        - `join()`: Waits indefinitely until the thread dies.
+        - `join(long millis)`: Waits for a maximum of `millis` milliseconds. If the thread doesn't die within that time, the calling thread resumes.
+        - `join(long millis, int nanos)`: Waits for a maximum of `millis` milliseconds plus `nanos` nanoseconds.
+- **Exception Handling:** Like `sleep()`, `join()` can throw an `InterruptedException` if the waiting thread is interrupted while it's waiting for the target thread to die.
+- **Use Cases:**
+    - When you need to ensure that a set of threads have completed their tasks before proceeding with further operations (e.g., aggregating results from multiple threads).
+    - To maintain execution order or dependencies between threads.
+
+**Example:**
+
+Java
+
+```java
+public class JoinExample extends Thread {
+    public void run() {
+        for (int i = 1; i <= 3; i++) {
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                System.out.println(Thread.currentThread().getName() + " was interrupted.");
+                Thread.currentThread().interrupt();
+            }
+            System.out.println(Thread.currentThread().getName() + " is running: " + i);
+        }
+    }
+
+    public static void main(String[] args) {
+        JoinExample t1 = new JoinExample();
+        JoinExample t2 = new JoinExample();
+        JoinExample t3 = new JoinExample();
+
+        t1.start();
+
+        try {
+            t1.join(); // Main thread waits for t1 to complete
+        } catch (InterruptedException e) {
+            System.out.println("Main thread interrupted while waiting for t1.");
+            Thread.currentThread().interrupt();
+        }
+
+        t2.start();
+        t3.start();
+
+        System.out.println("Main thread finished.");
+    }
+}
+```
+
+**Output of `JoinExample` (approximate):**
+
+```
+Thread-0 is running: 1
+Thread-0 is running: 2
+Thread-0 is running: 3
+Thread-1 is running: 1
+Thread-2 is running: 1
+Main thread finished.
+Thread-1 is running: 2
+Thread-2 is running: 2
+Thread-1 is running: 3
+Thread-2 is running: 3
+```
+
+Notice how "Main thread finished." only prints after `Thread-0` completes because of `t1.join()`. If `t1.join()` were removed, "Main thread finished." could print much earlier.
+
+### Key Differences and Relationships:
+
+|   |   |   |   |
+|---|---|---|---|
+|**Feature**|**start()**|**sleep()**|**join()**|
+|**Purpose**|Initiates a new thread's execution|Pauses the _current_ thread for a duration|Makes _one_ thread wait for _another_ to complete|
+|**Caller**|The thread that wants to create/run a new thread|The thread that wants to pause itself|The thread that wants to wait for another thread|
+|**Effect**|Creates a new call stack, calls `run()`|Puts the current thread in `Timed Waiting`|Puts the calling thread in `Waiting`/`Timed Waiting`|
+|**Lock**|No direct lock involvement|Does NOT release acquired locks|Releases the lock on the `Thread` object if used with `wait()` (though usually `join()` is used directly)|
+|**State**|`New` -> `Runnable`|`Running` -> `Timed Waiting` -> `Runnable`|`Running` -> `Waiting`/`Timed Waiting` -> `Runnable`|
+|**Exception**|`IllegalThreadStateException` if called twice|`InterruptedException`|`InterruptedException`|
+
+
+```java
+class MyThread extends Thread{
+	public MyThread(String name){
+		super(name);
+	}
+	@Override
+	public void run(){
+	}
+}
+class Main{
+	public static void main(String[] arg){
+		MyThread t1 = new MyThread("My Thread");
+		t1.setPriority(Thread.MAX_PRIORITY); // Thread.MIN_PRIORITY(1) , NORM_PRIORITY (5)
+		
+	}
+}
+```
+![](../statics/Pasted%20image%2020250522083105.png)
+
+- these are not strict , it is a hint to jvm
+
+### 4. `Thread.setDaemon(boolean on)`
+
+- **Purpose:** This method is used to mark a thread as either a daemon thread or a user thread.
+- **Daemon Thread Explained:**
+    - **Definition:** A daemon thread is a low-priority thread that runs in the background to provide services to user threads. Its life depends on the mercy of user threads.
+    - **JVM Termination:** The Java Virtual Machine (JVM) will exit when all _non-daemon (user) threads_ have completed their execution. If there are only daemon threads running, the JVM will terminate, regardless of whether the daemon threads have finished their tasks.
+    - **Purpose:** Daemon threads are typically used for background tasks like garbage collection (the GC thread is a daemon thread), finalization, logging, or monitoring, where it's not critical for them to complete their execution if the main application (user threads) shuts down.
+    - **Inheritance:** A thread inherits its daemon status from its parent thread. The `main` thread is always a user thread by default.
+    - **Caution:** Daemon threads are automatically terminated by the JVM without any graceful shutdown mechanism. This means `finally` blocks in daemon threads might not always execute, which can lead to resource leaks if not handled carefully (e.g., if you're dealing with I/O streams).
+- **Behavior of `setDaemon()`:**
+    - You **must** call `setDaemon()` _before_ the thread is started (i.e., before calling `thread.start()`). If you try to call it after `start()`, it will throw an `IllegalThreadStateException`.
+    - `public final void setDaemon(boolean on)`
+    - You can check if a thread is a daemon thread using `public final boolean isDaemon()`.
+- **Use Cases:**
+    - Background tasks that are not essential for the application's core functionality.
+    - Support services that should automatically stop when the main application ends.
+
+**Example:**
+
+Java
+
+```
+public class DaemonThreadExample extends Thread {
+    public void run() {
+        if (Thread.currentThread().isDaemon()) {
+            System.out.println(Thread.currentThread().getName() + " is a DAEMON thread.");
+        } else {
+            System.out.println(Thread.currentThread().getName() + " is a USER thread.");
+        }
+
+        try {
+            for (int i = 0; i < 5; i++) {
+                System.out.println(Thread.currentThread().getName() + " running: " + i);
+                Thread.sleep(500);
+            }
+        } catch (InterruptedException e) {
+            System.out.println(Thread.currentThread().getName() + " interrupted.");
+            Thread.currentThread().interrupt();
+        } finally {
+            // This finally block might not execute for daemon threads if JVM exits
+            if (Thread.currentThread().isDaemon()) {
+                System.out.println(Thread.currentThread().getName() + " (Daemon) finally block executed.");
+            } else {
+                System.out.println(Thread.currentThread().getName() + " (User) finally block executed.");
+            }
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        DaemonThreadExample userThread = new DaemonThreadExample();
+        DaemonThreadExample daemonThread = new DaemonThreadExample();
+
+        daemonThread.setDaemon(true); // Mark as daemon before starting
+
+        userThread.setName("UserThread");
+        daemonThread.setName("DaemonThread");
+
+        userThread.start();
+        daemonThread.start();
+
+        // Let main thread run for a bit to allow daemon thread to show some output
+        Thread.sleep(1500);
+        System.out.println("Main thread finished. JVM will exit if only daemon threads remain.");
+        // The JVM will likely exit here, even if DaemonThread hasn't completed its loop.
+    }
+}
+```
+
+### 5. `Thread.interrupt()`
+
+- **Purpose:** The `interrupt()` method is used to request a thread to stop what it is doing. It's a way for one thread to signal to another thread that it should interrupt its current activity.
+- **Behavior:**
+    - **Not a termination method:** `interrupt()` does not forcibly stop a thread. It's a cooperative mechanism. The interrupted thread is responsible for checking its interrupted status and responding appropriately.
+    - **Interrupted Status:** Calling `interrupt()` sets an internal "interrupted" flag of the target thread to `true`.
+    - **Blocked States:** If the target thread is currently blocked in methods like `sleep()`, `wait()`, or `join()`, calling `interrupt()` on it will cause these methods to throw an `InterruptedException`. When `InterruptedException` is thrown, the interrupted status of the thread is **cleared** (set back to `false`).
+    - **Polling the Status:** If the thread is not in a blocked state, the `interrupt()` call merely sets the flag. The thread can then check this flag using:
+        - `public boolean isInterrupted()`: Returns the interrupted status of the thread. This method **does not** clear the interrupted status.
+        - `public static boolean interrupted()`: A static method that tests whether the _current_ thread has been interrupted. This method **clears** the interrupted status (sets it back to `false`).
+- **Use Cases:**
+    - To gracefully shut down long-running tasks or background threads.
+    - To signal a thread to stop waiting on a condition.
+    - To cancel an ongoing operation.
+
+**Example:**
+
+Java
+
+```
+public class InterruptExample extends Thread {
+    public void run() {
+        while (!Thread.currentThread().isInterrupted()) { // Check interrupted status
+            System.out.println(Thread.currentThread().getName() + " is working...");
+            try {
+                Thread.sleep(1000); // Thread might be interrupted here
+            } catch (InterruptedException e) {
+                System.out.println(Thread.currentThread().getName() + " was interrupted while sleeping!");
+                // Crucial: Re-interrupt the thread to set the flag again
+                // so the while loop condition can catch it, or break the loop.
+                Thread.currentThread().interrupt();
+                break; // Exit the loop on interruption
+            }
+        }
+        System.out.println(Thread.currentThread().getName() + " has stopped working.");
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        InterruptExample worker = new InterruptExample();
+        worker.setName("WorkerThread");
+        worker.start();
+
+        Thread.sleep(3000); // Let the worker thread run for 3 seconds
+        worker.interrupt(); // Interrupt the worker thread
+    }
+}
+```
+
+### 6. `Thread.yield()`
+
+- **Purpose:** The `yield()` method is a static method that provides a hint to the thread scheduler that the _current thread_ is willing to yield its current use of a processor. It suggests that the current thread is not doing anything critical at the moment and other threads of the same or higher priority might want to run.
+- **Behavior:**
+    - When `yield()` is called, the currently executing thread moves from the `Running` state to the `Runnable` (ready) state.
+    - The thread scheduler is **free to ignore this hint**. There's no guarantee that another thread will immediately start running, or that the yielded thread won't be immediately re-scheduled.
+    - `yield()` does not cause the thread to release any monitors (locks) it holds.
+    - It is platform-dependent and its behavior can vary significantly across different JVM implementations and operating systems.
+- **Use Cases:**
+    - Primarily for debugging or testing purposes to help reproduce race conditions.
+    - Occasionally in highly specialized performance tuning where you want to explicitly give other threads a chance, but it's generally discouraged due to its unpredictable nature. Most modern JVMs and operating systems have sophisticated schedulers that make manual `yield()` calls rarely beneficial.
+
+**Example:**
+
+Java
+
+```
+public class YieldExample extends Thread {
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println(Thread.currentThread().getName() + " is running: " + i);
+            if (i == 2) {
+                System.out.println(Thread.currentThread().getName() + " yielding...");
+                Thread.yield(); // Hint to yield CPU
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        YieldExample t1 = new YieldExample();
+        YieldExample t2 = new YieldExample();
+
+        t1.setName("Thread-A");
+        t2.setName("Thread-B");
+
+        t1.start();
+        t2.start();
+    }
+}
+```
+
+**Note:** The output of `YieldExample` can be highly unpredictable due to `yield()`'s non-deterministic nature. You might see interleaving of "Thread-A" and "Thread-B" differently with each run.
+
+### 7. `Object.wait()`
+
+- **Purpose:** The `wait()` method is used for inter-thread communication. It causes the _current thread_ to wait indefinitely (or for a specified time) until another thread calls `notify()` or `notifyAll()` on the _same object_.
+    
+- **Crucial Difference from `sleep()` and `join()`:** `wait()` **releases the lock (monitor)** on the object it's called on. This is its key distinction and makes it fundamental for synchronized communication. `sleep()` and `join()` do not release locks.
+    
+- **Behavior:**
+    
+    - **Must be called from a `synchronized` block/method:** `wait()` (and `notify()`, `notifyAll()`) can only be called from within a synchronized method or synchronized block. If called outside, it throws an `IllegalMonitorStateException`. This is because a thread must own the object's monitor to wait on it or notify other threads.
+    - **Releases Lock:** When `wait()` is called, the current thread gives up the lock on the object and enters the `Waiting` (or `Timed Waiting`) state.
+    - **Awaiting Notification:** The thread remains in the waiting state until one of the following occurs:
+        - Another thread calls `notify()` on the same object (waking up one waiting thread).
+        - Another thread calls `notifyAll()` on the same object (waking up all waiting threads).
+        - The specified timeout period (if `wait(long timeout)` or `wait(long timeout, int nanos)` is used) elapses.
+        - The thread is interrupted (throws `InterruptedException`).
+    - **Re-acquires Lock:** When a thread is notified and wakes up, it re-acquires the lock on the object before it can resume execution.
+    - **Spurious Wakeups:** A thread can sometimes wake up from `wait()` without being notified or interrupted (a "spurious wakeup"). Therefore, `wait()` should always be called inside a `while` loop that checks the condition it's waiting for.
+- **Signatures:**
+    
+    - `public final void wait() throws InterruptedException`
+    - `public final void wait(long timeout) throws InterruptedException`
+    - `public final void wait(long timeout, int nanos) throws InterruptedException`1
+- **Use Cases:**
+    
+    - Implementing producer-consumer patterns.
+    - Any scenario where threads need to coordinate their actions based on certain conditions or shared resources.
+    - Building custom concurrency utilities.
+
+**Example (Producer-Consumer using `wait()` and `notifyAll()`):**
+
+Java
+
+```
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Buffer {
+    private Queue<Integer> list = new LinkedList<>();
+    private int capacity = 5;
+
+    public void produce(int value) throws InterruptedException {
+        synchronized (this) {
+            while (list.size() == capacity) {
+                System.out.println("Buffer is full. Producer waiting...");
+                wait(); // Release lock and wait
+            }
+            list.add(value);
+            System.out.println("Produced: " + value);
+            notifyAll(); // Notify consumers that buffer is not empty
+        }
+    }
+
+    public int consume() throws InterruptedException {
+        synchronized (this) {
+            while (list.isEmpty()) {
+                System.out.println("Buffer is empty. Consumer waiting...");
+                wait(); // Release lock and wait
+            }
+            int value = list.remove();
+            System.out.println("Consumed: " + value);
+            notifyAll(); // Notify producers that buffer is not full
+            return value;
+        }
+    }
+}
+
+class Producer extends Thread {
+    Buffer buffer;
+    public Producer(Buffer buffer) {
+        this.buffer = buffer;
+    }
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            try {
+                buffer.produce(i);
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Producer interrupted.");
+                break;
+            }
+        }
+    }
+}
+
+class Consumer extends Thread {
+    Buffer buffer;
+    public Consumer(Buffer buffer) {
+        this.buffer = buffer;
+    }
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            try {
+                buffer.consume();
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.out.println("Consumer interrupted.");
+                break;
+            }
+        }
+    }
+}
+
+public class WaitNotifyExample {
+    public static void main(String[] args) {
+        Buffer sharedBuffer = new Buffer();
+
+        Producer producer = new Producer(sharedBuffer);
+        Consumer consumer = new Consumer(sharedBuffer);
+
+        producer.setName("Producer");
+        consumer.setName("Consumer");
+
+        producer.start();
+        consumer.start();
+    }
+}
+```
+
+
+### 8. `Object.notify()`
+
+- **Purpose:** The `notify()` method is used to wake up _a single thread_ that is waiting on the object's monitor (i.e., a thread that has called `wait()` on that same object).
+- **Behavior:**
+    - **Must be called from a `synchronized` block/method:** Just like `wait()`, `notify()` must be invoked within a synchronized method or a synchronized block. The calling thread must own the monitor of the object on which `notify()` is called. If not, an `IllegalMonitorStateException` is thrown.
+    - **Wakes up one thread:** If there are multiple threads waiting on the same object, `notify()` wakes up only one of them. The choice of which thread gets woken up is non-deterministic and depends on the JVM's implementation, often based on thread priority or the order in which they entered the waiting set.
+    - **Doesn't immediately release lock:** The thread that called `notify()` does _not_ immediately release the object's monitor. It only releases the monitor when it exits the synchronized block/method. The woken-up thread then tries to re-acquire the monitor before it can resume execution.
+    - **If no threads are waiting:** If `notify()` is called and no threads are currently waiting on that object's monitor, the call has no effect.
+- **Use Cases:**
+    - When you have a condition that has changed, and only one waiting thread needs to be informed (e.g., a single item has been produced in a buffer where only one consumer can process it at a time).
+    - However, due to its non-deterministic nature, `notifyAll()` is often preferred to avoid deadlocks or missed signals, especially in complex scenarios.
+
+**Signature:** `public final native void notify()`
+
+### 9. `Object.notifyAll()`
+
+- **Purpose:** The `notifyAll()` method is used to wake up _all threads_ that are waiting on the object's monitor.
+- **Behavior:**
+    - **Must be called from a `synchronized` block/method:** Similar to `wait()` and `notify()`, `notifyAll()` must be invoked within a synchronized method or a synchronized block. The calling thread must own the monitor.
+    - **Wakes up all threads:** When `notifyAll()` is called, all threads that are currently in the `Waiting` or `Timed Waiting` state on that particular object's monitor are moved to the `Runnable` state (ready to be scheduled).
+    - **Doesn't immediately release lock:** The thread that called `notifyAll()` does _not_ immediately release the object's monitor. It releases the monitor only when it exits the synchronized block/method.
+    - **Contention for lock:** Once the monitor is released, the awakened threads will then contend for the monitor. Only one of them will succeed in acquiring it and resuming execution at a time. The others will remain in the `Blocked` state (waiting for the lock) until they can acquire it.
+    - **Safer choice:** `notifyAll()` is generally the safer choice than `notify()` because it avoids the risk of "lost notifications" or "deadlock" where the "wrong" thread is woken up, or a needed thread is never woken up. Although it might seem less efficient to wake up all threads, the overhead is usually minimal, and it significantly improves the correctness of concurrent applications.
+- **Use Cases:**
+    - Producer-Consumer problems where multiple consumers might be waiting for data, or multiple producers waiting for buffer space.
+    - Any scenario where a change in condition might satisfy multiple waiting threads.
+    - When you want to be certain that all relevant waiting threads are given a chance to check the condition and potentially proceed.
+
+**Signature:** `public final native void notifyAll()`
+
+### Key Differences and Relationships between `wait()`, `notify()`, and `notifyAll()`:
+
+|   |   |   |   |
+|---|---|---|---|
+|**Feature**|**wait()**|**notify()**|**notifyAll()**|
+|**Purpose**|Causes current thread to release lock and wait|Wakes up one waiting thread on the object's monitor|Wakes up all waiting threads on the object's monitor|
+|**Lock**|**Releases the monitor** of the object|**Does NOT release the monitor** immediately|**Does NOT release the monitor** immediately|
+|**Caller**|A thread that needs to wait for a condition to change|A thread that has changed a condition|A thread that has changed a condition|
+|**Context**|Must be called inside a `synchronized` block/method|Must be called inside a `synchronized` block/method|Must be called inside a `synchronized` block/method|
+|**State Change**|`Running` -> `Waiting`/`Timed Waiting`|(No direct state change for the notifying thread)|(No direct state change for the notifying thread)|
+|**Usage**|Always in a `while` loop to guard against spurious wakeups|Use with caution, can lead to deadlocks if not careful|Generally preferred for correctness and robustness|
+
+### Example (Revisiting Producer-Consumer with `notifyAll()` as shown previously):
+
+As demonstrated in the `Object.wait()` section, the `Buffer` class correctly uses `notifyAll()`:
+
+Java
+
+```
+import java.util.LinkedList;
+import java.util.Queue;
+
+class Buffer {
+    private Queue<Integer> list = new LinkedList<>();
+    private int capacity = 5;
+
+    public void produce(int value) throws InterruptedException {
+        synchronized (this) { // Acquire lock on 'this' (Buffer object)
+            while (list.size() == capacity) {
+                System.out.println("Buffer is full. Producer waiting...");
+                wait(); // Producer releases lock and waits
+            }
+            list.add(value);
+            System.out.println("Produced: " + value);
+            notifyAll(); // Notify all waiting threads (consumers and potentially other producers)
+        } // Producer releases lock here
+    }
+
+    public int consume() throws InterruptedException {
+        synchronized (this) { // Acquire lock on 'this' (Buffer object)
+            while (list.isEmpty()) {
+                System.out.println("Buffer is empty. Consumer waiting...");
+                wait(); // Consumer releases lock and waits
+            }
+            int value = list.remove();
+            System.out.println("Consumed: " + value);
+            notifyAll(); // Notify all waiting threads (producers and potentially other consumers)
+            return value;
+        } // Consumer releases lock here
+    }
+}
+
+// Producer and Consumer classes as defined previously...
+class Producer extends Thread { /* ... */ }
+class Consumer extends Thread { /* ... */ }
+
+public class WaitNotifyAllExample {
+    public static void main(String[] args) {
+        Buffer sharedBuffer = new Buffer();
+
+        Producer producer = new Producer(sharedBuffer);
+        Consumer consumer = new Consumer(sharedBuffer);
+        // You could add multiple producers and consumers here to see notifyAll in action
+        // Consumer consumer2 = new Consumer(sharedBuffer);
+
+        producer.setName("Producer");
+        consumer.setName("Consumer");
+        // consumer2.setName("Consumer-2");
+
+        producer.start();
+        consumer.start();
+        // consumer2.start();
+    }
+}
+```
+
+In this example, when a producer adds an item, it calls `notifyAll()` to wake up any waiting consumers. When a consumer removes an item, it calls `notifyAll()` to wake up any waiting producers. This ensures that regardless of how many producers or consumers are waiting, they all get a chance to re-evaluate the buffer's state.
+
+
+## Enum
+- ![](../statics/Pasted%20image%2020250522103127.png)
+- each field is an instance of the DAY class
+- ![](../statics/Pasted%20image%2020250522103221.png)
+- after compile it looks like this
+- ordinal is index
+- .values() return array of enum filed
+- .name() give string 
+- as enum gets converted to class , we can write method , fields etc
+
+
+## Wrapper class
+- Convert primitive value into objects
+- Process of converting primitive to object is boxing and java do that automatically hence autoboxing
